@@ -30,9 +30,9 @@ export function GeneralSettingsForm({ settings }: Props) {
             void id;
             void created_at;
             void updated_at;
-            const weekday = rest.weekday_hours.trim() || "09:00 - 18:00";
-            const saturday = rest.saturday_hours.trim() || "09:00 - 15:00";
-            const holiday = rest.holiday_hours.trim() || "휴무";
+            const weekday = (rest.weekday_hours ?? "").trim() || "09:00 - 18:00";
+            const saturday = (rest.saturday_hours ?? "").trim() || "09:00 - 15:00";
+            const holiday = (rest.holiday_hours ?? "").trim() || "휴무";
             await saveSiteSettings({
               ...rest,
               weekday_hours: weekday,
@@ -75,7 +75,7 @@ export function GeneralSettingsForm({ settings }: Props) {
           <Field label="평일 영업시간">
             <input
               className="admin-input"
-              value={form.weekday_hours}
+              value={form.weekday_hours ?? ""}
               onChange={(e) => update("weekday_hours", e.target.value)}
               placeholder="예: 09:00 - 18:00"
             />
@@ -83,7 +83,7 @@ export function GeneralSettingsForm({ settings }: Props) {
           <Field label="토요일 영업시간">
             <input
               className="admin-input"
-              value={form.saturday_hours}
+              value={form.saturday_hours ?? ""}
               onChange={(e) => update("saturday_hours", e.target.value)}
               placeholder="예: 09:00 - 15:00"
             />
@@ -91,7 +91,7 @@ export function GeneralSettingsForm({ settings }: Props) {
           <Field label="일요일/공휴일 안내">
             <input
               className="admin-input"
-              value={form.holiday_hours}
+              value={form.holiday_hours ?? ""}
               onChange={(e) => update("holiday_hours", e.target.value)}
               placeholder="예: 휴무"
             />
