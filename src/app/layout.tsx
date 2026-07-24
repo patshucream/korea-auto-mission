@@ -76,7 +76,19 @@ export default async function RootLayout({
 
   return (
     <html lang="ko" className={`${notoSansKr.variable} h-full`}>
-      <body className="min-h-full antialiased font-sans">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
+      <body
+        className="min-h-full antialiased font-sans"
+        style={{
+          ["--font-pretendard" as string]:
+            '"Pretendard Variable", Pretendard, var(--font-noto-sans-kr), sans-serif',
+        }}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

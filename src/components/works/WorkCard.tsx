@@ -20,12 +20,12 @@ export function WorkCard({ work }: Props) {
         />
       </Link>
       <div className="flex flex-1 flex-col p-5">
-        <p className="text-sm font-bold text-navy">
+        <p className="text-sm font-medium text-gray-500">
           {work.vehicle_brand} {work.vehicle_model}
           {work.model_year ? ` · ${work.model_year}` : ""}
         </p>
-        <h3 className="mt-2 text-xl font-black leading-snug text-charcoal">
-          <Link href={`/works/${work.slug}`} className="hover:text-navy">
+        <h3 className="mt-2 text-xl font-semibold leading-snug tracking-[-0.02em] text-charcoal">
+          <Link href={`/works/${work.slug}`} className="hover:opacity-70">
             {work.title}
           </Link>
         </h3>

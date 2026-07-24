@@ -375,11 +375,10 @@ export const DEFAULT_WORKS: WorkCase[] = [
 ];
 
 export const NAV_ITEMS = [
-  { href: "/#intro", label: "전문점 소개" },
+  { href: "/#strength", label: "전문성" },
   { href: "/#services", label: "정비 서비스" },
-  { href: "/works", label: "작업사례" },
-  { href: "/#process", label: "작업 과정" },
-  { href: "/#location", label: "오시는 길" },
+  { href: "/#works", label: "작업 사례" },
+  { href: "/#contact", label: "상담·예약" },
 ] as const;
 
 export const ADMIN_NAV = [
