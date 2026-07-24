@@ -26,29 +26,48 @@ export function GeneralSettingsForm({ settings }: Props) {
         setMessage(null);
         startTransition(async () => {
           try {
-            const { id, created_at, updated_at, ...rest } = form;
-            void id;
-            void created_at;
-            void updated_at;
-            const weekday = (rest.weekday_hours ?? "").trim() || "09:00 - 18:00";
-            const saturday = (rest.saturday_hours ?? "").trim() || "09:00 - 15:00";
-            const holiday = (rest.holiday_hours ?? "").trim() || "휴무";
-            await saveSiteSettings({
-              ...rest,
+            const weekday = (form.weekday_hours ?? "").trim() || "09:00 - 18:00";
+            const saturday = (form.saturday_hours ?? "").trim() || "09:00 - 15:00";
+            const holiday = (form.holiday_hours ?? "").trim() || "휴무";
+            const hours = `평일 ${weekday} 토요일 ${saturday}`;
+            const closedDays = holiday === "휴무" ? "일요일 · 공휴일" : holiday;
+            // DB 컬럼만 명시 전송 (id/created_at 등·undefined 제외)
+            const result = await saveSiteSettings({
+              business_name: form.business_name,
+              english_brand_name: form.english_brand_name,
+              phone: form.phone,
+              address: form.address,
               weekday_hours: weekday,
               saturday_hours: saturday,
               holiday_hours: holiday,
-              // 레거시 칼럼 동기화 (SEO·구버전 호환, UI에는 미사용)
-              hours: `평일 ${weekday} 토요일 ${saturday}`,
-              closed_days: holiday === "휴무" ? "일요일 · 공휴일" : holiday,
+              hours,
+              closed_days: closedDays,
+              naver_blog_url: form.naver_blog_url,
+              naver_map_url: form.naver_map_url,
+              naver_reservation_url: form.naver_reservation_url,
+              hero_title: form.hero_title,
+              hero_description: form.hero_description,
+              hero_image_path: form.hero_image_path,
+              shop_image_path: form.shop_image_path,
+              stat_experience: form.stat_experience,
+              stat_services: form.stat_services,
+              stat_brands: form.stat_brands,
+              stat_works: form.stat_works,
+              why_title: form.why_title,
+              why_content: form.why_content,
+              process_steps: form.process_steps,
             });
+            if (!result.ok) {
+              setMessage(result.error);
+              return;
+            }
             setForm((prev) => ({
               ...prev,
               weekday_hours: weekday,
               saturday_hours: saturday,
               holiday_hours: holiday,
-              hours: `평일 ${weekday} 토요일 ${saturday}`,
-              closed_days: holiday === "휴무" ? "일요일 · 공휴일" : holiday,
+              hours,
+              closed_days: closedDays,
             }));
             setMessage("저장되었습니다.");
           } catch (error) {
