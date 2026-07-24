@@ -1,25 +1,28 @@
 import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
 import { BusinessHours } from "@/components/ui/BusinessHours";
+import { getBlogUrl, telHref } from "@/lib/utils";
 
 type Props = {
   settings: SiteSettings;
 };
 
 export function Footer({ settings }: Props) {
+  const blogUrl = getBlogUrl(settings);
+
   return (
     <footer className="border-t border-white/10 bg-black text-white">
       <div className="container-site py-12 lg:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-          <div>
+          <div className="min-w-0">
             <p className="text-lg font-semibold tracking-[-0.02em]">{settings.business_name}</p>
-            <p className="mt-1 text-xs tracking-[0.14em] text-white/45">
+            <p className="mt-1 text-xs tracking-[0.12em] text-white/45">
               {settings.english_brand_name}
             </p>
             <p className="mt-5 text-sm leading-relaxed text-white/65">{settings.address}</p>
             <a
               className="mt-2 inline-block text-sm text-white/80 hover:text-white"
-              href={`tel:${settings.phone.replace(/[^0-9]/g, "")}`}
+              href={telHref(settings.phone)}
             >
               {settings.phone}
             </a>
@@ -32,7 +35,7 @@ export function Footer({ settings }: Props) {
             <ul className="mt-4 space-y-2 text-sm text-white/65">
               <li>
                 <a
-                  href={settings.naver_blog_url}
+                  href={blogUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"

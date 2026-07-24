@@ -15,11 +15,6 @@ export default async function HomePage() {
     <>
       <Header settings={data.settings} />
       <main className="pb-mobile-bar">
-        {data.errorMessage ? (
-          <div className="bg-gray-100 px-4 py-3 text-center text-sm font-medium text-charcoal">
-            {data.errorMessage}
-          </div>
-        ) : null}
         <Hero settings={data.settings} />
         <Strength />
         <Services services={data.services} />

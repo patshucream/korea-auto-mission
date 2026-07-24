@@ -159,7 +159,7 @@ a {
   justify-content: center;
   gap: 0.5rem;
   min-height: 52px;
-  padding: 0.85rem 1.5rem;
+  padding: 0.85rem 1.4rem;
   border-radius: 4px;
   font-weight: 600;
   font-size: 0.98rem;
@@ -169,6 +169,7 @@ a {
     opacity 0.2s ease;
   cursor: pointer;
   text-align: center;
+  white-space: nowrap;
 }
 
 .btn-primary {

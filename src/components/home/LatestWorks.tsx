@@ -1,6 +1,7 @@
-import Link from "next/link";
 import type { SiteSettings, WorkCase } from "@/lib/types";
+import { getBlogUrl } from "@/lib/utils";
 import { SmartImage } from "@/components/ui/SmartImage";
+import Link from "next/link";
 
 type Props = {
   works: WorkCase[];
@@ -8,15 +9,14 @@ type Props = {
 };
 
 export function LatestWorks({ works, settings }: Props) {
-  const blogUrl = settings.naver_blog_url?.trim() || "https://blog.naver.com/97ga074";
+  const blogUrl = getBlogUrl(settings);
   const items = works.slice(0, 3);
 
   return (
     <section id="works" className="section-pad bg-white">
       <div className="container-site">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium tracking-[0.16em] text-gray-500">WORK CASES</p>
-          <h2 className="section-title mt-3">최근 작업 사례</h2>
+          <h2 className="section-title">최근 작업 사례</h2>
           <p className="section-lead">실제 입고·진단·정비 과정을 요약한 최근 사례입니다.</p>
         </div>
 
@@ -25,13 +25,13 @@ export function LatestWorks({ works, settings }: Props) {
             아직 등록된 작업사례가 없습니다.
           </p>
         ) : (
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
             {items.map((work) => {
               const vehicle = [work.vehicle_brand, work.vehicle_model]
                 .filter(Boolean)
                 .join(" ");
               return (
-                <article key={work.id} className="group">
+                <article key={work.id} className="group min-w-0">
                   <Link href={`/works/${work.slug}`} className="block">
                     <SmartImage
                       path={work.representative_image_path}
@@ -41,13 +41,13 @@ export function LatestWorks({ works, settings }: Props) {
                       fallbackLabel={vehicle || work.title}
                     />
                     <div className="mt-5">
-                      <p className="text-sm font-medium tracking-wide text-gray-500">
+                      <p className="truncate text-sm font-medium text-gray-500">
                         {vehicle || work.service_category}
                       </p>
                       <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-charcoal group-hover:opacity-70">
                         {work.title}
                       </h3>
-                      <p className="mt-3 line-clamp-2 text-[1.02rem] leading-relaxed text-muted">
+                      <p className="mt-3 line-clamp-2 text-base leading-relaxed text-muted">
                         {work.work_summary || work.symptoms}
                       </p>
                     </div>

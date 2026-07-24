@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { SiteSettings } from "@/lib/types";
 import { NAV_ITEMS } from "@/lib/defaults";
-import { cn, telHref } from "@/lib/utils";
+import { cn, getReservationUrl } from "@/lib/utils";
 
 type Props = {
   settings: SiteSettings;
@@ -13,6 +13,7 @@ type Props = {
 export function Header({ settings }: Props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const reserveUrl = getReservationUrl(settings);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -31,23 +32,23 @@ export function Header({ settings }: Props) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b transition-colors",
+        "sticky top-0 z-50 border-b transition-[background-color,border-color] duration-200",
         scrolled || open
           ? "border-white/10 bg-black/95 text-white backdrop-blur-md"
-          : "border-transparent bg-black/40 text-white backdrop-blur-sm",
+          : "border-transparent bg-black/55 text-white backdrop-blur-sm",
       )}
     >
-      <div className="container-site flex h-[72px] items-center justify-between gap-4">
+      <div className="container-site flex h-[72px] items-center justify-between gap-3 sm:gap-4">
         <Link href="/" className="min-w-0 flex-1 lg:flex-none">
-          <span className="block truncate text-[1.1rem] font-semibold tracking-tight sm:text-lg">
+          <span className="block truncate text-[1.05rem] font-semibold tracking-tight sm:text-[1.15rem]">
             {settings.business_name}
           </span>
-          <span className="block truncate text-[0.68rem] font-medium tracking-[0.12em] text-white/55 sm:text-[0.72rem]">
+          <span className="mt-0.5 block truncate text-[0.65rem] font-medium tracking-[0.1em] text-white/55 sm:text-[0.7rem]">
             {settings.english_brand_name}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="주요 메뉴">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="주요 메뉴">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
@@ -59,18 +60,20 @@ export function Header({ settings }: Props) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden lg:block">
           <a
-            href={telHref(settings.phone)}
-            className="btn btn-light min-h-11 px-4 text-sm"
+            href={reserveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-light !min-h-11 px-5 text-sm"
           >
-            정비 상담
+            예약하기
           </a>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded border border-white/25 lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded border border-white/25 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
@@ -119,11 +122,13 @@ export function Header({ settings }: Props) {
             </Link>
           ))}
           <a
-            href={telHref(settings.phone)}
+            href={reserveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-light mt-3"
             onClick={() => setOpen(false)}
           >
-            정비 상담하기
+            예약하기
           </a>
         </nav>
       </div>
