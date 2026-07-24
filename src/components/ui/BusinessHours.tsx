@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 
 type Props = {
   settings: SiteSettings;
-  /** footer: 어두운 배경 / light: 밝은 배경(오시는 길) */
   variant?: "footer" | "light";
   className?: string;
 };
@@ -24,22 +23,24 @@ export function BusinessHours({ settings, variant = "light", className }: Props)
     <div className={cn(className)}>
       <p
         className={cn(
-          "font-bold",
-          isFooter ? "text-lg text-white" : "text-charcoal",
+          "font-semibold",
+          isFooter ? "text-sm text-white/90" : "text-charcoal",
         )}
       >
         영업시간
       </p>
-      <dl className="mt-3 space-y-2.5 text-[1.02rem] leading-snug sm:text-[1.05rem]">
+      <dl
+        className={cn(
+          "mt-3 space-y-2 leading-snug",
+          isFooter ? "text-sm" : "text-[1.02rem] sm:text-[1.05rem]",
+        )}
+      >
         {ROWS.map(({ key, label }) => (
-          <div
-            key={key}
-            className="flex items-baseline justify-between gap-3 sm:gap-6"
-          >
+          <div key={key} className="flex items-baseline justify-between gap-4">
             <dt
               className={cn(
-                "shrink-0 font-medium",
-                isFooter ? "text-white/75" : "text-charcoal",
+                "shrink-0",
+                isFooter ? "text-white/50" : "font-medium text-charcoal",
               )}
             >
               {label}
@@ -47,7 +48,7 @@ export function BusinessHours({ settings, variant = "light", className }: Props)
             <dd
               className={cn(
                 "min-w-0 text-right tabular-nums",
-                isFooter ? "text-white/90" : "text-muted",
+                isFooter ? "text-white/75" : "text-muted",
               )}
             >
               {settings[key]}
@@ -59,7 +60,6 @@ export function BusinessHours({ settings, variant = "light", className }: Props)
   );
 }
 
-/** 구조화 데이터·레거시 필드용 한 줄 요약 (UI에는 사용하지 않음) */
 export function formatBusinessHoursSummary(settings: SiteSettings): string {
   return `평일 ${settings.weekday_hours} / 토요일 ${settings.saturday_hours} / 일요일·공휴일 ${settings.holiday_hours}`;
 }

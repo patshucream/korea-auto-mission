@@ -60,7 +60,7 @@ export default async function WorksPage({ searchParams }: Props) {
   return (
     <>
       <Header settings={settings} />
-      <main className="pb-mobile-bar">
+      <main className="bg-white pb-mobile-bar">
         <section className="section-pad">
           <div className="container-site">
             <h1 className="section-title">작업사례</h1>

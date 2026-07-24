@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { SiteSettings } from "@/lib/types";
 import { NAV_ITEMS } from "@/lib/defaults";
-import { NaverReserveButton, PhoneButton } from "@/components/ui/ContactButtons";
-import { cn } from "@/lib/utils";
+import { cn, getReservationUrl } from "@/lib/utils";
 
 type Props = {
   settings: SiteSettings;
@@ -14,6 +13,7 @@ type Props = {
 export function Header({ settings }: Props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const reserveUrl = getReservationUrl(settings);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -32,42 +32,48 @@ export function Header({ settings }: Props) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b transition-colors",
-        scrolled
-          ? "border-border bg-warm-white/95 backdrop-blur-md"
-          : "border-transparent bg-warm-white",
+        "sticky top-0 z-50 border-b transition-[background-color,border-color] duration-200",
+        scrolled || open
+          ? "border-white/10 bg-black/95 text-white backdrop-blur-md"
+          : "border-transparent bg-black/55 text-white backdrop-blur-sm",
       )}
     >
-      <div className="container-site flex h-[72px] items-center justify-between gap-4">
+      <div className="container-site flex h-[72px] items-center justify-between gap-3 sm:gap-4">
         <Link href="/" className="min-w-0 flex-1 lg:flex-none">
-          <span className="block truncate text-[1.15rem] font-black tracking-tight text-charcoal sm:text-xl">
+          <span className="block truncate text-[1.05rem] font-semibold tracking-tight sm:text-[1.15rem]">
             {settings.business_name}
           </span>
-          <span className="block truncate text-[0.72rem] font-medium tracking-[0.06em] text-navy sm:text-xs sm:tracking-[0.08em]">
+          <span className="mt-0.5 block truncate text-[0.65rem] font-medium tracking-[0.1em] text-white/55 sm:text-[0.7rem]">
             {settings.english_brand_name}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="주요 메뉴">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="주요 메뉴">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-2 text-[0.98rem] font-bold text-charcoal-soft hover:bg-navy-soft hover:text-navy"
+              className="rounded px-3 py-2 text-[0.95rem] font-medium text-white/80 hover:text-white"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <PhoneButton settings={settings} className="min-h-11 px-4 text-sm" />
-          <NaverReserveButton settings={settings} className="min-h-11 px-4 text-sm" />
+        <div className="hidden lg:block">
+          <a
+            href={reserveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-light !min-h-11 px-5 text-sm"
+          >
+            예약하기
+          </a>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-white lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded border border-white/25 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
@@ -77,19 +83,19 @@ export function Header({ settings }: Props) {
           <span className="relative flex h-4 w-5" aria-hidden>
             <span
               className={cn(
-                "absolute left-0 top-0 h-0.5 w-5 bg-charcoal transition",
+                "absolute left-0 top-0 h-0.5 w-5 bg-white transition",
                 open && "top-1.5 rotate-45",
               )}
             />
             <span
               className={cn(
-                "absolute left-0 top-1.5 h-0.5 w-5 bg-charcoal transition",
+                "absolute left-0 top-1.5 h-0.5 w-5 bg-white transition",
                 open && "opacity-0",
               )}
             />
             <span
               className={cn(
-                "absolute left-0 top-3 h-0.5 w-5 bg-charcoal transition",
+                "absolute left-0 top-3 h-0.5 w-5 bg-white transition",
                 open && "top-1.5 -rotate-45",
               )}
             />
@@ -100,7 +106,7 @@ export function Header({ settings }: Props) {
       <div
         id="mobile-nav"
         className={cn(
-          "border-t border-border bg-warm-white lg:hidden",
+          "border-t border-white/10 bg-black lg:hidden",
           open ? "block" : "hidden",
         )}
       >
@@ -109,16 +115,21 @@ export function Header({ settings }: Props) {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-3 text-lg font-bold text-charcoal"
+              className="rounded px-3 py-3 text-lg font-medium text-white"
               onClick={() => setOpen(false)}
             >
               {item.label}
             </Link>
           ))}
-          <div className="mt-3 grid gap-2">
-            <PhoneButton settings={settings} fullWidth />
-            <NaverReserveButton settings={settings} fullWidth />
-          </div>
+          <a
+            href={reserveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-light mt-3"
+            onClick={() => setOpen(false)}
+          >
+            예약하기
+          </a>
         </nav>
       </div>
     </header>

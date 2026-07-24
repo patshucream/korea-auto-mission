@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --warm-white: #f7f4ef;
-  --warm-white-2: #fbf9f6;
-  --light-gray: #ebe7e1;
-  --border: #d9d3c9;
-  --charcoal: #2a2a2a;
-  --charcoal-soft: #3d3d3d;
-  --muted: #5a574f;
-  --navy: #1f3a5f;
-  --navy-dark: #162a45;
-  --navy-soft: #e8eef6;
+  /* Premium mono palette — black / charcoal / white */
+  --black: #0a0a0a;
+  --charcoal: #141414;
+  --charcoal-soft: #1c1c1c;
+  --gray-900: #1a1a1a;
+  --gray-800: #2a2a2a;
+  --gray-700: #3d3d3d;
+  --gray-600: #525252;
+  --gray-500: #6b6b6b;
+  --gray-400: #8a8a8a;
+  --gray-300: #c4c4c4;
+  --gray-200: #e5e5e5;
+  --gray-100: #f2f2f2;
+  --white: #ffffff;
+
+  /* Legacy aliases (admin + public shared) */
+  --warm-white: #f7f7f7;
+  --warm-white-2: #fafafa;
+  --light-gray: #ececec;
+  --border: #e0e0e0;
+  --muted: #6b6b6b;
+  --navy: #141414;
+  --navy-dark: #0a0a0a;
+  --navy-soft: #f0f0f0;
   --naver: #03c75a;
   --naver-dark: #02b350;
-  --dark-section: #243041;
-  --dark-section-2: #1b2533;
-  --white: #ffffff;
-  --focus: #1f3a5f;
+  --dark-section: #141414;
+  --dark-section-2: #0a0a0a;
+  --focus: #141414;
   --danger: #b42318;
   --success: #027a48;
   --radius: 12px;
-  --content-max: 1500px;
+  --content-max: 1200px;
   --header-h: 72px;
   --bottom-bar-h: 68px;
 }
@@ -40,8 +53,17 @@
   --color-naver-dark: var(--naver-dark);
   --color-dark-section: var(--dark-section);
   --color-dark-section-2: var(--dark-section-2);
-  --font-sans: var(--font-noto-sans-kr);
-  --font-display: var(--font-noto-sans-kr);
+  --color-black: var(--black);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-800: var(--gray-800);
+  --font-sans: var(--font-pretendard), var(--font-noto-sans-kr), "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  --font-display: var(--font-pretendard), var(--font-noto-sans-kr), "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
 }
 
 * {
@@ -55,9 +77,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--warm-white);
+  background: var(--white);
   color: var(--charcoal);
-  font-family: var(--font-noto-sans-kr), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -82,7 +104,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--focus);
+  outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
 
@@ -90,51 +112,45 @@ a {
   width: 100%;
   max-width: var(--content-max);
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  .container-site {
-    padding-inline: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
   .container-site {
     padding-inline: 2rem;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .container-site {
     padding-inline: 2.5rem;
   }
 }
 
 .section-pad {
-  padding-block: 3.5rem;
+  padding-block: 5rem;
 }
 
 @media (min-width: 1024px) {
   .section-pad {
-    padding-block: 5rem;
+    padding-block: 7rem;
   }
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 2.2vw, 2.25rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
   color: var(--charcoal);
 }
 
 .section-lead {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--muted);
-  max-width: 40rem;
+  max-width: 36rem;
 }
 
 .btn {
@@ -142,39 +158,57 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 48px;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 1rem;
-  border: 2px solid transparent;
+  min-height: 52px;
+  padding: 0.85rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+  border: 1px solid transparent;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-    transform 0.2s ease;
+    opacity 0.2s ease;
   cursor: pointer;
   text-align: center;
-}
-
-.btn:active {
-  transform: translateY(1px);
+  white-space: nowrap;
 }
 
 .btn-primary {
-  background: var(--navy);
+  background: var(--black);
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: var(--navy-dark);
+  background: var(--gray-800);
 }
 
 .btn-secondary {
   background: var(--white);
-  color: var(--navy);
-  border-color: var(--navy);
+  color: var(--black);
+  border-color: var(--gray-300);
 }
 
 .btn-secondary:hover {
-  background: var(--navy-soft);
+  background: var(--gray-100);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--charcoal);
+  border-color: var(--gray-300);
+}
+
+.btn-outline:hover {
+  background: var(--gray-100);
+}
+
+.btn-on-dark {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.btn-on-dark:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-naver {
@@ -193,11 +227,20 @@ a {
 }
 
 .btn-ghost:hover {
-  background: var(--light-gray);
+  background: var(--gray-100);
 }
 
 .btn-full {
   width: 100%;
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-light:hover {
+  background: var(--gray-100);
 }
 
 .card-light {
@@ -260,12 +303,11 @@ a {
 }
 
 .placeholder-media {
-  background:
-    linear-gradient(145deg, #dfe6ef 0%, #c5d0de 45%, #9aabbf 100%);
+  background: var(--gray-800);
   display: grid;
   place-items: center;
-  color: var(--navy-dark);
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
   text-align: center;
   padding: 1rem;
 }

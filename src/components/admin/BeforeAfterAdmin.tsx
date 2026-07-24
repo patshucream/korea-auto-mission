@@ -30,7 +30,7 @@ export function BeforeAfterAdmin({ items }: Props) {
             e.preventDefault();
             startTransition(async () => {
               try {
-                await updateBeforeAfter({
+                const result = await updateBeforeAfter({
                   id: item.id,
                   title: item.title,
                   description: item.description,
@@ -38,6 +38,10 @@ export function BeforeAfterAdmin({ items }: Props) {
                   after_image_path: item.after_image_path,
                   is_published: item.is_published,
                 });
+                if (!result.ok) {
+                  setMessage(result.error);
+                  return;
+                }
                 setMessage("저장되었습니다.");
               } catch (error) {
                 setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");

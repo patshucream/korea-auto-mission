@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { AdminNav } from "@/components/admin/AdminNav";
-import { requireAdmin } from "@/lib/actions/auth";
+import { requireAdmin } from "@/lib/auth/require-admin";
 import { isSupabaseConfigured } from "@/lib/utils";
 
 export async function AdminShell({

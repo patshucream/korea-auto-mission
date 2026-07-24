@@ -185,7 +185,7 @@ export function ServicesAdmin({ initialServices }: Props) {
             setError(null);
             startTransition(async () => {
               try {
-                await upsertService({
+                const result = await upsertService({
                   id: editing.id || undefined,
                   title,
                   short_description: editing.short_description,
@@ -194,6 +194,10 @@ export function ServicesAdmin({ initialServices }: Props) {
                   sort_order: editing.sort_order,
                   is_published: editing.is_published,
                 });
+                if (!result.ok) {
+                  setError(result.error);
+                  return;
+                }
                 setMessage("저장되었습니다.");
                 setEditing(null);
                 window.location.reload();

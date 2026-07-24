@@ -23,6 +23,29 @@ export function telHref(phone: string): string {
   return `tel:${digits}`;
 }
 
+/** 공개 페이지용 외부 링크 (관리자 설정값 우선, 없으면 안전한 기본값) */
+export function getReservationUrl(settings: {
+  naver_reservation_url?: string | null;
+  naver_blog_url?: string | null;
+}): string {
+  return (
+    settings.naver_reservation_url?.trim() ||
+    settings.naver_blog_url?.trim() ||
+    "https://blog.naver.com/97ga074"
+  );
+}
+
+export function getBlogUrl(settings: { naver_blog_url?: string | null }): string {
+  return settings.naver_blog_url?.trim() || "https://blog.naver.com/97ga074";
+}
+
+export function getMapUrl(settings: { naver_map_url?: string | null }): string {
+  return (
+    settings.naver_map_url?.trim() ||
+    "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EC%82%AC%EC%83%81%EA%B5%AC%20%EC%82%BC%EB%8D%95%EB%A1%9C%2095"
+  );
+}
+
 export function cn(...classes: Array<string | false | null | undefined>): string {
   return classes.filter(Boolean).join(" ");
 }

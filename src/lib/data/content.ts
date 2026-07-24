@@ -39,16 +39,41 @@ function parseProcessSteps(value: unknown): ProcessStep[] {
     .filter((v): v is ProcessStep => Boolean(v));
 }
 
-function mapSettings(row: Record<string, unknown>): SiteSettings {
+/** 003 미적용 DB용: 레거시 hours / closed_days 에서 분리 필드 복원 */
+function deriveSplitHours(hours: string, closedDays: string) {
   const weekday =
-    (typeof row.weekday_hours === "string" && row.weekday_hours.trim()) ||
+    hours.match(/평일\s*([0-9]{1,2}:[0-9]{2}\s*[-–~]\s*[0-9]{1,2}:[0-9]{2})/)?.[1]?.trim() ||
     DEFAULT_SETTINGS.weekday_hours;
   const saturday =
-    (typeof row.saturday_hours === "string" && row.saturday_hours.trim()) ||
+    hours.match(/토(?:요일)?\s*([0-9]{1,2}:[0-9]{2}\s*[-–~]\s*[0-9]{1,2}:[0-9]{2})/)?.[1]?.trim() ||
     DEFAULT_SETTINGS.saturday_hours;
+  const holiday = (() => {
+    const closed = closedDays.trim();
+    if (!closed) return DEFAULT_SETTINGS.holiday_hours;
+    if (/(휴무|휴일|닫)/i.test(closed) || /(일요일|공휴일)/.test(closed)) return "휴무";
+    return closed;
+  })();
+  return { weekday, saturday, holiday };
+}
+
+function mapSettings(row: Record<string, unknown>): SiteSettings {
+  const legacyHours =
+    typeof row.hours === "string" && row.hours.trim() ? row.hours.trim() : "";
+  const legacyClosed =
+    typeof row.closed_days === "string" && row.closed_days.trim()
+      ? row.closed_days.trim()
+      : "";
+  const derived = deriveSplitHours(
+    legacyHours || DEFAULT_SETTINGS.hours,
+    legacyClosed || DEFAULT_SETTINGS.closed_days,
+  );
+
+  const weekday =
+    (typeof row.weekday_hours === "string" && row.weekday_hours.trim()) || derived.weekday;
+  const saturday =
+    (typeof row.saturday_hours === "string" && row.saturday_hours.trim()) || derived.saturday;
   const holiday =
-    (typeof row.holiday_hours === "string" && row.holiday_hours.trim()) ||
-    DEFAULT_SETTINGS.holiday_hours;
+    (typeof row.holiday_hours === "string" && row.holiday_hours.trim()) || derived.holiday;
 
   return {
     ...DEFAULT_SETTINGS,
@@ -56,12 +81,8 @@ function mapSettings(row: Record<string, unknown>): SiteSettings {
     weekday_hours: weekday,
     saturday_hours: saturday,
     holiday_hours: holiday,
-    hours:
-      (typeof row.hours === "string" && row.hours.trim()) ||
-      `평일 ${weekday} 토요일 ${saturday}`,
-    closed_days:
-      (typeof row.closed_days === "string" && row.closed_days.trim()) ||
-      (holiday === "휴무" ? "일요일 · 공휴일" : holiday),
+    hours: legacyHours || `평일 ${weekday} 토요일 ${saturday}`,
+    closed_days: legacyClosed || (holiday === "휴무" ? "일요일 · 공휴일" : holiday),
     process_steps: parseProcessSteps(row.process_steps),
     hero_image_path: (row.hero_image_path as string | null) ?? null,
     shop_image_path: (row.shop_image_path as string | null) ?? null,

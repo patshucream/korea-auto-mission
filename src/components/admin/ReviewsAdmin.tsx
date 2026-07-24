@@ -74,19 +74,27 @@ export function ReviewsAdmin({ initialReviews }: Props) {
           onSubmit={(e) => {
             e.preventDefault();
             startTransition(async () => {
-              await upsertReview({
-                id: editing.id || undefined,
-                customer_name: editing.customer_name,
-                vehicle_info: editing.vehicle_info,
-                content: editing.content,
-                rating: editing.rating,
-                display_order: editing.display_order,
-                is_published: editing.is_published,
-                is_sample: editing.is_sample,
-              });
-              setMessage("저장되었습니다.");
-              setEditing(null);
-              window.location.reload();
+              try {
+                const result = await upsertReview({
+                  id: editing.id || undefined,
+                  customer_name: editing.customer_name,
+                  vehicle_info: editing.vehicle_info,
+                  content: editing.content,
+                  rating: editing.rating,
+                  display_order: editing.display_order,
+                  is_published: editing.is_published,
+                  is_sample: editing.is_sample,
+                });
+                if (!result.ok) {
+                  setMessage(result.error);
+                  return;
+                }
+                setMessage("저장되었습니다.");
+                setEditing(null);
+                window.location.reload();
+              } catch (error) {
+                setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");
+              }
             });
           }}
         >

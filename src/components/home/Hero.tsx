@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import type { SiteSettings } from "@/lib/types";
-import { NaverReserveButton, PhoneButton } from "@/components/ui/ContactButtons";
+import { getPublicImageUrl } from "@/lib/media";
+import { getReservationUrl } from "@/lib/utils";
 import { SmartImage } from "@/components/ui/SmartImage";
 
 type Props = {
@@ -11,55 +11,52 @@ type Props = {
 };
 
 export function Hero({ settings }: Props) {
+  const imagePath = settings.hero_image_path || settings.shop_image_path;
+  const reserveUrl = getReservationUrl(settings);
+
   return (
-    <section className="relative overflow-hidden border-b border-border bg-warm-white-2">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgba(31,58,95,0.08), transparent 40%), radial-gradient(circle at 80% 0%, rgba(31,58,95,0.06), transparent 35%)",
-        }}
-        aria-hidden
-      />
-      <div className="container-site relative grid items-center gap-8 py-10 md:py-14 lg:grid-cols-2 lg:gap-12 lg:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, ease: "easeOut" }}
-        >
-          <p className="text-sm font-bold tracking-[0.14em] text-navy">
+    <section className="relative -mt-[72px] min-h-[100svh] overflow-hidden bg-black text-white">
+      <div className="absolute inset-0">
+        {getPublicImageUrl(imagePath) ? (
+          <SmartImage
+            path={imagePath}
+            alt={`${settings.business_name} 정비 작업장`}
+            className="h-full min-h-[100svh] w-full"
+            sizes="100vw"
+            priority
+            fallbackLabel="정비 작업장"
+          />
+        ) : (
+          <div className="h-full min-h-[100svh] w-full bg-[#1a1a1a]" aria-hidden />
+        )}
+        <div className="absolute inset-0 bg-black/50" aria-hidden />
+      </div>
+
+      <div className="container-site relative flex min-h-[100svh] items-center pb-24 pt-28 lg:pb-28 lg:pt-32">
+        <div className="mx-auto w-full max-w-3xl text-center lg:mx-0 lg:text-left">
+          <p className="text-[0.78rem] font-medium tracking-[0.16em] text-white/70 sm:text-sm">
             {settings.english_brand_name}
           </p>
-          <h1 className="mt-3 whitespace-pre-line text-[2rem] font-black leading-[1.25] tracking-tight text-charcoal sm:text-[2.4rem] lg:text-[2.8rem]">
-            {settings.hero_title}
+          <h1 className="mt-5 whitespace-pre-line text-[2rem] font-bold leading-[1.28] tracking-[-0.03em] text-white sm:text-[2.6rem] lg:text-[3.2rem]">
+            {"수입차 변속기 수리,\n경험으로 정확하게 진단합니다."}
           </h1>
-          <p className="mt-5 whitespace-pre-line text-[1.05rem] leading-relaxed text-muted sm:text-lg">
-            {settings.hero_description}
+          <p className="mt-6 text-base leading-relaxed text-white/85 sm:text-lg">
+            30년 경력의 변속기 전문 정비 · 부산 코리아오토미션
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <PhoneButton settings={settings} />
-            <NaverReserveButton settings={settings} />
-            <Link href="/#location" className="btn btn-secondary">
-              오시는 길
+          <div className="mt-10 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
+            <a
+              href={reserveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-light sm:min-w-[11rem]"
+            >
+              예약하기
+            </a>
+            <Link href="/#works" className="btn btn-on-dark sm:min-w-[11rem]">
+              작업 사례 보기
             </Link>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
-          className="relative"
-        >
-          <SmartImage
-            path={settings.hero_image_path}
-            alt={`${settings.business_name} 정비 현장`}
-            className="aspect-[4/3] w-full rounded-[14px] lg:aspect-[5/4]"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
-            fallbackLabel="정비 현장 사진"
-          />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

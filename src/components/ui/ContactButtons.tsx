@@ -41,7 +41,7 @@ export function NaverReserveButton({
   settings,
   className,
   fullWidth,
-  children = "네이버 예약",
+  children = "예약하기",
 }: Omit<Props, "variant">) {
   const href =
     settings.naver_reservation_url?.trim() ||
@@ -54,7 +54,7 @@ export function NaverReserveButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn("btn btn-naver", fullWidth && "btn-full", className)}
-      aria-label="네이버 예약 페이지 열기"
+      aria-label="예약하기"
     >
       {children}
     </a>

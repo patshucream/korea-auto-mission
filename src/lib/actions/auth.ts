@@ -36,17 +36,3 @@ export async function logoutAction() {
   revalidatePath("/", "layout");
   redirect("/admin/login");
 }
-
-export async function requireAdmin() {
-  if (!isSupabaseConfigured()) {
-    return { user: null, configured: false as const };
-  }
-  const supabase = await tryCreateClient();
-  if (!supabase) {
-    return { user: null, configured: false as const };
-  }
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  return { user, configured: true as const, supabase };
-}

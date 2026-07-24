@@ -72,16 +72,24 @@ export function FaqAdmin({ initialFaqs }: Props) {
           onSubmit={(e) => {
             e.preventDefault();
             startTransition(async () => {
-              await upsertFaq({
-                id: editing.id || undefined,
-                question: editing.question,
-                answer: editing.answer,
-                display_order: editing.display_order,
-                is_published: editing.is_published,
-              });
-              setMessage("저장되었습니다.");
-              setEditing(null);
-              window.location.reload();
+              try {
+                const result = await upsertFaq({
+                  id: editing.id || undefined,
+                  question: editing.question,
+                  answer: editing.answer,
+                  display_order: editing.display_order,
+                  is_published: editing.is_published,
+                });
+                if (!result.ok) {
+                  setMessage(result.error);
+                  return;
+                }
+                setMessage("저장되었습니다.");
+                setEditing(null);
+                window.location.reload();
+              } catch (error) {
+                setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");
+              }
             });
           }}
         >

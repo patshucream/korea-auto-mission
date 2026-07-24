@@ -21,11 +21,15 @@ export function SeoSettingsForm({ settings }: Props) {
         e.preventDefault();
         startTransition(async () => {
           try {
-            await saveSiteSettings({
+            const result = await saveSiteSettings({
               seo_title: form.seo_title,
               seo_description: form.seo_description,
               og_image_path: form.og_image_path,
             });
+            if (!result.ok) {
+              setMessage(result.error);
+              return;
+            }
             setMessage("검색 노출 설정이 저장되었습니다.");
           } catch (error) {
             setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");

@@ -107,6 +107,10 @@ export function WorkCaseForm({ initial, services }: Props) {
                 : form.published_at,
             };
             const result = await upsertWorkCase(payload);
+            if (!result.ok) {
+              setMessage(result.error);
+              return;
+            }
             setMessage("저장되었습니다.");
             router.push(`/admin/works/${result.id}`);
             router.refresh();
