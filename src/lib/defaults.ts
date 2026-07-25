@@ -378,18 +378,24 @@ export const NAV_ITEMS = [
   { href: "/#strength", label: "전문성" },
   { href: "/#services", label: "정비 서비스" },
   { href: "/#works", label: "작업 사례" },
+  { href: "/#reviews", label: "고객 후기" },
   { href: "/#contact", label: "상담·예약" },
 ] as const;
 
+/** 주요 관리자 메뉴 */
 export const ADMIN_NAV = [
-  { href: "/admin/general", label: "기본 설정" },
-  { href: "/admin/general#stats", label: "홈페이지 주요 수치" },
-  { href: "/admin/services", label: "정비 서비스" },
-  { href: "/admin/works", label: "작업사례" },
-  { href: "/admin/before-after", label: "작업 전후" },
-  { href: "/admin/reviews", label: "고객 후기" },
-  { href: "/admin/faq", label: "자주 묻는 질문" },
+  { href: "/admin/general", label: "기본 정보" },
+  { href: "/admin/services", label: "서비스 관리" },
+  { href: "/admin/works", label: "작업 사례" },
+  { href: "/admin/reviews", label: "리뷰 관리" },
+  { href: "/admin/general#hours", label: "영업시간" },
   { href: "/admin/media", label: "사진 관리" },
+] as const;
+
+/** 부가 설정 (사이드바 하단) */
+export const ADMIN_NAV_SECONDARY = [
+  { href: "/admin/before-after", label: "작업 전후" },
+  { href: "/admin/faq", label: "자주 묻는 질문" },
   { href: "/admin/seo", label: "검색 노출 설정" },
-  { href: "/admin/general#contact", label: "연락처 설정" },
+  { href: "/admin/general#stats", label: "홈페이지 주요 수치" },
 ] as const;

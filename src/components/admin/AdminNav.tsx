@@ -2,54 +2,100 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ADMIN_NAV } from "@/lib/defaults";
+import { ADMIN_NAV, ADMIN_NAV_SECONDARY } from "@/lib/defaults";
 import { logoutAction } from "@/lib/actions/auth";
 import { cn } from "@/lib/utils";
 
-export function AdminNav() {
+type Props = {
+  mobileOpen?: boolean;
+  onNavigate?: () => void;
+};
+
+function NavLink({
+  href,
+  label,
+  pathname,
+  onNavigate,
+}: {
+  href: string;
+  label: string;
+  pathname: string;
+  onNavigate?: () => void;
+}) {
+  const base = href.split("#")[0];
+  const active =
+    href === "/admin"
+      ? pathname === "/admin"
+      : pathname === base || (base !== "/admin" && pathname.startsWith(base));
+
+  return (
+    <Link
+      href={href}
+      onClick={onNavigate}
+      className={cn(
+        "block rounded-[10px] px-3 py-2.5 text-sm font-semibold transition",
+        active
+          ? "bg-navy text-white"
+          : "text-charcoal/80 hover:bg-navy-soft hover:text-navy",
+      )}
+    >
+      {label}
+    </Link>
+  );
+}
+
+export function AdminNav({ mobileOpen, onNavigate }: Props) {
   const pathname = usePathname();
 
   return (
-    <aside className="border-b border-border bg-white lg:min-h-screen lg:w-64 lg:border-b-0 lg:border-r">
-      <div className="px-5 py-5">
-        <p className="text-lg font-black text-charcoal">관리자</p>
-        <p className="text-sm text-muted">코리아오토미션</p>
+    <aside
+      className={cn(
+        "flex w-full flex-col border-border bg-white lg:fixed lg:inset-y-0 lg:left-0 lg:z-30 lg:w-64 lg:border-r",
+        mobileOpen === false ? "hidden lg:flex" : "flex",
+      )}
+    >
+      <div className="border-b border-border px-5 py-5">
+        <p className="text-xs font-bold tracking-[0.14em] text-muted">ADMIN</p>
+        <p className="mt-1 text-lg font-black text-navy">코리아오토미션</p>
+        <p className="text-sm text-muted">콘텐츠 관리</p>
       </div>
-      <nav className="flex gap-1 overflow-x-auto px-3 pb-4 lg:flex-col lg:overflow-visible" aria-label="관리자 메뉴">
-        <Link
-          href="/admin"
-          className={cn(
-            "whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-bold",
-            pathname === "/admin" ? "bg-navy text-white" : "text-charcoal hover:bg-navy-soft",
-          )}
-        >
-          대시보드
-        </Link>
-        {ADMIN_NAV.map((item) => {
-          const active =
-            pathname === item.href ||
-            (item.href.includes("#")
-              ? pathname === item.href.split("#")[0]
-              : pathname.startsWith(item.href));
-          return (
-            <Link
+
+      <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4" aria-label="관리자 메뉴">
+        <NavLink href="/admin" label="대시보드" pathname={pathname} onNavigate={onNavigate} />
+        {ADMIN_NAV.map((item) => (
+          <NavLink
+            key={item.href + item.label}
+            href={item.href}
+            label={item.label}
+            pathname={pathname}
+            onNavigate={onNavigate}
+          />
+        ))}
+        <div className="my-3 border-t border-border pt-3">
+          <p className="mb-2 px-3 text-xs font-bold uppercase tracking-wide text-muted">
+            추가 설정
+          </p>
+          {ADMIN_NAV_SECONDARY.map((item) => (
+            <NavLink
               key={item.href + item.label}
               href={item.href}
-              className={cn(
-                "whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-bold",
-                active && !item.href.includes("#")
-                  ? "bg-navy text-white"
-                  : "text-charcoal hover:bg-navy-soft",
-              )}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
+              label={item.label}
+              pathname={pathname}
+              onNavigate={onNavigate}
+            />
+          ))}
+        </div>
       </nav>
+
       <div className="space-y-2 border-t border-border p-4">
-        <Link href="/" className="btn btn-ghost btn-full text-sm">
-          홈페이지로 돌아가기
+        <Link
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-ghost btn-full text-sm"
+          onClick={onNavigate}
+        >
+          홈페이지 보기
         </Link>
         <form action={logoutAction}>
           <button type="submit" className="btn btn-secondary btn-full text-sm">

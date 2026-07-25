@@ -5,11 +5,15 @@ import { Hero } from "@/components/home/Hero";
 import { Strength } from "@/components/home/Strength";
 import { Services } from "@/components/home/Services";
 import { LatestWorks } from "@/components/home/LatestWorks";
+import { Reviews } from "@/components/home/Reviews";
 import { ContactCTA } from "@/components/home/ContactCTA";
-import { getHomepageData } from "@/lib/data/content";
+import { getHomepageData, getReviewStats } from "@/lib/data/content";
 
 export default async function HomePage() {
-  const data = await getHomepageData();
+  const [data, reviewStats] = await Promise.all([
+    getHomepageData(),
+    getReviewStats(),
+  ]);
 
   return (
     <>
@@ -19,6 +23,11 @@ export default async function HomePage() {
         <Strength />
         <Services services={data.services} />
         <LatestWorks works={data.works} settings={data.settings} />
+        <Reviews
+          reviews={data.reviews}
+          totalApproved={reviewStats.approved}
+          average={reviewStats.averageRating}
+        />
         <ContactCTA settings={data.settings} />
       </main>
       <Footer settings={data.settings} />

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import type { SiteSettings } from "@/lib/types";
 import { saveSiteSettings } from "@/lib/actions/admin";
 import { ImageUploader } from "@/components/admin/ImageUploader";
+import { AdminToast } from "@/components/admin/AdminToast";
 
 type Props = {
   settings: SiteSettings;
@@ -12,9 +13,22 @@ type Props = {
 export function GeneralSettingsForm({ settings }: Props) {
   const [form, setForm] = useState(settings);
   const [message, setMessage] = useState<string | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
+  const [dirty, setDirty] = useState(false);
   const [pending, startTransition] = useTransition();
 
+  useEffect(() => {
+    if (!dirty) return;
+    const onBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = "";
+    };
+    window.addEventListener("beforeunload", onBeforeUnload);
+    return () => window.removeEventListener("beforeunload", onBeforeUnload);
+  }, [dirty]);
+
   function update<K extends keyof SiteSettings>(key: K, value: SiteSettings[K]) {
+    setDirty(true);
     setForm((prev) => ({ ...prev, [key]: value }));
   }
 
@@ -59,6 +73,7 @@ export function GeneralSettingsForm({ settings }: Props) {
             });
             if (!result.ok) {
               setMessage(result.error);
+              setToast(null);
               return;
             }
             setForm((prev) => ({
@@ -69,15 +84,17 @@ export function GeneralSettingsForm({ settings }: Props) {
               hours,
               closed_days: closedDays,
             }));
+            setDirty(false);
             setMessage("저장되었습니다.");
+            setToast("저장되었습니다.");
           } catch (error) {
             setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");
           }
         });
       }}
     >
-      <section id="contact" className="card-light space-y-4 p-5">
-        <h2 className="text-xl font-black">기본 · 연락처 설정</h2>
+      <section id="contact" className="admin-card space-y-4">
+        <h2 className="text-xl font-black text-navy">기본 · 연락처 설정</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <Field label="상호명">
             <input className="admin-input" value={form.business_name} onChange={(e) => update("business_name", e.target.value)} />
@@ -93,6 +110,7 @@ export function GeneralSettingsForm({ settings }: Props) {
           </Field>
           <Field label="평일 영업시간">
             <input
+              id="hours"
               className="admin-input"
               value={form.weekday_hours ?? ""}
               onChange={(e) => update("weekday_hours", e.target.value)}
@@ -191,9 +209,12 @@ export function GeneralSettingsForm({ settings }: Props) {
       </section>
 
       {message ? <p className="font-medium text-navy">{message}</p> : null}
-      <button type="submit" className="btn btn-primary" disabled={pending}>
-        {pending ? "저장 중…" : "저장"}
-      </button>
+      <div className="sticky bottom-3 z-10 rounded-[12px] border border-border bg-white/95 p-3 shadow-sm backdrop-blur">
+        <button type="submit" className="btn btn-primary min-h-11 w-full sm:w-auto" disabled={pending}>
+          {pending ? "저장 중…" : "저장"}
+        </button>
+      </div>
+      <AdminToast message={toast} onClose={() => setToast(null)} />
     </form>
   );
 }

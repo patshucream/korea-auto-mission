@@ -60,6 +60,11 @@
   --color-gray-500: var(--gray-500);
   --color-gray-600: var(--gray-600);
   --color-gray-800: var(--gray-800);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-admin-bg: #f3f4f6;
+  --color-admin-navy: #1a2744;
+  --color-admin-navy-soft: #e8ecf3;
   --font-sans: var(--font-pretendard), var(--font-noto-sans-kr), "Apple SD Gothic Neo",
     "Malgun Gothic", sans-serif;
   --font-display: var(--font-pretendard), var(--font-noto-sans-kr), "Apple SD Gothic Neo",
@@ -310,4 +315,83 @@ a {
   font-weight: 600;
   text-align: center;
   padding: 1rem;
+}
+
+/* Admin CMS shell */
+.admin-app {
+  --navy: #1a2744;
+  --navy-dark: #121c33;
+  --navy-soft: #e8ecf3;
+  --warm-white: #f3f4f6;
+  min-height: 100vh;
+  background: var(--warm-white);
+  color: var(--charcoal);
+}
+
+.admin-app .btn {
+  border-radius: 10px;
+  min-height: 44px;
+}
+
+.admin-app .btn-primary {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.admin-app .btn-primary:hover {
+  background: var(--navy-dark);
+}
+
+.admin-app .admin-input,
+.admin-app .admin-textarea,
+.admin-app .admin-select {
+  border-radius: 10px;
+  min-height: 44px;
+}
+
+.admin-app .admin-input:focus,
+.admin-app .admin-textarea:focus,
+.admin-app .admin-select:focus {
+  outline: 2px solid color-mix(in srgb, var(--navy) 35%, transparent);
+  outline-offset: 1px;
+  border-color: var(--navy);
+}
+
+.admin-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.admin-stat {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+}
+
+.admin-toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  max-width: min(22rem, calc(100vw - 2rem));
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.admin-toast-success {
+  background: #ecfdf3;
+  color: var(--success);
+  border: 1px solid #abefc6;
+}
+
+.admin-toast-error {
+  background: #fef3f2;
+  color: var(--danger);
+  border: 1px solid #fecdca;
 }

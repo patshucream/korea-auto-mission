@@ -5,6 +5,8 @@ import type {
   PaginatedWorks,
   ProcessStep,
   Review,
+  ReviewStats,
+  ReviewStatus,
   Service,
   ServiceOption,
   SiteSettings,
@@ -18,6 +20,7 @@ import {
   DEFAULT_SETTINGS,
   DEFAULT_WORKS,
 } from "@/lib/defaults";
+import { averageRating, mapReview } from "@/lib/reviews";
 import { tryCreateClient } from "@/lib/supabase/server";
 import {
   isMissingTableError,
@@ -232,8 +235,9 @@ export async function getHomepageData(): Promise<HomepageData> {
         supabase
           .from("reviews")
           .select("*")
-          .eq("is_published", true)
-          .order("display_order", { ascending: true }),
+          .eq("status", "approved")
+          .order("created_at", { ascending: false })
+          .limit(6),
         supabase
           .from("faqs")
           .select("*")
@@ -257,12 +261,28 @@ export async function getHomepageData(): Promise<HomepageData> {
       }
     }
 
+    let reviewsData = reviewsRes.data as Record<string, unknown>[] | null;
+    let reviewsError = reviewsRes.error;
+    // status 칼럼 없으면 is_published 로 재시도
+    if (reviewsError) {
+      const legacy = await supabase
+        .from("reviews")
+        .select("*")
+        .eq("is_published", true)
+        .order("created_at", { ascending: false })
+        .limit(6);
+      if (!legacy.error) {
+        reviewsData = legacy.data as Record<string, unknown>[] | null;
+        reviewsError = null;
+      }
+    }
+
     const firstError =
       settingsRes.error ||
       servicesError ||
       worksRes.error ||
       baRes.error ||
-      reviewsRes.error ||
+      reviewsError ||
       faqsRes.error;
 
     if (firstError) {
@@ -279,7 +299,7 @@ export async function getHomepageData(): Promise<HomepageData> {
       beforeAfter: (baRes.data as BeforeAfter[])?.length
         ? (baRes.data as BeforeAfter[])
         : DEFAULT_BEFORE_AFTER,
-      reviews: (reviewsRes.data as Review[]) || [],
+      reviews: (reviewsData || []).map(mapReview),
       faqs: (faqsRes.data as Faq[])?.length
         ? (faqsRes.data as Faq[])
         : DEFAULT_FAQS,
@@ -500,6 +520,213 @@ export async function getPaginatedWorks(
     models: [...new Set(metaRows.map((r) => r.vehicle_model).filter(Boolean))].sort(),
     services: serviceOptions,
     categories: serviceOptions.map((s) => s.title),
+  };
+}
+
+export async function getApprovedReviews(options?: {
+  page?: number;
+  pageSize?: number;
+}): Promise<{ items: Review[]; total: number; averageRating: number; page: number; pageSize: number; totalPages: number }> {
+  const page = options?.page ?? 1;
+  const pageSize = options?.pageSize ?? 12;
+  const empty = {
+    items: [] as Review[],
+    total: 0,
+    averageRating: 0,
+    page,
+    pageSize,
+    totalPages: 1,
+  };
+
+  if (!isSupabaseConfigured()) return empty;
+  const supabase = await tryCreateClient();
+  if (!supabase) return empty;
+
+  let query = supabase
+    .from("reviews")
+    .select("*", { count: "exact" })
+    .eq("status", "approved")
+    .order("created_at", { ascending: false });
+
+  const from = (page - 1) * pageSize;
+  const to = from + pageSize - 1;
+  let { data, error, count } = await query.range(from, to);
+
+  if (error) {
+    const legacy = await supabase
+      .from("reviews")
+      .select("*", { count: "exact" })
+      .eq("is_published", true)
+      .order("created_at", { ascending: false })
+      .range(from, to);
+    data = legacy.data;
+    error = legacy.error;
+    count = legacy.count;
+  }
+
+  if (error || !data) return empty;
+
+  const items = (data as Record<string, unknown>[]).map(mapReview);
+  const total = count ?? items.length;
+
+  // 평균은 전체 승인 리뷰 기준 (현재 페이지만이 아님)
+  let avgQuery = await supabase
+    .from("reviews")
+    .select("rating")
+    .eq("status", "approved");
+  if (avgQuery.error) {
+    avgQuery = await supabase.from("reviews").select("rating").eq("is_published", true);
+  }
+  const ratings = ((avgQuery.data || []) as Array<{ rating: number }>).map((r) => ({
+    rating: r.rating,
+  }));
+
+  return {
+    items,
+    total,
+    averageRating: averageRating(ratings.length ? ratings : items),
+    page,
+    pageSize,
+    totalPages: Math.max(1, Math.ceil(total / pageSize)),
+  };
+}
+
+export async function getAdminReviews(filters?: {
+  status?: ReviewStatus | "all";
+  rating?: number | "all";
+  q?: string;
+  sort?: "newest" | "oldest";
+}): Promise<Review[]> {
+  if (!isSupabaseConfigured()) return [];
+  const supabase = await tryCreateClient();
+  if (!supabase) return [];
+
+  let query = supabase.from("reviews").select("*");
+  const status = filters?.status ?? "all";
+  if (status !== "all") {
+    query = query.eq("status", status);
+  }
+  if (filters?.rating && filters.rating !== "all") {
+    query = query.eq("rating", filters.rating);
+  }
+  if (filters?.q?.trim()) {
+    const q = filters.q.trim().replace(/[%_,]/g, "");
+    query = query.or(
+      `author_name.ilike.%${q}%,customer_name.ilike.%${q}%,content.ilike.%${q}%,vehicle_name.ilike.%${q}%,vehicle_info.ilike.%${q}%`,
+    );
+  }
+  query = query.order("created_at", {
+    ascending: filters?.sort === "oldest",
+  });
+
+  const { data, error } = await query;
+  if (error) {
+    // status/author_name 검색 실패 시 단순 조회
+    const legacy = await supabase
+      .from("reviews")
+      .select("*")
+      .order("created_at", { ascending: filters?.sort === "oldest" });
+    if (legacy.error || !legacy.data) return [];
+    let items = (legacy.data as Record<string, unknown>[]).map(mapReview);
+    if (status !== "all") {
+      items = items.filter((r) => r.status === status);
+    }
+    if (filters?.rating && filters.rating !== "all") {
+      items = items.filter((r) => r.rating === filters.rating);
+    }
+    if (filters?.q?.trim()) {
+      const q = filters.q.trim().toLowerCase();
+      items = items.filter(
+        (r) =>
+          r.author_name.toLowerCase().includes(q) ||
+          r.content.toLowerCase().includes(q) ||
+          (r.vehicle_name || "").toLowerCase().includes(q),
+      );
+    }
+    return items;
+  }
+
+  return ((data as Record<string, unknown>[]) || []).map(mapReview);
+}
+
+export async function getReviewStats(): Promise<ReviewStats> {
+  const empty: ReviewStats = {
+    total: 0,
+    pending: 0,
+    approved: 0,
+    hidden: 0,
+    rejected: 0,
+    averageRating: 0,
+  };
+  if (!isSupabaseConfigured()) return empty;
+  const supabase = await tryCreateClient();
+  if (!supabase) return empty;
+
+  const { data, error } = await supabase
+    .from("reviews")
+    .select("rating, status, is_published");
+
+  if (error || !data) {
+    const legacy = await supabase.from("reviews").select("rating, is_published");
+    if (legacy.error || !legacy.data) return empty;
+    const rows = legacy.data as Array<{ rating: number; is_published: boolean }>;
+    const approved = rows.filter((r) => r.is_published);
+    return {
+      total: rows.length,
+      pending: rows.filter((r) => !r.is_published).length,
+      approved: approved.length,
+      hidden: 0,
+      rejected: 0,
+      averageRating: averageRating(approved),
+    };
+  }
+
+  const rows = (data as Record<string, unknown>[]).map(mapReview);
+  const approved = rows.filter((r) => r.status === "approved");
+  return {
+    total: rows.length,
+    pending: rows.filter((r) => r.status === "pending").length,
+    approved: approved.length,
+    hidden: rows.filter((r) => r.status === "hidden").length,
+    rejected: rows.filter((r) => r.status === "rejected").length,
+    averageRating: averageRating(approved),
+  };
+}
+
+export async function getAdminDashboardStats() {
+  const empty = {
+    services: 0,
+    works: 0,
+    pendingReviews: 0,
+    approvedReviews: 0,
+    recentWorks: [] as WorkCase[],
+    recentReviews: [] as Review[],
+  };
+  if (!isSupabaseConfigured()) return empty;
+  const supabase = await tryCreateClient();
+  if (!supabase) return empty;
+
+  const [servicesRes, worksRes, reviewsRes, recentWorksRes] = await Promise.all([
+    supabase.from("services").select("id", { count: "exact", head: true }),
+    supabase.from("work_cases").select("id", { count: "exact", head: true }),
+    supabase.from("reviews").select("*").order("created_at", { ascending: false }).limit(5),
+    supabase
+      .from("work_cases")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(5),
+  ]);
+
+  const reviews = ((reviewsRes.data as Record<string, unknown>[]) || []).map(mapReview);
+  const stats = await getReviewStats();
+
+  return {
+    services: servicesRes.count ?? 0,
+    works: worksRes.count ?? 0,
+    pendingReviews: stats.pending,
+    approvedReviews: stats.approved,
+    recentWorks: ((recentWorksRes.data as Record<string, unknown>[]) || []).map(mapWork),
+    recentReviews: reviews,
   };
 }
 
