@@ -96,17 +96,38 @@ export type BeforeAfter = {
   updated_at?: string;
 };
 
+export type ReviewStatus = "pending" | "approved" | "hidden" | "rejected";
+
 export type Review = {
   id: string;
+  /** 작성자 표시명 (신규 표준) */
+  author_name: string;
+  /** 차량명 (선택) */
+  vehicle_name: string | null;
+  /** @deprecated author_name 과 동기화 */
   customer_name: string;
+  /** @deprecated vehicle_name 과 동기화 */
   vehicle_info: string;
   content: string;
   rating: number;
+  status: ReviewStatus;
+  admin_reply: string | null;
+  password_hash?: string | null;
   display_order: number;
   is_published: boolean;
   is_sample: boolean;
   created_at?: string;
   updated_at?: string;
+  approved_at: string | null;
+};
+
+export type ReviewStats = {
+  total: number;
+  pending: number;
+  approved: number;
+  hidden: number;
+  rejected: number;
+  averageRating: number;
 };
 
 export type Faq = {

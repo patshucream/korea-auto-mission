@@ -47,11 +47,20 @@ function supabaseErrorMessage(error: SupabaseLikeError, fallback = "저장에 �
 function revalidatePublic() {
   revalidatePath("/");
   revalidatePath("/works");
+  revalidatePath("/reviews");
   revalidatePath("/admin");
   revalidatePath("/admin/general");
   revalidatePath("/admin/seo");
   revalidatePath("/admin/services");
   revalidatePath("/admin/works");
+  revalidatePath("/admin/reviews");
+}
+
+function revalidateReviews() {
+  revalidatePath("/");
+  revalidatePath("/reviews");
+  revalidatePath("/admin/reviews");
+  revalidatePath("/admin");
 }
 
 /** site_settings 테이블에 실제 존재하는 업데이트 가능 칼럼만 허용 */
@@ -472,51 +481,189 @@ export async function updateBeforeAfter(input: {
 
 export async function upsertReview(input: {
   id?: string;
-  customer_name: string;
-  vehicle_info: string;
+  author_name?: string;
+  customer_name?: string;
+  vehicle_name?: string | null;
+  vehicle_info?: string;
   content: string;
   rating: number;
-  display_order: number;
-  is_published: boolean;
+  display_order?: number;
+  status?: "pending" | "approved" | "hidden" | "rejected";
+  is_published?: boolean;
   is_sample?: boolean;
+  admin_reply?: string | null;
 }): Promise<SaveResult> {
   const supabase = await ensureAuth();
-  const { id, ...rest } = input;
-  const payload = {
-    customer_name: rest.customer_name ?? "",
-    vehicle_info: rest.vehicle_info ?? "",
-    content: rest.content ?? "",
-    rating: rest.rating,
-    display_order: rest.display_order,
-    is_published: rest.is_published,
-    is_sample: rest.is_sample ?? false,
-  };
+  const author =
+    (input.author_name ?? input.customer_name ?? "").trim() || "고객";
+  const vehicle = (input.vehicle_name ?? input.vehicle_info ?? "").trim();
+  const status =
+    input.status ??
+    (input.is_published ? "approved" : "pending");
 
-  if (id) {
-    const { error } = await supabase.from("reviews").update(payload).eq("id", id);
+  const payload: Record<string, unknown> = {
+    author_name: author,
+    customer_name: author,
+    vehicle_name: vehicle || null,
+    vehicle_info: vehicle,
+    content: input.content ?? "",
+    rating: input.rating,
+    display_order: input.display_order ?? 0,
+    status,
+    is_published: status === "approved",
+    is_sample: input.is_sample ?? false,
+    admin_reply: input.admin_reply ?? null,
+  };
+  if (status === "approved") {
+    payload.approved_at = new Date().toISOString();
+  }
+
+  if (input.id) {
+    let { error } = await supabase.from("reviews").update(payload).eq("id", input.id);
+    if (error && isMissingColumnError(error)) {
+      logSupabaseError("upsertReview.legacyUpdate", error, payload);
+      const legacy = {
+        customer_name: author,
+        vehicle_info: vehicle,
+        content: payload.content,
+        rating: payload.rating,
+        display_order: payload.display_order,
+        is_published: status === "approved",
+        is_sample: payload.is_sample,
+      };
+      const retry = await supabase.from("reviews").update(legacy).eq("id", input.id);
+      error = retry.error;
+    }
     if (error) {
       logSupabaseError("upsertReview.update", error, payload);
-      return { ok: false, error: supabaseErrorMessage(error) };
+      return { ok: false, error: "리뷰 저장에 실패했습니다." };
     }
   } else {
-    const { error } = await supabase.from("reviews").insert(payload);
+    let { error } = await supabase.from("reviews").insert(payload);
+    if (error && isMissingColumnError(error)) {
+      logSupabaseError("upsertReview.legacyInsert", error, payload);
+      const legacy = {
+        customer_name: author,
+        vehicle_info: vehicle,
+        content: payload.content,
+        rating: payload.rating,
+        display_order: payload.display_order,
+        is_published: status === "approved",
+        is_sample: payload.is_sample,
+      };
+      const retry = await supabase.from("reviews").insert(legacy);
+      error = retry.error;
+    }
     if (error) {
       logSupabaseError("upsertReview.insert", error, payload);
-      return { ok: false, error: supabaseErrorMessage(error) };
+      return { ok: false, error: "리뷰 저장에 실패했습니다." };
     }
   }
-  revalidatePublic();
+  revalidateReviews();
   return { ok: true };
 }
 
-export async function deleteReview(id: string) {
+export async function updateReviewStatus(
+  id: string,
+  status: "pending" | "approved" | "hidden" | "rejected",
+): Promise<SaveResult> {
+  const supabase = await ensureAuth();
+  const payload: Record<string, unknown> = {
+    status,
+    is_published: status === "approved",
+  };
+  if (status === "approved") {
+    payload.approved_at = new Date().toISOString();
+  }
+  let { error } = await supabase.from("reviews").update(payload).eq("id", id);
+  if (error && isMissingColumnError(error)) {
+    logSupabaseError("updateReviewStatus.legacy", error, payload);
+    const retry = await supabase
+      .from("reviews")
+      .update({ is_published: status === "approved" })
+      .eq("id", id);
+    error = retry.error;
+  }
+  if (error) {
+    logSupabaseError("updateReviewStatus", error, payload);
+    return { ok: false, error: "상태 변경에 실패했습니다." };
+  }
+  revalidateReviews();
+  return { ok: true };
+}
+
+export async function bulkUpdateReviewStatus(
+  ids: string[],
+  status: "approved" | "hidden",
+): Promise<SaveResult> {
+  if (!ids.length) return { ok: false, error: "선택된 리뷰가 없습니다." };
+  const supabase = await ensureAuth();
+  const payload: Record<string, unknown> = {
+    status,
+    is_published: status === "approved",
+  };
+  if (status === "approved") {
+    payload.approved_at = new Date().toISOString();
+  }
+  let { error } = await supabase.from("reviews").update(payload).in("id", ids);
+  if (error && isMissingColumnError(error)) {
+    logSupabaseError("bulkUpdateReviewStatus.legacy", error, payload);
+    const retry = await supabase
+      .from("reviews")
+      .update({ is_published: status === "approved" })
+      .in("id", ids);
+    error = retry.error;
+  }
+  if (error) {
+    logSupabaseError("bulkUpdateReviewStatus", error, payload);
+    return { ok: false, error: "일괄 변경에 실패했습니다." };
+  }
+  revalidateReviews();
+  return { ok: true };
+}
+
+export async function saveReviewReply(id: string, admin_reply: string): Promise<SaveResult> {
+  const supabase = await ensureAuth();
+  const reply = admin_reply.trim() || null;
+  let { error } = await supabase
+    .from("reviews")
+    .update({ admin_reply: reply })
+    .eq("id", id);
+  if (error && isMissingColumnError(error)) {
+    logSupabaseError("saveReviewReply.missingColumn", error);
+    return {
+      ok: false,
+      error: "관리자 답변 기능을 사용하려면 마이그레이션 004를 적용해 주세요.",
+    };
+  }
+  if (error) {
+    logSupabaseError("saveReviewReply", error);
+    return { ok: false, error: "답변 저장에 실패했습니다." };
+  }
+  revalidateReviews();
+  return { ok: true };
+}
+
+export async function deleteReview(id: string): Promise<SaveResult> {
   const supabase = await ensureAuth();
   const { error } = await supabase.from("reviews").delete().eq("id", id);
   if (error) {
     logSupabaseError("deleteReview", error);
-    throw new Error(supabaseErrorMessage(error));
+    return { ok: false, error: "리뷰 삭제에 실패했습니다." };
   }
-  revalidatePublic();
+  revalidateReviews();
+  return { ok: true };
+}
+
+export async function deleteReviews(ids: string[]): Promise<SaveResult> {
+  if (!ids.length) return { ok: false, error: "선택된 리뷰가 없습니다." };
+  const supabase = await ensureAuth();
+  const { error } = await supabase.from("reviews").delete().in("id", ids);
+  if (error) {
+    logSupabaseError("deleteReviews", error);
+    return { ok: false, error: "리뷰 삭제에 실패했습니다." };
+  }
+  revalidateReviews();
   return { ok: true };
 }
 

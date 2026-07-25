@@ -1,48 +1,73 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
 import type { Review } from "@/lib/types";
+import { averageRating } from "@/lib/reviews";
+import { ReviewCard } from "@/components/reviews/ReviewCard";
+import { ReviewWriteModal } from "@/components/reviews/ReviewWriteModal";
 
 type Props = {
   reviews: Review[];
+  totalApproved?: number;
+  average?: number;
 };
 
-export function Reviews({ reviews }: Props) {
+export function Reviews({ reviews, totalApproved, average }: Props) {
+  const [open, setOpen] = useState(false);
+  const avg = average ?? averageRating(reviews);
+  const total = totalApproved ?? reviews.length;
+
   return (
-    <section className="section-pad bg-warm-white">
+    <section id="reviews" className="section-pad bg-dark-section text-white">
       <div className="container-site">
-        <h2 className="section-title">고객 후기</h2>
-        <p className="section-lead">
-          등록된 고객 후기를 확인하세요. 샘플 문구는 관리자에서 수정·게시할 수 있습니다.
-        </p>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h2 className="section-title text-white">고객 후기</h2>
+            <p className="section-lead text-white/60">
+              코리아오토미션을 이용하신 고객님의 실제 후기를 확인해보세요.
+            </p>
+            {total > 0 ? (
+              <p className="mt-4 text-sm text-white/55">
+                평균 <span className="font-semibold text-white">{avg.toFixed(1)}</span> · 공개 후기{" "}
+                <span className="font-semibold text-white">{total}</span>개
+              </p>
+            ) : null}
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <button type="button" className="btn btn-light min-h-11" onClick={() => setOpen(true)}>
+              후기 작성하기
+            </button>
+            <Link href="/reviews" className="btn btn-on-dark min-h-11">
+              전체 후기 보기
+            </Link>
+          </div>
+        </div>
 
         {reviews.length === 0 ? (
-          <p className="mt-10 rounded-[12px] border border-border bg-white px-5 py-8 text-center text-muted">
-            아직 게시된 고객 후기가 없습니다. 방문 후 남겨 주신 소중한 의견을 이곳에
-            안내할 예정입니다.
-          </p>
+          <div className="mt-10 rounded-[12px] border border-white/10 bg-white/[0.03] px-5 py-12 text-center">
+            <p className="text-white/70">아직 공개된 고객 후기가 없습니다.</p>
+            <p className="mt-2 text-sm text-white/45">
+              첫 후기를 남겨 주시면 다른 고객에게 큰 도움이 됩니다.
+            </p>
+            <button
+              type="button"
+              className="btn btn-light mt-6 min-h-11"
+              onClick={() => setOpen(true)}
+            >
+              후기 작성하기
+            </button>
+          </div>
         ) : (
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {reviews.map((review) => (
-              <article key={review.id} className="card-light p-5">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="font-black text-charcoal">{review.customer_name}</p>
-                  <p className="text-sm font-bold text-navy" aria-label={`별점 ${review.rating}점`}>
-                    {"★".repeat(review.rating)}
-                    <span className="text-border">{"★".repeat(5 - review.rating)}</span>
-                  </p>
-                </div>
-                {review.vehicle_info ? (
-                  <p className="mt-1 text-sm font-medium text-muted">{review.vehicle_info}</p>
-                ) : null}
-                <p className="mt-4 text-[1.02rem] leading-relaxed text-charcoal-soft">
-                  {review.content}
-                </p>
-                {review.is_sample ? (
-                  <p className="mt-3 text-xs font-bold text-muted">샘플 콘텐츠</p>
-                ) : null}
-              </article>
+              <ReviewCard key={review.id} review={review} variant="dark" />
             ))}
           </div>
         )}
       </div>
+
+      <ReviewWriteModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 }

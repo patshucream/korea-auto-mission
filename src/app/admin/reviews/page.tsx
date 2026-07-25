@@ -1,28 +1,13 @@
 import { AdminShell } from "@/components/admin/AdminShell";
 import { ReviewsAdmin } from "@/components/admin/ReviewsAdmin";
-import { tryCreateClient } from "@/lib/supabase/server";
-import { isSupabaseConfigured } from "@/lib/utils";
-import type { Review } from "@/lib/types";
+import { getAdminReviews, getReviewStats } from "@/lib/data/content";
 
 export default async function AdminReviewsPage() {
-  let reviews: Review[] = [];
-  if (isSupabaseConfigured()) {
-    const supabase = await tryCreateClient();
-    if (supabase) {
-      const { data } = await supabase
-        .from("reviews")
-        .select("*")
-        .order("display_order", { ascending: true });
-      if (data) reviews = data as Review[];
-    }
-  }
+  const [reviews, stats] = await Promise.all([getAdminReviews(), getReviewStats()]);
 
   return (
-    <AdminShell
-      title="고객 후기"
-      description="실제 후기만 게시하세요. 샘플은 기본 비공개입니다."
-    >
-      <ReviewsAdmin initialReviews={reviews} />
+    <AdminShell title="리뷰 관리" description="방문 후기 승인, 답변, 공개 상태를 관리합니다.">
+      <ReviewsAdmin initialReviews={reviews} stats={stats} />
     </AdminShell>
   );
 }
