@@ -53,8 +53,14 @@ function deriveSplitHours(hours: string, closedDays: string) {
   const holiday = (() => {
     const closed = closedDays.trim();
     if (!closed) return DEFAULT_SETTINGS.holiday_hours;
-    if (/(휴무|휴일|닫)/i.test(closed) || /(일요일|공휴일)/.test(closed)) return "휴무";
-    return closed;
+    // 공휴일만 언급되고 휴무로 묶인 레거시 값은 정상영업으로 해석
+    if (/공휴일/.test(closed) && /(휴무|휴일|닫)/i.test(closed)) {
+      return DEFAULT_SETTINGS.holiday_hours;
+    }
+    if (/공휴일/.test(closed) && !/일요일/.test(closed)) {
+      return closed;
+    }
+    return DEFAULT_SETTINGS.holiday_hours;
   })();
   return { weekday, saturday, holiday };
 }
@@ -85,7 +91,9 @@ function mapSettings(row: Record<string, unknown>): SiteSettings {
     saturday_hours: saturday,
     holiday_hours: holiday,
     hours: legacyHours || `평일 ${weekday} 토요일 ${saturday}`,
-    closed_days: legacyClosed || (holiday === "휴무" ? "일요일 · 공휴일" : holiday),
+    closed_days:
+      legacyClosed ||
+      (holiday === "휴무" || holiday === "휴일" ? "일요일 · 공휴일" : "일요일"),
     process_steps: parseProcessSteps(row.process_steps),
     hero_image_path: (row.hero_image_path as string | null) ?? null,
     shop_image_path: (row.shop_image_path as string | null) ?? null,
