@@ -15,6 +15,7 @@ export type SiteSettings = {
   closed_days: string;
   weekday_hours: string;
   saturday_hours: string;
+  /** 공휴일 안내 (예: 정상영업). 일요일 휴무는 표시 레이어에서 별도 유지 */
   holiday_hours: string;
   naver_blog_url: string;
   naver_map_url: string;

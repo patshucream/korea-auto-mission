@@ -36,6 +36,7 @@ Supabase Dashboard → SQL Editor에서 **순서대로** 실행합니다.
 2. `supabase/migrations/002_service_id_and_sort_order.sql`
 3. `supabase/migrations/003_business_hours.sql`
 4. `supabase/migrations/004_reviews_moderation.sql`
+5. `supabase/migrations/005_holiday_hours_open.sql`
 4. `supabase/seed.sql` (초기 데이터가 없을 때만 필요)
 
 마이그레이션에 포함되는 내용:

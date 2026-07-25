@@ -42,9 +42,11 @@ export function GeneralSettingsForm({ settings }: Props) {
           try {
             const weekday = (form.weekday_hours ?? "").trim() || "09:00 - 18:00";
             const saturday = (form.saturday_hours ?? "").trim() || "09:00 - 15:00";
-            const holiday = (form.holiday_hours ?? "").trim() || "휴무";
+            const holiday = (form.holiday_hours ?? "").trim() || "정상영업";
             const hours = `평일 ${weekday} 토요일 ${saturday}`;
-            const closedDays = holiday === "휴무" ? "일요일 · 공휴일" : holiday;
+            // 공휴일 정상영업 시 레거시 closed_days 는 일요일만 표시
+            const closedDays =
+              holiday === "휴무" || holiday === "휴일" ? "일요일 · 공휴일" : "일요일";
             // DB 컬럼만 명시 전송 (id/created_at 등·undefined 제외)
             const result = await saveSiteSettings({
               business_name: form.business_name,
@@ -125,12 +127,12 @@ export function GeneralSettingsForm({ settings }: Props) {
               placeholder="예: 09:00 - 15:00"
             />
           </Field>
-          <Field label="일요일/공휴일 안내">
+          <Field label="공휴일 안내">
             <input
               className="admin-input"
               value={form.holiday_hours ?? ""}
               onChange={(e) => update("holiday_hours", e.target.value)}
-              placeholder="예: 휴무"
+              placeholder="예: 정상영업"
             />
           </Field>
           <Field label="네이버 블로그 URL">

@@ -7,17 +7,17 @@ type Props = {
   className?: string;
 };
 
-const ROWS: Array<{
-  key: keyof Pick<SiteSettings, "weekday_hours" | "saturday_hours" | "holiday_hours">;
-  label: string;
-}> = [
-  { key: "weekday_hours", label: "평일" },
-  { key: "saturday_hours", label: "토요일" },
-  { key: "holiday_hours", label: "일요일·공휴일" },
-];
+/** 일요일은 휴무 고정, 공휴일은 CMS holiday_hours 사용 */
+const SUNDAY_HOURS = "휴무";
 
 export function BusinessHours({ settings, variant = "light", className }: Props) {
   const isFooter = variant === "footer";
+  const rows: Array<{ label: string; value: string }> = [
+    { label: "평일", value: settings.weekday_hours },
+    { label: "토요일", value: settings.saturday_hours },
+    { label: "일요일", value: SUNDAY_HOURS },
+    { label: "공휴일", value: settings.holiday_hours },
+  ];
 
   return (
     <div className={cn(className)}>
@@ -35,8 +35,8 @@ export function BusinessHours({ settings, variant = "light", className }: Props)
           isFooter ? "text-sm" : "text-[1.02rem] sm:text-[1.05rem]",
         )}
       >
-        {ROWS.map(({ key, label }) => (
-          <div key={key} className="flex items-baseline justify-between gap-4">
+        {rows.map(({ label, value }) => (
+          <div key={label} className="flex items-baseline justify-between gap-4">
             <dt
               className={cn(
                 "shrink-0",
@@ -51,7 +51,7 @@ export function BusinessHours({ settings, variant = "light", className }: Props)
                 isFooter ? "text-white/75" : "text-muted",
               )}
             >
-              {settings[key]}
+              {value}
             </dd>
           </div>
         ))}
@@ -61,5 +61,5 @@ export function BusinessHours({ settings, variant = "light", className }: Props)
 }
 
 export function formatBusinessHoursSummary(settings: SiteSettings): string {
-  return `평일 ${settings.weekday_hours} / 토요일 ${settings.saturday_hours} / 일요일·공휴일 ${settings.holiday_hours}`;
+  return `평일 ${settings.weekday_hours} / 토요일 ${settings.saturday_hours} / 일요일 ${SUNDAY_HOURS} / 공휴일 ${settings.holiday_hours}`;
 }

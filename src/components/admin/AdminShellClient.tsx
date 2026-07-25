@@ -40,6 +40,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000`}
                 <li>`002_service_id_and_sort_order.sql`</li>
                 <li>`003_business_hours.sql`</li>
                 <li>`004_reviews_moderation.sql`</li>
+                <li>`005_holiday_hours_open.sql`</li>
               </ul>
             </li>
             <li>Authentication → Users에서 관리자 이메일을 생성합니다.</li>
