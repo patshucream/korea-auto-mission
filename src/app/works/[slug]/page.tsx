@@ -13,7 +13,7 @@ import {
   getWorkBySlug,
 } from "@/lib/data/content";
 import { getPublicImageUrl } from "@/lib/media";
-import { formatDateKo, getSiteUrl } from "@/lib/utils";
+import { SITE_URL, formatDateKo } from "@/lib/utils";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -157,7 +157,7 @@ export default async function WorkDetailPage({ params }: Props) {
                   <div>
                     <dt className="font-bold text-charcoal">페이지 주소</dt>
                     <dd className="break-all text-muted">
-                      {getSiteUrl()}/works/{work.slug}
+                      {SITE_URL}/works/{work.slug}
                     </dd>
                   </div>
                 </dl>

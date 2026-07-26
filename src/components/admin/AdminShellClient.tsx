@@ -29,7 +29,8 @@ export function AdminShellClient({
           <pre className="mt-4 overflow-x-auto rounded-[12px] bg-navy p-4 text-sm text-white">
 {`NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_xxx
-NEXT_PUBLIC_SITE_URL=http://localhost:3000`}
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+# 프로덕션 공개 URL은 코드의 SITE_URL(https://koreauto.co.kr)을 사용합니다`}
           </pre>
           <ol className="mt-4 list-decimal space-y-2 pl-5 text-charcoal-soft">
             <li>Supabase 프로젝트를 생성합니다.</li>

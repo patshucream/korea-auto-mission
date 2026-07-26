@@ -3,7 +3,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/data/content";
 import { getPublicImageUrl } from "@/lib/media";
-import { getSiteUrl } from "@/lib/utils";
+import { SITE_URL } from "@/lib/utils";
 import { formatBusinessHoursSummary } from "@/components/ui/BusinessHours";
 
 const notoSansKr = Noto_Sans_KR({
@@ -15,7 +15,8 @@ const notoSansKr = Noto_Sans_KR({
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
-  const siteUrl = getSiteUrl();
+  // 공개 SEO URL은 항상 공식 도메인
+  const siteUrl = SITE_URL;
   const og = getPublicImageUrl(settings.og_image_path) || `${siteUrl}/og-default.svg`;
 
   return {
@@ -57,7 +58,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const settings = await getSiteSettings();
-  const siteUrl = getSiteUrl();
+  const siteUrl = SITE_URL;
 
   const jsonLd = {
     "@context": "https://schema.org",

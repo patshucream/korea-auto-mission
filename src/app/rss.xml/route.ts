@@ -1,5 +1,5 @@
 import { getPaginatedWorks } from "@/lib/data/content";
-import { escapeXml, getSiteUrl } from "@/lib/utils";
+import { escapeXml, SITE_URL } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
@@ -12,7 +12,7 @@ function toRfc822(date: Date): string {
 }
 
 export async function GET() {
-  const siteUrl = getSiteUrl();
+  const siteUrl = SITE_URL;
   const works = await getPaginatedWorks({ page: 1, pageSize: 30, sort: "newest" });
   const buildDate = toRfc822(new Date());
 

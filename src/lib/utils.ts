@@ -11,15 +11,28 @@ export function isSupabaseConfigured(): boolean {
   );
 }
 
+/** 공식 사이트 URL — sitemap / robots / RSS / metadata / JSON-LD 공통 */
+export const SITE_URL = "https://koreauto.co.kr";
+
+/**
+ * 공개 URL 기준 도메인.
+ * 프로덕션에서는 항상 SITE_URL(koreauto.co.kr)을 사용하며,
+ * vercel.app / VERCEL_* 기본 도메인은 절대 사용하지 않습니다.
+ * 로컬 개발만 NEXT_PUBLIC_SITE_URL(localhost)을 허용합니다.
+ */
 export function getSiteUrl(): string {
-  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  if (fromEnv) return fromEnv;
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.replace(/\/$/, "")}`;
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "";
+  const isLocal =
+    fromEnv.startsWith("http://localhost") ||
+    fromEnv.startsWith("https://localhost") ||
+    fromEnv.startsWith("http://127.0.0.1") ||
+    fromEnv.startsWith("https://127.0.0.1");
+
+  if (process.env.NODE_ENV !== "production" && isLocal) {
+    return fromEnv;
   }
-  return process.env.NODE_ENV === "production"
-    ? "https://koreauto.co.kr"
-    : "http://localhost:3000";
+
+  return SITE_URL;
 }
 
 /** XML 텍스트 이스케이프 (RSS/Sitemap) */

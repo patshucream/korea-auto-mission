@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
 import { getPaginatedWorks } from "@/lib/data/content";
-import { getSiteUrl } from "@/lib/utils";
+import { SITE_URL } from "@/lib/utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = getSiteUrl();
+  const siteUrl = SITE_URL;
   const now = new Date();
   const works = await getPaginatedWorks({ page: 1, pageSize: 1000, sort: "newest" });
 
