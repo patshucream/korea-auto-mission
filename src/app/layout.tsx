@@ -43,6 +43,11 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: siteUrl,
     },
+    verification: {
+      other: {
+        "naver-site-verification": "158b488e174e30e37adb4cdfaddc98fdb9f7b1b0",
+      },
+    },
   };
 }
 
