@@ -56,6 +56,7 @@ function revalidatePublic() {
   revalidatePath("/reviews");
   revalidatePath("/admin");
   revalidatePath("/admin/general");
+  revalidatePath("/admin/homepage");
   revalidatePath("/admin/seo");
   revalidatePath("/admin/services");
   revalidatePath("/admin/works");
@@ -94,6 +95,7 @@ const SITE_SETTINGS_KEYS = [
   "why_title",
   "why_content",
   "process_steps",
+  "homepage_config",
   "seo_title",
   "seo_description",
   "og_image_path",
@@ -148,13 +150,14 @@ export async function saveSiteSettings(payload: Record<string, unknown>): Promis
 
   let { error } = await write(clean);
 
-  // 003 마이그레이션 미적용 등으로 신규 영업시간 칼럼이 없으면 제외 후 재시도
+  // 마이그레이션 미적용 컬럼이 있으면 제외 후 재시도
   if (error && isMissingColumnError(error)) {
     logSupabaseError("saveSiteSettings.missingColumnRetry", error, clean);
     const fallback: Record<string, unknown> = { ...clean };
     for (const key of OPTIONAL_HOUR_KEYS) {
       delete fallback[key];
     }
+    delete fallback.homepage_config;
     const retry = await write(fallback);
     error = retry.error;
   }

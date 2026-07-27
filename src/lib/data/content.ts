@@ -21,6 +21,7 @@ import {
   DEFAULT_WORKS,
 } from "@/lib/defaults";
 import { averageRating, mapReview } from "@/lib/reviews";
+import { parseHomepageConfig } from "@/lib/homepage";
 import { tryCreateClient } from "@/lib/supabase/server";
 import {
   isMissingTableError,
@@ -95,6 +96,7 @@ function mapSettings(row: Record<string, unknown>): SiteSettings {
       legacyClosed ||
       (holiday === "휴무" || holiday === "휴일" ? "일요일 · 공휴일" : "일요일"),
     process_steps: parseProcessSteps(row.process_steps),
+    homepage_config: parseHomepageConfig(row.homepage_config),
     hero_image_path: (row.hero_image_path as string | null) ?? null,
     shop_image_path: (row.shop_image_path as string | null) ?? null,
     og_image_path: (row.og_image_path as string | null) ?? null,
