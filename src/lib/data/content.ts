@@ -122,14 +122,41 @@ function mapService(row: Record<string, unknown>): Service {
   };
 }
 
-function mapWork(row: Record<string, unknown>): WorkCase {
+export function mapWork(row: Record<string, unknown>): WorkCase {
+  const status =
+    row.status === "draft" ||
+    row.status === "published" ||
+    row.status === "private" ||
+    row.status === "scheduled" ||
+    row.status === "trash"
+      ? row.status
+      : row.is_published
+        ? "published"
+        : "draft";
+
   return {
     ...(row as unknown as WorkCase),
     service_id: (row.service_id as string | null) ?? null,
     service_category: String(row.service_category ?? ""),
+    manufacturer:
+      (typeof row.manufacturer === "string" && row.manufacturer) ||
+      String(row.vehicle_brand ?? ""),
     gallery_image_paths: Array.isArray(row.gallery_image_paths)
       ? (row.gallery_image_paths as string[])
       : [],
+    before_images: Array.isArray(row.before_images) ? (row.before_images as string[]) : [],
+    after_images: Array.isArray(row.after_images) ? (row.after_images as string[]) : [],
+    video_urls: Array.isArray(row.video_urls) ? (row.video_urls as string[]) : [],
+    vehicle_tags: Array.isArray(row.vehicle_tags) ? (row.vehicle_tags as string[]) : [],
+    symptom_tags: Array.isArray(row.symptom_tags) ? (row.symptom_tags as string[]) : [],
+    general_tags: Array.isArray(row.general_tags) ? (row.general_tags as string[]) : [],
+    related_work_ids: Array.isArray(row.related_work_ids)
+      ? (row.related_work_ids as string[])
+      : [],
+    status,
+    content_html: typeof row.content_html === "string" ? row.content_html : null,
+    content_json: row.content_json ?? null,
+    view_count: typeof row.view_count === "number" ? row.view_count : 0,
   };
 }
 
@@ -325,12 +352,12 @@ export async function getSiteSettings(): Promise<SiteSettings> {
 
 export async function getWorkBySlug(slug: string): Promise<WorkCase | null> {
   if (!isSupabaseConfigured()) {
-    return DEFAULT_WORKS.find((w) => w.slug === slug) ?? null;
+    return DEFAULT_WORKS.find((w) => w.slug === slug && w.is_published) ?? null;
   }
 
   const supabase = await tryCreateClient();
   if (!supabase) {
-    return DEFAULT_WORKS.find((w) => w.slug === slug) ?? null;
+    return DEFAULT_WORKS.find((w) => w.slug === slug && w.is_published) ?? null;
   }
 
   const { data, error } = await supabase
@@ -342,12 +369,44 @@ export async function getWorkBySlug(slug: string): Promise<WorkCase | null> {
 
   if (error) {
     if (isMissingTableError(error)) {
-      return DEFAULT_WORKS.find((w) => w.slug === slug) ?? null;
+      return DEFAULT_WORKS.find((w) => w.slug === slug && w.is_published) ?? null;
     }
     return null;
   }
 
-  return data ? mapWork(data as Record<string, unknown>) : null;
+  if (!data) return null;
+  const work = mapWork(data as Record<string, unknown>);
+
+  // 비공개·휴지통·예약발행(아직 미공개) 차단 — RLS와 이중 방어
+  if (
+    work.status === "draft" ||
+    work.status === "private" ||
+    work.status === "trash" ||
+    work.status === "scheduled" ||
+    work.deleted_at
+  ) {
+    return null;
+  }
+
+  return work;
+}
+
+/** 조회수 +1 (실패해도 상세 노출에는 영향 없음) */
+export async function incrementWorkViewCount(id: string): Promise<void> {
+  if (!isSupabaseConfigured()) return;
+  const supabase = await tryCreateClient();
+  if (!supabase) return;
+  try {
+    const { data } = await supabase
+      .from("work_cases")
+      .select("view_count")
+      .eq("id", id)
+      .maybeSingle();
+    const next = (typeof data?.view_count === "number" ? data.view_count : 0) + 1;
+    await supabase.from("work_cases").update({ view_count: next }).eq("id", id);
+  } catch {
+    // ignore
+  }
 }
 
 export async function getRelatedWorks(
@@ -390,6 +449,93 @@ export async function getRelatedWorks(
     .limit(limit);
 
   if (error || !data) return [];
+  return (data as Record<string, unknown>[]).map(mapWork);
+}
+
+export async function getSameVehicleWorks(
+  current: WorkCase,
+  limit = 3,
+): Promise<WorkCase[]> {
+  const brand = current.manufacturer || current.vehicle_brand;
+  if (!isSupabaseConfigured()) {
+    return DEFAULT_WORKS.filter(
+      (w) =>
+        w.id !== current.id &&
+        w.is_published &&
+        (w.manufacturer || w.vehicle_brand) === brand &&
+        w.vehicle_model === current.vehicle_model,
+    ).slice(0, limit);
+  }
+
+  const supabase = await tryCreateClient();
+  if (!supabase) return [];
+
+  const { data, error } = await supabase
+    .from("work_cases")
+    .select("*")
+    .eq("is_published", true)
+    .neq("id", current.id)
+    .eq("vehicle_brand", brand)
+    .eq("vehicle_model", current.vehicle_model)
+    .order("published_at", { ascending: false })
+    .limit(limit);
+
+  if (error || !data) return [];
+  return (data as Record<string, unknown>[]).map(mapWork);
+}
+
+export async function getSameSymptomWorks(
+  current: WorkCase,
+  limit = 3,
+): Promise<WorkCase[]> {
+  const tag = current.symptom_tags?.[0];
+  const keyword = tag || current.service_category;
+  if (!keyword) return [];
+
+  if (!isSupabaseConfigured()) {
+    return DEFAULT_WORKS.filter(
+      (w) =>
+        w.id !== current.id &&
+        w.is_published &&
+        (w.symptom_tags?.includes(keyword) ||
+          w.service_category === current.service_category ||
+          w.symptoms?.includes(keyword)),
+    ).slice(0, limit);
+  }
+
+  const supabase = await tryCreateClient();
+  if (!supabase) return [];
+
+  let query = supabase
+    .from("work_cases")
+    .select("*")
+    .eq("is_published", true)
+    .neq("id", current.id);
+
+  if (tag) {
+    query = query.contains("symptom_tags", [tag]);
+  } else {
+    query = query.ilike("symptoms", `%${keyword.slice(0, 40)}%`);
+  }
+
+  const { data, error } = await query
+    .order("published_at", { ascending: false })
+    .limit(limit);
+
+  if (error || !data) {
+    // symptom_tags 컬럼 없을 때 서비스 기준 폴백
+    const fallback = await supabase
+      .from("work_cases")
+      .select("*")
+      .eq("is_published", true)
+      .neq("id", current.id)
+      .eq("service_category", current.service_category)
+      .order("published_at", { ascending: false })
+      .limit(limit);
+    if (fallback.error || !fallback.data) return [];
+    return (fallback.data as Record<string, unknown>[]).map(mapWork);
+  }
+
   return (data as Record<string, unknown>[]).map(mapWork);
 }
 
