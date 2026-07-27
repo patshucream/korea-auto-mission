@@ -14,8 +14,8 @@ export function FAQ({ faqs }: Props) {
   return (
     <section className="section-pad bg-white">
       <div className="container-site">
-        <h2 className="section-title">자주 묻는 질문</h2>
-        <p className="section-lead">예약, 견적, 작업 기간 등 자주 묻는 내용을 모았습니다.</p>
+        <h2 className="section-title">FAQ</h2>
+        <p className="section-lead">미션 수리, 진단, 예약, 견적 등 자주 묻는 내용을 모았습니다.</p>
 
         <div className="mt-10 space-y-3">
           {faqs.map((faq) => {

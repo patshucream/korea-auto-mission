@@ -698,7 +698,7 @@ export async function getApprovedReviews(options?: {
   const supabase = await tryCreateClient();
   if (!supabase) return empty;
 
-  let query = supabase
+  const query = supabase
     .from("reviews")
     .select("*", { count: "exact" })
     .eq("status", "approved")

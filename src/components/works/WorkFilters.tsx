@@ -1,15 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState, useTransition } from "react";
 import type { ServiceOption } from "@/lib/types";
+import {
+  HOME_BRANDS,
+  WORKS_POPULAR_QUERIES,
+  WORKS_QUICK_FILTERS,
+} from "@/lib/homepage";
 
 type Props = {
   brands: string[];
   models: string[];
   services: ServiceOption[];
-  /** @deprecated services 사용 */
-  categories?: string[];
 };
 
 export function WorkFilters({ brands, models, services }: Props) {
@@ -23,10 +27,10 @@ export function WorkFilters({ brands, models, services }: Props) {
   const [service, setService] = useState(searchParams.get("service") || "");
   const [sort, setSort] = useState(searchParams.get("sort") || "newest");
 
-  const filteredModels = useMemo(() => {
-    if (!brand) return models;
-    return models;
-  }, [brand, models]);
+  const brandOptions = useMemo(() => {
+    const set = new Set([...brands, ...HOME_BRANDS.filter((b) => b !== "국산차")]);
+    return [...set];
+  }, [brands]);
 
   function apply(next?: {
     q?: string;
@@ -61,109 +65,159 @@ export function WorkFilters({ brands, models, services }: Props) {
   }
 
   return (
-    <form
-      className="card-light grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-6"
-      onSubmit={(e) => {
-        e.preventDefault();
-        apply();
-      }}
-    >
-      <div className="xl:col-span-2">
-        <label htmlFor="q" className="admin-label">
-          키워드 검색
-        </label>
-        <input
-          id="q"
-          className="admin-input"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="차량, 증상, 제목 검색"
-        />
+    <div className="space-y-6">
+      <div>
+        <p className="text-sm font-bold text-muted">인기 검색어</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {WORKS_POPULAR_QUERIES.map((term) => (
+            <button
+              key={term}
+              type="button"
+              className="min-h-11 rounded-full border border-border px-4 text-sm font-semibold text-charcoal hover:border-navy"
+              onClick={() => {
+                setQ(term);
+                apply({ q: term });
+              }}
+            >
+              {term}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div>
-        <label htmlFor="brand" className="admin-label">
-          차량 브랜드
-        </label>
-        <select
-          id="brand"
-          className="admin-select"
-          value={brand}
-          onChange={(e) => {
-            setBrand(e.target.value);
-            setModel("");
-          }}
-        >
-          <option value="">전체</option>
-          {brands.map((b) => (
-            <option key={b} value={b}>
+        <p className="text-sm font-bold text-muted">브랜드 바로가기</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {HOME_BRANDS.map((b) => (
+            <Link
+              key={b}
+              href={b === "국산차" ? "/works" : `/works?brand=${encodeURIComponent(b)}`}
+              className="min-h-11 rounded-[8px] border border-border px-4 py-2 text-sm font-bold text-charcoal hover:border-navy"
+            >
               {b}
-            </option>
+            </Link>
           ))}
-        </select>
+        </div>
       </div>
 
       <div>
-        <label htmlFor="model" className="admin-label">
-          차량 모델
-        </label>
-        <select
-          id="model"
-          className="admin-select"
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
-        >
-          <option value="">전체</option>
-          {filteredModels.map((m) => (
-            <option key={m} value={m}>
-              {m}
-            </option>
+        <p className="text-sm font-bold text-muted">빠른 필터</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {WORKS_QUICK_FILTERS.map((f) => (
+            <button
+              key={f.label}
+              type="button"
+              className="min-h-11 rounded-[8px] bg-navy px-4 text-sm font-bold text-white"
+              onClick={() => {
+                setQ(f.q);
+                apply({ q: f.q });
+              }}
+            >
+              {f.label}
+            </button>
           ))}
-        </select>
+        </div>
       </div>
 
-      <div>
-        <label htmlFor="service" className="admin-label">
-          정비 서비스
-        </label>
-        <select
-          id="service"
-          className="admin-select"
-          value={service}
-          onChange={(e) => setService(e.target.value)}
-        >
-          <option value="">전체</option>
-          {services.map((s) => (
-            <option key={s.id} value={s.id}>
-              {s.title}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div>
-        <label htmlFor="sort" className="admin-label">
-          정렬
-        </label>
-        <select
-          id="sort"
-          className="admin-select"
-          value={sort}
-          onChange={(e) => setSort(e.target.value)}
-        >
-          <option value="newest">최신순</option>
-          <option value="oldest">오래된순</option>
-        </select>
-      </div>
-
-      <div className="flex items-end gap-2 md:col-span-2 xl:col-span-6">
-        <button type="submit" className="btn btn-primary" disabled={pending}>
-          {pending ? "검색 중…" : "검색"}
-        </button>
-        <button type="button" className="btn btn-ghost" onClick={reset}>
-          필터 초기화
-        </button>
-      </div>
-    </form>
+      <form
+        className="grid gap-4 border border-border bg-white p-5 md:grid-cols-2 xl:grid-cols-6"
+        onSubmit={(e) => {
+          e.preventDefault();
+          apply();
+        }}
+      >
+        <div className="xl:col-span-2">
+          <label htmlFor="q" className="admin-label">
+            키워드
+          </label>
+          <input
+            id="q"
+            className="admin-input"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="차량, 증상, 제목"
+          />
+        </div>
+        <div>
+          <label htmlFor="brand" className="admin-label">
+            브랜드
+          </label>
+          <select
+            id="brand"
+            className="admin-select"
+            value={brand}
+            onChange={(e) => {
+              setBrand(e.target.value);
+              setModel("");
+            }}
+          >
+            <option value="">전체</option>
+            {brandOptions.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="model" className="admin-label">
+            모델
+          </label>
+          <select
+            id="model"
+            className="admin-select"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+          >
+            <option value="">전체</option>
+            {models.map((m) => (
+              <option key={m} value={m}>
+                {m}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="service" className="admin-label">
+            서비스
+          </label>
+          <select
+            id="service"
+            className="admin-select"
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+          >
+            <option value="">전체</option>
+            {services.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.title}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="sort" className="admin-label">
+            정렬
+          </label>
+          <select
+            id="sort"
+            className="admin-select"
+            value={sort}
+            onChange={(e) => setSort(e.target.value)}
+          >
+            <option value="newest">최신순</option>
+            <option value="oldest">오래된순</option>
+          </select>
+        </div>
+        <div className="flex items-end gap-2 md:col-span-2 xl:col-span-6">
+          <button type="submit" className="btn btn-primary min-h-11" disabled={pending}>
+            {pending ? "검색 중…" : "검색"}
+          </button>
+          <button type="button" className="btn btn-ghost min-h-11" onClick={reset}>
+            필터 초기화
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

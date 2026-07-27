@@ -148,53 +148,50 @@ export default async function WorkDetailPage({ params }: Props) {
               ← 작업사례 목록
             </Link>
 
-            <header className="mt-6">
+            <header className="mx-auto mt-6 max-w-[840px]">
               <p className="text-sm font-bold text-navy">
                 {brand} {work.vehicle_model}
                 {work.model_year ? ` · ${work.model_year}` : ""}
-                {work.mileage ? ` · ${work.mileage}` : ""}
               </p>
-              <h1 className="mt-2 text-[1.9rem] font-black leading-snug tracking-tight text-charcoal md:text-[2.3rem]">
+              <h1 className="mt-3 text-[1.9rem] font-black leading-snug tracking-tight text-charcoal md:text-[2.4rem]">
                 {work.title}
               </h1>
-              {work.subtitle ? (
-                <p className="mt-2 text-lg text-muted">{work.subtitle}</p>
+              {work.subtitle || work.excerpt ? (
+                <p className="mt-3 text-lg leading-relaxed text-muted">
+                  {work.subtitle || work.excerpt}
+                </p>
               ) : null}
-              <p className="mt-3 text-muted">
+              <p className="mt-4 text-sm text-muted">
                 {work.service_category}
                 {work.published_at || work.created_at
                   ? ` · ${formatDateKo(work.published_at || work.created_at)}`
                   : ""}
+                {` · 조회 ${work.view_count ?? 0}`}
               </p>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2">
                 <PhoneButton settings={settings} />
                 <NaverReserveButton settings={settings} />
-                <a href="/#contact" className="btn btn-secondary">
-                  상담 문의
-                </a>
               </div>
             </header>
 
-            <div className="mt-8 grid gap-8 lg:grid-cols-[1.45fr_0.75fr]">
-              <div>
-                <SmartImage
-                  path={work.representative_image_path}
-                  alt={work.title}
-                  className="aspect-[16/10] w-full rounded-[14px]"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  priority
-                  fallbackLabel="작업 대표 사진"
+            <SmartImage
+              path={work.representative_image_path}
+              alt={work.title}
+              className="mt-8 aspect-[16/9] w-full rounded-[10px]"
+              sizes="100vw"
+              priority
+              fallbackLabel="작업 대표 사진"
+            />
+
+            <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,840px)_280px] lg:justify-between">
+              <div className="min-w-0">
+                <WorkReadingTools
+                  toc={toc}
+                  shareUrl={shareUrl}
+                  shareTitle={work.title}
                 />
 
-                <div className="mt-8">
-                  <WorkReadingTools
-                    toc={toc}
-                    shareUrl={shareUrl}
-                    shareTitle={work.title}
-                  />
-                </div>
-
-                <div className="work-content mt-2 space-y-8">
+                <div className="work-content mt-6 max-w-[840px] space-y-8">
                   {hasHtml ? (
                     <div
                       className="prose-ko"
@@ -303,14 +300,20 @@ export default async function WorkDetailPage({ params }: Props) {
                 ) : null}
               </div>
 
-              <aside className="h-fit rounded-[14px] border border-border bg-white p-5 lg:sticky lg:top-24">
-                <h2 className="text-lg font-black text-charcoal">차량 · 정비 요약</h2>
+              <aside className="h-fit border border-border bg-gray-100 p-5 lg:sticky lg:top-24">
+                <h2 className="text-lg font-black text-charcoal">차량 정보</h2>
                 <dl className="mt-4 space-y-3 text-sm">
                   <div>
-                    <dt className="font-bold text-charcoal">차량</dt>
-                    <dd className="text-muted">
-                      {brand} {work.vehicle_model} {work.model_year}
-                    </dd>
+                    <dt className="font-bold text-charcoal">제조사</dt>
+                    <dd className="text-muted">{brand}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-charcoal">모델</dt>
+                    <dd className="text-muted">{work.vehicle_model || "—"}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-charcoal">연식</dt>
+                    <dd className="text-muted">{work.model_year || "—"}</dd>
                   </div>
                   {work.mileage ? (
                     <div>
@@ -356,9 +359,9 @@ export default async function WorkDetailPage({ params }: Props) {
                 <div className="mt-6 grid gap-3">
                   <PhoneButton settings={settings} fullWidth />
                   <NaverReserveButton settings={settings} fullWidth />
-                  <a href="/#contact" className="btn btn-secondary btn-full">
+                  <Link href="/#contact" className="btn btn-secondary btn-full">
                     상담 문의
-                  </a>
+                  </Link>
                   {work.naver_blog_url ? (
                     <a
                       href={work.naver_blog_url}

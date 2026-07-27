@@ -127,10 +127,13 @@ export function WorkCaseEditor({ initial, services }: Props) {
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const [pending, startTransition] = useTransition();
   const [dirty, setDirty] = useState(false);
-  const [panelOpen, setPanelOpen] = useState(true);
+  const [panelOpen, setPanelOpen] = useState(false);
+  const [vehicleOpen, setVehicleOpen] = useState(false);
   const [mobileTab, setMobileTab] = useState<"write" | "settings">("write");
   const [bodyImageUrls, setBodyImageUrls] = useState<string[]>([]);
-  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({
+    publish: true,
+  });
 
   const storageKey = useMemo(
     () => `kam-work-draft-${initial?.id || "new"}`,
@@ -147,13 +150,14 @@ export function WorkCaseEditor({ initial, services }: Props) {
       const raw = localStorage.getItem(storageKey);
       if (!raw) return;
       const parsed = JSON.parse(raw) as { form: FormState; at: number };
-      if (parsed?.form && Date.now() - parsed.at < 1000 * 60 * 60 * 24) {
+      if (!parsed?.form || Date.now() - parsed.at >= 1000 * 60 * 60 * 24) return;
+      // confirm/setState는 effect 동기 경로 밖에서 처리
+      window.setTimeout(() => {
         const ok = window.confirm("이전에 임시 저장된 작성 내용이 있습니다. 복구할까요?");
-        if (ok) {
-          setForm(parsed.form);
-          setEditorKey((k) => k + 1);
-        }
-      }
+        if (!ok) return;
+        setForm(parsed.form);
+        setEditorKey((k) => k + 1);
+      }, 0);
     } catch {
       // ignore
     }
@@ -547,10 +551,11 @@ export function WorkCaseEditor({ initial, services }: Props) {
           </button>
           <button
             type="button"
-            className="btn btn-ghost min-h-10 text-sm xl:inline-flex hidden"
+            className="btn btn-ghost hidden min-h-10 text-sm xl:inline-flex"
             onClick={() => setPanelOpen((v) => !v)}
+            aria-expanded={panelOpen}
           >
-            {panelOpen ? "설정 접기" : "설정 펼치기"}
+            {panelOpen ? "설정 닫기" : "설정 열기"}
           </button>
         </div>
       </div>
@@ -577,7 +582,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
           panelOpen ? "xl:grid-cols-[minmax(0,1fr)_320px]" : "xl:grid-cols-1"
         }`}
       >
-        <div className={`mx-auto w-full max-w-[900px] space-y-4 ${mobileTab === "settings" ? "hidden xl:block" : ""}`}>
+        <div className={`mx-auto w-full max-w-[920px] space-y-4 ${mobileTab === "settings" ? "hidden xl:block" : ""}`}>
           {!initial?.id ? (
             <section className="rounded-[12px] border border-border bg-white p-4">
               <p className="text-sm font-black text-navy">빠른 글쓰기 템플릿</p>
@@ -643,15 +648,28 @@ export function WorkCaseEditor({ initial, services }: Props) {
           </section>
 
           <section className="rounded-[12px] border border-border bg-white p-4">
-            <p className="admin-label">차량 정보</p>
-            <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
-              <input className="admin-input" placeholder="제조사" value={form.manufacturer} onChange={(e) => update("manufacturer", e.target.value)} />
-              <input className="admin-input" placeholder="모델" value={form.vehicle_model} onChange={(e) => update("vehicle_model", e.target.value)} />
-              <input className="admin-input" placeholder="연식" value={form.model_year} onChange={(e) => update("model_year", e.target.value)} />
-              <input className="admin-input" placeholder="주행거리" value={form.mileage} onChange={(e) => update("mileage", e.target.value)} />
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="admin-label mb-0">차량 정보</p>
+                <p className="mt-1 text-sm text-muted">
+                  {vehicleSummary || "추가 정보 없음"}
+                </p>
+              </div>
+              <button
+                type="button"
+                className="btn btn-ghost min-h-11 text-sm"
+                onClick={() => setVehicleOpen((v) => !v)}
+              >
+                {vehicleOpen ? "접기" : "차량정보 추가"}
+              </button>
             </div>
-            {vehicleSummary ? (
-              <p className="mt-2 text-sm text-muted">{vehicleSummary}</p>
+            {vehicleOpen ? (
+              <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <input className="admin-input" placeholder="제조사" value={form.manufacturer} onChange={(e) => update("manufacturer", e.target.value)} />
+                <input className="admin-input" placeholder="모델" value={form.vehicle_model} onChange={(e) => update("vehicle_model", e.target.value)} />
+                <input className="admin-input" placeholder="연식" value={form.model_year} onChange={(e) => update("model_year", e.target.value)} />
+                <input className="admin-input" placeholder="주행거리" value={form.mileage} onChange={(e) => update("mileage", e.target.value)} />
+              </div>
             ) : null}
           </section>
 

@@ -823,7 +823,7 @@ export async function bulkUpdateReviewStatus(
 export async function saveReviewReply(id: string, admin_reply: string): Promise<SaveResult> {
   const supabase = await ensureAuth();
   const reply = admin_reply.trim() || null;
-  let { error } = await supabase
+  const { error } = await supabase
     .from("reviews")
     .update({ admin_reply: reply })
     .eq("id", id);
