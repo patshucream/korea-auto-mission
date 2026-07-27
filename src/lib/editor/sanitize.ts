@@ -30,10 +30,11 @@ const ALLOWED_TAGS = [
   "span",
   "figure",
   "figcaption",
+  "iframe",
 ] as const;
 
 const ALLOWED_ATTRS: Record<string, string[]> = {
-  a: ["href", "target", "rel", "title", "class"],
+  a: ["href", "target", "rel", "title", "class", "data-type", "data-kind", "data-label"],
   img: [
     "src",
     "alt",
@@ -43,14 +44,16 @@ const ALLOWED_ATTRS: Record<string, string[]> = {
     "height",
     "data-size",
     "data-align",
+    "data-caption",
     "data-type",
     "data-variant",
     "data-kind",
     "data-label",
+    "loading",
   ],
   div: ["class", "data-type", "data-variant", "data-kind", "data-label", "id"],
   span: ["class", "data-type", "data-variant", "data-kind", "data-label"],
-  p: ["class", "id"],
+  p: ["class", "id", "style"],
   h1: ["class", "id"],
   h2: ["class", "id"],
   h3: ["class", "id"],
@@ -66,6 +69,17 @@ const ALLOWED_ATTRS: Record<string, string[]> = {
   ol: ["class"],
   li: ["class"],
   blockquote: ["class"],
+  iframe: [
+    "src",
+    "width",
+    "height",
+    "allow",
+    "allowfullscreen",
+    "frameborder",
+    "title",
+    "class",
+    "loading",
+  ],
 };
 
 function stripToText(html: string): string {
@@ -85,10 +99,24 @@ function isSafeUrl(value: string | undefined, kind: "href" | "src"): boolean {
     return false;
   }
   if (kind === "href") {
-    return /^(https?:|mailto:|\/|#)/i.test(trimmed);
+    return /^(https?:|mailto:|tel:|\/|#)/i.test(trimmed);
   }
-  // img src: http(s) or site-relative / storage path
   return /^(https?:|\/)/i.test(trimmed);
+}
+
+function isSafeYoutubeEmbed(src: string): boolean {
+  try {
+    const url = new URL(src);
+    const host = url.hostname.replace(/^www\./, "");
+    return (
+      (host === "youtube.com" ||
+        host === "youtube-nocookie.com" ||
+        host === "youtu.be") &&
+      (url.pathname.startsWith("/embed/") || host === "youtu.be")
+    );
+  } catch {
+    return false;
+  }
 }
 
 export function sanitizeEditorHtml(html: string): string {
@@ -97,15 +125,14 @@ export function sanitizeEditorHtml(html: string): string {
   try {
     return sanitizeHtml(html, {
       allowedTags: [...ALLOWED_TAGS],
-      // script / iframe / object / embed / form / style 은 allowlist에 없음 → 제거
       allowedAttributes: ALLOWED_ATTRS,
-      allowedSchemes: ["http", "https", "mailto"],
+      allowedSchemes: ["http", "https", "mailto", "tel"],
       allowedSchemesByTag: {
         img: ["http", "https"],
-        a: ["http", "https", "mailto"],
+        a: ["http", "https", "mailto", "tel"],
+        iframe: ["https"],
       },
       allowProtocolRelative: false,
-      // on* 이벤트 속성은 allowlist 밖이라 자동 제거
       disallowedTagsMode: "discard",
       transformTags: {
         a: (_tagName, attribs) => {
@@ -124,7 +151,32 @@ export function sanitizeEditorHtml(html: string): string {
           if (!isSafeUrl(attribs.src, "src")) {
             return { tagName: "img", attribs: { alt: attribs.alt || "" } };
           }
-          return { tagName: "img", attribs };
+          const next: Record<string, string> = {};
+          for (const [key, value] of Object.entries(attribs)) {
+            if (typeof value === "string") next[key] = value;
+          }
+          next.loading = attribs.loading || "lazy";
+          return { tagName: "img", attribs: next };
+        },
+        iframe: (_tagName, attribs) => {
+          const src = attribs.src || "";
+          if (!isSafeYoutubeEmbed(src)) {
+            return { tagName: "span", attribs: {} as Record<string, string> };
+          }
+          const next: Record<string, string> = {
+            src,
+            width: attribs.width || "560",
+            height: attribs.height || "315",
+            loading: "lazy",
+            allowfullscreen: "true",
+            allow:
+              attribs.allow ||
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            title: attribs.title || "YouTube video",
+            frameborder: attribs.frameborder || "0",
+          };
+          if (attribs.class) next.class = attribs.class;
+          return { tagName: "iframe", attribs: next };
         },
       },
     });
@@ -133,7 +185,6 @@ export function sanitizeEditorHtml(html: string): string {
       message: error instanceof Error ? error.message : String(error),
       stack: error instanceof Error ? error.stack : undefined,
     });
-    // 페이지 500 방지: 태그 제거한 텍스트 fallback
     return stripToText(html);
   }
 }

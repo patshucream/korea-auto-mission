@@ -21,8 +21,10 @@ export function RichTextEditor({
   editable = true,
   onImagesChange,
 }: Props) {
-  const [moreOpen, setMoreOpen] = useState(false);
+  const [menu, setMenu] = useState<"none" | "insert" | "advanced">("none");
   const [uploadPct, setUploadPct] = useState<number | null>(null);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+  const [lastFailedFiles, setLastFailedFiles] = useState<File[]>([]);
   const [lightbox, setLightbox] = useState<string | null>(null);
   const uploading = useRef(false);
 
@@ -69,9 +71,10 @@ export function RichTextEditor({
 
   const uploadImages = useCallback(
     async (files: File[]) => {
-      if (!editor || uploading.current) return;
+      if (!editor || uploading.current || !files.length) return;
       uploading.current = true;
       setUploadPct(0);
+      setUploadError(null);
       try {
         let done = 0;
         for (const file of files) {
@@ -90,9 +93,13 @@ export function RichTextEditor({
           done += 1;
           setUploadPct(Math.round((done / files.length) * 100));
         }
+        setLastFailedFiles([]);
         onImagesChange?.(collectImageUrls(editor));
       } catch (err) {
-        window.alert(err instanceof Error ? err.message : "이미지 업로드에 실패했습니다.");
+        const message =
+          err instanceof Error ? err.message : "이미지 업로드에 실패했습니다.";
+        setUploadError(message);
+        setLastFailedFiles(files);
       } finally {
         uploading.current = false;
         window.setTimeout(() => setUploadPct(null), 600);
@@ -116,12 +123,22 @@ export function RichTextEditor({
       {editable ? (
         <div className="sticky top-0 z-20 border-b border-border bg-white/95 backdrop-blur">
           <div className="flex flex-wrap items-center gap-1 p-2">
+            <span className="mr-1 hidden text-[0.65rem] font-bold uppercase tracking-wide text-muted sm:inline">
+              기본
+            </span>
             <Tool
-              tip="제목"
-              active={editor.isActive("heading")}
+              tip="제목 2"
+              active={editor.isActive("heading", { level: 2 })}
               onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
             >
-              H
+              H2
+            </Tool>
+            <Tool
+              tip="제목 3"
+              active={editor.isActive("heading", { level: 3 })}
+              onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+            >
+              H3
             </Tool>
             <Tool
               tip="굵게"
@@ -131,6 +148,20 @@ export function RichTextEditor({
               B
             </Tool>
             <Tool
+              tip="기울임"
+              active={editor.isActive("italic")}
+              onClick={() => editor.chain().focus().toggleItalic().run()}
+            >
+              I
+            </Tool>
+            <Tool
+              tip="밑줄"
+              active={editor.isActive("underline")}
+              onClick={() => editor.chain().focus().toggleUnderline().run()}
+            >
+              U
+            </Tool>
+            <Tool
               tip="목록"
               active={editor.isActive("bulletList")}
               onClick={() => editor.chain().focus().toggleBulletList().run()}
@@ -138,188 +169,217 @@ export function RichTextEditor({
               •
             </Tool>
             <Tool
-              tip="이미지"
-              onClick={() => {
-                const input = document.createElement("input");
-                input.type = "file";
-                input.accept = "image/*";
-                input.multiple = true;
-                input.onchange = () => {
-                  const files = input.files ? Array.from(input.files) : [];
-                  if (files.length) void uploadImages(files);
-                };
-                input.click();
-              }}
+              tip="번호 목록"
+              active={editor.isActive("orderedList")}
+              onClick={() => editor.chain().focus().toggleOrderedList().run()}
             >
-              🖼
+              1.
+            </Tool>
+            <div className="mx-1 h-6 w-px bg-border" />
+            <Tool
+              tip="삽입"
+              active={menu === "insert"}
+              onClick={() => setMenu((v) => (v === "insert" ? "none" : "insert"))}
+            >
+              삽입
             </Tool>
             <Tool
-              tip="링크"
-              active={editor.isActive("link")}
-              onClick={() => {
-                const prev = editor.getAttributes("link").href as string | undefined;
-                const url = window.prompt("링크 URL", prev || "https://");
-                if (url === null) return;
-                if (!url) {
-                  editor.chain().focus().unsetLink().run();
-                  return;
-                }
-                editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
-              }}
+              tip="고급"
+              active={menu === "advanced"}
+              onClick={() => setMenu((v) => (v === "advanced" ? "none" : "advanced"))}
             >
-              링크
+              고급
             </Tool>
-            <Tool
-              tip="인용"
-              active={editor.isActive("blockquote")}
-              onClick={() => editor.chain().focus().toggleBlockquote().run()}
-            >
-              “
-            </Tool>
-            <Tool tip="구분선" onClick={() => editor.chain().focus().setHorizontalRule().run()}>
-              ―
-            </Tool>
-            <div className="relative">
-              <Tool tip="더보기" active={moreOpen} onClick={() => setMoreOpen((v) => !v)}>
-                더보기
-              </Tool>
-              {moreOpen ? (
-                <div className="absolute left-0 top-full z-30 mt-1 w-56 rounded-[10px] border border-border bg-white p-2 shadow-lg">
-                  <MoreItem
-                    label="제목 1"
-                    onClick={() => {
-                      editor.chain().focus().toggleHeading({ level: 1 }).run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="제목 2"
-                    onClick={() => {
-                      editor.chain().focus().toggleHeading({ level: 2 }).run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="제목 3"
-                    onClick={() => {
-                      editor.chain().focus().toggleHeading({ level: 3 }).run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="기울임"
-                    onClick={() => {
-                      editor.chain().focus().toggleItalic().run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="밑줄"
-                    onClick={() => {
-                      editor.chain().focus().toggleUnderline().run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="취소선"
-                    onClick={() => {
-                      editor.chain().focus().toggleStrike().run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="체크리스트"
-                    onClick={() => {
-                      editor.chain().focus().toggleTaskList().run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="번호 목록"
-                    onClick={() => {
-                      editor.chain().focus().toggleOrderedList().run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="왼쪽 정렬"
-                    onClick={() => {
-                      editor.chain().focus().setTextAlign("left").run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="가운데 정렬"
-                    onClick={() => {
-                      editor.chain().focus().setTextAlign("center").run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="오른쪽 정렬"
-                    onClick={() => {
-                      editor.chain().focus().setTextAlign("right").run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="표"
-                    onClick={() => {
-                      editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="유튜브"
-                    onClick={() => {
-                      const url = window.prompt("유튜브 URL");
-                      if (url) editor.commands.setYoutubeVideo({ src: url });
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="안내 박스"
-                    onClick={() => {
-                      insertCallout(editor, "info", "안내 내용");
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="경고 박스"
-                    onClick={() => {
-                      insertCallout(editor, "warning", "주의 사항");
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="강조 박스"
-                    onClick={() => {
-                      insertCallout(editor, "highlight", "강조 내용");
-                      setMoreOpen(false);
-                    }}
-                  />
-                  <MoreItem
-                    label="전화 CTA"
-                    onClick={() => {
-                      editor
-                        .chain()
-                        .focus()
-                        .insertContent({
-                          type: "ctaButton",
-                          attrs: {
-                            kind: "phone",
-                            label: "전화 상담",
-                            href: "tel:01055580528",
-                          },
-                        })
-                        .run();
-                      setMoreOpen(false);
-                    }}
-                  />
-                </div>
-              ) : null}
-            </div>
           </div>
+
+          {menu === "insert" ? (
+            <div className="flex flex-wrap gap-1 border-t border-border bg-gray-50 px-2 py-2">
+              <Tool
+                tip="이미지"
+                onClick={() => {
+                  const input = document.createElement("input");
+                  input.type = "file";
+                  input.accept = "image/*";
+                  input.multiple = true;
+                  input.onchange = () => {
+                    const files = input.files ? Array.from(input.files) : [];
+                    if (files.length) void uploadImages(files);
+                  };
+                  input.click();
+                  setMenu("none");
+                }}
+              >
+                이미지
+              </Tool>
+              <Tool
+                tip="링크"
+                active={editor.isActive("link")}
+                onClick={() => {
+                  const prev = editor.getAttributes("link").href as string | undefined;
+                  const url = window.prompt("링크 URL", prev || "https://");
+                  if (url === null) return;
+                  if (!url) {
+                    editor.chain().focus().unsetLink().run();
+                    return;
+                  }
+                  editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
+                  setMenu("none");
+                }}
+              >
+                링크
+              </Tool>
+              <Tool
+                tip="인용"
+                active={editor.isActive("blockquote")}
+                onClick={() => {
+                  editor.chain().focus().toggleBlockquote().run();
+                  setMenu("none");
+                }}
+              >
+                인용
+              </Tool>
+              <Tool
+                tip="구분선"
+                onClick={() => {
+                  editor.chain().focus().setHorizontalRule().run();
+                  setMenu("none");
+                }}
+              >
+                구분선
+              </Tool>
+              <Tool
+                tip="표"
+                onClick={() => {
+                  editor
+                    .chain()
+                    .focus()
+                    .insertTable({ rows: 3, cols: 3, withHeaderRow: true })
+                    .run();
+                  setMenu("none");
+                }}
+              >
+                표
+              </Tool>
+              <Tool
+                tip="유튜브"
+                onClick={() => {
+                  const url = window.prompt("유튜브 URL");
+                  if (url) editor.commands.setYoutubeVideo({ src: url });
+                  setMenu("none");
+                }}
+              >
+                유튜브
+              </Tool>
+              <Tool
+                tip="전화 CTA"
+                onClick={() => {
+                  editor
+                    .chain()
+                    .focus()
+                    .insertContent({
+                      type: "ctaButton",
+                      attrs: {
+                        kind: "phone",
+                        label: "전화 상담",
+                        href: "tel:01055580528",
+                      },
+                    })
+                    .run();
+                  setMenu("none");
+                }}
+              >
+                전화 CTA
+              </Tool>
+              <Tool
+                tip="예약 CTA"
+                onClick={() => {
+                  editor
+                    .chain()
+                    .focus()
+                    .insertContent({
+                      type: "ctaButton",
+                      attrs: {
+                        kind: "reserve",
+                        label: "네이버 예약",
+                        href: "https://blog.naver.com/97ga074",
+                      },
+                    })
+                    .run();
+                  setMenu("none");
+                }}
+              >
+                예약 CTA
+              </Tool>
+            </div>
+          ) : null}
+
+          {menu === "advanced" ? (
+            <div className="flex flex-wrap gap-1 border-t border-border bg-gray-50 px-2 py-2">
+              <Tool
+                tip="안내 박스"
+                onClick={() => {
+                  insertCallout(editor, "info", "안내 내용");
+                  setMenu("none");
+                }}
+              >
+                안내
+              </Tool>
+              <Tool
+                tip="주의 박스"
+                onClick={() => {
+                  insertCallout(editor, "warning", "주의 사항");
+                  setMenu("none");
+                }}
+              >
+                주의
+              </Tool>
+              <Tool
+                tip="강조 박스"
+                onClick={() => {
+                  insertCallout(editor, "highlight", "강조 내용");
+                  setMenu("none");
+                }}
+              >
+                강조
+              </Tool>
+              <Tool
+                tip="체크리스트"
+                onClick={() => {
+                  editor.chain().focus().toggleTaskList().run();
+                  setMenu("none");
+                }}
+              >
+                체크
+              </Tool>
+              <Tool
+                tip="왼쪽 정렬"
+                onClick={() => {
+                  editor.chain().focus().setTextAlign("left").run();
+                  setMenu("none");
+                }}
+              >
+                왼쪽
+              </Tool>
+              <Tool
+                tip="가운데 정렬"
+                onClick={() => {
+                  editor.chain().focus().setTextAlign("center").run();
+                  setMenu("none");
+                }}
+              >
+                가운데
+              </Tool>
+              <Tool
+                tip="오른쪽 정렬"
+                onClick={() => {
+                  editor.chain().focus().setTextAlign("right").run();
+                  setMenu("none");
+                }}
+              >
+                오른쪽
+              </Tool>
+            </div>
+          ) : null}
 
           {imageActive ? (
             <div className="flex flex-wrap gap-1 border-t border-border bg-gray-50 px-2 py-2">
@@ -328,9 +388,17 @@ export function RichTextEditor({
                   key={size}
                   tip={`크기: ${size}`}
                   active={editor.getAttributes("image").size === size}
-                  onClick={() => editor.chain().focus().updateAttributes("image", { size }).run()}
+                  onClick={() =>
+                    editor.chain().focus().updateAttributes("image", { size }).run()
+                  }
                 >
-                  {size === "small" ? "작게" : size === "normal" ? "보통" : size === "large" ? "크게" : "전체"}
+                  {size === "small"
+                    ? "작게"
+                    : size === "normal"
+                      ? "보통"
+                      : size === "large"
+                        ? "크게"
+                        : "전체"}
                 </Tool>
               ))}
               {(["left", "center", "right"] as const).map((align) => (
@@ -338,7 +406,9 @@ export function RichTextEditor({
                   key={align}
                   tip={`정렬: ${align}`}
                   active={editor.getAttributes("image").align === align}
-                  onClick={() => editor.chain().focus().updateAttributes("image", { align }).run()}
+                  onClick={() =>
+                    editor.chain().focus().updateAttributes("image", { align }).run()
+                  }
                 >
                   {align === "left" ? "왼쪽" : align === "center" ? "가운데" : "오른쪽"}
                 </Tool>
@@ -374,22 +444,26 @@ export function RichTextEditor({
               >
                 확대
               </Tool>
-              <Tool
-                tip="순서 변경"
-                onClick={() => {
-                  window.alert(
-                    "이미지를 선택한 뒤 잘라내기(Ctrl/Cmd+X)와 붙여넣기(Ctrl/Cmd+V)로 순서를 바꿀 수 있습니다.",
-                  );
-                }}
-              >
-                순서
-              </Tool>
             </div>
           ) : null}
 
           {uploadPct !== null ? (
             <div className="border-t border-border px-3 py-2 text-xs font-semibold text-navy">
               이미지 업로드 중… {uploadPct}%
+            </div>
+          ) : null}
+          {uploadError ? (
+            <div className="flex flex-wrap items-center gap-2 border-t border-border bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
+              <span>{uploadError}</span>
+              {lastFailedFiles.length ? (
+                <button
+                  type="button"
+                  className="underline"
+                  onClick={() => void uploadImages(lastFailedFiles)}
+                >
+                  다시 시도
+                </button>
+              ) : null}
             </div>
           ) : null}
         </div>
@@ -456,18 +530,6 @@ function Tool({
       }`}
     >
       {children}
-    </button>
-  );
-}
-
-function MoreItem({ label, onClick }: { label: string; onClick: () => void }) {
-  return (
-    <button
-      type="button"
-      className="block w-full rounded-md px-3 py-2 text-left text-sm font-semibold text-charcoal hover:bg-gray-50"
-      onClick={onClick}
-    >
-      {label}
     </button>
   );
 }

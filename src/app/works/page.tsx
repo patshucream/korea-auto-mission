@@ -69,6 +69,11 @@ export default async function WorksPage({ searchParams }: Props) {
             <p className="section-lead">
               브랜드, 증상, 정비 서비스로 실제 진단·정비 사례를 찾아보세요.
             </p>
+            <p className="mt-4 text-sm font-bold text-muted">
+              전체 작업{" "}
+              <span className="text-charcoal">{result.total}</span>건
+              {hasFilter ? " · 현재 필터 결과" : ""}
+            </p>
 
             <div className="mt-10">
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>

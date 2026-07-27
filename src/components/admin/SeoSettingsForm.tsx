@@ -72,7 +72,7 @@ export function SeoSettingsForm({ settings }: Props) {
         onChange={(v) => setForm({ ...form, og_image_path: typeof v === "string" ? v : null })}
       />
       <p className="text-sm text-muted">
-        robots.txt와 sitemap.xml은 자동 생성됩니다. LocalBusiness JSON-LD는 홈페이지에
+        robots.txt와 sitemap.xml은 자동 생성됩니다. AutoRepair JSON-LD는 홈페이지에
         포함됩니다.
       </p>
       <button type="submit" className="btn btn-primary min-h-11" disabled={pending}>

@@ -80,17 +80,41 @@ async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> 
       },
     );
 
-    const { data, error } = await supabase
+    let { data, error } = await supabase
       .from("work_cases")
-      .select("slug, published_at, created_at, updated_at")
+      .select("slug, published_at, created_at, updated_at, status, noindex")
       .eq("is_published", true)
       .order("published_at", { ascending: false })
       .limit(1000);
 
+    // status/noindex 컬럼이 없는 환경 폴백
+    if (error) {
+      const fallback = await supabase
+        .from("work_cases")
+        .select("slug, published_at, created_at, updated_at")
+        .eq("is_published", true)
+        .order("published_at", { ascending: false })
+        .limit(1000);
+      data = fallback.data;
+      error = fallback.error;
+    }
+
     if (error || !data) return [];
 
     return data
-      .filter((row) => typeof row.slug === "string" && row.slug.length > 0)
+      .filter((row) => {
+        if (typeof row.slug !== "string" || !row.slug.length) return false;
+        const record = row as {
+          noindex?: boolean | null;
+          status?: string | null;
+        };
+        if (record.noindex === true) return false;
+        const status = typeof record.status === "string" ? record.status : "published";
+        if (status === "draft" || status === "private" || status === "trash") {
+          return false;
+        }
+        return true;
+      })
       .map((row) => ({
         url: `${SITE_URL}/works/${row.slug}`,
         lastModified: new Date(
