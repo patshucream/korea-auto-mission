@@ -14,14 +14,18 @@ export type WorkCaseMediaSummary = {
   vehicle_brand: string;
   vehicle_model: string;
   service_category: string;
+  status: string;
+  updated_at: string | null;
   representative_image_path: string | null;
   gallery_image_paths: string[];
   before_images: string[];
   after_images: string[];
   og_image_path: string | null;
   content_image_paths: string[];
-  /** 대표 제외 본문·갤러리·전후·에디터 이미지 (중복 제거, 표시 순서) */
+  /** 대표 제외 본문·갤러리·에디터 이미지 */
   body_image_paths: string[];
+  /** 전후만 */
+  before_after_paths: string[];
   all_image_paths: string[];
 };
 
@@ -31,6 +35,9 @@ type WorkCaseImageRow = {
   vehicle_brand?: string | null;
   vehicle_model?: string | null;
   service_category?: string | null;
+  status?: string | null;
+  is_published?: boolean | null;
+  updated_at?: string | null;
   representative_image_path: string | null;
   gallery_image_paths: string[] | null;
   before_images: string[] | null;
@@ -104,23 +111,28 @@ export function buildWorkCaseMediaSummaries(
     const after = (work.after_images || []).filter(Boolean);
     const representative = work.representative_image_path || null;
     const og = work.og_image_path || null;
+    const beforeAfter = [...before, ...after].filter((p, i, arr) => arr.indexOf(p) === i);
 
     const bodyOrdered: string[] = [];
     const seen = new Set<string>();
     const addBody = (path: string | null | undefined) => {
       if (!path || seen.has(path) || path === representative) return;
+      if (beforeAfter.includes(path)) return;
       seen.add(path);
       bodyOrdered.push(path);
     };
     for (const p of gallery) addBody(p);
-    for (const p of before) addBody(p);
-    for (const p of after) addBody(p);
     for (const p of contentPaths) addBody(p);
     if (og) addBody(og);
 
     const all = new Set<string>();
     if (representative) all.add(representative);
     for (const p of bodyOrdered) all.add(p);
+    for (const p of beforeAfter) all.add(p);
+
+    const status =
+      work.status ||
+      (work.is_published ? "published" : "draft");
 
     return {
       id: work.id,
@@ -128,6 +140,8 @@ export function buildWorkCaseMediaSummaries(
       vehicle_brand: work.vehicle_brand || "",
       vehicle_model: work.vehicle_model || "",
       service_category: work.service_category || "",
+      status,
+      updated_at: work.updated_at || null,
       representative_image_path: representative,
       gallery_image_paths: gallery,
       before_images: before,
@@ -135,6 +149,7 @@ export function buildWorkCaseMediaSummaries(
       og_image_path: og,
       content_image_paths: contentPaths,
       body_image_paths: bodyOrdered,
+      before_after_paths: beforeAfter,
       all_image_paths: [...all],
     };
   });
@@ -212,6 +227,21 @@ export function buildMediaUsageMap(input: {
   return map;
 }
 
+/** 관리자 UI용 짧은 사용처 배지 */
+export function primaryUsageBadge(info: MediaUsageInfo): string {
+  if (info.isTemp) return "임시 업로드";
+  if (info.isRepresentative) return "대표 이미지";
+  if (info.usedIn.includes("대표사진")) return "대표 이미지";
+  if (info.usedIn.some((u) => u.startsWith("홈") || u.includes("Hero") || u.includes("전문성"))) {
+    return info.usedIn.find((u) => u.includes("Hero") || u.includes("전문성") || u.startsWith("홈")) || "홈페이지";
+  }
+  if (info.usedIn.includes("작업 전")) return "작업 전";
+  if (info.usedIn.includes("작업 후")) return "작업 후";
+  if (info.workTitles.length > 0 || info.isBody) return "작업사례";
+  if (info.used) return "사용 중";
+  return "미사용";
+}
+
 export function getMediaUsage(
   map: Map<string, MediaUsageInfo>,
   path: string,
@@ -255,20 +285,4 @@ export function formatDateTime(iso: string) {
   } catch {
     return iso;
   }
-}
-
-/** 대략적 압축률: 파일크기 / (가로×세로×3바이트 RGB) */
-export function estimateCompressionRatio(
-  sizeBytes: number | null | undefined,
-  width: number | null | undefined,
-  height: number | null | undefined,
-) {
-  if (!sizeBytes || !width || !height || width <= 0 || height <= 0) return null;
-  const raw = width * height * 3;
-  if (raw <= 0) return null;
-  const ratio = sizeBytes / raw;
-  return {
-    percent: Math.min(100, Math.max(0.1, ratio * 100)),
-    label: `${(ratio * 100).toFixed(1)}%`,
-  };
 }

@@ -13,15 +13,6 @@ const ALLOWED_TYPES = new Set([
   "image/heif",
 ]);
 
-export type UploadProgress = {
-  fileName: string;
-  progress: number;
-  status: "compressing" | "uploading" | "done" | "error";
-  error?: string;
-  path?: string;
-  previewUrl?: string;
-};
-
 function extensionFromType(type: string, fileName: string): string {
   if (type.includes("png")) return "png";
   if (type.includes("webp")) return "webp";
@@ -127,8 +118,4 @@ export async function deleteImageFromStorage(path: string): Promise<void> {
   }
 
   await supabase.from("media").delete().eq("path", path);
-}
-
-export function createPreviewUrl(file: File): string {
-  return URL.createObjectURL(file);
 }

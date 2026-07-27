@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import {
-  createPreviewUrl,
   deleteImageFromStorage,
   uploadImageToStorage,
 } from "@/lib/image";
@@ -42,8 +41,6 @@ export function ImageUploader({
     try {
       const uploaded: string[] = [];
       for (const file of Array.from(files)) {
-        const preview = createPreviewUrl(file);
-        void preview;
         const result = await uploadImageToStorage(file, folder, setProgress);
         uploaded.push(result.path);
       }

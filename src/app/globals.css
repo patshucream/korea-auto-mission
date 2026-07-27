@@ -134,12 +134,18 @@ a {
 }
 
 .section-pad {
-  padding-block: 4.5rem;
+  padding-block: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-block: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .section-pad {
-    padding-block: 6.5rem;
+    padding-block: 6rem;
   }
 }
 
@@ -523,8 +529,10 @@ a {
 }
 
 .admin-app .btn {
-  border-radius: 10px;
+  border-radius: 12px;
   min-height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .admin-app .btn-primary {
@@ -536,10 +544,15 @@ a {
   background: var(--navy-dark);
 }
 
+.admin-app .btn-secondary,
+.admin-app .btn-ghost {
+  border-radius: 12px;
+}
+
 .admin-app .admin-input,
 .admin-app .admin-textarea,
 .admin-app .admin-select {
-  border-radius: 10px;
+  border-radius: 12px;
   min-height: 44px;
 }
 
@@ -553,9 +566,53 @@ a {
 
 .admin-card {
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border-radius: 16px;
   padding: 1.25rem;
+}
+
+.admin-app .card-light {
+  background: var(--white);
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border-radius: 16px;
+}
+
+.admin-app .media-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+  color: #334155;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.admin-app .media-action-btn:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.14);
+}
+
+.admin-app .media-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.admin-app .media-library .admin-input,
+.admin-app .media-library .admin-select {
+  border-radius: 12px;
+  min-height: 42px;
+}
+
+@media (min-width: 768px) {
+  .admin-card {
+    padding: 1.35rem 1.5rem;
+  }
 }
 
 .admin-stat {

@@ -12,8 +12,8 @@ type Props = {
 
 export function GeneralSettingsForm({ settings }: Props) {
   const [form, setForm] = useState(settings);
-  const [message, setMessage] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error">("success");
   const [dirty, setDirty] = useState(false);
   const [pending, startTransition] = useTransition();
 
@@ -32,12 +32,16 @@ export function GeneralSettingsForm({ settings }: Props) {
     setForm((prev) => ({ ...prev, [key]: value }));
   }
 
+  function showToast(message: string, type: "success" | "error" = "success") {
+    setToastType(type);
+    setToast(message);
+  }
+
   return (
     <form
       className="space-y-8"
       onSubmit={(e) => {
         e.preventDefault();
-        setMessage(null);
         startTransition(async () => {
           try {
             const weekday = (form.weekday_hours ?? "").trim() || "09:00 - 18:00";
@@ -74,8 +78,7 @@ export function GeneralSettingsForm({ settings }: Props) {
               process_steps: form.process_steps,
             });
             if (!result.ok) {
-              setMessage(result.error);
-              setToast(null);
+              showToast(result.error, "error");
               return;
             }
             setForm((prev) => ({
@@ -87,10 +90,12 @@ export function GeneralSettingsForm({ settings }: Props) {
               closed_days: closedDays,
             }));
             setDirty(false);
-            setMessage("저장되었습니다.");
-            setToast("저장되었습니다.");
+            showToast("저장되었습니다.");
           } catch (error) {
-            setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");
+            showToast(
+              error instanceof Error ? error.message : "저장에 실패했습니다.",
+              "error",
+            );
           }
         });
       }}
@@ -210,13 +215,12 @@ export function GeneralSettingsForm({ settings }: Props) {
         </Field>
       </section>
 
-      {message ? <p className="font-medium text-navy">{message}</p> : null}
       <div className="sticky bottom-3 z-10 rounded-[12px] border border-border bg-white/95 p-3 shadow-sm backdrop-blur">
         <button type="submit" className="btn btn-primary min-h-11 w-full sm:w-auto" disabled={pending}>
           {pending ? "저장 중…" : "저장"}
         </button>
       </div>
-      <AdminToast message={toast} onClose={() => setToast(null)} />
+      <AdminToast message={toast} type={toastType} onClose={() => setToast(null)} />
     </form>
   );
 }

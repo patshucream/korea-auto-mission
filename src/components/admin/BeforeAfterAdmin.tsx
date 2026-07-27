@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import type { BeforeAfter } from "@/lib/types";
 import { updateBeforeAfter } from "@/lib/actions/admin";
 import { ImageUploader } from "@/components/admin/ImageUploader";
+import { AdminToast } from "@/components/admin/AdminToast";
 
 type Props = {
   items: BeforeAfter[];
@@ -11,21 +12,28 @@ type Props = {
 
 export function BeforeAfterAdmin({ items }: Props) {
   const [rows, setRows] = useState(items);
-  const [message, setMessage] = useState<string | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error">("success");
   const [pending, startTransition] = useTransition();
+
+  function showToast(message: string, type: "success" | "error" = "success") {
+    setToastType(type);
+    setToast(message);
+  }
 
   return (
     <div className="space-y-6">
+      <AdminToast message={toast} type={toastType} onClose={() => setToast(null)} />
+
       <p className="text-muted">
         카테고리는 인젝터 클리닝 전후 / 흡기 클리닝 전후 두 가지만 제공됩니다. 추가할 수
         없습니다.
       </p>
-      {message ? <p className="font-medium text-navy">{message}</p> : null}
 
       {rows.map((item, index) => (
         <form
           key={item.id}
-          className="card-light space-y-4 p-5"
+          className="admin-card space-y-4"
           onSubmit={(e) => {
             e.preventDefault();
             startTransition(async () => {
@@ -39,17 +47,20 @@ export function BeforeAfterAdmin({ items }: Props) {
                   is_published: item.is_published,
                 });
                 if (!result.ok) {
-                  setMessage(result.error);
+                  showToast(result.error, "error");
                   return;
                 }
-                setMessage("저장되었습니다.");
+                showToast("저장되었습니다.");
               } catch (error) {
-                setMessage(error instanceof Error ? error.message : "저장에 실패했습니다.");
+                showToast(
+                  error instanceof Error ? error.message : "저장에 실패했습니다.",
+                  "error",
+                );
               }
             });
           }}
         >
-          <h2 className="text-xl font-black">
+          <h2 className="text-lg font-semibold tracking-[-0.02em] text-charcoal">
             {item.category === "injector" ? "인젝터 클리닝 전후" : "흡기 클리닝 전후"}
           </h2>
           <label className="block">
@@ -96,7 +107,7 @@ export function BeforeAfterAdmin({ items }: Props) {
               setRows(next);
             }}
           />
-          <label className="flex items-center gap-2 font-bold">
+          <label className="flex items-center gap-2 text-sm font-medium text-charcoal">
             <input
               type="checkbox"
               checked={item.is_published}
@@ -108,7 +119,7 @@ export function BeforeAfterAdmin({ items }: Props) {
             />
             게시
           </label>
-          <button type="submit" className="btn btn-primary" disabled={pending}>
+          <button type="submit" className="btn btn-primary min-h-11" disabled={pending}>
             저장
           </button>
         </form>

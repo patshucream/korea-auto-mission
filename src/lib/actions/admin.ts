@@ -4,7 +4,6 @@ import { revalidatePath } from "next/cache";
 import { checkIsAdmin } from "@/lib/auth/is-admin";
 import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured, slugify } from "@/lib/utils";
-import type { ProcessStep } from "@/lib/types";
 
 type SupabaseLikeError = {
   message?: string;
@@ -191,10 +190,6 @@ export async function saveSiteSettings(payload: Record<string, unknown>): Promis
 
   revalidatePublic();
   return { ok: true };
-}
-
-export async function saveProcessSteps(steps: ProcessStep[]): Promise<SaveResult> {
-  return saveSiteSettings({ process_steps: steps });
 }
 
 export async function upsertService(input: {
@@ -566,10 +561,6 @@ export async function upsertWorkCase(
     let lastData: { id?: string; slug?: string } | null = null;
 
     for (let attempt = 0; attempt < 40; attempt++) {
-      if (mode === "insert") {
-        console.log("[upsertWorkCase.insert] payload", current);
-      }
-
       const result =
         mode === "update"
           ? await supabase.from("work_cases").update(current).eq("id", existingId as string)
@@ -749,17 +740,6 @@ export async function bulkUpdateWorkStatus(
   return { ok: true };
 }
 
-export async function reorderWorkCases(orderedIds: string[]) {
-  const supabase = await ensureAuth();
-  await Promise.all(
-    orderedIds.map((id, index) =>
-      supabase.from("work_cases").update({ display_order: index + 1 }).eq("id", id),
-    ),
-  );
-  revalidatePublic();
-  return { ok: true };
-}
-
 export async function updateBeforeAfter(input: {
   id: string;
   title: string;
@@ -782,90 +762,6 @@ export async function updateBeforeAfter(input: {
     return { ok: false, error: supabaseErrorMessage(error) };
   }
   revalidatePublic();
-  return { ok: true };
-}
-
-export async function upsertReview(input: {
-  id?: string;
-  author_name?: string;
-  customer_name?: string;
-  vehicle_name?: string | null;
-  vehicle_info?: string;
-  content: string;
-  rating: number;
-  display_order?: number;
-  status?: "pending" | "approved" | "hidden" | "rejected";
-  is_published?: boolean;
-  is_sample?: boolean;
-  admin_reply?: string | null;
-}): Promise<SaveResult> {
-  const supabase = await ensureAuth();
-  const author =
-    (input.author_name ?? input.customer_name ?? "").trim() || "고객";
-  const vehicle = (input.vehicle_name ?? input.vehicle_info ?? "").trim();
-  const status =
-    input.status ??
-    (input.is_published ? "approved" : "pending");
-
-  const payload: Record<string, unknown> = {
-    author_name: author,
-    customer_name: author,
-    vehicle_name: vehicle || null,
-    vehicle_info: vehicle,
-    content: input.content ?? "",
-    rating: input.rating,
-    display_order: input.display_order ?? 0,
-    status,
-    is_published: status === "approved",
-    is_sample: input.is_sample ?? false,
-    admin_reply: input.admin_reply ?? null,
-  };
-  if (status === "approved") {
-    payload.approved_at = new Date().toISOString();
-  }
-
-  if (input.id) {
-    let { error } = await supabase.from("reviews").update(payload).eq("id", input.id);
-    if (error && isMissingColumnError(error)) {
-      logSupabaseError("upsertReview.legacyUpdate", error, payload);
-      const legacy = {
-        customer_name: author,
-        vehicle_info: vehicle,
-        content: payload.content,
-        rating: payload.rating,
-        display_order: payload.display_order,
-        is_published: status === "approved",
-        is_sample: payload.is_sample,
-      };
-      const retry = await supabase.from("reviews").update(legacy).eq("id", input.id);
-      error = retry.error;
-    }
-    if (error) {
-      logSupabaseError("upsertReview.update", error, payload);
-      return { ok: false, error: "리뷰 저장에 실패했습니다." };
-    }
-  } else {
-    let { error } = await supabase.from("reviews").insert(payload);
-    if (error && isMissingColumnError(error)) {
-      logSupabaseError("upsertReview.legacyInsert", error, payload);
-      const legacy = {
-        customer_name: author,
-        vehicle_info: vehicle,
-        content: payload.content,
-        rating: payload.rating,
-        display_order: payload.display_order,
-        is_published: status === "approved",
-        is_sample: payload.is_sample,
-      };
-      const retry = await supabase.from("reviews").insert(legacy);
-      error = retry.error;
-    }
-    if (error) {
-      logSupabaseError("upsertReview.insert", error, payload);
-      return { ok: false, error: "리뷰 저장에 실패했습니다." };
-    }
-  }
-  revalidateReviews();
   return { ok: true };
 }
 
@@ -961,18 +857,6 @@ export async function deleteReview(id: string): Promise<SaveResult> {
   return { ok: true };
 }
 
-export async function deleteReviews(ids: string[]): Promise<SaveResult> {
-  if (!ids.length) return { ok: false, error: "선택된 리뷰가 없습니다." };
-  const supabase = await ensureAuth();
-  const { error } = await supabase.from("reviews").delete().in("id", ids);
-  if (error) {
-    logSupabaseError("deleteReviews", error);
-    return { ok: false, error: "리뷰 삭제에 실패했습니다." };
-  }
-  revalidateReviews();
-  return { ok: true };
-}
-
 export async function upsertFaq(input: {
   id?: string;
   question: string;
@@ -1017,29 +901,61 @@ export async function deleteFaq(id: string) {
   return { ok: true };
 }
 
-export async function deleteMediaRecord(path: string): Promise<SaveResult> {
-  const supabase = await ensureAuth();
-  const { error: storageError } = await supabase.storage.from("images").remove([path]);
-  if (storageError) {
-    logSupabaseError("deleteMediaRecord.storage", storageError);
-    return { ok: false, error: storageError.message || "스토리지 삭제에 실패했습니다." };
-  }
-  const { error } = await supabase.from("media").delete().eq("path", path);
-  if (error) {
-    logSupabaseError("deleteMediaRecord.db", error);
-    return { ok: false, error: error.message || "미디어 기록 삭제에 실패했습니다." };
-  }
-  revalidatePath("/admin/media");
-  return { ok: true };
-}
-
 export async function deleteMediaRecords(
   paths: string[],
-): Promise<{ ok: true; deleted: number } | { ok: false; error: string }> {
+  options?: { allowUsed?: boolean },
+): Promise<
+  | { ok: true; deleted: number }
+  | { ok: false; error: string; blocked?: string[] }
+> {
   const supabase = await ensureAuth();
   const unique = [...new Set(paths.map((p) => p.trim()).filter(Boolean))];
   if (unique.length === 0) {
     return { ok: false, error: "삭제할 파일을 선택해 주세요." };
+  }
+
+  if (!options?.allowUsed) {
+    const blocked: string[] = [];
+    const { data: works } = await supabase
+      .from("work_cases")
+      .select(
+        "title, representative_image_path, gallery_image_paths, before_images, after_images, og_image_path",
+      );
+    const used = new Set<string>();
+    for (const w of works || []) {
+      if (w.representative_image_path) used.add(w.representative_image_path);
+      if (w.og_image_path) used.add(w.og_image_path);
+      for (const key of ["gallery_image_paths", "before_images", "after_images"] as const) {
+        const arr = w[key];
+        if (Array.isArray(arr)) for (const p of arr) used.add(p);
+      }
+    }
+    const { data: services } = await supabase.from("services").select("image_path");
+    for (const s of services || []) if (s.image_path) used.add(s.image_path as string);
+    const { data: settings } = await supabase
+      .from("site_settings")
+      .select("hero_image_path, shop_image_path, og_image_path, homepage_config")
+      .limit(1)
+      .maybeSingle();
+    if (settings) {
+      if (settings.hero_image_path) used.add(settings.hero_image_path);
+      if (settings.shop_image_path) used.add(settings.shop_image_path);
+      if (settings.og_image_path) used.add(settings.og_image_path);
+      const cfg = settings.homepage_config as { why_points?: { image_path?: string | null }[] } | null;
+      for (const p of cfg?.why_points || []) {
+        if (p.image_path) used.add(p.image_path);
+      }
+    }
+    for (const path of unique) {
+      if (used.has(path)) blocked.push(path);
+    }
+    if (blocked.length > 0) {
+      return {
+        ok: false,
+        error: `사용 중인 이미지 ${blocked.length}장은 삭제할 수 없습니다. 사용처에서 먼저 제거하거나 교체해 주세요.`,
+        blocked,
+      };
+    }
   }
 
   const { error: storageError } = await supabase.storage.from("images").remove(unique);
@@ -1326,30 +1242,5 @@ export async function reorderWorkCaseGallery(
   revalidatePath("/admin/media");
   revalidatePath(`/admin/works/${id}/edit`);
   revalidatePublic();
-  return { ok: true };
-}
-
-export async function registerMediaPath(input: {
-  path: string;
-  folder: string;
-  file_name: string;
-  mime_type?: string;
-  size_bytes?: number;
-  alt_text?: string;
-}) {
-  const supabase = await ensureAuth();
-  const payload = {
-    path: input.path,
-    folder: input.folder,
-    file_name: input.file_name,
-    mime_type: input.mime_type ?? null,
-    size_bytes: input.size_bytes ?? null,
-    alt_text: input.alt_text ?? "",
-  };
-  const { error } = await supabase.from("media").upsert(payload, { onConflict: "path" });
-  if (error) {
-    logSupabaseError("registerMediaPath", error, payload);
-    throw new Error(supabaseErrorMessage(error));
-  }
   return { ok: true };
 }
