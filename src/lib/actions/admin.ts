@@ -400,16 +400,28 @@ function cleanWorkCasePayload(input: Record<string, unknown>) {
   return clean;
 }
 
+function resolveWorkCaseId(value: unknown): string | null {
+  if (typeof value !== "string") return null;
+  const id = value.trim();
+  // Server Action 직렬화가 undefined 를 "$undefined" 문자열로 보낼 수 있음
+  if (!id || id === "undefined" || id === "$undefined") return null;
+  return id;
+}
+
 export async function upsertWorkCase(
   input: Record<string, unknown> & { id?: string },
 ): Promise<{ ok: true; id: string; slug: string } | { ok: false; error: string }> {
   const supabase = await ensureAuth();
+  const existingId = resolveWorkCaseId(input.id);
+
   const payload = cleanWorkCasePayload({
     ...input,
     slug:
       (typeof input.slug === "string" && input.slug.trim()) ||
       slugify(String(input.title || `work-${Date.now()}`)),
   });
+  // insert payload 에 id 가 섞이지 않도록 제거
+  delete payload.id;
 
   const slug = String(payload.slug || "");
   if (slug) {
@@ -418,7 +430,7 @@ export async function upsertWorkCase(
       .select("id")
       .eq("slug", slug)
       .limit(1);
-    if (input.id) dupQuery = dupQuery.neq("id", input.id);
+    if (existingId) dupQuery = dupQuery.neq("id", existingId);
     const { data: dup } = await dupQuery.maybeSingle();
     if (dup?.id) {
       return { ok: false, error: "이미 사용 중인 슬러그입니다. 다른 주소를 입력해 주세요." };
@@ -502,13 +514,13 @@ export async function upsertWorkCase(
     return legacy;
   }
 
-  if (input.id) {
-    let { error } = await supabase.from("work_cases").update(payload).eq("id", input.id);
+  if (existingId) {
+    let { error } = await supabase.from("work_cases").update(payload).eq("id", existingId);
 
     if (error && isMissingColumnError(error)) {
       logSupabaseError("upsertWorkCase.legacyUpdate", error, payload);
       const legacy = toLegacyPayload(payload);
-      const retry = await supabase.from("work_cases").update(legacy).eq("id", input.id);
+      const retry = await supabase.from("work_cases").update(legacy).eq("id", existingId);
       error = retry.error;
     }
 
@@ -518,7 +530,7 @@ export async function upsertWorkCase(
     }
     revalidatePublic();
     revalidatePath(`/works/${String(payload.slug)}`);
-    return { ok: true, id: input.id, slug: String(payload.slug) };
+    return { ok: true, id: existingId, slug: String(payload.slug) };
   }
 
   let { data, error } = await supabase

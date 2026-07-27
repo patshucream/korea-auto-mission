@@ -219,8 +219,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
         .map((v) => v.trim())
         .filter(Boolean);
 
-    return {
-      id: form.id,
+    const payload: Record<string, unknown> = {
       title: form.title.trim(),
       subtitle: form.subtitle.trim() || null,
       slug,
@@ -274,6 +273,14 @@ export function WorkCaseEditor({ initial, services }: Props) {
           ? initial?.published_at || new Date().toISOString()
           : initial?.published_at || null,
     };
+
+    // 신규 작성 시 id를 절대 포함하지 않음 (undefined → "$undefined" 직렬화 방지)
+    const existingId = typeof form.id === "string" ? form.id.trim() : "";
+    if (existingId && existingId !== "$undefined") {
+      payload.id = existingId;
+    }
+
+    return payload;
   }
 
   function save(statusOverride?: WorkCaseStatus) {
