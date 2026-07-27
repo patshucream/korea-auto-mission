@@ -1017,15 +1017,315 @@ export async function deleteFaq(id: string) {
   return { ok: true };
 }
 
-export async function deleteMediaRecord(path: string) {
+export async function deleteMediaRecord(path: string): Promise<SaveResult> {
   const supabase = await ensureAuth();
   const { error: storageError } = await supabase.storage.from("images").remove([path]);
   if (storageError) {
     logSupabaseError("deleteMediaRecord.storage", storageError);
-    throw new Error(supabaseErrorMessage(storageError));
+    return { ok: false, error: storageError.message || "스토리지 삭제에 실패했습니다." };
   }
-  await supabase.from("media").delete().eq("path", path);
+  const { error } = await supabase.from("media").delete().eq("path", path);
+  if (error) {
+    logSupabaseError("deleteMediaRecord.db", error);
+    return { ok: false, error: error.message || "미디어 기록 삭제에 실패했습니다." };
+  }
   revalidatePath("/admin/media");
+  return { ok: true };
+}
+
+export async function deleteMediaRecords(
+  paths: string[],
+): Promise<{ ok: true; deleted: number } | { ok: false; error: string }> {
+  const supabase = await ensureAuth();
+  const unique = [...new Set(paths.map((p) => p.trim()).filter(Boolean))];
+  if (unique.length === 0) {
+    return { ok: false, error: "삭제할 파일을 선택해 주세요." };
+  }
+
+  const { error: storageError } = await supabase.storage.from("images").remove(unique);
+  if (storageError) {
+    logSupabaseError("deleteMediaRecords.storage", storageError);
+    return { ok: false, error: storageError.message || "스토리지 삭제에 실패했습니다." };
+  }
+
+  const { error } = await supabase.from("media").delete().in("path", unique);
+  if (error) {
+    logSupabaseError("deleteMediaRecords.db", error);
+    return { ok: false, error: error.message || "미디어 기록 삭제에 실패했습니다." };
+  }
+
+  revalidatePath("/admin/media");
+  return { ok: true, deleted: unique.length };
+}
+
+async function rewriteImagePathReferences(
+  supabase: Awaited<ReturnType<typeof ensureAuth>>,
+  oldPath: string,
+  newPath: string,
+) {
+  const { data: works } = await supabase
+    .from("work_cases")
+    .select(
+      "id, representative_image_path, gallery_image_paths, before_images, after_images, og_image_path",
+    );
+
+  for (const row of works || []) {
+    const patch: Record<string, unknown> = {};
+    if (row.representative_image_path === oldPath) {
+      patch.representative_image_path = newPath;
+    }
+    if (row.og_image_path === oldPath) {
+      patch.og_image_path = newPath;
+    }
+    for (const key of ["gallery_image_paths", "before_images", "after_images"] as const) {
+      const arr = row[key];
+      if (Array.isArray(arr) && arr.includes(oldPath)) {
+        patch[key] = arr.map((p: string) => (p === oldPath ? newPath : p));
+      }
+    }
+    if (Object.keys(patch).length > 0) {
+      await supabase.from("work_cases").update(patch).eq("id", row.id);
+    }
+  }
+
+  await supabase.from("services").update({ image_path: newPath }).eq("image_path", oldPath);
+  await supabase
+    .from("before_after")
+    .update({ before_image_path: newPath })
+    .eq("before_image_path", oldPath);
+  await supabase
+    .from("before_after")
+    .update({ after_image_path: newPath })
+    .eq("after_image_path", oldPath);
+
+  const { data: settings } = await supabase
+    .from("site_settings")
+    .select("id, hero_image_path, shop_image_path, og_image_path")
+    .limit(1)
+    .maybeSingle();
+
+  if (settings?.id) {
+    const patch: Record<string, unknown> = {};
+    if (settings.hero_image_path === oldPath) patch.hero_image_path = newPath;
+    if (settings.shop_image_path === oldPath) patch.shop_image_path = newPath;
+    if (settings.og_image_path === oldPath) patch.og_image_path = newPath;
+    if (Object.keys(patch).length > 0) {
+      await supabase.from("site_settings").update(patch).eq("id", settings.id);
+    }
+  }
+}
+
+export async function moveMediaRecords(
+  paths: string[],
+  targetFolder: string,
+): Promise<{ ok: true; moved: number } | { ok: false; error: string }> {
+  const supabase = await ensureAuth();
+  const folder = targetFolder.trim().replace(/^\/+|\/+$/g, "");
+  if (!folder) {
+    return { ok: false, error: "이동할 폴더를 선택해 주세요." };
+  }
+
+  const unique = [...new Set(paths.map((p) => p.trim()).filter(Boolean))];
+  if (unique.length === 0) {
+    return { ok: false, error: "이동할 파일을 선택해 주세요." };
+  }
+
+  let moved = 0;
+  for (const oldPath of unique) {
+    const fileName = oldPath.split("/").pop() || oldPath;
+    const newPath = `${folder}/${fileName}`;
+    if (oldPath === newPath) {
+      moved += 1;
+      continue;
+    }
+
+    const { error: moveError } = await supabase.storage.from("images").move(oldPath, newPath);
+    if (moveError) {
+      logSupabaseError("moveMediaRecords.storage", moveError, { oldPath, newPath });
+      return {
+        ok: false,
+        error: moveError.message || `"${fileName}" 이동에 실패했습니다.`,
+      };
+    }
+
+    const { error: dbError } = await supabase
+      .from("media")
+      .update({ path: newPath, folder })
+      .eq("path", oldPath);
+
+    if (dbError) {
+      // 스토리지는 이미 이동됨 — 경로 복구 시도 후 실패 반환
+      await supabase.storage.from("images").move(newPath, oldPath);
+      logSupabaseError("moveMediaRecords.db", dbError, { oldPath, newPath });
+      return { ok: false, error: dbError.message || "미디어 경로 갱신에 실패했습니다." };
+    }
+
+    await rewriteImagePathReferences(supabase, oldPath, newPath);
+    moved += 1;
+  }
+
+  revalidatePath("/admin/media");
+  revalidatePublic();
+  return { ok: true, moved };
+}
+
+/** 작업사례 대표사진 지정 (선택한 경로 1개) */
+export async function setWorkCaseRepresentative(
+  workId: string,
+  imagePath: string,
+): Promise<SaveResult> {
+  const supabase = await ensureAuth();
+  const id = workId.trim();
+  const path = imagePath.trim();
+  if (!id || !path) {
+    return { ok: false, error: "작업사례와 이미지를 확인해 주세요." };
+  }
+
+  const { error } = await supabase
+    .from("work_cases")
+    .update({ representative_image_path: path })
+    .eq("id", id);
+
+  if (error) {
+    logSupabaseError("setWorkCaseRepresentative", error, { workId: id, path });
+    return { ok: false, error: error.message || "대표사진 변경에 실패했습니다." };
+  }
+
+  revalidatePath("/admin/media");
+  revalidatePath("/admin/works");
+  revalidatePublic();
+  return { ok: true };
+}
+
+/**
+ * 선택한 이미지를 다른 작업사례로 이동:
+ * - storage 폴더를 works/{id} 로 이동
+ * - 대상 gallery_image_paths 에 추가
+ * - 다른 작업사례 배열에서 제거
+ */
+export async function moveMediaToWorkCase(
+  paths: string[],
+  targetWorkId: string,
+): Promise<{ ok: true; moved: number } | { ok: false; error: string }> {
+  const supabase = await ensureAuth();
+  const workId = targetWorkId.trim();
+  if (!workId) return { ok: false, error: "대상 작업사례를 선택해 주세요." };
+
+  const unique = [...new Set(paths.map((p) => p.trim()).filter(Boolean))];
+  if (unique.length === 0) return { ok: false, error: "이동할 파일을 선택해 주세요." };
+
+  const { data: target, error: targetError } = await supabase
+    .from("work_cases")
+    .select("id, gallery_image_paths")
+    .eq("id", workId)
+    .maybeSingle();
+
+  if (targetError || !target) {
+    return { ok: false, error: targetError?.message || "대상 작업사례를 찾을 수 없습니다." };
+  }
+
+  const folder = `works/${workId}`;
+  const movedPaths: string[] = [];
+
+  for (const oldPath of unique) {
+    const fileName = oldPath.split("/").pop() || oldPath;
+    const newPath = `${folder}/${fileName}`;
+
+    if (oldPath !== newPath) {
+      const { error: moveError } = await supabase.storage.from("images").move(oldPath, newPath);
+      if (moveError) {
+        logSupabaseError("moveMediaToWorkCase.storage", moveError, { oldPath, newPath });
+        return { ok: false, error: moveError.message || "파일 이동에 실패했습니다." };
+      }
+      const { error: dbError } = await supabase
+        .from("media")
+        .update({ path: newPath, folder })
+        .eq("path", oldPath);
+      if (dbError) {
+        await supabase.storage.from("images").move(newPath, oldPath);
+        logSupabaseError("moveMediaToWorkCase.db", dbError, { oldPath, newPath });
+        return { ok: false, error: dbError.message || "미디어 경로 갱신에 실패했습니다." };
+      }
+      await rewriteImagePathReferences(supabase, oldPath, newPath);
+      movedPaths.push(newPath);
+    } else {
+      movedPaths.push(oldPath);
+    }
+  }
+
+  // 다른 작업사례의 배열/대표에서 제거 후 대상 갤러리에 추가
+  const { data: works } = await supabase
+    .from("work_cases")
+    .select(
+      "id, representative_image_path, gallery_image_paths, before_images, after_images, og_image_path",
+    );
+
+  const pathSet = new Set(movedPaths);
+  for (const row of works || []) {
+    if (row.id === workId) continue;
+    const patch: Record<string, unknown> = {};
+    if (row.representative_image_path && pathSet.has(row.representative_image_path)) {
+      patch.representative_image_path = null;
+    }
+    if (row.og_image_path && pathSet.has(row.og_image_path)) {
+      patch.og_image_path = null;
+    }
+    for (const key of ["gallery_image_paths", "before_images", "after_images"] as const) {
+      const arr = Array.isArray(row[key]) ? (row[key] as string[]) : [];
+      const next = arr.filter((p) => !pathSet.has(p));
+      if (next.length !== arr.length) patch[key] = next;
+    }
+    if (Object.keys(patch).length > 0) {
+      await supabase.from("work_cases").update(patch).eq("id", row.id);
+    }
+  }
+
+  const currentGallery = Array.isArray(target.gallery_image_paths)
+    ? (target.gallery_image_paths as string[])
+    : [];
+  const merged = [...currentGallery];
+  for (const p of movedPaths) {
+    if (!merged.includes(p)) merged.push(p);
+  }
+  const { error: galleryError } = await supabase
+    .from("work_cases")
+    .update({ gallery_image_paths: merged })
+    .eq("id", workId);
+
+  if (galleryError) {
+    logSupabaseError("moveMediaToWorkCase.gallery", galleryError);
+    return { ok: false, error: galleryError.message || "갤러리 연결에 실패했습니다." };
+  }
+
+  revalidatePath("/admin/media");
+  revalidatePath("/admin/works");
+  revalidatePublic();
+  return { ok: true, moved: movedPaths.length };
+}
+
+/** 작업사례 갤러리(본문 사진) 순서 변경 — gallery_image_paths만 갱신 */
+export async function reorderWorkCaseGallery(
+  workId: string,
+  orderedPaths: string[],
+): Promise<SaveResult> {
+  const supabase = await ensureAuth();
+  const id = workId.trim();
+  if (!id) return { ok: false, error: "작업사례를 확인해 주세요." };
+
+  const paths = orderedPaths.map((p) => p.trim()).filter(Boolean);
+  const { error } = await supabase
+    .from("work_cases")
+    .update({ gallery_image_paths: paths })
+    .eq("id", id);
+
+  if (error) {
+    logSupabaseError("reorderWorkCaseGallery", error, { workId: id });
+    return { ok: false, error: error.message || "사진 순서 저장에 실패했습니다." };
+  }
+
+  revalidatePath("/admin/media");
+  revalidatePath(`/admin/works/${id}/edit`);
+  revalidatePublic();
   return { ok: true };
 }
 
