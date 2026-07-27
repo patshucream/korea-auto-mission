@@ -124,6 +124,28 @@ function isMissingColumnError(error: SupabaseLikeError) {
   );
 }
 
+function extractMissingColumnName(error: SupabaseLikeError): string | null {
+  const text = `${error.message ?? ""} ${error.details ?? ""} ${error.hint ?? ""}`;
+  const patterns = [
+    /Could not find the '([^']+)' column/i,
+    /column "([^"]+)" of relation/i,
+    // e.g. column work_cases.service_id does not exist
+    /column (?:[a-zA-Z0-9_]+\.)?([a-zA-Z0-9_]+) does not exist/i,
+  ];
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match?.[1]) return match[1];
+  }
+  return null;
+}
+
+function isSentinelUndefined(value: unknown) {
+  return value === undefined || value === "$undefined" || value === "undefined";
+}
+
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 export type SaveResult = { ok: true } | { ok: false; error: string };
 
 export async function saveSiteSettings(payload: Record<string, unknown>): Promise<SaveResult> {
@@ -363,7 +385,8 @@ function cleanWorkCasePayload(input: Record<string, unknown>) {
   for (const key of allowed) {
     if (!(key in input)) continue;
     const value = input[key];
-    if (value === undefined) continue;
+    // Server Action 직렬화 sentinel / undefined 는 DB 로 보내지 않음
+    if (isSentinelUndefined(value)) continue;
     clean[key] = value;
   }
 
@@ -382,8 +405,28 @@ function cleanWorkCasePayload(input: Record<string, unknown>) {
     }
   }
 
-  if (clean.service_id === "") {
+  if (clean.service_id === "" || isSentinelUndefined(clean.service_id)) {
     clean.service_id = null;
+  } else if (
+    clean.service_id != null &&
+    (typeof clean.service_id !== "string" || !UUID_RE.test(clean.service_id))
+  ) {
+    clean.service_id = null;
+  }
+
+  // JSONB 컬럼에 잘못된 문자열이 들어가면 insert 가 실패함
+  if ("content_json" in clean) {
+    const json = clean.content_json;
+    if (isSentinelUndefined(json) || typeof json === "string") {
+      try {
+        clean.content_json =
+          typeof json === "string" && json && !isSentinelUndefined(json)
+            ? JSON.parse(json)
+            : null;
+      } catch {
+        clean.content_json = null;
+      }
+    }
   }
 
   // status ↔ is_published 동기화 (DB 트리거 미적용 환경 대비)
@@ -514,46 +557,99 @@ export async function upsertWorkCase(
     return legacy;
   }
 
-  if (existingId) {
-    let { error } = await supabase.from("work_cases").update(payload).eq("id", existingId);
+  async function writeWithColumnFallback(
+    mode: "update" | "insert",
+    basePayload: Record<string, unknown>,
+  ) {
+    let current: Record<string, unknown> = { ...basePayload };
+    let lastError: SupabaseLikeError | null = null;
+    let lastData: { id?: string; slug?: string } | null = null;
 
-    if (error && isMissingColumnError(error)) {
-      logSupabaseError("upsertWorkCase.legacyUpdate", error, payload);
-      const legacy = toLegacyPayload(payload);
-      const retry = await supabase.from("work_cases").update(legacy).eq("id", existingId);
-      error = retry.error;
+    for (let attempt = 0; attempt < 40; attempt++) {
+      if (mode === "insert") {
+        console.log("[upsertWorkCase.insert] payload", current);
+      }
+
+      const result =
+        mode === "update"
+          ? await supabase.from("work_cases").update(current).eq("id", existingId as string)
+          : await supabase.from("work_cases").insert(current).select("id, slug").single();
+
+      const error = result.error as SupabaseLikeError | null;
+      const data =
+        mode === "insert"
+          ? ((result as { data: { id?: string; slug?: string } | null }).data ?? null)
+          : null;
+
+      if (!error) {
+        return { data, error: null as SupabaseLikeError | null };
+      }
+
+      console.error(error);
+      lastError = error;
+      lastData = data;
+
+      // insert 는 됐는데 RLS 때문에 RETURNING/select 가 0건인 경우
+      if (
+        mode === "insert" &&
+        (error.code === "PGRST116" || /0 rows|multiple \(or no\) rows/i.test(error.message ?? ""))
+      ) {
+        const { data: row } = await supabase
+          .from("work_cases")
+          .select("id, slug")
+          .eq("slug", String(current.slug))
+          .maybeSingle();
+        if (row?.id) {
+          return { data: row, error: null };
+        }
+      }
+
+      if (!isMissingColumnError(error)) {
+        break;
+      }
+
+      const missing = extractMissingColumnName(error);
+      if (missing && missing in current) {
+        logSupabaseError(`upsertWorkCase.${mode}.dropColumn:${missing}`, error, current);
+        delete current[missing];
+        continue;
+      }
+
+      // 컬럼명을 못 뽑으면 레거시 축소 페이로드로 한 번 더 시도
+      const legacy = toLegacyPayload(current);
+      if (Object.keys(legacy).length >= Object.keys(current).length) {
+        break;
+      }
+      logSupabaseError(`upsertWorkCase.${mode}.legacyFallback`, error, current);
+      current = legacy;
     }
 
+    return { data: lastData, error: lastError };
+  }
+
+  if (existingId) {
+    const { error } = await writeWithColumnFallback("update", payload);
     if (error) {
       logSupabaseError("upsertWorkCase.update", error, payload);
-      return { ok: false, error: "작업사례 저장에 실패했습니다." };
+      return { ok: false, error: error.message || "작업사례 저장에 실패했습니다." };
     }
     revalidatePublic();
     revalidatePath(`/works/${String(payload.slug)}`);
     return { ok: true, id: existingId, slug: String(payload.slug) };
   }
 
-  let { data, error } = await supabase
-    .from("work_cases")
-    .insert(payload)
-    .select("id, slug")
-    .single();
+  const { data, error } = await writeWithColumnFallback("insert", payload);
 
-  if (error && isMissingColumnError(error)) {
-    logSupabaseError("upsertWorkCase.legacyInsert", error, payload);
-    const legacy = toLegacyPayload(payload);
-    const retry = await supabase.from("work_cases").insert(legacy).select("id, slug").single();
-    data = retry.data;
-    error = retry.error;
-  }
-
-  if (error || !data) {
+  if (error || !data?.id) {
     logSupabaseError("upsertWorkCase.insert", error ?? { message: "no data" }, payload);
-    return { ok: false, error: "작업사례 저장에 실패했습니다." };
+    return {
+      ok: false,
+      error: error?.message || "작업사례 저장에 실패했습니다.",
+    };
   }
 
   revalidatePublic();
-  return { ok: true, id: data.id as string, slug: data.slug as string };
+  return { ok: true, id: data.id as string, slug: String(data.slug || payload.slug) };
 }
 
 export async function duplicateWorkCase(id: string) {
