@@ -5,29 +5,21 @@ type Props = {
 };
 
 export function Process({ steps }: Props) {
-  return (
-    <section id="process" className="section-pad bg-dark-section text-white">
-      <div className="container-site">
-        <h2 className="text-[clamp(1.6rem,2.2vw,2.25rem)] font-bold tracking-tight">
-          작업 과정
-        </h2>
-        <p className="mt-3 max-w-2xl text-[1.05rem] leading-relaxed text-white/80">
-          상담부터 출고까지, 고객이 이해할 수 있도록 단계별로 진행합니다.
-        </p>
+  if (!steps.length) return null;
 
-        <ol className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+  return (
+    <section id="process" className="section-pad bg-gray-100">
+      <div className="container-site">
+        <div className="max-w-2xl">
+          <h2 className="section-title">작업 진행 과정</h2>
+          <p className="section-lead">상담부터 출고까지, 예측 가능한 흐름으로 안내합니다.</p>
+        </div>
+        <ol className="mt-12 grid gap-6 md:grid-cols-5">
           {steps.map((step, index) => (
-            <li
-              key={`${step.title}-${index}`}
-              className="rounded-[12px] border border-white/15 bg-white/5 p-5"
-            >
-              <p className="text-sm font-bold text-white/60">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-2 text-xl font-black">{step.title}</h3>
-              <p className="mt-3 text-[1.02rem] leading-relaxed text-white/85">
-                {step.description}
-              </p>
+            <li key={`${step.title}-${index}`} className="relative">
+              <p className="text-sm font-black text-navy">0{index + 1}</p>
+              <h3 className="mt-2 text-lg font-black text-charcoal">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
             </li>
           ))}
         </ol>

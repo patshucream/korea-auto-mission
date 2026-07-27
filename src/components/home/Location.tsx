@@ -8,13 +8,11 @@ type Props = {
 
 export function Location({ settings }: Props) {
   return (
-    <section id="location" className="section-pad bg-warm-white">
-      <div className="container-site grid gap-8 lg:grid-cols-2">
+    <section id="location" className="section-pad bg-gray-100">
+      <div className="container-site grid gap-10 lg:grid-cols-2">
         <div>
-          <h2 className="section-title">오시는 길</h2>
-          <p className="section-lead">
-            방문 전 전화로 일정을 확인해 주시면 안내가 더 정확합니다.
-          </p>
+          <h2 className="section-title">위치 및 영업시간</h2>
+          <p className="section-lead">방문 전 전화로 일정을 확인해 주시면 안내가 더 정확합니다.</p>
 
           <dl className="mt-8 space-y-4 text-[1.05rem]">
             <div>
@@ -38,20 +36,12 @@ export function Location({ settings }: Props) {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              네이버 지도
-            </a>
-            <a
-              href={settings.naver_blog_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-ghost"
-            >
-              네이버 블로그
+              길찾기
             </a>
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[14px] border border-border bg-light-gray">
+        <div className="overflow-hidden rounded-[14px] border border-border bg-white">
           <iframe
             title="코리아오토미션 네이버 지도"
             src={`https://map.naver.com/p/search/${encodeURIComponent(settings.address)}`}

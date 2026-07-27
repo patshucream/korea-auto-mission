@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Service } from "@/lib/types";
 import { SmartImage } from "@/components/ui/SmartImage";
 
@@ -6,11 +7,13 @@ type Props = {
 };
 
 export function Services({ services }: Props) {
-  if (!services.length) {
+  const items = services.slice(0, 6);
+
+  if (!items.length) {
     return (
-      <section id="services" className="section-pad bg-gray-100">
+      <section id="services" className="section-pad bg-white">
         <div className="container-site">
-          <h2 className="section-title">정비 서비스</h2>
+          <h2 className="section-title">주요 서비스</h2>
           <p className="section-lead">현재 등록된 정비 서비스가 없습니다.</p>
         </div>
       </section>
@@ -18,52 +21,39 @@ export function Services({ services }: Props) {
   }
 
   return (
-    <section id="services" className="section-pad bg-gray-100">
+    <section id="services" className="section-pad bg-white">
       <div className="container-site">
         <div className="max-w-2xl">
-          <h2 className="section-title">정비 서비스</h2>
+          <h2 className="section-title">주요 서비스</h2>
           <p className="section-lead">
-            자동변속기와 구동계를 중심으로, 필요한 정비를 정확하게 진행합니다.
+            자동변속기와 디젤 클리닝을 중심으로, 필요한 정비를 정확하게 진행합니다.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <article
-              key={service.id}
-              className="min-w-0 overflow-hidden rounded-[12px] bg-white"
-            >
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {items.map((service) => (
+            <article key={service.id} className="min-w-0 border-t border-border pt-5">
               {service.image_path ? (
                 <SmartImage
                   path={service.image_path}
                   alt={service.title}
-                  className="aspect-[16/10] w-full"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="mb-4 aspect-[16/10] w-full rounded-[10px]"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   fallbackLabel={service.title}
                 />
-              ) : (
-                <div className="flex aspect-[16/10] items-end bg-charcoal px-5 py-5 sm:px-6 sm:py-6">
-                  <p className="text-lg font-semibold tracking-[-0.02em] text-white/90">
-                    {service.title}
-                  </p>
-                </div>
-              )}
-              <div className="px-5 py-5 sm:px-6 sm:py-6">
-                {service.image_path ? (
-                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-charcoal">
-                    {service.title}
-                  </h3>
-                ) : null}
-                <p
-                  className={
-                    service.image_path
-                      ? "mt-3 text-base leading-relaxed text-muted"
-                      : "text-base leading-relaxed text-muted"
-                  }
-                >
-                  {service.short_description}
-                </p>
-              </div>
+              ) : null}
+              <h3 className="text-xl font-black tracking-[-0.02em] text-charcoal">
+                {service.title}
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-muted">
+                {service.short_description}
+              </p>
+              <Link
+                href="/#contact"
+                className="mt-4 inline-flex text-sm font-bold text-navy underline-offset-2 hover:underline"
+              >
+                상담·상세 문의
+              </Link>
             </article>
           ))}
         </div>

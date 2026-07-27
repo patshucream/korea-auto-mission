@@ -12,7 +12,7 @@ export function FAQ({ faqs }: Props) {
   const [openId, setOpenId] = useState<string | null>(faqs[0]?.id ?? null);
 
   return (
-    <section className="section-pad bg-warm-white-2">
+    <section className="section-pad bg-white">
       <div className="container-site">
         <h2 className="section-title">자주 묻는 질문</h2>
         <p className="section-lead">예약, 견적, 작업 기간 등 자주 묻는 내용을 모았습니다.</p>

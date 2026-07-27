@@ -3,6 +3,36 @@ export type ProcessStep = {
   description: string;
 };
 
+export type HomepageSectionId =
+  | "hero"
+  | "trust"
+  | "symptoms"
+  | "services"
+  | "why"
+  | "works"
+  | "process"
+  | "brands"
+  | "guides"
+  | "reviews"
+  | "faq"
+  | "location"
+  | "cta";
+
+export type HomepageTrustItem = {
+  title: string;
+  description: string;
+};
+
+export type HomepageConfig = {
+  section_order: HomepageSectionId[];
+  section_visibility: Partial<Record<HomepageSectionId, boolean>>;
+  cta_title: string;
+  cta_description: string;
+  trust_items: HomepageTrustItem[];
+  featured_service_ids: string[];
+  featured_work_ids: string[];
+};
+
 export type SiteSettings = {
   id: string;
   business_name: string;
@@ -31,6 +61,8 @@ export type SiteSettings = {
   why_title: string;
   why_content: string;
   process_steps: ProcessStep[];
+  /** 홈페이지 섹션·CTA·신뢰문구 등 (007 migration) */
+  homepage_config?: HomepageConfig | null;
   seo_title: string;
   seo_description: string;
   og_image_path: string | null;

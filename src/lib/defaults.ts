@@ -1,11 +1,59 @@
 import type {
   BeforeAfter,
   Faq,
+  HomepageConfig,
+  HomepageSectionId,
   ProcessStep,
   Service,
   SiteSettings,
   WorkCase,
 } from "@/lib/types";
+
+export const DEFAULT_HOMEPAGE_SECTION_ORDER: HomepageSectionId[] = [
+  "hero",
+  "trust",
+  "symptoms",
+  "services",
+  "why",
+  "works",
+  "process",
+  "brands",
+  "guides",
+  "reviews",
+  "faq",
+  "location",
+  "cta",
+];
+
+export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
+  section_order: DEFAULT_HOMEPAGE_SECTION_ORDER,
+  section_visibility: Object.fromEntries(
+    DEFAULT_HOMEPAGE_SECTION_ORDER.map((id) => [id, true]),
+  ) as Record<HomepageSectionId, boolean>,
+  cta_title: "차량 증상이 이상하다면\n정확한 진단부터 받아보세요",
+  cta_description:
+    "전화 상담 또는 네이버 예약으로 증상과 차량 정보를 알려주시면 점검 방향을 안내해 드립니다.",
+  trust_items: [
+    {
+      title: "30년 변속기 정비 경험",
+      description: "수입차·국산차 자동변속기를 중심으로 축적된 현장 경험",
+    },
+    {
+      title: "수입차 정밀 진단",
+      description: "증상만 보고 교체하지 않고, 원인을 먼저 확인합니다",
+    },
+    {
+      title: "작업 과정 안내",
+      description: "진단·견적·정비 과정을 투명하게 설명합니다",
+    },
+    {
+      title: "부산 사상구 위치",
+      description: "삼덕로 95, 방문 전 예약하시면 안내가 더 정확합니다",
+    },
+  ],
+  featured_service_ids: [],
+  featured_work_ids: [],
+};
 
 export const PHONE_DISPLAY = "010-5558-0528";
 export const PHONE_TEL = "01055580528";
@@ -19,28 +67,24 @@ export const NAVER_MAP_URL =
 /** Supabase 미설정 시 홈/폴백용 샘플. 운영 데이터는 services 테이블을 사용합니다. */
 export const DEFAULT_PROCESS_STEPS: ProcessStep[] = [
   {
-    title: "상담 및 예약",
-    description: "증상과 차량 정보를 확인한 뒤 방문 일정을 안내합니다.",
+    title: "상담",
+    description: "증상과 차량 정보를 확인하고 방문 일정을 안내합니다.",
   },
   {
-    title: "입고 점검",
-    description: "외관·주행·진단기로 이상 여부를 체계적으로 확인합니다.",
-  },
-  {
-    title: "정밀 진단",
-    description: "자동변속기·구동계 중심으로 원인을 정확히 파악합니다.",
+    title: "입고 및 진단",
+    description: "입고 후 진단기로 원인을 체계적으로 확인합니다.",
   },
   {
     title: "견적 안내",
     description: "필요한 작업 범위와 비용을 투명하게 설명합니다.",
   },
   {
-    title: "수리 진행",
+    title: "정비",
     description: "합의된 범위에 맞춰 숙련된 기술로 작업을 진행합니다.",
   },
   {
-    title: "최종 점검·출고",
-    description: "작업 후 재점검하고 주의사항을 안내한 뒤 출고합니다.",
+    title: "시운전 및 출고",
+    description: "시운전·재점검 후 주의사항을 안내하고 출고합니다.",
   },
 ];
 
@@ -58,9 +102,9 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   naver_blog_url: NAVER_BLOG_URL,
   naver_map_url: NAVER_MAP_URL,
   naver_reservation_url: "",
-  hero_title: "자동변속기,\n정확한 진단이\n좋은 수리의 시작입니다.",
+  hero_title: "수입차 오토미션과 디젤 정비,\n정확한 진단부터 시작합니다",
   hero_description:
-    "수입차·국산차 자동변속기와 구동계를\n30년 정비 경험으로 정확하게 점검합니다.",
+    "변속 충격, 미션오일, DPF·흡기·인젝터까지.\n30년 경험으로 원인부터 확인합니다.",
   hero_image_path: null,
   shop_image_path: null,
   stat_experience: "30년",
@@ -69,8 +113,9 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   stat_works: "30년간 축적된 작업 경험",
   why_title: "왜 코리아오토미션인가",
   why_content:
-    "자동변속기와 구동계는 정확한 진단이 핵심입니다. 코리아오토미션은 수입차·국산차 자동변속기 전문 정비소로서, 증상만 보고 성급히 부품을 교체하지 않습니다. 점검부터 수리까지 한 곳에서 책임지고 진행합니다. 부산 사상구에서 30년 경험으로 고객 차량을 꼼꼼히 살핍니다.",
+    "무조건 교환보다 원인 진단이 먼저입니다. 정비 전후 상태를 설명하고, 작업 사진과 과정을 기록합니다. 부산 사상구에서 변속기 전문 경험으로 고객 차량을 책임집니다.",
   process_steps: DEFAULT_PROCESS_STEPS,
+  homepage_config: DEFAULT_HOMEPAGE_CONFIG,
   seo_title: "코리아오토미션 | 수입차·국산차 자동변속기 전문 정비",
   seo_description:
     "부산 사상구 코리아오토미션. 수입차·국산차 자동변속기, 트랜스퍼케이스, 디퍼렌셜, DPF·흡기·인젝터 클리닝 전문. 30년 정비 경험.",
@@ -385,6 +430,7 @@ export const NAV_ITEMS = [
 /** 주요 관리자 메뉴 */
 export const ADMIN_NAV = [
   { href: "/admin/general", label: "기본 정보" },
+  { href: "/admin/homepage", label: "홈페이지" },
   { href: "/admin/services", label: "서비스 관리" },
   { href: "/admin/works", label: "작업 사례" },
   { href: "/admin/reviews", label: "리뷰 관리" },

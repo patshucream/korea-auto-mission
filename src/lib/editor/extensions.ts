@@ -85,8 +85,45 @@ export const CtaButton = Node.create({
   },
 });
 
-export function createEditorExtensions(placeholder =
-  "증상, 진단, 작업 과정을 자세히 작성해 주세요…") {
+/** 크기·정렬·캡션을 지원하는 본문 이미지 */
+export const EditorImage = Image.extend({
+  name: "image",
+  addAttributes() {
+    return {
+      ...this.parent?.(),
+      size: {
+        default: "normal",
+        parseHTML: (el) => el.getAttribute("data-size") || "normal",
+        renderHTML: (attrs) => ({ "data-size": attrs.size }),
+      },
+      align: {
+        default: "center",
+        parseHTML: (el) => el.getAttribute("data-align") || "center",
+        renderHTML: (attrs) => ({ "data-align": attrs.align }),
+      },
+      caption: {
+        default: null,
+        parseHTML: (el) => el.getAttribute("data-caption") || el.getAttribute("title"),
+        renderHTML: (attrs) =>
+          attrs.caption ? { "data-caption": attrs.caption, title: attrs.caption } : {},
+      },
+    };
+  },
+  renderHTML({ HTMLAttributes }) {
+    const size = HTMLAttributes["data-size"] || "normal";
+    const align = HTMLAttributes["data-align"] || "center";
+    return [
+      "img",
+      mergeAttributes(HTMLAttributes, {
+        class: `editor-image editor-image-${size} editor-image-align-${align}`,
+      }),
+    ];
+  },
+});
+
+export function createEditorExtensions(
+  placeholder = "증상, 진단, 작업 과정을 자세히 작성해 주세요…",
+) {
   return [
     StarterKit.configure({
       heading: { levels: [1, 2, 3] },
@@ -96,7 +133,8 @@ export function createEditorExtensions(placeholder =
       openOnClick: false,
       HTMLAttributes: { class: "editor-link" },
     }),
-    Image.configure({
+    EditorImage.configure({
+      allowBase64: false,
       HTMLAttributes: { class: "editor-image" },
     }),
     TextAlign.configure({
