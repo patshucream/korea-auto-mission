@@ -9,6 +9,7 @@ type Props = {
   sizes?: string;
   priority?: boolean;
   fallbackLabel?: string;
+  objectPosition?: string;
 };
 
 export function SmartImage({
@@ -18,12 +19,22 @@ export function SmartImage({
   sizes = "(max-width: 768px) 100vw, 50vw",
   priority,
   fallbackLabel = "이미지 준비 중",
+  objectPosition = "center",
 }: Props) {
   const src = getPublicImageUrl(path);
 
   if (!src) {
+    const hasAspect = Boolean(className && /\baspect-/.test(className));
     return (
-      <div className={cn("placeholder-media min-h-[220px] w-full", className)} role="img" aria-label={alt}>
+      <div
+        className={cn(
+          "placeholder-media w-full",
+          !hasAspect && "min-h-[160px]",
+          className,
+        )}
+        role="img"
+        aria-label={alt}
+      >
         <span>{fallbackLabel}</span>
       </div>
     );
@@ -40,6 +51,7 @@ export function SmartImage({
         sizes={sizes}
         priority={priority}
         className="object-cover"
+        style={{ objectPosition }}
         unoptimized={!isLocal && !src.includes("supabase")}
       />
     </div>

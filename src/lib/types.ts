@@ -10,6 +10,7 @@ export type HomepageSectionId =
   | "services"
   | "why"
   | "works"
+  | "beforeAfter"
   | "process"
   | "brands"
   | "guides"
@@ -23,6 +24,16 @@ export type HomepageTrustItem = {
   description: string;
 };
 
+/** 왜 코리아오토미션인가 — 항목별 독립 이미지 */
+export type HomepageWhyPoint = {
+  id: string;
+  title: string;
+  body: string;
+  image_path: string | null;
+  /** CSS object-position 값 (예: center, top, 50% 30%) */
+  object_position?: string;
+};
+
 export type HomepageConfig = {
   section_order: HomepageSectionId[];
   section_visibility: Partial<Record<HomepageSectionId, boolean>>;
@@ -31,6 +42,8 @@ export type HomepageConfig = {
   trust_items: HomepageTrustItem[];
   featured_service_ids: string[];
   featured_work_ids: string[];
+  /** 항목별 이미지·문구. 없으면 기본 POINTS + 이미지 없음 */
+  why_points?: HomepageWhyPoint[];
 };
 
 export type SiteSettings = {

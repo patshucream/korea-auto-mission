@@ -1,17 +1,58 @@
-import { DEFAULT_HOMEPAGE_CONFIG, DEFAULT_HOMEPAGE_SECTION_ORDER } from "@/lib/defaults";
+import {
+  DEFAULT_HOMEPAGE_CONFIG,
+  DEFAULT_HOMEPAGE_SECTION_ORDER,
+  DEFAULT_WHY_POINTS,
+} from "@/lib/defaults";
 import type {
   HomepageConfig,
   HomepageSectionId,
+  HomepageWhyPoint,
   SiteSettings,
 } from "@/lib/types";
+
+function mergeWhyPoints(raw: unknown): HomepageWhyPoint[] {
+  const defaults = DEFAULT_WHY_POINTS;
+  if (!Array.isArray(raw) || raw.length === 0) return defaults.map((p) => ({ ...p }));
+
+  return defaults.map((fallback, index) => {
+    const row = raw[index] as Partial<HomepageWhyPoint> | undefined;
+    if (!row || typeof row !== "object") return { ...fallback };
+    return {
+      id: typeof row.id === "string" && row.id ? row.id : fallback.id,
+      title: typeof row.title === "string" && row.title.trim() ? row.title : fallback.title,
+      body: typeof row.body === "string" && row.body.trim() ? row.body : fallback.body,
+      image_path:
+        row.image_path === null || typeof row.image_path === "string"
+          ? row.image_path
+          : fallback.image_path,
+      object_position:
+        typeof row.object_position === "string" && row.object_position.trim()
+          ? row.object_position
+          : fallback.object_position || "center",
+    };
+  });
+}
 
 export function parseHomepageConfig(raw: unknown): HomepageConfig {
   if (!raw || typeof raw !== "object") return DEFAULT_HOMEPAGE_CONFIG;
   const data = raw as Partial<HomepageConfig>;
-  const order =
+  const known = new Set<HomepageSectionId>(DEFAULT_HOMEPAGE_SECTION_ORDER);
+  const rawOrder =
     Array.isArray(data.section_order) && data.section_order.length
-      ? (data.section_order as HomepageSectionId[])
-      : DEFAULT_HOMEPAGE_SECTION_ORDER;
+      ? (data.section_order as HomepageSectionId[]).filter((id) => known.has(id))
+      : [...DEFAULT_HOMEPAGE_SECTION_ORDER];
+
+  const order = [...rawOrder];
+  for (const id of DEFAULT_HOMEPAGE_SECTION_ORDER) {
+    if (!order.includes(id)) {
+      const afterWorks = order.indexOf("works");
+      if (id === "beforeAfter" && afterWorks >= 0) {
+        order.splice(afterWorks + 1, 0, id);
+      } else {
+        order.push(id);
+      }
+    }
+  }
 
   return {
     ...DEFAULT_HOMEPAGE_CONFIG,
@@ -31,11 +72,28 @@ export function parseHomepageConfig(raw: unknown): HomepageConfig {
     featured_work_ids: Array.isArray(data.featured_work_ids) ? data.featured_work_ids : [],
     cta_title: data.cta_title || DEFAULT_HOMEPAGE_CONFIG.cta_title,
     cta_description: data.cta_description || DEFAULT_HOMEPAGE_CONFIG.cta_description,
+    why_points: mergeWhyPoints(data.why_points),
   };
 }
 
 export function getHomepageConfig(settings: SiteSettings): HomepageConfig {
   return parseHomepageConfig(settings.homepage_config);
+}
+
+export function getWhyPoints(settings: SiteSettings): HomepageWhyPoint[] {
+  return getHomepageConfig(settings).why_points || DEFAULT_WHY_POINTS;
+}
+
+/** 동일 image_path 를 쓰는 why 항목 id 목록 */
+export function findDuplicateWhyImageIds(points: HomepageWhyPoint[]): string[] {
+  const counts = new Map<string, string[]>();
+  for (const p of points) {
+    if (!p.image_path) continue;
+    const list = counts.get(p.image_path) || [];
+    list.push(p.id);
+    counts.set(p.image_path, list);
+  }
+  return [...counts.values()].filter((ids) => ids.length > 1).flat();
 }
 
 export function isSectionVisible(
@@ -52,6 +110,7 @@ export const HOMEPAGE_SECTION_LABELS: Record<HomepageSectionId, string> = {
   services: "주요 서비스",
   why: "왜 코리아오토미션인가",
   works: "실제 작업사례",
+  beforeAfter: "작업 전후",
   process: "작업 진행 과정",
   brands: "브랜드별 탐색",
   guides: "정비정보",

@@ -53,36 +53,36 @@ function FeaturedWork({ work }: { work: WorkCase }) {
     .filter(Boolean)
     .join(" ");
   return (
-    <article className="grid gap-6 overflow-hidden border border-border bg-white lg:grid-cols-2">
-      <Link href={`/works/${work.slug}`} className="block">
+    <article className="grid items-center gap-6 overflow-hidden rounded-2xl border border-black/[0.06] bg-white lg:grid-cols-2 lg:gap-0">
+      <Link href={`/works/${work.slug}`} className="block overflow-hidden bg-[#eef0f3]">
         <SmartImage
           path={work.representative_image_path}
           alt={work.title}
-          className="aspect-[16/11] w-full lg:h-full lg:min-h-[320px]"
+          className="aspect-[16/10] w-full"
           sizes="(max-width: 1024px) 100vw, 50vw"
           priority
           fallbackLabel={vehicle || work.title}
         />
       </Link>
-      <div className="flex flex-col justify-center px-6 py-6 lg:pr-10">
+      <div className="flex flex-col justify-center px-6 py-6 lg:px-10 lg:py-8">
         <p className="text-sm font-medium text-muted">
           {vehicle}
           {work.service_category ? ` · ${work.service_category}` : ""}
         </p>
-        <h3 className="mt-3 text-2xl font-black tracking-[-0.02em] text-charcoal lg:text-[1.85rem]">
+        <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-charcoal lg:text-[1.75rem]">
           <Link href={`/works/${work.slug}`} className="hover:opacity-70">
             {work.title}
           </Link>
         </h3>
-        <p className="mt-4 line-clamp-3 text-base leading-relaxed text-muted">
+        <p className="mt-3 line-clamp-3 text-[0.98rem] leading-relaxed text-muted">
           {work.excerpt || work.symptoms || work.work_summary}
         </p>
-        <p className="mt-5 text-sm text-muted">
+        <p className="mt-4 text-sm text-muted">
           {formatDateKo(work.published_at || work.created_at)}
         </p>
         <Link
           href={`/works/${work.slug}`}
-          className="btn btn-primary mt-6 self-start"
+          className="btn btn-primary mt-5 self-start"
         >
           상세보기
         </Link>
@@ -101,7 +101,7 @@ function WorkTeaser({ work }: { work: WorkCase }) {
         <SmartImage
           path={work.representative_image_path}
           alt={work.title}
-          className="aspect-[4/3] w-full rounded-[10px]"
+          className="aspect-[16/10] w-full rounded-2xl"
           sizes="(max-width: 768px) 100vw, 33vw"
           fallbackLabel={vehicle || work.title}
         />
@@ -109,7 +109,7 @@ function WorkTeaser({ work }: { work: WorkCase }) {
           {vehicle}
           {work.service_category ? ` · ${work.service_category}` : ""}
         </p>
-        <h3 className="mt-2 text-xl font-black tracking-[-0.02em] text-charcoal">
+        <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-charcoal">
           {work.title}
         </h3>
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">

@@ -3,6 +3,7 @@ import type {
   Faq,
   HomepageConfig,
   HomepageSectionId,
+  HomepageWhyPoint,
   ProcessStep,
   Service,
   SiteSettings,
@@ -16,6 +17,7 @@ export const DEFAULT_HOMEPAGE_SECTION_ORDER: HomepageSectionId[] = [
   "services",
   "why",
   "works",
+  "beforeAfter",
   "process",
   "brands",
   "guides",
@@ -23,6 +25,37 @@ export const DEFAULT_HOMEPAGE_SECTION_ORDER: HomepageSectionId[] = [
   "faq",
   "location",
   "cta",
+];
+
+export const DEFAULT_WHY_POINTS: HomepageWhyPoint[] = [
+  {
+    id: "why-1",
+    title: "무조건 교환보다 원인 진단",
+    body: "증상만 보고 부품을 바꾸지 않습니다. 점검으로 작업 범위를 먼저 좁힙니다.",
+    image_path: null,
+    object_position: "center",
+  },
+  {
+    id: "why-2",
+    title: "작업 전후 상태 설명",
+    body: "왜 필요한 작업인지, 무엇을 확인했는지 이해할 수 있게 설명합니다.",
+    image_path: null,
+    object_position: "center",
+  },
+  {
+    id: "why-3",
+    title: "정비 과정 기록",
+    body: "가능하면 작업 과정을 남겨 이후에도 참고할 수 있게 합니다.",
+    image_path: null,
+    object_position: "center",
+  },
+  {
+    id: "why-4",
+    title: "변속기 전문 경험",
+    body: "수입차·국산차 자동변속기와 구동계를 중심으로 30년 현장 경험을 쌓았습니다.",
+    image_path: null,
+    object_position: "center",
+  },
 ];
 
 export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
@@ -56,6 +89,7 @@ export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
   ],
   featured_service_ids: [],
   featured_work_ids: [],
+  why_points: DEFAULT_WHY_POINTS,
 };
 
 export const PHONE_DISPLAY = "010-5558-0528";
