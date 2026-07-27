@@ -88,6 +88,18 @@ function mapSettings(row: Record<string, unknown>): SiteSettings {
   return {
     ...DEFAULT_SETTINGS,
     ...row,
+    phone:
+      typeof row.phone === "string" && row.phone.trim()
+        ? row.phone.trim()
+        : DEFAULT_SETTINGS.phone,
+    address:
+      typeof row.address === "string" && row.address.trim()
+        ? row.address.trim()
+        : DEFAULT_SETTINGS.address,
+    business_name:
+      typeof row.business_name === "string" && row.business_name.trim()
+        ? row.business_name.trim()
+        : DEFAULT_SETTINGS.business_name,
     weekday_hours: weekday,
     saturday_hours: saturday,
     holiday_hours: holiday,
@@ -136,30 +148,140 @@ export function mapWork(row: Record<string, unknown>): WorkCase {
         ? "published"
         : "draft";
 
+  const asStringArray = (value: unknown): string[] =>
+    Array.isArray(value)
+      ? value.filter((item): item is string => typeof item === "string" && item.length > 0)
+      : [];
+
   return {
     ...(row as unknown as WorkCase),
+    id: String(row.id ?? ""),
+    title: String(row.title ?? ""),
+    slug: String(row.slug ?? ""),
     service_id: (row.service_id as string | null) ?? null,
     service_category: String(row.service_category ?? ""),
+    vehicle_brand: String(row.vehicle_brand ?? ""),
+    vehicle_model: String(row.vehicle_model ?? ""),
     manufacturer:
       (typeof row.manufacturer === "string" && row.manufacturer) ||
       String(row.vehicle_brand ?? ""),
-    gallery_image_paths: Array.isArray(row.gallery_image_paths)
-      ? (row.gallery_image_paths as string[])
-      : [],
-    before_images: Array.isArray(row.before_images) ? (row.before_images as string[]) : [],
-    after_images: Array.isArray(row.after_images) ? (row.after_images as string[]) : [],
-    video_urls: Array.isArray(row.video_urls) ? (row.video_urls as string[]) : [],
-    vehicle_tags: Array.isArray(row.vehicle_tags) ? (row.vehicle_tags as string[]) : [],
-    symptom_tags: Array.isArray(row.symptom_tags) ? (row.symptom_tags as string[]) : [],
-    general_tags: Array.isArray(row.general_tags) ? (row.general_tags as string[]) : [],
-    related_work_ids: Array.isArray(row.related_work_ids)
-      ? (row.related_work_ids as string[])
-      : [],
+    symptoms: typeof row.symptoms === "string" ? row.symptoms : "",
+    diagnosis: typeof row.diagnosis === "string" ? row.diagnosis : "",
+    cause: typeof row.cause === "string" ? row.cause : "",
+    repair_process: typeof row.repair_process === "string" ? row.repair_process : "",
+    detailed_content: typeof row.detailed_content === "string" ? row.detailed_content : "",
+    work_summary: typeof row.work_summary === "string" ? row.work_summary : "",
+    replaced_parts: typeof row.replaced_parts === "string" ? row.replaced_parts : "",
+    warranty_info: typeof row.warranty_info === "string" ? row.warranty_info : "",
+    excerpt: typeof row.excerpt === "string" ? row.excerpt : "",
+    subtitle: typeof row.subtitle === "string" ? row.subtitle : "",
+    representative_image_path:
+      typeof row.representative_image_path === "string" && row.representative_image_path
+        ? row.representative_image_path
+        : null,
+    gallery_image_paths: asStringArray(row.gallery_image_paths),
+    before_images: asStringArray(row.before_images),
+    after_images: asStringArray(row.after_images),
+    video_urls: asStringArray(row.video_urls),
+    vehicle_tags: asStringArray(row.vehicle_tags),
+    symptom_tags: asStringArray(row.symptom_tags),
+    general_tags: asStringArray(row.general_tags),
+    related_work_ids: asStringArray(row.related_work_ids),
     status,
     content_html: typeof row.content_html === "string" ? row.content_html : null,
     content_json: row.content_json ?? null,
     view_count: typeof row.view_count === "number" ? row.view_count : 0,
+    is_published: Boolean(row.is_published),
   };
+}
+
+/** Next.js params 가 한글 slug 를 %인코딩 상태로 전달하는 경우 정규화 */
+export function normalizeWorkSlug(slug: string): string {
+  const raw = String(slug ?? "").trim();
+  if (!raw) return "";
+  try {
+    let current = raw;
+    // 이중 인코딩(%25XX)까지 최대 2회 디코딩
+    for (let i = 0; i < 2; i++) {
+      if (!/%[0-9A-Fa-f]{2}/.test(current)) break;
+      current = decodeURIComponent(current);
+    }
+    return current;
+  } catch (error) {
+    console.error("[normalizeWorkSlug] decode failed", {
+      slug: raw,
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+    return raw;
+  }
+}
+
+function quotePostgrestValue(value: string): string {
+  // 특수문자(·, 공백, 쉼표 등)가 포함된 필터 값 보호
+  return `"${value.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+}
+
+export async function getWorkBySlug(slug: string): Promise<WorkCase | null> {
+  const normalizedSlug = normalizeWorkSlug(slug);
+
+  if (!isSupabaseConfigured()) {
+    return DEFAULT_WORKS.find((w) => w.slug === normalizedSlug && w.is_published) ?? null;
+  }
+
+  const supabase = await tryCreateClient();
+  if (!supabase) {
+    return DEFAULT_WORKS.find((w) => w.slug === normalizedSlug && w.is_published) ?? null;
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from("work_cases")
+      .select("*")
+      .eq("slug", normalizedSlug)
+      .eq("is_published", true)
+      .maybeSingle();
+
+    if (error) {
+      console.error("[getWorkBySlug] supabase error", {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+        slug: normalizedSlug,
+        rawSlug: slug,
+      });
+      if (isMissingTableError(error)) {
+        return DEFAULT_WORKS.find((w) => w.slug === normalizedSlug && w.is_published) ?? null;
+      }
+      return null;
+    }
+
+    if (!data) return null;
+
+    const work = mapWork(data as Record<string, unknown>);
+
+    // 비공개·휴지통·예약발행(아직 미공개) 차단 — RLS와 이중 방어
+    if (
+      work.status === "draft" ||
+      work.status === "private" ||
+      work.status === "trash" ||
+      work.status === "scheduled" ||
+      work.deleted_at
+    ) {
+      return null;
+    }
+
+    return work;
+  } catch (error) {
+    console.error("[getWorkBySlug] unexpected error", {
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+      slug: normalizedSlug,
+      rawSlug: slug,
+    });
+    return null;
+  }
 }
 
 function fallbackHomepage(errorMessage?: string): HomepageData {
@@ -352,47 +474,6 @@ export async function getSiteSettings(): Promise<SiteSettings> {
   return data.settings;
 }
 
-export async function getWorkBySlug(slug: string): Promise<WorkCase | null> {
-  if (!isSupabaseConfigured()) {
-    return DEFAULT_WORKS.find((w) => w.slug === slug && w.is_published) ?? null;
-  }
-
-  const supabase = await tryCreateClient();
-  if (!supabase) {
-    return DEFAULT_WORKS.find((w) => w.slug === slug && w.is_published) ?? null;
-  }
-
-  const { data, error } = await supabase
-    .from("work_cases")
-    .select("*")
-    .eq("slug", slug)
-    .eq("is_published", true)
-    .maybeSingle();
-
-  if (error) {
-    if (isMissingTableError(error)) {
-      return DEFAULT_WORKS.find((w) => w.slug === slug && w.is_published) ?? null;
-    }
-    return null;
-  }
-
-  if (!data) return null;
-  const work = mapWork(data as Record<string, unknown>);
-
-  // 비공개·휴지통·예약발행(아직 미공개) 차단 — RLS와 이중 방어
-  if (
-    work.status === "draft" ||
-    work.status === "private" ||
-    work.status === "trash" ||
-    work.status === "scheduled" ||
-    work.deleted_at
-  ) {
-    return null;
-  }
-
-  return work;
-}
-
 /** 조회수 +1 (실패해도 상세 노출에는 영향 없음) */
 export async function incrementWorkViewCount(id: string): Promise<void> {
   if (!isSupabaseConfigured()) return;
@@ -415,130 +496,216 @@ export async function getRelatedWorks(
   current: WorkCase,
   limit = 3,
 ): Promise<WorkCase[]> {
-  if (!isSupabaseConfigured()) {
-    return DEFAULT_WORKS.filter(
-      (w) =>
-        w.id !== current.id &&
-        (w.service_id === current.service_id ||
-          w.service_category === current.service_category ||
-          w.vehicle_brand === current.vehicle_brand),
-    ).slice(0, limit);
+  try {
+    const relatedIds = Array.isArray(current.related_work_ids)
+      ? current.related_work_ids.filter(Boolean).slice(0, limit)
+      : [];
+
+    if (!isSupabaseConfigured()) {
+      if (relatedIds.length) {
+        return DEFAULT_WORKS.filter((w) => relatedIds.includes(w.id)).slice(0, limit);
+      }
+      return DEFAULT_WORKS.filter(
+        (w) =>
+          w.id !== current.id &&
+          (w.service_id === current.service_id ||
+            w.service_category === current.service_category ||
+            w.vehicle_brand === current.vehicle_brand),
+      ).slice(0, limit);
+    }
+
+    const supabase = await tryCreateClient();
+    if (!supabase) return [];
+
+    if (relatedIds.length) {
+      const { data, error } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .in("id", relatedIds)
+        .limit(limit);
+      if (error) {
+        console.error("[getRelatedWorks] related_work_ids error", {
+          message: error.message,
+          details: error.details,
+          hint: error.hint,
+          code: error.code,
+        });
+      } else if (data?.length) {
+        return (data as Record<string, unknown>[]).map(mapWork);
+      }
+    }
+
+    let query = supabase
+      .from("work_cases")
+      .select("*")
+      .eq("is_published", true)
+      .neq("id", current.id);
+
+    const brand = (current.manufacturer || current.vehicle_brand || "").trim();
+    if (current.service_id && brand) {
+      query = query.or(
+        `service_id.eq.${quotePostgrestValue(current.service_id)},vehicle_brand.eq.${quotePostgrestValue(brand)}`,
+      );
+    } else if (current.service_id) {
+      query = query.eq("service_id", current.service_id);
+    } else if (current.service_category && brand) {
+      query = query.or(
+        `service_category.eq.${quotePostgrestValue(current.service_category)},vehicle_brand.eq.${quotePostgrestValue(brand)}`,
+      );
+    } else if (current.service_category) {
+      query = query.eq("service_category", current.service_category);
+    } else if (brand) {
+      query = query.eq("vehicle_brand", brand);
+    } else {
+      return [];
+    }
+
+    const { data, error } = await query
+      .order("published_at", { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      console.error("[getRelatedWorks] supabase error", {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+      });
+      return [];
+    }
+    return ((data as Record<string, unknown>[]) || []).map(mapWork);
+  } catch (error) {
+    console.error("[getRelatedWorks] unexpected error", {
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+    return [];
   }
-
-  const supabase = await tryCreateClient();
-  if (!supabase) return [];
-
-  let query = supabase
-    .from("work_cases")
-    .select("*")
-    .eq("is_published", true)
-    .neq("id", current.id);
-
-  if (current.service_id) {
-    query = query.or(
-      `service_id.eq.${current.service_id},vehicle_brand.eq.${current.vehicle_brand}`,
-    );
-  } else if (current.service_category) {
-    query = query.or(
-      `service_category.eq.${current.service_category},vehicle_brand.eq.${current.vehicle_brand}`,
-    );
-  } else {
-    query = query.eq("vehicle_brand", current.vehicle_brand);
-  }
-
-  const { data, error } = await query
-    .order("published_at", { ascending: false })
-    .limit(limit);
-
-  if (error || !data) return [];
-  return (data as Record<string, unknown>[]).map(mapWork);
 }
 
 export async function getSameVehicleWorks(
   current: WorkCase,
   limit = 3,
 ): Promise<WorkCase[]> {
-  const brand = current.manufacturer || current.vehicle_brand;
-  if (!isSupabaseConfigured()) {
-    return DEFAULT_WORKS.filter(
-      (w) =>
-        w.id !== current.id &&
-        w.is_published &&
-        (w.manufacturer || w.vehicle_brand) === brand &&
-        w.vehicle_model === current.vehicle_model,
-    ).slice(0, limit);
+  try {
+    const brand = (current.manufacturer || current.vehicle_brand || "").trim();
+    const model = (current.vehicle_model || "").trim();
+    if (!brand || !model) return [];
+
+    if (!isSupabaseConfigured()) {
+      return DEFAULT_WORKS.filter(
+        (w) =>
+          w.id !== current.id &&
+          w.is_published &&
+          (w.manufacturer || w.vehicle_brand) === brand &&
+          w.vehicle_model === model,
+      ).slice(0, limit);
+    }
+
+    const supabase = await tryCreateClient();
+    if (!supabase) return [];
+
+    const { data, error } = await supabase
+      .from("work_cases")
+      .select("*")
+      .eq("is_published", true)
+      .neq("id", current.id)
+      .eq("vehicle_brand", brand)
+      .eq("vehicle_model", model)
+      .order("published_at", { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      console.error("[getSameVehicleWorks] supabase error", {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+      });
+      return [];
+    }
+    return ((data as Record<string, unknown>[]) || []).map(mapWork);
+  } catch (error) {
+    console.error("[getSameVehicleWorks] unexpected error", {
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+    return [];
   }
-
-  const supabase = await tryCreateClient();
-  if (!supabase) return [];
-
-  const { data, error } = await supabase
-    .from("work_cases")
-    .select("*")
-    .eq("is_published", true)
-    .neq("id", current.id)
-    .eq("vehicle_brand", brand)
-    .eq("vehicle_model", current.vehicle_model)
-    .order("published_at", { ascending: false })
-    .limit(limit);
-
-  if (error || !data) return [];
-  return (data as Record<string, unknown>[]).map(mapWork);
 }
 
 export async function getSameSymptomWorks(
   current: WorkCase,
   limit = 3,
 ): Promise<WorkCase[]> {
-  const tag = current.symptom_tags?.[0];
-  const keyword = tag || current.service_category;
-  if (!keyword) return [];
+  try {
+    const tags = Array.isArray(current.symptom_tags) ? current.symptom_tags : [];
+    const tag = tags[0];
+    const keyword = (tag || current.service_category || "").trim();
+    if (!keyword) return [];
 
-  if (!isSupabaseConfigured()) {
-    return DEFAULT_WORKS.filter(
-      (w) =>
-        w.id !== current.id &&
-        w.is_published &&
-        (w.symptom_tags?.includes(keyword) ||
-          w.service_category === current.service_category ||
-          w.symptoms?.includes(keyword)),
-    ).slice(0, limit);
-  }
+    if (!isSupabaseConfigured()) {
+      return DEFAULT_WORKS.filter(
+        (w) =>
+          w.id !== current.id &&
+          w.is_published &&
+          (w.symptom_tags?.includes(keyword) ||
+            w.service_category === current.service_category ||
+            w.symptoms?.includes(keyword)),
+      ).slice(0, limit);
+    }
 
-  const supabase = await tryCreateClient();
-  if (!supabase) return [];
+    const supabase = await tryCreateClient();
+    if (!supabase) return [];
 
-  let query = supabase
-    .from("work_cases")
-    .select("*")
-    .eq("is_published", true)
-    .neq("id", current.id);
-
-  if (tag) {
-    query = query.contains("symptom_tags", [tag]);
-  } else {
-    query = query.ilike("symptoms", `%${keyword.slice(0, 40)}%`);
-  }
-
-  const { data, error } = await query
-    .order("published_at", { ascending: false })
-    .limit(limit);
-
-  if (error || !data) {
-    // symptom_tags 컬럼 없을 때 서비스 기준 폴백
-    const fallback = await supabase
+    let query = supabase
       .from("work_cases")
       .select("*")
       .eq("is_published", true)
-      .neq("id", current.id)
-      .eq("service_category", current.service_category)
+      .neq("id", current.id);
+
+    if (tag) {
+      query = query.contains("symptom_tags", [tag]);
+    } else {
+      query = query.ilike("symptoms", `%${keyword.slice(0, 40)}%`);
+    }
+
+    const { data, error } = await query
       .order("published_at", { ascending: false })
       .limit(limit);
-    if (fallback.error || !fallback.data) return [];
-    return (fallback.data as Record<string, unknown>[]).map(mapWork);
-  }
 
-  return (data as Record<string, unknown>[]).map(mapWork);
+    if (error || !data) {
+      if (error) {
+        console.error("[getSameSymptomWorks] supabase error", {
+          message: error.message,
+          details: error.details,
+          hint: error.hint,
+          code: error.code,
+        });
+      }
+      // symptom_tags 컬럼 없을 때 서비스 기준 폴백
+      if (!current.service_category) return [];
+      const fallback = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .eq("service_category", current.service_category)
+        .order("published_at", { ascending: false })
+        .limit(limit);
+      if (fallback.error || !fallback.data) return [];
+      return (fallback.data as Record<string, unknown>[]).map(mapWork);
+    }
+
+    return (data as Record<string, unknown>[]).map(mapWork);
+  } catch (error) {
+    console.error("[getSameSymptomWorks] unexpected error", {
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+    return [];
+  }
 }
 
 export async function getPaginatedWorks(

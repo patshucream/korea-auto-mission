@@ -45,9 +45,9 @@ export function escapeXml(value: string): string {
     .replace(/'/g, "&apos;");
 }
 
-export function telHref(phone: string): string {
-  const digits = phone.replace(/[^0-9+]/g, "");
-  return `tel:${digits}`;
+export function telHref(phone: string | null | undefined): string {
+  const digits = String(phone ?? "").replace(/[^0-9+]/g, "");
+  return `tel:${digits || ""}`;
 }
 
 /** 공개 페이지용 외부 링크 (관리자 설정값 우선, 없으면 안전한 기본값) */
