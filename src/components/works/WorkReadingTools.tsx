@@ -17,6 +17,7 @@ export function WorkReadingTools({ toc, shareUrl, shareTitle }: Props) {
   const [activeId, setActiveId] = useState<string>("");
   const [copied, setCopied] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [tocOpen, setTocOpen] = useState(false);
   const ids = useMemo(() => toc.map((t) => t.id), [toc]);
 
   useEffect(() => {
@@ -60,7 +61,7 @@ export function WorkReadingTools({ toc, shareUrl, shareTitle }: Props) {
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1800);
     } catch {
-      // user cancelled share
+      // cancelled
     }
   }
 
@@ -77,28 +78,63 @@ export function WorkReadingTools({ toc, shareUrl, shareTitle }: Props) {
   return (
     <>
       {toc.length ? (
-        <nav className="mb-8 rounded-[12px] border border-border bg-white p-4">
-          <p className="text-sm font-black text-navy">목차</p>
-          <ol className="mt-3 space-y-2 text-sm">
-            {toc.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  className={
-                    activeId === item.id
-                      ? "font-bold text-navy"
-                      : "text-muted hover:text-navy"
-                  }
-                >
-                  {item.text}
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
+        <>
+          {/* 모바일: 접는 목차 */}
+          <div className="mb-6 lg:hidden">
+            <button
+              type="button"
+              className="flex w-full items-center justify-between rounded-[12px] border border-border bg-white px-4 py-3 text-left"
+              onClick={() => setTocOpen((v) => !v)}
+              aria-expanded={tocOpen}
+            >
+              <span className="text-sm font-black text-navy">목차</span>
+              <span className="text-sm font-bold text-muted">{tocOpen ? "접기" : "펼치기"}</span>
+            </button>
+            {tocOpen ? (
+              <ol className="mt-2 space-y-2 rounded-[12px] border border-border bg-white p-4 text-sm">
+                {toc.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className={
+                        activeId === item.id
+                          ? "font-bold text-navy"
+                          : "text-muted hover:text-navy"
+                      }
+                      onClick={() => setTocOpen(false)}
+                    >
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            ) : null}
+          </div>
+
+          {/* 데스크톱: sticky 목차 */}
+          <nav className="mb-8 hidden rounded-[12px] border border-border bg-white p-4 lg:sticky lg:top-24 lg:mb-0 lg:block">
+            <p className="text-sm font-black text-navy">목차</p>
+            <ol className="mt-3 space-y-2 text-sm">
+              {toc.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    className={
+                      activeId === item.id
+                        ? "font-bold text-navy"
+                        : "text-muted hover:text-navy"
+                    }
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </>
       ) : null}
 
-      <div className="mb-6 flex flex-wrap gap-2">
+      <div className="mb-6 flex flex-wrap gap-2 lg:mt-4">
         <button type="button" className="btn btn-ghost min-h-11 text-sm" onClick={share}>
           공유
         </button>
@@ -109,7 +145,7 @@ export function WorkReadingTools({ toc, shareUrl, shareTitle }: Props) {
 
       <button
         type="button"
-        className="fixed bottom-20 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-sm font-black text-navy shadow-md md:bottom-8"
+        className="fixed bottom-24 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-sm font-black text-navy shadow-md md:bottom-8"
         aria-label="상단으로 이동"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >

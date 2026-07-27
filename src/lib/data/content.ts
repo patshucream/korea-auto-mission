@@ -492,89 +492,160 @@ export async function incrementWorkViewCount(id: string): Promise<void> {
   }
 }
 
+/**
+ * 관련 작업사례 추천.
+ * 우선순위: 수동 지정 → 같은 모델 → 같은 제조사 → 같은 서비스 → 같은 증상 → 최신
+ * 실패해도 빈 배열 반환 (상세 페이지 500 방지)
+ */
 export async function getRelatedWorks(
   current: WorkCase,
-  limit = 3,
+  limit = 4,
 ): Promise<WorkCase[]> {
   try {
     const relatedIds = Array.isArray(current.related_work_ids)
-      ? current.related_work_ids.filter(Boolean).slice(0, limit)
+      ? current.related_work_ids.filter(Boolean)
       : [];
+    const brand = (current.manufacturer || current.vehicle_brand || "").trim();
+    const model = (current.vehicle_model || "").trim();
+    const symptomTag = Array.isArray(current.symptom_tags)
+      ? current.symptom_tags.find(Boolean)
+      : "";
+
+    const scoreWork = (w: WorkCase): number => {
+      let score = 0;
+      if (relatedIds.includes(w.id)) score += 1000;
+      const wBrand = (w.manufacturer || w.vehicle_brand || "").trim();
+      if (brand && model && wBrand === brand && w.vehicle_model === model) score += 500;
+      else if (brand && wBrand === brand) score += 300;
+      if (current.service_id && w.service_id === current.service_id) score += 200;
+      else if (
+        current.service_category &&
+        w.service_category === current.service_category
+      ) {
+        score += 150;
+      }
+      if (symptomTag && w.symptom_tags?.includes(symptomTag)) score += 100;
+      return score;
+    };
 
     if (!isSupabaseConfigured()) {
-      if (relatedIds.length) {
-        return DEFAULT_WORKS.filter((w) => relatedIds.includes(w.id)).slice(0, limit);
-      }
-      return DEFAULT_WORKS.filter(
-        (w) =>
-          w.id !== current.id &&
-          (w.service_id === current.service_id ||
-            w.service_category === current.service_category ||
-            w.vehicle_brand === current.vehicle_brand),
-      ).slice(0, limit);
+      return DEFAULT_WORKS.filter((w) => w.id !== current.id && w.is_published)
+        .map((w) => ({ w, score: scoreWork(w) }))
+        .filter((x) => x.score > 0 || true)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit)
+        .map((x) => x.w);
     }
 
     const supabase = await tryCreateClient();
     if (!supabase) return [];
+
+    const collected = new Map<string, WorkCase>();
+
+    const addRows = (rows: Record<string, unknown>[] | null | undefined) => {
+      for (const row of rows || []) {
+        const mapped = mapWork(row);
+        if (mapped.id === current.id) continue;
+        if (!collected.has(mapped.id)) collected.set(mapped.id, mapped);
+      }
+    };
 
     if (relatedIds.length) {
       const { data, error } = await supabase
         .from("work_cases")
         .select("*")
         .eq("is_published", true)
-        .in("id", relatedIds)
-        .limit(limit);
+        .in("id", relatedIds.slice(0, 12));
       if (error) {
         console.error("[getRelatedWorks] related_work_ids error", {
           message: error.message,
-          details: error.details,
-          hint: error.hint,
           code: error.code,
         });
-      } else if (data?.length) {
-        return (data as Record<string, unknown>[]).map(mapWork);
+      } else {
+        addRows(data as Record<string, unknown>[]);
       }
     }
 
-    let query = supabase
-      .from("work_cases")
-      .select("*")
-      .eq("is_published", true)
-      .neq("id", current.id);
-
-    const brand = (current.manufacturer || current.vehicle_brand || "").trim();
-    if (current.service_id && brand) {
-      query = query.or(
-        `service_id.eq.${quotePostgrestValue(current.service_id)},vehicle_brand.eq.${quotePostgrestValue(brand)}`,
-      );
-    } else if (current.service_id) {
-      query = query.eq("service_id", current.service_id);
-    } else if (current.service_category && brand) {
-      query = query.or(
-        `service_category.eq.${quotePostgrestValue(current.service_category)},vehicle_brand.eq.${quotePostgrestValue(brand)}`,
-      );
-    } else if (current.service_category) {
-      query = query.eq("service_category", current.service_category);
-    } else if (brand) {
-      query = query.eq("vehicle_brand", brand);
-    } else {
-      return [];
+    if (brand && model) {
+      const { data } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .eq("vehicle_brand", brand)
+        .eq("vehicle_model", model)
+        .order("published_at", { ascending: false })
+        .limit(8);
+      addRows(data as Record<string, unknown>[]);
     }
 
-    const { data, error } = await query
-      .order("published_at", { ascending: false })
-      .limit(limit);
-
-    if (error) {
-      console.error("[getRelatedWorks] supabase error", {
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
-        code: error.code,
-      });
-      return [];
+    if (brand && collected.size < limit * 2) {
+      const { data } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .eq("vehicle_brand", brand)
+        .order("published_at", { ascending: false })
+        .limit(8);
+      addRows(data as Record<string, unknown>[]);
     }
-    return ((data as Record<string, unknown>[]) || []).map(mapWork);
+
+    if (current.service_id && collected.size < limit * 2) {
+      const { data } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .eq("service_id", current.service_id)
+        .order("published_at", { ascending: false })
+        .limit(8);
+      addRows(data as Record<string, unknown>[]);
+    } else if (current.service_category && collected.size < limit * 2) {
+      const { data } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .eq("service_category", current.service_category)
+        .order("published_at", { ascending: false })
+        .limit(8);
+      addRows(data as Record<string, unknown>[]);
+    }
+
+    if (symptomTag && collected.size < limit * 2) {
+      const { data, error } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .contains("symptom_tags", [symptomTag])
+        .order("published_at", { ascending: false })
+        .limit(8);
+      if (!error) addRows(data as Record<string, unknown>[]);
+    }
+
+    if (collected.size < limit) {
+      const { data } = await supabase
+        .from("work_cases")
+        .select("*")
+        .eq("is_published", true)
+        .neq("id", current.id)
+        .order("published_at", { ascending: false })
+        .limit(limit * 2);
+      addRows(data as Record<string, unknown>[]);
+    }
+
+    return [...collected.values()]
+      .map((w) => ({ w, score: scoreWork(w) }))
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        const aDate = a.w.published_at || a.w.created_at || "";
+        const bDate = b.w.published_at || b.w.created_at || "";
+        return bDate.localeCompare(aDate);
+      })
+      .slice(0, limit)
+      .map((x) => x.w);
   } catch (error) {
     console.error("[getRelatedWorks] unexpected error", {
       message: error instanceof Error ? error.message : String(error),

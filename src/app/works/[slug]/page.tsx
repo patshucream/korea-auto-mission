@@ -10,15 +10,18 @@ import { SmartImage } from "@/components/ui/SmartImage";
 import { NaverReserveButton, PhoneButton } from "@/components/ui/ContactButtons";
 import {
   getRelatedWorks,
-  getSameSymptomWorks,
-  getSameVehicleWorks,
   getSiteSettings,
   getWorkBySlug,
   incrementWorkViewCount,
 } from "@/lib/data/content";
 import { sanitizeEditorHtml } from "@/lib/editor/sanitize";
 import { getPublicImageUrl } from "@/lib/media";
-import { SITE_URL, formatDateKo } from "@/lib/utils";
+import { SITE_URL, formatDateKo, getMapUrl } from "@/lib/utils";
+import {
+  buildDefaultSeoDescription,
+  buildDefaultSeoTitle,
+  estimateReadingMinutes,
+} from "@/lib/works/seo";
 import type { WorkCase } from "@/lib/types";
 
 export const revalidate = 60;
@@ -47,6 +50,18 @@ function buildToc(work: WorkCase, hasHtml: boolean): TocItem[] {
     if (cond) items.push({ id: sectionId(label), text: label });
   };
 
+  push(
+    "빠른 요약",
+    Boolean(
+      asString(work.symptoms).trim() ||
+        asString(work.diagnosis).trim() ||
+        asString(work.repair_process).trim() ||
+        asString(work.replaced_parts).trim() ||
+        asString(work.repair_duration).trim() ||
+        asString(work.warranty_info).trim(),
+    ),
+  );
+
   if (hasHtml) {
     const html = asString(work.content_html);
     const headings = [...html.matchAll(/<h([23])[^>]*>(.*?)<\/h\1>/gi)];
@@ -56,28 +71,19 @@ function buildToc(work: WorkCase, hasHtml: boolean): TocItem[] {
     });
   }
 
-  push("증상", Boolean(asString(work.symptoms).trim()));
-  push("진단 과정", Boolean(asString(work.diagnosis).trim()));
-  push("원인", Boolean(asString(work.cause).trim()));
-  push(
-    "작업 과정",
-    Boolean(
-      asString(work.repair_process).trim() ||
-        asString(work.detailed_content).trim() ||
-        asString(work.work_summary).trim(),
-    ),
-  );
-  push("교체 부품", Boolean(asString(work.replaced_parts).trim()));
   push(
     "작업 전후",
     Boolean(asStringArray(work.before_images).length || asStringArray(work.after_images).length),
   );
-  push("보증 안내", Boolean(asString(work.warranty_info).trim()));
+  push(
+    "정비 결과",
+    Boolean(asString(work.cause).trim() || asString(work.warranty_info).trim()),
+  );
   push("갤러리", Boolean(asStringArray(work.gallery_image_paths).length));
+  push("관련 작업사례", true);
   return items;
 }
 
-/** content_html 의 h2/h3에 id를 주입해 목차 앵커와 맞춤 */
 function injectHeadingIds(html: string): string {
   let i = 0;
   return html.replace(/<h([23])([^>]*)>/gi, (_m, level, attrs) => {
@@ -93,20 +99,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const work = await getWorkBySlug(slug);
     if (!work) return { title: "작업사례" };
 
-    const title = asString(work.seo_title) || asString(work.og_title) || asString(work.title) || "작업사례";
-    const description =
-      asString(work.seo_description) ||
-      asString(work.og_description) ||
-      asString(work.excerpt) ||
-      asString(work.work_summary) ||
-      asString(work.symptoms) ||
-      asString(work.title) ||
-      "코리아오토미션 작업사례";
+    const title = buildDefaultSeoTitle(work);
+    const description = buildDefaultSeoDescription(work);
     const image =
       getPublicImageUrl(work.og_image_path) ||
       getPublicImageUrl(work.representative_image_path);
     const canonical =
-      asString(work.canonical_url) || `${SITE_URL}/works/${encodeURIComponent(work.slug)}`;
+      asString(work.canonical_url) ||
+      `${SITE_URL}/works/${encodeURIComponent(work.slug)}`;
 
     return {
       title,
@@ -118,34 +118,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: asString(work.og_description) || description,
         images: image ? [{ url: image }] : undefined,
         url: canonical,
+        type: "article",
       },
     };
   } catch (error) {
     console.error("[works/[slug] generateMetadata]", {
       message: error instanceof Error ? error.message : String(error),
-      stack: error instanceof Error ? error.stack : undefined,
     });
     return { title: "작업사례" };
   }
-}
-
-function ReportBlock({
-  id,
-  title,
-  children,
-}: {
-  id: string;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className="scroll-mt-28">
-      <h2 className="text-xl font-black text-charcoal">{title}</h2>
-      <div className="mt-2 whitespace-pre-line leading-relaxed text-charcoal-soft">
-        {children}
-      </div>
-    </section>
-  );
 }
 
 export default async function WorkDetailPage({ params }: Props) {
@@ -158,7 +139,6 @@ export default async function WorkDetailPage({ params }: Props) {
     console.error("[works/[slug] getWorkBySlug]", {
       slug,
       message: error instanceof Error ? error.message : String(error),
-      stack: error instanceof Error ? error.stack : undefined,
     });
     throw error;
   }
@@ -167,33 +147,13 @@ export default async function WorkDetailPage({ params }: Props) {
 
   void incrementWorkViewCount(work.id);
 
-  const [settings, related, sameVehicle, sameSymptom] = await Promise.all([
+  const [settings, related] = await Promise.all([
     getSiteSettings().catch((error) => {
-      console.error("[works/[slug] getSiteSettings]", {
-        message: error instanceof Error ? error.message : String(error),
-        stack: error instanceof Error ? error.stack : undefined,
-      });
+      console.error("[works/[slug] getSiteSettings]", error);
       throw error;
     }),
-    getRelatedWorks(work).catch((error) => {
-      console.error("[works/[slug] getRelatedWorks]", {
-        message: error instanceof Error ? error.message : String(error),
-        stack: error instanceof Error ? error.stack : undefined,
-      });
-      return [] as WorkCase[];
-    }),
-    getSameVehicleWorks(work).catch((error) => {
-      console.error("[works/[slug] getSameVehicleWorks]", {
-        message: error instanceof Error ? error.message : String(error),
-        stack: error instanceof Error ? error.stack : undefined,
-      });
-      return [] as WorkCase[];
-    }),
-    getSameSymptomWorks(work).catch((error) => {
-      console.error("[works/[slug] getSameSymptomWorks]", {
-        message: error instanceof Error ? error.message : String(error),
-        stack: error instanceof Error ? error.stack : undefined,
-      });
+    getRelatedWorks(work, 4).catch((error) => {
+      console.error("[works/[slug] getRelatedWorks]", error);
       return [] as WorkCase[];
     }),
   ]);
@@ -203,11 +163,7 @@ export default async function WorkDetailPage({ params }: Props) {
   let safeHtml = "";
   try {
     safeHtml = rawHtml ? injectHeadingIds(sanitizeEditorHtml(rawHtml)) : "";
-  } catch (error) {
-    console.error("[works/[slug] sanitizeEditorHtml]", {
-      message: error instanceof Error ? error.message : String(error),
-      stack: error instanceof Error ? error.stack : undefined,
-    });
+  } catch {
     safeHtml = "";
   }
   const hasHtml = Boolean(safeHtml);
@@ -223,104 +179,210 @@ export default async function WorkDetailPage({ params }: Props) {
   const diagnosis = asString(work.diagnosis).trim();
   const cause = asString(work.cause).trim();
   const repairProcess = asString(work.repair_process).trim();
-  const detailedContent = asString(work.detailed_content).trim();
-  const workSummary = asString(work.work_summary).trim();
   const replacedParts = asString(work.replaced_parts).trim();
   const warrantyInfo = asString(work.warranty_info).trim();
   const repairDuration = asString(work.repair_duration).trim();
   const serviceCategory = asString(work.service_category).trim();
   const subtitle = asString(work.subtitle).trim() || asString(work.excerpt).trim();
+  const hasSummary = Boolean(
+    symptoms || diagnosis || repairProcess || replacedParts || repairDuration || warrantyInfo,
+  );
+  const imageUrl =
+    getPublicImageUrl(work.og_image_path) ||
+    getPublicImageUrl(work.representative_image_path);
+  const canonical =
+    asString(work.canonical_url) ||
+    `${SITE_URL}/works/${encodeURIComponent(work.slug)}`;
+  const minutes = estimateReadingMinutes(work);
+  const mapUrl = getMapUrl(settings);
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: buildDefaultSeoTitle(work),
+    description: buildDefaultSeoDescription(work),
+    datePublished: work.published_at || work.created_at || undefined,
+    dateModified: work.updated_at || work.published_at || undefined,
+    image: imageUrl || undefined,
+    author: {
+      "@type": "Organization",
+      name: settings.business_name || "코리아오토미션",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: settings.business_name || "코리아오토미션",
+      url: SITE_URL,
+    },
+    mainEntityOfPage: canonical,
+    url: canonical,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "홈",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "작업사례",
+        item: `${SITE_URL}/works`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: asString(work.title) || "작업사례",
+        item: canonical,
+      },
+    ],
+  };
 
   return (
     <>
       <Header settings={settings} />
       <main className="pb-mobile-bar">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
         <article className="section-pad">
           <div className="container-site">
-            <Link href="/works" className="text-sm font-bold text-navy hover:underline">
-              ← 작업사례 목록
-            </Link>
+            <nav className="text-sm text-muted">
+              <Link href="/" className="hover:text-navy">
+                홈
+              </Link>
+              <span className="mx-2">/</span>
+              <Link href="/works" className="hover:text-navy">
+                작업사례
+              </Link>
+            </nav>
 
-            <header className="mx-auto mt-6 max-w-[840px]">
+            <header className="mx-auto mt-6 max-w-[820px]">
               <p className="text-sm font-bold text-navy">
-                {brand} {asString(work.vehicle_model)}
-                {work.model_year ? ` · ${work.model_year}` : ""}
+                {[brand, asString(work.vehicle_model), work.model_year, asString(work.mileage)]
+                  .filter(Boolean)
+                  .join(" · ")}
               </p>
-              <h1 className="mt-3 text-[1.9rem] font-black leading-snug tracking-tight text-charcoal md:text-[2.4rem]">
+              <h1 className="mt-3 text-[1.85rem] font-black leading-snug tracking-tight text-charcoal md:text-[2.35rem]">
                 {asString(work.title) || "작업사례"}
               </h1>
               {subtitle ? (
                 <p className="mt-3 text-lg leading-relaxed text-muted">{subtitle}</p>
               ) : null}
               <p className="mt-4 text-sm text-muted">
-                {serviceCategory}
-                {work.published_at || work.created_at
-                  ? ` · ${formatDateKo(work.published_at || work.created_at)}`
-                  : ""}
-                {` · 조회 ${work.view_count ?? 0}`}
+                {[
+                  serviceCategory,
+                  work.published_at || work.created_at
+                    ? formatDateKo(work.published_at || work.created_at)
+                    : "",
+                  `조회 ${work.view_count ?? 0}`,
+                  `약 ${minutes}분`,
+                ]
+                  .filter(Boolean)
+                  .join(" · ")}
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <PhoneButton settings={settings} />
-                <NaverReserveButton settings={settings} />
-              </div>
             </header>
 
             {hasRepresentativeImage ? (
               <SmartImage
                 path={work.representative_image_path}
                 alt={asString(work.title) || "작업 대표 사진"}
-                className="mt-8 aspect-[16/9] w-full rounded-[10px]"
-                sizes="100vw"
+                className="mx-auto mt-8 aspect-[16/9] w-full max-w-[980px] rounded-[10px]"
+                sizes="(max-width: 980px) 100vw, 980px"
                 priority
                 fallbackLabel="작업 대표 사진"
               />
             ) : null}
 
-            <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,840px)_280px] lg:justify-between">
-              <div className="min-w-0">
-                <WorkReadingTools
-                  toc={toc}
-                  shareUrl={shareUrl}
-                  shareTitle={asString(work.title) || "작업사례"}
-                />
+            <div className="mx-auto mt-10 max-w-[820px]">
+              <WorkReadingTools
+                toc={toc}
+                shareUrl={shareUrl}
+                shareTitle={asString(work.title) || "작업사례"}
+              />
 
-                <div className="work-content mt-6 max-w-[840px] space-y-8">
+              {hasSummary ? (
+                  <section
+                    id={sectionId("빠른 요약")}
+                    className="scroll-mt-28 rounded-[14px] border border-border bg-gray-50 p-5 sm:p-6"
+                  >
+                    <h2 className="text-lg font-black text-charcoal">빠른 요약</h2>
+                    <dl className="mt-4 grid gap-4 sm:grid-cols-2">
+                      {symptoms ? (
+                        <div>
+                          <dt className="text-sm font-bold text-navy">입고 증상</dt>
+                          <dd className="mt-1 whitespace-pre-line text-[0.98rem] leading-relaxed text-charcoal-soft">
+                            {symptoms}
+                          </dd>
+                        </div>
+                      ) : null}
+                      {diagnosis ? (
+                        <div>
+                          <dt className="text-sm font-bold text-navy">진단 결과</dt>
+                          <dd className="mt-1 whitespace-pre-line text-[0.98rem] leading-relaxed text-charcoal-soft">
+                            {diagnosis}
+                          </dd>
+                        </div>
+                      ) : null}
+                      {repairProcess ? (
+                        <div>
+                          <dt className="text-sm font-bold text-navy">작업 내용</dt>
+                          <dd className="mt-1 whitespace-pre-line text-[0.98rem] leading-relaxed text-charcoal-soft">
+                            {repairProcess}
+                          </dd>
+                        </div>
+                      ) : null}
+                      {repairDuration ? (
+                        <div>
+                          <dt className="text-sm font-bold text-navy">작업 시간</dt>
+                          <dd className="mt-1 text-[0.98rem] text-charcoal-soft">
+                            {repairDuration}
+                          </dd>
+                        </div>
+                      ) : null}
+                      {replacedParts ? (
+                        <div>
+                          <dt className="text-sm font-bold text-navy">교체 부품</dt>
+                          <dd className="mt-1 whitespace-pre-line text-[0.98rem] leading-relaxed text-charcoal-soft">
+                            {replacedParts}
+                          </dd>
+                        </div>
+                      ) : null}
+                      {warrantyInfo ? (
+                        <div>
+                          <dt className="text-sm font-bold text-navy">보증 안내</dt>
+                          <dd className="mt-1 whitespace-pre-line text-[0.98rem] leading-relaxed text-charcoal-soft">
+                            {warrantyInfo}
+                          </dd>
+                        </div>
+                      ) : null}
+                    </dl>
+                  </section>
+                ) : null}
+
+                <div className="work-content mt-8 max-w-[820px] space-y-8">
                   {hasHtml ? (
                     <div
-                      className="prose-ko"
+                      className="prose-ko work-prose"
                       dangerouslySetInnerHTML={{ __html: safeHtml }}
                     />
                   ) : null}
 
-                  {symptoms ? (
-                    <ReportBlock id={sectionId("증상")} title="증상">
-                      {symptoms}
-                    </ReportBlock>
-                  ) : null}
-                  {diagnosis ? (
-                    <ReportBlock id={sectionId("진단 과정")} title="진단 과정">
-                      {diagnosis}
-                    </ReportBlock>
-                  ) : null}
-                  {cause ? (
-                    <ReportBlock id={sectionId("원인")} title="원인">
-                      {cause}
-                    </ReportBlock>
-                  ) : null}
-                  {repairProcess || (!hasHtml && (detailedContent || workSummary)) ? (
-                    <ReportBlock id={sectionId("작업 과정")} title="작업 과정">
-                      {repairProcess || detailedContent || workSummary}
-                    </ReportBlock>
-                  ) : null}
-                  {replacedParts ? (
-                    <ReportBlock id={sectionId("교체 부품")} title="교체 부품">
-                      {replacedParts}
-                    </ReportBlock>
-                  ) : null}
-
                   {beforeImages.length || afterImages.length ? (
-                    <section id={sectionId("작업 전후")} className="work-before-after scroll-mt-28">
-                      <h2 className="text-xl font-black text-charcoal">작업 전후</h2>
+                    <section
+                      id={sectionId("작업 전후")}
+                      className="work-before-after scroll-mt-28"
+                    >
+                      <h2 className="text-xl font-black text-charcoal">전후 비교</h2>
                       <div className="mt-4 grid gap-4 sm:grid-cols-2">
                         {beforeImages.length ? (
                           <div>
@@ -358,17 +420,29 @@ export default async function WorkDetailPage({ params }: Props) {
                     </section>
                   ) : null}
 
-                  {warrantyInfo ? (
-                    <ReportBlock id={sectionId("보증 안내")} title="보증 안내">
-                      {warrantyInfo}
-                    </ReportBlock>
-                  ) : null}
-
-                  {repairDuration ? (
-                    <p className="rounded-[12px] border border-border bg-gray-50 px-4 py-3 text-sm">
-                      <span className="font-bold text-charcoal">작업 시간: </span>
-                      <span className="text-muted">{repairDuration}</span>
-                    </p>
+                  {cause || warrantyInfo ? (
+                    <section
+                      id={sectionId("정비 결과")}
+                      className="scroll-mt-28 rounded-[14px] border border-border p-5"
+                    >
+                      <h2 className="text-xl font-black text-charcoal">정비 결과</h2>
+                      {cause ? (
+                        <div className="mt-4">
+                          <h3 className="text-sm font-bold text-navy">증상 개선 / 원인</h3>
+                          <p className="mt-2 whitespace-pre-line leading-relaxed text-charcoal-soft">
+                            {cause}
+                          </p>
+                        </div>
+                      ) : null}
+                      {warrantyInfo ? (
+                        <div className="mt-4">
+                          <h3 className="text-sm font-bold text-navy">고객 주의사항 · 보증</h3>
+                          <p className="mt-2 whitespace-pre-line leading-relaxed text-charcoal-soft">
+                            {warrantyInfo}
+                          </p>
+                        </div>
+                      ) : null}
+                    </section>
                   ) : null}
                 </div>
 
@@ -391,133 +465,82 @@ export default async function WorkDetailPage({ params }: Props) {
                     </div>
                   </section>
                 ) : null}
-              </div>
 
-              <aside className="h-fit border border-border bg-gray-100 p-5 lg:sticky lg:top-24">
-                <h2 className="text-lg font-black text-charcoal">차량 정보</h2>
-                <dl className="mt-4 space-y-3 text-sm">
-                  <div>
-                    <dt className="font-bold text-charcoal">제조사</dt>
-                    <dd className="text-muted">{brand || "—"}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-bold text-charcoal">모델</dt>
-                    <dd className="text-muted">{asString(work.vehicle_model) || "—"}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-bold text-charcoal">연식</dt>
-                    <dd className="text-muted">{work.model_year || "—"}</dd>
-                  </div>
-                  {asString(work.mileage) ? (
+                <aside className="mt-10 rounded-[14px] border border-border bg-gray-50 p-5 lg:hidden">
+                  <h2 className="text-lg font-black text-charcoal">차량 정보</h2>
+                  <dl className="mt-4 grid grid-cols-2 gap-3 text-sm">
                     <div>
-                      <dt className="font-bold text-charcoal">주행거리</dt>
-                      <dd className="text-muted">{asString(work.mileage)}</dd>
+                      <dt className="font-bold text-charcoal">제조사</dt>
+                      <dd className="text-muted">{brand || "—"}</dd>
                     </div>
-                  ) : null}
-                  {asString(work.fuel_type) ? (
                     <div>
-                      <dt className="font-bold text-charcoal">연료</dt>
-                      <dd className="text-muted">{asString(work.fuel_type)}</dd>
+                      <dt className="font-bold text-charcoal">모델</dt>
+                      <dd className="text-muted">{asString(work.vehicle_model) || "—"}</dd>
                     </div>
-                  ) : null}
-                  {asString(work.transmission_type) ? (
                     <div>
-                      <dt className="font-bold text-charcoal">변속기</dt>
-                      <dd className="text-muted">{asString(work.transmission_type)}</dd>
+                      <dt className="font-bold text-charcoal">연식</dt>
+                      <dd className="text-muted">{work.model_year || "—"}</dd>
                     </div>
-                  ) : null}
-                  <div>
-                    <dt className="font-bold text-charcoal">서비스</dt>
-                    <dd className="text-muted">{serviceCategory || "—"}</dd>
-                  </div>
+                    <div>
+                      <dt className="font-bold text-charcoal">서비스</dt>
+                      <dd className="text-muted">{serviceCategory || "—"}</dd>
+                    </div>
+                  </dl>
                   {symptomTags.length || generalTags.length ? (
-                    <div>
-                      <dt className="font-bold text-charcoal">태그</dt>
-                      <dd className="mt-1 flex flex-wrap gap-1.5">
-                        {[...symptomTags, ...generalTags].map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-md border border-border px-2 py-0.5 text-xs text-muted"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </dd>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {[...symptomTags, ...generalTags].map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-md border border-border px-2 py-0.5 text-xs text-muted"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                   ) : null}
-                </dl>
+                </aside>
 
-                <div className="mt-6 grid gap-3">
-                  <PhoneButton settings={settings} fullWidth />
-                  <NaverReserveButton settings={settings} fullWidth />
-                  <Link href="/#contact" className="btn btn-secondary btn-full">
-                    상담 문의
-                  </Link>
-                  {asString(work.naver_blog_url) ? (
+                <section className="mt-12 rounded-[14px] border border-border bg-navy px-6 py-8 text-white md:px-10">
+                  <h2 className="text-2xl font-black">내 차량도 비슷한 증상이 있나요?</h2>
+                  <p className="mt-2 max-w-2xl text-white/80">
+                    증상과 차종을 알려주시면 점검 방향을 안내드립니다.
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <PhoneButton
+                      settings={settings}
+                      variant="secondary"
+                      className="!bg-white !text-navy"
+                    />
+                    <NaverReserveButton settings={settings} />
                     <a
-                      href={asString(work.naver_blog_url)}
+                      href={mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-ghost btn-full"
+                      className="btn btn-ghost !border-white/30 !text-white"
                     >
-                      네이버 블로그 글 보기
+                      오시는 길
                     </a>
-                  ) : null}
-                </div>
-              </aside>
+                  </div>
+                </section>
+
+              <section id={sectionId("관련 작업사례")} className="mt-14 scroll-mt-28">
+                  <h2 className="section-title">관련 작업사례</h2>
+                  {related.length ? (
+                    <div className="mt-6 grid gap-8 sm:grid-cols-2">
+                      {related.map((item) => (
+                        <WorkCard key={item.id} work={item} />
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="mt-4 text-muted">관련 사례를 준비 중입니다.</p>
+                  )}
+                </section>
             </div>
-
-            <section className="mt-14 rounded-[14px] border border-border bg-navy px-6 py-8 text-white md:px-10">
-              <h2 className="text-2xl font-black">비슷한 증상이라면 상담받아 보세요</h2>
-              <p className="mt-2 max-w-2xl text-white/80">
-                차량 모델과 증상을 알려주시면 점검 방향과 예상 일정을 안내해 드립니다.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <PhoneButton settings={settings} variant="secondary" className="!bg-white !text-navy" />
-                <NaverReserveButton settings={settings} />
-              </div>
-            </section>
-
-            {related.length ? (
-              <RelatedSection title="관련 작업사례" items={related} />
-            ) : null}
-            {sameVehicle.length ? (
-              <RelatedSection title="같은 차량 작업사례" items={sameVehicle} />
-            ) : null}
-            {sameSymptom.length ? (
-              <RelatedSection title="같은 증상 작업사례" items={sameSymptom} />
-            ) : null}
-
-            {serviceCategory ? (
-              <section className="mt-14">
-                <h2 className="section-title">관련 서비스</h2>
-                <p className="mt-3 text-muted">
-                  이 작업은 <strong className="text-charcoal">{serviceCategory}</strong>{" "}
-                  서비스와 연관되어 있습니다.
-                </p>
-                <Link href="/#services" className="btn btn-secondary mt-4 inline-flex">
-                  서비스 안내 보기
-                </Link>
-              </section>
-            ) : null}
           </div>
         </article>
       </main>
       <Footer settings={settings} />
       <WorkMobileCtaBar settings={settings} />
     </>
-  );
-}
-
-function RelatedSection({ title, items }: { title: string; items: WorkCase[] }) {
-  return (
-    <section className="mt-14">
-      <h2 className="section-title">{title}</h2>
-      <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {items.map((item) => (
-          <WorkCard key={item.id} work={item} />
-        ))}
-      </div>
-    </section>
   );
 }
