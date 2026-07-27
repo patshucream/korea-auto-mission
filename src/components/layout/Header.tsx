@@ -4,11 +4,19 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { SiteSettings } from "@/lib/types";
 import { NAV_ITEMS } from "@/lib/defaults";
-import { cn, getReservationUrl } from "@/lib/utils";
+import { cn, getReservationUrl, telHref } from "@/lib/utils";
 
 type Props = {
   settings: SiteSettings;
 };
+
+const QUICK_LINKS = [
+  { href: "/works?q=미션", label: "미션수리 사례" },
+  { href: "/works?q=DPF", label: "DPF 사례" },
+  { href: "/works?service=", label: "전체 서비스" },
+  { href: "/#services", label: "정비 서비스" },
+  { href: "/works", label: "전체 작업사례" },
+] as const;
 
 export function Header({ settings }: Props) {
   const [open, setOpen] = useState(false);
@@ -16,7 +24,7 @@ export function Header({ settings }: Props) {
   const reserveUrl = getReservationUrl(settings);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -32,20 +40,32 @@ export function Header({ settings }: Props) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b transition-[background-color,border-color] duration-200",
+        "sticky top-0 z-50 border-b transition-all duration-200",
         scrolled || open
-          ? "border-white/10 bg-black/95 text-white backdrop-blur-md"
-          : "border-transparent bg-black/55 text-white backdrop-blur-sm",
+          ? "border-white/10 bg-navy/95 text-white backdrop-blur-md"
+          : "border-transparent bg-navy/70 text-white backdrop-blur-sm",
       )}
     >
-      <div className="container-site flex h-[72px] items-center justify-between gap-3 sm:gap-4">
-        <Link href="/" className="min-w-0 flex-1 lg:flex-none">
-          <span className="block truncate text-[1.05rem] font-semibold tracking-tight sm:text-[1.15rem]">
+      <div
+        className={cn(
+          "container-site flex items-center justify-between gap-3 transition-[height] duration-200",
+          scrolled ? "h-14" : "h-[72px]",
+        )}
+      >
+        <Link href="/" className="min-w-0 flex-1 lg:flex-none" aria-label="홈으로 이동">
+          <span
+            className={cn(
+              "block truncate font-semibold tracking-tight transition-all",
+              scrolled ? "text-[0.98rem]" : "text-[1.08rem] sm:text-[1.15rem]",
+            )}
+          >
             {settings.business_name}
           </span>
-          <span className="mt-0.5 block truncate text-[0.65rem] font-medium tracking-[0.1em] text-white/55 sm:text-[0.7rem]">
-            {settings.english_brand_name}
-          </span>
+          {!scrolled ? (
+            <span className="mt-0.5 block truncate text-[0.65rem] font-medium tracking-[0.12em] text-white/55">
+              {settings.english_brand_name}
+            </span>
+          ) : null}
         </Link>
 
         <nav className="hidden items-center gap-0.5 lg:flex" aria-label="주요 메뉴">
@@ -53,21 +73,29 @@ export function Header({ settings }: Props) {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded px-3 py-2 text-[0.95rem] font-medium text-white/80 hover:text-white"
+              className="min-h-11 rounded px-3 py-2 text-[0.92rem] font-medium text-white/80 hover:text-white"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
+          <a
+            href={telHref(settings.phone)}
+            className="btn btn-ghost !min-h-11 !border-white/25 !text-white px-4 text-sm"
+            aria-label={`${settings.phone}로 전화 상담`}
+          >
+            전화
+          </a>
           <a
             href={reserveUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-light !min-h-11 px-5 text-sm"
+            aria-label="네이버 예약하기"
           >
-            예약하기
+            예약
           </a>
         </div>
 
@@ -79,7 +107,6 @@ export function Header({ settings }: Props) {
           aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="sr-only">메뉴</span>
           <span className="relative flex h-4 w-5" aria-hidden>
             <span
               className={cn(
@@ -106,7 +133,7 @@ export function Header({ settings }: Props) {
       <div
         id="mobile-nav"
         className={cn(
-          "border-t border-white/10 bg-black lg:hidden",
+          "max-h-[calc(100svh-4.5rem)] overflow-y-auto border-t border-white/10 bg-navy lg:hidden",
           open ? "block" : "hidden",
         )}
       >
@@ -115,21 +142,43 @@ export function Header({ settings }: Props) {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded px-3 py-3 text-lg font-medium text-white"
+              className="min-h-12 rounded px-3 py-3 text-lg font-medium text-white"
               onClick={() => setOpen(false)}
             >
               {item.label}
             </Link>
           ))}
-          <a
-            href={reserveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-light mt-3"
-            onClick={() => setOpen(false)}
-          >
-            예약하기
-          </a>
+          <p className="mt-4 px-3 text-xs font-bold tracking-[0.12em] text-white/45">
+            바로가기
+          </p>
+          {QUICK_LINKS.map((item) => (
+            <Link
+              key={item.href + item.label}
+              href={item.href === "/works?service=" ? "/#services" : item.href}
+              className="min-h-11 rounded px-3 py-2.5 text-base text-white/85"
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="mt-4 grid grid-cols-2 gap-2 px-1 pb-2">
+            <a
+              href={telHref(settings.phone)}
+              className="btn btn-light"
+              onClick={() => setOpen(false)}
+            >
+              전화 상담
+            </a>
+            <a
+              href={reserveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-naver"
+              onClick={() => setOpen(false)}
+            >
+              네이버 예약
+            </a>
+          </div>
         </nav>
       </div>
     </header>

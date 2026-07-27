@@ -38,7 +38,7 @@ export function RichTextEditor({
     editorProps: {
       attributes: {
         class:
-          "prose-ko editor-body min-h-[420px] max-w-none px-5 py-6 focus:outline-none text-charcoal sm:px-8 sm:py-8",
+          "prose-ko editor-body min-h-[700px] max-w-none px-5 py-8 focus:outline-none text-charcoal sm:px-10 sm:py-10",
       },
       handleDrop: (_view, event) => {
         const files = event.dataTransfer?.files;
@@ -103,7 +103,7 @@ export function RichTextEditor({
 
   if (!editor) {
     return (
-      <div className="min-h-[420px] rounded-[12px] border border-border bg-white p-6 text-sm text-muted">
+      <div className="min-h-[700px] rounded-[12px] border border-border bg-white p-6 text-sm text-muted">
         에디터 로딩 중…
       </div>
     );

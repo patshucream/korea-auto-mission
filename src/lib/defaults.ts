@@ -27,28 +27,31 @@ export const DEFAULT_HOMEPAGE_SECTION_ORDER: HomepageSectionId[] = [
 
 export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
   section_order: DEFAULT_HOMEPAGE_SECTION_ORDER,
-  section_visibility: Object.fromEntries(
-    DEFAULT_HOMEPAGE_SECTION_ORDER.map((id) => [id, true]),
-  ) as Record<HomepageSectionId, boolean>,
-  cta_title: "차량 증상이 이상하다면\n정확한 진단부터 받아보세요",
+  section_visibility: {
+    ...Object.fromEntries(
+      DEFAULT_HOMEPAGE_SECTION_ORDER.map((id) => [id, true]),
+    ),
+    guides: false,
+  } as Record<HomepageSectionId, boolean>,
+  cta_title: "증상이 반복된다면\n부품 교환 전 정확한 진단부터 받아보세요.",
   cta_description:
     "전화 상담 또는 네이버 예약으로 증상과 차량 정보를 알려주시면 점검 방향을 안내해 드립니다.",
   trust_items: [
     {
-      title: "30년 변속기 정비 경험",
-      description: "수입차·국산차 자동변속기를 중심으로 축적된 현장 경험",
+      title: "30년",
+      description: "변속기 정비 경험",
     },
     {
-      title: "수입차 정밀 진단",
-      description: "증상만 보고 교체하지 않고, 원인을 먼저 확인합니다",
+      title: "정밀 진단",
+      description: "수입차 중심 원인 확인",
     },
     {
-      title: "작업 과정 안내",
-      description: "진단·견적·정비 과정을 투명하게 설명합니다",
+      title: "전후 과정",
+      description: "작업 전후 상태 안내",
     },
     {
-      title: "부산 사상구 위치",
-      description: "삼덕로 95, 방문 전 예약하시면 안내가 더 정확합니다",
+      title: "부산 사상구",
+      description: "삼덕로 95",
     },
   ],
   featured_service_ids: [],
@@ -420,10 +423,11 @@ export const DEFAULT_WORKS: WorkCase[] = [
 ];
 
 export const NAV_ITEMS = [
-  { href: "/#strength", label: "전문성" },
+  { href: "/#why", label: "전문성" },
   { href: "/#services", label: "정비 서비스" },
-  { href: "/#works", label: "작업 사례" },
-  { href: "/#reviews", label: "고객 후기" },
+  { href: "/works", label: "작업사례" },
+  { href: "/#guides", label: "정비정보" },
+  { href: "/reviews", label: "고객후기" },
   { href: "/#contact", label: "상담·예약" },
 ] as const;
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
 import { getReservationUrl, telHref } from "@/lib/utils";
 
@@ -17,9 +18,9 @@ export function WorkMobileCtaBar({ settings }: Props) {
         <a href={telHref(settings.phone)} className="btn btn-light !min-h-12 text-[0.9rem]">
           전화
         </a>
-        <a href="/#contact" className="btn btn-secondary !min-h-12 text-[0.9rem]">
+        <Link href="/#contact" className="btn btn-secondary !min-h-12 text-[0.9rem]">
           상담
-        </a>
+        </Link>
         <a
           href={reserveUrl}
           target="_blank"

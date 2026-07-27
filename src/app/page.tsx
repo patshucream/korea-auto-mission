@@ -27,17 +27,18 @@ export default async function HomePage() {
   const config = getHomepageConfig(data.settings);
   const services = pickFeaturedServices(data.services, config.featured_service_ids);
   const works = pickFeaturedWorks(data.works, config.featured_work_ids);
+  const hasGuides = works.some((w) => w.title && w.slug);
 
-  const sections: Record<HomepageSectionId, React.ReactNode> = {
+  const sections: Partial<Record<HomepageSectionId, React.ReactNode>> = {
     hero: <Hero settings={data.settings} />,
     trust: <TrustStrip items={config.trust_items} />,
     symptoms: <SymptomFinder />,
-    services: <Services services={services} />,
+    services: <Services services={services} works={works} />,
     why: <WhyUs settings={data.settings} />,
     works: <LatestWorks works={works} />,
     process: <Process steps={data.settings.process_steps} />,
-    brands: <BrandStrip />,
-    guides: <MaintenanceGuides works={works} />,
+    brands: <BrandStrip works={works} />,
+    guides: hasGuides ? <MaintenanceGuides works={works} /> : null,
     reviews: (
       <Reviews
         reviews={data.reviews}
@@ -58,11 +59,12 @@ export default async function HomePage() {
     <>
       <Header settings={data.settings} />
       <main className="pb-mobile-bar">
-        {order.map((id) =>
-          isSectionVisible(config, id) ? (
-            <div key={id}>{sections[id]}</div>
-          ) : null,
-        )}
+        {order.map((id) => {
+          if (!isSectionVisible(config, id)) return null;
+          if (id === "guides" && !hasGuides) return null;
+          const node = sections[id];
+          return node ? <div key={id}>{node}</div> : null;
+        })}
       </main>
       <Footer settings={data.settings} />
       <MobileBottomBar settings={data.settings} />

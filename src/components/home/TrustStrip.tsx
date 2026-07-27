@@ -8,23 +8,16 @@ export function TrustStrip({ items }: Props) {
   if (!items.length) return null;
 
   return (
-    <section className="section-pad bg-white">
-      <div className="container-site">
-        <div className="max-w-2xl">
-          <h2 className="section-title">믿을 수 있는 정비 기준</h2>
-          <p className="section-lead">숫자보다 현장에서 쌓인 진단 습관과 설명 방식을 보여 드립니다.</p>
-        </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <section id="strength" className="border-y border-border bg-white">
+      <div className="container-site py-10 lg:py-12">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => (
-            <article
-              key={item.title}
-              className="border-t border-navy/20 pt-5"
-            >
-              <h3 className="text-lg font-black tracking-[-0.02em] text-charcoal">
+            <div key={item.title} className="min-w-0">
+              <p className="text-2xl font-black tracking-[-0.03em] text-navy sm:text-[1.75rem]">
                 {item.title}
-              </h3>
+              </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
-            </article>
+            </div>
           ))}
         </div>
       </div>

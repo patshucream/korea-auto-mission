@@ -22,20 +22,21 @@
   --light-gray: #ececec;
   --border: #e0e0e0;
   --muted: #6b6b6b;
-  --navy: #141414;
-  --navy-dark: #0a0a0a;
-  --navy-soft: #f0f0f0;
+  --navy: #0b1f3a;
+  --navy-dark: #071525;
+  --navy-soft: #eef2f7;
   --naver: #03c75a;
   --naver-dark: #02b350;
-  --dark-section: #141414;
-  --dark-section-2: #0a0a0a;
-  --focus: #141414;
+  --dark-section: #0b1f3a;
+  --dark-section-2: #071525;
+  --focus: #0b1f3a;
   --danger: #b42318;
   --success: #027a48;
-  --radius: 12px;
-  --content-max: 1200px;
+  --radius: 10px;
+  --content-max: 1280px;
   --header-h: 72px;
-  --bottom-bar-h: 68px;
+  --header-h-compact: 56px;
+  --bottom-bar-h: 72px;
 }
 
 @theme inline {
@@ -133,12 +134,12 @@ a {
 }
 
 .section-pad {
-  padding-block: 5rem;
+  padding-block: 4.5rem;
 }
 
 @media (min-width: 1024px) {
   .section-pad {
-    padding-block: 7rem;
+    padding-block: 6.5rem;
   }
 }
 

@@ -48,26 +48,28 @@ export function isSectionVisible(
 export const HOMEPAGE_SECTION_LABELS: Record<HomepageSectionId, string> = {
   hero: "히어로",
   trust: "핵심 신뢰 정보",
-  symptoms: "증상별 빠른 찾기",
+  symptoms: "증상으로 찾기",
   services: "주요 서비스",
   why: "왜 코리아오토미션인가",
-  works: "최근 작업사례",
+  works: "실제 작업사례",
   process: "작업 진행 과정",
-  brands: "차량 브랜드",
-  guides: "정비 정보",
-  reviews: "고객 후기",
-  faq: "자주 묻는 질문",
-  location: "위치 및 영업시간",
+  brands: "브랜드별 탐색",
+  guides: "정비정보",
+  reviews: "고객후기",
+  faq: "FAQ",
+  location: "위치와 영업시간",
   cta: "마지막 CTA",
 };
 
 export const HOME_SYMPTOM_CARDS = [
   { label: "변속 충격", href: "/works?q=변속%20충격" },
+  { label: "RPM 상승", href: "/works?q=RPM" },
   { label: "주행 중 소음", href: "/works?q=소음" },
   { label: "미션오일 누유", href: "/works?q=미션오일" },
-  { label: "출력 저하", href: "/works?q=출력" },
   { label: "DPF 경고등", href: "/works?q=DPF" },
+  { label: "출력 저하", href: "/works?q=출력" },
   { label: "매연 증가", href: "/works?q=매연" },
+  { label: "시동 불안정", href: "/works?q=시동" },
 ] as const;
 
 export const HOME_BRANDS = [
@@ -79,27 +81,23 @@ export const HOME_BRANDS = [
   "랜드로버",
   "포르쉐",
   "볼보",
+  "국산차",
 ] as const;
 
-export const HOME_GUIDE_TOPICS = [
-  {
-    title: "미션오일 교환 주기",
-    description: "주행 환경에 따른 교환 시점과 점검 포인트",
-    href: "/works?q=미션오일",
-  },
-  {
-    title: "변속 충격 원인",
-    description: "충격·슬립이 느껴질 때 확인하는 진단 항목",
-    href: "/works?q=변속%20충격",
-  },
-  {
-    title: "DPF 재생 원리",
-    description: "경고등과 매연 증가 시 점검 방향",
-    href: "/works?q=DPF",
-  },
-  {
-    title: "인젝터 불량 증상",
-    description: "출력 저하·진동과 관련된 클리닝·점검",
-    href: "/works?q=인젝터",
-  },
+export const WORKS_QUICK_FILTERS = [
+  { label: "미션수리", q: "미션" },
+  { label: "미션오일", q: "미션오일" },
+  { label: "DPF", q: "DPF" },
+  { label: "흡기", q: "흡기" },
+  { label: "인젝터", q: "인젝터" },
+  { label: "정밀진단", q: "진단" },
+] as const;
+
+export const WORKS_POPULAR_QUERIES = [
+  "변속 충격",
+  "미션오일",
+  "DPF",
+  "BMW",
+  "벤츠",
+  "인젝터",
 ] as const;
