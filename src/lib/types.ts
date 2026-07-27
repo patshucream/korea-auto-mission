@@ -50,23 +50,57 @@ export type Service = {
   updated_at?: string;
 };
 
+export type WorkCaseStatus =
+  | "draft"
+  | "published"
+  | "private"
+  | "scheduled"
+  | "trash";
+
 export type WorkCase = {
   id: string;
   slug: string;
   title: string;
+  subtitle?: string | null;
+  excerpt?: string | null;
+  content_json?: unknown | null;
+  content_html?: string | null;
+  status?: WorkCaseStatus;
+  scheduled_at?: string | null;
+  deleted_at?: string | null;
   vehicle_brand: string;
   vehicle_model: string;
   model_year: string;
+  manufacturer?: string | null;
+  generation?: string | null;
+  fuel_type?: string | null;
+  transmission_type?: string | null;
+  mileage?: string | null;
+  vehicle_number_masked?: string | null;
   /** FK to services.id — 서비스명 변경에도 연결 유지 */
   service_id: string | null;
   /** 표시용 서비스명 캐시 (service_id 기준 동기화) */
   service_category: string;
   symptoms: string;
   diagnosis: string;
+  cause?: string | null;
+  repair_process?: string | null;
+  replaced_parts?: string | null;
+  repair_duration?: string | null;
+  warranty_info?: string | null;
+  estimated_price_min?: number | null;
+  estimated_price_max?: number | null;
+  price_display_enabled?: boolean;
   work_summary: string;
   detailed_content: string;
   representative_image_path: string | null;
   gallery_image_paths: string[];
+  before_images?: string[];
+  after_images?: string[];
+  video_urls?: string[];
+  vehicle_tags?: string[];
+  symptom_tags?: string[];
+  general_tags?: string[];
   naver_blog_url: string | null;
   created_at: string;
   updated_at?: string;
@@ -76,6 +110,16 @@ export type WorkCase = {
   display_order: number;
   seo_title: string | null;
   seo_description: string | null;
+  og_title?: string | null;
+  og_description?: string | null;
+  og_image_path?: string | null;
+  canonical_url?: string | null;
+  noindex?: boolean;
+  view_count?: number;
+  inquiry_click_count?: number;
+  phone_click_count?: number;
+  reservation_click_count?: number;
+  related_work_ids?: string[];
 };
 
 export type ServiceOption = {

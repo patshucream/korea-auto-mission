@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { checkIsAdmin } from "@/lib/auth/is-admin";
 import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured, slugify } from "@/lib/utils";
 import type { ProcessStep } from "@/lib/types";
@@ -21,6 +22,11 @@ async function ensureAuth() {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) throw new Error("로그인이 필요합니다.");
+  if (!(await checkIsAdmin(supabase, user))) {
+    throw new Error(
+      "관리자 권한이 필요합니다. public.admin_users 에 이메일이 등록되어 있는지 확인해 주세요.",
+    );
+  }
   return supabase;
 }
 
@@ -297,17 +303,44 @@ function cleanWorkCasePayload(input: Record<string, unknown>) {
   const allowed = [
     "slug",
     "title",
+    "subtitle",
+    "excerpt",
+    "content_json",
+    "content_html",
+    "status",
+    "scheduled_at",
+    "deleted_at",
     "vehicle_brand",
     "vehicle_model",
     "model_year",
+    "manufacturer",
+    "generation",
+    "fuel_type",
+    "transmission_type",
+    "mileage",
+    "vehicle_number_masked",
     "service_id",
     "service_category",
     "symptoms",
     "diagnosis",
+    "cause",
+    "repair_process",
+    "replaced_parts",
+    "repair_duration",
+    "warranty_info",
+    "estimated_price_min",
+    "estimated_price_max",
+    "price_display_enabled",
     "work_summary",
     "detailed_content",
     "representative_image_path",
     "gallery_image_paths",
+    "before_images",
+    "after_images",
+    "video_urls",
+    "vehicle_tags",
+    "symptom_tags",
+    "general_tags",
     "naver_blog_url",
     "published_at",
     "is_published",
@@ -315,6 +348,12 @@ function cleanWorkCasePayload(input: Record<string, unknown>) {
     "display_order",
     "seo_title",
     "seo_description",
+    "og_title",
+    "og_description",
+    "og_image_path",
+    "canonical_url",
+    "noindex",
+    "related_work_ids",
   ] as const;
 
   const clean: Record<string, unknown> = {};
@@ -325,12 +364,34 @@ function cleanWorkCasePayload(input: Record<string, unknown>) {
     clean[key] = value;
   }
 
-  if (!Array.isArray(clean.gallery_image_paths)) {
-    clean.gallery_image_paths = [];
+  for (const key of [
+    "gallery_image_paths",
+    "before_images",
+    "after_images",
+    "video_urls",
+    "vehicle_tags",
+    "symptom_tags",
+    "general_tags",
+    "related_work_ids",
+  ] as const) {
+    if (key in clean && !Array.isArray(clean[key])) {
+      clean[key] = [];
+    }
   }
 
   if (clean.service_id === "") {
     clean.service_id = null;
+  }
+
+  // status ↔ is_published 동기화 (DB 트리거 미적용 환경 대비)
+  if (typeof clean.status === "string") {
+    clean.is_published = clean.status === "published";
+    if (clean.status === "trash" && !clean.deleted_at) {
+      clean.deleted_at = new Date().toISOString();
+    }
+    if (clean.status !== "trash") {
+      clean.deleted_at = null;
+    }
   }
 
   return clean;
@@ -347,27 +408,110 @@ export async function upsertWorkCase(
       slugify(String(input.title || `work-${Date.now()}`)),
   });
 
+  const slug = String(payload.slug || "");
+  if (slug) {
+    let dupQuery = supabase
+      .from("work_cases")
+      .select("id")
+      .eq("slug", slug)
+      .limit(1);
+    if (input.id) dupQuery = dupQuery.neq("id", input.id);
+    const { data: dup } = await dupQuery.maybeSingle();
+    if (dup?.id) {
+      return { ok: false, error: "이미 사용 중인 슬러그입니다. 다른 주소를 입력해 주세요." };
+    }
+  }
+
   if (payload.is_published && !payload.published_at) {
     payload.published_at = new Date().toISOString();
+  }
+
+  function toLegacyPayload(full: Record<string, unknown>) {
+    const {
+      subtitle: _a,
+      excerpt: _b,
+      content_json: _c,
+      content_html: _d,
+      status: _e,
+      scheduled_at: _f,
+      deleted_at: _g,
+      manufacturer: _h,
+      generation: _i,
+      fuel_type: _j,
+      transmission_type: _k,
+      mileage: _l,
+      vehicle_number_masked: _m,
+      cause: _n,
+      repair_process: _o,
+      replaced_parts: _p,
+      repair_duration: _q,
+      warranty_info: _r,
+      estimated_price_min: _s,
+      estimated_price_max: _t,
+      price_display_enabled: _u,
+      before_images: _v,
+      after_images: _w,
+      video_urls: _x,
+      vehicle_tags: _y,
+      symptom_tags: _z,
+      general_tags: _aa,
+      og_title: _ab,
+      og_description: _ac,
+      og_image_path: _ad,
+      canonical_url: _ae,
+      noindex: _af,
+      related_work_ids: _ag,
+      ...legacy
+    } = full;
+    void _a;
+    void _b;
+    void _c;
+    void _d;
+    void _e;
+    void _f;
+    void _g;
+    void _h;
+    void _i;
+    void _j;
+    void _k;
+    void _l;
+    void _m;
+    void _n;
+    void _o;
+    void _p;
+    void _q;
+    void _r;
+    void _s;
+    void _t;
+    void _u;
+    void _v;
+    void _w;
+    void _x;
+    void _y;
+    void _z;
+    void _aa;
+    void _ab;
+    void _ac;
+    void _ad;
+    void _ae;
+    void _af;
+    void _ag;
+    return legacy;
   }
 
   if (input.id) {
     let { error } = await supabase.from("work_cases").update(payload).eq("id", input.id);
 
-    if (error && isMissingColumnError(error) && /service_id/i.test(error.message ?? "")) {
-      logSupabaseError("upsertWorkCase.serviceIdFallback", error, payload);
-      const { service_id: _serviceId, ...withoutServiceId } = payload;
-      void _serviceId;
-      const retry = await supabase
-        .from("work_cases")
-        .update(withoutServiceId)
-        .eq("id", input.id);
+    if (error && isMissingColumnError(error)) {
+      logSupabaseError("upsertWorkCase.legacyUpdate", error, payload);
+      const legacy = toLegacyPayload(payload);
+      const retry = await supabase.from("work_cases").update(legacy).eq("id", input.id);
       error = retry.error;
     }
 
     if (error) {
       logSupabaseError("upsertWorkCase.update", error, payload);
-      return { ok: false, error: supabaseErrorMessage(error) };
+      return { ok: false, error: "작업사례 저장에 실패했습니다." };
     }
     revalidatePublic();
     revalidatePath(`/works/${String(payload.slug)}`);
@@ -380,22 +524,17 @@ export async function upsertWorkCase(
     .select("id, slug")
     .single();
 
-  if (error && isMissingColumnError(error) && /service_id/i.test(error.message ?? "")) {
-    logSupabaseError("upsertWorkCase.insertServiceIdFallback", error, payload);
-    const { service_id: _serviceId, ...withoutServiceId } = payload;
-    void _serviceId;
-    const retry = await supabase
-      .from("work_cases")
-      .insert(withoutServiceId)
-      .select("id, slug")
-      .single();
+  if (error && isMissingColumnError(error)) {
+    logSupabaseError("upsertWorkCase.legacyInsert", error, payload);
+    const legacy = toLegacyPayload(payload);
+    const retry = await supabase.from("work_cases").insert(legacy).select("id, slug").single();
     data = retry.data;
     error = retry.error;
   }
 
   if (error || !data) {
     logSupabaseError("upsertWorkCase.insert", error ?? { message: "no data" }, payload);
-    return { ok: false, error: supabaseErrorMessage(error ?? {}, "작업사례 저장에 실패했습니다.") };
+    return { ok: false, error: "작업사례 저장에 실패했습니다." };
   }
 
   revalidatePublic();
@@ -418,6 +557,10 @@ export async function duplicateWorkCase(id: string) {
   copy.slug = `${data.slug}-copy-${Date.now().toString().slice(-6)}`;
   copy.is_published = false;
   copy.published_at = null;
+  copy.status = "draft";
+  copy.deleted_at = null;
+  copy.scheduled_at = null;
+  copy.view_count = 0;
 
   const { data: created, error: insertError } = await supabase
     .from("work_cases")
@@ -432,12 +575,64 @@ export async function duplicateWorkCase(id: string) {
   return { ok: true, id: created.id as string };
 }
 
-export async function deleteWorkCase(id: string) {
+/** 휴지통 이동 (소프트 삭제). 영구 삭제는 purgeWorkCase */
+export async function deleteWorkCase(id: string): Promise<SaveResult> {
   const supabase = await ensureAuth();
-  const { error } = await supabase.from("work_cases").delete().eq("id", id);
+  let { error } = await supabase
+    .from("work_cases")
+    .update({
+      status: "trash",
+      is_published: false,
+      deleted_at: new Date().toISOString(),
+    })
+    .eq("id", id);
+
+  if (error && isMissingColumnError(error)) {
+    logSupabaseError("deleteWorkCase.legacyHardDelete", error);
+    const hard = await supabase.from("work_cases").delete().eq("id", id);
+    error = hard.error;
+  }
+
   if (error) {
     logSupabaseError("deleteWorkCase", error);
-    throw new Error(supabaseErrorMessage(error));
+    return { ok: false, error: "작업사례 삭제에 실패했습니다." };
+  }
+  revalidatePublic();
+  return { ok: true };
+}
+
+export async function restoreWorkCase(id: string): Promise<SaveResult> {
+  const supabase = await ensureAuth();
+  const { error } = await supabase
+    .from("work_cases")
+    .update({ status: "draft", is_published: false, deleted_at: null })
+    .eq("id", id);
+  if (error) {
+    logSupabaseError("restoreWorkCase", error);
+    return { ok: false, error: "복구에 실패했습니다." };
+  }
+  revalidatePublic();
+  return { ok: true };
+}
+
+export async function bulkUpdateWorkStatus(
+  ids: string[],
+  status: "published" | "private" | "trash",
+): Promise<SaveResult> {
+  if (!ids.length) return { ok: false, error: "선택된 항목이 없습니다." };
+  const supabase = await ensureAuth();
+  const payload: Record<string, unknown> = {
+    status,
+    is_published: status === "published",
+    deleted_at: status === "trash" ? new Date().toISOString() : null,
+  };
+  if (status === "published") {
+    payload.published_at = new Date().toISOString();
+  }
+  const { error } = await supabase.from("work_cases").update(payload).in("id", ids);
+  if (error) {
+    logSupabaseError("bulkUpdateWorkStatus", error, payload);
+    return { ok: false, error: "일괄 변경에 실패했습니다." };
   }
   revalidatePublic();
   return { ok: true };
