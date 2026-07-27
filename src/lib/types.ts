@@ -10,7 +10,6 @@ export type HomepageSectionId =
   | "services"
   | "why"
   | "works"
-  | "beforeAfter"
   | "process"
   | "brands"
   | "guides"

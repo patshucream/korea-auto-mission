@@ -124,6 +124,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
   const [editorKey, setEditorKey] = useState(0);
   const [preview, setPreview] = useState<"desktop" | "mobile" | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error">("success");
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const [pending, startTransition] = useTransition();
   const [dirty, setDirty] = useState(false);
@@ -134,6 +135,11 @@ export function WorkCaseEditor({ initial, services }: Props) {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     publish: true,
   });
+
+  function showToast(message: string, type: "success" | "error" = "success") {
+    setToastType(type);
+    setToast(message);
+  }
 
   const storageKey = useMemo(
     () => `kam-work-draft-${initial?.id || "new"}`,
@@ -205,7 +211,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
       content_html: "",
     }));
     setEditorKey((k) => k + 1);
-    setToast(`${template.label} 템플릿을 적용했습니다.`);
+    showToast(`${template.label} 템플릿을 적용했습니다.`);
   }
 
   function buildPayload(statusOverride?: WorkCaseStatus) {
@@ -286,11 +292,11 @@ export function WorkCaseEditor({ initial, services }: Props) {
   function save(statusOverride?: WorkCaseStatus) {
     if (pending) return;
     if (!form.title.trim()) {
-      setToast("제목을 입력해 주세요.");
+      showToast("제목을 입력해 주세요.", "error");
       return;
     }
     if (!form.service_id) {
-      setToast("정비 서비스를 선택해 주세요. (설정 패널)");
+      showToast("정비 서비스를 선택해 주세요. (설정 패널)", "error");
       setMobileTab("settings");
       setOpenSections((s) => ({ ...s, publish: true }));
       return;
@@ -302,12 +308,12 @@ export function WorkCaseEditor({ initial, services }: Props) {
       const result = await upsertWorkCase(payload);
       if (!result.ok) {
         setSaveState("error");
-        setToast(result.error);
+        showToast(result.error, "error");
         return;
       }
       setSaveState("saved");
       setDirty(false);
-      setToast(statusOverride === "draft" ? "임시저장되었습니다." : "공개 저장되었습니다.");
+      showToast(statusOverride === "draft" ? "임시저장되었습니다." : "공개 저장되었습니다.");
       localStorage.removeItem(storageKey);
       if (!form.id) {
         setForm((prev) => ({ ...prev, id: result.id, slug: result.slug }));
@@ -645,7 +651,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
                         // store public URL path segment if possible; keep as path when from storage
                         const match = url.match(/\/storage\/v1\/object\/public\/images\/(.+)$/);
                         update("representative_image_path", match ? match[1] : url);
-                        setToast("대표 이미지를 본문 사진으로 설정했습니다.");
+                        showToast("대표 이미지를 본문 사진으로 설정했습니다.");
                       }}
                     />
                   ))}
@@ -758,7 +764,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
         </div>
       ) : null}
 
-      <AdminToast message={toast} onClose={() => setToast(null)} />
+      <AdminToast message={toast} type={toastType} onClose={() => setToast(null)} />
     </div>
   );
 }

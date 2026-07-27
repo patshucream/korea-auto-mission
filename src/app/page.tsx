@@ -7,7 +7,6 @@ import { SymptomFinder } from "@/components/home/SymptomFinder";
 import { Services } from "@/components/home/Services";
 import { WhyUs } from "@/components/home/WhyUs";
 import { LatestWorks } from "@/components/home/LatestWorks";
-import { BeforeAfterSection } from "@/components/home/BeforeAfter";
 import { Process } from "@/components/home/Process";
 import { BrandStrip } from "@/components/home/BrandStrip";
 import { MaintenanceGuides } from "@/components/home/MaintenanceGuides";
@@ -29,7 +28,6 @@ export default async function HomePage() {
   const services = pickFeaturedServices(data.services, config.featured_service_ids);
   const works = pickFeaturedWorks(data.works, config.featured_work_ids);
   const hasGuides = works.some((w) => w.title && w.slug);
-  const beforeAfterItems = data.beforeAfter.filter((item) => item.is_published !== false);
 
   const sections: Partial<Record<HomepageSectionId, React.ReactNode>> = {
     hero: <Hero settings={data.settings} />,
@@ -38,9 +36,6 @@ export default async function HomePage() {
     services: <Services services={services} works={works} />,
     why: <WhyUs settings={data.settings} />,
     works: <LatestWorks works={works} />,
-    beforeAfter: beforeAfterItems.length ? (
-      <BeforeAfterSection items={beforeAfterItems} />
-    ) : null,
     process: <Process steps={data.settings.process_steps} />,
     brands: <BrandStrip works={works} />,
     guides: hasGuides ? <MaintenanceGuides works={works} /> : null,

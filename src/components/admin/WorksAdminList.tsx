@@ -27,7 +27,13 @@ export function WorksAdminList({ initialWorks }: Props) {
   const [sort, setSort] = useState<"updated" | "views" | "published">("updated");
   const [selected, setSelected] = useState<string[]>([]);
   const [toast, setToast] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error">("success");
   const [pending, startTransition] = useTransition();
+
+  function showToast(message: string, type: "success" | "error" = "success") {
+    setToastType(type);
+    setToast(message);
+  }
 
   const brands = useMemo(
     () =>
@@ -126,7 +132,7 @@ export function WorksAdminList({ initialWorks }: Props) {
             startTransition(async () => {
               const result = await bulkUpdateWorkStatus(selected, "published");
               if (!result.ok) {
-                setToast(result.error);
+                showToast(result.error, "error");
                 return;
               }
               setWorks((prev) =>
@@ -137,7 +143,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                 ),
               );
               setSelected([]);
-              setToast("선택한 글을 공개했습니다.");
+              showToast("선택한 글을 공개했습니다.");
             });
           }}
         >
@@ -151,7 +157,7 @@ export function WorksAdminList({ initialWorks }: Props) {
             startTransition(async () => {
               const result = await bulkUpdateWorkStatus(selected, "private");
               if (!result.ok) {
-                setToast(result.error);
+                showToast(result.error, "error");
                 return;
               }
               setWorks((prev) =>
@@ -162,7 +168,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                 ),
               );
               setSelected([]);
-              setToast("선택한 글을 비공개로 변경했습니다.");
+              showToast("선택한 글을 비공개로 변경했습니다.");
             });
           }}
         >
@@ -177,7 +183,7 @@ export function WorksAdminList({ initialWorks }: Props) {
             startTransition(async () => {
               const result = await bulkUpdateWorkStatus(selected, "trash");
               if (!result.ok) {
-                setToast(result.error);
+                showToast(result.error, "error");
                 return;
               }
               setWorks((prev) =>
@@ -186,7 +192,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                 ),
               );
               setSelected([]);
-              setToast("휴지통으로 이동했습니다.");
+              showToast("휴지통으로 이동했습니다.");
             });
           }}
         >
@@ -281,7 +287,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                             startTransition(async () => {
                               const result = await restoreWorkCase(work.id);
                               if (!result.ok) {
-                                setToast(result.error);
+                                showToast(result.error, "error");
                                 return;
                               }
                               setWorks((prev) =>
@@ -291,7 +297,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                                     : w,
                                 ),
                               );
-                              setToast("복구되었습니다.");
+                              showToast("복구되었습니다.");
                             });
                           }}
                         >
@@ -307,7 +313,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                             startTransition(async () => {
                               const result = await deleteWorkCase(work.id);
                               if (!result.ok) {
-                                setToast(result.error);
+                                showToast(result.error, "error");
                                 return;
                               }
                               setWorks((prev) =>
@@ -317,7 +323,7 @@ export function WorksAdminList({ initialWorks }: Props) {
                                     : w,
                                 ),
                               );
-                              setToast("휴지통으로 이동했습니다.");
+                              showToast("휴지통으로 이동했습니다.");
                             });
                           }}
                         >
@@ -361,7 +367,7 @@ export function WorksAdminList({ initialWorks }: Props) {
         ))}
       </div>
 
-      <AdminToast message={toast} onClose={() => setToast(null)} />
+      <AdminToast message={toast} type={toastType} onClose={() => setToast(null)} />
     </div>
   );
 }

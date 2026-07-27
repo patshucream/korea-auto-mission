@@ -37,27 +37,15 @@ export function parseHomepageConfig(raw: unknown): HomepageConfig {
   if (!raw || typeof raw !== "object") return DEFAULT_HOMEPAGE_CONFIG;
   const data = raw as Partial<HomepageConfig>;
   const known = new Set<HomepageSectionId>(DEFAULT_HOMEPAGE_SECTION_ORDER);
-  const rawOrder =
+  const order =
     Array.isArray(data.section_order) && data.section_order.length
       ? (data.section_order as HomepageSectionId[]).filter((id) => known.has(id))
-      : [...DEFAULT_HOMEPAGE_SECTION_ORDER];
-
-  const order = [...rawOrder];
-  for (const id of DEFAULT_HOMEPAGE_SECTION_ORDER) {
-    if (!order.includes(id)) {
-      const afterWorks = order.indexOf("works");
-      if (id === "beforeAfter" && afterWorks >= 0) {
-        order.splice(afterWorks + 1, 0, id);
-      } else {
-        order.push(id);
-      }
-    }
-  }
+      : DEFAULT_HOMEPAGE_SECTION_ORDER;
 
   return {
     ...DEFAULT_HOMEPAGE_CONFIG,
     ...data,
-    section_order: order,
+    section_order: order.length ? order : DEFAULT_HOMEPAGE_SECTION_ORDER,
     section_visibility: {
       ...DEFAULT_HOMEPAGE_CONFIG.section_visibility,
       ...(data.section_visibility || {}),
@@ -110,7 +98,6 @@ export const HOMEPAGE_SECTION_LABELS: Record<HomepageSectionId, string> = {
   services: "주요 서비스",
   why: "왜 코리아오토미션인가",
   works: "실제 작업사례",
-  beforeAfter: "작업 전후",
   process: "작업 진행 과정",
   brands: "브랜드별 탐색",
   guides: "정비정보",

@@ -17,7 +17,6 @@ export const DEFAULT_HOMEPAGE_SECTION_ORDER: HomepageSectionId[] = [
   "services",
   "why",
   "works",
-  "beforeAfter",
   "process",
   "brands",
   "guides",
