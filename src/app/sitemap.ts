@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { createClient } from "@supabase/supabase-js";
 import { SITE_URL, isSupabaseConfigured } from "@/lib/utils";
 
+// Reflect CMS publication and deletion without requiring another deployment.
+export const dynamic = "force-dynamic";
+
 /**
  * Next.js Metadata Route — 배열만 반환하면 Next가 sitemap.xml XML을 생성합니다.
  * Response/문자열을 직접 반환하지 않습니다.
