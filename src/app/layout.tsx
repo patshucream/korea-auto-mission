@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MarketingTracker } from "@/components/analytics/MarketingTracker";
 import { isBlogImportPreview } from "@/lib/works/blog-imports";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
@@ -134,6 +135,7 @@ export default async function RootLayout({
           </aside>
         ) : null}
         {children}
+        <MarketingTracker />
       </body>
     </html>
   );

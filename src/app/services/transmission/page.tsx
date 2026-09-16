@@ -6,6 +6,7 @@ import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { BusinessHours } from "@/components/ui/BusinessHours";
 import { WorkCard } from "@/components/works/WorkCard";
+import { ConsultationHelper } from "@/components/services/ConsultationHelper";
 import { getPaginatedWorks, getPublishedServiceOptions, getSiteSettings } from "@/lib/data/content";
 import { getMapUrl, getReservationUrl, SITE_URL, telHref } from "@/lib/utils";
 import s from "./page.module.css";
@@ -74,13 +75,15 @@ export default async function TransmissionPage() {
         <div className={s.heroCopy}>
           <nav aria-label="현재 위치" className={s.breadcrumb}><Link href="/">홈</Link><span>/</span><span>미션수리 안내</span></nav>
           <p className={s.eyebrow}>부산 사상구 · 수입차·국산차 자동변속기</p>
-          <h1>부산 미션수리,<br />증상 확인부터<br />작업 사례까지.</h1>
+          <h1>부산 미션수리,<br />내 차 증상부터<br />상담하세요.</h1>
           <p className={s.lead}>변속 충격, 슬립, 가속할 때의 떨림.<br />코리아오토미션은 원인을 먼저 확인하고<br />필요한 정비 범위와 견적을 안내합니다.</p>
           <div className={s.actions}>
-            <a className={s.primary} href={phone}>내 차 증상 상담하기 <span aria-hidden="true">↗</span></a>
+            <a className={s.primary} href={phone} data-contact="phone">전화로 증상 상담 <span aria-hidden="true">↗</span></a>
             <a className={s.textLink} href="#repair-cases">실제 수리 사례 보기 ↓</a>
           </div>
-          <p className={s.address}>{settings.address}</p>
+          <a className={s.heroPhone} href={phone}>{settings.phone}</a>
+          <p className={s.heroHours}>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours} · 일요일 휴무</p>
+          <p className={s.address}>{settings.address} · <a href="#consultation">문자로 상담 내용 남기기 ↓</a></p>
         </div>
         <figure className={s.heroFigure}>
           <SmartImage path={featured?.representative_image_path || settings.shop_image_path} alt={featured?.title || `${settings.business_name} 정비 현장`} className={s.heroImage} sizes="(max-width: 800px) 100vw, 50vw" priority />
@@ -91,6 +94,7 @@ export default async function TransmissionPage() {
       <nav aria-label="미션수리 안내 목차" className={s.sectionNav}>
         <a href="#symptoms">증상 상담</a><a href="#repair-cases">실제 수리 사례</a><a href="#repair-process">진단·수리 과정</a><a href="#repair-faq">비용·입고 안내</a><a href="#visit">방문 상담</a>
       </nav>
+      <div className={s.promise}><span>점검 결과에 따른 견적 안내</span><span>합의된 범위로 정비 진행</span><span>실제 작업 사진 공개</span></div>
 
       <section id="symptoms" className={s.section}>
         <p className={s.eyebrow}>증상으로 시작하는 상담</p>
@@ -106,6 +110,8 @@ export default async function TransmissionPage() {
         <div className={s.sectionHeading}><h2>실제로 어떤 수리를 했는지<br />확인해 보세요.</h2><Link className={s.textLink} href={allCasesHref}>미션수리 사례 전체 보기{total ? ` (${total})` : ""} ↗</Link></div>
         {works.length ? <div className={s.cases}>{works.map((work) => <WorkCard key={work.id} work={work} />)}</div> : <p className={s.sectionLead}>차종과 증상을 알려주시면 상담을 도와드립니다.</p>}
       </section>
+
+      <ConsultationHelper settings={settings} service="미션수리" symptoms={["변속 충격", "가속 지연·슬립", "가속할 때 떨림", "경고등", "기타 증상"]} />
 
       <section id="repair-process" className={s.section}>
         <p className={s.eyebrow}>상담부터 출고까지</p>

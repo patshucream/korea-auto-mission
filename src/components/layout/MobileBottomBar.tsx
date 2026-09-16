@@ -1,5 +1,5 @@
 import type { SiteSettings } from "@/lib/types";
-import { getReservationUrl, telHref } from "@/lib/utils";
+import { telHref } from "@/lib/utils";
 import s from "@/components/home/PremiumHome.module.css";
 
 export function MobileBottomBar({ settings }: { settings: SiteSettings }) {
@@ -12,11 +12,9 @@ export function MobileBottomBar({ settings }: { settings: SiteSettings }) {
         전화 상담 ↗
       </a>
       <a
-        href={getReservationUrl(settings)}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={`sms:${settings.phone.replace(/[^0-9+]/g, "")}`}
       >
-        네이버 예약 ↗
+        문자 상담 ↗
       </a>
     </div>
   );

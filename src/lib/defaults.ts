@@ -466,6 +466,7 @@ export const NAV_ITEMS = [
 
 /** 주요 관리자 메뉴 */
 export const ADMIN_NAV = [
+  { href: "/admin/marketing", label: "방문·상담 통계" },
   { href: "/admin/general", label: "기본 정보" },
   { href: "/admin/homepage", label: "홈페이지" },
   { href: "/admin/services", label: "서비스 관리" },

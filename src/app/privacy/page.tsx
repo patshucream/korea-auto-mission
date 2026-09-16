@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnalyticsPreference } from "@/components/analytics/AnalyticsPreference";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
@@ -55,7 +56,13 @@ export default async function PrivacyPage() {
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-black text-charcoal">5. 문의</h2>
+              <h2 className="text-xl font-black text-charcoal">5. 웹사이트 이용 통계</h2>
+              <p className="mt-2">서비스 개선을 위해 날짜별 임의 세션 식별자, 첫 방문 페이지와 현재 페이지의 종류, 유입 경로 구분, 전화·문자·매장·지도 버튼 클릭을 기존 웹사이트 운영 데이터베이스(Supabase)에 기록합니다. 통계에 전화번호, 차량 입력 내용, IP 주소, 검색어, 전체 방문 URL은 저장하지 않습니다. 세션 식별자는 이 브라우저 탭에서 사용하며 날짜가 바뀌면 새로 생성됩니다. 통계는 최근 90일만 조회하고, 90일이 지난 기록은 이후 수집 시 정리합니다.</p>
+              <p className="mt-2">문자 상담 입력 내용은 전송 버튼을 누르기 전에는 서버로 보내지 않습니다. 문자 앱에서 직접 전송을 완료하면 상담 전화번호로 전달됩니다. 브라우저의 추적 금지(DNT) 설정을 지원하며, 아래 버튼으로 이용 통계 수집을 중지할 수 있습니다.</p>
+              <AnalyticsPreference />
+            </section>
+            <section>
+              <h2 className="text-xl font-black text-charcoal">6. 문의</h2>
               <p className="mt-2">
                 개인정보 관련 문의는 전화({settings.phone}) 또는 방문(
                 {settings.address})으로 연락해 주세요.

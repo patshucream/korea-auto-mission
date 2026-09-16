@@ -217,6 +217,7 @@ function Specialties({
                   {service.detailed_description || service.short_description}
                 </p>
                 {service.title === "오토미션 수리" ? <div><Link href="/services/transmission">부산 미션수리 · 진단과 입고 안내 ↗</Link></div> : null}
+                {/흡기|인젝터|DPF/.test(service.title) ? <div><Link href="/services/diesel-cleaning">부산 디젤 클리닝 · 작업별 상담 안내 ↗</Link></div> : null}
                 {service.image_path && (
                   <SmartImage
                     path={service.image_path}
@@ -288,12 +289,13 @@ export function PremiumHome({
           <p className={s["hero-description"]}>{settings.hero_description}</p>
           <div className={s["hero-actions"]}>
             <a className={cx("button", "button-copper")} href={phone}>
-              내 차 증상 상담하기 <Arrow />
+              전화로 증상 상담 <Arrow />
             </a>
             <Link className={s["text-link"]} href="/works">
               실제 정비사례 보기 <span aria-hidden="true">↓</span>
             </Link>
           </div>
+          <p style={{ marginTop: 20, fontSize: 15, color: "#d6dcd7" }}><a href={phone}>{settings.phone}</a> · {settings.address}</p>
           <div className={s["hero-bottom"]}>
             <span>수입차 · 국산차 자동변속기 전문</span>
             <span>{settings.english_brand_name}</span>
