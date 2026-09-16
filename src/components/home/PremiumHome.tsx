@@ -216,6 +216,7 @@ function Specialties({
                 <p>
                   {service.detailed_description || service.short_description}
                 </p>
+                {service.title === "오토미션 수리" ? <div><Link href="/services/transmission">부산 미션수리 · 진단과 입고 안내 ↗</Link></div> : null}
                 {service.image_path && (
                   <SmartImage
                     path={service.image_path}

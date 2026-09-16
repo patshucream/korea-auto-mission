@@ -291,6 +291,7 @@ export default async function WorkDetailPage({ params }: Props) {
                   .filter(Boolean)
                   .join(" · ")}
               </p>
+              {getWorkServiceLabels(work).includes("오토미션 수리") ? <Link href="/services/transmission" className="mt-4 inline-block text-sm font-bold text-navy underline underline-offset-4">부산 미션수리 · 진단과 입고 안내 ↗</Link> : null}
             </header>
 
             {hasRepresentativeImage ? (
