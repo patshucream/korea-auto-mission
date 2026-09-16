@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { WorksAdminList } from "@/components/admin/WorksAdminList";
 import { DEFAULT_WORKS } from "@/lib/defaults";
@@ -27,6 +28,10 @@ export default async function AdminWorksPage() {
       title="작업사례"
       description="검색·필터·일괄 처리가 가능한 CMS로 작업사례를 관리합니다."
     >
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-white p-5">
+        <p className="text-sm text-muted">블로그 정비 기록 10편을 홈페이지용 초안으로 준비했습니다.</p>
+        <Link href="/admin/blog-imports" className="text-sm font-bold text-navy underline underline-offset-4">블로그 작업사례 가져오기 →</Link>
+      </div>
       <WorksAdminList initialWorks={works} />
     </AdminShell>
   );

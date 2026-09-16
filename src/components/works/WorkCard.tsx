@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { getWorkServiceLabels } from "@/lib/works/services";
 import type { WorkCase } from "@/lib/types";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { formatDateKo } from "@/lib/utils";
@@ -14,7 +15,7 @@ export function WorkCard({ work }: Props) {
   const vehicle = [work.manufacturer || work.vehicle_brand, work.vehicle_model]
     .filter(Boolean)
     .join(" ");
-  const service = work.service_category || "";
+  const services = getWorkServiceLabels(work);
   const symptoms = (work.symptom_tags || []).slice(0, 2);
   const summary = work.excerpt || work.work_summary || "";
   const minutes = estimateReadingMinutes(work);
@@ -43,11 +44,12 @@ export function WorkCard({ work }: Props) {
             </p>
           ) : null}
           <div className="mt-3 flex flex-wrap gap-1.5">
-            {service ? (
-              <span className="rounded border border-navy/20 bg-navy/5 px-2 py-0.5 text-xs font-bold text-navy">
+            {work.status === "draft" ? <span className="rounded bg-amber-50 px-2 py-0.5 text-xs font-bold text-amber-900">블로그 가져오기 · 초안</span> : null}
+            {services.map((service) => (
+              <span key={service} className="rounded border border-navy/20 bg-navy/5 px-2 py-0.5 text-xs font-bold text-navy">
                 {service}
               </span>
-            ) : null}
+            ))}
             {symptoms.map((tag) => (
               <span
                 key={tag}

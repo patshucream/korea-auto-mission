@@ -1,63 +1,48 @@
 import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
-import { NAV_ITEMS } from "@/lib/defaults";
-import { BusinessHours } from "@/components/ui/BusinessHours";
-import { getBlogUrl, telHref } from "@/lib/utils";
+import { getPublicNavigation } from "@/lib/public-nav";
+import { telHref } from "@/lib/utils";
+import s from "@/components/home/PremiumHome.module.css";
 
-type Props = {
-  settings: SiteSettings;
-};
-
-export function Footer({ settings }: Props) {
-  const blogUrl = getBlogUrl(settings);
-
+export function Footer({ settings }: { settings: SiteSettings }) {
   return (
-    <footer className="border-t border-white/10 bg-navy text-white">
-      <div className="container-site py-12 lg:py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-          <div className="min-w-0">
-            <p className="text-lg font-semibold tracking-[-0.02em]">{settings.business_name}</p>
-            <p className="mt-1 text-xs tracking-[0.12em] text-white/45">
-              {settings.english_brand_name}
-            </p>
-            <p className="mt-5 text-sm leading-relaxed text-white/65">{settings.address}</p>
+    <footer className={`${s.page} ${s.footer}`}>
+      <div>
+        <Link className={s.brand} href="/">
+          <span>
+            {settings.business_name}
+            <small>{settings.english_brand_name}</small>
+          </span>
+        </Link>
+        <p className={s["footer-address"]}>
+          {settings.address}
+          <br />
+          <a href={telHref(settings.phone)}>{settings.phone}</a>
+        </p>
+      </div>
+      <nav className={s["footer-nav"]} aria-label="하단 메뉴">
+        {getPublicNavigation(settings).map((item) =>
+          item.href.startsWith("http") ? (
             <a
-              className="mt-2 inline-block min-h-11 text-sm text-white/80 hover:text-white"
-              href={telHref(settings.phone)}
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {settings.phone}
+              {item.label} ↗
             </a>
-          </div>
-
-          <BusinessHours settings={settings} variant="footer" className="text-sm" />
-
-          <div>
-            <p className="text-sm font-semibold text-white/90">메뉴</p>
-            <ul className="mt-4 space-y-2 text-sm text-white/65">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <a href={blogUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                  네이버 블로그
-                </a>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-white">
-                  개인정보처리방침
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/40">
-          © {new Date().getFullYear()} {settings.business_name}
-        </div>
+          ) : (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ),
+        )}
+      </nav>
+      <div>
+        <Link href="/privacy">개인정보처리방침 ↗</Link>
+        <small>
+          © {new Date().getFullYear()} {settings.english_brand_name}
+        </small>
       </div>
     </footer>
   );

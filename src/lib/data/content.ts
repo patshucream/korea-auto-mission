@@ -1,3 +1,5 @@
+import { getBlogPreviewWorks, isBlogImportPreview, isBlogPreviewWork, mergeBlogPreviewWorks, paginateBlogPreview } from "@/lib/works/blog-imports";
+import { getWorkServiceLabels, workMatchesService, workServiceFilter } from "@/lib/works/services";
 import type {
   BeforeAfter,
   Faq,
@@ -224,6 +226,8 @@ function quotePostgrestValue(value: string): string {
 
 export async function getWorkBySlug(slug: string): Promise<WorkCase | null> {
   const normalizedSlug = normalizeWorkSlug(slug);
+  const preview = getBlogPreviewWorks().find((work) => work.slug === normalizedSlug);
+  if (preview) return preview;
 
   if (!isSupabaseConfigured()) {
     return DEFAULT_WORKS.find((w) => w.slug === normalizedSlug && w.is_published) ?? null;
@@ -360,6 +364,12 @@ export async function getAllServiceOptions(): Promise<ServiceOption[]> {
 }
 
 export async function getHomepageData(): Promise<HomepageData> {
+  const data = await getStoredHomepageData();
+  if (!isBlogImportPreview()) return data;
+  return { ...data, works: mergeBlogPreviewWorks(data.source === "database" ? data.works : []) };
+}
+
+async function getStoredHomepageData(): Promise<HomepageData> {
   if (!isSupabaseConfigured()) {
     return fallbackHomepage();
   }
@@ -476,6 +486,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
 
 /** 조회수 +1 (실패해도 상세 노출에는 영향 없음) */
 export async function incrementWorkViewCount(id: string): Promise<void> {
+  if (isBlogPreviewWork(id)) return;
   if (!isSupabaseConfigured()) return;
   const supabase = await tryCreateClient();
   if (!supabase) return;
@@ -519,8 +530,7 @@ export async function getRelatedWorks(
       else if (brand && wBrand === brand) score += 300;
       if (current.service_id && w.service_id === current.service_id) score += 200;
       else if (
-        current.service_category &&
-        w.service_category === current.service_category
+        getWorkServiceLabels(current).some((label) => getWorkServiceLabels(w).includes(label))
       ) {
         score += 150;
       }
@@ -634,6 +644,10 @@ export async function getRelatedWorks(
         .order("published_at", { ascending: false })
         .limit(limit * 2);
       addRows(data as Record<string, unknown>[]);
+    }
+
+    for (const work of getBlogPreviewWorks()) {
+      if (work.id !== current.id) collected.set(work.id, work);
     }
 
     return [...collected.values()]
@@ -779,7 +793,18 @@ export async function getSameSymptomWorks(
   }
 }
 
-export async function getPaginatedWorks(
+export async function getPaginatedWorks(params: WorksFilterParams): Promise<PaginatedWorks> {
+  if (!isBlogImportPreview()) return getStoredPaginatedWorks(params);
+  const supabase = await tryCreateClient();
+  const [response, services] = await Promise.all([
+    supabase ? supabase.from("work_cases").select("*").eq("is_published", true) : Promise.resolve({ data: [] }),
+    getPublishedServiceOptions(),
+  ]);
+  const stored = ((response.data || []) as Record<string, unknown>[]).map(mapWork);
+  return paginateBlogPreview(mergeBlogPreviewWorks(stored), services, params);
+}
+
+async function getStoredPaginatedWorks(
   params: WorksFilterParams,
 ): Promise<PaginatedWorks> {
   const page = Math.max(1, params.page ?? 1);
@@ -808,9 +833,10 @@ export async function getPaginatedWorks(
     if (params.brand) items = items.filter((w) => w.vehicle_brand === params.brand);
     if (params.model) items = items.filter((w) => w.vehicle_model === params.model);
     if (params.service) {
-      items = items.filter((w) => w.service_id === params.service);
+      const service = DEFAULT_SERVICES.find((item) => item.id === params.service);
+      items = items.filter((w) => service ? workMatchesService(w, service) : w.service_id === params.service);
     } else if (params.category) {
-      items = items.filter((w) => w.service_category === params.category);
+      items = items.filter((w) => getWorkServiceLabels(w).includes(params.category!));
     }
     items.sort((a, b) => {
       const da = new Date(a.published_at || a.created_at).getTime();
@@ -857,9 +883,11 @@ export async function getPaginatedWorks(
   if (params.brand) query = query.eq("vehicle_brand", params.brand);
   if (params.model) query = query.eq("vehicle_model", params.model);
   if (params.service) {
-    query = query.eq("service_id", params.service);
+    const selected = (await getPublishedServiceOptions()).find((service) => service.id === params.service);
+    query = selected ? query.or(workServiceFilter(selected)) : query.eq("service_id", params.service);
   } else if (params.category) {
-    query = query.eq("service_category", params.category);
+    const label = quotePostgrestValue(params.category);
+    query = query.or(`service_category.eq.${label},general_tags.cs.{${label}}`);
   }
   if (params.q) {
     const q = params.q.replace(/[%_]/g, "");

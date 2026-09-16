@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { isBlogImportPreview } from "@/lib/works/blog-imports";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/data/content";
@@ -31,6 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
+    robots: isBlogImportPreview() ? { index: false, follow: false } : undefined,
     title: {
       default: settings.seo_title,
       template: `%s | ${settings.business_name}`,
@@ -124,6 +127,12 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {isBlogImportPreview() ? (
+          <aside className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 bg-amber-50 px-4 py-3 text-center text-xs font-medium leading-5 text-amber-950">
+            <span>블로그 작업사례 10편 미리보기 · 아직 공개되지 않은 초안입니다.</span>
+            <Link className="font-bold underline underline-offset-4" href="/admin/blog-imports">관리자에서 임시저장</Link>
+          </aside>
+        ) : null}
         {children}
       </body>
     </html>

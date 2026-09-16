@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getWorkServiceLabels } from "@/lib/works/services";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
@@ -182,7 +183,7 @@ export default async function WorkDetailPage({ params }: Props) {
   const replacedParts = asString(work.replaced_parts).trim();
   const warrantyInfo = asString(work.warranty_info).trim();
   const repairDuration = asString(work.repair_duration).trim();
-  const serviceCategory = asString(work.service_category).trim();
+  const serviceCategory = getWorkServiceLabels(work).join(" · ");
   const subtitle = asString(work.subtitle).trim() || asString(work.excerpt).trim();
   const hasSummary = Boolean(
     symptoms || diagnosis || repairProcess || replacedParts || repairDuration || warrantyInfo,

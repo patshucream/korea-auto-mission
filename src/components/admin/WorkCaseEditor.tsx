@@ -214,7 +214,9 @@ export function WorkCaseEditor({ initial, services }: Props) {
   const seoTitleRef = useRef<HTMLInputElement>(null);
   const seoDescRef = useRef<HTMLTextAreaElement>(null);
   const formRef = useRef(form);
-  formRef.current = form;
+  useEffect(() => {
+    formRef.current = form;
+  }, [form]);
 
   function showToast(message: string, type: "success" | "error" = "success") {
     setToastType(type);
@@ -665,7 +667,7 @@ export function WorkCaseEditor({ initial, services }: Props) {
           />
         ) : null}
         <label className="mt-3 block">
-          <span className="admin-label">정비 서비스 *</span>
+          <span className="admin-label">대표 정비 서비스 *</span>
           <select
             ref={serviceRef}
             className="admin-select"
@@ -689,6 +691,20 @@ export function WorkCaseEditor({ initial, services }: Props) {
             ))}
           </select>
         </label>
+        <fieldset className="mt-4 space-y-2">
+          <legend className="admin-label">함께 진행한 정비 서비스</legend>
+          <p className="mb-2 text-xs leading-5 text-muted">해당하는 항목을 모두 선택하면 각각의 서비스 검색 결과에 표시됩니다.</p>
+          {services.filter((service) => service.id !== form.service_id).map((service) => (
+            <label key={service.id} className="flex items-center gap-2 text-sm">
+              <input type="checkbox" checked={splitCsv(form.general_tags).includes(service.title)} onChange={(event) => {
+                const tags = splitCsv(form.general_tags).filter((tag) => tag !== service.title);
+                if (event.target.checked) tags.push(service.title);
+                update("general_tags", tags.join(", "));
+              }} />
+              {service.title}
+            </label>
+          ))}
+        </fieldset>
         <label className="mt-3 flex items-center gap-2 text-sm font-semibold">
           <input
             type="checkbox"

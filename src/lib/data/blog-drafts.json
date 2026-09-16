@@ -1,0 +1,1233 @@
+[
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224348859508",
+      "url": "https://blog.naver.com/97ga074/224348859508",
+      "title": "부산 SM5 DPF클리닝 / 출력부족 / dpf경고등",
+      "publishedAt": "2026-07-16T21:39:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMjgw/MDAxNzg0MTcxMDIwNTE5.LTqkwdsRh9hFcyWduRMvcmIsfaGvnpHuHBzXoFJpByAg.dDYqrIRJSGI-IeiBTlPbeZH-q_EOTPunKa2i7ql6vGEg.JPEG/SE-239a2848-f3c9-4d11-b92c-c085e9c0f731.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMjgw/MDAxNzg0MTcxMDIwNTE5.LTqkwdsRh9hFcyWduRMvcmIsfaGvnpHuHBzXoFJpByAg.dDYqrIRJSGI-IeiBTlPbeZH-q_EOTPunKa2i7ql6vGEg.JPEG/SE-239a2848-f3c9-4d11-b92c-c085e9c0f731.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTU0/MDAxNzg0MTY2OTM5NTMz.MeuN4ofVz3kccaNKBxugtRYcZxflQfEFJdnit8EYDgMg.yP8b4ZLna886OC4hCXvl_EuSIOXtFh-6ChhJljJlEusg.JPEG/20260713_101558.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/02.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTU0/MDAxNzg0MTY2OTM5NTMz.MeuN4ofVz3kccaNKBxugtRYcZxflQfEFJdnit8EYDgMg.yP8b4ZLna886OC4hCXvl_EuSIOXtFh-6ChhJljJlEusg.JPEG/20260713_101558.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTg2/MDAxNzg0MTY2OTM5ODI0.LMgAu1wTSCG0u-6SIcLY0g1Ry4IKJNQYj3qNegT7ZIEg.-rMhmV49TVf8ovkNY-EG1dP8nlMT2g-xrtxEjTicofwg.JPEG/20260713_110724.jpg",
+          "width": 4000,
+          "height": 2252,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTg2/MDAxNzg0MTY2OTM5ODI0.LMgAu1wTSCG0u-6SIcLY0g1Ry4IKJNQYj3qNegT7ZIEg.-rMhmV49TVf8ovkNY-EG1dP8nlMT2g-xrtxEjTicofwg.JPEG/20260713_110724.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMjQ5/MDAxNzg0MTY2OTQwNTQz.QCJHmEvc9PF1kVJixGPOPpSL3Qe6ZlunwoWtPApv8MYg.mSS9BVOIhOyeLiV8cDwDCQzxmF8Q7tRX1qGaU0GGQdsg.JPEG/20260713_114826.jpg",
+          "width": 4000,
+          "height": 2252,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMjQ5/MDAxNzg0MTY2OTQwNTQz.QCJHmEvc9PF1kVJixGPOPpSL3Qe6ZlunwoWtPApv8MYg.mSS9BVOIhOyeLiV8cDwDCQzxmF8Q7tRX1qGaU0GGQdsg.JPEG/20260713_114826.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTg5/MDAxNzg0MTY2OTQxMDAy.XZhMZqWRqfS86aNzXm8qGQm2UC1uoaB7i8NUZZBM1qIg.JytLhY5lu8LyDSd8xsOH4RCgIHiKUm0qqGb-5N91TW8g.JPEG/20260713_114843.jpg",
+          "width": 4000,
+          "height": 2252,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTg5/MDAxNzg0MTY2OTQxMDAy.XZhMZqWRqfS86aNzXm8qGQm2UC1uoaB7i8NUZZBM1qIg.JytLhY5lu8LyDSd8xsOH4RCgIHiKUm0qqGb-5N91TW8g.JPEG/20260713_114843.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMjcy/MDAxNzg0MTY2OTQxODU2.VFZOppXRbmUffwaeJGeZYieZCL07u1hs7GWEmoYORPog.4I9mZStH0yxz9Ha9k-_tFjLnALWon-k6D8LSSuGLcQQg.JPEG/1783924975284.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMjcy/MDAxNzg0MTY2OTQxODU2.VFZOppXRbmUffwaeJGeZYieZCL07u1hs7GWEmoYORPog.4I9mZStH0yxz9Ha9k-_tFjLnALWon-k6D8LSSuGLcQQg.JPEG/1783924975284.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTc3/MDAxNzg0MTY2OTQyMTYx.jMvBPq4FTp-FKNaVLonRLDJUks-Sf8fKFlQwzeBrV1Yg.7ng5yvYNfKmX8gT-uckxfBTt1eZ9ExLURFYkhETIf-sg.JPEG/1783924975415.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224348859508/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTZfMTc3/MDAxNzg0MTY2OTQyMTYx.jMvBPq4FTp-FKNaVLonRLDJUks-Sf8fKFlQwzeBrV1Yg.7ng5yvYNfKmX8gT-uckxfBTt1eZ9ExLURFYkhETIf-sg.JPEG/1783924975415.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "5198d297-a00c-4be2-a197-1fe64b85f0e1",
+      "slug": "naver-224348859508",
+      "title": "SM5 디젤, DPF 경고등과 출력 부족 점검",
+      "subtitle": "171,220km를 주행한 SM5 디젤. 일체형 배기 구조에 맞춰 DPF를 분리하고 세정액 순환과 역방향 세척을 진행했습니다.",
+      "excerpt": "171,220km를 주행한 SM5 디젤. 일체형 배기 구조에 맞춰 DPF를 분리하고 세정액 순환과 역방향 세척을 진행했습니다.",
+      "vehicle_brand": "르노삼성",
+      "manufacturer": "르노삼성",
+      "vehicle_model": "SM5 디젤",
+      "model_year": "",
+      "mileage": "171,220km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "8b322363-aca4-4eea-b4b4-581643ab0884",
+      "service_category": "DPF 클리닝",
+      "symptoms": "DPF 경고등과 출력 부족으로 DPF 상태 점검 및 클리닝을 진행했습니다.",
+      "diagnosis": "진단기에서 DPF 효율 저하 코드는 확인되지 않았습니다. 배기 일체형 구조를 확인하고 탈거 세척을 진행했습니다.",
+      "cause": "",
+      "repair_process": "DPF 분리 → 세정액 순환 → 역방향 고압 세척 → 전용 클램프 연결 → 진단 및 세팅",
+      "replaced_parts": "배기 연결용 전용 클램프",
+      "work_summary": "클리닝 후 DPF 고장코드가 사라진 것을 확인했습니다. 코드 삭제와 세팅, 마무리 점검을 거쳐 출고했습니다.",
+      "detailed_content": "입고 차량과 진단\nSM5 디젤의 DPF 경고등과 출력 부족을 점검했습니다. 진단기상 DPF 효율 저하 코드는 확인되지 않았으며, 이전 클리닝 이력을 확인한 뒤 작업을 진행했습니다.\n\n일체형 배기에서 DPF 분리\n이 차량은 배기와 DPF가 일체형으로 연결되어 있습니다. 필요한 부위를 절단하고 절단면을 정리해 DPF를 세척 장비에 장착했습니다.\n\n세정액 순환과 역방향 세척\n내부를 충분히 적신 뒤 세정액을 순환시켜 슬러지를 불렸습니다. 이어 역방향 고압 세척으로 내부 찌꺼기를 배출했습니다.\n\n재장착과 마무리 점검\n전용 클램프로 배기를 다시 연결했습니다. DPF 고장코드가 사라진 것을 확인하고 세팅 및 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>입고 차량과 진단</h2><p>SM5 디젤의 DPF 경고등과 출력 부족을 점검했습니다. 진단기상 DPF 효율 저하 코드는 확인되지 않았으며, 이전 클리닝 이력을 확인한 뒤 작업을 진행했습니다.</p><figure><img src=\"/blog-imports/224348859508/02.jpg\" alt=\"르노삼성 SM5 디젤 — 입고 차량과 진단\" loading=\"lazy\" /></figure><h2>일체형 배기에서 DPF 분리</h2><p>이 차량은 배기와 DPF가 일체형으로 연결되어 있습니다. 필요한 부위를 절단하고 절단면을 정리해 DPF를 세척 장비에 장착했습니다.</p><figure><img src=\"/blog-imports/224348859508/04.jpg\" alt=\"르노삼성 SM5 디젤 — 일체형 배기에서 DPF 분리\" loading=\"lazy\" /></figure><h2>세정액 순환과 역방향 세척</h2><p>내부를 충분히 적신 뒤 세정액을 순환시켜 슬러지를 불렸습니다. 이어 역방향 고압 세척으로 내부 찌꺼기를 배출했습니다.</p><figure><img src=\"/blog-imports/224348859508/08.jpg\" alt=\"르노삼성 SM5 디젤 — 세정액 순환과 역방향 세척\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224348859508/10.jpg\" alt=\"르노삼성 SM5 디젤 — 세정액 순환과 역방향 세척\" loading=\"lazy\" /></figure><h2>재장착과 마무리 점검</h2><p>전용 클램프로 배기를 다시 연결했습니다. DPF 고장코드가 사라진 것을 확인하고 세팅 및 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224348859508/12.jpg\" alt=\"르노삼성 SM5 디젤 — 재장착과 마무리 점검\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224348859508/14.jpg\" alt=\"르노삼성 SM5 디젤 — 재장착과 마무리 점검\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224348859508\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224348859508/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "르노삼성",
+        "SM5 디젤"
+      ],
+      "symptom_tags": [
+        "DPF 경고등",
+        "출력 부족"
+      ],
+      "general_tags": [
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224348859508",
+      "created_at": "2026-07-16T21:39:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "SM5 디젤, DPF 경고등과 출력 부족 점검",
+      "seo_description": "171,220km를 주행한 SM5 디젤. 일체형 배기 구조에 맞춰 DPF를 분리하고 세정액 순환과 역방향 세척을 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224347415032",
+      "url": "https://blog.naver.com/97ga074/224347415032",
+      "title": "부산 스포티지 더볼드 흡기•인젝터 클리닝",
+      "publishedAt": "2026-07-15T14:35:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMjYy/MDAxNzg0MDc4NDYwNzQ1.rZ-KZP1LrvXgwWgrzcvmEDlQ6FkFgzz4gFSHGprrGWwg.GwFRhqcBWjTP9GJyWgz0oAd9N1h5UzYoogKJ9dq7G80g.JPEG/SE-a3c235f7-3b3f-46e0-b1b0-31e72bbc7e28.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMjYy/MDAxNzg0MDc4NDYwNzQ1.rZ-KZP1LrvXgwWgrzcvmEDlQ6FkFgzz4gFSHGprrGWwg.GwFRhqcBWjTP9GJyWgz0oAd9N1h5UzYoogKJ9dq7G80g.JPEG/SE-a3c235f7-3b3f-46e0-b1b0-31e72bbc7e28.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMjkw/MDAxNzg0MDc3ODA2MjAw.nFyeIZPdox86bxpLT0HZVRBc5JwlDIIPD9gcbtxs9mUg.DVNQvIm0auVnM25NqtEWwNrf49mlLWw4Uax8U6Hg9xsg.JPEG/1783585055425.jpg",
+          "width": 4032,
+          "height": 2268,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMjkw/MDAxNzg0MDc3ODA2MjAw.nFyeIZPdox86bxpLT0HZVRBc5JwlDIIPD9gcbtxs9mUg.DVNQvIm0auVnM25NqtEWwNrf49mlLWw4Uax8U6Hg9xsg.JPEG/1783585055425.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTA2/MDAxNzg0MDc3ODA0NDc3.NOoR4rjRwsG5GIXABvD9icibxYnvK9ve5vWELvzHLUQg.GWs8sU8Z0iT4JSv0F8y_zTC8XlPPaNGvRrXm_SbUOw8g.JPEG/1783585055078.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTA2/MDAxNzg0MDc3ODA0NDc3.NOoR4rjRwsG5GIXABvD9icibxYnvK9ve5vWELvzHLUQg.GWs8sU8Z0iT4JSv0F8y_zTC8XlPPaNGvRrXm_SbUOw8g.JPEG/1783585055078.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTkw/MDAxNzg0MDc3ODA1NTg4.DUb5h4UW8-bnb7VimB1dtLoKNFNtOdHUm2n7_pFPHgMg.UDuufZHcm8jk70Bdxk-tBsiSzITi9KvAqhb2lptfvvQg.JPEG/1783585055168.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTkw/MDAxNzg0MDc3ODA1NTg4.DUb5h4UW8-bnb7VimB1dtLoKNFNtOdHUm2n7_pFPHgMg.UDuufZHcm8jk70Bdxk-tBsiSzITi9KvAqhb2lptfvvQg.JPEG/1783585055168.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTkx/MDAxNzg0MDc3ODA1OTQy.cW4mgyFnJoCFrneoRT527vVp2fnDA6RHdonvXpeis7wg.ClLwDMigosv1ejUTMssmh9vrWrh4CpR5bMj90RlHiVIg.JPEG/1783585055394.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTkx/MDAxNzg0MDc3ODA1OTQy.cW4mgyFnJoCFrneoRT527vVp2fnDA6RHdonvXpeis7wg.ClLwDMigosv1ejUTMssmh9vrWrh4CpR5bMj90RlHiVIg.JPEG/1783585055394.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMjEy/MDAxNzg0MDc3ODA2NTEz.KNhJtL9UGVA7FZ4r3ZcidpoHsNENTmXpShWXf_vdB_Mg.T6C8UjV8axpASh_JkeWNPZYyU4PEShdhe-_KceFjpkwg.JPEG/1783585055497.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMjEy/MDAxNzg0MDc3ODA2NTEz.KNhJtL9UGVA7FZ4r3ZcidpoHsNENTmXpShWXf_vdB_Mg.T6C8UjV8axpASh_JkeWNPZYyU4PEShdhe-_KceFjpkwg.JPEG/1783585055497.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTk1/MDAxNzg0MDc3ODA2NTkw.Ke2VOvbgbXtSYxNQIxd3tgwQvsYtr9Zj_MP4UqfRVdEg.kO3c7h4GuWxHU6w_TbuxkUTyPrk7MZKb_clSYq-Hvnsg.JPEG/1783585055537.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224347415032/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTVfMTk1/MDAxNzg0MDc3ODA2NTkw.Ke2VOvbgbXtSYxNQIxd3tgwQvsYtr9Zj_MP4UqfRVdEg.kO3c7h4GuWxHU6w_TbuxkUTyPrk7MZKb_clSYq-Hvnsg.JPEG/1783585055537.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "b0876b91-8bc7-45cd-a5c0-fc18762f67b2",
+      "slug": "naver-224347415032",
+      "title": "스포티지 더볼드, 6만 km 흡기·인젝터 클리닝",
+      "subtitle": "2019년식 스포티지 더볼드의 예방정비. 흡기와 EGR에 쌓인 카본을 제거하고 인젝터 세척, 동와셔 교체를 진행했습니다.",
+      "excerpt": "2019년식 스포티지 더볼드의 예방정비. 흡기와 EGR에 쌓인 카본을 제거하고 인젝터 세척, 동와셔 교체를 진행했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "스포티지 더볼드 2.0",
+      "model_year": "2019",
+      "mileage": "60,524km",
+      "fuel_type": "디젤",
+      "transmission_type": "8단 자동변속기",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "시내 주행이 많은 차량으로 흡기와 인젝터 예방정비를 의뢰했습니다.",
+      "diagnosis": "흡기 매니폴드에 카본 슬러지가 많이 쌓여 있었습니다. 인젝터와 홀에는 오염이 있었지만 밀폐 불량 상태는 아니었습니다.",
+      "cause": "",
+      "repair_process": "흡기·인젝터 탈거 → 매니폴드·EGR 세척 → 인젝터 초음파 세척 → 동와셔 교체 → 전체 점검",
+      "replaced_parts": "인젝터 동와셔",
+      "work_summary": "흡기와 EGR의 카본을 제거하고 인젝터 세척 및 동와셔 교체를 마쳤습니다. 차량 전체 점검 후 출고했습니다.",
+      "detailed_content": "예방정비를 위한 입고\n주행거리 60,524km의 스포티지 더볼드 2.0 디젤입니다. 시내 주행이 많은 운행 환경을 고려해 흡기와 인젝터 클리닝을 진행했습니다.\n\n흡기와 EGR의 카본 제거\n탈거한 흡기 매니폴드에는 주행거리 대비 많은 카본이 쌓여 있었습니다. 매니폴드와 EGR 밸브, 파이프를 전용 장비로 세척했습니다.\n\n인젝터 세척과 동와셔 교체\n인젝터 커버와 노즐을 세척한 뒤 초음파 세척을 진행하고 동와셔를 교체했습니다. 원문에는 인젝터 세척 전 사진이 없어 세척 후 사진만 담았습니다.\n\n전체 점검 후 출고\n작업한 부품을 다시 장착하고 차량 전체 점검을 마친 뒤 출고했습니다.",
+      "content_html": "<h2>예방정비를 위한 입고</h2><p>주행거리 60,524km의 스포티지 더볼드 2.0 디젤입니다. 시내 주행이 많은 운행 환경을 고려해 흡기와 인젝터 클리닝을 진행했습니다.</p><figure><img src=\"/blog-imports/224347415032/03.jpg\" alt=\"기아 스포티지 더볼드 2.0 — 예방정비를 위한 입고\" loading=\"lazy\" /></figure><h2>흡기와 EGR의 카본 제거</h2><p>탈거한 흡기 매니폴드에는 주행거리 대비 많은 카본이 쌓여 있었습니다. 매니폴드와 EGR 밸브, 파이프를 전용 장비로 세척했습니다.</p><figure><img src=\"/blog-imports/224347415032/05.jpg\" alt=\"기아 스포티지 더볼드 2.0 — 흡기와 EGR의 카본 제거\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224347415032/08.jpg\" alt=\"기아 스포티지 더볼드 2.0 — 흡기와 EGR의 카본 제거\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224347415032/11.jpg\" alt=\"기아 스포티지 더볼드 2.0 — 흡기와 EGR의 카본 제거\" loading=\"lazy\" /></figure><h2>인젝터 세척과 동와셔 교체</h2><p>인젝터 커버와 노즐을 세척한 뒤 초음파 세척을 진행하고 동와셔를 교체했습니다. 원문에는 인젝터 세척 전 사진이 없어 세척 후 사진만 담았습니다.</p><figure><img src=\"/blog-imports/224347415032/13.jpg\" alt=\"기아 스포티지 더볼드 2.0 — 인젝터 세척과 동와셔 교체\" loading=\"lazy\" /></figure><h2>전체 점검 후 출고</h2><p>작업한 부품을 다시 장착하고 차량 전체 점검을 마친 뒤 출고했습니다.</p><figure><img src=\"/blog-imports/224347415032/14.jpg\" alt=\"기아 스포티지 더볼드 2.0 — 전체 점검 후 출고\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224347415032\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224347415032/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "스포티지 더볼드 2.0"
+      ],
+      "symptom_tags": [
+        "예방정비",
+        "카본 누적"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224347415032",
+      "created_at": "2026-07-15T14:35:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 1,
+      "seo_title": "스포티지 더볼드, 6만 km 흡기·인젝터 클리닝",
+      "seo_description": "2019년식 스포티지 더볼드의 예방정비. 흡기와 EGR에 쌓인 카본을 제거하고 인젝터 세척, 동와셔 교체를 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224342626419",
+      "url": "https://blog.naver.com/97ga074/224342626419",
+      "title": "BMW325CI 오토미션수리 / 주행중 떨림과 소음 / 후진충격",
+      "publishedAt": "2026-07-10T16:18:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMTAz/MDAxNzgzNTk4OTMwODUw.XrOtJa-UWJv-jal6yM6USDFWESInS1-EE5wZ7Vgh6Cwg.icFZMZOsaRHzKIq_0Vn9svZtssJeTk5XbrPyZgKn-Sgg.JPEG/SE-421ca1fd-ba2d-47e8-acd4-dfdb4da4af8b.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMTAz/MDAxNzgzNTk4OTMwODUw.XrOtJa-UWJv-jal6yM6USDFWESInS1-EE5wZ7Vgh6Cwg.icFZMZOsaRHzKIq_0Vn9svZtssJeTk5XbrPyZgKn-Sgg.JPEG/SE-421ca1fd-ba2d-47e8-acd4-dfdb4da4af8b.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTBfMjQw/MDAxNzgzNjQ1ODQwMjI2.adRL9zw-aCWj4t_NmecZ0ZIx1R_5DaSQIUHdaLl0O9Ug.X3XHoehV1DuM2i-B34kza_f9LoCD2SEC03HhgJxw8eYg.JPEG/SE-888b5c04-7180-4fe8-bd57-f20668b8934a.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTBfMjQw/MDAxNzgzNjQ1ODQwMjI2.adRL9zw-aCWj4t_NmecZ0ZIx1R_5DaSQIUHdaLl0O9Ug.X3XHoehV1DuM2i-B34kza_f9LoCD2SEC03HhgJxw8eYg.JPEG/SE-888b5c04-7180-4fe8-bd57-f20668b8934a.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjYy/MDAxNzgzNTk4ODA3NDU5.TNtTzdDH7Qvhw6v0-gQK2tfMm3FCsar6Q7mNJCkJ0Xwg.xJ2sT8x6dzD6HOZL66wYGCohpTtnZw4C7XGSivVoP2og.JPEG/1783590668925.jpg",
+          "width": 3024,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjYy/MDAxNzgzNTk4ODA3NDU5.TNtTzdDH7Qvhw6v0-gQK2tfMm3FCsar6Q7mNJCkJ0Xwg.xJ2sT8x6dzD6HOZL66wYGCohpTtnZw4C7XGSivVoP2og.JPEG/1783590668925.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MTBfMjkz/MDAxNzgzNjU4MzEwOTc0.NRIaf7z1lOOiUL0dP5_luRECpcy3511zUK03TiroOo4g.i3vPOfJ4PUy4MCPQzjWN6jMCDWctAF3dNZAV71y_Z8kg.JPEG/20260703_113710.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MTBfMjkz/MDAxNzgzNjU4MzEwOTc0.NRIaf7z1lOOiUL0dP5_luRECpcy3511zUK03TiroOo4g.i3vPOfJ4PUy4MCPQzjWN6jMCDWctAF3dNZAV71y_Z8kg.JPEG/20260703_113710.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjM3/MDAxNzgzNTk4ODA0MjAz.Bnju-CFNAVfrSoz_nRImXLiJMdGs50uau_ss2fz9gpkg.ewrpeqOg1Xdg6PLBE-VgbFXArDXlLH11f-6415e4m2wg.JPEG/20260707_112548.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjM3/MDAxNzgzNTk4ODA0MjAz.Bnju-CFNAVfrSoz_nRImXLiJMdGs50uau_ss2fz9gpkg.ewrpeqOg1Xdg6PLBE-VgbFXArDXlLH11f-6415e4m2wg.JPEG/20260707_112548.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMTUw/MDAxNzgzNTk4ODA1MjYx.XWFQTfOptO7DAIiLcvLy6pGeRRD4f_4MUKoSVYsyZTUg.1NBEQo0Vu4CV9GTtbNk69WGBkZChnotPH6frLv-nkhAg.JPEG/20260707_121502.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/15.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMTUw/MDAxNzgzNTk4ODA1MjYx.XWFQTfOptO7DAIiLcvLy6pGeRRD4f_4MUKoSVYsyZTUg.1NBEQo0Vu4CV9GTtbNk69WGBkZChnotPH6frLv-nkhAg.JPEG/20260707_121502.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjg3/MDAxNzgzNTk4ODA0MjM5.hZ6-Xkys-QqDmlZ_vOOeCxB26McTHOeo_zLEv0qWR3Eg.90bn7o7uV1DlK2sAEa3Rwg7iSSzvyLGfzKKd5e1WIxQg.JPEG/20260707_111349.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjg3/MDAxNzgzNTk4ODA0MjM5.hZ6-Xkys-QqDmlZ_vOOeCxB26McTHOeo_zLEv0qWR3Eg.90bn7o7uV1DlK2sAEa3Rwg7iSSzvyLGfzKKd5e1WIxQg.JPEG/20260707_111349.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjc4/MDAxNzgzNTk4ODA1NTc0.k0Gb3zaVGx9ZhSTgVpzmOdW_IT6ZVCznFo0pYSfOdhcg.f9Fq6mMPB5zwgA5Ur2p9gBMReF2uOaB3YLoAhykI5_Ig.JPEG/20260707_171416.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/17.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMjc4/MDAxNzgzNTk4ODA1NTc0.k0Gb3zaVGx9ZhSTgVpzmOdW_IT6ZVCznFo0pYSfOdhcg.f9Fq6mMPB5zwgA5Ur2p9gBMReF2uOaB3YLoAhykI5_Ig.JPEG/20260707_171416.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDlfMTI4/MDAxNzgzNTk4ODA3ODAz.RxSxZ6Ku1g8jdMM1VdE0c8Aye67rpTVL99VnZdJCDnsg.XbzGwVU51HpxatqnbysktZAu-qZSCJvwTjnocolsuv8g.JPEG/1783590669107.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224342626419/19.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDlfMTI4/MDAxNzgzNTk4ODA3ODAz.RxSxZ6Ku1g8jdMM1VdE0c8Aye67rpTVL99VnZdJCDnsg.XbzGwVU51HpxatqnbysktZAu-qZSCJvwTjnocolsuv8g.JPEG/1783590669107.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "c98ae155-31c6-4c71-a5cb-f1ce36ac3fca",
+      "slug": "naver-224342626419",
+      "title": "BMW 325CI, 변속 충격과 고속 슬립 수리",
+      "subtitle": "ZF 5단 변속기의 내부 마모와 토크컨버터를 정비하고, 누유와 마운트 문제까지 함께 확인한 BMW 325CI 수리 사례입니다.",
+      "excerpt": "ZF 5단 변속기의 내부 마모와 토크컨버터를 정비하고, 누유와 마운트 문제까지 함께 확인한 BMW 325CI 수리 사례입니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "325CI",
+      "model_year": "",
+      "mileage": "",
+      "fuel_type": "",
+      "transmission_type": "ZF 5단 자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "변속 및 후진 충격, 고속 주행 중 슬립과 주행 진동·소음이 발생했습니다.",
+      "diagnosis": "토크컨버터 문제와 오일 오염, 내부 디스크 마모를 확인했습니다. 엔진과 미션 사이 누유 및 마운트 상태도 함께 점검했습니다.",
+      "cause": "",
+      "repair_process": "미션 탈거·분해 → 내부 소모 부품 교체 → 토크컨버터 재생 → 밸브바디 세척 → 누유·마운트 정비 → 시운전",
+      "replaced_parts": "디스크·플레이트·피스톤 씰, 오일 필터, 후 크랭크 오일 씰, 마운트",
+      "work_summary": "시운전에서 변속 충격, 슬립, 진동과 소음이 사라진 것을 확인했습니다. 마무리 점검 후 차량을 인도했습니다.",
+      "detailed_content": "충격과 슬립의 원인 확인\n배출한 미션오일에서 금속 분진에 의한 오염을 확인했습니다. 진단기와 고속 주행에서 확인된 토크컨버터 문제를 바탕으로 분해 정비를 진행했습니다.\n\n내부 마모와 누유 정비\n디스크와 플레이트의 손상 및 마찰재 마모를 확인했습니다. 내부 부품 상태를 확인해 교체하고, 엔진과 미션 사이 누유와 관련된 후 크랭크 오일 씰도 교체했습니다.\n\n밸브바디 세척과 재조립\n각 밸브를 분리해 세척하고 케이스와 내부 부품을 정리했습니다. 오일 필터를 교체하고 재생 작업을 거친 토크컨버터를 장착했습니다.\n\n마운트 교체와 시운전\n주행 진동·소음과 관련된 마운트를 신품으로 교체했습니다. 충분한 시운전에서 충격과 슬립, 진동·소음이 사라진 것을 확인한 뒤 출고했습니다.",
+      "content_html": "<h2>충격과 슬립의 원인 확인</h2><p>배출한 미션오일에서 금속 분진에 의한 오염을 확인했습니다. 진단기와 고속 주행에서 확인된 토크컨버터 문제를 바탕으로 분해 정비를 진행했습니다.</p><figure><img src=\"/blog-imports/224342626419/03.jpg\" alt=\"BMW 325CI — 충격과 슬립의 원인 확인\" loading=\"lazy\" /></figure><h2>내부 마모와 누유 정비</h2><p>디스크와 플레이트의 손상 및 마찰재 마모를 확인했습니다. 내부 부품 상태를 확인해 교체하고, 엔진과 미션 사이 누유와 관련된 후 크랭크 오일 씰도 교체했습니다.</p><figure><img src=\"/blog-imports/224342626419/06.jpg\" alt=\"BMW 325CI — 내부 마모와 누유 정비\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224342626419/09.jpg\" alt=\"BMW 325CI — 내부 마모와 누유 정비\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224342626419/10.jpg\" alt=\"BMW 325CI — 내부 마모와 누유 정비\" loading=\"lazy\" /></figure><h2>밸브바디 세척과 재조립</h2><p>각 밸브를 분리해 세척하고 케이스와 내부 부품을 정리했습니다. 오일 필터를 교체하고 재생 작업을 거친 토크컨버터를 장착했습니다.</p><figure><img src=\"/blog-imports/224342626419/15.jpg\" alt=\"BMW 325CI — 밸브바디 세척과 재조립\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224342626419/16.jpg\" alt=\"BMW 325CI — 밸브바디 세척과 재조립\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224342626419/17.jpg\" alt=\"BMW 325CI — 밸브바디 세척과 재조립\" loading=\"lazy\" /></figure><h2>마운트 교체와 시운전</h2><p>주행 진동·소음과 관련된 마운트를 신품으로 교체했습니다. 충분한 시운전에서 충격과 슬립, 진동·소음이 사라진 것을 확인한 뒤 출고했습니다.</p><figure><img src=\"/blog-imports/224342626419/19.jpg\" alt=\"BMW 325CI — 마운트 교체와 시운전\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224342626419\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224342626419/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "325CI"
+      ],
+      "symptom_tags": [
+        "변속 충격",
+        "고속 슬립",
+        "주행 진동"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224342626419",
+      "created_at": "2026-07-10T16:18:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 2,
+      "seo_title": "BMW 325CI, 변속 충격과 고속 슬립 수리",
+      "seo_description": "ZF 5단 변속기의 내부 마모와 토크컨버터를 정비하고, 누유와 마운트 문제까지 함께 확인한 BMW 325CI 수리 사례입니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224339660912",
+      "url": "https://blog.naver.com/97ga074/224339660912",
+      "title": "부산 강서구 올란도 토크컨버터 교환 및 오토미션수리",
+      "publishedAt": "2026-07-07T22:27:00+09:00",
+      "editorNote": "원문 상단은 242,664km, 본문은 22만 km로 서로 달라 주행거리 필드는 비워 두었습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfMTMw/MDAxNzgzMzg3MDI2NTc3.iFyBlbqxQXXzgyba2u-cl1cJ9PYsUnSRNqpjxglZtEgg.sjGRaSMshe_ZRgiMd_CBkOZzax4NmHnba53eK6X0kEwg.JPEG/SE-80d77a00-dca6-44d1-9e45-f0bf360700b0.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfMTMw/MDAxNzgzMzg3MDI2NTc3.iFyBlbqxQXXzgyba2u-cl1cJ9PYsUnSRNqpjxglZtEgg.sjGRaSMshe_ZRgiMd_CBkOZzax4NmHnba53eK6X0kEwg.JPEG/SE-80d77a00-dca6-44d1-9e45-f0bf360700b0.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfMjg2/MDAxNzgzMzg3MDI4NTg0.bogt_tTf8v9CZaZzYfMfWD5q2Vf4FlnCDTbFSyiCSNIg.TOZI5j_KfC8Lfq8_UUnXJxs5BJXzRHkkZqNq1PA_7h8g.JPEG/SE-3629a32e-1a71-4758-b2ae-5b641ded54d9.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfMjg2/MDAxNzgzMzg3MDI4NTg0.bogt_tTf8v9CZaZzYfMfWD5q2Vf4FlnCDTbFSyiCSNIg.TOZI5j_KfC8Lfq8_UUnXJxs5BJXzRHkkZqNq1PA_7h8g.JPEG/SE-3629a32e-1a71-4758-b2ae-5b641ded54d9.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfMjMz/MDAxNzgzMzg2NjYxNzMx.sz0wI6gsoD7NnD9AjRaTFrvWlrQMpNwrpbmHVgZSUXgg.CjtVmHmKjVNv-wjFg8QofUHYDBwbPgsqeYwm00L3Glwg.JPEG/20260701_104628.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfMjMz/MDAxNzgzMzg2NjYxNzMx.sz0wI6gsoD7NnD9AjRaTFrvWlrQMpNwrpbmHVgZSUXgg.CjtVmHmKjVNv-wjFg8QofUHYDBwbPgsqeYwm00L3Glwg.JPEG/20260701_104628.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfODAg/MDAxNzgzMzg2NjYxNTEz.u4b6mK1N2caYhL8nu85E0quaWMyY1aAkTaqmC3jSPMkg.iZX55T0cJdf8m52UpcQkO8d0jrcDcfo-hVA3Re5grigg.JPEG/20260701_110828.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfODAg/MDAxNzgzMzg2NjYxNTEz.u4b6mK1N2caYhL8nu85E0quaWMyY1aAkTaqmC3jSPMkg.iZX55T0cJdf8m52UpcQkO8d0jrcDcfo-hVA3Re5grigg.JPEG/20260701_110828.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfMTYg/MDAxNzgzMzg2NjYxNzQ0.UC0WPDCo-z4yCUDTxMhxK-zLaDlQWxCjfJfNYgcuHVwg.lesEw6LafZkB-Mefr_TK947Fdq5C0V2g_WTOWUkMEOYg.JPEG/20260701_110833.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfMTYg/MDAxNzgzMzg2NjYxNzQ0.UC0WPDCo-z4yCUDTxMhxK-zLaDlQWxCjfJfNYgcuHVwg.lesEw6LafZkB-Mefr_TK947Fdq5C0V2g_WTOWUkMEOYg.JPEG/20260701_110833.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfMTY1/MDAxNzgzMzg2NjYxMzE2.8c4ZcQjrSmJ-c-MLTlrCFlvmISg42eutCCHSUtuSQCYg.go3T_ixzyI1W040PxnkdbvVnXzPQM8PDsYRHhj_qXW4g.JPEG/20260701_113544.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfMTY1/MDAxNzgzMzg2NjYxMzE2.8c4ZcQjrSmJ-c-MLTlrCFlvmISg42eutCCHSUtuSQCYg.go3T_ixzyI1W040PxnkdbvVnXzPQM8PDsYRHhj_qXW4g.JPEG/20260701_113544.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDdfMjE3/MDAxNzgzMzg2NjYzMjkw.bFRpN_q7uaXvEMYWY-gW0iEge2fy5y-e4iluFbnoByQg.WLCnrlsavltyNWkm84nbg6mNQqmb1-9GPS-MTQyajVMg.JPEG/1782898137596.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224339660912/15.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDdfMjE3/MDAxNzgzMzg2NjYzMjkw.bFRpN_q7uaXvEMYWY-gW0iEge2fy5y-e4iluFbnoByQg.WLCnrlsavltyNWkm84nbg6mNQqmb1-9GPS-MTQyajVMg.JPEG/1782898137596.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "a5b91bac-09d3-4a52-aa3d-b97a365c4c11",
+      "slug": "naver-224339660912",
+      "title": "올란도, 가속할 때 심해지는 떨림과 토크컨버터 수리",
+      "subtitle": "토크컨버터 손상으로 발생한 금속 분진이 미션 내부까지 유입된 사례. 내부 세척과 부품 교체를 함께 진행했습니다.",
+      "excerpt": "토크컨버터 손상으로 발생한 금속 분진이 미션 내부까지 유입된 사례. 내부 세척과 부품 교체를 함께 진행했습니다.",
+      "vehicle_brand": "쉐보레",
+      "manufacturer": "쉐보레",
+      "vehicle_model": "올란도",
+      "model_year": "",
+      "mileage": "",
+      "fuel_type": "디젤",
+      "transmission_type": "6단 자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "저속 및 고속 주행에서 가속 페달을 깊게 밟으면 심한 진동과 떨림이 발생했습니다.",
+      "diagnosis": "시운전에서 토크컨버터 문제를 의심했고, 오일과 내부 부품에서 다량의 금속 분진 및 디스크·플레이트 손상을 확인했습니다.",
+      "cause": "",
+      "repair_process": "시운전·오일 확인 → 미션 완전 분해 → 내부 세척 및 손상 부품 교체 → 토크컨버터 교환 → 오일 주입·시운전",
+      "replaced_parts": "토크컨버터, 손상된 디스크·플레이트, 35R 클러치",
+      "work_summary": "수리 후 시운전에서 기존에 나타났던 가속 시 심한 떨림이 재현되지 않았습니다. 마무리 점검을 거쳐 출고했습니다.",
+      "detailed_content": "가속할 때 발생하는 진동\n저속과 고속 영역에서 가속할 때 심한 떨림이 나타나 입고됐습니다. 시운전과 배출 오일 상태를 확인하며 토크컨버터 및 미션 내부를 점검했습니다.\n\n금속 분진과 내부 손상 확인\n오토미션을 완전히 분해했습니다. 내부 부품에 금속 분진이 묻어 있었고, 손상된 디스크와 플레이트를 확인했습니다.\n\n내부 세척과 부품 교체\n손상 부품을 교체하고 케이스 내부의 이물질을 세척했습니다. 원문에 기록된 예방정비 항목인 35R 클러치 교체도 함께 진행했습니다.\n\n토크컨버터 교환 후 검증\n수리한 미션에 교환용 토크컨버터를 결합해 재장착했습니다. 전용 오일을 주입하고 시운전해 기존 가속 시 떨림이 재현되지 않는 것을 확인했습니다.",
+      "content_html": "<h2>가속할 때 발생하는 진동</h2><p>저속과 고속 영역에서 가속할 때 심한 떨림이 나타나 입고됐습니다. 시운전과 배출 오일 상태를 확인하며 토크컨버터 및 미션 내부를 점검했습니다.</p><figure><img src=\"/blog-imports/224339660912/04.jpg\" alt=\"쉐보레 올란도 — 가속할 때 발생하는 진동\" loading=\"lazy\" /></figure><h2>금속 분진과 내부 손상 확인</h2><p>오토미션을 완전히 분해했습니다. 내부 부품에 금속 분진이 묻어 있었고, 손상된 디스크와 플레이트를 확인했습니다.</p><figure><img src=\"/blog-imports/224339660912/08.jpg\" alt=\"쉐보레 올란도 — 금속 분진과 내부 손상 확인\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224339660912/09.jpg\" alt=\"쉐보레 올란도 — 금속 분진과 내부 손상 확인\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224339660912/11.jpg\" alt=\"쉐보레 올란도 — 금속 분진과 내부 손상 확인\" loading=\"lazy\" /></figure><h2>내부 세척과 부품 교체</h2><p>손상 부품을 교체하고 케이스 내부의 이물질을 세척했습니다. 원문에 기록된 예방정비 항목인 35R 클러치 교체도 함께 진행했습니다.</p><figure><img src=\"/blog-imports/224339660912/13.jpg\" alt=\"쉐보레 올란도 — 내부 세척과 부품 교체\" loading=\"lazy\" /></figure><h2>토크컨버터 교환 후 검증</h2><p>수리한 미션에 교환용 토크컨버터를 결합해 재장착했습니다. 전용 오일을 주입하고 시운전해 기존 가속 시 떨림이 재현되지 않는 것을 확인했습니다.</p><figure><img src=\"/blog-imports/224339660912/15.jpg\" alt=\"쉐보레 올란도 — 토크컨버터 교환 후 검증\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224339660912\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224339660912/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "쉐보레",
+        "올란도"
+      ],
+      "symptom_tags": [
+        "가속 시 떨림",
+        "주행 진동"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224339660912",
+      "created_at": "2026-07-07T22:27:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 3,
+      "seo_title": "올란도, 가속할 때 심해지는 떨림과 토크컨버터 수리",
+      "seo_description": "토크컨버터 손상으로 발생한 금속 분진이 미션 내부까지 유입된 사례. 내부 세척과 부품 교체를 함께 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224338471643",
+      "url": "https://blog.naver.com/97ga074/224338471643",
+      "title": "부산 알페온 EL300 오토미션 수리",
+      "publishedAt": "2026-07-06T21:27:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTkx/MDAxNzgzMzA4NTQ1Njk2.aCK8rqM3LaFmvyMYyzHPbzAo9DdQh6xxvKSmFooqqrIg.XY39OgcLTPbfEcqx_TAxrlmCOcNH9vSgyIDpTS0pRmwg.JPEG/SE-c9fe03d5-0c79-48e3-81ca-2c9d2dca2d24.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTkx/MDAxNzgzMzA4NTQ1Njk2.aCK8rqM3LaFmvyMYyzHPbzAo9DdQh6xxvKSmFooqqrIg.XY39OgcLTPbfEcqx_TAxrlmCOcNH9vSgyIDpTS0pRmwg.JPEG/SE-c9fe03d5-0c79-48e3-81ca-2c9d2dca2d24.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjEw/MDAxNzgzMzExNzkxMzk4.VWFRwJ-T1xtDKJ2zFnpirtJ7delVuOlFgGdJGYnsRogg.HIkKdi3CGnNaRjgkaa9PlfxID1JxgPPHi2J2H4CiX7Ag.JPEG/SE-95079a2a-deff-4ee2-a5fb-c5167f64618a.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjEw/MDAxNzgzMzExNzkxMzk4.VWFRwJ-T1xtDKJ2zFnpirtJ7delVuOlFgGdJGYnsRogg.HIkKdi3CGnNaRjgkaa9PlfxID1JxgPPHi2J2H4CiX7Ag.JPEG/SE-95079a2a-deff-4ee2-a5fb-c5167f64618a.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjkw/MDAxNzgzMzA4MzQ1MTI3.iTFwqmbh6i-PzuAIpFNJkvmRNCN9NNo4ZM2OTUtuUw8g.pTXeF1pE2W9wcvbkZtV8g9WyGDUWWUq3JBaCNhFXsdkg.JPEG/20170731_161545.jpg",
+          "width": 2656,
+          "height": 1494,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjkw/MDAxNzgzMzA4MzQ1MTI3.iTFwqmbh6i-PzuAIpFNJkvmRNCN9NNo4ZM2OTUtuUw8g.pTXeF1pE2W9wcvbkZtV8g9WyGDUWWUq3JBaCNhFXsdkg.JPEG/20170731_161545.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTM4/MDAxNzgzMzA4MzQ0MTc4.by4zELcclnUTsMXH41WaCrgza7ldZkzrq-99ux3IUugg.MVovDzbMucY1TKEx0wEGv6PLUKVe4_HgxFbK3UpK9mYg.JPEG/20170801_161745.jpg",
+          "width": 2656,
+          "height": 1494,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTM4/MDAxNzgzMzA4MzQ0MTc4.by4zELcclnUTsMXH41WaCrgza7ldZkzrq-99ux3IUugg.MVovDzbMucY1TKEx0wEGv6PLUKVe4_HgxFbK3UpK9mYg.JPEG/20170801_161745.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTA3/MDAxNzgzMzA4MzQ2Mzkz.9XMQVGIKZRsreRJXyKp-oVunRpKkliqE1p-bRApciWEg.A3aMx6mYfe0zqL0E05A2NZ1oMfooE7u0ZIO4oHbFHogg.JPEG/20181114_141515.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTA3/MDAxNzgzMzA4MzQ2Mzkz.9XMQVGIKZRsreRJXyKp-oVunRpKkliqE1p-bRApciWEg.A3aMx6mYfe0zqL0E05A2NZ1oMfooE7u0ZIO4oHbFHogg.JPEG/20181114_141515.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjMx/MDAxNzgzMzA4MzQ4MjI2.E7ZPvvvWmpOHRa7Y8ZHoM6YYWllXoqy2GLZFgDmhRm4g.cEYDP_k0q6P__fg7JzYjs6m52AmEsh9SC5zHffXCTI0g.JPEG/20181029_163217.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjMx/MDAxNzgzMzA4MzQ4MjI2.E7ZPvvvWmpOHRa7Y8ZHoM6YYWllXoqy2GLZFgDmhRm4g.cEYDP_k0q6P__fg7JzYjs6m52AmEsh9SC5zHffXCTI0g.JPEG/20181029_163217.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjAy/MDAxNzgzMzA4MzQ4MDQ2.vlclvO8fItPmRb17y9pClAEZv9cs1mSQ-ETooW6_NyEg.OrqcRCf4wBpgcOFtYKONgE8CIm0iq9HE2NLSNYiHFQAg.JPEG/1603196332226-12.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "",
+          "localPath": "/blog-imports/224338471643/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDZfMjAy/MDAxNzgzMzA4MzQ4MDQ2.vlclvO8fItPmRb17y9pClAEZv9cs1mSQ-ETooW6_NyEg.OrqcRCf4wBpgcOFtYKONgE8CIm0iq9HE2NLSNYiHFQAg.JPEG/1603196332226-12.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "5f66ba3f-f32a-486b-a7a5-8f9575228a6d",
+      "slug": "naver-224338471643",
+      "title": "알페온 EL300, 웨이브 스틸 파손과 미션 내부 정비",
+      "subtitle": "156,435km를 주행한 알페온 EL300. 미션 내부 파손 부품을 교체하고 주행 진동과 관련된 등속 조인트도 정비했습니다.",
+      "excerpt": "156,435km를 주행한 알페온 EL300. 미션 내부 파손 부품을 교체하고 주행 진동과 관련된 등속 조인트도 정비했습니다.",
+      "vehicle_brand": "한국GM",
+      "manufacturer": "한국GM",
+      "vehicle_model": "알페온 EL300",
+      "model_year": "",
+      "mileage": "156,435km",
+      "fuel_type": "",
+      "transmission_type": "6단 자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "오토미션 수리와 주행 중 진동 점검을 진행했습니다.",
+      "diagnosis": "분해 검사에서 후진 웨이브 스틸 및 유성 캐리어 파손을 확인했습니다. 주행 진동과 관련해 등속 조인트도 점검했습니다.",
+      "cause": "",
+      "repair_process": "오일 배출·미션 탈거 → 파손 부품 확인 → 내부 부품·솔레노이드 교체 → 등속 조인트 교체 → 레벨링·시운전",
+      "replaced_parts": "유성 캐리어, 후진 웨이브 스틸, 디스크, 35R 클러치, 솔레노이드, 재생 등속 조인트",
+      "work_summary": "미션을 재장착하고 오일 레벨링을 진행했습니다. 조인트 교체 후 시운전에서 기존 진동이 느껴지지 않는 것을 확인했습니다.",
+      "detailed_content": "오일 상태 확인과 미션 탈거\n미션오일을 배출하면서 다량의 금속 분진을 확인했습니다. 내부 손상을 점검하기 위해 오토미션을 탈거하고 분해했습니다.\n\n파손 부품을 비교하고 교체\n후진 웨이브 스틸과 유성 캐리어의 파손을 확인했습니다. 신품과 기존 부품을 비교한 후 디스크와 35R 클러치 등 필요한 부품을 교체했습니다.\n\n솔레노이드와 조인트 정비\n솔레노이드 교체를 진행했습니다. 주행 중 진동과 관련해 등속 조인트를 재생품으로 교체하고 오토미션을 재장착했습니다.\n\n오일 레벨링과 최종 시운전\n전용 미션오일을 주입한 뒤 시동 상태에서 레벨링을 점검했습니다. 시운전에서 기존 주행 진동이 사라진 것을 확인하고 출고했습니다.",
+      "content_html": "<h2>오일 상태 확인과 미션 탈거</h2><p>미션오일을 배출하면서 다량의 금속 분진을 확인했습니다. 내부 손상을 점검하기 위해 오토미션을 탈거하고 분해했습니다.</p><figure><img src=\"/blog-imports/224338471643/04.jpg\" alt=\"한국GM 알페온 EL300 — 오일 상태 확인과 미션 탈거\" loading=\"lazy\" /></figure><h2>파손 부품을 비교하고 교체</h2><p>후진 웨이브 스틸과 유성 캐리어의 파손을 확인했습니다. 신품과 기존 부품을 비교한 후 디스크와 35R 클러치 등 필요한 부품을 교체했습니다.</p><figure><img src=\"/blog-imports/224338471643/10.jpg\" alt=\"한국GM 알페온 EL300 — 파손 부품을 비교하고 교체\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224338471643/11.jpg\" alt=\"한국GM 알페온 EL300 — 파손 부품을 비교하고 교체\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224338471643/12.jpg\" alt=\"한국GM 알페온 EL300 — 파손 부품을 비교하고 교체\" loading=\"lazy\" /></figure><h2>솔레노이드와 조인트 정비</h2><p>솔레노이드 교체를 진행했습니다. 주행 중 진동과 관련해 등속 조인트를 재생품으로 교체하고 오토미션을 재장착했습니다.</p><figure><img src=\"/blog-imports/224338471643/13.jpg\" alt=\"한국GM 알페온 EL300 — 솔레노이드와 조인트 정비\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224338471643/14.jpg\" alt=\"한국GM 알페온 EL300 — 솔레노이드와 조인트 정비\" loading=\"lazy\" /></figure><h2>오일 레벨링과 최종 시운전</h2><p>전용 미션오일을 주입한 뒤 시동 상태에서 레벨링을 점검했습니다. 시운전에서 기존 주행 진동이 사라진 것을 확인하고 출고했습니다.</p><p><a href=\"https://blog.naver.com/97ga074/224338471643\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224338471643/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "한국GM",
+        "알페온 EL300"
+      ],
+      "symptom_tags": [
+        "내부 부품 파손",
+        "주행 진동"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224338471643",
+      "created_at": "2026-07-06T21:27:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 4,
+      "seo_title": "알페온 EL300, 웨이브 스틸 파손과 미션 내부 정비",
+      "seo_description": "156,435km를 주행한 알페온 EL300. 미션 내부 파손 부품을 교체하고 주행 진동과 관련된 등속 조인트도 정비했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224333921830",
+      "url": "https://blog.naver.com/97ga074/224333921830",
+      "title": "부산 사상구 쏘나타 오토미션 토크컨버터 교환",
+      "publishedAt": "2026-07-02T10:27:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDFfMjE0/MDAxNzgyOTE2Mjc4OTkx.mu1ciV-YdFtL3FRzd5TQTzf9q3CxxV9OfyUMETzgrrIg.bZKsvauMjCyU4NrsQvXAesAa7TNe5yIiUwJqw0JJy7gg.JPEG/SE-e2009735-3fbd-413f-a035-51d73e187cd7.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224333921830/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDFfMjE0/MDAxNzgyOTE2Mjc4OTkx.mu1ciV-YdFtL3FRzd5TQTzf9q3CxxV9OfyUMETzgrrIg.bZKsvauMjCyU4NrsQvXAesAa7TNe5yIiUwJqw0JJy7gg.JPEG/SE-e2009735-3fbd-413f-a035-51d73e187cd7.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDFfODQg/MDAxNzgyOTE2Mjc2NTk0.EE5PIUzf6p-_-wANDjcpvsTW_fc_1Ky4nPgH8iJeCAgg.oyk0t1iwi5FQlPUxZXy18umr9SEXAxatW6EB4siy_oog.JPEG/SE-b2a86ae4-2e15-4367-8045-3e58f99dcd96.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224333921830/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDFfODQg/MDAxNzgyOTE2Mjc2NTk0.EE5PIUzf6p-_-wANDjcpvsTW_fc_1Ky4nPgH8iJeCAgg.oyk0t1iwi5FQlPUxZXy18umr9SEXAxatW6EB4siy_oog.JPEG/SE-b2a86ae4-2e15-4367-8045-3e58f99dcd96.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDFfMTYw/MDAxNzgyOTE2MTE0OTY4.HcGM5N3y_9fbjtIGJM2EMc-OfhRMlhJtB9BQ1o3Yz3og.zUkn7jDKjirtuZHuR8dcOe1DCb_rTGIcO2x5RkpNcacg.JPEG/KakaoTalk_20260701_183636057_03.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224333921830/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDFfMTYw/MDAxNzgyOTE2MTE0OTY4.HcGM5N3y_9fbjtIGJM2EMc-OfhRMlhJtB9BQ1o3Yz3og.zUkn7jDKjirtuZHuR8dcOe1DCb_rTGIcO2x5RkpNcacg.JPEG/KakaoTalk_20260701_183636057_03.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDFfMTY4/MDAxNzgyOTE2MTE0OTE0.dcFWZ6JaN0x_dnwSJz-qPITmT4crWEZSA5CX84gllyUg.6BkeLgUorEoXitkqNoaH0wkwvPBiFXVn-itLQ-VaeVIg.JPEG/KakaoTalk_20260701_183636057_05.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224333921830/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDFfMTY4/MDAxNzgyOTE2MTE0OTE0.dcFWZ6JaN0x_dnwSJz-qPITmT4crWEZSA5CX84gllyUg.6BkeLgUorEoXitkqNoaH0wkwvPBiFXVn-itLQ-VaeVIg.JPEG/KakaoTalk_20260701_183636057_05.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDFfMjQ3/MDAxNzgyOTE2MTE0ODY5.7l_z9aJqjV2aAIfFMwwGt_pn7h6pWug5Wn9ODk2dVQMg.4hJClnD4s0_qpqdWXihv9cH4wF2Pbr5HAsqs1_O0aJIg.JPEG/KakaoTalk_20260701_183636057_04.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224333921830/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDFfMjQ3/MDAxNzgyOTE2MTE0ODY5.7l_z9aJqjV2aAIfFMwwGt_pn7h6pWug5Wn9ODk2dVQMg.4hJClnD4s0_qpqdWXihv9cH4wF2Pbr5HAsqs1_O0aJIg.JPEG/KakaoTalk_20260701_183636057_04.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA3MDFfNjMg/MDAxNzgyOTE2MTE0OTIx.5DBk64nORmhktAgqtryDUZGAV36I6j91BlSYnC8uvpEg.h7xylXHAK7Fq7q9lhE6PPT6zxQ1I_ZadLWcBpsuOWJ8g.JPEG/KakaoTalk_20260701_183636057_06.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224333921830/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA3MDFfNjMg/MDAxNzgyOTE2MTE0OTIx.5DBk64nORmhktAgqtryDUZGAV36I6j91BlSYnC8uvpEg.h7xylXHAK7Fq7q9lhE6PPT6zxQ1I_ZadLWcBpsuOWJ8g.JPEG/KakaoTalk_20260701_183636057_06.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "111c4287-5770-4e65-a0d8-b82883fd6c36",
+      "slug": "naver-224333921830",
+      "title": "쏘나타 택시, 변속 충격으로 토크컨버터 교환",
+      "subtitle": "108,392km를 주행한 쏘나타 택시. 토크컨버터를 신품으로 교환하고 시운전과 진단기로 결과를 확인했습니다.",
+      "excerpt": "108,392km를 주행한 쏘나타 택시. 토크컨버터를 신품으로 교환하고 시운전과 진단기로 결과를 확인했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "쏘나타",
+      "model_year": "",
+      "mileage": "108,392km",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "변속 충격으로 토크컨버터 교환을 의뢰한 쏘나타 택시입니다.",
+      "diagnosis": "변속 충격에 대한 토크컨버터 교환 작업을 진행했습니다.",
+      "cause": "",
+      "repair_process": "엔진 지지 → 미션 탈거 → 토크컨버터 신·구품 비교 → 신품 장착 → 시운전 및 진단기 확인",
+      "replaced_parts": "토크컨버터 신품",
+      "work_summary": "교환 후 시운전에서 기존 증상이 사라진 것을 확인했습니다. 진단기에서도 이상이 없는 것을 확인하고 출고했습니다.",
+      "detailed_content": "변속 충격으로 입고\n쏘나타 택시의 변속 충격으로 토크컨버터 교환 작업을 진행했습니다. 엔진을 지지한 뒤 오토미션을 차량에서 분리했습니다.\n\n신품 토크컨버터 장착\n기존 토크컨버터와 신품을 비교하고 교환했습니다. 이후 미션을 다시 조립해 차량에 장착했습니다.\n\n시운전과 진단기 확인\n도로 시운전에서 변속 충격이 사라진 것을 확인했습니다. 진단기로 마지막 확인까지 마친 후 출고했습니다.",
+      "content_html": "<h2>변속 충격으로 입고</h2><p>쏘나타 택시의 변속 충격으로 토크컨버터 교환 작업을 진행했습니다. 엔진을 지지한 뒤 오토미션을 차량에서 분리했습니다.</p><figure><img src=\"/blog-imports/224333921830/04.jpg\" alt=\"현대 쏘나타 — 변속 충격으로 입고\" loading=\"lazy\" /></figure><h2>신품 토크컨버터 장착</h2><p>기존 토크컨버터와 신품을 비교하고 교환했습니다. 이후 미션을 다시 조립해 차량에 장착했습니다.</p><figure><img src=\"/blog-imports/224333921830/07.jpg\" alt=\"현대 쏘나타 — 신품 토크컨버터 장착\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224333921830/08.jpg\" alt=\"현대 쏘나타 — 신품 토크컨버터 장착\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224333921830/09.jpg\" alt=\"현대 쏘나타 — 신품 토크컨버터 장착\" loading=\"lazy\" /></figure><h2>시운전과 진단기 확인</h2><p>도로 시운전에서 변속 충격이 사라진 것을 확인했습니다. 진단기로 마지막 확인까지 마친 후 출고했습니다.</p><figure><img src=\"/blog-imports/224333921830/10.jpg\" alt=\"현대 쏘나타 — 시운전과 진단기 확인\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224333921830\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224333921830/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "쏘나타"
+      ],
+      "symptom_tags": [
+        "변속 충격"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224333921830",
+      "created_at": "2026-07-02T10:27:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 5,
+      "seo_title": "쏘나타 택시, 변속 충격으로 토크컨버터 교환",
+      "seo_description": "108,392km를 주행한 쏘나타 택시. 토크컨버터를 신품으로 교환하고 시운전과 진단기로 결과를 확인했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224332651466",
+      "url": "https://blog.naver.com/97ga074/224332651466",
+      "title": "부산 강서구 푸조 3008 GT 2.0 디젤, 흡기클리닝, 인젝터클리닝",
+      "publishedAt": "2026-07-01T09:03:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjA0/MDAxNzgyODIzNzUyNzc2.EuayWQ9069AVSpNx7UIc7MviDnouvxi3JG8EvGLii9wg.URv1Zac1aUE3Gdw9MOSFDmNYdG7nDhx4FS4QHJFPVL4g.JPEG/SE-f1a494b2-dfaf-41a0-a7a2-f9c168ecd939.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjA0/MDAxNzgyODIzNzUyNzc2.EuayWQ9069AVSpNx7UIc7MviDnouvxi3JG8EvGLii9wg.URv1Zac1aUE3Gdw9MOSFDmNYdG7nDhx4FS4QHJFPVL4g.JPEG/SE-f1a494b2-dfaf-41a0-a7a2-f9c168ecd939.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMTE4/MDAxNzgyODIzNjA5NjMz.r4t6-ckP2Avu1C7kAZI2gURiHDCRTG5BSw546xkSsD8g.Ase84FD8-nT6BaVlpoFvXmkt5gVA9kTihiyegKQj0Bgg.JPEG/20260629_124134.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMTE4/MDAxNzgyODIzNjA5NjMz.r4t6-ckP2Avu1C7kAZI2gURiHDCRTG5BSw546xkSsD8g.Ase84FD8-nT6BaVlpoFvXmkt5gVA9kTihiyegKQj0Bgg.JPEG/20260629_124134.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMTIg/MDAxNzgyODIzNjE0Nzc1.hQipvZl1AOSN6cTsy4_Dd1wTbF0a_Wa-2RmIPL5B41Qg.FCkyby9N5JQctTrmjH367wziFU3uUt9HxiaRBM6EVnYg.JPEG/1782805414688.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMTIg/MDAxNzgyODIzNjE0Nzc1.hQipvZl1AOSN6cTsy4_Dd1wTbF0a_Wa-2RmIPL5B41Qg.FCkyby9N5JQctTrmjH367wziFU3uUt9HxiaRBM6EVnYg.JPEG/1782805414688.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjgz/MDAxNzgyODIzNjExMTQw.Rue2R-0UKIZ2GPbaVU42_VzIwJSN8sMUCqOomCBSU8wg.RhRSJCAIAj5xHk1f9oqqbrkJ1ZkIlFZAw8JcHdTyr3Yg.JPEG/20260630_110349.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjgz/MDAxNzgyODIzNjExMTQw.Rue2R-0UKIZ2GPbaVU42_VzIwJSN8sMUCqOomCBSU8wg.RhRSJCAIAj5xHk1f9oqqbrkJ1ZkIlFZAw8JcHdTyr3Yg.JPEG/20260630_110349.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjA2/MDAxNzgyODIzNjA5OTMz.wiswnjMzkxBprRL_j9ETwPyV13rzDJfgUOje1uK_F3Yg.c2E9FNR5BqrxylyBKDZFI9A9s3Xt8VwtPSOcNgJeLakg.JPEG/20260629_133806.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjA2/MDAxNzgyODIzNjA5OTMz.wiswnjMzkxBprRL_j9ETwPyV13rzDJfgUOje1uK_F3Yg.c2E9FNR5BqrxylyBKDZFI9A9s3Xt8VwtPSOcNgJeLakg.JPEG/20260629_133806.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfNjEg/MDAxNzgyODIzNjE0MDEw.bSocAUOAo2GdcAHn8cI2udICVScKUt2YWrcRqwhKmLYg.QdhBMMQzb3Y85Mmx8kOlfwCt78QIKk3WClQbiH5RMhYg.JPEG/20260630_145040.jpg",
+          "width": 3000,
+          "height": 4000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/15.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfNjEg/MDAxNzgyODIzNjE0MDEw.bSocAUOAo2GdcAHn8cI2udICVScKUt2YWrcRqwhKmLYg.QdhBMMQzb3Y85Mmx8kOlfwCt78QIKk3WClQbiH5RMhYg.JPEG/20260630_145040.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjkx/MDAxNzgyODIzNjE0MjMy.kCYHkwpyEHM9uRVsQwZFBLFyPN8B0YK-VSZZB3k7a0Eg.3LISwa1UpvHMWuXw2dhN0VJ9StVnlAB46P1oTr73zpEg.JPEG/20260630_145056.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjkx/MDAxNzgyODIzNjE0MjMy.kCYHkwpyEHM9uRVsQwZFBLFyPN8B0YK-VSZZB3k7a0Eg.3LISwa1UpvHMWuXw2dhN0VJ9StVnlAB46P1oTr73zpEg.JPEG/20260630_145056.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMTIw/MDAxNzgyODIzNjEyNzkz.OEOteiexpNhXD8AB23w4akn4vk8_Hadx2ctffeWA5uAg.42FsZ4DvrjOSYpsJ50Z0gjX9knEUHM1d-O4na5pAcgwg.JPEG/20260630_143436.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/17.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMTIw/MDAxNzgyODIzNjEyNzkz.OEOteiexpNhXD8AB23w4akn4vk8_Hadx2ctffeWA5uAg.42FsZ4DvrjOSYpsJ50Z0gjX9knEUHM1d-O4na5pAcgwg.JPEG/20260630_143436.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjAy/MDAxNzgyODIzNjE0NDM1.0joMVLIV84kKkyhJRDuHIHy-emi5AMt1xrapxcbqLwkg.y3dwmXfZgSHZ1eQUmd2RzNizAi6pzML2lExPV-YP21Eg.JPEG/20260630_153750.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224332651466/18.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MzBfMjAy/MDAxNzgyODIzNjE0NDM1.0joMVLIV84kKkyhJRDuHIHy-emi5AMt1xrapxcbqLwkg.y3dwmXfZgSHZ1eQUmd2RzNizAi6pzML2lExPV-YP21Eg.JPEG/20260630_153750.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "39a78cf0-c3b9-45c2-ae9e-e0844dde1d03",
+      "slug": "naver-224332651466",
+      "title": "푸조 3008 GT, 흡기 카본과 고착된 인젝터 정비",
+      "subtitle": "6만 km 미만에서도 확인된 흡기 카본과 인젝터 홀 부식. 고착된 인젝터를 분리하고 동와셔를 교체해 마무리했습니다.",
+      "excerpt": "6만 km 미만에서도 확인된 흡기 카본과 인젝터 홀 부식. 고착된 인젝터를 분리하고 동와셔를 교체해 마무리했습니다.",
+      "vehicle_brand": "푸조",
+      "manufacturer": "푸조",
+      "vehicle_model": "3008 GT 2.0 BlueHDi",
+      "model_year": "2018",
+      "mileage": "59,180km",
+      "fuel_type": "디젤",
+      "transmission_type": "EAT8 8단 자동변속기",
+      "service_id": "60fd5e9f-4995-4a77-ab0b-7a20f9c4a8c7",
+      "service_category": "인젝터 클리닝",
+      "symptoms": "흡기와 인젝터 클리닝을 의뢰한 2018년식 푸조 3008 GT입니다.",
+      "diagnosis": "흡기와 스로틀바디에 많은 카본이 쌓여 있었고, 인젝터 홀의 부식으로 인젝터가 고착된 상태였습니다.",
+      "cause": "",
+      "repair_process": "흡기 부품 탈거·세척 → 고착 인젝터 분리 → 홀과 몸체 세척 → 동와셔 교체 → 에어 빼기·진단·시운전",
+      "replaced_parts": "인젝터 동와셔",
+      "work_summary": "동와셔를 교체해 인젝터를 재장착했습니다. 진단기 세팅과 연료라인 에어 빼기, 약 30분의 고속도로 주행 후 마무리 점검을 진행했습니다.",
+      "detailed_content": "흡기 내부 오염 확인\n59,180km를 주행한 푸조 3008 GT입니다. 탈거한 흡기 매니폴드와 스로틀바디에서 많은 카본과 슬러지를 확인했습니다.\n\n흡기 부품 전용 세척\n매니폴드와 스로틀바디, 파이프를 전용 세척 장비로 세척했습니다. 세척 상태를 확인한 후 차량에 다시 장착했습니다.\n\n고착된 인젝터와 홀 정리\n인젝터 홀 내부 부식으로 분리가 어려워 특수 공구를 이용했습니다. 홀과 인젝터 몸체를 세척하고, 동와셔 접촉 부위를 확인한 뒤 작업 상태를 차주에게 설명했습니다.\n\n동와셔 교체와 최종 점검\n신품 동와셔를 장착한 뒤 에어 빼기와 진단기 세팅을 진행했습니다. 약 30분간 고속도로를 주행하고 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>흡기 내부 오염 확인</h2><p>59,180km를 주행한 푸조 3008 GT입니다. 탈거한 흡기 매니폴드와 스로틀바디에서 많은 카본과 슬러지를 확인했습니다.</p><figure><img src=\"/blog-imports/224332651466/04.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 흡기 내부 오염 확인\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224332651466/06.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 흡기 내부 오염 확인\" loading=\"lazy\" /></figure><h2>흡기 부품 전용 세척</h2><p>매니폴드와 스로틀바디, 파이프를 전용 세척 장비로 세척했습니다. 세척 상태를 확인한 후 차량에 다시 장착했습니다.</p><figure><img src=\"/blog-imports/224332651466/10.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 흡기 부품 전용 세척\" loading=\"lazy\" /></figure><h2>고착된 인젝터와 홀 정리</h2><p>인젝터 홀 내부 부식으로 분리가 어려워 특수 공구를 이용했습니다. 홀과 인젝터 몸체를 세척하고, 동와셔 접촉 부위를 확인한 뒤 작업 상태를 차주에게 설명했습니다.</p><figure><img src=\"/blog-imports/224332651466/14.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 고착된 인젝터와 홀 정리\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224332651466/15.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 고착된 인젝터와 홀 정리\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224332651466/16.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 고착된 인젝터와 홀 정리\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224332651466/17.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 고착된 인젝터와 홀 정리\" loading=\"lazy\" /></figure><h2>동와셔 교체와 최종 점검</h2><p>신품 동와셔를 장착한 뒤 에어 빼기와 진단기 세팅을 진행했습니다. 약 30분간 고속도로를 주행하고 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224332651466/18.jpg\" alt=\"푸조 3008 GT 2.0 BlueHDi — 동와셔 교체와 최종 점검\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224332651466\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224332651466/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "푸조",
+        "3008 GT 2.0 BlueHDi"
+      ],
+      "symptom_tags": [
+        "카본 누적",
+        "인젝터 고착"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224332651466",
+      "created_at": "2026-07-01T09:03:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 6,
+      "seo_title": "푸조 3008 GT, 흡기 카본과 고착된 인젝터 정비",
+      "seo_description": "6만 km 미만에서도 확인된 흡기 카본과 인젝터 홀 부식. 고착된 인젝터를 분리하고 동와셔를 교체해 마무리했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224328823478",
+      "url": "https://blog.naver.com/97ga074/224328823478",
+      "title": "벤츠 Benz GLS400d 4MATIC 주행중 소음 앞데후 수리",
+      "publishedAt": "2026-06-28T09:00:00+09:00",
+      "editorNote": "차량 직접 입고·직접 시운전 사례가 아닙니다. 차량 사진은 원문에 명시된 창원 협력 정비소 제공 사진입니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjdfMjAg/MDAxNzgyNTIzNTA5OTAx.c6OqyOva99IKajRbYmXLi3Teoeu8hYgCbkiWTVitthwg.Reg3XfDJfxqMTVYV2cAjFU43qXgXrW3rEOAofmzrGncg.JPEG/SE-8bb600fe-98ae-46ab-90ae-28624901f3bb.jpg",
+          "width": 1920,
+          "height": 2560,
+          "alt": "",
+          "localPath": "/blog-imports/224328823478/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjdfMjAg/MDAxNzgyNTIzNTA5OTAx.c6OqyOva99IKajRbYmXLi3Teoeu8hYgCbkiWTVitthwg.Reg3XfDJfxqMTVYV2cAjFU43qXgXrW3rEOAofmzrGncg.JPEG/SE-8bb600fe-98ae-46ab-90ae-28624901f3bb.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjdfNjgg/MDAxNzgyNTIyMDc3MjM2.nbMNRX0awzyFRHhOoesbTj8iOnCHjfEd2zTN4ry4w64g.UejaFHb6WemPTpxX-XGCK0mNWfE6tk8OB6IwyfVGDYcg.JPEG/20260610_102412.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224328823478/02.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjdfNjgg/MDAxNzgyNTIyMDc3MjM2.nbMNRX0awzyFRHhOoesbTj8iOnCHjfEd2zTN4ry4w64g.UejaFHb6WemPTpxX-XGCK0mNWfE6tk8OB6IwyfVGDYcg.JPEG/20260610_102412.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjdfMjE5/MDAxNzgyNTIyMDc2ODY4.3lvZWH3LO5qDD_a78nXa7x5lxdgGc9bILf5AUDQHSVgg.1T7_ISlHewaMzNeFxvluiNrRPMDU7zBL0NioyadjNXog.JPEG/20260611_141221.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "localPath": "/blog-imports/224328823478/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjdfMjE5/MDAxNzgyNTIyMDc2ODY4.3lvZWH3LO5qDD_a78nXa7x5lxdgGc9bILf5AUDQHSVgg.1T7_ISlHewaMzNeFxvluiNrRPMDU7zBL0NioyadjNXog.JPEG/20260611_141221.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "d51e68cd-99ed-437f-a2d3-befda17d64b1",
+      "slug": "naver-224328823478",
+      "title": "벤츠 GLS400d, 주행 중 웅 하는 소음과 앞 디퍼런셜 수리",
+      "subtitle": "차량 대신 앞 디퍼런셜을 전달받아 진행한 수리. 베어링 손상을 확인하고 교체·조립한 뒤 협력 정비소에서 주행 결과를 확인했습니다.",
+      "excerpt": "차량 대신 앞 디퍼런셜을 전달받아 진행한 수리. 베어링 손상을 확인하고 교체·조립한 뒤 협력 정비소에서 주행 결과를 확인했습니다.",
+      "vehicle_brand": "벤츠",
+      "manufacturer": "벤츠",
+      "vehicle_model": "GLS400d 4MATIC",
+      "model_year": "2022",
+      "mileage": "",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "61f7a3ce-2124-4b1a-ad9f-314e28f56239",
+      "service_category": "트랜스퍼 케이스·디퍼런셜",
+      "symptoms": "주행 중 웅 하는 소음이 계속돼 협력 정비소에서 앞 디퍼런셜 수리를 의뢰했습니다.",
+      "diagnosis": "전달받은 디퍼런셜을 분해해 작은 피니언 기어 베어링 손상을 확인했습니다.",
+      "cause": "",
+      "repair_process": "디퍼런셜 부품 입고 → 분해 진단 → 신·구품 비교 → 베어링·씰 교체 → 케이스 세척·조립 → 협력 정비소 전달",
+      "replaced_parts": "피니언 계통 베어링, 베벨 기어 베어링, 사이드 베어링, 오일 씰",
+      "work_summary": "수리한 앞 디퍼런셜을 창원 협력 정비소에 전달했습니다. 이후 해당 정비소로부터 소음 없이 주행된다는 결과를 전달받았습니다.",
+      "detailed_content": "협력 정비소의 부품 수리 의뢰\n2022년식 벤츠 GLS400d 4MATIC의 주행 소음으로 창원 정비소에서 연락을 받았습니다. 차량이 직접 입고된 사례가 아니라 앞 디퍼런셜을 전달받아 정비한 사례입니다. 아래 차량 사진은 원문에 실린 협력 정비소 제공 사진입니다.\n\n베어링 손상 확인\n디퍼런셜을 분해한 결과 작은 피니언 기어 베어링의 손상을 확인했습니다. 신품과 기존 부품을 비교하고 관련 베어링 및 오일 씰 교체를 진행했습니다.\n\n세척·조립 후 전달\n케이스를 세척하고 부품 조립과 실링 작업을 마무리했습니다. 수리품을 협력 정비소에 전달했고, 이후 소음 없이 주행된다는 결과를 전달받았습니다.",
+      "content_html": "<h2>협력 정비소의 부품 수리 의뢰</h2><p>2022년식 벤츠 GLS400d 4MATIC의 주행 소음으로 창원 정비소에서 연락을 받았습니다. 차량이 직접 입고된 사례가 아니라 앞 디퍼런셜을 전달받아 정비한 사례입니다. 아래 차량 사진은 원문에 실린 협력 정비소 제공 사진입니다.</p><figure><img src=\"/blog-imports/224328823478/01.jpg\" alt=\"벤츠 GLS400d 4MATIC — 협력 정비소의 부품 수리 의뢰\" loading=\"lazy\" /></figure><h2>베어링 손상 확인</h2><p>디퍼런셜을 분해한 결과 작은 피니언 기어 베어링의 손상을 확인했습니다. 신품과 기존 부품을 비교하고 관련 베어링 및 오일 씰 교체를 진행했습니다.</p><figure><img src=\"/blog-imports/224328823478/02.jpg\" alt=\"벤츠 GLS400d 4MATIC — 베어링 손상 확인\" loading=\"lazy\" /></figure><h2>세척·조립 후 전달</h2><p>케이스를 세척하고 부품 조립과 실링 작업을 마무리했습니다. 수리품을 협력 정비소에 전달했고, 이후 소음 없이 주행된다는 결과를 전달받았습니다.</p><p><a href=\"https://blog.naver.com/97ga074/224328823478\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224328823478/03.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "벤츠",
+        "GLS400d 4MATIC"
+      ],
+      "symptom_tags": [
+        "주행 소음",
+        "디퍼런셜"
+      ],
+      "general_tags": [
+        "트랜스퍼 케이스·디퍼런셜",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224328823478",
+      "created_at": "2026-06-28T09:00:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 7,
+      "seo_title": "벤츠 GLS400d, 주행 중 웅 하는 소음과 앞 디퍼런셜 수리",
+      "seo_description": "차량 대신 앞 디퍼런셜을 전달받아 진행한 수리. 베어링 손상을 확인하고 교체·조립한 뒤 협력 정비소에서 주행 결과를 확인했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224328560046",
+      "url": "https://blog.naver.com/97ga074/224328560046",
+      "title": "모하비 디젤클리닝(흡기·DPF) '예방정비' 및 각종 센서 세척",
+      "publishedAt": "2026-06-27T09:00:00+09:00",
+      "editorNote": "산소센서는 차주 요청으로 세척했으며 원문에 재점등 가능성이 명시돼 있습니다. 출력 향상 수치는 측정값이 없어 기재하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjdfMzEg/MDAxNzgyNTE5Mjg1Mjk0.Sb_XtujA1rnOz5zw35VA3s6badqG4qXfrNC4ZBlj74Mg.1XJ5nomVXpsHsfDoMTOU8IkDfd3E0IN1EetvZs17O4kg.JPEG/SE-6b7db2bb-3361-41c2-8895-76819bb3cd02.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjdfMzEg/MDAxNzgyNTE5Mjg1Mjk0.Sb_XtujA1rnOz5zw35VA3s6badqG4qXfrNC4ZBlj74Mg.1XJ5nomVXpsHsfDoMTOU8IkDfd3E0IN1EetvZs17O4kg.JPEG/SE-6b7db2bb-3361-41c2-8895-76819bb3cd02.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTEw/MDAxNzgyNDU4MzU0Mjcx.8P96e_DhPRk7dflT1p7eT1V1slu3PJjxq8DZPvIhW5Eg.IlQA3s39fnBl4u1C7GdoMy2bb-Aj-KiWsxtRn-5pM30g.JPEG/1782372407618.jpg",
+          "width": 4032,
+          "height": 3025,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTEw/MDAxNzgyNDU4MzU0Mjcx.8P96e_DhPRk7dflT1p7eT1V1slu3PJjxq8DZPvIhW5Eg.IlQA3s39fnBl4u1C7GdoMy2bb-Aj-KiWsxtRn-5pM30g.JPEG/1782372407618.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTgx/MDAxNzgyNDU4MzUxMzIy.P6o5X9Db6rfF8C60NGQ3PizU5qgZKnzlOClHBF3xRawg.kUj7zfAYMPeb_maOFR9Mi7kIvRTwqXrZ25rktrhrQIUg.JPEG/1782372408008.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTgx/MDAxNzgyNDU4MzUxMzIy.P6o5X9Db6rfF8C60NGQ3PizU5qgZKnzlOClHBF3xRawg.kUj7zfAYMPeb_maOFR9Mi7kIvRTwqXrZ25rktrhrQIUg.JPEG/1782372408008.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMjMx/MDAxNzgyNDU4MzU2NjU4.nLvTolqNAJfxyhzVxcpRq-XOnlD1NVrO7p0DqWL7SMUg.0R2NOykL_ZVkMGrwvIeI0dPp_TWZ9YEJbnlK-hJFKIAg.JPEG/1782372408636.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/19.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMjMx/MDAxNzgyNDU4MzU2NjU4.nLvTolqNAJfxyhzVxcpRq-XOnlD1NVrO7p0DqWL7SMUg.0R2NOykL_ZVkMGrwvIeI0dPp_TWZ9YEJbnlK-hJFKIAg.JPEG/1782372408636.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTQy/MDAxNzgyNDU4MzU1MjQ1.14hYYsMVB8KEH2DagtOkw8tCRyPggbkoa0zBVVa9llYg.UzMFEcy5ZFO-bmXpvZmXumDPVYb93HWyAjAurEn5uLEg.JPEG/1782372408494.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/21.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTQy/MDAxNzgyNDU4MzU1MjQ1.14hYYsMVB8KEH2DagtOkw8tCRyPggbkoa0zBVVa9llYg.UzMFEcy5ZFO-bmXpvZmXumDPVYb93HWyAjAurEn5uLEg.JPEG/1782372408494.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfNTAg/MDAxNzgyNDU4MzU1NDE3.z8DWgc10aYAPsX58pvwDINRqylGEBgW3K98_hqYLOQ8g.x7jy82VM1AMVfKinh_-Q9pyZaxvlwwBg68EoC7Jhzecg.JPEG/1782372408551.jpg",
+          "width": 3025,
+          "height": 4032,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/22.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfNTAg/MDAxNzgyNDU4MzU1NDE3.z8DWgc10aYAPsX58pvwDINRqylGEBgW3K98_hqYLOQ8g.x7jy82VM1AMVfKinh_-Q9pyZaxvlwwBg68EoC7Jhzecg.JPEG/1782372408551.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMjE3/MDAxNzgyNDU4MzU2OTI2.EpQPy6FCzBGEgDRriyxyPREiKdyeZGhpnqsPXyQRB_Yg.f4yEJmlzwMa8VVexze5x0KDYwDLzfeBzzQGErc9q0F4g.JPEG/1782372408668.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/25.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMjE3/MDAxNzgyNDU4MzU2OTI2.EpQPy6FCzBGEgDRriyxyPREiKdyeZGhpnqsPXyQRB_Yg.f4yEJmlzwMa8VVexze5x0KDYwDLzfeBzzQGErc9q0F4g.JPEG/1782372408668.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfOTQg/MDAxNzgyNDU4MzU3NDU1.rmJNW0326KgdVcMAzBvwT1f9qVb3orCyiUUBNwnTPrsg.BxOSldZnSdEKGFO7jouWZCrVKkI0_3NxC7E59dIC3Scg.JPEG/1782372408770.jpg",
+          "width": 4032,
+          "height": 3025,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/28.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfOTQg/MDAxNzgyNDU4MzU3NDU1.rmJNW0326KgdVcMAzBvwT1f9qVb3orCyiUUBNwnTPrsg.BxOSldZnSdEKGFO7jouWZCrVKkI0_3NxC7E59dIC3Scg.JPEG/1782372408770.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMjc5/MDAxNzgyNDU4MzU3NTA2.RP5BywwDYXZcWnVCd48W9m4h-ZPBPt6rQXUX6x6t8nwg.j0vgt3W0SdNUUvitOrdJ36XQnfwVkpjsKiNZg3hG-ccg.JPEG/1782372422595.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/30.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMjc5/MDAxNzgyNDU4MzU3NTA2.RP5BywwDYXZcWnVCd48W9m4h-ZPBPt6rQXUX6x6t8nwg.j0vgt3W0SdNUUvitOrdJ36XQnfwVkpjsKiNZg3hG-ccg.JPEG/1782372422595.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTUx/MDAxNzgyNDU4MzU4MTU3.GkPQjyb-1fo_Ci7JlFOvKLArLJ3b8f7aSstPGMuxJp8g.Zr8pNJijVKwcTkroyvk1oTmnSuIrFfDEFzvps8BNT4Ug.JPEG/1782372422671.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224328560046/31.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjZfMTUx/MDAxNzgyNDU4MzU4MTU3.GkPQjyb-1fo_Ci7JlFOvKLArLJ3b8f7aSstPGMuxJp8g.Zr8pNJijVKwcTkroyvk1oTmnSuIrFfDEFzvps8BNT4Ug.JPEG/1782372422671.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "553683a2-318a-4043-a988-00664d58493e",
+      "slug": "naver-224328560046",
+      "title": "모하비, 18만 km 흡기·DPF 예방정비와 센서 세척",
+      "subtitle": "188,378km 모하비의 흡기·DPF 예방정비. 센서 세척과 연료필터 교체를 함께 진행하고 산소센서 경고등의 재발 가능성도 안내했습니다.",
+      "excerpt": "188,378km 모하비의 흡기·DPF 예방정비. 센서 세척과 연료필터 교체를 함께 진행하고 산소센서 경고등의 재발 가능성도 안내했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "모하비",
+      "model_year": "",
+      "mileage": "188,378km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "8b322363-aca4-4eea-b4b4-581643ab0884",
+      "service_category": "DPF 클리닝",
+      "symptoms": "흡기·DPF 예방정비와 센서 세척을 의뢰했습니다. 산소센서 관련 경고등도 확인됐습니다.",
+      "diagnosis": "흡기에 많은 카본이 쌓여 있었습니다. 산소센서 경고등에 대해서는 교체를 권했으며, 재점등 가능성을 안내한 뒤 차주 요청에 따라 세척했습니다.",
+      "cause": "",
+      "repair_process": "흡기 탈거·세척 → 가스켓 교체 → 센서·EGR 세척 → 연료필터 교체 → DPF 탈거 세척 → 재장착·점검",
+      "replaced_parts": "흡기 가스켓, 연료필터",
+      "work_summary": "흡기와 DPF를 세척하고 관련 부품 정비를 마쳤습니다. 작업 부위를 점검한 후 차량을 인도했습니다. 산소센서 경고등의 영구 해소를 보장한 작업은 아닙니다.",
+      "detailed_content": "예방정비와 흡기 상태 확인\n188,378km를 주행한 모하비의 예방정비를 진행했습니다. 탈거한 흡기 내부에는 많은 카본 슬러지가 쌓여 있었습니다.\n\n흡기 세척과 가스켓 교체\n흡기 부품의 카본을 세척하고 신품 가스켓을 장착했습니다. EGR 밸브와 흡기 압력센서도 함께 세척했습니다.\n\n산소센서 안내와 연료필터 교체\n산소센서 관련 경고등에 대해서는 교체를 권했습니다. 차주 요청에 따라 재점등 가능성을 안내하고 세척을 진행했습니다. 연료필터도 교체했습니다.\n\nDPF 탈거 세척과 마무리\nDPF를 탈거해 전용 장비로 클리닝했습니다. 세척한 DPF를 다시 장착하고 작업한 부위를 최종 점검한 뒤 차량을 인도했습니다.",
+      "content_html": "<h2>예방정비와 흡기 상태 확인</h2><p>188,378km를 주행한 모하비의 예방정비를 진행했습니다. 탈거한 흡기 내부에는 많은 카본 슬러지가 쌓여 있었습니다.</p><figure><img src=\"/blog-imports/224328560046/06.jpg\" alt=\"기아 모하비 — 예방정비와 흡기 상태 확인\" loading=\"lazy\" /></figure><h2>흡기 세척과 가스켓 교체</h2><p>흡기 부품의 카본을 세척하고 신품 가스켓을 장착했습니다. EGR 밸브와 흡기 압력센서도 함께 세척했습니다.</p><figure><img src=\"/blog-imports/224328560046/12.jpg\" alt=\"기아 모하비 — 흡기 세척과 가스켓 교체\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224328560046/19.jpg\" alt=\"기아 모하비 — 흡기 세척과 가스켓 교체\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224328560046/28.jpg\" alt=\"기아 모하비 — 흡기 세척과 가스켓 교체\" loading=\"lazy\" /></figure><h2>산소센서 안내와 연료필터 교체</h2><p>산소센서 관련 경고등에 대해서는 교체를 권했습니다. 차주 요청에 따라 재점등 가능성을 안내하고 세척을 진행했습니다. 연료필터도 교체했습니다.</p><figure><img src=\"/blog-imports/224328560046/21.jpg\" alt=\"기아 모하비 — 산소센서 안내와 연료필터 교체\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224328560046/22.jpg\" alt=\"기아 모하비 — 산소센서 안내와 연료필터 교체\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224328560046/25.jpg\" alt=\"기아 모하비 — 산소센서 안내와 연료필터 교체\" loading=\"lazy\" /></figure><h2>DPF 탈거 세척과 마무리</h2><p>DPF를 탈거해 전용 장비로 클리닝했습니다. 세척한 DPF를 다시 장착하고 작업한 부위를 최종 점검한 뒤 차량을 인도했습니다.</p><figure><img src=\"/blog-imports/224328560046/30.jpg\" alt=\"기아 모하비 — DPF 탈거 세척과 마무리\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224328560046/31.jpg\" alt=\"기아 모하비 — DPF 탈거 세척과 마무리\" loading=\"lazy\" /></figure><p><a href=\"https://blog.naver.com/97ga074/224328560046\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224328560046/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "모하비"
+      ],
+      "symptom_tags": [
+        "예방정비",
+        "센서 경고등"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224328560046",
+      "created_at": "2026-06-27T09:00:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 8,
+      "seo_title": "모하비, 18만 km 흡기·DPF 예방정비와 센서 세척",
+      "seo_description": "188,378km 모하비의 흡기·DPF 예방정비. 센서 세척과 연료필터 교체를 함께 진행하고 산소센서 경고등의 재발 가능성도 안내했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "97ga074",
+      "postId": "224327070200",
+      "url": "https://blog.naver.com/97ga074/224327070200",
+      "title": "[부산 인젝터클리닝] 맥스크루즈 18만km 주행 후 엔진 떨림과 연비 저하가 심하다면? 사상 흡기클리닝 및 DPF클리닝 디젤 3종 세트 정석 시공",
+      "publishedAt": "2026-06-25T17:20:00+09:00",
+      "editorNote": "",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfMTg5/MDAxNzgyMzcyMzU5NjU0.GIYN6-EwRwBf8ro-6gB73jUz21mofz1sWE8_MyzZ5IUg.W4ckMNmcXtQ_nqo3fTlIInmcOKVnofXV7__B6BZ4LcMg.JPEG/KakaoTalk_20260625_160906867.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/02.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfMTg5/MDAxNzgyMzcyMzU5NjU0.GIYN6-EwRwBf8ro-6gB73jUz21mofz1sWE8_MyzZ5IUg.W4ckMNmcXtQ_nqo3fTlIInmcOKVnofXV7__B6BZ4LcMg.JPEG/KakaoTalk_20260625_160906867.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfNTgg/MDAxNzgyMzcyMzg0MzI5.XWAqaugko9Yn150mOBGrYpEamCY_fIppukfS258HZpAg.cJO3u4hMRgq4nyPAF-gRCRk_KOkXrY_NF5UJE6OAPDcg.JPEG/KakaoTalk_20260625_160911312.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfNTgg/MDAxNzgyMzcyMzg0MzI5.XWAqaugko9Yn150mOBGrYpEamCY_fIppukfS258HZpAg.cJO3u4hMRgq4nyPAF-gRCRk_KOkXrY_NF5UJE6OAPDcg.JPEG/KakaoTalk_20260625_160911312.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfMjYg/MDAxNzgyMzcyMzk2MzMx.jyKJIQcygldcLMbMLySxVcRAiVwlnNsqobjTY_wIea8g.CZTWvuIWm9kVLJuvMX137jhEMYnnXwb8o4QWkl9ecBMg.JPEG/KakaoTalk_20260625_160914855.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfMjYg/MDAxNzgyMzcyMzk2MzMx.jyKJIQcygldcLMbMLySxVcRAiVwlnNsqobjTY_wIea8g.CZTWvuIWm9kVLJuvMX137jhEMYnnXwb8o4QWkl9ecBMg.JPEG/KakaoTalk_20260625_160914855.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfMjIy/MDAxNzgyMzcyNDEyMzE1.KnfGIYiEHJhoUG9ikCz5ioDc4uZ-tWQGFzIFcMs8rFkg.BWuzdecWf7y8YP1UsqVEEfH-V3srYkzsEO4sPjcknkcg.JPEG/KakaoTalk_20260625_160919542.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfMjIy/MDAxNzgyMzcyNDEyMzE1.KnfGIYiEHJhoUG9ikCz5ioDc4uZ-tWQGFzIFcMs8rFkg.BWuzdecWf7y8YP1UsqVEEfH-V3srYkzsEO4sPjcknkcg.JPEG/KakaoTalk_20260625_160919542.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfODcg/MDAxNzgyMzcyNDEyMzMy.1FVCYejy_aw8VeXAKKweuqvo-MDBu9bkgECs9YeNPd0g.esCVHeE9EozQGzb6DP9U9AJHzoDqsZlqRSXxANNdcvIg.JPEG/KakaoTalk_20260625_160919542_02.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfODcg/MDAxNzgyMzcyNDEyMzMy.1FVCYejy_aw8VeXAKKweuqvo-MDBu9bkgECs9YeNPd0g.esCVHeE9EozQGzb6DP9U9AJHzoDqsZlqRSXxANNdcvIg.JPEG/KakaoTalk_20260625_160919542_02.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfNTMg/MDAxNzgyMzcyNDIwNTU3.XIQrW9z9YUln1Jp6VziAwT5uNTueMq0jHcEUWqqmkigg.GgM4yGIE3cws326ppgD9d6ew-xA3BeChp88pLyD_QB4g.JPEG/KakaoTalk_20260625_160923238.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfNTMg/MDAxNzgyMzcyNDIwNTU3.XIQrW9z9YUln1Jp6VziAwT5uNTueMq0jHcEUWqqmkigg.GgM4yGIE3cws326ppgD9d6ew-xA3BeChp88pLyD_QB4g.JPEG/KakaoTalk_20260625_160923238.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA2MjVfOTAg/MDAxNzgyMzcyNDIwNTc0.Hp9Sq6_GfsFhhfoJo_HXOa4HgJPZQbZZgHqtxwPFudgg.pNs_bSqezLdlwNmRIqZIP7xOp0X7CrMP6JD6zBLlNj0g.JPEG/KakaoTalk_20260625_160923238_02.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "localPath": "/blog-imports/224327070200/18.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA2MjVfOTAg/MDAxNzgyMzcyNDIwNTc0.Hp9Sq6_GfsFhhfoJo_HXOa4HgJPZQbZZgHqtxwPFudgg.pNs_bSqezLdlwNmRIqZIP7xOp0X7CrMP6JD6zBLlNj0g.JPEG/KakaoTalk_20260625_160923238_02.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "6d6c74c7-45ac-4e44-a995-ad3e1a0cccfc",
+      "slug": "naver-224327070200",
+      "title": "맥스크루즈, 흡기·인젝터·DPF 디젤 3종 클리닝",
+      "subtitle": "흡기와 인젝터, DPF를 함께 탈거해 세척한 맥스크루즈 사례. 가스켓·동와셔 교체와 진단기 세팅, 시운전까지 진행했습니다.",
+      "excerpt": "흡기와 인젝터, DPF를 함께 탈거해 세척한 맥스크루즈 사례. 가스켓·동와셔 교체와 진단기 세팅, 시운전까지 진행했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "맥스크루즈",
+      "model_year": "",
+      "mileage": "약 187,000km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "60fd5e9f-4995-4a77-ab0b-7a20f9c4a8c7",
+      "service_category": "인젝터 클리닝",
+      "symptoms": "약 18만 7천 km를 주행한 차량으로 엔진 컨디션 관리를 위해 디젤 3종 클리닝을 진행했습니다.",
+      "diagnosis": "진단기에서 센서 고장코드는 없었으나 인젝터 분사 보정 편차와 배압 상태를 확인했습니다. 흡기 내부에는 카본 슬러지가 쌓여 있었습니다.",
+      "cause": "",
+      "repair_process": "진단 → 흡기 탈거 세척 → 인젝터 세척·동와셔 교체 → DPF 탈거 세척 → 세팅·시운전·누설 점검",
+      "replaced_parts": "흡기 가스켓, 인젝터 동와셔",
+      "work_summary": "진단기 세팅과 시운전을 진행했습니다. 원문에는 엔진 떨림과 가속감이 개선됐다고 기록돼 있으며, 결합 부위 누설 및 하부 체결 상태를 점검한 뒤 출고했습니다.",
+      "detailed_content": "차량 상태 확인\n이전에 미션과 트랜스퍼 케이스 정비를 진행했던 맥스크루즈가 엔진 컨디션 관리를 위해 다시 입고됐습니다. 진단기로 인젝터 분사 보정과 배압 상태를 확인했습니다.\n\n흡기 카본 제거와 인젝터 세척\n흡기 매니폴드를 탈거해 전용 장비로 세척하고 가스켓을 교체했습니다. 인젝터 세척과 동와셔 교체도 함께 진행했습니다.\n\nDPF 탈거 클리닝\nDPF 내부를 세정액으로 충분히 불린 뒤 역방향 압력 세척으로 찌꺼기를 배출했습니다. 세척 후 부품을 재장착했습니다.\n\n진단기 세팅과 시운전\n진단기 세팅을 마치고 시운전을 진행했습니다. 원문에 기록된 엔진 떨림과 가속감 개선을 확인한 뒤, 결합 부위 누설과 하부 체결 상태를 점검했습니다. 정량적인 연비 개선 수치는 기록돼 있지 않습니다.",
+      "content_html": "<h2>차량 상태 확인</h2><p>이전에 미션과 트랜스퍼 케이스 정비를 진행했던 맥스크루즈가 엔진 컨디션 관리를 위해 다시 입고됐습니다. 진단기로 인젝터 분사 보정과 배압 상태를 확인했습니다.</p><figure><img src=\"/blog-imports/224327070200/02.jpg\" alt=\"현대 맥스크루즈 — 차량 상태 확인\" loading=\"lazy\" /></figure><h2>흡기 카본 제거와 인젝터 세척</h2><p>흡기 매니폴드를 탈거해 전용 장비로 세척하고 가스켓을 교체했습니다. 인젝터 세척과 동와셔 교체도 함께 진행했습니다.</p><figure><img src=\"/blog-imports/224327070200/08.jpg\" alt=\"현대 맥스크루즈 — 흡기 카본 제거와 인젝터 세척\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224327070200/12.jpg\" alt=\"현대 맥스크루즈 — 흡기 카본 제거와 인젝터 세척\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224327070200/14.jpg\" alt=\"현대 맥스크루즈 — 흡기 카본 제거와 인젝터 세척\" loading=\"lazy\" /></figure><h2>DPF 탈거 클리닝</h2><p>DPF 내부를 세정액으로 충분히 불린 뒤 역방향 압력 세척으로 찌꺼기를 배출했습니다. 세척 후 부품을 재장착했습니다.</p><figure><img src=\"/blog-imports/224327070200/16.jpg\" alt=\"현대 맥스크루즈 — DPF 탈거 클리닝\" loading=\"lazy\" /></figure><figure><img src=\"/blog-imports/224327070200/18.jpg\" alt=\"현대 맥스크루즈 — DPF 탈거 클리닝\" loading=\"lazy\" /></figure><h2>진단기 세팅과 시운전</h2><p>진단기 세팅을 마치고 시운전을 진행했습니다. 원문에 기록된 엔진 떨림과 가속감 개선을 확인한 뒤, 결합 부위 누설과 하부 체결 상태를 점검했습니다. 정량적인 연비 개선 수치는 기록돼 있지 않습니다.</p><p><a href=\"https://blog.naver.com/97ga074/224327070200\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224327070200/04.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "맥스크루즈"
+      ],
+      "symptom_tags": [
+        "엔진 떨림",
+        "예방정비"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/97ga074/224327070200",
+      "created_at": "2026-06-25T17:20:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 9,
+      "seo_title": "맥스크루즈, 흡기·인젝터·DPF 디젤 3종 클리닝",
+      "seo_description": "흡기와 인젝터, DPF를 함께 탈거해 세척한 맥스크루즈 사례. 가스켓·동와셔 교체와 진단기 세팅, 시운전까지 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  }
+]

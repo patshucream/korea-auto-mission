@@ -95,7 +95,12 @@ async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> 
         .eq("is_published", true)
         .order("published_at", { ascending: false })
         .limit(1000);
-      data = fallback.data;
+      data =
+        fallback.data?.map((row) => ({
+          ...row,
+          status: null,
+          noindex: null,
+        })) ?? null;
       error = fallback.error;
     }
 
@@ -109,7 +114,8 @@ async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> 
           status?: string | null;
         };
         if (record.noindex === true) return false;
-        const status = typeof record.status === "string" ? record.status : "published";
+        const status =
+          typeof record.status === "string" ? record.status : "published";
         if (status === "draft" || status === "private" || status === "trash") {
           return false;
         }
