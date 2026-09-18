@@ -35,6 +35,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
+    icons: {
+      shortcut: `${siteUrl}/brand/korea-auto-logo.jpg`,
+      apple: `${siteUrl}/brand/korea-auto-logo.jpg`,
+    },
     robots: isBlogImportPreview() ? { index: false, follow: false } : undefined,
     title: {
       default: settings.seo_title,
