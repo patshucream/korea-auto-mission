@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { NaverConversionTracker } from "@/components/analytics/NaverConversionTracker";
 import { MarketingTracker } from "@/components/analytics/MarketingTracker";
 import { isBlogImportPreview } from "@/lib/works/blog-imports";
 import { Noto_Sans_KR } from "next/font/google";
@@ -136,6 +137,7 @@ export default async function RootLayout({
         ) : null}
         {children}
         <MarketingTracker />
+        <NaverConversionTracker />
       </body>
     </html>
   );
