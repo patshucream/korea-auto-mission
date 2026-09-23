@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { createClient } from "@supabase/supabase-js";
 import { SITE_URL, isSupabaseConfigured } from "@/lib/utils";
+import { dieselGuides, dieselGuidePath } from "@/lib/diesel-guides";
 
 // Reflect CMS publication and deletion without requiring another deployment.
 export const dynamic = "force-dynamic";
@@ -33,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${SITE_URL}/services/diesel-cleaning`,
-      lastModified: new Date("2026-09-16T00:00:00Z"),
+      lastModified: new Date("2026-09-23T00:00:00Z"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -76,7 +77,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const workEntries = await getPublishedWorkSitemapEntries();
-  return [...entries, ...workEntries];
+  return [...entries, ...dieselGuides.map(guide => ({
+    url: `${SITE_URL}${dieselGuidePath(guide.slug)}`,
+    lastModified: new Date("2026-09-23T00:00:00Z"),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  })), ...workEntries];
 }
 
 async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> {

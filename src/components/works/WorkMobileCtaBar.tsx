@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { SiteSettings } from "@/lib/types";
-import { getMapUrl, getReservationUrl, telHref } from "@/lib/utils";
+import { getMapUrl, telHref } from "@/lib/utils";
+import { SmsLink } from "@/components/ui/SmsLink";
 
 type Props = {
   settings: SiteSettings;
+  smsBody?: string;
 };
 
 /** 작업사례 상세 전용: 스크롤 방향에 따라 축소되는 sticky CTA */
-export function WorkMobileCtaBar({ settings }: Props) {
-  const reserveUrl = getReservationUrl(settings);
+export function WorkMobileCtaBar({ settings, smsBody }: Props) {
   const mapUrl = getMapUrl(settings);
   const [compact, setCompact] = useState(false);
   const lastY = useRef(0);
@@ -48,14 +49,10 @@ export function WorkMobileCtaBar({ settings }: Props) {
         >
           전화
         </a>
-        <a
-          href={reserveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`btn btn-naver text-[0.88rem] ${compact ? "!min-h-10" : "!min-h-12"}`}
-        >
-          예약
-        </a>
+        <SmsLink phone={settings.phone} body={smsBody}
+          className={`btn btn-light text-[0.88rem] ${compact ? "!min-h-10" : "!min-h-12"}`}>
+          문자 상담
+        </SmsLink>
         <a
           href={mapUrl}
           target="_blank"

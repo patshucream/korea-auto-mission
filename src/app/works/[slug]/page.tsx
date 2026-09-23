@@ -8,7 +8,9 @@ import { WorkCard } from "@/components/works/WorkCard";
 import { WorkMobileCtaBar } from "@/components/works/WorkMobileCtaBar";
 import { WorkReadingTools, type TocItem } from "@/components/works/WorkReadingTools";
 import { SmartImage } from "@/components/ui/SmartImage";
-import { NaverReserveButton, PhoneButton } from "@/components/ui/ContactButtons";
+import { PhoneButton } from "@/components/ui/ContactButtons";
+import { SmsLink } from "@/components/ui/SmsLink";
+import { dieselGuides, dieselGuidePath } from "@/lib/diesel-guides";
 import {
   getRelatedWorks,
   getSiteSettings,
@@ -184,6 +186,8 @@ export default async function WorkDetailPage({ params }: Props) {
   const warrantyInfo = asString(work.warranty_info).trim();
   const repairDuration = asString(work.repair_duration).trim();
   const serviceCategory = getWorkServiceLabels(work).join(" · ");
+  const cleaningGuides = dieselGuides.filter(guide => getWorkServiceLabels(work).includes(guide.category));
+  const smsBody = `[작업사례 상담: ${asString(work.title)}]\n내 차종·연식:\n주행거리:\n증상:\n방문 희망일:`;
   const subtitle = asString(work.subtitle).trim() || asString(work.excerpt).trim();
   const hasSummary = Boolean(
     symptoms || diagnosis || repairProcess || replacedParts || repairDuration || warrantyInfo,
@@ -292,6 +296,7 @@ export default async function WorkDetailPage({ params }: Props) {
                   .join(" · ")}
               </p>
               {getWorkServiceLabels(work).includes("오토미션 수리") ? <Link href="/services/transmission" className="mt-4 inline-block text-sm font-bold text-navy underline underline-offset-4">부산 미션수리 · 진단과 입고 안내 ↗</Link> : null}
+              {cleaningGuides.length ? <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2" aria-label="이 사례의 작업 안내">{cleaningGuides.map(guide => <Link key={guide.slug} href={dieselGuidePath(guide.slug)} className="text-sm font-bold text-navy underline underline-offset-4">{guide.category} 비용·점검 안내 ↗</Link>)}</nav> : null}
             </header>
 
             {hasRepresentativeImage ? (
@@ -306,6 +311,11 @@ export default async function WorkDetailPage({ params }: Props) {
             ) : null}
 
             <div className="mx-auto mt-10 max-w-[820px]">
+              <aside className="mb-8 rounded-[14px] border border-border bg-gray-50 p-5" aria-label="차량 상담 안내">
+                <p className="font-bold text-charcoal">내 차도 비슷한 증상이 있나요?</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">차종과 증상을 전화나 문자로 알려주세요. 비용은 차량 상태와 작업량을 확인한 후 안내합니다.</p>
+                <div className="mt-4 flex flex-wrap gap-3"><PhoneButton settings={settings} /><SmsLink phone={settings.phone} body={smsBody} className="btn btn-secondary">차종·증상 문자 상담</SmsLink></div>
+              </aside>
               <WorkReadingTools
                 toc={toc}
                 shareUrl={shareUrl}
@@ -513,7 +523,7 @@ export default async function WorkDetailPage({ params }: Props) {
                       variant="secondary"
                       className="!bg-white !text-navy"
                     />
-                    <NaverReserveButton settings={settings} />
+                    <SmsLink phone={settings.phone} body={smsBody} className="btn btn-secondary !border-white/40 !text-white">문자로 상담</SmsLink>
                     <a
                       href={mapUrl}
                       target="_blank"
@@ -542,7 +552,7 @@ export default async function WorkDetailPage({ params }: Props) {
         </article>
       </main>
       <Footer settings={settings} />
-      <WorkMobileCtaBar settings={settings} />
+      <WorkMobileCtaBar settings={settings} smsBody={smsBody} />
     </>
   );
 }

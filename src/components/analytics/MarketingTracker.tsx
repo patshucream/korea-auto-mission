@@ -10,7 +10,7 @@ type Session = { day: string; id: string; landing: string; source: string };
 function pageGroup(path: string) {
   if (path === "/") return "home";
   if (path === "/services/transmission") return "mission";
-  if (path === "/services/diesel-cleaning") return "diesel";
+  if (path === "/services/diesel-cleaning" || path.startsWith("/services/diesel-cleaning/")) return "diesel";
   if (path === "/works") return "works";
   if (path.startsWith("/works/")) return "work";
   return "other";
