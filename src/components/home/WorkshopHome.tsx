@@ -12,6 +12,7 @@ import { WorkshopMotion } from "./WorkshopMotion";
 import { getHomepageConfig, getWhyPoints, isSectionVisible } from "@/lib/homepage";
 import { dieselGuides, dieselGuidePath } from "@/lib/diesel-guides";
 import { getWorkServiceLabels } from "@/lib/works/services";
+import { DEFAULT_SETTINGS } from "@/lib/defaults";
 import { getBlogUrl, telHref } from "@/lib/utils";
 import type { HomepageData, HomepageSectionId, ReviewStats, WorkCase } from "@/lib/types";
 import s from "./WorkshopHome.module.css";
@@ -92,7 +93,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
         <div className={s.heroShade} aria-hidden="true" />
         <div className={s.heroCopy}>
           <p className={s.eyebrow}><span className={s.blueLine} />KOREA AUTO MISSION <span className={s.heroCity}>BUSAN</span></p>
-          <h1 id="workshop-title">{(settings.hero_title || "좋은 정비는,\n디테일에서 시작됩니다.").split("\n").map((line, index) => <span className={index === 1 ? s.accentLine : undefined} key={index}>{line}</span>)}</h1>
+          <h1 id="workshop-title">{(settings.hero_title || DEFAULT_SETTINGS.hero_title).split("\n").map((line, index) => <span className={index === 1 ? s.accentLine : undefined} key={index}>{line}</span>)}</h1>
           <p className={s.heroLead}>{settings.hero_description}</p>
           <div className={s.heroActions}>
             <a className={s.primaryButton} href={phone}>전화 상담 <Arrow /></a>
@@ -100,7 +101,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
             <Link className={s.inlineLink} href={visible("works") ? "#works" : "/works"}>실제 작업 보기 <span aria-hidden="true">↓</span></Link>
           </div>
         </div>
-        <div className={s.heroFoot}><p>디젤클리닝 <span>/</span> 미션수리 <span>/</span> 전기차 감속기</p><p>{settings.address}<span className={s.heroFootArrow} aria-hidden="true">↓</span></p></div>
+        <div className={s.heroFoot}><p>디젤클리닝 <span>/</span> 미션수리 <span>/</span> 전기차 수리</p><p>{settings.address}<span className={s.heroFootArrow} aria-hidden="true">↓</span></p></div>
       </section>
     ),
     trust: config.trust_items.length ? (
@@ -113,12 +114,12 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
         <span>지금, 차량의 증상이 궁금하다면</span>
         <Link href="/services/diesel-cleaning">출력 저하·떨림 <Arrow /></Link>
         <Link href="/services/transmission">변속 충격·미션 이상 <Arrow /></Link>
-        <Link href="/services/electric-vehicle">전기차 감속기·주행 소음 <Arrow /></Link>
+        <Link href="/services/electric-vehicle">전기차 충전·주행 이상 <Arrow /></Link>
       </nav>
     ),
     services: (
       <section id="services" className={s.section}>
-        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>OUR SERVICES</p><h2>내연기관부터 전기차까지.<br />차에 맞는 정비.</h2></div><p>디젤클리닝 · 자동변속기 · 전기차 감속기.<br />차량 상태와 작업량을 확인한 뒤 견적을 안내합니다.</p></div>
+        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>OUR SERVICES</p><h2>내연기관부터 전기차까지.<br />차에 맞는 정비.</h2></div><p>디젤클리닝 · 자동변속기 · 전기차 수리.<br />차량 상태와 작업량을 확인한 뒤 견적을 안내합니다.</p></div>
         <nav className={s.serviceJump} aria-label="주요 정비 분야"><a href="#diesel-service"><small>01</small>디젤클리닝 <Arrow /></a><a href="#transmission-service"><small>02</small>미션수리 <Arrow /></a><a href="#ev-service"><small>03</small>전기차 정비 <Arrow /></a></nav>
         {dieselServices.length > 0 && <div id="diesel-service" className={s.serviceTitle}><p className={s.eyebrow}>01 / DIESEL CLEANING</p><h3>디젤클리닝</h3><p>흡기 · 인젝터 · DPF. 차량 상태에 맞는 작업을 안내합니다.</p></div>}
         <DieselServiceShowcase items={dieselServices.map((service) => {
@@ -132,9 +133,13 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <div className={s.missionCopy}><p className={s.eyebrow}>02 / AUTOMATIC TRANSMISSION</p><h3>미션수리</h3><p className={s.serviceSummary}>변속 충격부터 가속할 때의 떨림까지.<br />수입차·국산차 자동변속기를 점검합니다.</p><ul className={s.serviceTopics}><li>변속 충격·슬립</li><li>주행 중 떨림</li><li>누유·경고등</li></ul><p className={s.serviceNote}>증상이 나타나는 상황과 차량 정보를 확인하고, 필요한 수리 범위와 견적을 안내합니다.</p><Link href="/services/transmission" className={s.inlineLink}>미션수리·실제 사례 보기 <Arrow /></Link></div>
         </section>
         <section id="ev-service" className={s.evFeature} data-reveal>
-          <div><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>감속기 소음, 주행 중 진동.<br />전기차의 구동계도 살펴봅니다.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 감속기 정비 안내 <Arrow /></Link></div>
-          <div className={s.evDetails}><span className={s.evMark} aria-hidden="true">EV</span><ul><li><span>01</span>감속기 점검·수리 상담</li><li><span>02</span>주행 소음·진동 점검</li><li><span>03</span>차종별 작업 범위 안내</li></ul><p>차종·연식·주행거리와 증상을 알려주세요.<br />점검 후 필요한 작업을 안내합니다.</p></div>
+          <div><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>충전부터 주행까지.<br />전기차의 상태를 함께 살펴봅니다.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 점검·수리 안내 <Arrow /></Link></div>
+          <div className={s.evDetails}><span className={s.evMark} aria-hidden="true">EV</span><ul><li><span>01</span>배터리·인버터</li><li><span>02</span>충전 불량·충전 계통</li><li><span>03</span>모터·감속기 소음·진동</li></ul><p>차종·연식·주행거리와 증상을 알려주세요.<br />점검 후 필요한 작업을 안내합니다.</p></div>
         </section>
+        <aside className={s.estimateNote} aria-labelledby="estimate-heading">
+          <div><h3 id="estimate-heading">견적은 차량을 확인한 뒤 안내합니다.</h3><p>차종·연식, 오염·손상 상태, 작업 범위에 따라 비용이 달라집니다.<br />차종·주행거리·증상을 알려주시면 상담을 시작할 수 있습니다.</p></div>
+          <SmsLink phone={settings.phone} className={s.inlineLink}>문자로 증상 상담 <Arrow /></SmsLink>
+        </aside>
       </section>
     ),
     why: points.length ? (
@@ -167,7 +172,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
     ) : null,
     location: (
       <section id="location" className={s.location}>
-        <div className={s.locationCopy}><p className={s.eyebrow}>BUSAN, SASANG</p><h2>코리아오토미션<br />오시는 길.</h2><p className={s.address}>{settings.address}</p><dl className={s.hours}><div><dt>평일</dt><dd>{settings.weekday_hours}</dd></div><div><dt>토요일</dt><dd>{settings.saturday_hours}</dd></div><div><dt>일요일</dt><dd>휴무</dd></div><div><dt>공휴일</dt><dd>방문 전 확인해 주세요</dd></div></dl><p className={s.visitNote}>방문 전 전화로 입고 일정을 상담해 주세요.</p><a href={map} className={s.inlineLink} target="_blank" rel="noopener noreferrer">네이버 매장·후기 <Arrow /></a></div>
+        <div className={s.locationCopy}><p className={s.eyebrow}>BUSAN, SASANG</p><h2>코리아오토미션<br />오시는 길.</h2><p className={s.address}>{settings.address}</p><dl className={s.hours}><div><dt>평일</dt><dd>{settings.weekday_hours}</dd></div><div><dt>토요일</dt><dd>{settings.saturday_hours}</dd></div><div><dt>일요일</dt><dd>휴무</dd></div><div><dt>공휴일</dt><dd>{settings.holiday_hours}</dd></div></dl><p className={s.visitNote}>방문 전 전화로 입고 일정을 상담해 주세요.</p><a href={map} className={s.inlineLink} target="_blank" rel="noopener noreferrer">네이버 매장·후기 <Arrow /></a></div>
         <div className={s.locationMap} data-reveal><NaverLocationMap /></div>
       </section>
     ),

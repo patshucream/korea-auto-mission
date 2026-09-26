@@ -8,6 +8,7 @@ import "./globals.css";
 import { getSiteSettings } from "@/lib/data/content";
 import { getPublicImageUrl } from "@/lib/media";
 import { SITE_URL } from "@/lib/utils";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
 import {
   buildOpeningHoursSpecification,
   formatBusinessHoursSummary,
@@ -31,7 +32,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
   // 공개 SEO URL은 항상 공식 도메인
   const siteUrl = SITE_URL;
-  const og = getPublicImageUrl(settings.og_image_path) || `${siteUrl}/og-default.svg`;
+  const customOg = getPublicImageUrl(settings.og_image_path);
+  const og = customOg && !/\.svg(?:[?#]|$)/i.test(customOg)
+    ? { url: customOg }
+    : DEFAULT_SOCIAL_IMAGE;
 
   return {
     metadataBase: new URL(siteUrl),
@@ -52,13 +56,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: settings.business_name,
       locale: "ko_KR",
       type: "website",
-      images: [{ url: og }],
+      images: [og],
     },
     twitter: {
       card: "summary_large_image",
       title: settings.seo_title,
       description: settings.seo_description,
-      images: [og],
+      images: [og.url],
     },
     alternates: {
       canonical: siteUrl,

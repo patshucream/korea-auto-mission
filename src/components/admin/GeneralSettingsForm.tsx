@@ -5,6 +5,8 @@ import type { SiteSettings } from "@/lib/types";
 import { saveSiteSettings } from "@/lib/actions/admin";
 import { ImageUploader } from "@/components/admin/ImageUploader";
 import { AdminToast } from "@/components/admin/AdminToast";
+import { DEFAULT_SETTINGS } from "@/lib/defaults";
+import { formatLegacyHours } from "@/lib/business-hours";
 
 type Props = {
   settings: SiteSettings;
@@ -46,9 +48,9 @@ export function GeneralSettingsForm({ settings }: Props) {
           try {
             const weekday = (form.weekday_hours ?? "").trim() || "09:00 - 18:00";
             const saturday = (form.saturday_hours ?? "").trim() || "09:00 - 15:00";
-            const holiday = (form.holiday_hours ?? "").trim() || "정상영업";
-            const hours = `평일 ${weekday} 토요일 ${saturday}`;
-            // 공휴일 정상영업 시 레거시 closed_days 는 일요일만 표시
+            const holiday = (form.holiday_hours ?? "").trim() || DEFAULT_SETTINGS.holiday_hours;
+            const hours = formatLegacyHours({ weekday, saturday, holiday });
+            // 공휴일 휴무가 명시된 경우에만 레거시 휴무일에 추가합니다.
             const closedDays =
               holiday === "휴무" || holiday === "휴일" ? "일요일 · 공휴일" : "일요일";
             // DB 컬럼만 명시 전송 (id/created_at 등·undefined 제외)
@@ -137,7 +139,7 @@ export function GeneralSettingsForm({ settings }: Props) {
               className="admin-input"
               value={form.holiday_hours ?? ""}
               onChange={(e) => update("holiday_hours", e.target.value)}
-              placeholder="예: 정상영업"
+              placeholder="예: 방문 전 확인해 주세요"
             />
           </Field>
           <Field label="네이버 블로그 URL">

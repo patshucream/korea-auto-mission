@@ -134,13 +134,13 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   closed_days: "일요일",
   weekday_hours: "09:00 - 18:00",
   saturday_hours: "09:00 - 15:00",
-  holiday_hours: "정상영업",
+  holiday_hours: "방문 전 확인해 주세요",
   naver_blog_url: NAVER_BLOG_URL,
   naver_map_url: NAVER_MAP_URL,
   naver_reservation_url: "",
-  hero_title: "수입차 오토미션과 디젤 정비,\n정확한 진단부터 시작합니다",
+  hero_title: "부산 사상구,\n미션·디젤·전기차 정비.",
   hero_description:
-    "변속 충격, 미션오일, DPF·흡기·인젝터까지.\n30년 경험으로 원인부터 확인합니다.",
+    "자동변속기 수리 · 흡기·인젝터·DPF 클리닝 · 전기차 수리.\n차종과 증상을 알려주시면 점검 후 작업 범위와 견적을 안내합니다.",
   hero_image_path: null,
   shop_image_path: null,
   stat_experience: "30년",
@@ -152,9 +152,9 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     "무조건 교환보다 원인 진단이 먼저입니다. 정비 전후 상태를 설명하고, 작업 사진과 과정을 기록합니다. 부산 사상구에서 변속기 전문 경험으로 고객 차량을 책임집니다.",
   process_steps: DEFAULT_PROCESS_STEPS,
   homepage_config: DEFAULT_HOMEPAGE_CONFIG,
-  seo_title: "코리아오토미션 | 수입차·국산차 자동변속기 전문 정비",
+  seo_title: "부산 미션수리·디젤클리닝·전기차 수리 | 코리아오토미션",
   seo_description:
-    "부산 사상구 코리아오토미션. 수입차·국산차 자동변속기, 트랜스퍼케이스, 디퍼렌셜, DPF·흡기·인젝터 클리닝 전문. 30년 정비 경험.",
+    "부산 사상구 삼덕로 95 코리아오토미션. 수입차·국산차 미션수리, 흡기·인젝터·DPF 클리닝, 전기차 배터리·인버터·모터·감속기 수리 상담. 차량 점검 후 작업 범위와 견적을 안내합니다. 전화·문자 상담 가능.",
   og_image_path: null,
 };
 

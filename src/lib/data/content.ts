@@ -1,3 +1,4 @@
+import { deriveSplitHours } from "@/lib/business-hours";
 import { getBlogPreviewWorks, isBlogImportPreview, isBlogPreviewWork, mergeBlogPreviewWorks, paginateBlogPreview } from "@/lib/works/blog-imports";
 import { getWorkServiceLabels, workMatchesService, workServiceFilter } from "@/lib/works/services";
 import type {
@@ -45,29 +46,6 @@ function parseProcessSteps(value: unknown): ProcessStep[] {
     .filter((v): v is ProcessStep => Boolean(v));
 }
 
-/** 003 미적용 DB용: 레거시 hours / closed_days 에서 분리 필드 복원 */
-function deriveSplitHours(hours: string, closedDays: string) {
-  const weekday =
-    hours.match(/평일\s*([0-9]{1,2}:[0-9]{2}\s*[-–~]\s*[0-9]{1,2}:[0-9]{2})/)?.[1]?.trim() ||
-    DEFAULT_SETTINGS.weekday_hours;
-  const saturday =
-    hours.match(/토(?:요일)?\s*([0-9]{1,2}:[0-9]{2}\s*[-–~]\s*[0-9]{1,2}:[0-9]{2})/)?.[1]?.trim() ||
-    DEFAULT_SETTINGS.saturday_hours;
-  const holiday = (() => {
-    const closed = closedDays.trim();
-    if (!closed) return DEFAULT_SETTINGS.holiday_hours;
-    // 공휴일만 언급되고 휴무로 묶인 레거시 값은 정상영업으로 해석
-    if (/공휴일/.test(closed) && /(휴무|휴일|닫)/i.test(closed)) {
-      return DEFAULT_SETTINGS.holiday_hours;
-    }
-    if (/공휴일/.test(closed) && !/일요일/.test(closed)) {
-      return closed;
-    }
-    return DEFAULT_SETTINGS.holiday_hours;
-  })();
-  return { weekday, saturday, holiday };
-}
-
 function mapSettings(row: Record<string, unknown>): SiteSettings {
   const legacyHours =
     typeof row.hours === "string" && row.hours.trim() ? row.hours.trim() : "";
@@ -78,6 +56,7 @@ function mapSettings(row: Record<string, unknown>): SiteSettings {
   const derived = deriveSplitHours(
     legacyHours || DEFAULT_SETTINGS.hours,
     legacyClosed || DEFAULT_SETTINGS.closed_days,
+    { weekday: DEFAULT_SETTINGS.weekday_hours, saturday: DEFAULT_SETTINGS.saturday_hours, holiday: DEFAULT_SETTINGS.holiday_hours },
   );
 
   const weekday =

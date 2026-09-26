@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
@@ -18,7 +19,7 @@ const title = "부산 흡기·인젝터·DPF 클리닝 상담";
 const description = "부산 사상구 코리아오토미션의 디젤 클리닝 안내. 스포티지·맥스크루즈·모하비 등 실제 작업 사진을 보고 흡기, 인젝터, DPF 점검과 방문 일정을 상담하세요.";
 export const metadata: Metadata = {
   title, description, alternates: { canonical: `${SITE_URL}${path}` },
-  openGraph: { title: `${title} | 코리아오토미션`, description, url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR" },
+  openGraph: { title: `${title} | 코리아오토미션`, description, url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR", images: [DEFAULT_SOCIAL_IMAGE] },
 };
 
 const services = [

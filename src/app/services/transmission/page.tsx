@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}${path}` },
   openGraph: {
     title: `${title} | 코리아오토미션`, description,
-    url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR",
+    url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR", images: [DEFAULT_SOCIAL_IMAGE],
   },
-  twitter: { card: "summary_large_image", title: `${title} | 코리아오토미션`, description },
+  twitter: { card: "summary_large_image", title: `${title} | 코리아오토미션`, description, images: [DEFAULT_SOCIAL_IMAGE.url] },
 };
 
 const symptoms = [

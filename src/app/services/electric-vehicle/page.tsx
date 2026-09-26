@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
@@ -14,7 +15,7 @@ const title = "부산 전기차 수리 · 배터리·인버터·충전·감속�
 const description = "코리아오토미션의 전기차 수리 상담. EV6·아이오닉5 등 배터리·인버터, 충전 계통, 모터·감속기를 점검하고 작업 범위와 견적을 안내합니다. 전화·문자 상담, 부산 사상구 삼덕로 95.";
 export const metadata: Metadata = {
   title, description, alternates: { canonical: `${SITE_URL}${path}` },
-  openGraph: { title: `${title} | 코리아오토미션`, description, url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR" },
+  openGraph: { title: `${title} | 코리아오토미션`, description, url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR", images: [DEFAULT_SOCIAL_IMAGE] },
 };
 
 export default async function ElectricVehiclePage() {
@@ -40,6 +41,6 @@ export default async function ElectricVehiclePage() {
     </section>
     {cases.length > 0 && <section className={s.journal} aria-labelledby="ev-records"><p className={s.eyebrow}>WORKSHOP JOURNAL</p><h2 id="ev-records">전기차 작업 기록.</h2><p className={s.note}>아이오닉5 모터·감속기 작업을 사진으로 확인해 보세요.</p><div className={s.caseGrid}>{cases.map((work) => <WorkCard key={work.id} work={work} />)}</div></section>}
     <ConsultationHelper settings={settings} service="전기차 수리" symptoms={["배터리·인버터 경고", "충전 불량", "모터·감속기 소음", "주행 중 진동", "기타 증상"]} />
-    <section className={s.visit}><div><p className={s.eyebrow}>VISIT THE WORKSHOP</p><h2>{settings.business_name}</h2><p>{settings.address}</p><p>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours}</p><p>일요일 휴무 · 공휴일 방문 전 확인</p></div><Link href="/#location">네이버 지도·오시는 길 <span aria-hidden="true">↗</span></Link></section>
+    <section className={s.visit}><div><p className={s.eyebrow}>VISIT THE WORKSHOP</p><h2>{settings.business_name}</h2><p>{settings.address}</p><p>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours}</p><p>일요일 휴무 · 공휴일 {settings.holiday_hours}</p></div><Link href="/#location">네이버 지도·오시는 길 <span aria-hidden="true">↗</span></Link></section>
   </main><Footer settings={settings} /><MobileBottomBar settings={settings} /></>;
 }

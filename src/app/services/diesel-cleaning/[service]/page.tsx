@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${SITE_URL}${dieselGuidePath(guide.slug)}`;
   return { title: guide.title, description: guide.description,
     alternates: { canonical: url },
-    openGraph: { title: `${guide.title} | 코리아오토미션`, description: guide.description, url, type: "website", locale: "ko_KR" } };
+    openGraph: { title: `${guide.title} | 코리아오토미션`, description: guide.description, url, type: "website", locale: "ko_KR", images: [DEFAULT_SOCIAL_IMAGE] } };
 }
 
 export default async function DieselServiceGuide({ params }: Props) {

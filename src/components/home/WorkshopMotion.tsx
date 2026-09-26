@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-/** Content is visible without JavaScript. Only offscreen elements are revealed. */
+/** Content stays visible; offscreen elements receive a short movement only. */
 export function WorkshopMotion({ children }: { children: ReactNode }) {
   const root = useRef<HTMLElement>(null);
 
@@ -18,10 +18,10 @@ export function WorkshopMotion({ children }: { children: ReactNode }) {
           observer.unobserve(entry.target);
         }
       }
-    }, { threshold: 0.08 });
+    }, { threshold: 0, rootMargin: "0px 0px 240px 0px" });
 
     for (const element of elements) {
-      if (element.getBoundingClientRect().top > window.innerHeight) {
+      if (element.getBoundingClientRect().top > window.innerHeight + 240) {
         element.dataset.motion = "pending";
         observer.observe(element);
       }

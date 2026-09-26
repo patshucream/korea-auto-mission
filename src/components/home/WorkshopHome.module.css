@@ -19,7 +19,7 @@
 .hero { position: relative; isolation: isolate; background: #191d20; color: #fff; min-height: 660px; height: min(760px, calc(100svh - 82px)); display: flex; align-items: center; padding: 80px max(48px, calc((100vw - 1200px) / 2)) 120px; overflow: hidden; }
 .heroPhoto { position: absolute !important; inset: 0 0 0 24%; z-index: -3; height: 100%; filter: saturate(.62); }
 .heroShade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #191d20 0%, #191d20f2 19%, #191d20bd 38%, #191d2040 72%, #191d2026 100%), linear-gradient(0deg, #191d20c9 0%, transparent 40%); }
-.heroCopy { position: relative; width: min(780px, 100%); animation: enter 850ms cubic-bezier(.2,.7,.3,1) both; }
+.heroCopy { position: relative; width: min(780px, 100%); }
 .hero .eyebrow { color: #c2cbc9; margin-bottom: 38px; letter-spacing: 2.6px; font-size: 10px; }
 .blueLine { display: inline-block; width: 28px; height: 2px; background: #86a1b6; }
 .heroCity { padding-left: 16px; border-left: 1px solid #b8c4c54d; }
@@ -105,6 +105,10 @@
 .brands a { font-size: 13px; min-height: 32px; display: flex; align-items: center; gap: 7px; }
 .brands a > span { color: #88968c; font-size: 13px; }
 .guideSection, .reviews { max-width: 1200px; padding: 64px 0; margin: auto; }
+.estimateNote { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--line); }
+.estimateNote h3 { font-size: 19px; }
+.estimateNote p { margin-top: 12px; font-size: 13px; color: var(--muted); line-height: 1.9; }
+.estimateNote a { flex-shrink: 0; }
 .guideSection h2 { margin-top: 15px; }
 .guideSection > div { margin-top: 24px; }
 .guideLink { display: flex; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
@@ -186,6 +190,7 @@
   .contact h2 { font-size: 31px; }
 }
 @media (max-width: 700px) {
+  .estimateNote { align-items: flex-start; flex-direction: column; gap: 14px; }
   .page h2 { font-size: 30px; letter-spacing: -1.1px; }
   .page section[id] { scroll-margin-top: 85px; }
   .hero { min-height: 640px; height: calc(92svh - 66px); max-height: 770px; padding: 85px 23px 90px; align-items: flex-start; }
@@ -291,12 +296,12 @@
 @media (prefers-reduced-motion: reduce) { .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
 /* One quiet entrance per section; native scrolling and all links stay intact. */
-.page [data-motion] { transition: opacity 800ms ease, transform 850ms cubic-bezier(.2,.7,.25,1); }
-.page [data-motion="pending"]:not(:focus-within) { opacity: 0; transform: translateY(22px); }
+.page [data-motion] { transition: transform 320ms cubic-bezier(.2,.7,.25,1); }
+.page [data-motion="pending"]:not(:focus-within) { opacity: 1; transform: translateY(8px); }
 .page [data-motion="visible"] { opacity: 1; transform: translateY(0); }
-.hero h1 > span { animation: typeEnter 950ms cubic-bezier(.2,.7,.25,1) both; }
-.hero h1 > span:nth-child(2) { animation-delay: 130ms; }
-@keyframes typeEnter { from { clip-path: inset(100% 0 0); transform: translateY(12px); } to { clip-path: inset(0); transform: translateY(0); } }
+.hero h1 > span { animation: typeEnter 320ms cubic-bezier(.2,.7,.25,1) both; }
+.hero h1 > span:nth-child(2) { animation-delay: 50ms; }
+@keyframes typeEnter { from { transform: translateY(6px); } to { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .page [data-motion] { opacity: 1 !important; transform: none !important; transition: none !important; } }
 
 /* Selecting a service changes only its real workshop photograph. */
