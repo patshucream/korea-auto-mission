@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { requireAdmin } from "@/lib/auth/require-admin";
-import { getPreparedBlogImports, naverPostKey } from "@/lib/works/blog-imports";
+import { getCurrentBlogImports, naverPostKey } from "@/lib/works/blog-imports";
 
 export type BlogImportResult = {
   postId: string;
@@ -19,7 +19,7 @@ async function importPreparedBlogCases(status: "draft" | "published"): Promise<{
   if (serviceError || !services) return { results: [], error: "정비 서비스 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요." };
 
   const results: BlogImportResult[] = [];
-  for (const { source, work } of getPreparedBlogImports()) {
+  for (const { source, work } of getCurrentBlogImports()) {
     const result = { postId: source.postId, title: work.title };
     const { data: existing, error: lookupError } = await supabase
       .from("work_cases")

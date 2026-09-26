@@ -10,6 +10,15 @@ export function getPreparedBlogImports() {
   }));
 }
 
+/** Publication is limited to the blog the owner explicitly selected. Legacy rows are preview fixtures only. */
+export function getCurrentBlogImports() {
+  return getPreparedBlogImports().filter(({ source, work }) =>
+    source.blogId === "koreaautolife" &&
+    naverPostKey(source.url) === `koreaautolife:${source.postId}` &&
+    naverPostKey(work.naver_blog_url) === `koreaautolife:${source.postId}`,
+  );
+}
+
 export function isBlogImportPreview(): boolean {
   return process.env.BLOG_IMPORT_PREVIEW === "1";
 }

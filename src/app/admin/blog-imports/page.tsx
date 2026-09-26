@@ -3,18 +3,18 @@ import { getWorkServiceLabels } from "@/lib/works/services";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { BlogImportButton } from "@/components/admin/BlogImportButton";
 import { SmartImage } from "@/components/ui/SmartImage";
-import { getPreparedBlogImports, isBlogImportPreview } from "@/lib/works/blog-imports";
+import { getCurrentBlogImports, isBlogImportPreview } from "@/lib/works/blog-imports";
 
 export const maxDuration = 60;
 
 export default function BlogImportsPage() {
-  const imports = getPreparedBlogImports();
+  const imports = getCurrentBlogImports();
   const preview = isBlogImportPreview();
-  return <AdminShell title="블로그 작업사례 가져오기" description="기존 블로그의 사진과 정비 기록을 홈페이지 형식으로 정리했습니다.">
+  return <AdminShell title="블로그 작업사례 가져오기" description="koreaautolife 블로그의 사진과 정비 기록을 홈페이지 형식으로 정리했습니다.">
     <div className="space-y-8">
       <div className="rounded-xl border border-border bg-white p-6">
         <h2 className="mb-2 text-xl font-bold">정비 기록 {imports.length}편 · 사진 {imports.reduce((total, item) => total + item.source.photos.length, 0)}장</h2>
-        <p className="mb-5 text-sm leading-7 text-muted">원문의 사실을 바탕으로 증상, 진단, 작업 과정과 결과를 정리했습니다. 저장 후에는 기존 작업사례 편집기에서 수정할 수 있습니다.</p>
+        <p className="mb-5 text-sm leading-7 text-muted">이번 공개 대상은 koreaautolife의 새 작업 기록입니다. 기존 공개 글은 유지합니다. 원문의 사실을 바탕으로 증상, 진단, 작업 과정과 결과를 정리했습니다. 저장 후에는 기존 작업사례 편집기에서 수정할 수 있습니다.</p>
         <BlogImportButton count={imports.length} />
       </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

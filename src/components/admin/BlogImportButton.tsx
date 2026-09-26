@@ -24,7 +24,7 @@ export function BlogImportButton({ count }: { count: number }) {
     <div className="space-y-4">
       <div className="flex flex-wrap gap-3">
         <button type="button" disabled={pending} className="btn btn-primary disabled:opacity-50" onClick={() => run(true)}>
-          {pending ? "처리 중…" : `준비된 블로그 ${count}편 확인·공개`}
+          {pending ? "처리 중…" : `koreaautolife 작업사례 ${count}편 공개`}
         </button>
         <button type="button" disabled={pending} className="btn btn-ghost disabled:opacity-50" onClick={() => run(false)}>
           임시저장만 하기

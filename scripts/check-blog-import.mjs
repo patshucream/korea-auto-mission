@@ -17,6 +17,10 @@ vm.runInNewContext(code,{exports:moduleObject.exports,module:moduleObject,proces
   throw Error('Unexpected import: '+id);
 }});
 const api=moduleObject.exports;
+const currentBatch=api.getCurrentBlogImports();
+assert.equal(currentBatch.length,25);
+assert.ok(currentBatch.every(({source,work})=>source.blogId==="koreaautolife" && source.url.includes("/koreaautolife/") && work.naver_blog_url.includes("/koreaautolife/")), "Publication cannot include legacy blog records");
+for(const file of ["src/lib/actions/blog-import.ts","src/app/admin/blog-imports/page.tsx"]){const source=fs.readFileSync(project+file,"utf8");assert.ok(source.includes("getCurrentBlogImports()"));assert.ok(!source.includes("getPreparedBlogImports"));}
 assert.equal(api.getBlogPreviewWorks().length,0,'Drafts must be hidden by default');
 env.BLOG_IMPORT_PREVIEW='true';
 assert.equal(api.getBlogPreviewWorks().length,0,'Only explicit 1 enables preview');
