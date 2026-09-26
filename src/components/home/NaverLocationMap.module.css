@@ -1,0 +1,15 @@
+.map { grid-column: 1 / -1; border-top: 1px solid #dfe6ed; background: #fff; margin: 0; }
+.imageLink { position: relative; display: block; height: 390px; overflow: hidden; }
+.image { object-fit: cover; object-position: 38% 50%; }
+.open { position: absolute; bottom: 20px; right: 22px; display: inline-flex; align-items: center; gap: 22px; padding: 12px 17px; border: 1px solid #d7e1e9; border-radius: 6px; background: #fff; color: #15283d; font-size: 13px; font-weight: 650; box-shadow: 0 4px 18px #112d4c12; }
+.open > span { font-size: 19px; }
+.map figcaption { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 7px 20px; padding: 12px 22px; border-top: 1px solid #e7ecf0; color: #617184; font-size: 11px; }
+.map b { color: #038631; font-size: 13px; letter-spacing: -.4px; }
+.imageLink:focus-visible { outline: 3px solid #1764c0; outline-offset: -4px; }
+@media (max-width: 700px) { .imageLink { height: 300px; } .image { object-position: 22% center; } .open { font-size: 12px; bottom: 15px; right: 15px; gap: 15px; } .map figcaption { padding: 12px 16px; font-size: 10px; } }
+@media (max-width: 700px) {
+  .map { border: 1px solid #cbd4c9; border-radius: 3px; overflow: hidden; background: #f5f6f2; }
+  .imageLink { height: 310px; }
+  .open { min-height: 47px; padding: 12px 16px; border-radius: 3px; font-size: 13px; color: #263b2d; }
+  .map figcaption { padding: 14px 16px; line-height: 1.7; font-size: 11px; }
+}

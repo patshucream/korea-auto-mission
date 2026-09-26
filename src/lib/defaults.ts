@@ -36,7 +36,7 @@ export const DEFAULT_WHY_POINTS: HomepageWhyPoint[] = [
   },
   {
     id: "why-2",
-    title: "작업 전후 상태 설명",
+    title: "필요한 작업을 분명하게",
     body: "왜 필요한 작업인지, 무엇을 확인했는지 이해할 수 있게 설명합니다.",
     image_path: null,
     object_position: "center",
@@ -65,9 +65,9 @@ export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
     ),
     guides: false,
   } as Record<HomepageSectionId, boolean>,
-  cta_title: "증상이 반복된다면\n부품 교환 전 정확한 진단부터 받아보세요.",
+  cta_title: "차종과 증상부터,\n편하게 알려주세요.",
   cta_description:
-    "전화 상담 또는 네이버 예약으로 증상과 차량 정보를 알려주시면 점검 방향을 안내해 드립니다.",
+    "차량 상태와 작업량을 확인한 뒤\n필요한 정비와 견적을 안내합니다.",
   trust_items: [
     {
       title: "30년",
@@ -78,8 +78,8 @@ export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
       description: "수입차 중심 원인 확인",
     },
     {
-      title: "전후 과정",
-      description: "작업 전후 상태 안내",
+      title: "작업 기록",
+      description: "사진으로 남긴 정비 과정",
     },
     {
       title: "부산 사상구",
@@ -96,7 +96,7 @@ export const PHONE_TEL = "01055580528";
 export const BUSINESS_NAME = "코리아오토미션";
 export const ENGLISH_BRAND = "KOREA AUTO MISSION";
 export const ADDRESS = "부산 사상구 삼덕로 95";
-export const NAVER_BLOG_URL = "https://blog.naver.com/97ga074";
+export const NAVER_BLOG_URL = "https://blog.naver.com/koreaautolife";
 export const NAVER_MAP_URL =
   "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EC%82%AC%EC%83%81%EA%B5%AC%20%EC%82%BC%EB%8D%95%EB%A1%9C%2095";
 

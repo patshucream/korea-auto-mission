@@ -58,12 +58,12 @@ export function getReservationUrl(settings: {
   return (
     settings.naver_reservation_url?.trim() ||
     settings.naver_blog_url?.trim() ||
-    "https://blog.naver.com/97ga074"
+    "https://blog.naver.com/koreaautolife"
   );
 }
 
 export function getBlogUrl(settings: { naver_blog_url?: string | null }): string {
-  return settings.naver_blog_url?.trim() || "https://blog.naver.com/97ga074";
+  return settings.naver_blog_url?.trim() || "https://blog.naver.com/koreaautolife";
 }
 
 export function getMapUrl(settings: { naver_map_url?: string | null }): string {

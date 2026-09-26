@@ -1,4 +1,4 @@
-import { PremiumHome } from "@/components/home/PremiumHome";
+import { WorkshopHome } from "@/components/home/WorkshopHome";
 import { getHomepageData, getReviewStats } from "@/lib/data/content";
 
 export default async function HomePage() {
@@ -6,5 +6,5 @@ export default async function HomePage() {
     getHomepageData(),
     getReviewStats(),
   ]);
-  return <PremiumHome data={data} reviewStats={reviewStats} />;
+  return <WorkshopHome data={data} reviewStats={reviewStats} />;
 }

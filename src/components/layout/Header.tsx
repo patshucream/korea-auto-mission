@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { SiteSettings } from "@/lib/types";
 import { getPublicNavigation } from "@/lib/public-nav";
 import { telHref } from "@/lib/utils";
-import s from "@/components/home/PremiumHome.module.css";
+import s from "./BrandFrame.module.css";
 
-export function Header({ settings }: { settings: SiteSettings }) {
+export function Header({ settings, dark = false }: { settings: SiteSettings; dark?: boolean }) {
   const [open, setOpen] = useState(false);
   const header = useRef<HTMLElement>(null);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -36,15 +37,13 @@ export function Header({ settings }: { settings: SiteSettings }) {
     };
   }, [open]);
   return (
-    <header ref={header} className={`${s.page} ${s.header}`}>
+    <header ref={header} className={`${s.page} ${s.header} ${dark ? s.darkHeader : ""}`}>
       <Link
         className={s.brand}
         href="/"
         aria-label={`${settings.business_name} 홈`}
       >
-        <span className={s["brand-symbol"]} aria-hidden="true">
-          K<span>•</span>
-        </span>
+        <Image src="/brand/korea-auto-logo.jpg" alt="" width={48} height={48} className={s["brand-symbol"]} />
         <span>
           {settings.business_name}
           <small>{settings.english_brand_name}</small>

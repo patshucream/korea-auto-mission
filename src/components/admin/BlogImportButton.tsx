@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useTransition } from "react";
 import { publishPreparedBlogCases, savePreparedBlogDrafts, type BlogImportResult } from "@/lib/actions/blog-import";
 
-export function BlogImportButton() {
+export function BlogImportButton({ count }: { count: number }) {
   const [pending, startTransition] = useTransition();
   const [results, setResults] = useState<BlogImportResult[]>([]);
   const [error, setError] = useState("");
@@ -24,13 +24,13 @@ export function BlogImportButton() {
     <div className="space-y-4">
       <div className="flex flex-wrap gap-3">
         <button type="button" disabled={pending} className="btn btn-primary disabled:opacity-50" onClick={() => run(true)}>
-          {pending ? "처리 중…" : "블로그 10편을 실제 사이트에 공개"}
+          {pending ? "처리 중…" : `준비된 블로그 ${count}편 확인·공개`}
         </button>
         <button type="button" disabled={pending} className="btn btn-ghost disabled:opacity-50" onClick={() => run(false)}>
           임시저장만 하기
         </button>
       </div>
-      <p className="text-sm leading-6 text-muted">공개하면 사진과 함께 홈페이지에 바로 표시됩니다. 기존에 가져온 글이 있으면 수정한 본문은 유지하고 분류와 공개 상태만 반영합니다.</p>
+      <p className="text-sm leading-6 text-muted">공개하면 사진과 함께 홈페이지에 바로 표시됩니다. 이미 공개된 글과 삭제된 글은 건드리지 않습니다. 기존 초안은 수정한 본문을 유지하며 공개합니다.</p>
       <div aria-live="polite">
         {error ? <p className="text-sm font-bold text-red-700">{error}</p> : null}
         {results.length ? <ul className="space-y-2 rounded-xl border border-border bg-white p-5">

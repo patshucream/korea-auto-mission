@@ -23,14 +23,14 @@ async function importPreparedBlogCases(status: "draft" | "published"): Promise<{
     const result = { postId: source.postId, title: work.title };
     const { data: existing, error: lookupError } = await supabase
       .from("work_cases")
-      .select("id, slug, naver_blog_url, published_at, general_tags")
+      .select("id, slug, naver_blog_url, published_at, general_tags, status, is_published, deleted_at")
       .or(`id.eq.${work.id},slug.eq.${work.slug},naver_blog_url.like.%${source.postId}%`);
     if (lookupError) {
       results.push({ ...result, status: "error", message: "기존 글을 확인하지 못해 저장하지 않았습니다." });
       continue;
     }
     const match = existing?.find((row) => row.id === work.id || row.slug === work.slug || naverPostKey(row.naver_blog_url) === naverPostKey(source.url));
-    if (match && status === "draft") {
+    if (match && (status === "draft" || match.deleted_at || (match.status === "published" && match.is_published))) {
       results.push({ ...result, status: "skipped", id: match.id, message: "이미 등록된 글입니다. 기존 내용을 유지했습니다." });
       continue;
     }
@@ -67,7 +67,7 @@ async function importPreparedBlogCases(status: "draft" | "published"): Promise<{
       revalidatePath(`/works/${match?.slug || work.slug}`);
     }
   }
-  for (const route of ["/", "/works", "/admin/works", "/admin/blog-imports", "/sitemap.xml", "/rss.xml"]) revalidatePath(route);
+  for (const route of ["/", "/works", "/admin/works", "/admin/blog-imports", "/services/electric-vehicle", "/sitemap.xml", "/rss.xml"]) revalidatePath(route);
   return { results };
 }
 

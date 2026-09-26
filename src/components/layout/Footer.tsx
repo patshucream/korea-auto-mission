@@ -1,14 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { SiteSettings } from "@/lib/types";
 import { getPublicNavigation } from "@/lib/public-nav";
 import { telHref } from "@/lib/utils";
-import s from "@/components/home/PremiumHome.module.css";
+import s from "./BrandFrame.module.css";
 
 export function Footer({ settings }: { settings: SiteSettings }) {
   return (
     <footer className={`${s.page} ${s.footer}`}>
       <div>
         <Link className={s.brand} href="/">
+          <Image src="/brand/korea-auto-logo.jpg" alt="" width={48} height={48} className={s["brand-symbol"]} />
           <span>
             {settings.business_name}
             <small>{settings.english_brand_name}</small>

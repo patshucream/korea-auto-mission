@@ -135,7 +135,7 @@ export default async function RootLayout({
         />
         {isBlogImportPreview() ? (
           <aside className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 bg-amber-50 px-4 py-3 text-center text-xs font-medium leading-5 text-amber-950">
-            <span>블로그 작업사례 10편 미리보기 · 아직 공개되지 않은 초안입니다.</span>
+            <span>블로그 작업사례 미리보기 · 아직 공개되지 않은 초안입니다.</span>
             <Link className="font-bold underline underline-offset-4" href="/admin/blog-imports">관리자에서 임시저장</Link>
           </aside>
         ) : null}

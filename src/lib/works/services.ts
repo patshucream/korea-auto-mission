@@ -7,6 +7,7 @@ export const WORK_SERVICE_LABELS = [
   "인젝터 클리닝",
   "DPF 클리닝",
   "수입차 정밀진단",
+  "전기차 수리",
 ] as const;
 
 /** Additional services use existing text-array tags, preserving older CMS records. */

@@ -39,6 +39,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${SITE_URL}/services/electric-vehicle`,
+      lastModified: new Date("2026-09-26T00:00:00Z"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${SITE_URL}/work`,
       lastModified: now,
       changeFrequency: "daily",
