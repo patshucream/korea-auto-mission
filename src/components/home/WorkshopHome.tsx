@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
+import { SmsLink } from "@/components/ui/SmsLink";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { Reviews } from "@/components/home/Reviews";
 import { NaverLocationMap, KOREA_AUTO_NAVER_PLACE } from "./NaverLocationMap";
@@ -94,7 +95,8 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <h1 id="workshop-title">{(settings.hero_title || "좋은 정비는,\n디테일에서 시작됩니다.").split("\n").map((line, index) => <span className={index === 1 ? s.accentLine : undefined} key={index}>{line}</span>)}</h1>
           <p className={s.heroLead}>{settings.hero_description}</p>
           <div className={s.heroActions}>
-            <a className={s.primaryButton} href={phone}>차량 상담하기 <Arrow /></a>
+            <a className={s.primaryButton} href={phone}>전화 상담 <Arrow /></a>
+            <SmsLink phone={settings.phone} className={s.heroSms}>문자 상담 <Arrow /></SmsLink>
             <Link className={s.inlineLink} href={visible("works") ? "#works" : "/works"}>실제 작업 보기 <span aria-hidden="true">↓</span></Link>
           </div>
         </div>

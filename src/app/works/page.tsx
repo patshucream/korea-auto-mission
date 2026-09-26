@@ -6,6 +6,7 @@ import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { WorkCard } from "@/components/works/WorkCard";
 import { WorkFilters } from "@/components/works/WorkFilters";
 import { getPaginatedWorks, getSiteSettings } from "@/lib/data/content";
+import s from "@/components/works/WorkLibrary.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default async function WorksPage({ searchParams }: Props) {
   const brand = first(params.brand);
   const model = first(params.model);
   const service = first(params.service);
-  const hasFilter = Boolean(q || brand || model || service);
+  const hasFilter = Boolean(q || brand || model || service || first(params.category));
 
   const result = await getPaginatedWorks({
     q,
@@ -61,23 +62,14 @@ export default async function WorksPage({ searchParams }: Props) {
 
   return (
     <>
-      <Header settings={settings} />
-      <main className="bg-white pb-mobile-bar">
-        <section className="section-pad">
-          <div className="container-site">
-            <h1 className="section-title">작업사례</h1>
-            <p className="section-lead">
-              브랜드, 증상, 정비 서비스로 실제 진단·정비 사례를 찾아보세요.
-            </p>
-            <p className="mt-4 text-sm font-bold text-muted">
-              전체 작업{" "}
-              <span className="text-charcoal">{result.total}</span>건
-              {hasFilter ? " · 현재 필터 결과" : ""}
-            </p>
-
-            <div className="mt-10">
+      <Header settings={settings} dark />
+      <main className={s.library}>
+        <section className={s.librarySection}>
+          <div>
+            <header className={s.libraryHeading}><p>WORKSHOP JOURNAL</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
+            <div>
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>
-                <WorkFilters
+                <WorkFilters key={JSON.stringify(params)}
                   brands={result.brands}
                   models={result.models}
                   services={result.services}
@@ -111,7 +103,7 @@ export default async function WorksPage({ searchParams }: Props) {
                 </div>
               </div>
             ) : (
-              <div className="mt-8 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+              <div className={s.cardGrid}>
                 {result.items.map((work) => (
                   <WorkCard key={work.id} work={work} />
                 ))}
