@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${SITE_URL}/works/${encodeURIComponent(work.slug)}`;
 
     return {
-      title,
+      title: title.includes("코리아오토미션") ? { absolute: title } : title,
       description,
       alternates: { canonical },
       robots: work.noindex ? { index: false, follow: false } : undefined,
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         url: canonical,
         type: "article",
       },
+      twitter: { card: "summary_large_image", title, description, images: image ? [image] : undefined },
     };
   } catch (error) {
     console.error("[works/[slug] generateMetadata]", {

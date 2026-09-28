@@ -64,9 +64,6 @@ export async function generateMetadata(): Promise<Metadata> {
       description: settings.seo_description,
       images: [og.url],
     },
-    alternates: {
-      canonical: siteUrl,
-    },
     verification: {
       other: {
         "naver-site-verification": "158b488e174e30e37adb4cdfaddc98fdb9f7b1b0",
@@ -135,7 +132,7 @@ export default async function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
         />
         {isBlogImportPreview() ? (
           <aside className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 bg-amber-50 px-4 py-3 text-center text-xs font-medium leading-5 text-amber-950">

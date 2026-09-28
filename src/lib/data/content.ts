@@ -484,7 +484,7 @@ export async function incrementWorkViewCount(id: string): Promise<void> {
 
 /**
  * 관련 작업사례 추천.
- * 우선순위: 수동 지정 → 같은 모델 → 같은 제조사 → 같은 서비스 → 같은 증상 → 최신
+ * 우선순위: 수동 지정 → 같은 모델 → 같은 정비 분야·증상 → 같은 제조사 → 최신
  * 실패해도 빈 배열 반환 (상세 페이지 500 방지)
  */
 export async function getRelatedWorks(
@@ -506,12 +506,12 @@ export async function getRelatedWorks(
       if (relatedIds.includes(w.id)) score += 1000;
       const wBrand = (w.manufacturer || w.vehicle_brand || "").trim();
       if (brand && model && wBrand === brand && w.vehicle_model === model) score += 500;
-      else if (brand && wBrand === brand) score += 300;
-      if (current.service_id && w.service_id === current.service_id) score += 200;
+      else if (brand && wBrand === brand) score += 50;
+      if (current.service_id && w.service_id === current.service_id) score += 300;
       else if (
         getWorkServiceLabels(current).some((label) => getWorkServiceLabels(w).includes(label))
       ) {
-        score += 150;
+        score += 300;
       }
       if (symptomTag && w.symptom_tags?.includes(symptomTag)) score += 100;
       return score;
@@ -520,7 +520,6 @@ export async function getRelatedWorks(
     if (!isSupabaseConfigured()) {
       return DEFAULT_WORKS.filter((w) => w.id !== current.id && w.is_published)
         .map((w) => ({ w, score: scoreWork(w) }))
-        .filter((x) => x.score > 0 || true)
         .sort((a, b) => b.score - a.score)
         .slice(0, limit)
         .map((x) => x.w);
@@ -580,7 +579,9 @@ export async function getRelatedWorks(
       addRows(data as Record<string, unknown>[]);
     }
 
-    if (current.service_id && collected.size < limit * 2) {
+    // Always collect the service matches: brand matches alone must not fill the
+    // candidate pool before relevant repairs are considered.
+    if (current.service_id) {
       const { data } = await supabase
         .from("work_cases")
         .select("*")
@@ -590,7 +591,7 @@ export async function getRelatedWorks(
         .order("published_at", { ascending: false })
         .limit(8);
       addRows(data as Record<string, unknown>[]);
-    } else if (current.service_category && collected.size < limit * 2) {
+    } else if (current.service_category) {
       const { data } = await supabase
         .from("work_cases")
         .select("*")

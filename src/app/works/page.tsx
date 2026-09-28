@@ -8,16 +8,26 @@ import { WorkFilters } from "@/components/works/WorkFilters";
 import { getPaginatedWorks, getSiteSettings } from "@/lib/data/content";
 import s from "@/components/works/WorkLibrary.module.css";
 import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "작업사례",
-  description:
-    "코리아오토미션 수입차·국산차 자동변속기 및 디젤 정비 작업사례를 확인하세요.",
-};
+import { SITE_URL } from "@/lib/utils";
+import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
+import { listingSearchPage } from "@/lib/search-pages";
 
 type Props = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const { page, filtered, canonicalPath } = listingSearchPage("/works", await searchParams);
+  const title = `부산 정비사례 · 미션수리·디젤클리닝·전기차${page > 1 && !filtered ? ` · ${page}페이지` : ""}`;
+  const description = "부산 사상구 코리아오토미션의 실제 정비 기록. 차종과 증상으로 미션수리, 흡기·인젝터·DPF 클리닝, 전기차 작업 사진과 점검 과정을 찾아보고 전화·문자로 상담하세요.";
+  const url = `${SITE_URL}${canonicalPath}`;
+  return {
+    title, description, alternates: { canonical: url },
+    robots: filtered ? { index: false, follow: true } : undefined,
+    openGraph: { title, description, url, type: "website", images: [DEFAULT_SOCIAL_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [DEFAULT_SOCIAL_IMAGE.url] },
+  };
+}
 
 function first(value: string | string[] | undefined): string | undefined {
   if (Array.isArray(value)) return value[0];
@@ -26,7 +36,7 @@ function first(value: string | string[] | undefined): string | undefined {
 
 export default async function WorksPage({ searchParams }: Props) {
   const params = await searchParams;
-  const page = Number(first(params.page) || "1") || 1;
+  const { page } = listingSearchPage("/works", params);
   const q = first(params.q);
   const brand = first(params.brand);
   const model = first(params.model);
@@ -66,7 +76,12 @@ export default async function WorksPage({ searchParams }: Props) {
       <main className={s.library}>
         <section className={s.librarySection}>
           <div>
-            <header className={s.libraryHeading}><p>WORKSHOP JOURNAL</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
+            <header className={s.libraryHeading}><p>부산 사상구 · 코리아오토미션 정비사례</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
+            <nav className={s.serviceGuides} aria-label="정비 분야별 상담 안내">
+              <Link href="/services/transmission">미션수리 안내 <span aria-hidden="true">↗</span></Link>
+              <Link href="/services/diesel-cleaning">디젤클리닝 안내 <span aria-hidden="true">↗</span></Link>
+              <Link href="/services/electric-vehicle">전기차 수리 안내 <span aria-hidden="true">↗</span></Link>
+            </nav>
             <div>
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>
                 <WorkFilters key={JSON.stringify(params)}

@@ -4,14 +4,26 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { ReviewCard } from "@/components/reviews/ReviewCard";
 import { getApprovedReviews, getSiteSettings } from "@/lib/data/content";
+import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/utils";
+import { listingSearchPage } from "@/lib/search-pages";
 
 type Props = {
   searchParams: Promise<{ page?: string }>;
 };
 
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const { page, canonicalPath } = listingSearchPage("/reviews", await searchParams);
+  return {
+    title: `고객 후기${page > 1 ? ` · ${page}페이지` : ""}`,
+    description: "코리아오토미션 이용 고객이 홈페이지에 남긴 정비 후기입니다.",
+    alternates: { canonical: `${SITE_URL}${canonicalPath}` },
+  };
+}
+
 export default async function ReviewsPage({ searchParams }: Props) {
   const params = await searchParams;
-  const page = Math.max(1, Number(params.page) || 1);
+  const { page } = listingSearchPage("/reviews", params);
   const [settings, data] = await Promise.all([
     getSiteSettings(),
     getApprovedReviews({ page, pageSize: 12 }),

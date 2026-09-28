@@ -4,6 +4,8 @@
 .libraryHeading>p { font-size:10px; letter-spacing:2px; color:#6e8072; margin-bottom:20px; }
 .libraryHeading h1 { font-size:clamp(30px,3.4vw,45px); font-weight:550; letter-spacing:-1.5px; line-height:1.45; }
 .libraryHeading>span { display:block; font-size:15px; line-height:1.9; color:#758075; margin-top:20px; }
+.serviceGuides { display:flex; flex-wrap:wrap; gap:8px 24px; margin-bottom:28px; }
+.serviceGuides a { display:flex; align-items:center; gap:14px; min-height:44px; font-size:13px; color:#395442; border-bottom:1px solid #b5c3b4; }
 .filters { border-block:1px solid #cad3c8; padding:26px 0 0; }
 .searchLabel { display:block; font-size:12px; color:#617265; margin-bottom:12px; }
 .searchRow { display:flex; border-bottom:1px solid #78917d; max-width:640px; }

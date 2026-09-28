@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { createClient } from "@supabase/supabase-js";
 import { SITE_URL, isSupabaseConfigured } from "@/lib/utils";
 import { dieselGuides, dieselGuidePath } from "@/lib/diesel-guides";
+import { getPublicImageUrl } from "@/lib/media";
+import { isIndexableWork } from "@/lib/search-pages";
 
 // Reflect CMS publication and deletion without requiring another deployment.
 export const dynamic = "force-dynamic";
@@ -11,72 +13,41 @@ export const dynamic = "force-dynamic";
  * Response/문자열을 직접 반환하지 않습니다.
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-
+  // Only final, indexable pages belong here. Omit unknown modification dates;
+  // a request time (or a view-count update) is not an editorial change.
   const entries: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${SITE_URL}/services`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: `${SITE_URL}/services/transmission`,
-      lastModified: new Date("2026-09-16T00:00:00Z"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/services/diesel-cleaning`,
-      lastModified: new Date("2026-09-23T00:00:00Z"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/services/electric-vehicle`,
-      lastModified: new Date("2026-09-26T00:00:00Z"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/work`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
       url: `${SITE_URL}/works`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/reviews`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/contact`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: `${SITE_URL}/privacy`,
-      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
@@ -85,7 +56,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const workEntries = await getPublishedWorkSitemapEntries();
   return [...entries, ...dieselGuides.map(guide => ({
     url: `${SITE_URL}${dieselGuidePath(guide.slug)}`,
-    lastModified: new Date("2026-09-23T00:00:00Z"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   })), ...workEntries];
@@ -109,16 +79,16 @@ async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> 
 
     let { data, error } = await supabase
       .from("work_cases")
-      .select("slug, published_at, created_at, updated_at, status, noindex")
+      .select("slug, published_at, status, noindex, canonical_url, representative_image_path")
       .eq("is_published", true)
       .order("published_at", { ascending: false })
       .limit(1000);
 
     // status/noindex 컬럼이 없는 환경 폴백
-    if (error) {
+    if (error?.code === "42703" || error?.code === "PGRST204") {
       const fallback = await supabase
         .from("work_cases")
-        .select("slug, published_at, created_at, updated_at")
+        .select("slug, published_at, representative_image_path")
         .eq("is_published", true)
         .order("published_at", { ascending: false })
         .limit(1000);
@@ -127,6 +97,7 @@ async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> 
           ...row,
           status: null,
           noindex: null,
+          canonical_url: null,
         })) ?? null;
       error = fallback.error;
     }
@@ -134,28 +105,16 @@ async function getPublishedWorkSitemapEntries(): Promise<MetadataRoute.Sitemap> 
     if (error || !data) return [];
 
     return data
-      .filter((row) => {
-        if (typeof row.slug !== "string" || !row.slug.length) return false;
-        const record = row as {
-          noindex?: boolean | null;
-          status?: string | null;
+      .filter((row) => isIndexableWork(row, SITE_URL))
+      .map((row) => {
+        const image = getPublicImageUrl(row.representative_image_path);
+        return {
+          url: `${SITE_URL}/works/${encodeURIComponent(row.slug)}`,
+          ...(image ? { images: [new URL(image, SITE_URL).href] } : {}),
+          changeFrequency: "monthly" as const,
+          priority: 0.7,
         };
-        if (record.noindex === true) return false;
-        const status =
-          typeof record.status === "string" ? record.status : "published";
-        if (status === "draft" || status === "private" || status === "trash") {
-          return false;
-        }
-        return true;
-      })
-      .map((row) => ({
-        url: `${SITE_URL}/works/${row.slug}`,
-        lastModified: new Date(
-          row.updated_at || row.published_at || row.created_at || Date.now(),
-        ),
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      }));
+      });
   } catch {
     return [];
   }

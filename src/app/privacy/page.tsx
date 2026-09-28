@@ -5,10 +5,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { getSiteSettings } from "@/lib/data/content";
+import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "개인정보처리방침",
   description: "코리아오토미션 개인정보처리방침",
+  alternates: { canonical: `${SITE_URL}/privacy` },
 };
 
 export default async function PrivacyPage() {

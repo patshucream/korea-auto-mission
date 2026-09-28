@@ -4,6 +4,12 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { ReviewWriteForm } from "@/components/reviews/ReviewWriteForm";
 import { getSiteSettings } from "@/lib/data/content";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "후기 작성",
+  robots: { index: false, follow: true },
+};
 
 export default async function ReviewWritePage() {
   const settings = await getSiteSettings();
