@@ -33,6 +33,7 @@ export default async function AdminWorksPage() {
         <Link href="/admin/blog-imports" className="text-sm font-bold text-navy underline underline-offset-4">블로그 작업사례 가져오기 →</Link>
       </div>
       <WorksAdminList initialWorks={works} />
+      <Link href="/admin/work-seo-revisions" className="mt-6 inline-block text-sm font-bold text-navy underline underline-offset-4">작업사례 검색 설명 검토 →</Link>
     </AdminShell>
   );
 }

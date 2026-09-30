@@ -53,11 +53,13 @@ export default async function WorkDetailPage({ params }: Props) {
   void incrementWorkViewCount(work.id);
   const [settings, related] = await Promise.all([getSiteSettings(), getRelatedWorks(work, 4)]);
   const canonical = work.canonical_url || `${SITE_URL}/works/${encodeURIComponent(work.slug)}`;
+  const articleImage = getPublicImageUrl(work.og_image_path) || getPublicImageUrl(work.representative_image_path);
   const jsonLd = {
     "@context":"https://schema.org", "@type":"Article",
     headline:buildDefaultSeoTitle(work), description:buildDefaultSeoDescription(work),
-    datePublished:work.published_at || work.created_at, dateModified:work.updated_at || work.published_at || undefined,
-    image:getPublicImageUrl(work.og_image_path || work.representative_image_path) || undefined,
+    // updated_at also changes when a page view is recorded; it is not an editorial date.
+    datePublished:work.published_at || work.created_at,
+    image:articleImage ? new URL(articleImage, SITE_URL).href : undefined,
     author:{"@type":"Organization",name:settings.business_name},
     publisher:{"@type":"Organization",name:settings.business_name,url:SITE_URL},mainEntityOfPage:canonical,url:canonical,
   };
