@@ -3953,5 +3953,1899 @@
       "noindex": false,
       "view_count": 0
     }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224426404936",
+      "url": "https://blog.naver.com/koreaautolife/224426404936",
+      "title": "카니발 디젤 흡기,인젝터,DPF클리닝 / 출력과 연비저하 / 차량떨림",
+      "publishedAt": "2026-09-29T13:22:58.445Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 2021년식 및 별도 증상 없음은 본문 명시 사실. 제목의 출력·연비 저하·떨림을 이 차량 증상으로 채택하지 않음. 8만/10만 km 일반 관리 설명을 실제 주행거리로 사용하지 않음. 정비 주기와 100% 세척·성능 보장은 제외. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjlfMjIz/MDAxNzkwNjg1OTY0Nzkw.eKiVwwiiGAWBUCbUtKrw9kwWSvkMe4JxpF5mga5Nxmgg.KjpcRGHdFTCSt4OAm_FKapyhps8sGlI20IrKdrKg_LEg.JPEG/SE-d5fb573b-a790-4104-a565-8a1bf07ec61d.jpg",
+          "width": 3000,
+          "height": 2249,
+          "alt": "보닛을 연 카니발의 엔진룸",
+          "localPath": "/blog-imports/224426404936/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjlfMjIz/MDAxNzkwNjg1OTY0Nzkw.eKiVwwiiGAWBUCbUtKrw9kwWSvkMe4JxpF5mga5Nxmgg.KjpcRGHdFTCSt4OAm_FKapyhps8sGlI20IrKdrKg_LEg.JPEG/SE-d5fb573b-a790-4104-a565-8a1bf07ec61d.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjlfNzIg/MDAxNzkwNjg2MDkwOTM3.Dwkv8ZsALZvee4PXA6yDCp45kgETQpY_n3Cg6JOB-OEg.gqSApHzlcybKY-YJp2uTF1UDmovUd_F5hLIgFrr4LWog.JPEG/SE-b245f8b0-cd99-4674-b68b-6d0c76f84623.jpg",
+          "width": 3000,
+          "height": 2251,
+          "alt": "차량에서 분리한 DPF",
+          "localPath": "/blog-imports/224426404936/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjlfNzIg/MDAxNzkwNjg2MDkwOTM3.Dwkv8ZsALZvee4PXA6yDCp45kgETQpY_n3Cg6JOB-OEg.gqSApHzlcybKY-YJp2uTF1UDmovUd_F5hLIgFrr4LWog.JPEG/SE-b245f8b0-cd99-4674-b68b-6d0c76f84623.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjlfMjkw/MDAxNzkwNjg1ODUxNTgw.lGv0GBfUKNnBklx70DBa3JctYAn_EYXp9OVR5V9BFVQg.tm5Bp31hAGoj-lxTC41F9kJfDvBCcYlni98e6iwn0uYg.JPEG/1789957724206.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "분리해 놓은 인젝터 4개",
+          "localPath": "/blog-imports/224426404936/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjlfMjkw/MDAxNzkwNjg1ODUxNTgw.lGv0GBfUKNnBklx70DBa3JctYAn_EYXp9OVR5V9BFVQg.tm5Bp31hAGoj-lxTC41F9kJfDvBCcYlni98e6iwn0uYg.JPEG/1789957724206.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjlfMjY2/MDAxNzkwNjg1ODUxOTE1.i6oommpytrDqYzHZ08MPeC6-wRLHRQHKgOjQqkkWYAQg.Ut6rxs9Wi5-JJTQfyqUQIZ1D-1zhWDjXTN_QbWbTVK0g.JPEG/1789957724263.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "인젝터와 동와셔",
+          "localPath": "/blog-imports/224426404936/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjlfMjY2/MDAxNzkwNjg1ODUxOTE1.i6oommpytrDqYzHZ08MPeC6-wRLHRQHKgOjQqkkWYAQg.Ut6rxs9Wi5-JJTQfyqUQIZ1D-1zhWDjXTN_QbWbTVK0g.JPEG/1789957724263.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjlfOTYg/MDAxNzkwNjg2MDI2Njk4.VGA_pZgzFXoQEd1h5JRfH7MhtHABrzC0a7DWn_vtulwg.4lV971lReFSKC_hsIi9SgN7-YXcyDwDDyBkJnab7kTQg.JPEG/SE-783c495c-9530-4532-a5cc-61c9836b1eaf.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "흡기 계통 부품의 통로 상태",
+          "localPath": "/blog-imports/224426404936/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjlfOTYg/MDAxNzkwNjg2MDI2Njk4.VGA_pZgzFXoQEd1h5JRfH7MhtHABrzC0a7DWn_vtulwg.4lV971lReFSKC_hsIi9SgN7-YXcyDwDDyBkJnab7kTQg.JPEG/SE-783c495c-9530-4532-a5cc-61c9836b1eaf.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "97df7047-f589-4334-a98c-a00cc9c05298",
+      "slug": "naver-224426404936",
+      "title": "2021년식 카니발 디젤, 흡기·인젝터·DPF 탈거 클리닝",
+      "subtitle": "특별한 증상 없이 클리닝을 의뢰한 2021년식 카니발 디젤입니다. 흡기·인젝터·DPF를 탈거해 세척하고 동와셔와 EGR 쿨러 워터호스를 교체했습니다.",
+      "excerpt": "특별한 증상 없이 클리닝을 의뢰한 2021년식 카니발 디젤입니다. 흡기·인젝터·DPF를 탈거해 세척하고 동와셔와 EGR 쿨러 워터호스를 교체했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "카니발 디젤",
+      "model_year": "2021",
+      "mileage": "",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "",
+      "diagnosis": "별도 차량 증상 없이 클리닝을 의뢰했습니다. 흡기 매니폴드와 EGR 계통을 분리해 세척했습니다.",
+      "cause": "",
+      "repair_process": "DPF 탈거·불림·고압 세척 → 인젝터 세척·동와셔 교체 → 흡기·EGR 세척 → 호스 교체·재장착·진단기 세팅",
+      "replaced_parts": "",
+      "work_summary": "세척한 흡기 매니폴드·인젝터·DPF를 차량에 다시 장착했습니다. 부동액 주입과 호스 교환, 재조립을 마친 뒤 시동을 걸어 진단기 세팅과 마무리 점검을 진행하고 출고했습니다.",
+      "detailed_content": "증상 없이 의뢰한 디젤 클리닝\n2021년식 카니발 디젤의 흡기·인젝터·DPF 클리닝 기록입니다. 이 차량은 별도의 고장 증상 없이 세 가지 클리닝을 위해 입고했습니다. 작업 전에는 엔진룸과 누유 흔적 등을 살핀 뒤 부품 탈거를 시작했습니다.\n\nDPF를 먼저 분리해 세척\nDPF를 차량에서 분리해 전용 장비에 연결했습니다. 세정액으로 내부 오염물을 불리는 동안 흡기 매니폴드와 인젝터 탈거를 진행했고, 이후 DPF 내부의 불린 오염물을 고압으로 배출하는 순서로 세척했습니다.\n\n인젝터와 흡기 계통 정비\n인젝터는 전용 장비로 세척한 뒤 동와셔를 신품으로 교체했습니다. 흡기 매니폴드와 EGR 쿨러도 탈거해 전용 장비에서 클리닝했습니다. EGR 쿨러 워터호스는 작업 과정에서 신품으로 교체했습니다.\n\n재장착과 진단기 세팅\n세척한 흡기 매니폴드·인젝터·DPF를 차량에 다시 장착했습니다. 부동액 주입과 호스 교환, 재조립을 마친 뒤 시동을 걸어 진단기 세팅과 마무리 점검을 진행하고 출고했습니다.",
+      "content_html": "<h2>증상 없이 의뢰한 디젤 클리닝</h2><p>2021년식 카니발 디젤의 흡기·인젝터·DPF 클리닝 기록입니다. 이 차량은 별도의 고장 증상 없이 세 가지 클리닝을 위해 입고했습니다. 작업 전에는 엔진룸과 누유 흔적 등을 살핀 뒤 부품 탈거를 시작했습니다.</p><h2>DPF를 먼저 분리해 세척</h2><p>DPF를 차량에서 분리해 전용 장비에 연결했습니다. 세정액으로 내부 오염물을 불리는 동안 흡기 매니폴드와 인젝터 탈거를 진행했고, 이후 DPF 내부의 불린 오염물을 고압으로 배출하는 순서로 세척했습니다.</p><figure><img src=\"/blog-imports/224426404936/05.jpg\" alt=\"차량에서 분리한 DPF\" loading=\"lazy\" /><figcaption>차량에서 분리한 DPF</figcaption></figure><h2>인젝터와 흡기 계통 정비</h2><p>인젝터는 전용 장비로 세척한 뒤 동와셔를 신품으로 교체했습니다. 흡기 매니폴드와 EGR 쿨러도 탈거해 전용 장비에서 클리닝했습니다. EGR 쿨러 워터호스는 작업 과정에서 신품으로 교체했습니다.</p><figure><img src=\"/blog-imports/224426404936/08.jpg\" alt=\"분리해 놓은 인젝터 4개\" loading=\"lazy\" /><figcaption>분리해 놓은 인젝터 4개</figcaption></figure><figure><img src=\"/blog-imports/224426404936/10.jpg\" alt=\"인젝터와 동와셔\" loading=\"lazy\" /><figcaption>인젝터와 동와셔</figcaption></figure><figure><img src=\"/blog-imports/224426404936/14.jpg\" alt=\"흡기 계통 부품의 통로 상태\" loading=\"lazy\" /><figcaption>흡기 계통 부품의 통로 상태</figcaption></figure><h2>재장착과 진단기 세팅</h2><p>세척한 흡기 매니폴드·인젝터·DPF를 차량에 다시 장착했습니다. 부동액 주입과 호스 교환, 재조립을 마친 뒤 시동을 걸어 진단기 세팅과 마무리 점검을 진행하고 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224426404936\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224426404936/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "카니발 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224426404936",
+      "created_at": "2026-09-29T13:22:58.445Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 35,
+      "seo_title": "2021년식 카니발 디젤, 흡기·인젝터·DPF 탈거 클리닝",
+      "seo_description": "특별한 증상 없이 클리닝을 의뢰한 2021년식 카니발 디젤입니다. 흡기·인젝터·DPF를 탈거해 세척하고 동와셔와 EGR 쿨러 워터호스를 교체했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224425270383",
+      "url": "https://blog.naver.com/koreaautolife/224425270383",
+      "title": "싼타페TM 8단DCT 오토미션수리 / 전진,후진 불능으로",
+      "publishedAt": "2026-09-28T13:33:17.868Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 원문 18만키로를 숫자로 표준화. 정확한 계기판 숫자를 추가하지 않음. EOP 펌프는 이번 고장과 무관한 예방교체. 전후진 불능의 원인으로 쓰지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTkg/MDAxNzkwNTk5NTY3NzM4.rofFWuqwAG80j0xfisBSHAZpfjR_7y2B-rFBZI7k1lMg.q3ASD9R4Aanh7-uhY2AxEuNmROFqhOhFkhtpxl1YE_4g.JPEG/20260916_155352.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "작업대에서 분해한 습식 8단 DCT와 제어 부품",
+          "localPath": "/blog-imports/224425270383/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTkg/MDAxNzkwNTk5NTY3NzM4.rofFWuqwAG80j0xfisBSHAZpfjR_7y2B-rFBZI7k1lMg.q3ASD9R4Aanh7-uhY2AxEuNmROFqhOhFkhtpxl1YE_4g.JPEG/20260916_155352.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjhfMjYg/MDAxNzkwNTk5NTY3NzI1.RegPeOdTLPH8W25etr0EVU9ANYEdsc3HAZ52_oJ2Qa0g.txYBpqHwWWemQKKJUNJfjRcAxtrx9zid38iuDLrZGu4g.JPEG/20260916_164341.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분리한 솔레노이드와 밸브바디 플레이트",
+          "localPath": "/blog-imports/224425270383/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjhfMjYg/MDAxNzkwNTk5NTY3NzI1.RegPeOdTLPH8W25etr0EVU9ANYEdsc3HAZ52_oJ2Qa0g.txYBpqHwWWemQKKJUNJfjRcAxtrx9zid38iuDLrZGu4g.JPEG/20260916_164341.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTEx/MDAxNzkwNTk5NTY5MTY3.MPMlEorOxxi0iWo6dXJYgmwIr0_pfcbmgjahicNIPy8g.dnb1tND7yt7LBYLoujdbCdPTMDrsnlddlTZUpDTqSuwg.JPEG/20260917_104939.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "기존 펌프와 교체용 EOP 펌프",
+          "localPath": "/blog-imports/224425270383/15.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTEx/MDAxNzkwNTk5NTY5MTY3.MPMlEorOxxi0iWo6dXJYgmwIr0_pfcbmgjahicNIPy8g.dnb1tND7yt7LBYLoujdbCdPTMDrsnlddlTZUpDTqSuwg.JPEG/20260917_104939.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTk4/MDAxNzkwNTk5NTY4ODk2.gm5kVhi6lfiz4ldJARE5eEPj0yiJqJzl7sGYnwYjFOQg.6Xu_EY0azdVH8adK4ucw_C36TDOOUCOMe-NQPMTu3dQg.JPEG/20260917_114148.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "오일팬을 닫기 전 변속기 조립 상태",
+          "localPath": "/blog-imports/224425270383/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTk4/MDAxNzkwNTk5NTY4ODk2.gm5kVhi6lfiz4ldJARE5eEPj0yiJqJzl7sGYnwYjFOQg.6Xu_EY0azdVH8adK4ucw_C36TDOOUCOMe-NQPMTu3dQg.JPEG/20260917_114148.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "71c0d9a9-4c3d-4095-a749-fc5e73ec37e8",
+      "slug": "naver-224425270383",
+      "title": "싼타페 TM 전진·후진 불능, 습식 8단 DCT 밸브바디 정비",
+      "subtitle": "전진·후진이 되지 않아 견인 입고한 싼타페 TM입니다. 습식 8단 DCT의 기어박스와 밸브바디를 점검하고 밸브바디 부품 교체 후 시운전했습니다.",
+      "excerpt": "전진·후진이 되지 않아 견인 입고한 싼타페 TM입니다. 습식 8단 DCT의 기어박스와 밸브바디를 점검하고 밸브바디 부품 교체 후 시운전했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "싼타페 TM",
+      "model_year": "",
+      "mileage": "18만키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "정차 후 가속해도 출발하지 않고 회전수만 상승 전진·후진 불능 엔진 체크등",
+      "diagnosis": "시프트포크 D 위치 이상 코드가 기록됐습니다. 기어박스 포크·허브 슬리브의 걸림은 확인되지 않았고, 밸브바디 유압 라인의 코팅 손상이 기록돼 있습니다.",
+      "cause": "",
+      "repair_process": "DCT 탈거·기어박스 점검 → 밸브바디 솔레노이드·플레이트·밸브판 교체 → EOP 펌프 예방교체 → 전용유 주입·세팅·시운전",
+      "replaced_parts": "",
+      "work_summary": "조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.",
+      "detailed_content": "출발하지 않아 견인 입고\n약 18만 km를 운행한 싼타페 TM 습식 8단 DCT 차량입니다. 주행 중 정차한 뒤 가속해도 차가 출발하지 않고 회전수만 올라갔으며 엔진 체크등도 켜졌습니다. 진단기에는 4·8단에 사용되는 시프트포크 D 위치 이상 코드가 기록돼 있었습니다.\n\n기어박스와 밸브바디 점검\n변속기를 탈거하고 내부 오일과 밸브바디 제어유를 배출했습니다. 분해한 기어박스에서는 포크와 허브 슬리브에 뚜렷한 문제나 걸림이 확인되지 않았습니다. 밸브바디를 분리해 유압 라인의 코팅이 손상된 부위도 확인했습니다.\n\n밸브바디 부품 교체\n솔레노이드와 플레이트, 기어 작동을 제어하는 밸브판을 분리해 교체했습니다. 내부 EOP 펌프도 신품으로 교환했으며, 원문은 이 펌프 교체를 이번 고장과 무관한 예방정비로 구분합니다.\n\n오일 주입과 전진·후진 확인\n조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>출발하지 않아 견인 입고</h2><p>약 18만 km를 운행한 싼타페 TM 습식 8단 DCT 차량입니다. 주행 중 정차한 뒤 가속해도 차가 출발하지 않고 회전수만 올라갔으며 엔진 체크등도 켜졌습니다. 진단기에는 4·8단에 사용되는 시프트포크 D 위치 이상 코드가 기록돼 있었습니다.</p><h2>기어박스와 밸브바디 점검</h2><p>변속기를 탈거하고 내부 오일과 밸브바디 제어유를 배출했습니다. 분해한 기어박스에서는 포크와 허브 슬리브에 뚜렷한 문제나 걸림이 확인되지 않았습니다. 밸브바디를 분리해 유압 라인의 코팅이 손상된 부위도 확인했습니다.</p><h2>밸브바디 부품 교체</h2><p>솔레노이드와 플레이트, 기어 작동을 제어하는 밸브판을 분리해 교체했습니다. 내부 EOP 펌프도 신품으로 교환했으며, 원문은 이 펌프 교체를 이번 고장과 무관한 예방정비로 구분합니다.</p><figure><img src=\"/blog-imports/224425270383/12.jpg\" alt=\"분리한 솔레노이드와 밸브바디 플레이트\" loading=\"lazy\" /><figcaption>분리한 솔레노이드와 밸브바디 플레이트</figcaption></figure><figure><img src=\"/blog-imports/224425270383/15.jpg\" alt=\"기존 펌프와 교체용 EOP 펌프\" loading=\"lazy\" /><figcaption>기존 펌프와 교체용 EOP 펌프</figcaption></figure><h2>오일 주입과 전진·후진 확인</h2><p>조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224425270383/16.jpg\" alt=\"오일팬을 닫기 전 변속기 조립 상태\" loading=\"lazy\" /><figcaption>오일팬을 닫기 전 변속기 조립 상태</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224425270383\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224425270383/07.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "싼타페 TM"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224425270383",
+      "created_at": "2026-09-28T13:33:17.868Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 36,
+      "seo_title": "싼타페 TM 전진·후진 불능, 습식 8단 DCT 밸브바디 정비",
+      "seo_description": "전진·후진이 되지 않아 견인 입고한 싼타페 TM입니다. 습식 8단 DCT의 기어박스와 밸브바디를 점검하고 밸브바디 부품 교체 후 시운전했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224424117180",
+      "url": "https://blog.naver.com/koreaautolife/224424117180",
+      "title": "부산 강서구 아우디A7 DCT 오토미션수리 / 클러치과열 / 변속기오작동",
+      "publishedAt": "2026-09-27T12:32:35.288Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 원문 28만8천키로 표현을 보존. 메카트로닉스는 내부 밸브 확인 및 솔레노이드·배선 교체를 거쳐 준비한 제품. 신품 완제품으로 표현하지 않음. 온도 관련 코드와 심한 클러치 소손을 동일시하지 않음. 원문은 심한 그을림을 부정. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjdfMjQ2/MDAxNzkwNTEwMDk5Mzg2.t2VMgb1kFCvhfhoO_epsDnWHI7yPil0ekRL87g6MS2Yg.1B5LcQ2uG_Q683Ufwxb2_Cb210DWsPaeaqe3jlMZwCog.JPEG/1789778528867.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "아우디 A7에서 탈거한 DCT",
+          "localPath": "/blog-imports/224424117180/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjdfMjQ2/MDAxNzkwNTEwMDk5Mzg2.t2VMgb1kFCvhfhoO_epsDnWHI7yPil0ekRL87g6MS2Yg.1B5LcQ2uG_Q683Ufwxb2_Cb210DWsPaeaqe3jlMZwCog.JPEG/1789778528867.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjdfNTIg/MDAxNzkwNTEwMDk4Mjgy.a2bi5BTNsUohUqRLgRoxGycqqYIhhLcoAf_KNo-He5kg.-z-c7MApMYGUT0OvG1ObCLR9pFfH2m9k5FYpB5ichjUg.JPEG/1789778528839.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "변속기 탈거 후 보이는 엔진 측 플라이휠",
+          "localPath": "/blog-imports/224424117180/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjdfNTIg/MDAxNzkwNTEwMDk4Mjgy.a2bi5BTNsUohUqRLgRoxGycqqYIhhLcoAf_KNo-He5kg.-z-c7MApMYGUT0OvG1ObCLR9pFfH2m9k5FYpB5ichjUg.JPEG/1789778528839.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjdfMjcg/MDAxNzkwNTEwMDk4MzE3.4s_Lc13Cebis4Xs6lr6RicseuX7E7s1nkisB2eWx0UAg.m6EoHEDbNH4JXMHSHknYVCfVXuIIfSlT63tc2dmJNjMg.JPEG/20260918_111716.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "오일팬을 연 변속기 케이스 내부",
+          "localPath": "/blog-imports/224424117180/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjdfMjcg/MDAxNzkwNTEwMDk4MzE3.4s_Lc13Cebis4Xs6lr6RicseuX7E7s1nkisB2eWx0UAg.m6EoHEDbNH4JXMHSHknYVCfVXuIIfSlT63tc2dmJNjMg.JPEG/20260918_111716.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjdfODUg/MDAxNzkwNTEwMDk4NDU4.GmF6DZADH5gJ8kTqNNAgFh4RDCBo_eI-ck2P5MdSxDAg.LfkkaR0ZiNfGkhG9Jbn3_bbAk8rWRSAW70bjXTl_yz0g.JPEG/20260918_141832.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분리한 듀얼클러치 디스크와 플레이트",
+          "localPath": "/blog-imports/224424117180/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjdfODUg/MDAxNzkwNTEwMDk4NDU4.GmF6DZADH5gJ8kTqNNAgFh4RDCBo_eI-ck2P5MdSxDAg.LfkkaR0ZiNfGkhG9Jbn3_bbAk8rWRSAW70bjXTl_yz0g.JPEG/20260918_141832.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "c8e24f85-6774-4f9c-a077-71f1ec810bf6",
+      "slug": "naver-224424117180",
+      "title": "아우디 A7 후진 불량·변속기 오작동, DCT 정비",
+      "subtitle": "후진 불량과 변속기 오작동 표시가 발생한 아우디 A7입니다. 듀얼클러치 디스크·피스톤을 정비하고 준비된 메카트로닉스로 교환한 사례입니다.",
+      "excerpt": "후진 불량과 변속기 오작동 표시가 발생한 아우디 A7입니다. 듀얼클러치 디스크·피스톤을 정비하고 준비된 메카트로닉스로 교환한 사례입니다.",
+      "vehicle_brand": "아우디",
+      "manufacturer": "아우디",
+      "vehicle_model": "A7",
+      "model_year": "",
+      "mileage": "28만8천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "엔진 체크등·변속기 오작동 표시 말펑션 표시등 점멸 레버 전환 충격 후진 불량",
+      "diagnosis": "클러치 온도 상승으로 토크를 제한한다는 코드가 기록돼 듀얼클러치와 메카트로닉스를 점검했습니다. 디스크가 심하게 그을린 상태는 아니었다고 설명합니다.",
+      "cause": "",
+      "repair_process": "DCT 탈거 → 준비된 메카트로닉스 교환 → 듀얼클러치 디스크·피스톤 교체 → 오일 주입·세팅·시운전",
+      "replaced_parts": "",
+      "work_summary": "시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.",
+      "detailed_content": "경고 표시와 후진 불량\n약 28만 8천 km를 운행한 아우디 A7의 7단 DCT 정비 사례입니다. 엔진 체크등과 변속기 오작동 표시, 말펑션 표시등 점멸이 나타났고 레버 전환 때 충격과 후진 불량이 동반됐습니다.\n\n고장코드 확인 후 분리 점검\n진단기에는 클러치 온도가 높아 토크를 제한한다는 코드가 기록돼 있었습니다. 변속기를 탈거해 듀얼클러치와 메카트로닉스를 분리했습니다. 디스크는 심하게 그을린 상태는 아니었다고 작업 기록에 남아 있습니다.\n\n메카트로닉스와 클러치 정비\n내부 밸브를 확인하고 솔레노이드와 배선을 교체해 준비해 둔 메카트로닉스로 교환했습니다. 듀얼클러치의 디스크와 피스톤도 교체한 뒤 재조립했습니다. 변속기를 차량에 장착하고 전용 오일 주입과 진단기 세팅을 진행했습니다.\n\n수리 후 시운전\n시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.",
+      "content_html": "<h2>경고 표시와 후진 불량</h2><p>약 28만 8천 km를 운행한 아우디 A7의 7단 DCT 정비 사례입니다. 엔진 체크등과 변속기 오작동 표시, 말펑션 표시등 점멸이 나타났고 레버 전환 때 충격과 후진 불량이 동반됐습니다.</p><h2>고장코드 확인 후 분리 점검</h2><p>진단기에는 클러치 온도가 높아 토크를 제한한다는 코드가 기록돼 있었습니다. 변속기를 탈거해 듀얼클러치와 메카트로닉스를 분리했습니다. 디스크는 심하게 그을린 상태는 아니었다고 작업 기록에 남아 있습니다.</p><figure><img src=\"/blog-imports/224424117180/06.jpg\" alt=\"변속기 탈거 후 보이는 엔진 측 플라이휠\" loading=\"lazy\" /><figcaption>변속기 탈거 후 보이는 엔진 측 플라이휠</figcaption></figure><figure><img src=\"/blog-imports/224424117180/08.jpg\" alt=\"오일팬을 연 변속기 케이스 내부\" loading=\"lazy\" /><figcaption>오일팬을 연 변속기 케이스 내부</figcaption></figure><h2>메카트로닉스와 클러치 정비</h2><p>내부 밸브를 확인하고 솔레노이드와 배선을 교체해 준비해 둔 메카트로닉스로 교환했습니다. 듀얼클러치의 디스크와 피스톤도 교체한 뒤 재조립했습니다. 변속기를 차량에 장착하고 전용 오일 주입과 진단기 세팅을 진행했습니다.</p><figure><img src=\"/blog-imports/224424117180/10.jpg\" alt=\"분리한 듀얼클러치 디스크와 플레이트\" loading=\"lazy\" /><figcaption>분리한 듀얼클러치 디스크와 플레이트</figcaption></figure><h2>수리 후 시운전</h2><p>시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224424117180\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224424117180/05.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "아우디",
+        "A7"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224424117180",
+      "created_at": "2026-09-27T12:32:35.288Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 37,
+      "seo_title": "아우디 A7 후진 불량·변속기 오작동, DCT 정비",
+      "seo_description": "후진 불량과 변속기 오작동 표시가 발생한 아우디 A7입니다. 듀얼클러치 디스크·피스톤을 정비하고 준비된 메카트로닉스로 교환한 사례입니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224275733454",
+      "url": "https://blog.naver.com/koreaautolife/224275733454",
+      "title": "부산 사상구 아우디A7 흡기클리닝 / 인젝터 / DPF 디젤 크리닝 세척 완료",
+      "publishedAt": "2026-05-05T12:19:29.054Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 원문 29만5천키로 표현을 보존. 출력 부족·연비 저하·개선 수치·시운전 결과 미제공. 분사량 테스트와 동와셔 설명은 일반 안내가 섞여 특정 측정 결과·교환 사실로 확대하지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDVfODYg/MDAxNzc3OTcwOTE5MTUw.o9pbMfXurCYuelb8smV2YBDwEN_OoA8OyFKlOqLwiS8g.ktOYnKBVzpOkt7N6vFkSzv35C4F4UNGb9ozQ0QznRzkg.JPEG/SE-5230ddec-667c-434f-be72-02c21544ce97.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "흡기 매니폴드를 탈거한 엔진의 흡기 통로",
+          "localPath": "/blog-imports/224275733454/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDVfODYg/MDAxNzc3OTcwOTE5MTUw.o9pbMfXurCYuelb8smV2YBDwEN_OoA8OyFKlOqLwiS8g.ktOYnKBVzpOkt7N6vFkSzv35C4F4UNGb9ozQ0QznRzkg.JPEG/SE-5230ddec-667c-434f-be72-02c21544ce97.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDVfMTg3/MDAxNzc3OTcwOTEwNjc0.GCWBDvzbqdwlcggze4WVO0B8RbT0zuKr9Z5F46iUc2sg.dvNTOwsMLTeI551rTMGdzRhVc3fhhDynX7_GhtiJU78g.JPEG/SE-53788145-58f8-494c-bbef-804e33815d07.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "세척 후 흡기 매니폴드",
+          "localPath": "/blog-imports/224275733454/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDVfMTg3/MDAxNzc3OTcwOTEwNjc0.GCWBDvzbqdwlcggze4WVO0B8RbT0zuKr9Z5F46iUc2sg.dvNTOwsMLTeI551rTMGdzRhVc3fhhDynX7_GhtiJU78g.JPEG/SE-53788145-58f8-494c-bbef-804e33815d07.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDVfODkg/MDAxNzc3OTcwNTg2NTQ0.Uz_crOJq14WEy5Bpv4AtL-S709AdQHUuZIw3Z-ULp5Eg.muDbXyfYA4EGZMBuulrdIhNi7FO8BACb_T-ws_qnsHsg.JPEG/1776229562694.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "분리한 인젝터 6개",
+          "localPath": "/blog-imports/224275733454/17.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDVfODkg/MDAxNzc3OTcwNTg2NTQ0.Uz_crOJq14WEy5Bpv4AtL-S709AdQHUuZIw3Z-ULp5Eg.muDbXyfYA4EGZMBuulrdIhNi7FO8BACb_T-ws_qnsHsg.JPEG/1776229562694.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDVfODYg/MDAxNzc3OTcwNTgxMjE3.t_-Nr4XHTOAgM_Bi_23btIK1fHfKouSrp44444tykNMg.sBPTiwMa7OXKSleDOKlhey_sRVxzh-gWI6i8eSSB3BIg.JPEG/1776229561980.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "세척 장비에 연결한 DPF",
+          "localPath": "/blog-imports/224275733454/23.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDVfODYg/MDAxNzc3OTcwNTgxMjE3.t_-Nr4XHTOAgM_Bi_23btIK1fHfKouSrp44444tykNMg.sBPTiwMa7OXKSleDOKlhey_sRVxzh-gWI6i8eSSB3BIg.JPEG/1776229561980.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDVfMjg4/MDAxNzc3OTcwNTg3MjI4.wbYR5wnSVC-ELOj9jBNgR-g1BK8-zDrD_xNxHPBSZf0g.noMBqBnLlGHlwkqrt4tGdMqTYl92kLRGr36NN2F1zfEg.JPEG/1776229572848.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "차량 하부에서 미션오일을 배출하는 모습",
+          "localPath": "/blog-imports/224275733454/25.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDVfMjg4/MDAxNzc3OTcwNTg3MjI4.wbYR5wnSVC-ELOj9jBNgR-g1BK8-zDrD_xNxHPBSZf0g.noMBqBnLlGHlwkqrt4tGdMqTYl92kLRGr36NN2F1zfEg.JPEG/1776229572848.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "77791b3e-42c7-4a0a-ae85-0f66e6c6124f",
+      "slug": "naver-224275733454",
+      "title": "아우디 A7 흡기·인젝터·DPF 클리닝과 DCT 오일 교환",
+      "subtitle": "약 29만 5천 km 아우디 A7 디젤의 흡기·인젝터·DPF 탈거 클리닝 사례입니다. DCT 오일과 내·외부 필터 교환도 함께 진행했습니다.",
+      "excerpt": "약 29만 5천 km 아우디 A7 디젤의 흡기·인젝터·DPF 탈거 클리닝 사례입니다. DCT 오일과 내·외부 필터 교환도 함께 진행했습니다.",
+      "vehicle_brand": "아우디",
+      "manufacturer": "아우디",
+      "vehicle_model": "A7 디젤",
+      "model_year": "",
+      "mileage": "29만5천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "",
+      "diagnosis": "흡기 매니폴드와 엔진 측 흡기포트에 쌓인 카본을 확인했습니다.",
+      "cause": "",
+      "repair_process": "흡기 부품 탈거·세척 → 인젝터 6개 클리닝 → DPF 탈거·순환 및 고압 세척 → DCT 오일·내외부 필터 교환",
+      "replaced_parts": "",
+      "work_summary": "DCT 오일팬 탈거와 내·외부 필터 교체, 오일 교환을 함께 진행했습니다. 세척한 부품의 재장착과 마무리 점검을 거쳐 작업을 마쳤습니다.",
+      "detailed_content": "클리닝과 미션오일 교환 의뢰\n약 29만 5천 km를 운행한 아우디 A7 디젤의 작업 기록입니다. 흡기·인젝터·DPF를 분리해 클리닝하고, 함께 장착된 7단 DCT의 오일과 내·외부 필터 교환을 진행했습니다.\n\n흡기 부품과 포트의 카본 확인\n흡기 매니폴드를 탈거해 내부 벽면과 엔진 측 흡기포트에 쌓인 카본을 확인했습니다. 매니폴드와 스로틀바디 등 관련 부품을 전용 장비로 세척하고, 세척을 마친 부품 상태를 확인했습니다.\n\n인젝터와 DPF 탈거 세척\n인젝터 6개를 차량에서 분리해 클리닝한 뒤 다시 장착했습니다. DPF는 차량에서 탈거해 세정액을 순환시키고, 내부 오염물을 불린 후 고압으로 배출하는 방식으로 세척했습니다.\n\nDCT 오일과 필터 교환 마무리\nDCT 오일팬 탈거와 내·외부 필터 교체, 오일 교환을 함께 진행했습니다. 세척한 부품의 재장착과 마무리 점검을 거쳐 작업을 마쳤습니다.",
+      "content_html": "<h2>클리닝과 미션오일 교환 의뢰</h2><p>약 29만 5천 km를 운행한 아우디 A7 디젤의 작업 기록입니다. 흡기·인젝터·DPF를 분리해 클리닝하고, 함께 장착된 7단 DCT의 오일과 내·외부 필터 교환을 진행했습니다.</p><h2>흡기 부품과 포트의 카본 확인</h2><p>흡기 매니폴드를 탈거해 내부 벽면과 엔진 측 흡기포트에 쌓인 카본을 확인했습니다. 매니폴드와 스로틀바디 등 관련 부품을 전용 장비로 세척하고, 세척을 마친 부품 상태를 확인했습니다.</p><figure><img src=\"/blog-imports/224275733454/04.jpg\" alt=\"흡기 매니폴드를 탈거한 엔진의 흡기 통로\" loading=\"lazy\" /><figcaption>흡기 매니폴드를 탈거한 엔진의 흡기 통로</figcaption></figure><h2>인젝터와 DPF 탈거 세척</h2><p>인젝터 6개를 차량에서 분리해 클리닝한 뒤 다시 장착했습니다. DPF는 차량에서 탈거해 세정액을 순환시키고, 내부 오염물을 불린 후 고압으로 배출하는 방식으로 세척했습니다.</p><figure><img src=\"/blog-imports/224275733454/17.jpg\" alt=\"분리한 인젝터 6개\" loading=\"lazy\" /><figcaption>분리한 인젝터 6개</figcaption></figure><figure><img src=\"/blog-imports/224275733454/23.jpg\" alt=\"세척 장비에 연결한 DPF\" loading=\"lazy\" /><figcaption>세척 장비에 연결한 DPF</figcaption></figure><h2>DCT 오일과 필터 교환 마무리</h2><p>DCT 오일팬 탈거와 내·외부 필터 교체, 오일 교환을 함께 진행했습니다. 세척한 부품의 재장착과 마무리 점검을 거쳐 작업을 마쳤습니다.</p><figure><img src=\"/blog-imports/224275733454/25.jpg\" alt=\"차량 하부에서 미션오일을 배출하는 모습\" loading=\"lazy\" /><figcaption>차량 하부에서 미션오일을 배출하는 모습</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224275733454\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224275733454/11.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "아우디",
+        "A7 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "DPF 클리닝",
+        "미션오일 교환",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224275733454",
+      "created_at": "2026-05-05T12:19:29.054Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 38,
+      "seo_title": "아우디 A7 흡기·인젝터·DPF 클리닝과 DCT 오일 교환",
+      "seo_description": "약 29만 5천 km 아우디 A7 디젤의 흡기·인젝터·DPF 탈거 클리닝 사례입니다. DCT 오일과 내·외부 필터 교환도 함께 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224271694802",
+      "url": "https://blog.naver.com/koreaautolife/224271694802",
+      "title": "아우디Q3 DCT 오토미션수리 / 부산 사상구 모라동에서",
+      "publishedAt": "2026-05-01T08:39:50.361Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 2026-05-01은 원문 게시일. 예전 모라동 시절 작업이므로 최근 입고·현재 작업으로 표시하지 않음. 실제 작업일 미제공. 6만 km를 갓 넘긴 범위 표현만 있어 정확값 null. 다른 DCT 일반 증상 목록은 이 차량 증상에서 제외. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDFfNjMg/MDAxNzc3NjE0NjI4MTYw.fy-jbWXgMFiL9yNIUv47XA0_YIONONOXZamvufIqzqIg.wQw9PmwrH9MzEo39Tkn1suw8WEqDOejhPXCT467RIQMg.JPEG/1532069585903.jpg",
+          "width": 960,
+          "height": 467,
+          "alt": "차량에서 탈거한 DCT",
+          "localPath": "/blog-imports/224271694802/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDFfNjMg/MDAxNzc3NjE0NjI4MTYw.fy-jbWXgMFiL9yNIUv47XA0_YIONONOXZamvufIqzqIg.wQw9PmwrH9MzEo39Tkn1suw8WEqDOejhPXCT467RIQMg.JPEG/1532069585903.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDFfMjI2/MDAxNzc3NjE0NjI1NDYz.CEzLVJ2_hfnYjGJ2wLNye6pb-ZH5fn4W3wW1UXJ8X2Yg.jabSpaF_lDICfFDwEL5mo_32kG36ZP8sCM4GZ5eK1Ewg.JPEG/20170919_114459.jpg",
+          "width": 2656,
+          "height": 1494,
+          "alt": "변속기와 분리한 클러치 부품",
+          "localPath": "/blog-imports/224271694802/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDFfMjI2/MDAxNzc3NjE0NjI1NDYz.CEzLVJ2_hfnYjGJ2wLNye6pb-ZH5fn4W3wW1UXJ8X2Yg.jabSpaF_lDICfFDwEL5mo_32kG36ZP8sCM4GZ5eK1Ewg.JPEG/20170919_114459.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA1MDFfMjYx/MDAxNzc3NjE0NjI3ODIy.aWXR_nodq6gY3ldHBDPyTEuI-FSodCKzZmytWEjuTaEg.CowXtjQXQcTslykxAynvU8c8wfqmnIysBrgo9BcXnTwg.JPEG/1532069584452.jpg",
+          "width": 960,
+          "height": 467,
+          "alt": "차량 하부에 재장착한 변속기",
+          "localPath": "/blog-imports/224271694802/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA1MDFfMjYx/MDAxNzc3NjE0NjI3ODIy.aWXR_nodq6gY3ldHBDPyTEuI-FSodCKzZmytWEjuTaEg.CowXtjQXQcTslykxAynvU8c8wfqmnIysBrgo9BcXnTwg.JPEG/1532069584452.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "1a2070ee-cad7-421d-ab04-1b5b8e273015",
+      "slug": "naver-224271694802",
+      "title": "아우디 Q3 급정거·회전 때 슬립, 습식 DCT 수리 기록",
+      "subtitle": "급정거·급회전 때 슬립이 발생한 아우디 Q3의 과거 작업 기록입니다. 습식 DCT를 탈거·분해해 부품을 정비하고 세팅과 시운전을 진행했습니다.",
+      "excerpt": "급정거·급회전 때 슬립이 발생한 아우디 Q3의 과거 작업 기록입니다. 습식 DCT를 탈거·분해해 부품을 정비하고 세팅과 시운전을 진행했습니다.",
+      "vehicle_brand": "아우디",
+      "manufacturer": "아우디",
+      "vehicle_model": "Q3",
+      "model_year": "",
+      "mileage": "6만키로를 갓 넘김",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "급정거·급회전 때 심한 슬립 회전수만 상승하며 가속 불량",
+      "diagnosis": "변속기 내부 문제를 시사하는 고장코드를 확인한 뒤 변속기를 탈거해 분해 점검했습니다.",
+      "cause": "",
+      "repair_process": "진단 확인 → 습식 DCT 탈거·분해 → 부품 상태 확인·교체·재조립 → 오일 주입·베이직 세팅·시운전",
+      "replaced_parts": "",
+      "work_summary": "정비한 변속기를 차량에 장착하고 전용 오일을 주입했습니다. 고장코드 삭제와 베이직 세팅 후 시운전에서 기존 떨림과 슬립이 나타나지 않는 것을 확인하고 출고한 기록입니다.",
+      "detailed_content": "과거 모라동 작업장의 수리 기록\n이 글은 이전 모라동 작업장에서 진행했던 아우디 Q3 정비를 다시 소개한 기록입니다. 차량은 6만 km를 갓 넘긴 상태였으며, 급정거하거나 급회전할 때 회전수만 올라가고 차가 잘 나가지 않는 슬립 증상이 있었습니다.\n\n고장코드와 변속기 상태 확인\n진단기에서 변속기 내부 문제를 시사하는 코드를 확인하고 습식 DCT를 차량에서 탈거했습니다. 사륜구동 차량의 연결 부품을 분리한 뒤 변속기를 작업대로 옮겨 분해했습니다.\n\n분해 점검과 부품 정비\n분해한 부품을 하나씩 확인하고 부품 교체와 재조립을 진행했습니다. 이번 작업은 변속기를 차량에서 분리한 뒤 내부를 열어 정비한 사례입니다.\n\n재장착과 시운전\n정비한 변속기를 차량에 장착하고 전용 오일을 주입했습니다. 고장코드 삭제와 베이직 세팅 후 시운전에서 기존 떨림과 슬립이 나타나지 않는 것을 확인하고 출고한 기록입니다.",
+      "content_html": "<h2>과거 모라동 작업장의 수리 기록</h2><p>이 글은 이전 모라동 작업장에서 진행했던 아우디 Q3 정비를 다시 소개한 기록입니다. 차량은 6만 km를 갓 넘긴 상태였으며, 급정거하거나 급회전할 때 회전수만 올라가고 차가 잘 나가지 않는 슬립 증상이 있었습니다.</p><h2>고장코드와 변속기 상태 확인</h2><p>진단기에서 변속기 내부 문제를 시사하는 코드를 확인하고 습식 DCT를 차량에서 탈거했습니다. 사륜구동 차량의 연결 부품을 분리한 뒤 변속기를 작업대로 옮겨 분해했습니다.</p><h2>분해 점검과 부품 정비</h2><p>분해한 부품을 하나씩 확인하고 부품 교체와 재조립을 진행했습니다. 이번 작업은 변속기를 차량에서 분리한 뒤 내부를 열어 정비한 사례입니다.</p><figure><img src=\"/blog-imports/224271694802/10.jpg\" alt=\"변속기와 분리한 클러치 부품\" loading=\"lazy\" /><figcaption>변속기와 분리한 클러치 부품</figcaption></figure><h2>재장착과 시운전</h2><p>정비한 변속기를 차량에 장착하고 전용 오일을 주입했습니다. 고장코드 삭제와 베이직 세팅 후 시운전에서 기존 떨림과 슬립이 나타나지 않는 것을 확인하고 출고한 기록입니다.</p><figure><img src=\"/blog-imports/224271694802/13.jpg\" alt=\"차량 하부에 재장착한 변속기\" loading=\"lazy\" /><figcaption>차량 하부에 재장착한 변속기</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224271694802\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224271694802/07.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "아우디",
+        "Q3"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224271694802",
+      "created_at": "2026-05-01T08:39:50.361Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 39,
+      "seo_title": "아우디 Q3 급정거·회전 때 슬립, 습식 DCT 수리 기록",
+      "seo_description": "급정거·급회전 때 슬립이 발생한 아우디 Q3의 과거 작업 기록입니다. 습식 DCT를 탈거·분해해 부품을 정비하고 세팅과 시운전을 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224269677971",
+      "url": "https://blog.naver.com/koreaautolife/224269677971",
+      "title": "부산 북구 BMW520D 흡기클리닝 그리고 인젝터,DPF까지 디젤 출력 완벽히 해결",
+      "publishedAt": "2026-04-29T12:36:02.886Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 일반적인 출력 저하 설명과 제목의 완벽 해결을 해당 차량의 확정 증상·성능 결과로 확대하지 않음. 잔진동·떨림은 결과 문단의 명시 범위. 분사량·리턴량 검사 순서와 조건부 조립 설명은 있으나 수치가 없음. 정상 수치나 검사표를 만들지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjlfMTk5/MDAxNzc3NDYzOTQ3MTY2.BtjZ4khwN7JuqCn3XaJEPZFpT2BycO1XhTPjVqLqRbcg.DEakzgW-xYAIR3cBAuv6tMQZuzRMhph9630U8hLoNO8g.JPEG/20260414_143538.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분리한 흡기 매니폴드와 연결 부품",
+          "localPath": "/blog-imports/224269677971/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjlfMTk5/MDAxNzc3NDYzOTQ3MTY2.BtjZ4khwN7JuqCn3XaJEPZFpT2BycO1XhTPjVqLqRbcg.DEakzgW-xYAIR3cBAuv6tMQZuzRMhph9630U8hLoNO8g.JPEG/20260414_143538.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjlfMjI3/MDAxNzc3NDYzOTQ5MjI3.xJ0L8vHJ2-mKNbKbbC37tSOAJExnl3WBXNFrY0vrCgQg.hwxw_ctbcHXmC4R-7KJ2QGXNyaxjV6LDfUY57S1Y9DIg.JPEG/20260415_093346.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "세척 후 흡기 매니폴드 통로",
+          "localPath": "/blog-imports/224269677971/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjlfMjI3/MDAxNzc3NDYzOTQ5MjI3.xJ0L8vHJ2-mKNbKbbC37tSOAJExnl3WBXNFrY0vrCgQg.hwxw_ctbcHXmC4R-7KJ2QGXNyaxjV6LDfUY57S1Y9DIg.JPEG/20260415_093346.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjlfMjc1/MDAxNzc3NDYzOTQ3MDQx.-TNg_AUFmDNnikfE31utZ5T9y5Bo8jWK-Kt20om_puIg.EUL8RrA8zq5lL8cDtxUMez8ZEsSm_eES5B31hlgfe-cg.JPEG/20260414_135242.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "엔진 커버를 분리한 상태에서 확인한 흡기·인젝터 주변",
+          "localPath": "/blog-imports/224269677971/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjlfMjc1/MDAxNzc3NDYzOTQ3MDQx.-TNg_AUFmDNnikfE31utZ5T9y5Bo8jWK-Kt20om_puIg.EUL8RrA8zq5lL8cDtxUMez8ZEsSm_eES5B31hlgfe-cg.JPEG/20260414_135242.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjlfMzgg/MDAxNzc3NDYzOTQ4MjQ0.1OpH33oTR5BXNLfCxHalafVP81pysa_NtYSKXXoEAEog.sGBBw6Kbp_COOulp49Jg9jZWkeKF216hrS17b-EEbcEg.JPEG/20260414_154843.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "차량에서 분리한 DPF",
+          "localPath": "/blog-imports/224269677971/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjlfMzgg/MDAxNzc3NDYzOTQ4MjQ0.1OpH33oTR5BXNLfCxHalafVP81pysa_NtYSKXXoEAEog.sGBBw6Kbp_COOulp49Jg9jZWkeKF216hrS17b-EEbcEg.JPEG/20260414_154843.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "21fdafec-bac8-4b57-a373-92b667fb35a0",
+      "slug": "naver-224269677971",
+      "title": "BMW 520d 흡기·인젝터·DPF 탈거 클리닝",
+      "subtitle": "BMW 520d의 흡기·인젝터·DPF 클리닝 사례입니다. 흡기 내부 카본과 포트를 정리하고 인젝터·DPF를 탈거해 세척한 뒤 재장착했습니다.",
+      "excerpt": "BMW 520d의 흡기·인젝터·DPF 클리닝 사례입니다. 흡기 내부 카본과 포트를 정리하고 인젝터·DPF를 탈거해 세척한 뒤 재장착했습니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "520d",
+      "model_year": "",
+      "mileage": "",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "기존 잔진동·떨림이 작업 후 기록에서 언급됨",
+      "diagnosis": "흡기 매니폴드 내부에 쌓인 카본과 엔진 측 흡기포트의 오염을 확인했습니다.",
+      "cause": "",
+      "repair_process": "흡기 부품 탈거 세척 → 흡기포트 청소 → 인젝터 세척·홀 청소 → DPF 탈거·순환 및 고압 세척",
+      "replaced_parts": "",
+      "work_summary": "세 가지 클리닝을 마치고 부품을 차량에 다시 장착한 뒤 시동을 걸었습니다. 원문에는 기존 잔진동과 떨림이 거의 사라졌다고 기록돼 있으며, 마무리 점검을 거쳐 출고했습니다.",
+      "detailed_content": "세 가지 클리닝 진행\nBMW 520d의 흡기·인젝터·DPF를 탈거해 클리닝한 기록입니다. 스로틀바디를 분리하는 과정부터 카본이 확인됐고 흡기 매니폴드 안쪽 벽에도 오염물이 쌓여 있었습니다.\n\n흡기 매니폴드와 포트 세척\n분리한 흡기 매니폴드와 관련 부품을 전용 장비로 세척했습니다. 엔진 측 흡기포트는 쌓인 덩어리를 제거한 뒤 세정제와 닦아내는 작업을 반복해 안쪽을 청소했습니다.\n\n인젝터와 DPF 정비\n인젝터는 탈거해 세척하고 장착 홀도 브러시와 세정액, 에어를 이용해 청소했습니다. DPF는 전용 장비에 연결해 세정액으로 내부 오염물을 불린 뒤 고압으로 배출하는 순서로 작업했습니다.\n\n재장착 후 작동 확인\n세 가지 클리닝을 마치고 부품을 차량에 다시 장착한 뒤 시동을 걸었습니다. 원문에는 기존 잔진동과 떨림이 거의 사라졌다고 기록돼 있으며, 마무리 점검을 거쳐 출고했습니다.",
+      "content_html": "<h2>세 가지 클리닝 진행</h2><p>BMW 520d의 흡기·인젝터·DPF를 탈거해 클리닝한 기록입니다. 스로틀바디를 분리하는 과정부터 카본이 확인됐고 흡기 매니폴드 안쪽 벽에도 오염물이 쌓여 있었습니다.</p><figure><img src=\"/blog-imports/224269677971/03.jpg\" alt=\"분리한 흡기 매니폴드와 연결 부품\" loading=\"lazy\" /><figcaption>분리한 흡기 매니폴드와 연결 부품</figcaption></figure><h2>흡기 매니폴드와 포트 세척</h2><p>분리한 흡기 매니폴드와 관련 부품을 전용 장비로 세척했습니다. 엔진 측 흡기포트는 쌓인 덩어리를 제거한 뒤 세정제와 닦아내는 작업을 반복해 안쪽을 청소했습니다.</p><h2>인젝터와 DPF 정비</h2><p>인젝터는 탈거해 세척하고 장착 홀도 브러시와 세정액, 에어를 이용해 청소했습니다. DPF는 전용 장비에 연결해 세정액으로 내부 오염물을 불린 뒤 고압으로 배출하는 순서로 작업했습니다.</p><figure><img src=\"/blog-imports/224269677971/11.jpg\" alt=\"엔진 커버를 분리한 상태에서 확인한 흡기·인젝터 주변\" loading=\"lazy\" /><figcaption>엔진 커버를 분리한 상태에서 확인한 흡기·인젝터 주변</figcaption></figure><figure><img src=\"/blog-imports/224269677971/14.jpg\" alt=\"차량에서 분리한 DPF\" loading=\"lazy\" /><figcaption>차량에서 분리한 DPF</figcaption></figure><h2>재장착 후 작동 확인</h2><p>세 가지 클리닝을 마치고 부품을 차량에 다시 장착한 뒤 시동을 걸었습니다. 원문에는 기존 잔진동과 떨림이 거의 사라졌다고 기록돼 있으며, 마무리 점검을 거쳐 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224269677971\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224269677971/07.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "520d"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224269677971",
+      "created_at": "2026-04-29T12:36:02.886Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 40,
+      "seo_title": "BMW 520d 흡기·인젝터·DPF 탈거 클리닝",
+      "seo_description": "BMW 520d의 흡기·인젝터·DPF 클리닝 사례입니다. 흡기 내부 카본과 포트를 정리하고 인젝터·DPF를 탈거해 세척한 뒤 재장착했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224267258628",
+      "url": "https://blog.naver.com/koreaautolife/224267258628",
+      "title": "부산 진구 크루즈 흡기클리닝 / 디젤 출력부족 해결",
+      "publishedAt": "2026-04-27T13:34:04.046Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 12만6천키로 원문 표현 보존. 올란도 과거 사례와 다른 크루즈 활대 고무 수급 이야기는 이 차량 작업에 합치지 않음. 인젝터·DPF 완료는 본문에 기록됐으나 사진은 별도 글에서 다룬다고 명시. 본 후보를 그 작업 사진으로 표시하지 않음. 출력 회복 측정·시운전 결과 미제공. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjdfNTQg/MDAxNzc3MjkzMjc2NzU0.juKxOKqvhJm49JqBU-ZaZzDs3noCMDqxRR90Px8TtaAg.teSeHYk9Lj4txrGxsn1uZBw3X5QWyUxNuK28tMvsANsg.JPEG/20260416_181824.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "크루즈의 엔진룸",
+          "localPath": "/blog-imports/224267258628/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjdfNTQg/MDAxNzc3MjkzMjc2NzU0.juKxOKqvhJm49JqBU-ZaZzDs3noCMDqxRR90Px8TtaAg.teSeHYk9Lj4txrGxsn1uZBw3X5QWyUxNuK28tMvsANsg.JPEG/20260416_181824.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjdfMjIw/MDAxNzc3MjkzMjc2NzQx.UN6z2GxwtBD_33WM4kFM7ECeO7VkS-6Acn9OixYijSog.xZ6-8S5ytS4CKjQQXmMBxw6VZf55YnD-kcPcNN1-PfEg.JPEG/20260416_181833.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "흡기 연결부를 분리한 상태",
+          "localPath": "/blog-imports/224267258628/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjdfMjIw/MDAxNzc3MjkzMjc2NzQx.UN6z2GxwtBD_33WM4kFM7ECeO7VkS-6Acn9OixYijSog.xZ6-8S5ytS4CKjQQXmMBxw6VZf55YnD-kcPcNN1-PfEg.JPEG/20260416_181833.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjdfMTYy/MDAxNzc3MjkzMjc4MDA4.D_zEKbob7CSz_8dun4rYr4poADXdQF5JnEsBepNIpRAg.Ixq33mgg3GWm2_ps1ucwEguv35sPWYVCw8CZjzApZWYg.JPEG/20260420_100338.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "기존 흡기 매니폴드와 교체용 매니폴드",
+          "localPath": "/blog-imports/224267258628/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjdfMTYy/MDAxNzc3MjkzMjc4MDA4.D_zEKbob7CSz_8dun4rYr4poADXdQF5JnEsBepNIpRAg.Ixq33mgg3GWm2_ps1ucwEguv35sPWYVCw8CZjzApZWYg.JPEG/20260420_100338.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjdfMTkg/MDAxNzc3MjkzMjc3MDE1.yOhg66_ZgsgCqAawJlkXCFzEuhKuMHzOI2KroC98AKUg.xaA1AWYY8Y8zxCbvs9XKo82nuRXdhD_5joQy1WbHBmwg.JPEG/20260420_112928.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "차량에 장착한 흡기 매니폴드",
+          "localPath": "/blog-imports/224267258628/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjdfMTkg/MDAxNzc3MjkzMjc3MDE1.yOhg66_ZgsgCqAawJlkXCFzEuhKuMHzOI2KroC98AKUg.xaA1AWYY8Y8zxCbvs9XKo82nuRXdhD_5joQy1WbHBmwg.JPEG/20260420_112928.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "26d7776f-f8a1-40a5-a03d-ebb691061840",
+      "slug": "naver-224267258628",
+      "title": "크루즈 디젤 출력 저하, 흡기 매니폴드 교환과 클리닝",
+      "subtitle": "출력 저하로 입고한 크루즈 디젤입니다. 파손된 흡기 매니폴드를 신품으로 교환하고 EGR 쿨러 세척, 인젝터·DPF 클리닝을 함께 진행했습니다.",
+      "excerpt": "출력 저하로 입고한 크루즈 디젤입니다. 파손된 흡기 매니폴드를 신품으로 교환하고 EGR 쿨러 세척, 인젝터·DPF 클리닝을 함께 진행했습니다.",
+      "vehicle_brand": "쉐보레",
+      "manufacturer": "쉐보레",
+      "vehicle_model": "크루즈 디젤",
+      "model_year": "",
+      "mileage": "12만6천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "출력 저하",
+      "diagnosis": "흡기 매니폴드의 플라스틱 연결 부분이 심하게 파손된 상태를 확인해 신품 교환했습니다.",
+      "cause": "",
+      "repair_process": "흡기 매니폴드 손상 확인 → 신품 교체·EGR 쿨러 세척 → 인젝터·DPF 클리닝 → 재장착·부동액 주입·점검",
+      "replaced_parts": "",
+      "work_summary": "흡기 계통 교환·세척과 인젝터·DPF 클리닝을 마친 뒤 시동을 걸었습니다. 부동액을 주입하고 조립에서 빠진 부분이 없는지 확인한 후 차량을 출고했습니다.",
+      "detailed_content": "출력 저하로 입고한 크루즈\n약 12만 6천 km를 운행한 크루즈 디젤이 출력 저하로 입고했습니다. 흡기·인젝터·DPF 클리닝을 의뢰했고, 흡기 매니폴드에 손상이 확인되면 신품으로 교체하기로 했습니다.\n\n흡기 매니폴드 연결부 파손\n흡기 매니폴드를 분리해 플라스틱 연결 부분의 심한 파손을 확인했습니다. 해당 매니폴드는 신품으로 교환하고, 분리한 EGR 쿨러는 전용 장비에서 세척했습니다.\n\n클리닝과 재장착\n매니폴드 부품을 기다리는 동안 인젝터와 DPF 클리닝을 진행했습니다. 새 흡기 매니폴드와 세척한 EGR 쿨러를 장착한 뒤 고압 레일과 인젝터 쪽 조립을 마무리했습니다.\n\n부동액 주입과 점검\n흡기 계통 교환·세척과 인젝터·DPF 클리닝을 마친 뒤 시동을 걸었습니다. 부동액을 주입하고 조립에서 빠진 부분이 없는지 확인한 후 차량을 출고했습니다.",
+      "content_html": "<h2>출력 저하로 입고한 크루즈</h2><p>약 12만 6천 km를 운행한 크루즈 디젤이 출력 저하로 입고했습니다. 흡기·인젝터·DPF 클리닝을 의뢰했고, 흡기 매니폴드에 손상이 확인되면 신품으로 교체하기로 했습니다.</p><figure><img src=\"/blog-imports/224267258628/03.jpg\" alt=\"크루즈의 엔진룸\" loading=\"lazy\" /><figcaption>크루즈의 엔진룸</figcaption></figure><h2>흡기 매니폴드 연결부 파손</h2><p>흡기 매니폴드를 분리해 플라스틱 연결 부분의 심한 파손을 확인했습니다. 해당 매니폴드는 신품으로 교환하고, 분리한 EGR 쿨러는 전용 장비에서 세척했습니다.</p><figure><img src=\"/blog-imports/224267258628/05.jpg\" alt=\"흡기 연결부를 분리한 상태\" loading=\"lazy\" /><figcaption>흡기 연결부를 분리한 상태</figcaption></figure><h2>클리닝과 재장착</h2><p>매니폴드 부품을 기다리는 동안 인젝터와 DPF 클리닝을 진행했습니다. 새 흡기 매니폴드와 세척한 EGR 쿨러를 장착한 뒤 고압 레일과 인젝터 쪽 조립을 마무리했습니다.</p><figure><img src=\"/blog-imports/224267258628/10.jpg\" alt=\"차량에 장착한 흡기 매니폴드\" loading=\"lazy\" /><figcaption>차량에 장착한 흡기 매니폴드</figcaption></figure><h2>부동액 주입과 점검</h2><p>흡기 계통 교환·세척과 인젝터·DPF 클리닝을 마친 뒤 시동을 걸었습니다. 부동액을 주입하고 조립에서 빠진 부분이 없는지 확인한 후 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224267258628\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224267258628/07.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "쉐보레",
+        "크루즈 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224267258628",
+      "created_at": "2026-04-27T13:34:04.046Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 41,
+      "seo_title": "크루즈 디젤 출력 저하, 흡기 매니폴드 교환과 클리닝",
+      "seo_description": "출력 저하로 입고한 크루즈 디젤입니다. 파손된 흡기 매니폴드를 신품으로 교환하고 EGR 쿨러 세척, 인젝터·DPF 클리닝을 함께 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224265782652",
+      "url": "https://blog.naver.com/koreaautolife/224265782652",
+      "title": "해운대에서 입고된 벤츠E220 디젤 인젝터수리 / 엔진체크등 / 출력이상 / 엔진부조",
+      "publishedAt": "2026-04-26T09:34:11.378Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 14만3천키로 원문 표현 보존. 분사량 수치·수리 인젝터 수량·내부 교환 명세 미제공. 나머지 시스템 고장코드까지 모두 해소됐다고 쓰지 않음. 기존 서비스 injector의 명칭은 인젝터 클리닝. 이 사례는 인젝터 수리이므로 제목·본문·추가 태그에서 구분. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjZfOTgg/MDAxNzc3MTg2MDMxOTA3.z_QNjg_n7R1BamGSQolZm_Ncv3wMhjP_eIf5MGFfTD4g.4zGfrqAjrYfl1v35e1gipqhAdrraapj1wGcrD_jvSawg.JPEG/SE-b59d539d-2cd7-4c3c-a3b3-fb68bead220d.jpg",
+          "width": 2250,
+          "height": 2335,
+          "alt": "엔진룸 앞에 놓은 탈거 인젝터",
+          "localPath": "/blog-imports/224265782652/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjZfOTgg/MDAxNzc3MTg2MDMxOTA3.z_QNjg_n7R1BamGSQolZm_Ncv3wMhjP_eIf5MGFfTD4g.4zGfrqAjrYfl1v35e1gipqhAdrraapj1wGcrD_jvSawg.JPEG/SE-b59d539d-2cd7-4c3c-a3b3-fb68bead220d.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjZfMTgz/MDAxNzc3MTg1ODE0MjU5.plnPZ4vykshBAX_kqxlZeydXscoikSCIyETFqNb0qwQg.pOde2hnmuWdNd5A7hrMsNbJueejn7XRIE81lezP5-xQg.JPEG/1623298734731-13.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "인젝터를 탈거한 엔진의 장착 부위",
+          "localPath": "/blog-imports/224265782652/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjZfMTgz/MDAxNzc3MTg1ODE0MjU5.plnPZ4vykshBAX_kqxlZeydXscoikSCIyETFqNb0qwQg.pOde2hnmuWdNd5A7hrMsNbJueejn7XRIE81lezP5-xQg.JPEG/1623298734731-13.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjZfMjkg/MDAxNzc3MTg1ODU5NzE3.8XwYaSPK3GRAubpQJfz8HcR_Js4gc5ddRdtg1oTv6ZUg.dTg0pe_jmlnLzIMwjPKaXgnmiRbNmKu0zYNjaF1ixYgg.JPEG/SE-e30e0656-4228-40cc-a828-07b13d0736ab.jpg",
+          "width": 2250,
+          "height": 2007,
+          "alt": "정비 후 재장착을 준비한 인젝터",
+          "localPath": "/blog-imports/224265782652/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjZfMjkg/MDAxNzc3MTg1ODU5NzE3.8XwYaSPK3GRAubpQJfz8HcR_Js4gc5ddRdtg1oTv6ZUg.dTg0pe_jmlnLzIMwjPKaXgnmiRbNmKu0zYNjaF1ixYgg.JPEG/SE-e30e0656-4228-40cc-a828-07b13d0736ab.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "752c4cd4-e39b-46da-a189-1df9ce68cd54",
+      "slug": "naver-224265782652",
+      "title": "벤츠 E220 엔진 부조·시동 불량, 인젝터 분해 수리",
+      "subtitle": "엔진 체크등과 시동 불량·부조가 발생한 벤츠 E220 디젤입니다. 인젝터 가스 누설과 분사량 이상을 확인하고 인젝터 분해 수리를 진행했습니다.",
+      "excerpt": "엔진 체크등과 시동 불량·부조가 발생한 벤츠 E220 디젤입니다. 인젝터 가스 누설과 분사량 이상을 확인하고 인젝터 분해 수리를 진행했습니다.",
+      "vehicle_brand": "메르세데스-벤츠",
+      "manufacturer": "메르세데스-벤츠",
+      "vehicle_model": "E220 디젤",
+      "model_year": "",
+      "mileage": "14만3천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "60fd5e9f-4995-4a77-ab0b-7a20f9c4a8c7",
+      "service_category": "인젝터 클리닝",
+      "symptoms": "엔진 체크등 시동 불량 매연 냄새 심한 엔진 부조",
+      "diagnosis": "인젝터 부위 가스 누설과 3번 인젝터 관련 코드를 확인했습니다. 탈거 후 검사에서 분사량 이상이 확인됐습니다.",
+      "cause": "",
+      "repair_process": "고장코드·데이터 점검 → 인젝터 탈거·세척·분사량 확인 → 분해 수리 → 재장착·초기화·점검",
+      "replaced_parts": "",
+      "work_summary": "시동을 걸어 확인했을 때 기존 가스 누설과 밀폐 불량 증상이 나타나지 않았다고 기록돼 있습니다. 테스트와 마무리 점검을 거쳐 차량을 출고했습니다.",
+      "detailed_content": "시동 불량과 엔진 부조\n약 14만 3천 km를 운행한 벤츠 E220 디젤이 엔진 체크등과 시동 불량으로 입고했습니다. 배기 쪽 매연 냄새와 심한 엔진 부조가 있었고, 엔진룸에서는 인젝터 쪽으로 가스가 올라오는 상태를 확인했습니다.\n\n3번 인젝터와 분사 상태 확인\n범용 진단기와 전용 진단기로 고장코드와 데이터를 점검했습니다. 3번 인젝터 관련 코드와 해당 부위의 누설이 확인됐으며, 나머지 인젝터 데이터도 살폈습니다. 인젝터를 분리해 외부 세척과 분사량 검사를 한 뒤 수리 범위를 정했습니다.\n\n인젝터 분해 수리\n탈거 후 분사량 이상이 확인돼 인젝터 분해 수리를 진행했습니다. 수리를 마친 인젝터를 다시 장착하고 전용 진단기로 초기화와 데이터 설정을 마쳤습니다.\n\n재장착 후 누설 확인\n시동을 걸어 확인했을 때 기존 가스 누설과 밀폐 불량 증상이 나타나지 않았다고 기록돼 있습니다. 테스트와 마무리 점검을 거쳐 차량을 출고했습니다.",
+      "content_html": "<h2>시동 불량과 엔진 부조</h2><p>약 14만 3천 km를 운행한 벤츠 E220 디젤이 엔진 체크등과 시동 불량으로 입고했습니다. 배기 쪽 매연 냄새와 심한 엔진 부조가 있었고, 엔진룸에서는 인젝터 쪽으로 가스가 올라오는 상태를 확인했습니다.</p><h2>3번 인젝터와 분사 상태 확인</h2><p>범용 진단기와 전용 진단기로 고장코드와 데이터를 점검했습니다. 3번 인젝터 관련 코드와 해당 부위의 누설이 확인됐으며, 나머지 인젝터 데이터도 살폈습니다. 인젝터를 분리해 외부 세척과 분사량 검사를 한 뒤 수리 범위를 정했습니다.</p><figure><img src=\"/blog-imports/224265782652/10.jpg\" alt=\"엔진룸 앞에 놓은 탈거 인젝터\" loading=\"lazy\" /><figcaption>엔진룸 앞에 놓은 탈거 인젝터</figcaption></figure><figure><img src=\"/blog-imports/224265782652/11.jpg\" alt=\"인젝터를 탈거한 엔진의 장착 부위\" loading=\"lazy\" /><figcaption>인젝터를 탈거한 엔진의 장착 부위</figcaption></figure><h2>인젝터 분해 수리</h2><p>탈거 후 분사량 이상이 확인돼 인젝터 분해 수리를 진행했습니다. 수리를 마친 인젝터를 다시 장착하고 전용 진단기로 초기화와 데이터 설정을 마쳤습니다.</p><h2>재장착 후 누설 확인</h2><p>시동을 걸어 확인했을 때 기존 가스 누설과 밀폐 불량 증상이 나타나지 않았다고 기록돼 있습니다. 테스트와 마무리 점검을 거쳐 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224265782652\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224265782652/12.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "메르세데스-벤츠",
+        "E220 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "인젝터 클리닝",
+        "인젝터 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224265782652",
+      "created_at": "2026-04-26T09:34:11.378Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 42,
+      "seo_title": "벤츠 E220 엔진 부조·시동 불량, 인젝터 분해 수리",
+      "seo_description": "엔진 체크등과 시동 불량·부조가 발생한 벤츠 E220 디젤입니다. 인젝터 가스 누설과 분사량 이상을 확인하고 인젝터 분해 수리를 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224262970174",
+      "url": "https://blog.naver.com/koreaautolife/224262970174",
+      "title": "부산 강서구 폭스바겐티구안 오토미션수리 / 메카트로닉스 교환",
+      "publishedAt": "2026-04-23T13:07:22.930Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 11만4천키로 원문 표현 보존. 교환 메카트로닉스의 신품·재생품 여부 미제공. 플라이휠 일반 고장 설명을 실제 고장·교체로 포함하지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjNfMTY5/MDAxNzc2OTQ4MDQ1MDI1.RLwfj4lU91AL_HKyNbC4uAui9NQf7BmCxrv-bD1xAVQg.PLPJPSVWpWQZX0mVmC08mHIeHb2pOH_fx4hgNN9Ggz0g.JPEG/SE-c1c54ec3-1d6a-44a2-9251-e3420ccb3f38.jpg",
+          "width": 1313,
+          "height": 1440,
+          "alt": "티구안에서 탈거한 DCT",
+          "localPath": "/blog-imports/224262970174/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjNfMTY5/MDAxNzc2OTQ4MDQ1MDI1.RLwfj4lU91AL_HKyNbC4uAui9NQf7BmCxrv-bD1xAVQg.PLPJPSVWpWQZX0mVmC08mHIeHb2pOH_fx4hgNN9Ggz0g.JPEG/SE-c1c54ec3-1d6a-44a2-9251-e3420ccb3f38.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjNfMTgg/MDAxNzc2OTQ4MDQ0MDY0.z9cim2jS0dtmi5v5VB2qUhXLOEk4eFmvMPE3u1llTywg.Xtz7rr1oCZAtyr2GCzhp2Pp4RD6LjqODvjQrUJyk9oAg.JPEG/SE-891af069-1cb0-4c59-ba79-9f410b5814b9.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "변속기 탈거 후 보이는 엔진 측 플라이휠",
+          "localPath": "/blog-imports/224262970174/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjNfMTgg/MDAxNzc2OTQ4MDQ0MDY0.z9cim2jS0dtmi5v5VB2qUhXLOEk4eFmvMPE3u1llTywg.Xtz7rr1oCZAtyr2GCzhp2Pp4RD6LjqODvjQrUJyk9oAg.JPEG/SE-891af069-1cb0-4c59-ba79-9f410b5814b9.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjNfMjAx/MDAxNzc2OTQ3OTA5Mzk0.mkRR5YKfgaYNJiADBwpFLE2LjHheakvQgjdMs_vKMwsg.jK12PYMwWkwv5U0A1165Z3T1lsvNGMCkEQB2rdttwrIg.JPEG/20201110_102657.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "변속기와 분리한 메카트로닉스",
+          "localPath": "/blog-imports/224262970174/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjNfMjAx/MDAxNzc2OTQ3OTA5Mzk0.mkRR5YKfgaYNJiADBwpFLE2LjHheakvQgjdMs_vKMwsg.jK12PYMwWkwv5U0A1165Z3T1lsvNGMCkEQB2rdttwrIg.JPEG/20201110_102657.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MjNfMTgy/MDAxNzc2OTQ3OTEwMzM0.8lx4RGivSqRV0X6YSNtGrG8d-XwLFm8J0ApRT9nL2-4g.-_lHc048bjGT6E9E_fnV7RkAeTgMECyAbeizmDDorHEg.JPEG/1605071171255-9.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "차량 하부에 장착한 변속기",
+          "localPath": "/blog-imports/224262970174/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MjNfMTgy/MDAxNzc2OTQ3OTEwMzM0.8lx4RGivSqRV0X6YSNtGrG8d-XwLFm8J0ApRT9nL2-4g.-_lHc048bjGT6E9E_fnV7RkAeTgMECyAbeizmDDorHEg.JPEG/1605071171255-9.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "27de70f3-746e-48b2-aa9a-8788ff094cde",
+      "slug": "naver-224262970174",
+      "title": "티구안 스패너 경고·슬립, DCT 메카트로닉스 교환",
+      "subtitle": "스패너 경고등과 슬립으로 입고한 티구안 2.0 TDI입니다. 듀얼클러치 상태를 확인하고 메카트로닉스를 교환한 뒤 세팅과 시운전을 진행했습니다.",
+      "excerpt": "스패너 경고등과 슬립으로 입고한 티구안 2.0 TDI입니다. 듀얼클러치 상태를 확인하고 메카트로닉스를 교환한 뒤 세팅과 시운전을 진행했습니다.",
+      "vehicle_brand": "폭스바겐",
+      "manufacturer": "폭스바겐",
+      "vehicle_model": "티구안 2.0 TDI",
+      "model_year": "",
+      "mileage": "11만4천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "스패너 경고등 주행 중 슬립·가속 불량 레인지 표시 사라짐",
+      "diagnosis": "메카트로닉스 유압 관련 코드가 기록됐습니다. 듀얼클러치는 문제가 없다고 판단하고 메카트로닉스를 교환했습니다.",
+      "cause": "",
+      "repair_process": "DCT 탈거·점검 → 준비된 메카트로닉스 교환 → 오일 주입·레벨링 → 베이직 세팅·시운전",
+      "replaced_parts": "",
+      "work_summary": "전용 진단기로 고장코드 삭제와 베이직 세팅을 마친 뒤 시운전했습니다. 기록에는 변속 충격과 스패너 표시등 점등이 다시 나타나지 않았다고 남아 있으며, 마무리 점검 후 출고했습니다.",
+      "detailed_content": "주행 중 경고등과 슬립\n약 11만 4천 km를 운행한 티구안 2.0 TDI 사륜구동 차량입니다. 주행 중 스패너 경고등이 켜지고 차가 잘 나가지 않으며 슬립이 발생했습니다. 경고가 켜질 때 계기판의 레인지 표시도 사라졌습니다.\n\nDCT 탈거와 점검\n메카트로닉스 유압 관련 고장코드를 확인한 뒤 DCT를 탈거했습니다. 듀얼클러치와 메카트로닉스를 확인했으며, 원문은 이번 차량의 듀얼클러치에는 문제가 없었다고 설명합니다.\n\n메카트로닉스 교환\n메카트로닉스 문제로 판단해 미리 준비한 부품으로 교환했습니다. 오일팬을 세척해 조립한 후 변속기를 다시 장착하고, 전용 오일 주입과 레벨링을 진행했습니다.\n\n세팅과 시운전\n전용 진단기로 고장코드 삭제와 베이직 세팅을 마친 뒤 시운전했습니다. 기록에는 변속 충격과 스패너 표시등 점등이 다시 나타나지 않았다고 남아 있으며, 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>주행 중 경고등과 슬립</h2><p>약 11만 4천 km를 운행한 티구안 2.0 TDI 사륜구동 차량입니다. 주행 중 스패너 경고등이 켜지고 차가 잘 나가지 않으며 슬립이 발생했습니다. 경고가 켜질 때 계기판의 레인지 표시도 사라졌습니다.</p><h2>DCT 탈거와 점검</h2><p>메카트로닉스 유압 관련 고장코드를 확인한 뒤 DCT를 탈거했습니다. 듀얼클러치와 메카트로닉스를 확인했으며, 원문은 이번 차량의 듀얼클러치에는 문제가 없었다고 설명합니다.</p><figure><img src=\"/blog-imports/224262970174/03.jpg\" alt=\"티구안에서 탈거한 DCT\" loading=\"lazy\" /><figcaption>티구안에서 탈거한 DCT</figcaption></figure><figure><img src=\"/blog-imports/224262970174/06.jpg\" alt=\"변속기 탈거 후 보이는 엔진 측 플라이휠\" loading=\"lazy\" /><figcaption>변속기 탈거 후 보이는 엔진 측 플라이휠</figcaption></figure><h2>메카트로닉스 교환</h2><p>메카트로닉스 문제로 판단해 미리 준비한 부품으로 교환했습니다. 오일팬을 세척해 조립한 후 변속기를 다시 장착하고, 전용 오일 주입과 레벨링을 진행했습니다.</p><figure><img src=\"/blog-imports/224262970174/08.jpg\" alt=\"차량 하부에 장착한 변속기\" loading=\"lazy\" /><figcaption>차량 하부에 장착한 변속기</figcaption></figure><h2>세팅과 시운전</h2><p>전용 진단기로 고장코드 삭제와 베이직 세팅을 마친 뒤 시운전했습니다. 기록에는 변속 충격과 스패너 표시등 점등이 다시 나타나지 않았다고 남아 있으며, 마무리 점검 후 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224262970174\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224262970174/07.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "폭스바겐",
+        "티구안 2.0 TDI"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224262970174",
+      "created_at": "2026-04-23T13:07:22.930Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 43,
+      "seo_title": "티구안 스패너 경고·슬립, DCT 메카트로닉스 교환",
+      "seo_description": "스패너 경고등과 슬립으로 입고한 티구안 2.0 TDI입니다. 듀얼클러치 상태를 확인하고 메카트로닉스를 교환한 뒤 세팅과 시운전을 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224246904261",
+      "url": "https://blog.naver.com/koreaautolife/224246904261",
+      "title": "사상구 BMW320d 인젝터클리닝과 흡기, DPF까지 디젤 차량 관리 작업을 저렴하게 했어요",
+      "publishedAt": "2026-04-09T11:26:15.658Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. B19~21은 증상·코드 없음, B140~141은 고장코드 입고, B180~181은 출력저하·잔진동 해소로 상충. symptoms=[]는 증상 없음 확정이 아니라 충돌로 채택 보류. 공개 문안에서 코드 유무·증상 개선 단정 제외. 13만5천키로 원문 표현 보존. 인젝터 커넥터 주변 연료 고임은 점검 예고만 있어 해결 완료로 쓰지 않음. 헤드커버는 엔진오일 누유 정비이며 미션오일 누유로 바꾸지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDlfMTMg/MDAxNzc1NzIzMTM0MTEw.3UqDi5qXvXC54QuS53Fk-xDr5l1TTVReIg4Gnw03dSwg.K0ontsI3S-9gNL4grVEFaYf4n1ZXDizhtneQwkXZ1t4g.JPEG/1774340615284.jpg",
+          "width": 4032,
+          "height": 3025,
+          "alt": "탈거한 흡기 매니폴드와 관련 부품",
+          "localPath": "/blog-imports/224246904261/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDlfMTMg/MDAxNzc1NzIzMTM0MTEw.3UqDi5qXvXC54QuS53Fk-xDr5l1TTVReIg4Gnw03dSwg.K0ontsI3S-9gNL4grVEFaYf4n1ZXDizhtneQwkXZ1t4g.JPEG/1774340615284.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDlfMjMz/MDAxNzc1NzIzMTM0MTc0.FOttGwVU1zT6Hm7qhN4ZVGJY3VnxwGj0SbjrpIoNhYQg.bBEMZAfuI0u_g1xvb-4zy6eLhQfD_bNTdcgyXP2yMfcg.JPEG/1774340615570.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "세척한 흡기 매니폴드와 관련 부품",
+          "localPath": "/blog-imports/224246904261/11.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDlfMjMz/MDAxNzc1NzIzMTM0MTc0.FOttGwVU1zT6Hm7qhN4ZVGJY3VnxwGj0SbjrpIoNhYQg.bBEMZAfuI0u_g1xvb-4zy6eLhQfD_bNTdcgyXP2yMfcg.JPEG/1774340615570.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDlfMjI5/MDAxNzc1NzIzMTM2NzQx.fxQZ-tb2z1WkQ5yQdcVUfBOQL4qspBVUQ4dKLjLbPrkg.O5WDt6d8Ml7i23pHKBJg0hPvVbf8owOe4I_23gv03YUg.JPEG/1774340616094.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "탈거한 인젝터 4개",
+          "localPath": "/blog-imports/224246904261/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDlfMjI5/MDAxNzc1NzIzMTM2NzQx.fxQZ-tb2z1WkQ5yQdcVUfBOQL4qspBVUQ4dKLjLbPrkg.O5WDt6d8Ml7i23pHKBJg0hPvVbf8owOe4I_23gv03YUg.JPEG/1774340616094.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDlfMTEw/MDAxNzc1NzIzMTQyNzQ0.QM7gQBYILKDUraiKY8LglIPC2mzl3K1SIWns77ept44g.YZzih4mUsLDOnr_Kwhuu-bdy1AU_wgHLxF3vn2AmTN4g.JPEG/1774340616391.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "DPF 탈거 후 배기 연결부",
+          "localPath": "/blog-imports/224246904261/22.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDlfMTEw/MDAxNzc1NzIzMTQyNzQ0.QM7gQBYILKDUraiKY8LglIPC2mzl3K1SIWns77ept44g.YZzih4mUsLDOnr_Kwhuu-bdy1AU_wgHLxF3vn2AmTN4g.JPEG/1774340616391.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDlfMjAx/MDAxNzc1NzIzMTQwMjA2.meMbE4bvW71MD-Ods_tXvaYD-CALVzK4XdL0PlMhLEgg.3yhURaLaXH0E0BpDprQ_LyuOXfdFC5MWFEqBVhtnt0sg.JPEG/1774340638945.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "기존 헤드커버와 교환용 신품 비교",
+          "localPath": "/blog-imports/224246904261/30.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDlfMjAx/MDAxNzc1NzIzMTQwMjA2.meMbE4bvW71MD-Ods_tXvaYD-CALVzK4XdL0PlMhLEgg.3yhURaLaXH0E0BpDprQ_LyuOXfdFC5MWFEqBVhtnt0sg.JPEG/1774340638945.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "3e25fb5f-9550-4cd1-a183-8641018e1209",
+      "slug": "naver-224246904261",
+      "title": "BMW 320d 흡기·인젝터·DPF 클리닝과 헤드커버 누유 정비",
+      "subtitle": "BMW 320d의 흡기·인젝터·DPF 클리닝과 누유 정비 기록입니다. 인젝터 동와셔, DPF 연결 클램프와 엔진 헤드커버를 교체하고 마무리 점검했습니다.",
+      "excerpt": "BMW 320d의 흡기·인젝터·DPF 클리닝과 누유 정비 기록입니다. 인젝터 동와셔, DPF 연결 클램프와 엔진 헤드커버를 교체하고 마무리 점검했습니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "320d 디젤",
+      "model_year": "",
+      "mileage": "13만5천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "",
+      "diagnosis": "흡기 계통의 카본과 헤드커버에서 발생한 엔진오일 누유를 확인했습니다. DPF 연결 클램프의 조임 상태도 확인해 교체했습니다.",
+      "cause": "",
+      "repair_process": "흡기·인젝터 탈거 세척·동와셔 교체 → DPF 순환·고압 세척 → DPF 클램프·헤드커버 신품 교체 → 재조립·진단기 초기화·마무리 점검",
+      "replaced_parts": "",
+      "work_summary": "클리닝과 부품 교체를 마치고 차량에 재장착했습니다. 시동 후 전용 진단기로 고장코드 삭제와 초기화를 진행하고, 마무리 점검을 거쳐 출고했습니다.",
+      "detailed_content": "디젤 클리닝과 누유 점검\n약 13만 5천 km를 운행한 BMW 320d의 흡기·인젝터·DPF 클리닝 기록입니다. 차량 점검에서 엔진오일 누유 흔적을 확인했고, 작업 중 헤드커버 쪽에서 오일이 흘러내리는 부위를 확인했습니다.\n\n흡기와 인젝터 탈거 세척\n흡기 매니폴드·스로틀바디·EGR 파이프를 탈거해 전용 장비로 세척하고 엔진 측 흡기포트도 청소했습니다. 인젝터 4개는 분리해 세척했으며 동와셔를 신품으로 교체하고 장착 홀도 정리했습니다.\n\nDPF와 헤드커버 정비\nDPF를 탈거해 전용 장비에 연결하고 세정액 순환과 고압 세척을 진행했습니다. 조임 상태가 좋지 않았던 DPF 연결 클램프는 신품으로 교체했습니다. 엔진오일 누유가 확인된 헤드커버도 신품으로 교환했습니다.\n\n재조립과 마무리 점검\n클리닝과 부품 교체를 마치고 차량에 재장착했습니다. 시동 후 전용 진단기로 고장코드 삭제와 초기화를 진행하고, 마무리 점검을 거쳐 출고했습니다.",
+      "content_html": "<h2>디젤 클리닝과 누유 점검</h2><p>약 13만 5천 km를 운행한 BMW 320d의 흡기·인젝터·DPF 클리닝 기록입니다. 차량 점검에서 엔진오일 누유 흔적을 확인했고, 작업 중 헤드커버 쪽에서 오일이 흘러내리는 부위를 확인했습니다.</p><h2>흡기와 인젝터 탈거 세척</h2><p>흡기 매니폴드·스로틀바디·EGR 파이프를 탈거해 전용 장비로 세척하고 엔진 측 흡기포트도 청소했습니다. 인젝터 4개는 분리해 세척했으며 동와셔를 신품으로 교체하고 장착 홀도 정리했습니다.</p><figure><img src=\"/blog-imports/224246904261/04.jpg\" alt=\"탈거한 흡기 매니폴드와 관련 부품\" loading=\"lazy\" /><figcaption>탈거한 흡기 매니폴드와 관련 부품</figcaption></figure><figure><img src=\"/blog-imports/224246904261/16.jpg\" alt=\"탈거한 인젝터 4개\" loading=\"lazy\" /><figcaption>탈거한 인젝터 4개</figcaption></figure><h2>DPF와 헤드커버 정비</h2><p>DPF를 탈거해 전용 장비에 연결하고 세정액 순환과 고압 세척을 진행했습니다. 조임 상태가 좋지 않았던 DPF 연결 클램프는 신품으로 교체했습니다. 엔진오일 누유가 확인된 헤드커버도 신품으로 교환했습니다.</p><figure><img src=\"/blog-imports/224246904261/22.jpg\" alt=\"DPF 탈거 후 배기 연결부\" loading=\"lazy\" /><figcaption>DPF 탈거 후 배기 연결부</figcaption></figure><figure><img src=\"/blog-imports/224246904261/30.jpg\" alt=\"기존 헤드커버와 교환용 신품 비교\" loading=\"lazy\" /><figcaption>기존 헤드커버와 교환용 신품 비교</figcaption></figure><h2>재조립과 마무리 점검</h2><p>클리닝과 부품 교체를 마치고 차량에 재장착했습니다. 시동 후 전용 진단기로 고장코드 삭제와 초기화를 진행하고, 마무리 점검을 거쳐 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224246904261\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224246904261/11.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "320d 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "DPF 클리닝",
+        "엔진오일 누유 정비",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224246904261",
+      "created_at": "2026-04-09T11:26:15.658Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 47,
+      "seo_title": "BMW 320d 흡기·인젝터·DPF 클리닝과 헤드커버 누유 정비",
+      "seo_description": "BMW 320d의 흡기·인젝터·DPF 클리닝과 누유 정비 기록입니다. 인젝터 동와셔, DPF 연결 클램프와 엔진 헤드커버를 교체하고 마무리 점검했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224245707260",
+      "url": "https://blog.naver.com/koreaautolife/224245707260",
+      "title": "강서구에서 입고된 캡티바 오토미션수리를 위해 작업을 해봤습니다. / 전진,후진 불능",
+      "publishedAt": "2026-04-08T12:52:47.343Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 16만4천키로 원문 표현 보존. P2723 코드를 솔레노이드 단독 고장으로 단정하지 않음. 구체적 변속기 내부 교체 부품 목록 미제공. 접촉 사고로 경첩이 쿨러를 찍었다는 경위는 차주 설명과 작업자 추정이 섞여 있어 확정 원인으로 쓰지 않음. 미션오일 누유와 엔진·미션 사이 엔진오일 누유 없음은 별개. 엔진오일 누유 수리 사례로 바꾸지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDhfMjEy/MDAxNzc1NjUwNjYyMTYy.IeGrNvJmI-gmjwmKb2-eWgNfDS82bcbCM9JG8INrAWwg.NzGAKTO_keHBRQ1z2i94z8vP9HoQiIhOgWyKwE7-_t4g.JPEG/SE-ed8413b5-1177-4e83-b21c-bbf516d55550.jpg",
+          "width": 1458,
+          "height": 1108,
+          "alt": "차량에서 탈거한 변속기",
+          "localPath": "/blog-imports/224245707260/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDhfMjEy/MDAxNzc1NjUwNjYyMTYy.IeGrNvJmI-gmjwmKb2-eWgNfDS82bcbCM9JG8INrAWwg.NzGAKTO_keHBRQ1z2i94z8vP9HoQiIhOgWyKwE7-_t4g.JPEG/SE-ed8413b5-1177-4e83-b21c-bbf516d55550.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDhfMjgy/MDAxNzc1NjQ2NDQwMjk0.1n7Hu-leLIAtKw9iTrrpfHP8Aiw07Gn2m3WjzC_7kRog.JgOeckkUJjAg9r2hogpUOXp7IJg_8ypSYBlXCynDjXcg.JPEG/20210827_155130.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "분해한 변속기 내부 부품",
+          "localPath": "/blog-imports/224245707260/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDhfMjgy/MDAxNzc1NjQ2NDQwMjk0.1n7Hu-leLIAtKw9iTrrpfHP8Aiw07Gn2m3WjzC_7kRog.JgOeckkUJjAg9r2hogpUOXp7IJg_8ypSYBlXCynDjXcg.JPEG/20210827_155130.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDhfNTMg/MDAxNzc1NjQ2NDQwMjUx.6ywt46UL5LzKR1aEqiGhQyNJuouyY4E2rUrqTgJiIZwg.mnH3xwjLvF7hRL4lWcEgc4CznJJ7Z9Y7wj0WwB5Xg7Ig.JPEG/20210831_090315.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "미션오일 쿨러 손상 부위 확인",
+          "localPath": "/blog-imports/224245707260/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDhfNTMg/MDAxNzc1NjQ2NDQwMjUx.6ywt46UL5LzKR1aEqiGhQyNJuouyY4E2rUrqTgJiIZwg.mnH3xwjLvF7hRL4lWcEgc4CznJJ7Z9Y7wj0WwB5Xg7Ig.JPEG/20210831_090315.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "b01fe2d3-e331-462e-a3cf-52e8ddad9d92",
+      "slug": "naver-224245707260",
+      "title": "캡티바 전진·후진 불능, 미션 수리와 오일 쿨러 교환",
+      "subtitle": "전진·후진이 되지 않아 견인 입고한 캡티바입니다. 변속기 내부 손상과 미션오일 누유를 점검하고 변속기 수리·오일 쿨러 교환을 진행했습니다.",
+      "excerpt": "전진·후진이 되지 않아 견인 입고한 캡티바입니다. 변속기 내부 손상과 미션오일 누유를 점검하고 변속기 수리·오일 쿨러 교환을 진행했습니다.",
+      "vehicle_brand": "쉐보레",
+      "manufacturer": "쉐보레",
+      "vehicle_model": "캡티바",
+      "model_year": "",
+      "mileage": "16만4천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "전진·후진 불능 차주 제보: 주행 중 회전수 상승 후 차량 정지",
+      "diagnosis": "P2723 코드와 적은 미션오일 배출량, 타는 냄새 및 누유를 확인했습니다. 분해 후 디스크 손상과 플라스틱 배플의 열손상이 보였으며 쿨러 누유 부위를 찾아 교체했습니다.",
+      "cause": "",
+      "repair_process": "진단·오일 상태 확인 → 변속기 탈거·분해 수리 → 재장착 후 누유 부위 확인 → 미션오일 쿨러 신품 교체 → 누유 확인·시운전",
+      "replaced_parts": "",
+      "work_summary": "재장착 후 시동을 유지하며 누유 여부를 확인했고, 약 30분간 점검에서 새는 부위가 없었다고 기록돼 있습니다. 이어 시운전에서 슬립과 충격이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.",
+      "detailed_content": "전후진 불능으로 견인 입고\n약 16만 4천 km를 운행한 캡티바가 전진과 후진이 되지 않아 견인 입고했습니다. 차주는 주행 중 회전수가 크게 올라간 뒤 차량이 움직이지 않았다고 설명했습니다. 진단기에는 압력제어솔레노이드 E 성능 이상을 뜻하는 P2723 코드가 기록돼 있었습니다.\n\n미션오일과 내부 상태 확인\n미션오일을 배출할 때 심한 타는 냄새가 났고 양도 적었습니다. 차량 상부에서는 미션오일 누유 흔적을 확인했습니다. 변속기를 탈거해 분해하자 디스크 손상과 플라스틱 배플이 열로 녹은 상태가 기록돼 있었습니다.\n\n미션 수리와 쿨러 교환\n변속기를 수리해 재장착한 뒤 시동을 걸어 누유 부위를 확인했습니다. 미션오일 쿨러의 손상 부위에서 누유가 확인돼 쿨러를 신품으로 교체했고, 주변 부품이 닿지 않도록 조정했습니다.\n\n누유 확인과 시운전\n재장착 후 시동을 유지하며 누유 여부를 확인했고, 약 30분간 점검에서 새는 부위가 없었다고 기록돼 있습니다. 이어 시운전에서 슬립과 충격이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>전후진 불능으로 견인 입고</h2><p>약 16만 4천 km를 운행한 캡티바가 전진과 후진이 되지 않아 견인 입고했습니다. 차주는 주행 중 회전수가 크게 올라간 뒤 차량이 움직이지 않았다고 설명했습니다. 진단기에는 압력제어솔레노이드 E 성능 이상을 뜻하는 P2723 코드가 기록돼 있었습니다.</p><h2>미션오일과 내부 상태 확인</h2><p>미션오일을 배출할 때 심한 타는 냄새가 났고 양도 적었습니다. 차량 상부에서는 미션오일 누유 흔적을 확인했습니다. 변속기를 탈거해 분해하자 디스크 손상과 플라스틱 배플이 열로 녹은 상태가 기록돼 있었습니다.</p><figure><img src=\"/blog-imports/224245707260/07.jpg\" alt=\"분해한 변속기 내부 부품\" loading=\"lazy\" /><figcaption>분해한 변속기 내부 부품</figcaption></figure><h2>미션 수리와 쿨러 교환</h2><p>변속기를 수리해 재장착한 뒤 시동을 걸어 누유 부위를 확인했습니다. 미션오일 쿨러의 손상 부위에서 누유가 확인돼 쿨러를 신품으로 교체했고, 주변 부품이 닿지 않도록 조정했습니다.</p><figure><img src=\"/blog-imports/224245707260/10.jpg\" alt=\"미션오일 쿨러 손상 부위 확인\" loading=\"lazy\" /><figcaption>미션오일 쿨러 손상 부위 확인</figcaption></figure><h2>누유 확인과 시운전</h2><p>재장착 후 시동을 유지하며 누유 여부를 확인했고, 약 30분간 점검에서 새는 부위가 없었다고 기록돼 있습니다. 이어 시운전에서 슬립과 충격이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224245707260\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224245707260/05.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "쉐보레",
+        "캡티바"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "미션오일 쿨러 교환",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224245707260",
+      "created_at": "2026-04-08T12:52:47.343Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 48,
+      "seo_title": "캡티바 전진·후진 불능, 미션 수리와 오일 쿨러 교환",
+      "seo_description": "전진·후진이 되지 않아 견인 입고한 캡티바입니다. 변속기 내부 손상과 미션오일 누유를 점검하고 변속기 수리·오일 쿨러 교환을 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224244427674",
+      "url": "https://blog.naver.com/koreaautolife/224244427674",
+      "title": "싼타페DM 오토미션수리와 흡기클리닝 작업을 완벽히",
+      "publishedAt": "2026-04-07T13:08:03.519Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 17만3천키로 원문 표현 보존. 본문은 변속기 고장 가능 원인을 나열하지만 이 차량의 구체 내부 교체 부품을 확정하지 않음. 리테이너 볼트·클러치·솔레노이드 교체를 임의로 추가하지 않음. 인젝터·DPF 클리닝은 일반 관리 설명일 뿐 이 차량의 실제 작업으로 확인되지 않아 제외. 출력 증가 측정 미제공. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDdfMTg1/MDAxNzc1NTYxMjI4NDI1.78KFZQJix0OoO5UCu79fS3zXHihEYB0WiHvxWuvuhw4g.wVBVbT5KZMMlaaa-iYZa5fiaNaTmG36DrMCYaadrXLcg.JPEG/1673597295624.jpg",
+          "width": 1411,
+          "height": 1058,
+          "alt": "차량에서 탈거한 변속기",
+          "localPath": "/blog-imports/224244427674/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDdfMTg1/MDAxNzc1NTYxMjI4NDI1.78KFZQJix0OoO5UCu79fS3zXHihEYB0WiHvxWuvuhw4g.wVBVbT5KZMMlaaa-iYZa5fiaNaTmG36DrMCYaadrXLcg.JPEG/1673597295624.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDdfMTkz/MDAxNzc1NTYxMjI5Mjk2.fZwNCW9KI-zmMfCd1GOQ1P9liug5YA_iX3cZRDaundcg.--QApwdQ81aYeTXq1R8gTlLkistvYU4JRMtPpaNerHEg.JPEG/1673597295903.jpg",
+          "width": 1411,
+          "height": 1058,
+          "alt": "흡기 매니폴드 연결부의 카본 퇴적 상태",
+          "localPath": "/blog-imports/224244427674/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDdfMTkz/MDAxNzc1NTYxMjI5Mjk2.fZwNCW9KI-zmMfCd1GOQ1P9liug5YA_iX3cZRDaundcg.--QApwdQ81aYeTXq1R8gTlLkistvYU4JRMtPpaNerHEg.JPEG/1673597295903.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDdfMTIw/MDAxNzc1NTYxMjI5NzE3.LJrwb_hiWzFX3u1uPg-apzDfP3zD-f5fvRupvEd4fckg.QnGUGLGDHD-fAlOh5PJTDo_x2mp7unCDuXKUts9lwVYg.JPEG/1673597296072.jpg",
+          "width": 1411,
+          "height": 1058,
+          "alt": "세척 장비 안에 놓인 흡기 부품",
+          "localPath": "/blog-imports/224244427674/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDdfMTIw/MDAxNzc1NTYxMjI5NzE3.LJrwb_hiWzFX3u1uPg-apzDfP3zD-f5fvRupvEd4fckg.QnGUGLGDHD-fAlOh5PJTDo_x2mp7unCDuXKUts9lwVYg.JPEG/1673597296072.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDdfMjAw/MDAxNzc1NTYxMjI5OTU1.5bm8jbNx7nQyb8n1paCh_jD6TpHBXb2hTRM5FM3SVY8g.oDM2REACrIcpuBEKlcgTYqksK8r7wDu9RssUSGy6p9Mg.JPEG/1673597296174.jpg",
+          "width": 1411,
+          "height": 1058,
+          "alt": "교환용 흡기 가스켓과 연결 부품",
+          "localPath": "/blog-imports/224244427674/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDdfMjAw/MDAxNzc1NTYxMjI5OTU1.5bm8jbNx7nQyb8n1paCh_jD6TpHBXb2hTRM5FM3SVY8g.oDM2REACrIcpuBEKlcgTYqksK8r7wDu9RssUSGy6p9Mg.JPEG/1673597296174.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDdfMjMw/MDAxNzc1NTYxMjMwMTk1.x37Kfsm01UMrFuyefQ_9wBs9VGBPYFKGikNI_PQ92n0g.3utYUwi1aswpMeeM96K-Kbqg-hALYVAefEJLs8pIbEog.JPEG/1673597296258.jpg",
+          "width": 1411,
+          "height": 1058,
+          "alt": "세척한 EGR 파이프",
+          "localPath": "/blog-imports/224244427674/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDdfMjMw/MDAxNzc1NTYxMjMwMTk1.x37Kfsm01UMrFuyefQ_9wBs9VGBPYFKGikNI_PQ92n0g.3utYUwi1aswpMeeM96K-Kbqg-hALYVAefEJLs8pIbEog.JPEG/1673597296258.jpg?type=w466"
+        }
+      ]
+    },
+    "work": {
+      "id": "1763e243-37fd-4305-a201-e4295c7a457c",
+      "slug": "naver-224244427674",
+      "title": "싼타페 DM 3단 고정·레버 전환 충격, 미션 정비와 흡기 클리닝",
+      "subtitle": "3단 고정과 레버 전환 충격으로 입고한 싼타페 DM입니다. 변속기 정비와 함께 흡기 계통을 탈거 세척하고 가스켓·연결 부품을 교환했습니다.",
+      "excerpt": "3단 고정과 레버 전환 충격으로 입고한 싼타페 DM입니다. 변속기 정비와 함께 흡기 계통을 탈거 세척하고 가스켓·연결 부품을 교환했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "싼타페 DM",
+      "model_year": "",
+      "mileage": "17만3천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "3단 고정 N-D·N-R 전환 때 심한 충격 D레인지 출발이 느림",
+      "diagnosis": "3속 동기 불량 코드와 오염된 미션오일을 확인했습니다. 흡기 매니폴드·EGR 파이프의 슬러지 및 흡기 연결부 누유도 기록돼 있습니다.",
+      "cause": "",
+      "repair_process": "진단·변속기 탈거 정비 → 흡기 매니폴드·스로틀바디·EGR 파이프 세척 → 흡기 가스켓·연결 부품 교환 → 재장착·초기화·시운전",
+      "replaced_parts": "",
+      "work_summary": "흡기 클리닝과 변속기 정비 후 부품을 재장착했습니다. 시동을 걸어 변속기 고장코드 삭제와 초기화를 마친 뒤 시운전했고, 기존 3단 고정 증상이 나타나지 않는 것을 확인하고 출고했습니다.",
+      "detailed_content": "3단 고정과 변속 충격\n약 17만 3천 km를 운행한 싼타페 DM이 3단 고정 증상으로 입고했습니다. 이 상태에서 N에서 D나 R로 레버를 옮기면 충격이 컸고, D레인지에서 천천히 출발하는 현상이 있었습니다. 진단기에는 3속 동기 불량 코드가 기록돼 있었습니다.\n\n변속기 탈거와 흡기 상태 확인\n변속기 오일을 배출하며 타는 냄새와 오염을 확인하고 6단 변속기를 탈거했습니다. 함께 의뢰한 흡기 클리닝을 위해 부품을 분리했으며, 매니폴드 안쪽과 EGR 파이프에 쌓인 슬러지를 확인했습니다.\n\n흡기 세척과 연결 부품 교환\n흡기 매니폴드·스로틀바디·EGR 파이프를 전용 장비로 세척하고 엔진 측 흡기포트도 청소했습니다. 흡기 매니폴드 가스켓과 탈거 과정에서 분리한 냉각수 연결 파이프, 관련 가스켓을 신품으로 교체했습니다.\n\n재장착과 시운전\n흡기 클리닝과 변속기 정비 후 부품을 재장착했습니다. 시동을 걸어 변속기 고장코드 삭제와 초기화를 마친 뒤 시운전했고, 기존 3단 고정 증상이 나타나지 않는 것을 확인하고 출고했습니다.",
+      "content_html": "<h2>3단 고정과 변속 충격</h2><p>약 17만 3천 km를 운행한 싼타페 DM이 3단 고정 증상으로 입고했습니다. 이 상태에서 N에서 D나 R로 레버를 옮기면 충격이 컸고, D레인지에서 천천히 출발하는 현상이 있었습니다. 진단기에는 3속 동기 불량 코드가 기록돼 있었습니다.</p><h2>변속기 탈거와 흡기 상태 확인</h2><p>변속기 오일을 배출하며 타는 냄새와 오염을 확인하고 6단 변속기를 탈거했습니다. 함께 의뢰한 흡기 클리닝을 위해 부품을 분리했으며, 매니폴드 안쪽과 EGR 파이프에 쌓인 슬러지를 확인했습니다.</p><figure><img src=\"/blog-imports/224244427674/09.jpg\" alt=\"흡기 매니폴드 연결부의 카본 퇴적 상태\" loading=\"lazy\" /><figcaption>흡기 매니폴드 연결부의 카본 퇴적 상태</figcaption></figure><h2>흡기 세척과 연결 부품 교환</h2><p>흡기 매니폴드·스로틀바디·EGR 파이프를 전용 장비로 세척하고 엔진 측 흡기포트도 청소했습니다. 흡기 매니폴드 가스켓과 탈거 과정에서 분리한 냉각수 연결 파이프, 관련 가스켓을 신품으로 교체했습니다.</p><figure><img src=\"/blog-imports/224244427674/12.jpg\" alt=\"세척 장비 안에 놓인 흡기 부품\" loading=\"lazy\" /><figcaption>세척 장비 안에 놓인 흡기 부품</figcaption></figure><figure><img src=\"/blog-imports/224244427674/14.jpg\" alt=\"교환용 흡기 가스켓과 연결 부품\" loading=\"lazy\" /><figcaption>교환용 흡기 가스켓과 연결 부품</figcaption></figure><figure><img src=\"/blog-imports/224244427674/16.jpg\" alt=\"세척한 EGR 파이프\" loading=\"lazy\" /><figcaption>세척한 EGR 파이프</figcaption></figure><h2>재장착과 시운전</h2><p>흡기 클리닝과 변속기 정비 후 부품을 재장착했습니다. 시동을 걸어 변속기 고장코드 삭제와 초기화를 마친 뒤 시운전했고, 기존 3단 고정 증상이 나타나지 않는 것을 확인하고 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224244427674\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224244427674/05.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "싼타페 DM"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "흡기 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224244427674",
+      "created_at": "2026-04-07T13:08:03.519Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 49,
+      "seo_title": "싼타페 DM 3단 고정·레버 전환 충격, 미션 정비와 흡기 클리닝",
+      "seo_description": "3단 고정과 레버 전환 충격으로 입고한 싼타페 DM입니다. 변속기 정비와 함께 흡기 계통을 탈거 세척하고 가스켓·연결 부품을 교환했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224242489830",
+      "url": "https://blog.naver.com/koreaautolife/224242489830",
+      "title": "양산 BMW520d 디젤 흡기클리닝과 인젝터 및 정비 작업을 하였습니다.",
+      "publishedAt": "2026-04-06T04:19:23.135Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 22만키로 원문 표현 보존. DPF 클리닝 언급은 일반 설명이며 이번 차량의 실제 DPF 작업은 미확인. 추가 서비스에 포함하지 않음. 경고의 구체 원인·코드별 수리 결과는 미제공. 모든 경고의 영구 해소로 표현하지 않음. 탈거 당시 인젝터 사진을 찍지 못했다고 명시. 세척 후 사진을 작업 전 상태로 쓰지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDZfMjI3/MDAxNzc1NDQyNDA4OTM3.0Bc6vm0gMy5JwO5L8rwKSujbXToTHElKX-RuQttDX9wg.0ScJEMNlwPEGG3mFme4rtRU4B9tIJm5px_tUGwWcBVEg.JPEG/20260327_151924.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "로커암커버를 탈거한 엔진 상부",
+          "localPath": "/blog-imports/224242489830/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDZfMjI3/MDAxNzc1NDQyNDA4OTM3.0Bc6vm0gMy5JwO5L8rwKSujbXToTHElKX-RuQttDX9wg.0ScJEMNlwPEGG3mFme4rtRU4B9tIJm5px_tUGwWcBVEg.JPEG/20260327_151924.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDZfNzAg/MDAxNzc1NDQyNDA4ODgy.Rc2H6_BohXDsLrKDuqE4RRRS9C9M_tWZQFnpR9586Asg.HCpDp2iKZ82pYvZh7dkZ_SJVI_Map_rEtzOWoX9iknEg.JPEG/20260328_102040.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "세척한 흡기 매니폴드",
+          "localPath": "/blog-imports/224242489830/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDZfNzAg/MDAxNzc1NDQyNDA4ODgy.Rc2H6_BohXDsLrKDuqE4RRRS9C9M_tWZQFnpR9586Asg.HCpDp2iKZ82pYvZh7dkZ_SJVI_Map_rEtzOWoX9iknEg.JPEG/20260328_102040.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDZfNDEg/MDAxNzc1NDQyNDEwNDAx.2drW2r3IRxV4dWPt37JgvyDGNJrLs_FLN18cprQyXUMg.uodFgaxRnZzVLZ4uoTZkRC7oWkcSV2FWmtkVRXMaiGEg.JPEG/20260328_100232.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "세척한 인젝터와 장착된 동와셔",
+          "localPath": "/blog-imports/224242489830/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDZfNDEg/MDAxNzc1NDQyNDEwNDAx.2drW2r3IRxV4dWPt37JgvyDGNJrLs_FLN18cprQyXUMg.uodFgaxRnZzVLZ4uoTZkRC7oWkcSV2FWmtkVRXMaiGEg.JPEG/20260328_100232.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDZfMjA0/MDAxNzc1NDQyNDEzOTY2.M2YaiVOQfw5YyQqvqkZGV7WIgHs7oEiX659jR471rQAg.Vz7cP8o-kLrTABQt1v6a1n-x9B6tdswQXzFdlz3CWnEg.JPEG/1774671238094.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "탈거한 구동축과 플렉시블 조인트 부품",
+          "localPath": "/blog-imports/224242489830/16.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDZfMjA0/MDAxNzc1NDQyNDEzOTY2.M2YaiVOQfw5YyQqvqkZGV7WIgHs7oEiX659jR471rQAg.Vz7cP8o-kLrTABQt1v6a1n-x9B6tdswQXzFdlz3CWnEg.JPEG/1774671238094.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDZfMTAx/MDAxNzc1NDQyNDExNTE3.RV64XtGjBw5ur-jGqDzMxwUKnoFW8_XGN-AKzYk9uNIg.P_mv4TR59dI3-zQLyh2GNcvzRuSF9D8oT828g9uPfFog.JPEG/1774671217021.jpg",
+          "width": 3547,
+          "height": 4729,
+          "alt": "뒤 디퍼런셜 오일 배출 모습",
+          "localPath": "/blog-imports/224242489830/18.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDZfMTAx/MDAxNzc1NDQyNDExNTE3.RV64XtGjBw5ur-jGqDzMxwUKnoFW8_XGN-AKzYk9uNIg.P_mv4TR59dI3-zQLyh2GNcvzRuSF9D8oT828g9uPfFog.JPEG/1774671217021.jpg?type=w466"
+        }
+      ]
+    },
+    "work": {
+      "id": "eae0d9b4-5e69-49a6-ab2b-4805e502331f",
+      "slug": "naver-224242489830",
+      "title": "BMW 520d 흡기·인젝터 클리닝과 로커암커버 누유 정비",
+      "subtitle": "엔진 체크등과 로커암커버 누유를 확인한 BMW 520d입니다. 흡기·인젝터 클리닝, 커버·플렉시블 조인트 교환과 뒤 디퍼런셜 오일 교환을 진행했습니다.",
+      "excerpt": "엔진 체크등과 로커암커버 누유를 확인한 BMW 520d입니다. 흡기·인젝터 클리닝, 커버·플렉시블 조인트 교환과 뒤 디퍼런셜 오일 교환을 진행했습니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "520d 디젤",
+      "model_year": "",
+      "mileage": "22만키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "엔진 체크등",
+      "diagnosis": "여러 고장코드와 로커암커버의 엔진오일 누유가 기록돼 있습니다. 흡기 내부 슬러지는 주행거리 대비 비교적 적었다고 설명합니다.",
+      "cause": "",
+      "repair_process": "흡기·로커암커버 탈거 → 로커암커버 신품 교체·흡기 세척 → 인젝터 클리닝·동와셔 교체 → 플렉시블 조인트 교환·뒤 디퍼런셜 오일 교환 → 점검",
+      "replaced_parts": "",
+      "work_summary": "작업을 마친 뒤 시동을 걸고 기존 누유 흔적과 주변 오염을 세척했습니다. 고장코드 삭제와 마무리 확인을 거쳐 차량을 출고했습니다.",
+      "detailed_content": "엔진 경고등과 누유 확인\n약 22만 km를 운행한 BMW 520d 디젤이 엔진 체크등이 켜진 상태로 입고했습니다. 의뢰한 작업을 진행하면서 엔진오일 누유를 확인했고, 상부 점검에서 로커암커버 쪽으로 누유 부위를 좁혔습니다.\n\n로커암커버 교환과 흡기 세척\n로커암커버를 신품으로 교체하고 흡기 매니폴드와 스로틀바디를 세척했습니다. 원문에는 흡기 내부 슬러지가 주행거리 대비 비교적 적은 상태였다고 기록돼 있습니다. 누유 정비와 탈거 세척을 함께 진행한 사례입니다.\n\n인젝터 클리닝\n로커암커버 작업을 위해 인젝터를 분리한 뒤 클리닝을 함께 진행했습니다. 인젝터 세척과 동와셔 교체를 마치고 재장착을 준비했습니다.\n\n구동축 연결부와 디퍼런셜 오일\n구동축의 플렉시블 조인트를 신품으로 교환했습니다. 이어 뒤 디퍼런셜 오일도 교환하며 의뢰한 정비를 마무리했습니다.\n\n마무리 점검\n작업을 마친 뒤 시동을 걸고 기존 누유 흔적과 주변 오염을 세척했습니다. 고장코드 삭제와 마무리 확인을 거쳐 차량을 출고했습니다.",
+      "content_html": "<h2>엔진 경고등과 누유 확인</h2><p>약 22만 km를 운행한 BMW 520d 디젤이 엔진 체크등이 켜진 상태로 입고했습니다. 의뢰한 작업을 진행하면서 엔진오일 누유를 확인했고, 상부 점검에서 로커암커버 쪽으로 누유 부위를 좁혔습니다.</p><h2>로커암커버 교환과 흡기 세척</h2><p>로커암커버를 신품으로 교체하고 흡기 매니폴드와 스로틀바디를 세척했습니다. 원문에는 흡기 내부 슬러지가 주행거리 대비 비교적 적은 상태였다고 기록돼 있습니다. 누유 정비와 탈거 세척을 함께 진행한 사례입니다.</p><figure><img src=\"/blog-imports/224242489830/07.jpg\" alt=\"로커암커버를 탈거한 엔진 상부\" loading=\"lazy\" /><figcaption>로커암커버를 탈거한 엔진 상부</figcaption></figure><figure><img src=\"/blog-imports/224242489830/09.jpg\" alt=\"세척한 흡기 매니폴드\" loading=\"lazy\" /><figcaption>세척한 흡기 매니폴드</figcaption></figure><h2>인젝터 클리닝</h2><p>로커암커버 작업을 위해 인젝터를 분리한 뒤 클리닝을 함께 진행했습니다. 인젝터 세척과 동와셔 교체를 마치고 재장착을 준비했습니다.</p><h2>구동축 연결부와 디퍼런셜 오일</h2><p>구동축의 플렉시블 조인트를 신품으로 교환했습니다. 이어 뒤 디퍼런셜 오일도 교환하며 의뢰한 정비를 마무리했습니다.</p><figure><img src=\"/blog-imports/224242489830/16.jpg\" alt=\"탈거한 구동축과 플렉시블 조인트 부품\" loading=\"lazy\" /><figcaption>탈거한 구동축과 플렉시블 조인트 부품</figcaption></figure><figure><img src=\"/blog-imports/224242489830/18.jpg\" alt=\"뒤 디퍼런셜 오일 배출 모습\" loading=\"lazy\" /><figcaption>뒤 디퍼런셜 오일 배출 모습</figcaption></figure><h2>마무리 점검</h2><p>작업을 마친 뒤 시동을 걸고 기존 누유 흔적과 주변 오염을 세척했습니다. 고장코드 삭제와 마무리 확인을 거쳐 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224242489830\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224242489830/13.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "520d 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "엔진오일 누유 정비",
+        "플렉시블 조인트 교환",
+        "디퍼런셜 오일 교환",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224242489830",
+      "created_at": "2026-04-06T04:19:23.135Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 50,
+      "seo_title": "BMW 520d 흡기·인젝터 클리닝과 로커암커버 누유 정비",
+      "seo_description": "엔진 체크등과 로커암커버 누유를 확인한 BMW 520d입니다. 흡기·인젝터 클리닝, 커버·플렉시블 조인트 교환과 뒤 디퍼런셜 오일 교환을 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224240560347",
+      "url": "https://blog.naver.com/koreaautolife/224240560347",
+      "title": "해운대에서 입고된 에쿠스VS380 오토미션수리 / 변속시마다 심한 충격으로 변속기를 고쳤습니다.",
+      "publishedAt": "2026-04-04T04:28:35.926Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 20만키로 초과라는 범위만 있어 정확한 mileage 숫자는 null. 디스크가 양호하다는 기록을 보존. 전 부품 파손·전체 신품 교환으로 확대하지 않음. 유성캐리어 교체는 명시돼 있으나 부싱만 별도 교체했다고 추가하지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDRfMjM3/MDAxNzc1MjY2MjgwMDI4.fSZQMm-vzppT5ysoBjv3M_n4gbC2T8_XujSlagysgG4g.VnynapJdWVZZBZeEr5ldaGBJtfEhdlLacs9JRdx2X0kg.JPEG/20260401_135538.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분해한 후륜형 변속기",
+          "localPath": "/blog-imports/224240560347/07.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDRfMjM3/MDAxNzc1MjY2MjgwMDI4.fSZQMm-vzppT5ysoBjv3M_n4gbC2T8_XujSlagysgG4g.VnynapJdWVZZBZeEr5ldaGBJtfEhdlLacs9JRdx2X0kg.JPEG/20260401_135538.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDRfNjIg/MDAxNzc1MjY2Mjc5MTE3.uSFnFW7Qf8IAMJ6S7GW5gEFlA_RtO7qyY03roXbBosYg.Y1yID9isSODeXQEScdJSZR7t7PoceXF_ZX_R85VziNgg.JPEG/20260401_142118.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분해한 클러치 드럼과 디스크·플레이트",
+          "localPath": "/blog-imports/224240560347/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDRfNjIg/MDAxNzc1MjY2Mjc5MTE3.uSFnFW7Qf8IAMJ6S7GW5gEFlA_RtO7qyY03roXbBosYg.Y1yID9isSODeXQEScdJSZR7t7PoceXF_ZX_R85VziNgg.JPEG/20260401_142118.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDRfMTQy/MDAxNzc1MjY3MDg1Njcy.NdiRm4drDgxjxw2Jm50JNNGSUYP740lzNtf1Cq-qfG4g.BPMBzhQX8LMT7MuQJXAUQNFsJ2z4ncNis46BETbhZ9wg.JPEG/20260402_121825.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "밸브바디와 교환용 솔레노이드 부품",
+          "localPath": "/blog-imports/224240560347/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDRfMTQy/MDAxNzc1MjY3MDg1Njcy.NdiRm4drDgxjxw2Jm50JNNGSUYP740lzNtf1Cq-qfG4g.BPMBzhQX8LMT7MuQJXAUQNFsJ2z4ncNis46BETbhZ9wg.JPEG/20260402_121825.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDRfNzAg/MDAxNzc1MjY3MDg1NzQ5.xpqTxqOeHzdtq9tciYqk_ifeQjwZ2ZzrcOxy4QOfiq8g.OFvAfiPnW2YWWqoBzBSEoYpm4GkfjU5cOlaAnkEBa8Eg.JPEG/20260402_133449.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "밸브바디를 조립한 변속기와 장착할 오일팬",
+          "localPath": "/blog-imports/224240560347/14.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDRfNzAg/MDAxNzc1MjY3MDg1NzQ5.xpqTxqOeHzdtq9tciYqk_ifeQjwZ2ZzrcOxy4QOfiq8g.OFvAfiPnW2YWWqoBzBSEoYpm4GkfjU5cOlaAnkEBa8Eg.JPEG/20260402_133449.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "ae8400a7-2bfc-4edd-a06e-f3348fab1b10",
+      "slug": "naver-224240560347",
+      "title": "에쿠스 VS380 변속 충격, 유성캐리어·솔레노이드 정비",
+      "subtitle": "변속할 때 충격이 심했던 에쿠스 VS380입니다. 오일팬의 금속 분진을 확인해 변속기를 분해하고 유성캐리어·솔레노이드 등을 교체했습니다.",
+      "excerpt": "변속할 때 충격이 심했던 에쿠스 VS380입니다. 오일팬의 금속 분진을 확인해 변속기를 분해하고 유성캐리어·솔레노이드 등을 교체했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "에쿠스 VS380",
+      "model_year": "",
+      "mileage": "20만키로 초과",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "주행 중 변속 때 심한 충격",
+      "diagnosis": "오일팬의 다량 동가루를 확인해 변속기를 분해했습니다. 유성캐리어의 선기어 부싱 손상이 기록돼 있으며 디스크 상태는 비교적 양호했습니다.",
+      "cause": "",
+      "repair_process": "오일팬 점검 → 변속기 탈거·분해 → 유성캐리어·솔레노이드 교체 → 신품 오일팬 장착 → 오일 레벨링·학습값 소거·시운전",
+      "replaced_parts": "",
+      "work_summary": "정비한 변속기를 차량에 장착한 후 전용 오일을 주입하고 레벨링했습니다. 학습값 소거 후 시운전에서는 기존 변속 충격과 울컥거림이 나타나지 않았다고 기록돼 있으며, 마무리 점검 후 출고했습니다.",
+      "detailed_content": "변속 충격과 오일팬 점검\n20만 km를 넘게 운행한 에쿠스 VS380이 변속할 때 심한 충격으로 입고했습니다. 처음에는 밸브바디 쪽 정비를 검토했으나 오일팬 바닥에서 다량의 동가루를 확인해, 설명 후 변속기를 탈거·분해하는 작업으로 범위를 넓혔습니다.\n\n내부 부품 손상 확인\n후륜형 8단 변속기를 분해하고 각 클러치와 디스크를 확인했습니다. 원문에는 유성캐리어의 선기어 부싱 손상으로 동가루가 발생한 것으로 기록돼 있습니다. 디스크 상태는 비교적 양호했습니다.\n\n유성캐리어와 솔레노이드 교체\n손상된 유성캐리어를 신품으로 교환하고 내부 부품을 재조립했습니다. 솔레노이드도 교체했으며 밸브바디 조립을 마친 뒤 새 오일팬을 장착했습니다.\n\n오일 주입과 시운전\n정비한 변속기를 차량에 장착한 후 전용 오일을 주입하고 레벨링했습니다. 학습값 소거 후 시운전에서는 기존 변속 충격과 울컥거림이 나타나지 않았다고 기록돼 있으며, 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>변속 충격과 오일팬 점검</h2><p>20만 km를 넘게 운행한 에쿠스 VS380이 변속할 때 심한 충격으로 입고했습니다. 처음에는 밸브바디 쪽 정비를 검토했으나 오일팬 바닥에서 다량의 동가루를 확인해, 설명 후 변속기를 탈거·분해하는 작업으로 범위를 넓혔습니다.</p><h2>내부 부품 손상 확인</h2><p>후륜형 8단 변속기를 분해하고 각 클러치와 디스크를 확인했습니다. 원문에는 유성캐리어의 선기어 부싱 손상으로 동가루가 발생한 것으로 기록돼 있습니다. 디스크 상태는 비교적 양호했습니다.</p><figure><img src=\"/blog-imports/224240560347/09.jpg\" alt=\"분해한 클러치 드럼과 디스크·플레이트\" loading=\"lazy\" /><figcaption>분해한 클러치 드럼과 디스크·플레이트</figcaption></figure><h2>유성캐리어와 솔레노이드 교체</h2><p>손상된 유성캐리어를 신품으로 교환하고 내부 부품을 재조립했습니다. 솔레노이드도 교체했으며 밸브바디 조립을 마친 뒤 새 오일팬을 장착했습니다.</p><figure><img src=\"/blog-imports/224240560347/13.jpg\" alt=\"밸브바디와 교환용 솔레노이드 부품\" loading=\"lazy\" /><figcaption>밸브바디와 교환용 솔레노이드 부품</figcaption></figure><figure><img src=\"/blog-imports/224240560347/14.jpg\" alt=\"밸브바디를 조립한 변속기와 장착할 오일팬\" loading=\"lazy\" /><figcaption>밸브바디를 조립한 변속기와 장착할 오일팬</figcaption></figure><h2>오일 주입과 시운전</h2><p>정비한 변속기를 차량에 장착한 후 전용 오일을 주입하고 레벨링했습니다. 학습값 소거 후 시운전에서는 기존 변속 충격과 울컥거림이 나타나지 않았다고 기록돼 있으며, 마무리 점검 후 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224240560347\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224240560347/07.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "에쿠스 VS380"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224240560347",
+      "created_at": "2026-04-04T04:28:35.926Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 51,
+      "seo_title": "에쿠스 VS380 변속 충격, 유성캐리어·솔레노이드 정비",
+      "seo_description": "변속할 때 충격이 심했던 에쿠스 VS380입니다. 오일팬의 금속 분진을 확인해 변속기를 분해하고 유성캐리어·솔레노이드 등을 교체했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224239991802",
+      "url": "https://blog.naver.com/koreaautolife/224239991802",
+      "title": "YF소나타 하이브리드 오토미션수리 / 냉간시 울컥거림과 슬립현상으로 작업하였습니다.",
+      "publishedAt": "2026-04-03T12:51:28.236Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 11만7천키로 원문 표현 보존. 겨울철 증상은 차주 제보. 입고 때 코드와 재현 증상이 없었다는 조건을 공개 본문에 보존. 겨울철 동일 조건 재시험·완치로 확대 금지. 리테이너 볼트 풀림 없음. 볼트 풀림 일반 고장 설명을 실제 원인으로 채택하지 않음. 베어링 가이드 손상은 이번 고장과 무관하다고 명시. 언더클러치 디스크와 제보 증상의 연관은 원문에서도 추정 표현. 확정 단일 고장원인으로 쓰지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDNfMjY1/MDAxNzc1MjA3MDUwMjg1.rCSa_VV4me4R1y35vgTEMkI4vJVmxWEtJ1jliaLr3e0g.6zE3D_tKbnQdZ8rD2j6zdbol5qMa4F47IKOTKv6aKucg.JPEG/20260331_174356.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분해한 기어축과 베어링 부품",
+          "localPath": "/blog-imports/224239991802/12.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDNfMjY1/MDAxNzc1MjA3MDUwMjg1.rCSa_VV4me4R1y35vgTEMkI4vJVmxWEtJ1jliaLr3e0g.6zE3D_tKbnQdZ8rD2j6zdbol5qMa4F47IKOTKv6aKucg.JPEG/20260331_174356.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDNfMTk5/MDAxNzc1MjA3MDUxODcz.4ANd4nhIXhj2Y6CYMGfcUo_-BNj5G-Igux0zWtNhsacg.H4rZsbuPljBU8bfReApIgOhLrbF89kAYER0AuimsPMUg.JPEG/20260331_180605.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분해한 클러치 디스크·플레이트와 교환용 부품",
+          "localPath": "/blog-imports/224239991802/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDNfMTk5/MDAxNzc1MjA3MDUxODcz.4ANd4nhIXhj2Y6CYMGfcUo_-BNj5G-Igux0zWtNhsacg.H4rZsbuPljBU8bfReApIgOhLrbF89kAYER0AuimsPMUg.JPEG/20260331_180605.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDNfMjYx/MDAxNzc1MjA3MDUwMjgz.L42I0g9a20Li4U1l7hCKkqGVAlmnPrJBOY2ySp6_1Wog.W5IWcwst_3uRbQ83uZHGlIqvWyh5O-MyzvYsute0iZYg.JPEG/20260401_095811.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분해한 클러치 드럼과 디스크·플레이트",
+          "localPath": "/blog-imports/224239991802/15.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDNfMjYx/MDAxNzc1MjA3MDUwMjgz.L42I0g9a20Li4U1l7hCKkqGVAlmnPrJBOY2ySp6_1Wog.W5IWcwst_3uRbQ83uZHGlIqvWyh5O-MyzvYsute0iZYg.JPEG/20260401_095811.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "ecf06cc6-cbe0-48d1-abda-f038516a0e2b",
+      "slug": "naver-224239991802",
+      "title": "YF 쏘나타 하이브리드 겨울철 출발 슬립 제보, 미션 분해 정비",
+      "subtitle": "겨울철 출발 슬립을 제보한 YF 쏘나타 하이브리드입니다. 입고 때는 증상이 재현되지 않았으나 분해 점검에서 언더클러치 디스크 상태를 확인해 정비했습니다.",
+      "excerpt": "겨울철 출발 슬립을 제보한 YF 쏘나타 하이브리드입니다. 입고 때는 증상이 재현되지 않았으나 분해 점검에서 언더클러치 디스크 상태를 확인해 정비했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "YF 쏘나타 하이브리드",
+      "model_year": "",
+      "mileage": "11만7천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "차주 제보: 겨울철 D레인지에서 회전수만 올라가고 느리게 출발",
+      "diagnosis": "입고 당시 진단기 코드와 시운전 이상은 없었습니다. 분해 후 언더클러치 디스크의 그을림과 베어링 가이드 손상이 기록됐고 리테이너 볼트 풀림은 없었습니다.",
+      "cause": "",
+      "repair_process": "차주 증상 청취·진단·시운전 → 변속기 탈거·분해 → 언더클러치 디스크·베어링 가이드 관련 부품·내부 필터 정비 → 솔레노이드 교체 → 재장착·오일 주입·시운전",
+      "replaced_parts": "",
+      "work_summary": "부품 확인과 교체를 마친 변속기를 차량에 재장착하고 전용 오일을 주입했습니다. 시운전으로 변속 상태를 확인한 뒤 마무리 점검을 거쳐 출고했습니다.",
+      "detailed_content": "겨울철 증상 제보와 입고 점검\n약 11만 7천 km를 운행한 YF 쏘나타 하이브리드의 정비 기록입니다. 차주는 겨울철 D레인지에서 가속해도 회전수만 올라가고 차가 천천히 출발했다고 설명했습니다. 날이 따뜻해진 입고 당시에는 고장코드가 없었고 시운전에서도 그 증상이 나타나지 않았습니다.\n\n변속기 탈거와 내부 확인\n변속기를 탈거하면서 오염된 오일과 드레인 부위의 금속성 슬러지를 확인했습니다. 분해 점검에서는 리테이너 볼트 풀림이 없었고, 각 클러치의 디스크·피스톤·씰 상태를 추가로 살폈습니다.\n\n확인된 부품 상태에 맞춘 정비\n언더클러치 디스크 일부가 그을린 상태를 확인해 교체했습니다. 베어링 가이드 한쪽의 손상은 이번 제보 증상과 무관한 항목으로 구분해 정비했습니다. 내부 필터와 솔레노이드도 교체했습니다.\n\n재장착 후 시운전\n부품 확인과 교체를 마친 변속기를 차량에 재장착하고 전용 오일을 주입했습니다. 시운전으로 변속 상태를 확인한 뒤 마무리 점검을 거쳐 출고했습니다.",
+      "content_html": "<h2>겨울철 증상 제보와 입고 점검</h2><p>약 11만 7천 km를 운행한 YF 쏘나타 하이브리드의 정비 기록입니다. 차주는 겨울철 D레인지에서 가속해도 회전수만 올라가고 차가 천천히 출발했다고 설명했습니다. 날이 따뜻해진 입고 당시에는 고장코드가 없었고 시운전에서도 그 증상이 나타나지 않았습니다.</p><h2>변속기 탈거와 내부 확인</h2><p>변속기를 탈거하면서 오염된 오일과 드레인 부위의 금속성 슬러지를 확인했습니다. 분해 점검에서는 리테이너 볼트 풀림이 없었고, 각 클러치의 디스크·피스톤·씰 상태를 추가로 살폈습니다.</p><figure><img src=\"/blog-imports/224239991802/15.jpg\" alt=\"분해한 클러치 드럼과 디스크·플레이트\" loading=\"lazy\" /><figcaption>분해한 클러치 드럼과 디스크·플레이트</figcaption></figure><h2>확인된 부품 상태에 맞춘 정비</h2><p>언더클러치 디스크 일부가 그을린 상태를 확인해 교체했습니다. 베어링 가이드 한쪽의 손상은 이번 제보 증상과 무관한 항목으로 구분해 정비했습니다. 내부 필터와 솔레노이드도 교체했습니다.</p><figure><img src=\"/blog-imports/224239991802/13.jpg\" alt=\"분해한 클러치 디스크·플레이트와 교환용 부품\" loading=\"lazy\" /><figcaption>분해한 클러치 디스크·플레이트와 교환용 부품</figcaption></figure><h2>재장착 후 시운전</h2><p>부품 확인과 교체를 마친 변속기를 차량에 재장착하고 전용 오일을 주입했습니다. 시운전으로 변속 상태를 확인한 뒤 마무리 점검을 거쳐 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224239991802\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224239991802/12.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "YF 쏘나타 하이브리드"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224239991802",
+      "created_at": "2026-04-03T12:51:28.236Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 52,
+      "seo_title": "YF 쏘나타 하이브리드 겨울철 출발 슬립 제보, 미션 분해 정비",
+      "seo_description": "겨울철 출발 슬립을 제보한 YF 쏘나타 하이브리드입니다. 입고 때는 증상이 재현되지 않았으나 분해 점검에서 언더클러치 디스크 상태를 확인해 정비했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224237559579",
+      "url": "https://blog.naver.com/koreaautolife/224237559579",
+      "title": "벤츠GLK 220 주행중 심한 소음으로 뒷데후수리 작업과 제네레다 교환을 해 보았습니다.",
+      "publishedAt": "2026-04-01T13:56:38.297Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 25만4천키로 원문 표현 보존. 13.8V는 이 차량 정비 후 관측 기록이며 모든 차량의 정상 전압 기준으로 사용하지 않음. 소음과 충전 불량은 별도 점검 항목. 디퍼런셜 전용 route slug 없음. 기존 serviceId/category를 사용. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDFfMjM1/MDAxNzc1MDQ3NjMwNTk1.AandNom3BHTlsiyRBuyZoVhCPNYwXllmTeariqtenXog.ZcFDVDxYI1Gkjo96njvexTYmG0cK2pAYoJB7GLkNsbsg.JPEG/20220714_150844.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "분해한 디퍼런셜 내부 부품과 베어링",
+          "localPath": "/blog-imports/224237559579/05.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDFfMjM1/MDAxNzc1MDQ3NjMwNTk1.AandNom3BHTlsiyRBuyZoVhCPNYwXllmTeariqtenXog.ZcFDVDxYI1Gkjo96njvexTYmG0cK2pAYoJB7GLkNsbsg.JPEG/20220714_150844.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDFfOTQg/MDAxNzc1MDQ3NjMwMDkz.0dU4YNz3MoIG7mKlUmcmhk9C0DStgtUJ0w8pp7sw7Xcg.zMjiG_3_3Q-Rcyq3JoxWtRJvzZFptZ1y07JSaZ70bosg.JPEG/1657955331143.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "발전기 작업 부위와 보조벨트 계통",
+          "localPath": "/blog-imports/224237559579/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDFfOTQg/MDAxNzc1MDQ3NjMwMDkz.0dU4YNz3MoIG7mKlUmcmhk9C0DStgtUJ0w8pp7sw7Xcg.zMjiG_3_3Q-Rcyq3JoxWtRJvzZFptZ1y07JSaZ70bosg.JPEG/1657955331143.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA0MDFfMTQz/MDAxNzc1MDQ3NjMwNTU5.0krJs6nkw7lE3xzhNmyNNDM2Qcs2ej99ZSfBg4a9yU8g.NZVqr70moPb7etHlqiDMh7mNOpFJQcNmpcXjzKHWliYg.JPEG/1657955330984.jpg",
+          "width": 1440,
+          "height": 1440,
+          "alt": "장착할 발전기",
+          "localPath": "/blog-imports/224237559579/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA0MDFfMTQz/MDAxNzc1MDQ3NjMwNTU5.0krJs6nkw7lE3xzhNmyNNDM2Qcs2ej99ZSfBg4a9yU8g.NZVqr70moPb7etHlqiDMh7mNOpFJQcNmpcXjzKHWliYg.JPEG/1657955330984.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "1fce2452-a911-4822-a684-f21fcfee917b",
+      "slug": "naver-224237559579",
+      "title": "벤츠 GLK 220 CDI 뒤쪽 주행 소음, 디퍼런셜 수리·발전기 교환",
+      "subtitle": "뒤쪽 주행 소음과 충전 불량을 점검한 벤츠 GLK 220 CDI입니다. 뒤 디퍼런셜의 베어링·오일 씰을 정비하고 발전기를 교환했습니다.",
+      "excerpt": "뒤쪽 주행 소음과 충전 불량을 점검한 벤츠 GLK 220 CDI입니다. 뒤 디퍼런셜의 베어링·오일 씰을 정비하고 발전기를 교환했습니다.",
+      "vehicle_brand": "메르세데스-벤츠",
+      "manufacturer": "메르세데스-벤츠",
+      "vehicle_model": "GLK 220 CDI",
+      "model_year": "",
+      "mileage": "25만4천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "61f7a3ce-2124-4b1a-ad9f-314e28f56239",
+      "service_category": "트랜스퍼 케이스·디퍼런셜",
+      "symptoms": "뒤쪽에서 올라오는 심한 주행 소음 충전 불량과 재시동 불량",
+      "diagnosis": "차량을 띄워 뒤 디퍼런셜 쪽 소음을 확인했습니다. 분해한 사이드 베어링과 피니언 베어링의 손상이 기록돼 있고, 발전기 충전 불량은 별도 항목으로 점검했습니다.",
+      "cause": "",
+      "repair_process": "뒤 디퍼런셜 탈거·분해 → 베어링·오일 씰 신품 교체 → 발전기 신품 교체 → 충전 전압 확인·시운전",
+      "replaced_parts": "",
+      "work_summary": "정비 후 전압 점검에서 13.8V가 확인됐다고 기록돼 있습니다. 시운전에서는 기존 주행 소음이 나타나지 않았으며, 마무리 점검을 거쳐 차량을 출고했습니다.",
+      "detailed_content": "주행 소음과 충전 상태 점검\n약 25만 4천 km를 운행한 벤츠 GLK 220 CDI입니다. 뒤쪽에서 심한 주행 소음이 올라와 차량을 띄워 확인했고 뒤 디퍼런셜 쪽에서 소음이 확인됐습니다. 충전이 되지 않아 재시동이 어려운 문제도 별도로 점검했습니다.\n\n디퍼런셜 베어링과 씰 교체\n뒤 디퍼런셜을 탈거해 분해했습니다. 베벨 기어 사이드 베어링의 파손과 피니언 기어 베어링 표면의 손상을 확인하고 관련 베어링을 신품으로 교체했습니다. 케이스의 오일 씰도 교환했습니다.\n\n충전 불량으로 발전기 교환\n충전 계통 점검에서는 배터리보다 발전기 쪽에서 충전을 하지 못하는 상태로 기록돼 있습니다. 기존 발전기를 탈거하고 신품으로 교환해 디퍼런셜 정비와 함께 마무리했습니다.\n\n전압 확인과 시운전\n정비 후 전압 점검에서 13.8V가 확인됐다고 기록돼 있습니다. 시운전에서는 기존 주행 소음이 나타나지 않았으며, 마무리 점검을 거쳐 차량을 출고했습니다.",
+      "content_html": "<h2>주행 소음과 충전 상태 점검</h2><p>약 25만 4천 km를 운행한 벤츠 GLK 220 CDI입니다. 뒤쪽에서 심한 주행 소음이 올라와 차량을 띄워 확인했고 뒤 디퍼런셜 쪽에서 소음이 확인됐습니다. 충전이 되지 않아 재시동이 어려운 문제도 별도로 점검했습니다.</p><h2>디퍼런셜 베어링과 씰 교체</h2><p>뒤 디퍼런셜을 탈거해 분해했습니다. 베벨 기어 사이드 베어링의 파손과 피니언 기어 베어링 표면의 손상을 확인하고 관련 베어링을 신품으로 교체했습니다. 케이스의 오일 씰도 교환했습니다.</p><h2>충전 불량으로 발전기 교환</h2><p>충전 계통 점검에서는 배터리보다 발전기 쪽에서 충전을 하지 못하는 상태로 기록돼 있습니다. 기존 발전기를 탈거하고 신품으로 교환해 디퍼런셜 정비와 함께 마무리했습니다.</p><figure><img src=\"/blog-imports/224237559579/06.jpg\" alt=\"발전기 작업 부위와 보조벨트 계통\" loading=\"lazy\" /><figcaption>발전기 작업 부위와 보조벨트 계통</figcaption></figure><figure><img src=\"/blog-imports/224237559579/08.jpg\" alt=\"장착할 발전기\" loading=\"lazy\" /><figcaption>장착할 발전기</figcaption></figure><h2>전압 확인과 시운전</h2><p>정비 후 전압 점검에서 13.8V가 확인됐다고 기록돼 있습니다. 시운전에서는 기존 주행 소음이 나타나지 않았으며, 마무리 점검을 거쳐 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224237559579\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224237559579/05.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "메르세데스-벤츠",
+        "GLK 220 CDI"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "트랜스퍼 케이스·디퍼런셜",
+        "발전기 교환",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224237559579",
+      "created_at": "2026-04-01T13:56:38.297Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 53,
+      "seo_title": "벤츠 GLK 220 CDI 뒤쪽 주행 소음, 디퍼런셜 수리·발전기 교환",
+      "seo_description": "뒤쪽 주행 소음과 충전 불량을 점검한 벤츠 GLK 220 CDI입니다. 뒤 디퍼런셜의 베어링·오일 씰을 정비하고 발전기를 교환했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224236226905",
+      "url": "https://blog.naver.com/koreaautolife/224236226905",
+      "title": "올뉴투싼DCT 출발시 드드득 떨림과 말타듯 울컥거림 증상으로 오토미션수리를 하였습니다.",
+      "publishedAt": "2026-03-31T13:27:38.759Z",
+      "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 13만9천키로 원문 표현 보존. 플라이휠은 별다른 이상 없이 함께 교환한 부품. 이 차량의 확인된 고장 원인이나 모든 차량의 필수 교체 항목으로 표현하지 않음. 압력판 변형은 일반 가능 원인 설명. 이번 차량에서 변형을 확인했다고 추가하지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMzFfMjc2/MDAxNzc0OTUyNTI0NjM2.Z329bKYyrGh3_xJ_oauO0Oc0y0x5dXHEjWoWfkiKz4Ig.3z4dkteLEq97tdusFUUGbyWDteUOaMAS51-c2G8PaJUg.JPEG/20230105_150833.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "차량에서 탈거한 DCT와 기존 클러치",
+          "localPath": "/blog-imports/224236226905/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMzFfMjc2/MDAxNzc0OTUyNTI0NjM2.Z329bKYyrGh3_xJ_oauO0Oc0y0x5dXHEjWoWfkiKz4Ig.3z4dkteLEq97tdusFUUGbyWDteUOaMAS51-c2G8PaJUg.JPEG/20230105_150833.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMzFfMTY0/MDAxNzc0OTUyNTI2NDQw.UbuCYyZgEA6rJSUYE03205S-j2H2l0YZ4tH2Er2WeHEg.9OsolDF5mG-Z1pRb4v5hleJcH59GxMtLz7DSjDy4L-cg.JPEG/20230105_163142.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "엔진 쪽에 장착된 플라이휠",
+          "localPath": "/blog-imports/224236226905/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMzFfMTY0/MDAxNzc0OTUyNTI2NDQw.UbuCYyZgEA6rJSUYE03205S-j2H2l0YZ4tH2Er2WeHEg.9OsolDF5mG-Z1pRb4v5hleJcH59GxMtLz7DSjDy4L-cg.JPEG/20230105_163142.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMzFfMjEx/MDAxNzc0OTUyNTI2NDgz.gzBGu7e-aAn7coz4ZZtA87U4VkxsCUDO1RNFVW2M8X0g.yig3ezhalX4KLddtO0I5M1uCBx9NJU9XM-A4QuGQCh0g.JPEG/20230105_163152.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "듀얼클러치를 조립한 DCT",
+          "localPath": "/blog-imports/224236226905/09.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMzFfMjEx/MDAxNzc0OTUyNTI2NDgz.gzBGu7e-aAn7coz4ZZtA87U4VkxsCUDO1RNFVW2M8X0g.yig3ezhalX4KLddtO0I5M1uCBx9NJU9XM-A4QuGQCh0g.JPEG/20230105_163152.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "a407f966-f196-4d2b-a8d8-33f0cc9e3aa0",
+      "slug": "naver-224236226905",
+      "title": "올뉴 투싼 출발 떨림·변속 울컥거림, DCT 듀얼클러치 교환",
+      "subtitle": "출발 때 떨림과 변속 중 울컥거림이 발생한 올뉴 투싼입니다. DCT 듀얼클러치 마모를 확인하고 클러치·포크·베어링 등을 교체했습니다.",
+      "excerpt": "출발 때 떨림과 변속 중 울컥거림이 발생한 올뉴 투싼입니다. DCT 듀얼클러치 마모를 확인하고 클러치·포크·베어링 등을 교체했습니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "올뉴 투싼",
+      "model_year": "",
+      "mileage": "13만9천키로",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "출발 때 떨림·미끄러짐 변속 때 울컥거림",
+      "diagnosis": "탈거한 듀얼클러치에서 심한 디스크 마모와 다량의 디스크 가루를 확인했습니다. 플라이휠에는 별다른 이상이 없었다고 기록돼 있습니다.",
+      "cause": "",
+      "repair_process": "DCT 탈거·클러치 상태 확인 → 듀얼클러치·포크·스러스트 베어링 교체 → 플라이휠 함께 교체 → 재장착·진단기 세팅·시운전",
+      "replaced_parts": "",
+      "work_summary": "변속기를 차량에 다시 장착하고 진단기 세팅을 마쳤습니다. 시운전에서 기존 출발 떨림과 변속 울컥거림이 나타나지 않는 것을 확인한 뒤 마무리 점검을 거쳐 출고했습니다.",
+      "detailed_content": "출발 떨림과 변속 울컥거림\n약 13만 9천 km를 운행한 올뉴 투싼 DCT 차량입니다. 출발 때 미끄러지는 듯한 떨림이 있었고 변속 시점에는 울컥거림이 발생해 변속기 정비를 진행했습니다.\n\nDCT 탈거와 클러치 상태 확인\n차량에서 DCT를 탈거해 듀얼클러치와 주변 부품을 확인했습니다. 디스크가 많이 닳아 있었고 변속기 주변에는 디스크 가루가 쌓여 있는 상태가 기록돼 있습니다.\n\n클러치와 관련 부품 교체\n듀얼클러치와 포크, 스러스트 베어링을 신품으로 교체했습니다. 플라이휠은 별다른 이상이 없었지만 이번 분해 정비에서 함께 교환한 부품으로 기록돼 있습니다.\n\n재장착과 시운전\n변속기를 차량에 다시 장착하고 진단기 세팅을 마쳤습니다. 시운전에서 기존 출발 떨림과 변속 울컥거림이 나타나지 않는 것을 확인한 뒤 마무리 점검을 거쳐 출고했습니다.",
+      "content_html": "<h2>출발 떨림과 변속 울컥거림</h2><p>약 13만 9천 km를 운행한 올뉴 투싼 DCT 차량입니다. 출발 때 미끄러지는 듯한 떨림이 있었고 변속 시점에는 울컥거림이 발생해 변속기 정비를 진행했습니다.</p><h2>DCT 탈거와 클러치 상태 확인</h2><p>차량에서 DCT를 탈거해 듀얼클러치와 주변 부품을 확인했습니다. 디스크가 많이 닳아 있었고 변속기 주변에는 디스크 가루가 쌓여 있는 상태가 기록돼 있습니다.</p><figure><img src=\"/blog-imports/224236226905/03.jpg\" alt=\"차량에서 탈거한 DCT와 기존 클러치\" loading=\"lazy\" /><figcaption>차량에서 탈거한 DCT와 기존 클러치</figcaption></figure><h2>클러치와 관련 부품 교체</h2><p>듀얼클러치와 포크, 스러스트 베어링을 신품으로 교체했습니다. 플라이휠은 별다른 이상이 없었지만 이번 분해 정비에서 함께 교환한 부품으로 기록돼 있습니다.</p><figure><img src=\"/blog-imports/224236226905/08.jpg\" alt=\"엔진 쪽에 장착된 플라이휠\" loading=\"lazy\" /><figcaption>엔진 쪽에 장착된 플라이휠</figcaption></figure><h2>재장착과 시운전</h2><p>변속기를 차량에 다시 장착하고 진단기 세팅을 마쳤습니다. 시운전에서 기존 출발 떨림과 변속 울컥거림이 나타나지 않는 것을 확인한 뒤 마무리 점검을 거쳐 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224236226905\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224236226905/09.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "올뉴 투싼"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224236226905",
+      "created_at": "2026-03-31T13:27:38.759Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 54,
+      "seo_title": "올뉴 투싼 출발 떨림·변속 울컥거림, DCT 듀얼클러치 교환",
+      "seo_description": "출발 때 떨림과 변속 중 울컥거림이 발생한 올뉴 투싼입니다. DCT 듀얼클러치 마모를 확인하고 클러치·포크·베어링 등을 교체했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224218224258",
+      "url": "https://blog.naver.com/koreaautolife/224218224258",
+      "title": "카니발 후진으로 운행이 되지 않아 오토미션수리를 진행합니다.",
+      "publishedAt": "2026-03-16T04:46:00.744Z",
+      "editorNote": "model-adjustment/sources/source-posts.json의 이 id blocks[].order가 사실 근거. 상위 요약의 근거는 sections의 근거 문단을 따른다. 원문 raw HTML의 postWriteDate에서 정확한 게시시각을 직접 추출하고 publication-dates.json과 대조했다. 본문의 실제 증상은 가속페달을 조금 깊게 밟아야 후진되는 상태. 원문 제목의 '운행되지 않음'을 완전 후진 불능으로 확대하지 않음. 5만 km 미만만 명시. mileage는 null, 범위는 mileageRaw에 보존. 분해 후 볼트 풀림과 디스크 약한 그을림을 실제 확인. 유온센서 고장 때 발생하는 저단 변속충격은 일반 예시. 해당 차량 실제 증상이나 유온센서 교체 확정 내역으로 사용하지 않음. 이번 고장과 무관한 예방 정비 설명을 고장 원인으로 바꾸지 않음. 내부필터·리데나·클러치 디스크세트와 입출력 펄스 교체, 후진 시운전 결과는 본문 기록. '오토미션 수리'와 '미션수리'는 이 실제 변속기 정비에만 자연스럽게 사용. 연식·정확한 실제 작업일·정비 비용·보증 조건·장기 결과는 미제공. 원문 게시일과 작업일을 구분한다. 사진은 경영실의 실제 시각검토 결과와 승인 캡션을 반영했다. 사진의 실제 내용·식별정보 검토는 경영실이 수행. 원문 인접문장 기반 임시 캡션을 실제 관찰 캡션으로 교체했고 제외 사진은 본문 배치에서도 제거했다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTZfOTIg/MDAxNzczNjM0NjgzMDk0.SWrCT8Fdw00CcLToEGWNh7FRJuY-BEVzjUQCWzjbVuMg.NIJrwcltUZuSPy4VG8rVHoANsXM167Qoix7l_5CBop0g.JPEG/20210322_151100.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "작업대에 분해해 놓은 6단 오토미션 부품",
+          "localPath": "/blog-imports/224218224258/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTZfOTIg/MDAxNzczNjM0NjgzMDk0.SWrCT8Fdw00CcLToEGWNh7FRJuY-BEVzjUQCWzjbVuMg.NIJrwcltUZuSPy4VG8rVHoANsXM167Qoix7l_5CBop0g.JPEG/20210322_151100.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTZfNDkg/MDAxNzczNjM0NjgzMzA5.unTt43lg4eKANfs7S1FY2pMTISwCJRniglkH9HR8XEAg.lwaKxJhMBUdLtkaZe2AstfePdnjgD2Jtf0pS4eYnutUg.JPEG/20210322_174332.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "분리해 놓은 클러치 디스크와 플레이트",
+          "localPath": "/blog-imports/224218224258/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTZfNDkg/MDAxNzczNjM0NjgzMzA5.unTt43lg4eKANfs7S1FY2pMTISwCJRniglkH9HR8XEAg.lwaKxJhMBUdLtkaZe2AstfePdnjgD2Jtf0pS4eYnutUg.JPEG/20210322_174332.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTZfMTg5/MDAxNzczNjM0NjgzMDI5.OW-T6D8VjU3awvK64zMjwZr9CKFAM6e7GqBQdIhfvGUg.AzLAQTlwQ_zNOoAxaejvLRjd1SP3OvBHBtFkB-6n6Xog.JPEG/20210322_181753.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "정비 과정에서 확인한 클러치 디스크 세트",
+          "localPath": "/blog-imports/224218224258/06.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTZfMTg5/MDAxNzczNjM0NjgzMDI5.OW-T6D8VjU3awvK64zMjwZr9CKFAM6e7GqBQdIhfvGUg.AzLAQTlwQ_zNOoAxaejvLRjd1SP3OvBHBtFkB-6n6Xog.JPEG/20210322_181753.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTZfMjI5/MDAxNzczNjM0NjgzMDk2.nEi8DRYg6C8Fb_NOfe2pxF6lR6u9ACJJPt4OeXO_Kv4g.zWzFBfDomKfmWGmn2E7Op_n0BLYz9ueuLZlVwN0p4hUg.JPEG/20210322_190011.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "오토미션 조립 과정의 케이스 내부와 센서",
+          "localPath": "/blog-imports/224218224258/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTZfMjI5/MDAxNzczNjM0NjgzMDk2.nEi8DRYg6C8Fb_NOfe2pxF6lR6u9ACJJPt4OeXO_Kv4g.zWzFBfDomKfmWGmn2E7Op_n0BLYz9ueuLZlVwN0p4hUg.JPEG/20210322_190011.jpg?type=w466"
+        }
+      ]
+    },
+    "work": {
+      "id": "91b4ba71-331b-4f64-a1e4-89f91c5acc30",
+      "slug": "naver-224218224258",
+      "title": "그랜드카니발 후진 굼뜸, 6단 오토미션 수리",
+      "subtitle": "가속페달을 깊게 밟아야 후진되던 그랜드카니발의 미션수리 기록입니다. 6단 오토미션을 분해해 볼트 풀림과 디스크 그을림을 확인하고 내부 부품을 정비했습니다.",
+      "excerpt": "가속페달을 깊게 밟아야 후진되던 그랜드카니발의 미션수리 기록입니다. 6단 오토미션을 분해해 볼트 풀림과 디스크 그을림을 확인하고 내부 부품을 정비했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "그랜드카니발",
+      "model_year": "",
+      "mileage": "5만 km 미만",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "후진할 때 가속페달을 조금 깊게 밟아야 차량이 움직이는 증상",
+      "diagnosis": "6단 오토미션을 탈거해 분해한 결과 내부 볼트 풀림과 클러치 디스크의 약한 그을림을 확인했습니다.",
+      "cause": "",
+      "repair_process": "6단 오토미션 탈거·분해 → 내부 볼트와 디스크 상태 확인 → 내부필터·씰·클러치 디스크 정비 및 입출력 펄스 부품 교체 → 재조립·오일 주입·시운전",
+      "replaced_parts": "",
+      "work_summary": "전용 오일을 주입한 뒤 진행한 시운전에서는 이전의 후진 굼뜸이 나타나지 않았습니다. 마무리 점검을 거쳐 차량을 출고했습니다.",
+      "detailed_content": "가속페달을 밟아야 움직이던 후진\n6단 오토미션이 장착된 그랜드카니발의 미션수리 기록입니다. 후진 위치에서 브레이크를 놓아도 바로 움직이지 않고, 가속페달을 조금 깊게 밟아야 후진하는 증상이 있었습니다. 원문에 기록된 주행거리는 5만 km 미만입니다.\n\n분해 점검에서 확인한 볼트 풀림\n차량에서 오토미션을 탈거한 뒤 작업대에서 분해했습니다. 내부 볼트가 풀려 있었고 클러치 디스크에는 약한 그을림이 확인됐습니다. 확인한 내부 상태를 바탕으로 부품 정비를 진행했습니다.\n\n내부 부품 정비와 재조립\n내부필터와 씰, 클러치 디스크 세트 등을 신품으로 교체하며 재조립했습니다. 밸브바디를 조립하기 전에는 입출력 펄스 부품도 신품으로 교체했고, 이후 밸브바디와 오일팬을 장착했습니다.\n\n오일 주입 후 후진 상태 확인\n수리를 마친 오토미션을 차량에 장착하고 전용 오일을 주입했습니다. 이후 진행한 시운전에서는 이전처럼 후진이 매끄럽지 않던 증상이 나타나지 않았습니다. 테스트와 마무리 점검을 거쳐 차량을 출고했습니다.",
+      "content_html": "<h2>가속페달을 밟아야 움직이던 후진</h2><p>6단 오토미션이 장착된 그랜드카니발의 미션수리 기록입니다. 후진 위치에서 브레이크를 놓아도 바로 움직이지 않고, 가속페달을 조금 깊게 밟아야 후진하는 증상이 있었습니다. 원문에 기록된 주행거리는 5만 km 미만입니다.</p><h2>분해 점검에서 확인한 볼트 풀림</h2><p>차량에서 오토미션을 탈거한 뒤 작업대에서 분해했습니다. 내부 볼트가 풀려 있었고 클러치 디스크에는 약한 그을림이 확인됐습니다. 확인한 내부 상태를 바탕으로 부품 정비를 진행했습니다.</p><figure><img src=\"/blog-imports/224218224258/04.jpg\" alt=\"분리해 놓은 클러치 디스크와 플레이트\" loading=\"lazy\" /><figcaption>분리해 놓은 클러치 디스크와 플레이트</figcaption></figure><h2>내부 부품 정비와 재조립</h2><p>내부필터와 씰, 클러치 디스크 세트 등을 신품으로 교체하며 재조립했습니다. 밸브바디를 조립하기 전에는 입출력 펄스 부품도 신품으로 교체했고, 이후 밸브바디와 오일팬을 장착했습니다.</p><figure><img src=\"/blog-imports/224218224258/06.jpg\" alt=\"정비 과정에서 확인한 클러치 디스크 세트\" loading=\"lazy\" /><figcaption>정비 과정에서 확인한 클러치 디스크 세트</figcaption></figure><figure><img src=\"/blog-imports/224218224258/08.jpg\" alt=\"오토미션 조립 과정의 케이스 내부와 센서\" loading=\"lazy\" /><figcaption>오토미션 조립 과정의 케이스 내부와 센서</figcaption></figure><h2>오일 주입 후 후진 상태 확인</h2><p>수리를 마친 오토미션을 차량에 장착하고 전용 오일을 주입했습니다. 이후 진행한 시운전에서는 이전처럼 후진이 매끄럽지 않던 증상이 나타나지 않았습니다. 테스트와 마무리 점검을 거쳐 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224218224258\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224218224258/03.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "그랜드카니발"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224218224258",
+      "created_at": "2026-03-16T04:46:00.744Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 55,
+      "seo_title": "그랜드카니발 후진 굼뜸, 6단 오토미션 수리",
+      "seo_description": "가속페달을 깊게 밟아야 후진되던 그랜드카니발의 미션수리 기록입니다. 6단 오토미션을 분해해 볼트 풀림과 디스크 그을림을 확인하고 내부 부품을 정비했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224215622621",
+      "url": "https://blog.naver.com/koreaautolife/224215622621",
+      "title": "스포티지 DPF클리닝 / 인젝터 / 흡기매니폴드를 탈착하여 세척을 해 보았습니다.",
+      "publishedAt": "2026-03-13T13:11:30.977Z",
+      "editorNote": "model-adjustment/sources/source-posts.json의 이 id blocks[].order가 사실 근거. 상위 요약의 근거는 sections의 근거 문단을 따른다. 원문 raw HTML의 postWriteDate에서 정확한 게시시각을 직접 추출하고 publication-dates.json과 대조했다. 8만 1천 km, 엔진체크등 점등과 DPF 관련 코드가 이번 차량의 기록. DPF가 심하게 파손되어 신품 교체한 내용은 며칠 전의 다른 차량 예시. 이번 스포티지는 균열·파손 없이 클리닝한 사례이며 DPF 신품 교체로 쓰지 않음. 원문의 출력 저하·회복 표현은 추정·일반 홍보가 섞여 있어 해당 차의 실측 출력이나 고객 체감 결과로 사용하지 않음. 막힘 30% 표현과 정비 주기·신품 성능 주장도 제외. 시동 후 세 작업을 재점검한 기록까지만 확인. 종료 시 고장코드 삭제·경고등 소멸·시운전 결과는 명시되지 않아 추가하지 않음. 실제 작업은 디젤 클리닝으로 오토미션 수리·미션수리 키워드를 삽입하지 않음. 연식·정확한 실제 작업일·정비 비용·보증 조건·장기 결과는 미제공. 원문 게시일과 작업일을 구분한다. 사진은 경영실의 실제 시각검토 결과와 승인 캡션을 반영했다. 사진의 실제 내용·식별정보 검토는 경영실이 수행. 원문 인접문장 기반 임시 캡션을 실제 관찰 캡션으로 교체했고 제외 사진은 본문 배치에서도 제거했다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTNfMjg5/MDAxNzczNDA0MjMwNTI3.PdUO8n8stGLutbdA-Dvmyq67A1uuIH9x8XweF4jAc08g.UySHRO3Ytrw2MPyWzMn_Tp4EYMiAdgi19XoBwDIjqHgg.JPEG/1772529386206.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "DPF를 분리한 차량 하부의 연결 부위",
+          "localPath": "/blog-imports/224215622621/03.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTNfMjg5/MDAxNzczNDA0MjMwNTI3.PdUO8n8stGLutbdA-Dvmyq67A1uuIH9x8XweF4jAc08g.UySHRO3Ytrw2MPyWzMn_Tp4EYMiAdgi19XoBwDIjqHgg.JPEG/1772529386206.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTNfOTEg/MDAxNzczNDA1ODYxMzky.xnkWCvANLNrPTOnCbe3N_Zw3_hIn66TQeT9yBJFuOTsg.S_OzupRc9fL1ygVs19PQi1sbyOIEaL940FNr-nk54GUg.JPEG/SE-23c34dfc-7aed-4d9a-9400-4e96eabcf5cf.jpg",
+          "width": 2250,
+          "height": 1743,
+          "alt": "차량에서 탈거한 DPF",
+          "localPath": "/blog-imports/224215622621/04.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTNfOTEg/MDAxNzczNDA1ODYxMzky.xnkWCvANLNrPTOnCbe3N_Zw3_hIn66TQeT9yBJFuOTsg.S_OzupRc9fL1ygVs19PQi1sbyOIEaL940FNr-nk54GUg.JPEG/SE-23c34dfc-7aed-4d9a-9400-4e96eabcf5cf.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTNfNTgg/MDAxNzczNDA0MjMzODg5.fQTukITyzMSO9LwAdbxxC6Iv1IrxzYEdwLchMTJQkE0g.jlcwd_KruEbIppMWNzmwGo99w0iwXju6uudrDq4RD8og.JPEG/1772529387066.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "카본이 쌓인 흡기 매니폴드 통로",
+          "localPath": "/blog-imports/224215622621/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTNfNTgg/MDAxNzczNDA0MjMzODg5.fQTukITyzMSO9LwAdbxxC6Iv1IrxzYEdwLchMTJQkE0g.jlcwd_KruEbIppMWNzmwGo99w0iwXju6uudrDq4RD8og.JPEG/1772529387066.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTNfMjU3/MDAxNzczNDA0MjMzNDA5.lmUBpCHZ9-RJu91O7khdDDMPjvJKciG0alt2vqAKDxsg.kxVQOZoJzZHZbxdZGd4gY-PiaX5TRuhftcd9CI4yLBAg.JPEG/1772529387470.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "클리닝 후 흡기 매니폴드 통로",
+          "localPath": "/blog-imports/224215622621/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTNfMjU3/MDAxNzczNDA0MjMzNDA5.lmUBpCHZ9-RJu91O7khdDDMPjvJKciG0alt2vqAKDxsg.kxVQOZoJzZHZbxdZGd4gY-PiaX5TRuhftcd9CI4yLBAg.JPEG/1772529387470.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTNfMTEy/MDAxNzczNDA0MjM0OTY1.Vuco0ZIJnQV3Jtfly7loqnwWVz9SPiI8mVYS9N9y9Iog.2ad3k0Q27oCVoO8cfYqST9L9gWwko4c7ztzzOqaSLqcg.JPEG/1772529388392.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "카본이 부착된 인젝터 끝부분과 동와셔",
+          "localPath": "/blog-imports/224215622621/19.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTNfMTEy/MDAxNzczNDA0MjM0OTY1.Vuco0ZIJnQV3Jtfly7loqnwWVz9SPiI8mVYS9N9y9Iog.2ad3k0Q27oCVoO8cfYqST9L9gWwko4c7ztzzOqaSLqcg.JPEG/1772529388392.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "da76a021-5b37-418c-acfa-f52b27309767",
+      "slug": "naver-224215622621",
+      "title": "스포티지 QL 엔진 경고등·DPF 코드, 흡기·인젝터·DPF 클리닝",
+      "subtitle": "엔진 경고등과 DPF 관련 코드가 확인된 8만 1천 km 스포티지 QL입니다. DPF의 파손이 없는 상태를 확인하고 흡기·인젝터·DPF 클리닝과 동와셔 교체를 진행했습니다.",
+      "excerpt": "엔진 경고등과 DPF 관련 코드가 확인된 8만 1천 km 스포티지 QL입니다. DPF의 파손이 없는 상태를 확인하고 흡기·인젝터·DPF 클리닝과 동와셔 교체를 진행했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "스포티지 QL 디젤",
+      "model_year": "",
+      "mileage": "8만 1천 km",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "8b322363-aca4-4eea-b4b4-581643ab0884",
+      "service_category": "DPF 클리닝",
+      "symptoms": "엔진 경고등 점등 진단기에서 DPF 관련 고장코드 확인",
+      "diagnosis": "탈거한 DPF 내부에 슬러지가 쌓여 있었지만 균열이나 파손은 확인되지 않았습니다. 흡기 매니폴드와 스로틀바디·EGR 파이프의 오염도 확인했습니다.",
+      "cause": "",
+      "repair_process": "DPF 탈거·균열 및 파손 확인 → 세정액 순환·고압 세척 → 흡기 매니폴드·스로틀바디·EGR 파이프 세척 → 인젝터 클리닝·동와셔 교체 → 재장착·시동 후 점검",
+      "replaced_parts": "",
+      "work_summary": "인젝터 동와셔를 교체하고 부품을 재장착했습니다. 시동을 걸어 세 가지 클리닝 작업을 다시 점검한 뒤 작업을 마무리했습니다.",
+      "detailed_content": "엔진 경고등과 DPF 관련 코드 확인\n8만 1천 km를 주행한 스포티지 QL 디젤 차량입니다. 계기판에 엔진 경고등이 켜져 있었고 진단기에서 DPF 관련 고장코드가 확인됐습니다. DPF를 탈거해 내부를 살펴보니 슬러지는 쌓여 있었지만 균열이나 파손은 없었습니다.\n\nDPF 내부 오염물 불림과 세척\n탈거한 DPF를 전용 장비에 연결해 클리닝했습니다. 세정액을 순환시켜 굳은 오염물을 불린 다음, 고압을 이용해 불린 슬러지를 밖으로 배출하는 순서로 작업했습니다.\n\n흡기 매니폴드와 EGR 계통 클리닝\n스로틀바디와 EGR 파이프를 분리하자 내부에 많은 슬러지가 확인됐고, 흡기 매니폴드 입구에도 오염물이 쌓여 있었습니다. 매니폴드를 탈거해 장비로 세척하고 엔진 측 흡기포트의 오염물도 제거했습니다. 스로틀바디와 EGR 파이프 세척도 함께 마쳤습니다.\n\n인젝터 세척과 마무리 점검\n인젝터 노즐 부위의 오염을 확인하고 외부 이물질을 제거하는 클리닝을 진행했습니다. 동와셔를 교체해 재장착한 뒤 시동을 걸었습니다. 흡기·인젝터·DPF 세 가지 작업을 다시 점검하고 마무리했습니다.",
+      "content_html": "<h2>엔진 경고등과 DPF 관련 코드 확인</h2><p>8만 1천 km를 주행한 스포티지 QL 디젤 차량입니다. 계기판에 엔진 경고등이 켜져 있었고 진단기에서 DPF 관련 고장코드가 확인됐습니다. DPF를 탈거해 내부를 살펴보니 슬러지는 쌓여 있었지만 균열이나 파손은 없었습니다.</p><figure><img src=\"/blog-imports/224215622621/03.jpg\" alt=\"DPF를 분리한 차량 하부의 연결 부위\" loading=\"lazy\" /><figcaption>DPF를 분리한 차량 하부의 연결 부위</figcaption></figure><h2>DPF 내부 오염물 불림과 세척</h2><p>탈거한 DPF를 전용 장비에 연결해 클리닝했습니다. 세정액을 순환시켜 굳은 오염물을 불린 다음, 고압을 이용해 불린 슬러지를 밖으로 배출하는 순서로 작업했습니다.</p><figure><img src=\"/blog-imports/224215622621/04.jpg\" alt=\"차량에서 탈거한 DPF\" loading=\"lazy\" /><figcaption>차량에서 탈거한 DPF</figcaption></figure><h2>흡기 매니폴드와 EGR 계통 클리닝</h2><p>스로틀바디와 EGR 파이프를 분리하자 내부에 많은 슬러지가 확인됐고, 흡기 매니폴드 입구에도 오염물이 쌓여 있었습니다. 매니폴드를 탈거해 장비로 세척하고 엔진 측 흡기포트의 오염물도 제거했습니다. 스로틀바디와 EGR 파이프 세척도 함께 마쳤습니다.</p><figure><img src=\"/blog-imports/224215622621/08.jpg\" alt=\"카본이 쌓인 흡기 매니폴드 통로\" loading=\"lazy\" /><figcaption>카본이 쌓인 흡기 매니폴드 통로</figcaption></figure><h2>인젝터 세척과 마무리 점검</h2><p>인젝터 노즐 부위의 오염을 확인하고 외부 이물질을 제거하는 클리닝을 진행했습니다. 동와셔를 교체해 재장착한 뒤 시동을 걸었습니다. 흡기·인젝터·DPF 세 가지 작업을 다시 점검하고 마무리했습니다.</p><figure><img src=\"/blog-imports/224215622621/19.jpg\" alt=\"카본이 부착된 인젝터 끝부분과 동와셔\" loading=\"lazy\" /><figcaption>카본이 부착된 인젝터 끝부분과 동와셔</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224215622621\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224215622621/13.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "스포티지 QL 디젤"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "DPF 클리닝",
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224215622621",
+      "created_at": "2026-03-13T13:11:30.977Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 56,
+      "seo_title": "스포티지 QL 엔진 경고등·DPF 코드, 흡기·인젝터·DPF 클리닝",
+      "seo_description": "엔진 경고등과 DPF 관련 코드가 확인된 8만 1천 km 스포티지 QL입니다. DPF의 파손이 없는 상태를 확인하고 흡기·인젝터·DPF 클리닝과 동와셔 교체를 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224169220987",
+      "url": "https://blog.naver.com/koreaautolife/224169220987",
+      "title": "제네시스G80 오토미션 트랜스퍼케이스 수리 / 저단 떨림",
+      "publishedAt": "2026-02-02T12:10:49.444Z",
+      "editorNote": "model-adjustment/sources/source-posts.json의 이 id blocks[].order가 사실 근거. 상위 요약의 근거는 sections의 근거 문단을 따른다. 원문 raw HTML의 postWriteDate에서 정확한 게시시각을 직접 추출하고 publication-dates.json과 대조했다. 차종은 본문에 제네시스 G80으로 명시. 주행거리 15만 km와 실제 시운전 떨림 재현 기록을 사용. 실제 수리 부위는 트랜스퍼케이스 내부 클러치 디스크·리턴스프링. 전체 오토미션 교체나 변속기 내부 수리로 확대하지 않으며 미션수리 검색어를 억지로 추가하지 않음. 80 km/h 이상에서 드라이브샤프트 문제로 발생하는 떨림은 다른 경험의 일반 예시. 이번 차량 증상·드라이브샤프트 고장이나 교체로 사용하지 않음. 12~15만 km 입고 경험은 일반 설명이며 주기나 필수 수리 기준으로 사용하지 않음. 오일 교환 이력 추정은 공개 문안에서 제외. 수리 후 저속 가속 떨림 미재현은 해당 시운전 당시 관찰로 한정. 본문은 '며칠 전 작업'이라고만 기록. 게시일을 실제 작업일로 사용하지 않음. 연식·정확한 실제 작업일·정비 비용·보증 조건·장기 결과는 미제공. 원문 게시일과 작업일을 구분한다. 사진은 경영실의 실제 시각검토 결과와 승인 캡션을 반영했다. 사진의 실제 내용·식별정보 검토는 경영실이 수행. 원문 인접문장 기반 임시 캡션을 실제 관찰 캡션으로 교체했고 제외 사진은 본문 배치에서도 제거했다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDJfMTgz/MDAxNzcwMDMyNTI3MTg2.QtDqoNVeyjjFfn2g-7qGs639hst27S5etYhj3mBCqOEg.JXx-mHhAsD9MshxY13gk1X6e0S66EQHXvdpxoTclza8g.JPEG/20260123_150032.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "작업대에 놓인 트랜스퍼케이스",
+          "localPath": "/blog-imports/224169220987/08.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDJfMTgz/MDAxNzcwMDMyNTI3MTg2.QtDqoNVeyjjFfn2g-7qGs639hst27S5etYhj3mBCqOEg.JXx-mHhAsD9MshxY13gk1X6e0S66EQHXvdpxoTclza8g.JPEG/20260123_150032.jpg?type=w966"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDJfMTky/MDAxNzcwMDMyNTI4NDY2.vYkBlUdQLrYiW4r2dUCUxb37Y-QjLSt8Mk_X5skxmbwg.obzA_85lPaqrWD5h81hA73a_oHvpKl-pzkkRtf1HC44g.JPEG/20260124_100559.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "트랜스퍼 클러치 디스크 세트와 스프링",
+          "localPath": "/blog-imports/224169220987/10.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDJfMTky/MDAxNzcwMDMyNTI4NDY2.vYkBlUdQLrYiW4r2dUCUxb37Y-QjLSt8Mk_X5skxmbwg.obzA_85lPaqrWD5h81hA73a_oHvpKl-pzkkRtf1HC44g.JPEG/20260124_100559.jpg?type=w466"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDJfMTc5/MDAxNzcwMDMyNzg5Nzgy.VLKDrHHy7gguUE_rHHu49uPqnw5p-kwiw-bMukyc_m0g.LFZ6aZTT8RJ-HykOaP9WgMYA0arWRXjMJmZ6QFg8d4gg.JPEG/SE-fb52a382-a7a3-4ef7-8887-2d8244dacbaf.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "차량 하부에서 트랜스퍼케이스를 장착하는 과정",
+          "localPath": "/blog-imports/224169220987/13.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDJfMTc5/MDAxNzcwMDMyNzg5Nzgy.VLKDrHHy7gguUE_rHHu49uPqnw5p-kwiw-bMukyc_m0g.LFZ6aZTT8RJ-HykOaP9WgMYA0arWRXjMJmZ6QFg8d4gg.JPEG/SE-fb52a382-a7a3-4ef7-8887-2d8244dacbaf.jpg?type=w966"
+        }
+      ]
+    },
+    "work": {
+      "id": "434a097d-0c67-4b24-a8be-70a08d09117a",
+      "slug": "naver-224169220987",
+      "title": "제네시스 G80 저속 가속 떨림, 트랜스퍼케이스 클러치 수리",
+      "subtitle": "15만 km를 주행한 제네시스 G80의 저속 가속 떨림 사례입니다. 트랜스퍼케이스 클러치 디스크와 리턴스프링을 교체했고, 시운전에서는 이전 떨림이 나타나지 않았습니다.",
+      "excerpt": "15만 km를 주행한 제네시스 G80의 저속 가속 떨림 사례입니다. 트랜스퍼케이스 클러치 디스크와 리턴스프링을 교체했고, 시운전에서는 이전 떨림이 나타나지 않았습니다.",
+      "vehicle_brand": "제네시스",
+      "manufacturer": "제네시스",
+      "vehicle_model": "G80",
+      "model_year": "",
+      "mileage": "15만 km",
+      "fuel_type": "",
+      "transmission_type": "",
+      "service_id": "61f7a3ce-2124-4b1a-ad9f-314e28f56239",
+      "service_category": "트랜스퍼 케이스·디퍼런셜",
+      "symptoms": "2단 이상에서 가속페달을 깊게 밟을 때 심한 떨림 저속으로 감속한 뒤 다시 가속할 때 떨림",
+      "diagnosis": "시운전에서 저속 가속 시 떨림을 확인했습니다. 탈거한 트랜스퍼케이스를 분해하니 내부 클러치 디스크가 많이 마모돼 있었습니다.",
+      "cause": "",
+      "repair_process": "배기 계통·드라이브샤프트 분리 → 트랜스퍼케이스 탈거·분해 → 클러치 디스크와 리턴스프링 교체 → 재조립·재장착·전용 오일 주입 → 시운전",
+      "replaced_parts": "",
+      "work_summary": "트랜스퍼케이스를 재장착하고 전용 오일을 주입했습니다. 시운전에서는 이전에 발생하던 저속 가속 시 심한 떨림이 나타나지 않았고, 마무리 점검 후 출고했습니다.",
+      "detailed_content": "저속에서 다시 가속할 때 발생한 떨림\n15만 km를 주행한 제네시스 G80의 트랜스퍼케이스 수리 기록입니다. 출발은 괜찮았지만 2단 이상에서 가속페달을 깊게 밟거나, 속도를 줄인 뒤 다시 가속할 때 심한 떨림이 있었습니다. 입고 후 시운전에서도 같은 떨림을 확인했습니다.\n\n트랜스퍼케이스 탈거와 분해\n오토미션 뒤쪽의 트랜스퍼케이스를 분리하기 위해 배기 계통과 드라이브샤프트를 먼저 탈거했습니다. 차량에서 분리한 트랜스퍼케이스를 작업대로 옮겨 내부 부품을 확인하기 위한 분해 작업을 진행했습니다.\n\n클러치 디스크와 리턴스프링 교체\n분해한 트랜스퍼케이스 내부에서 클러치 디스크가 많이 마모된 상태를 확인했습니다. 클러치 디스크와 리턴스프링을 신품으로 교체한 뒤 재조립했습니다. 케이스에는 가스켓을 도포하고 볼트를 체결했습니다.\n\n재장착 후 저속 가속 상태 점검\n수리한 트랜스퍼케이스를 차량에 다시 장착하고 전용 오일을 주입했습니다. 작업 후 시운전에서는 이전에 저속에서 가속페달을 깊게 밟을 때 발생하던 심한 떨림이 나타나지 않았습니다. 테스트와 마무리 점검을 마치고 출고했습니다.",
+      "content_html": "<h2>저속에서 다시 가속할 때 발생한 떨림</h2><p>15만 km를 주행한 제네시스 G80의 트랜스퍼케이스 수리 기록입니다. 출발은 괜찮았지만 2단 이상에서 가속페달을 깊게 밟거나, 속도를 줄인 뒤 다시 가속할 때 심한 떨림이 있었습니다. 입고 후 시운전에서도 같은 떨림을 확인했습니다.</p><h2>트랜스퍼케이스 탈거와 분해</h2><p>오토미션 뒤쪽의 트랜스퍼케이스를 분리하기 위해 배기 계통과 드라이브샤프트를 먼저 탈거했습니다. 차량에서 분리한 트랜스퍼케이스를 작업대로 옮겨 내부 부품을 확인하기 위한 분해 작업을 진행했습니다.</p><h2>클러치 디스크와 리턴스프링 교체</h2><p>분해한 트랜스퍼케이스 내부에서 클러치 디스크가 많이 마모된 상태를 확인했습니다. 클러치 디스크와 리턴스프링을 신품으로 교체한 뒤 재조립했습니다. 케이스에는 가스켓을 도포하고 볼트를 체결했습니다.</p><figure><img src=\"/blog-imports/224169220987/10.jpg\" alt=\"트랜스퍼 클러치 디스크 세트와 스프링\" loading=\"lazy\" /><figcaption>트랜스퍼 클러치 디스크 세트와 스프링</figcaption></figure><h2>재장착 후 저속 가속 상태 점검</h2><p>수리한 트랜스퍼케이스를 차량에 다시 장착하고 전용 오일을 주입했습니다. 작업 후 시운전에서는 이전에 저속에서 가속페달을 깊게 밟을 때 발생하던 심한 떨림이 나타나지 않았습니다. 테스트와 마무리 점검을 마치고 출고했습니다.</p><figure><img src=\"/blog-imports/224169220987/13.jpg\" alt=\"차량 하부에서 트랜스퍼케이스를 장착하는 과정\" loading=\"lazy\" /><figcaption>차량 하부에서 트랜스퍼케이스를 장착하는 과정</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224169220987\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224169220987/08.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "제네시스",
+        "G80"
+      ],
+      "symptom_tags": [],
+      "general_tags": [
+        "트랜스퍼 케이스·디퍼런셜",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224169220987",
+      "created_at": "2026-02-02T12:10:49.444Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 57,
+      "seo_title": "제네시스 G80 저속 가속 떨림, 트랜스퍼케이스 클러치 수리",
+      "seo_description": "15만 km를 주행한 제네시스 G80의 저속 가속 떨림 사례입니다. 트랜스퍼케이스 클러치 디스크와 리턴스프링을 교체했고, 시운전에서는 이전 떨림이 나타나지 않았습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
   }
 ]

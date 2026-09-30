@@ -17,7 +17,7 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
   const chapters=buildJournalChapters(work);
   const labels=getWorkServiceLabels(work);
   const brand=work.manufacturer||work.vehicle_brand;
-  const mileage=work.mileage || (work.symptoms||"").match(/[\d,]+\s*km/)?.[0];
+  const mileage=work.mileage;
   const facts=[["차종",[brand,work.vehicle_model].filter(Boolean).join(" ")],["연식",work.model_year],["주행거리",mileage],["변속기",work.transmission_type]].filter(([,value])=>value);
   const bodyPhotos=chapters.flatMap(c=>c.photos.map(p=>p.src));
   const gallery=[...new Set([...(work.gallery_image_paths||[]),...(work.before_images||[]),...(work.after_images||[])])].filter(path=>!bodyPhotos.includes(path)&&path!==work.representative_image_path);
@@ -29,7 +29,7 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
       <header className={s.intro}>
         <nav className={s.breadcrumb} aria-label="현재 위치"><Link href="/">홈</Link><span>/</span><Link href="/works">정비사례</Link><span>/</span><span>{work.vehicle_model}</span></nav>
         <div className={s.heroGrid}><div className={s.heading}><p className={s.eyebrow}>WORKSHOP JOURNAL <span>정비 기록</span></p><p className={s.categories}>{labels.join(" · ")}</p><h1>{work.title}</h1>{summary&&<p className={s.lead}>{summary}</p>}<p className={s.articleMeta}>{formatDateKo(work.published_at||work.created_at)}<span>사진 {totalPhotos}장</span></p><div className={s.introActions}><SmsLink phone={settings.phone} body={smsBody} className={s.smsButton}>내 차량 문자 상담 <span aria-hidden="true">↗</span></SmsLink><a href={telHref(settings.phone)} className={s.phoneLink}>전화 상담 ↗</a></div></div>
-        {work.representative_image_path&&<figure className={s.cover}><SmartImage path={work.representative_image_path} alt={`${brand} ${work.vehicle_model} 입고 차량`} className={s.coverImage} sizes="(max-width:700px) 100vw, 50vw" priority/><figcaption>{[brand,work.vehicle_model].filter(Boolean).join(" ")} · 코리아오토미션 작업 기록</figcaption></figure>}</div>
+        {work.representative_image_path&&<figure className={s.cover}><SmartImage path={work.representative_image_path} alt={`${brand} ${work.vehicle_model} 정비 작업 사진`} className={s.coverImage} sizes="(max-width:700px) 100vw, 50vw" priority/><figcaption>{[brand,work.vehicle_model].filter(Boolean).join(" ")} · 코리아오토미션 작업 기록</figcaption></figure>}</div>
         <dl className={s.facts}>{facts.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}<div><dt>작업 분야</dt><dd>{labels.join(" · ")}</dd></div></dl>
       </header>
       <div className={s.layout}>

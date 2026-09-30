@@ -13,8 +13,8 @@ import { getMapUrl, getReservationUrl, SITE_URL, telHref } from "@/lib/utils";
 import s from "./page.module.css";
 
 const path = "/services/transmission";
-const title = "부산 미션수리 · 자동변속기 진단";
-const description = "부산 사상구 코리아오토미션의 수입차·국산차 자동변속기 정비 안내. 변속 충격, 슬립, 가속 떨림의 실제 수리 사례와 진단·견적·입고 과정을 확인하세요.";
+const title = "부산 오토미션 수리 · 증상별 진단과 상담";
+const description = "부산 사상구 코리아오토미션의 오토미션 수리 안내. 변속 충격·슬립·가속 떨림 등 증상별 미션수리 사례와 수입차·국산차 자동변속기 진단·견적·입고 과정을 확인하세요.";
 
 export const metadata: Metadata = {
   title,
@@ -53,7 +53,7 @@ export default async function TransmissionPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Service", name: "부산 자동변속기 진단 및 미션수리",
+        "@type": "Service", name: "부산 오토미션 수리", alternateName: "부산 미션수리",
         serviceType: "자동변속기 진단 및 수리", description, url: `${SITE_URL}${path}`,
         areaServed: { "@type": "City", name: "부산광역시" },
         provider: { "@type": "AutoRepair", name: settings.business_name, url: SITE_URL, telephone: settings.phone,
@@ -76,8 +76,8 @@ export default async function TransmissionPage() {
         <div className={s.heroCopy}>
           <nav aria-label="현재 위치" className={s.breadcrumb}><Link href="/">홈</Link><span>/</span><span>미션수리 안내</span></nav>
           <p className={s.eyebrow}>부산 사상구 · 수입차·국산차 자동변속기</p>
-          <h1>부산 미션수리,<br />내 차 증상부터<br />상담하세요.</h1>
-          <p className={s.lead}>변속 충격, 슬립, 가속할 때의 떨림.<br />코리아오토미션은 원인을 먼저 확인하고<br />필요한 정비 범위와 견적을 안내합니다.</p>
+          <h1>부산 오토미션 수리,<br />내 차 증상부터<br />상담하세요.</h1>
+          <p className={s.lead}>미션수리는 원인 확인부터 시작합니다.<br />변속 충격·슬립·가속 떨림을 점검하고<br />필요한 정비 범위와 견적을 안내합니다.</p>
           <div className={s.actions}>
             <a className={s.primary} href={phone} data-contact="phone">전화로 증상 상담 <span aria-hidden="true">↗</span></a>
             <a className={s.textLink} href="#repair-cases">실제 수리 사례 보기 ↓</a>
