@@ -4068,6 +4068,14 @@
       "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 원문 18만키로를 숫자로 표준화. 정확한 계기판 숫자를 추가하지 않음. EOP 펌프는 이번 고장과 무관한 예방교체. 전후진 불능의 원인으로 쓰지 않음. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
       "photos": [
         {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTcy/MDAxNzkwNTk5Njk2MDM3.75vUcxLmAnm1S4ktWPk218x8rLcr-2pSPC_kwARwyDMg.Cj7oLnH74IwR7ht_bZfyhpIAYjncy0ikumu8t7tu1x8g.JPEG/SE-10756c67-b573-452f-933f-676edddeeea5.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "정비를 위해 입고한 싼타페 TM 전면",
+          "localPath": "/blog-imports/224425270383/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTcy/MDAxNzkwNTk5Njk2MDM3.75vUcxLmAnm1S4ktWPk218x8rLcr-2pSPC_kwARwyDMg.Cj7oLnH74IwR7ht_bZfyhpIAYjncy0ikumu8t7tu1x8g.JPEG/SE-10756c67-b573-452f-933f-676edddeeea5.jpg?type=w966"
+        },
+        {
           "url": "https://postfiles.pstatic.net/MjAyNjA5MjhfMTkg/MDAxNzkwNTk5NTY3NzM4.rofFWuqwAG80j0xfisBSHAZpfjR_7y2B-rFBZI7k1lMg.q3ASD9R4Aanh7-uhY2AxEuNmROFqhOhFkhtpxl1YE_4g.JPEG/20260916_155352.jpg",
           "width": 4000,
           "height": 3000,
@@ -4123,9 +4131,9 @@
       "replaced_parts": "",
       "work_summary": "조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.",
       "detailed_content": "출발하지 않아 견인 입고\n약 18만 km를 운행한 싼타페 TM 습식 8단 DCT 차량입니다. 주행 중 정차한 뒤 가속해도 차가 출발하지 않고 회전수만 올라갔으며 엔진 체크등도 켜졌습니다. 진단기에는 4·8단에 사용되는 시프트포크 D 위치 이상 코드가 기록돼 있었습니다.\n\n기어박스와 밸브바디 점검\n변속기를 탈거하고 내부 오일과 밸브바디 제어유를 배출했습니다. 분해한 기어박스에서는 포크와 허브 슬리브에 뚜렷한 문제나 걸림이 확인되지 않았습니다. 밸브바디를 분리해 유압 라인의 코팅이 손상된 부위도 확인했습니다.\n\n밸브바디 부품 교체\n솔레노이드와 플레이트, 기어 작동을 제어하는 밸브판을 분리해 교체했습니다. 내부 EOP 펌프도 신품으로 교환했으며, 원문은 이 펌프 교체를 이번 고장과 무관한 예방정비로 구분합니다.\n\n오일 주입과 전진·후진 확인\n조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.",
-      "content_html": "<h2>출발하지 않아 견인 입고</h2><p>약 18만 km를 운행한 싼타페 TM 습식 8단 DCT 차량입니다. 주행 중 정차한 뒤 가속해도 차가 출발하지 않고 회전수만 올라갔으며 엔진 체크등도 켜졌습니다. 진단기에는 4·8단에 사용되는 시프트포크 D 위치 이상 코드가 기록돼 있었습니다.</p><h2>기어박스와 밸브바디 점검</h2><p>변속기를 탈거하고 내부 오일과 밸브바디 제어유를 배출했습니다. 분해한 기어박스에서는 포크와 허브 슬리브에 뚜렷한 문제나 걸림이 확인되지 않았습니다. 밸브바디를 분리해 유압 라인의 코팅이 손상된 부위도 확인했습니다.</p><h2>밸브바디 부품 교체</h2><p>솔레노이드와 플레이트, 기어 작동을 제어하는 밸브판을 분리해 교체했습니다. 내부 EOP 펌프도 신품으로 교환했으며, 원문은 이 펌프 교체를 이번 고장과 무관한 예방정비로 구분합니다.</p><figure><img src=\"/blog-imports/224425270383/12.jpg\" alt=\"분리한 솔레노이드와 밸브바디 플레이트\" loading=\"lazy\" /><figcaption>분리한 솔레노이드와 밸브바디 플레이트</figcaption></figure><figure><img src=\"/blog-imports/224425270383/15.jpg\" alt=\"기존 펌프와 교체용 EOP 펌프\" loading=\"lazy\" /><figcaption>기존 펌프와 교체용 EOP 펌프</figcaption></figure><h2>오일 주입과 전진·후진 확인</h2><p>조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224425270383/16.jpg\" alt=\"오일팬을 닫기 전 변속기 조립 상태\" loading=\"lazy\" /><figcaption>오일팬을 닫기 전 변속기 조립 상태</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224425270383\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_html": "<h2>출발하지 않아 견인 입고</h2><p>약 18만 km를 운행한 싼타페 TM 습식 8단 DCT 차량입니다. 주행 중 정차한 뒤 가속해도 차가 출발하지 않고 회전수만 올라갔으며 엔진 체크등도 켜졌습니다. 진단기에는 4·8단에 사용되는 시프트포크 D 위치 이상 코드가 기록돼 있었습니다.</p><h2>기어박스와 밸브바디 점검</h2><p>변속기를 탈거하고 내부 오일과 밸브바디 제어유를 배출했습니다. 분해한 기어박스에서는 포크와 허브 슬리브에 뚜렷한 문제나 걸림이 확인되지 않았습니다. 밸브바디를 분리해 유압 라인의 코팅이 손상된 부위도 확인했습니다.</p><figure><img src=\"/blog-imports/224425270383/07.jpg\" alt=\"작업대에서 분해한 습식 8단 DCT와 제어 부품\" loading=\"lazy\" /><figcaption>작업대에서 분해한 습식 8단 DCT와 제어 부품</figcaption></figure><h2>밸브바디 부품 교체</h2><p>솔레노이드와 플레이트, 기어 작동을 제어하는 밸브판을 분리해 교체했습니다. 내부 EOP 펌프도 신품으로 교환했으며, 원문은 이 펌프 교체를 이번 고장과 무관한 예방정비로 구분합니다.</p><figure><img src=\"/blog-imports/224425270383/12.jpg\" alt=\"분리한 솔레노이드와 밸브바디 플레이트\" loading=\"lazy\" /><figcaption>분리한 솔레노이드와 밸브바디 플레이트</figcaption></figure><figure><img src=\"/blog-imports/224425270383/15.jpg\" alt=\"기존 펌프와 교체용 EOP 펌프\" loading=\"lazy\" /><figcaption>기존 펌프와 교체용 EOP 펌프</figcaption></figure><h2>오일 주입과 전진·후진 확인</h2><p>조립한 변속기를 차량에 장착하고 DCT 전용유와 밸브바디 제어유를 주입했습니다. 진단기 세팅 후 시운전에서 입고 당시의 전진·후진 불능 증상이 나타나지 않는 것을 확인하고 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224425270383/16.jpg\" alt=\"오일팬을 닫기 전 변속기 조립 상태\" loading=\"lazy\" /><figcaption>오일팬을 닫기 전 변속기 조립 상태</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224425270383\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
       "content_json": null,
-      "representative_image_path": "/blog-imports/224425270383/07.jpg",
+      "representative_image_path": "/blog-imports/224425270383/01.jpg",
       "gallery_image_paths": [],
       "before_images": [],
       "after_images": [],
@@ -4161,6 +4169,14 @@
       "publishedAt": "2026-09-27T12:32:35.288Z",
       "editorNote": "source-posts.json의 이 id blocks[].order가 사실근거. 숫자·증상·작업·결과의 상위 요약은 sections의 근거 문단을 따른다. 사진은 명시된 부서의 시각검토 결과를 반영했다. 원문 28만8천키로 표현을 보존. 메카트로닉스는 내부 밸브 확인 및 솔레노이드·배선 교체를 거쳐 준비한 제품. 신품 완제품으로 표현하지 않음. 온도 관련 코드와 심한 클러치 소손을 동일시하지 않음. 원문은 심한 그을림을 부정. 실제 작업일·비용·보증기간·정량적 성능개선 수치는 미제공. null 연식/주행거리는 미제공 또는 정확한 단일값 미확정이다.",
       "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjA5MjdfMTc0/MDAxNzkwNTEwMTY4Mzky.7f0LFoV8KkSeEaGBfvUJ08ty3jSCsnDxpQ8-YuG2u7sg.p5mmdrsG7oM7CgUY1NSNXQSgppoGoHwBy7f5OB5qx94g.JPEG/SE-88590b3f-c800-4de1-8a99-fef2a95da948.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "리프트에 올린 아우디 A7 전면",
+          "localPath": "/blog-imports/224424117180/01.jpg",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjA5MjdfMTc0/MDAxNzkwNTEwMTY4Mzky.7f0LFoV8KkSeEaGBfvUJ08ty3jSCsnDxpQ8-YuG2u7sg.p5mmdrsG7oM7CgUY1NSNXQSgppoGoHwBy7f5OB5qx94g.JPEG/SE-88590b3f-c800-4de1-8a99-fef2a95da948.jpg?type=w966"
+        },
         {
           "url": "https://postfiles.pstatic.net/MjAyNjA5MjdfMjQ2/MDAxNzkwNTEwMDk5Mzg2.t2VMgb1kFCvhfhoO_epsDnWHI7yPil0ekRL87g6MS2Yg.1B5LcQ2uG_Q683Ufwxb2_Cb210DWsPaeaqe3jlMZwCog.JPEG/1789778528867.jpg",
           "width": 4032,
@@ -4217,9 +4233,9 @@
       "replaced_parts": "",
       "work_summary": "시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.",
       "detailed_content": "경고 표시와 후진 불량\n약 28만 8천 km를 운행한 아우디 A7의 7단 DCT 정비 사례입니다. 엔진 체크등과 변속기 오작동 표시, 말펑션 표시등 점멸이 나타났고 레버 전환 때 충격과 후진 불량이 동반됐습니다.\n\n고장코드 확인 후 분리 점검\n진단기에는 클러치 온도가 높아 토크를 제한한다는 코드가 기록돼 있었습니다. 변속기를 탈거해 듀얼클러치와 메카트로닉스를 분리했습니다. 디스크는 심하게 그을린 상태는 아니었다고 작업 기록에 남아 있습니다.\n\n메카트로닉스와 클러치 정비\n내부 밸브를 확인하고 솔레노이드와 배선을 교체해 준비해 둔 메카트로닉스로 교환했습니다. 듀얼클러치의 디스크와 피스톤도 교체한 뒤 재조립했습니다. 변속기를 차량에 장착하고 전용 오일 주입과 진단기 세팅을 진행했습니다.\n\n수리 후 시운전\n시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.",
-      "content_html": "<h2>경고 표시와 후진 불량</h2><p>약 28만 8천 km를 운행한 아우디 A7의 7단 DCT 정비 사례입니다. 엔진 체크등과 변속기 오작동 표시, 말펑션 표시등 점멸이 나타났고 레버 전환 때 충격과 후진 불량이 동반됐습니다.</p><h2>고장코드 확인 후 분리 점검</h2><p>진단기에는 클러치 온도가 높아 토크를 제한한다는 코드가 기록돼 있었습니다. 변속기를 탈거해 듀얼클러치와 메카트로닉스를 분리했습니다. 디스크는 심하게 그을린 상태는 아니었다고 작업 기록에 남아 있습니다.</p><figure><img src=\"/blog-imports/224424117180/06.jpg\" alt=\"변속기 탈거 후 보이는 엔진 측 플라이휠\" loading=\"lazy\" /><figcaption>변속기 탈거 후 보이는 엔진 측 플라이휠</figcaption></figure><figure><img src=\"/blog-imports/224424117180/08.jpg\" alt=\"오일팬을 연 변속기 케이스 내부\" loading=\"lazy\" /><figcaption>오일팬을 연 변속기 케이스 내부</figcaption></figure><h2>메카트로닉스와 클러치 정비</h2><p>내부 밸브를 확인하고 솔레노이드와 배선을 교체해 준비해 둔 메카트로닉스로 교환했습니다. 듀얼클러치의 디스크와 피스톤도 교체한 뒤 재조립했습니다. 변속기를 차량에 장착하고 전용 오일 주입과 진단기 세팅을 진행했습니다.</p><figure><img src=\"/blog-imports/224424117180/10.jpg\" alt=\"분리한 듀얼클러치 디스크와 플레이트\" loading=\"lazy\" /><figcaption>분리한 듀얼클러치 디스크와 플레이트</figcaption></figure><h2>수리 후 시운전</h2><p>시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224424117180\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_html": "<h2>경고 표시와 후진 불량</h2><p>약 28만 8천 km를 운행한 아우디 A7의 7단 DCT 정비 사례입니다. 엔진 체크등과 변속기 오작동 표시, 말펑션 표시등 점멸이 나타났고 레버 전환 때 충격과 후진 불량이 동반됐습니다.</p><h2>고장코드 확인 후 분리 점검</h2><p>진단기에는 클러치 온도가 높아 토크를 제한한다는 코드가 기록돼 있었습니다. 변속기를 탈거해 듀얼클러치와 메카트로닉스를 분리했습니다. 디스크는 심하게 그을린 상태는 아니었다고 작업 기록에 남아 있습니다.</p><figure><img src=\"/blog-imports/224424117180/06.jpg\" alt=\"변속기 탈거 후 보이는 엔진 측 플라이휠\" loading=\"lazy\" /><figcaption>변속기 탈거 후 보이는 엔진 측 플라이휠</figcaption></figure><figure><img src=\"/blog-imports/224424117180/08.jpg\" alt=\"오일팬을 연 변속기 케이스 내부\" loading=\"lazy\" /><figcaption>오일팬을 연 변속기 케이스 내부</figcaption></figure><figure><img src=\"/blog-imports/224424117180/05.jpg\" alt=\"아우디 A7에서 탈거한 DCT\" loading=\"lazy\" /><figcaption>아우디 A7에서 탈거한 DCT</figcaption></figure><h2>메카트로닉스와 클러치 정비</h2><p>내부 밸브를 확인하고 솔레노이드와 배선을 교체해 준비해 둔 메카트로닉스로 교환했습니다. 듀얼클러치의 디스크와 피스톤도 교체한 뒤 재조립했습니다. 변속기를 차량에 장착하고 전용 오일 주입과 진단기 세팅을 진행했습니다.</p><figure><img src=\"/blog-imports/224424117180/10.jpg\" alt=\"분리한 듀얼클러치 디스크와 플레이트\" loading=\"lazy\" /><figcaption>분리한 듀얼클러치 디스크와 플레이트</figcaption></figure><h2>수리 후 시운전</h2><p>시운전에서는 기존 후진 불량이 나타나지 않았고 변속기 오작동 문구와 말펑션 표시등도 다시 들어오지 않았다고 기록돼 있습니다. 마무리 점검을 마친 뒤 차량을 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224424117180\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
       "content_json": null,
-      "representative_image_path": "/blog-imports/224424117180/05.jpg",
+      "representative_image_path": "/blog-imports/224424117180/01.jpg",
       "gallery_image_paths": [],
       "before_images": [],
       "after_images": [],

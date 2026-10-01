@@ -24,7 +24,7 @@ assert.equal(crypto.createHash('sha256').update(JSON.stringify(prepared.slice(0,
 const newPostIds=["224426404936","224425270383","224424117180","224275733454","224271694802","224269677971","224267258628","224265782652","224262970174","224246904261","224245707260","224244427674","224242489830","224240560347","224239991802","224237559579","224236226905","224218224258","224215622621","224169220987"];
 const newPrepared=prepared.slice(35);
 assert.deepEqual(new Set(newPrepared.map(entry=>entry.source.postId)),new Set(newPostIds));
-assert.equal(newPrepared.reduce((total,entry)=>total+entry.source.photos.length,0),79,'Only visually approved new photos');
+assert.equal(newPrepared.reduce((total,entry)=>total+entry.source.photos.length,0),81,'Only visually approved new photos');
 for(const entry of newPrepared){assert.equal(entry.work.title,entry.work.seo_title);assert.ok(entry.work.seo_description.length<=160);assert.equal(entry.work.slug,'naver-'+entry.source.postId);assert.ok(Number.isFinite(Date.parse(entry.source.publishedAt)));}
 const currentBatch=api.getCurrentBlogImports();
 assert.equal(currentBatch.length,45);
@@ -78,4 +78,4 @@ assert.ok(!page1.items.some(a=>page2.items.some(b=>a.id===b.id)));
 assert.equal(api.paginateBlogPreview(drafts,[],{q:'no-such-car'}).total,0);
 delete env.BLOG_IMPORT_PREVIEW;
 assert.equal(api.mergeBlogPreviewWorks([stored]).length,1,'Production list cannot receive draft additions');
-console.log('PASS: original 35 objects unchanged; 20 unique additions and 79 approved photos; 55 total drafts / 45 koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
+console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 55 total drafts / 45 koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
