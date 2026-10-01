@@ -1,3 +1,4 @@
+import { SmsLink } from "@/components/ui/SmsLink";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
@@ -32,7 +33,7 @@ export default async function ElectricVehiclePage() {
       <p className={s.eyebrow}>KOREA AUTO MISSION / ELECTRIC VEHICLE</p>
       <h1>전기차 수리.<br />충전부터 주행까지 살핍니다.</h1>
       <p className={s.lead}>EV6·아이오닉5 등 전기차의 배터리·인버터,<br />충전 불량과 모터·감속기까지. 차종과 증상을 알려주세요.</p>
-      <div className={s.contacts}><a href={telHref(settings.phone)} className={s.contact}>전화 상담 <span aria-hidden="true">↗</span></a><a href={`sms:${settings.phone.replace(/[^+\d]/g, "")}`} className={s.contact}>문자 상담 <span aria-hidden="true">↗</span></a></div>
+      <div className={s.contacts}><a href={telHref(settings.phone)} className={s.contact}>전화 상담 <span aria-hidden="true">↗</span></a><SmsLink phone={settings.phone} body={"[전기차 수리 상담]\n차종·연식:\n주행거리:\n증상:\n방문 희망일:"} className={s.contact}>문자 상담 <span aria-hidden="true">↗</span></SmsLink></div>
       <p className={s.address}>{settings.address} · {settings.phone}</p>
     </div></section>
     <section className={s.topics} aria-labelledby="ev-topics"><p className={s.eyebrow}>전기차 점검 · 수리 상담</p><h2 id="ev-topics">어떤 문제가 생겼나요?</h2>
@@ -42,5 +43,5 @@ export default async function ElectricVehiclePage() {
     {cases.length > 0 && <section className={s.journal} aria-labelledby="ev-records"><p className={s.eyebrow}>WORKSHOP JOURNAL</p><h2 id="ev-records">전기차 작업 기록.</h2><p className={s.note}>아이오닉5 모터·감속기 작업을 사진으로 확인해 보세요.</p><div className={s.caseGrid}>{cases.map((work) => <WorkCard key={work.id} work={work} />)}</div></section>}
     <ConsultationHelper settings={settings} service="전기차 수리" symptoms={["배터리·인버터 경고", "충전 불량", "모터·감속기 소음", "주행 중 진동", "기타 증상"]} />
     <section className={s.visit}><div><p className={s.eyebrow}>VISIT THE WORKSHOP</p><h2>{settings.business_name}</h2><p>{settings.address}</p><p>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours}</p><p>일요일 휴무 · 공휴일 {settings.holiday_hours}</p></div><Link href="/#location">네이버 지도·오시는 길 <span aria-hidden="true">↗</span></Link></section>
-  </main><Footer settings={settings} /><MobileBottomBar settings={settings} /></>;
+  </main><Footer settings={settings} /><MobileBottomBar settings={settings} service="전기차 수리" /></>;
 }

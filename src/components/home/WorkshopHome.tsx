@@ -80,7 +80,6 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
   const dpfWork = data.works.find((work) => work.slug === "naver-224401754733" || work.naver_blog_url?.includes("224401754733"));
   const recordHref = dpfWork ? `/works/${dpfWork.slug}` : "/services/diesel-cleaning/dpf";
   const phone = telHref(settings.phone);
-  const sms = `sms:${settings.phone.replace(/[^0-9+]/g, "")}`;
   const map = KOREA_AUTO_NAVER_PLACE;
   const visible = (id: HomepageSectionId) => config.section_order.includes(id) && isSectionVisible(config, id);
   const points = getWhyPoints(settings).slice(0, 3);
@@ -177,7 +176,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
       </section>
     ),
     cta: (
-      <section id="contact" className={s.contact}><div><p className={s.eyebrow}>CONTACT THE WORKSHOP</p><h2>{config.cta_title}</h2><p>{config.cta_description}</p></div><div className={s.contactActions}><a href={phone} className={s.phone}>{settings.phone}<Arrow /></a><div><a href={sms} className={s.lightButton}>문자로 상담하기 <Arrow /></a><a href={getBlogUrl(settings)} className={s.inlineLink} target="_blank" rel="noopener noreferrer">정비 블로그 <Arrow /></a></div><span>차종 · 연식 · 주행거리 · 증상을 함께 알려주세요.</span></div></section>
+      <section id="contact" className={s.contact}><div><p className={s.eyebrow}>CONTACT THE WORKSHOP</p><h2>{config.cta_title}</h2><p>{config.cta_description}</p></div><div className={s.contactActions}><a href={phone} className={s.phone}>{settings.phone}<Arrow /></a><div><SmsLink phone={settings.phone} className={s.lightButton}>문자로 상담하기 <Arrow /></SmsLink><a href={getBlogUrl(settings)} className={s.inlineLink} target="_blank" rel="noopener noreferrer">정비 블로그 <Arrow /></a></div><span>차종 · 연식 · 주행거리 · 증상을 함께 알려주세요.</span></div></section>
     ),
   };
 

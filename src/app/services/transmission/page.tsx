@@ -1,3 +1,4 @@
+import { SmsLink } from "@/components/ui/SmsLink";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
@@ -80,7 +81,7 @@ export default async function TransmissionPage() {
           <p className={s.lead}>미션수리는 원인 확인부터 시작합니다.<br />변속 충격·슬립·가속 떨림을 점검하고<br />필요한 정비 범위와 견적을 안내합니다.</p>
           <div className={s.actions}>
             <a className={s.primary} href={phone} data-contact="phone">전화로 증상 상담 <span aria-hidden="true">↗</span></a>
-            <a className={s.textLink} href="#repair-cases">실제 수리 사례 보기 ↓</a>
+            <SmsLink className={s.textLink} phone={settings.phone} body={"[미션수리 상담]\n차종·연식:\n주행거리:\n증상:\n방문 희망일:"}>문자로 증상 상담 ↗</SmsLink>
           </div>
           <a className={s.heroPhone} href={phone}>{settings.phone}</a>
           <p className={s.heroHours}>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours} · 일요일 휴무</p>
@@ -135,6 +136,6 @@ export default async function TransmissionPage() {
       </section>
     </main>
     <Footer settings={settings} />
-    <MobileBottomBar settings={settings} />
+    <MobileBottomBar settings={settings} service="미션수리" />
   </>;
 }

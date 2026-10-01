@@ -64,6 +64,6 @@ export default async function DieselCleaningPage() {
       <ConsultationHelper settings={settings} service="디젤 클리닝" symptoms={["출력 저하", "떨림", "경고등", "흡기 점검", "인젝터 점검", "DPF 점검"]} />
       <section id="repair-faq" className={`${s.section} ${s.faqSection}`}><div><p className={s.eyebrow}>방문 전에 궁금한 점</p><h2>비용과 작업 범위 안내.</h2></div><div className={s.faqs}>{faqs.map(faq=><details key={faq.q}><summary>{faq.q}<span aria-hidden="true">+</span></summary><p>{faq.a}</p></details>)}</div></section>
       <section className={`${s.section} ${s.visit}`}><div><p className={s.eyebrow}>방문 일정부터 상담하세요</p><h2>{settings.business_name}</h2><p className={s.sectionLead}>{settings.address}</p><a className={s.phone} href={phone}>{settings.phone}</a><div className={s.actions}><a className={s.primary} href={getReservationUrl(settings)} target="_blank" rel="noopener noreferrer">네이버 매장 정보 ↗</a><a className={s.textLink} href={getMapUrl(settings)} target="_blank" rel="noopener noreferrer">지도에서 위치 확인 ↗</a></div></div><BusinessHours settings={settings} className={s.hours} /></section>
-    </main><Footer settings={settings} /><MobileBottomBar settings={settings} />
+    </main><Footer settings={settings} /><MobileBottomBar settings={settings} service="디젤 클리닝" />
   </>;
 }

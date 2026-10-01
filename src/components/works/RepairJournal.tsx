@@ -9,7 +9,7 @@ import { JournalPhotos } from "./JournalPhotos";
 import { WorkServiceContext } from "./WorkServiceContext";
 import { buildJournalChapters } from "@/lib/works/journal";
 import { getWorkServiceLabels } from "@/lib/works/services";
-import { formatDateKo, getMapUrl, telHref } from "@/lib/utils";
+import { formatDateKo, getMapUrl, telHref, SITE_URL } from "@/lib/utils";
 import type { SiteSettings, WorkCase } from "@/lib/types";
 import s from "./RepairJournal.module.css";
 
@@ -22,7 +22,7 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
   const bodyPhotos=chapters.flatMap(c=>c.photos.map(p=>p.src));
   const gallery=[...new Set([...(work.gallery_image_paths||[]),...(work.before_images||[]),...(work.after_images||[])])].filter(path=>!bodyPhotos.includes(path)&&path!==work.representative_image_path);
   const totalPhotos=new Set([work.representative_image_path,...bodyPhotos,...gallery].filter(Boolean)).size;
-  const smsBody=`[${work.vehicle_model||"차량"} 작업사례를 보고 문의드립니다]\n내 차종·연식:\n주행거리:\n증상:\n방문 희망일:`;
+  const smsBody=`[작업사례 문의]\n참고한 글: ${work.title}\n${SITE_URL}/works/${work.slug}\n내 차종·연식:\n주행거리:\n증상:\n방문 희망일:`;
   const summary=work.symptoms||work.excerpt||work.subtitle;
   return <><Header settings={settings} dark/><main className={s.page}>
     <article>

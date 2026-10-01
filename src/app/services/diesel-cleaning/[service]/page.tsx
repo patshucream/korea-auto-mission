@@ -75,6 +75,6 @@ export default async function DieselServiceGuide({ params }: Props) {
       <ConsultationHelper settings={settings} service={guide.category} symptoms={[...guide.symptoms]} />
       <nav className={s.sectionNav} aria-label="다른 디젤 작업 안내">{dieselGuides.filter(item => item.slug !== guide.slug).map(item => <Link key={item.slug} href={dieselGuidePath(item.slug)}>{item.category} 안내 ↗</Link>)}<Link href="/services/diesel-cleaning">디젤 클리닝 전체 안내 ↗</Link></nav>
     </main>
-    <Footer settings={settings} /><MobileBottomBar settings={settings} />
+    <Footer settings={settings} /><MobileBottomBar settings={settings} service={guide.category} />
   </>;
 }
