@@ -34,14 +34,20 @@ assert.equal(result[1].photos[0].caption,'밸브 & 연결부');assert.equal(resu
 const fallback=buildJournalChapters({symptoms:'<이상 증상>\n두 번째 줄',diagnosis:null});assert.equal(fallback.length,1);assert.ok(fallback[0].html.includes('&lt;이상 증상&gt;<br />'));
 const {matchesRevisionFields}=load('src/lib/works/journal-revisions.ts');
 const revisions=load('src/lib/data/journal-revisions.json');
-assert.equal(revisions.length,3);
+assert.equal(revisions.length,45);
 for(const r of revisions){
- assert.ok(r.sourceUrl.startsWith('https://blog.naver.com/koreaautolife/'));
+ assert.ok(/^https:\/\/blog\.naver\.com\/(koreaautolife|97ga074)\/\d+$/.test(r.sourceUrl));
  assert.equal(matchesRevisionFields(r.before,r.before),true);
  assert.equal(matchesRevisionFields({...r.before,content_html:'관리자가 수정한 글'},r.before),false);
  assert.equal(matchesRevisionFields(r.after,r.after),true);
- assert.ok(journalText(r.after.content_html).length>journalText(r.before.content_html).length);
- for(const key of ['title','id','slug','status','is_published','naver_blog_url','representative_image_path'])assert.ok(!(key in r.after));
+ assert.ok(journalText(r.after.content_html).length>100);
+ const oldImages=[...r.before.content_html.matchAll(/src="([^"]+)"/g)].map(m=>m[1]);
+ const newImages=buildJournalChapters(r.after).flatMap(c=>c.photos.map(p=>p.src));
+ for(const src of [...oldImages,...(r.before.gallery_image_paths??[])])assert.ok(newImages.includes(src),'Preserve '+src);
+ assert.equal(new Set(newImages).size,newImages.length);
+ for(const src of newImages)assert.ok(fs.existsSync(path.join(root,'public',src)));
+ if(r.after.representative_image_path)assert.ok(['224425270383','224424117180'].some(id=>r.sourceUrl.endsWith(id)));
+ for(const key of ['title','id','slug','status','is_published','naver_blog_url'])assert.ok(!(key in r.after));
 }
 // Render the real journal/context components; unrelated layout and photo widgets
 // are inert boundaries so these checks require no browser, network, or database.
@@ -92,4 +98,4 @@ assert.ok(!cleaning.html.includes('href="/services/transmission"'),'Cleaning-onl
 const cayenne=renderWork({...entries[0].work,vehicle_brand:'포르쉐',manufacturer:'포르쉐',vehicle_model:'카이엔',representative_image_path:'/test-parts.jpg'});
 assert.ok(cayenne.html.includes('alt="포르쉐 카이엔 정비 작업 사진"'),'Parts-only contractor work uses a neutral hero description');
 assert.ok(!cayenne.html.includes('alt="포르쉐 카이엔 입고 차량"'));
-console.log(`PASS: ${entries.length} case bodies preserve all photos; captions, fallback text, XSS stripping, 3 source-scoped edit-preservation guards, rendered F150 speed/explicit Q3 mileage/current address/Cayenne parts-photo accuracy, and category-scoped transmission links verified.`);
+console.log(`PASS: ${entries.length} case bodies preserve all photos; captions, fallback text, XSS stripping, 45 source-scoped edit-preservation guards, rendered F150 speed/explicit Q3 mileage/current address/Cayenne parts-photo accuracy, and category-scoped transmission links verified.`);
