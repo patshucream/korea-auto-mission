@@ -118,6 +118,24 @@ function mapService(row: Record<string, unknown>): Service {
 }
 
 export function mapWork(row: Record<string, unknown>): WorkCase {
+  // Preserve the approved vehicle covers for these imported cases until resaved.
+  const vehicleCoverCorrections: Record<string, { previous: string; caption: string; section: string }> = {
+    "naver-224425270383": { previous: "07.jpg", caption: "작업대에서 분해한 습식 8단 DCT와 제어 부품", section: "<h2>밸브바디 부품 교체</h2>" },
+    "naver-224424117180": { previous: "05.jpg", caption: "아우디 A7에서 탈거한 DCT", section: "<h2>메카트로닉스와 클러치 정비</h2>" },
+  };
+  const coverCorrection = vehicleCoverCorrections[String(row.slug)];
+  if (coverCorrection) {
+    const directory = `/blog-imports/${String(row.slug).replace("naver-", "")}`;
+    const previous = `${directory}/${coverCorrection.previous}`;
+    if (row.representative_image_path === previous) {
+      const html = typeof row.content_html === "string" ? row.content_html : "";
+      row = { ...row, representative_image_path: `${directory}/01.jpg` };
+      if (html.includes(coverCorrection.section) && !html.includes(`src="${previous}"`)) {
+        const figure = `<figure><img src="${previous}" alt="${coverCorrection.caption}" loading="lazy" /><figcaption>${coverCorrection.caption}</figcaption></figure>`;
+        row.content_html = html.replace(coverCorrection.section, figure + coverCorrection.section);
+      }
+    }
+  }
   const status =
     row.status === "draft" ||
     row.status === "published" ||
