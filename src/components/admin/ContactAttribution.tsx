@@ -1,9 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import { analyticsPageName, deviceLabels, type TrafficVisit } from "@/lib/marketing-contacts";
 import { publicAnalyticsPath } from "@/lib/marketing-attribution";
 
 export function ContactAttribution({ visits, workTitles, exportHref }: {
   visits: TrafficVisit[]; workTitles: Record<string, string>; exportHref: string;
 }) {
+  const [limit, setLimit] = useState(10);
   const time = (at: string | null | undefined) => at ? new Date(at).toLocaleTimeString("ko-KR", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }) : "시각 미수집";
   return <section className="admin-card mt-5" aria-labelledby="contact-attribution-title">
     <div className="flex flex-wrap items-center justify-between gap-3">
@@ -12,7 +16,7 @@ export function ContactAttribution({ visits, workTitles, exportHref }: {
     </div>
     <p className="mt-3 text-sm leading-6 text-muted">한 항목은 같은 날·같은 브라우저 탭의 방문입니다. 전화와 문자를 모두 누르면 함께 표시합니다. 버튼을 누른 페이지 종류별 최초 클릭을 기록하며 실제 통화·문자 발송이나 고객 신원을 확인하는 기능은 아닙니다.</p>
     {visits.length ? <ol className="mt-5 space-y-3">
-      {visits.map((visit, index) => <li key={visit.key} className="rounded-xl border border-border p-4 sm:p-5">
+      {visits.slice(0, limit).map((visit, index) => <li key={visit.key} className="rounded-xl border border-border p-4 sm:p-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="font-bold text-navy"><span className="mr-2 text-xs font-normal text-muted">{index + 1}</span>{visit.sourceLabel}</p>
           <p className="text-sm text-muted"><time dateTime={visit.day}>{visit.day}</time> · {deviceLabels[visit.device]}</p>
@@ -29,5 +33,6 @@ export function ContactAttribution({ visits, workTitles, exportHref }: {
         </dl>
       </li>)}
     </ol> : <p className="mt-4 py-5 text-sm text-muted">선택한 조건에 해당하는 전화·문자 버튼 클릭이 없습니다.</p>}
+    {visits.length > 10 && <div className="mt-5 flex items-center justify-between gap-3"><p className="text-xs text-muted">{Math.min(limit, visits.length)} / {visits.length}건 표시 · CSV는 전체 내역</p>{limit < visits.length && <button type="button" className="btn btn-secondary min-h-11 text-sm" onClick={() => setLimit(limit + 10)}>10건 더 보기</button>}</div>}
   </section>;
 }
