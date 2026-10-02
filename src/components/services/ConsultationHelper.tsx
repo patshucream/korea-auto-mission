@@ -6,8 +6,8 @@ import type { SiteSettings } from "@/lib/types";
 import { telHref } from "@/lib/utils";
 import s from "./ConsultationHelper.module.css";
 
-export function ConsultationHelper({ settings, service, symptoms }: {
-  settings: SiteSettings; service: string; symptoms: string[];
+export function ConsultationHelper({ settings, service, symptoms, vehiclePlaceholder = "예: 스포티지 / 2018년 / 12만 km" }: {
+  settings: SiteSettings; service: string; symptoms: string[]; vehiclePlaceholder?: string;
 }) {
   const [vehicle, setVehicle] = useState("");
   const [symptom, setSymptom] = useState("");
@@ -31,7 +31,7 @@ export function ConsultationHelper({ settings, service, symptoms }: {
     <div className={s.card}>
       <h3>전화가 어려우면 문자로 남겨주세요.</h3>
       <label htmlFor="consultation-vehicle">차량 정보 <span>선택</span></label>
-      <input id="consultation-vehicle" value={vehicle} maxLength={90} onChange={e=>setVehicle(e.target.value)} placeholder="예: 스포티지 / 2018년 / 12만 km" autoComplete="off" />
+      <input id="consultation-vehicle" value={vehicle} maxLength={90} onChange={e=>setVehicle(e.target.value)} placeholder={vehiclePlaceholder} autoComplete="off" />
       <fieldset><legend>상담할 증상 <span>선택</span></legend><div className={s.chips}>{symptoms.map(item=><button key={item} type="button" aria-pressed={symptom===item} onClick={()=>setSymptom(symptom===item?"":item)}>{item}</button>)}</div></fieldset>
       <p className={s.note}>문자 앱이 열리면 내용을 확인하고 직접 전송해 주세요. 입력 내용은 이 화면에서만 사용합니다.</p>
       <div className={s.actions}><SmsLink className={s.primary} phone={settings.phone} body={message}>문자로 증상 보내기 ↗</SmsLink><button type="button" onClick={copyMessage}>상담 내용 복사</button></div>

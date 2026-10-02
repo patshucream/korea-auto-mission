@@ -132,7 +132,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <div className={s.missionCopy}><p className={s.eyebrow}>02 / AUTOMATIC TRANSMISSION</p><h3>오토미션 수리</h3><p className={s.serviceSummary}>변속 충격부터 가속할 때의 떨림까지.<br />수입차·국산차 자동변속기를 점검합니다.</p><ul className={s.serviceTopics}><li>변속 충격·슬립</li><li>주행 중 떨림</li><li>누유·경고등</li></ul><p className={s.serviceNote}>증상이 나타나는 상황과 차량 정보를 확인하고, 필요한 수리 범위와 견적을 안내합니다.</p><Link href="/services/transmission" className={s.inlineLink}>미션수리·실제 사례 보기 <Arrow /></Link></div>
         </section>
         <section id="ev-service" className={s.evFeature} data-reveal>
-          <div><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>충전부터 주행까지.<br />전기차의 상태를 함께 살펴봅니다.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 점검·수리 안내 <Arrow /></Link></div>
+          <div><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>EV6·아이오닉5 등 전기차.<br />배터리부터 모터·감속기까지.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 점검·수리 안내 <Arrow /></Link></div>
           <div className={s.evDetails}><span className={s.evMark} aria-hidden="true">EV</span><ul><li><span>01</span>배터리·인버터</li><li><span>02</span>충전 불량·충전 계통</li><li><span>03</span>모터·감속기 소음·진동</li></ul><p>차종·연식·주행거리와 증상을 알려주세요.<br />점검 후 필요한 작업을 안내합니다.</p></div>
         </section>
         <aside className={s.estimateNote} aria-labelledby="estimate-heading">

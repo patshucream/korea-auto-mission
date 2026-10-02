@@ -48,3 +48,33 @@
 .caseGrid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 40px; margin-top: 32px; }
 @media(max-width:1250px) { .journal { margin-inline:36px; } }
 @media(max-width:700px) { .journal { margin-inline:24px; padding-bottom:56px; } .caseGrid { grid-template-columns:1fr; gap:38px; } }
+
+.sectionNav { display:flex; flex-wrap:wrap; gap:8px; max-width:1160px; margin:0 auto; padding:24px 0; border-bottom:1px solid #d8ded6; }
+.sectionNav a { padding:12px 18px; border:1px solid #ccd4ca; border-radius:24px; font-size:13px; }
+.sectionNav a:hover { background:#e4e9e0; }
+.topics .symptom { color:#344e3e; font-weight:600; }
+.topics .ask { border-left:2px solid #9fb39f; padding-left:14px; }
+.topicLink { display:inline-flex; min-height:44px; align-items:center; margin-top:18px; font-size:13px; border-bottom:1px solid #97a796; }
+.process,.faq { max-width:1160px; margin:0 auto; padding:0 0 72px; }
+.process ol { list-style:none; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin:32px 0 0; }
+.process li { display:flex; gap:18px; border-top:1px solid #c4cfc2; padding-top:24px; }
+.process li > span { font-size:12px; color:#768974; padding-top:5px; }
+.process h3 { font-size:18px; font-weight:600; }
+.process p:not(.eyebrow),.faq details p { font-size:14px; line-height:1.9; color:#58675c; margin-top:14px; }
+.faq > div { margin-top:28px; border-top:1px solid #c4cfc2; }
+.faq details { border-bottom:1px solid #c4cfc2; padding:0 0 4px; }
+.faq summary { cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px 0; font-size:16px; font-weight:550; list-style:none; }
+.faq summary::-webkit-details-marker { display:none; }
+.faq summary span { color:#647f66; flex-shrink:0; }
+.faq details[open] summary span { transform:rotate(45deg); }
+.faq details p { margin:0 0 22px; max-width:850px; }
+.page :is(h2,#consultation) { scroll-margin-top:110px; }
+@media(max-width:1250px) { .sectionNav,.process,.faq { margin-inline:36px; } }
+@media(max-width:700px) {
+ .sectionNav,.process,.faq { margin-inline:24px; }
+ .sectionNav { padding:20px 0; gap:8px; }
+ .sectionNav a { font-size:12px; padding:12px 14px; }
+ .process,.faq { padding-bottom:48px; }
+ .process ol { grid-template-columns:1fr; gap:24px; }
+ .faq summary { font-size:15px; line-height:1.65; }
+}
