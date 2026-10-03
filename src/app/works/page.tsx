@@ -77,11 +77,7 @@ export default async function WorksPage({ searchParams }: Props) {
         <section className={s.librarySection}>
           <div>
             <header className={s.libraryHeading}><p>부산 사상구 · 코리아오토미션 정비사례</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
-            <nav className={s.serviceGuides} aria-label="정비 분야별 상담 안내">
-              <Link href="/services/transmission">미션수리 안내 <span aria-hidden="true">↗</span></Link>
-              <Link href="/services/diesel-cleaning">디젤클리닝 안내 <span aria-hidden="true">↗</span></Link>
-              <Link href="/services/electric-vehicle">전기차 수리 안내 <span aria-hidden="true">↗</span></Link>
-            </nav>
+
             <div>
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>
                 <WorkFilters key={JSON.stringify(params)}
@@ -92,7 +88,7 @@ export default async function WorksPage({ searchParams }: Props) {
               </Suspense>
             </div>
 
-            <div className="mt-12 flex items-end justify-between gap-4">
+            <div className={s.resultCount}>
               <p className="text-sm font-bold text-muted">
                 {hasFilter ? "검색 결과" : "최근 작업사례"}{" "}
                 <span className="text-charcoal">{result.total}</span>건
@@ -125,6 +121,11 @@ export default async function WorksPage({ searchParams }: Props) {
               </div>
             )}
 
+            <nav className={s.serviceGuides} aria-label="정비 분야별 상담 안내">
+              <Link href="/services/transmission">미션수리 안내 <span aria-hidden="true">↗</span></Link>
+              <Link href="/services/diesel-cleaning">디젤클리닝 안내 <span aria-hidden="true">↗</span></Link>
+              <Link href="/services/electric-vehicle">전기차 수리 안내 <span aria-hidden="true">↗</span></Link>
+            </nav>
             {result.totalPages > 1 ? (
               <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
                 {Array.from({ length: result.totalPages }, (_, i) => i + 1).map((p) => (

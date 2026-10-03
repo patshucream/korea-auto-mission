@@ -35,7 +35,6 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
       <div className={s.layout}>
         <aside className={s.sidebar}><div className={s.sticky}><p className={s.eyebrow}>IN THIS RECORD</p><nav aria-label="작업 과정 목차"><ol>{chapters.map((chapter,i)=><li key={chapter.id}><a href={`#${chapter.id}`}><span>{String(i+1).padStart(2,"0")}</span>{chapter.title}</a></li>)}</ol></nav><p className={s.sideNote}>궁금한 부분을 사진과 함께<br/>문자로 알려주셔도 좋습니다.</p><SmsLink phone={settings.phone} body={smsBody} className={s.sideSms}>문자로 정비 문의 ↗</SmsLink></div></aside>
         <div className={s.story}>
-          <WorkServiceContext work={work} settings={settings} />
           <details className={s.mobileToc}><summary>작업 과정 바로 보기 <span>＋</span></summary><nav aria-label="모바일 작업 과정 목차">{chapters.map((chapter,i)=><a href={`#${chapter.id}`} key={chapter.id}>{String(i+1).padStart(2,"0")}　{chapter.title}</a>)}</nav></details>
           {chapters.map((chapter,index)=><section id={chapter.id} key={chapter.id} className={s.chapter}><div className={s.chapterHeading}><span>{String(index+1).padStart(2,"0")}</span><h2>{chapter.title}</h2></div><div className={s.prose} dangerouslySetInnerHTML={{__html:chapter.html}}/><JournalPhotos photos={chapter.photos} title={chapter.title}/></section>)}
           {work.replaced_parts&&<section className={s.parts}><p className={s.eyebrow}>PARTS & MAINTENANCE</p><h2>이 차량에 교체한 부품</h2><p>{work.replaced_parts}</p></section>}
@@ -43,6 +42,7 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
           {(work.repair_duration||work.warranty_info)&&<section className={s.parts}><h2>작업 안내</h2>{work.repair_duration&&<p>작업 시간: {work.repair_duration}</p>}{work.warranty_info&&<p>{work.warranty_info}</p>}</section>}
           {gallery.length>0&&<section className={s.chapter}><div className={s.chapterHeading}><span>＋</span><h2>추가 작업 사진</h2></div><JournalPhotos photos={gallery.map((src,i)=>({src,caption:`${work.vehicle_model} 작업 기록 ${i+1}`}))} title="추가 작업 사진"/></section>}
           {work.naver_blog_url&&<div className={s.source}><span>코리아오토미션의 정비 기록입니다.</span><a href={work.naver_blog_url} target="_blank" rel="noopener noreferrer">네이버 블로그 원문 ↗</a></div>}
+          <WorkServiceContext work={work} settings={settings} />
           <section className={s.consult} id="case-consultation"><p className={s.eyebrow}>ASK THE WORKSHOP</p><h2>내 차의 증상도<br/>편하게 알려주세요.</h2><p>차종·연식·주행거리와 증상을 문자로 남겨주세요.<br/>작업 범위와 비용은 차량 상태를 확인한 뒤 안내합니다.</p><div><SmsLink phone={settings.phone} body={smsBody} className={s.smsButton}>문자로 상담하기 ↗</SmsLink><a href={telHref(settings.phone)} className={s.phoneLink}>전화 {settings.phone}</a></div><a href={getMapUrl(settings)} className={s.mapLink} target="_blank" rel="noopener noreferrer">{settings.address} · 오시는 길 ↗</a></section>
         </div>
       </div>

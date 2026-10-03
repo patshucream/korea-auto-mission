@@ -521,3 +521,36 @@
 .heroSms { display:inline-flex; align-items:center; justify-content:space-between; min-height:52px; padding:15px 23px; gap:24px; border:1px solid #c3cec3; border-radius:2px; color:#eef3ec; font-size:14px; font-weight:600; }
 .heroActions { flex-wrap:wrap; gap:18px; }
 @media(max-width:700px) { .heroActions { display:grid; grid-template-columns:1fr 1fr; gap:9px; } .heroActions .primaryButton,.heroSms { width:100%; padding:14px 17px; min-height:49px; font-size:13px; gap:12px; } .heroActions>.inlineLink { grid-column:1/-1; justify-self:start; min-height:40px; } }
+
+/* Mobile keeps the workshop palette, but brings real work ahead of long explanations. */
+@media (max-width:700px) {
+  .hero { height:auto; min-height:540px; padding:42px 24px 92px; align-items:flex-start; }
+  .heroShade { background:linear-gradient(180deg,#191d20ed 0%,#191d20bf 42%,#191d203d 74%,#191d20c9 100%); }
+  .hero .eyebrow { margin-bottom:24px; }
+  .heroLead { font-size:15px; line-height:1.85; margin-top:22px!important; }
+  .heroActions { display:flex; margin-top:26px; }
+  .heroActions > .primaryButton,.heroActions > .heroSms { display:none; }
+  .heroActions > .inlineLink { background:#eef0e9; color:#25342a; border-radius:3px; padding:15px 20px; font-size:15px; min-height:52px; gap:28px; }
+  .heroFoot { bottom:22px; font-size:12px; }
+  .heroFoot p:first-child { display:none; }
+  .trust { padding-block:24px; }
+  .trust span { font-size:13px; color:#c5cec8; }
+  .symptoms { padding-block:18px; }
+  .symptoms a { min-height:48px; font-size:14px; }
+  .section { padding-block:44px; }
+  .sectionHeading { margin-bottom:26px; gap:18px; }
+  .sectionHeading .eyebrow { margin-bottom:12px; }
+  .cases { gap:0; }
+  .case,.case:not(:first-child) { display:grid; grid-template-columns:minmax(0,1fr) 112px; gap:8px 18px; padding:24px 0; border-top:1px solid #ced5ca; }
+  .case .caseImageLink { grid-column:2; grid-row:1/5; align-self:start; }
+  .case .caseImage { height:auto; aspect-ratio:1; }
+  .case .caseArrow { display:none; }
+  .case h3,.case:not(:first-child) h3 { font-size:19px; line-height:1.5; grid-column:1; }
+  .case .caseCategory,.case:not(:first-child) .caseCategory { font-size:12px; color:#526557; grid-column:1; margin:0!important; }
+  .case .caseDescription,.case:not(:first-child) .caseDescription { display:none; }
+  .case .inlineLink { font-size:13px; grid-column:1; margin:0; min-height:44px; }
+  .serviceCopy p,.process p,.caseDescription { font-size:15px; color:#536058; }
+  .standardPoints p { font-size:15px; color:#c4cec7; }
+  .serviceTopics li,.missionPhoto figcaption,.recordLabel { font-size:13px; }
+  .processSection,.standards { padding-block:44px; }
+}

@@ -97,7 +97,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <div className={s.heroActions}>
             <a className={s.primaryButton} href={phone}>전화 상담 <Arrow /></a>
             <SmsLink phone={settings.phone} className={s.heroSms}>문자 상담 <Arrow /></SmsLink>
-            <Link className={s.inlineLink} href={visible("works") ? "#works" : "/works"}>실제 작업 보기 <span aria-hidden="true">↓</span></Link>
+            <Link className={s.inlineLink} href={visible("works") ? "#works" : "/works"}>내 차 작업사례 찾기 <span aria-hidden="true">↓</span></Link>
           </div>
         </div>
         <div className={s.heroFoot}><p>디젤클리닝 <span>/</span> 미션수리 <span>/</span> 전기차 수리</p><p>{settings.address}<span className={s.heroFootArrow} aria-hidden="true">↓</span></p></div>
@@ -143,7 +143,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
     ),
     why: points.length ? (
       <section id="why" className={s.standards} aria-label="정비의 기준">
-        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>02 / THE WORK, IN DETAIL</p><h2>설명은 분명하게.<br />과정은 사진으로.</h2></div><p>현장에서 남긴 정비 기록과 함께<br />필요한 작업의 이유를 설명합니다.</p></div>
+        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>THE WORK, IN DETAIL</p><h2>설명은 분명하게.<br />과정은 사진으로.</h2></div><p>현장에서 남긴 정비 기록과 함께<br />필요한 작업의 이유를 설명합니다.</p></div>
         <div className={s.recordLayout}>
           <Link href={recordHref} className={s.recordImageLink} data-reveal aria-label="쏘렌토 DPF 클리닝 작업 과정 보기"><SmartImage path="/blog-imports/224401754733/18.jpg" alt="쏘렌토 DPF를 세척 장비에 연결한 실제 작업 사진" className={s.recordImage} sizes="(max-width: 700px) 100vw, 55vw" /><span className={s.recordLabel}>쏘렌토 · DPF 클리닝 <Arrow /></span></Link>
           <div className={s.standardPoints}>{points.map((point, index) => <article key={point.id}><span>0{index + 1}</span><h3>{point.title}</h3><p>{point.body}</p></article>)}</div>
@@ -152,7 +152,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
     ) : null,
     works: works.length ? (
       <section id="works" className={s.section}>
-        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>03 / WORKSHOP JOURNAL</p><h2>한 대씩, 쌓아온 기록.</h2></div><Link href="/works" className={s.inlineLink}>작업 사례 전체 보기 <Arrow /></Link></div>
+        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>WORKSHOP JOURNAL</p><h2>한 대씩, 쌓아온 기록.</h2></div><Link href="/works" className={s.inlineLink}>작업 사례 전체 보기 <Arrow /></Link></div>
         <div className={s.cases}>{works.slice(0, 3).map((work) => <WorkPreview key={work.id} work={work} />)}</div>
       </section>
     ) : null,
@@ -180,5 +180,9 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
     ),
   };
 
-  return <div className={s.page}><a href="#main" className={s.skip}>본문으로 바로가기</a><Header settings={settings} dark /><WorkshopMotion>{config.section_order.map((id) => visible(id) && sections[id] ? <div key={id}>{sections[id]}</div> : null)}</WorkshopMotion><Footer settings={settings} /><MobileBottomBar settings={settings} /></div>;
+  const displayOrder: HomepageSectionId[] = config.section_order.filter(id => id !== "works");
+  const earlyAnchor = displayOrder.includes("symptoms") ? "symptoms" : "hero";
+  if (visible("works")) displayOrder.splice(displayOrder.indexOf(earlyAnchor) + 1, 0, "works");
+
+  return <div className={s.page}><a href="#main" className={s.skip}>본문으로 바로가기</a><Header settings={settings} dark /><WorkshopMotion>{displayOrder.map((id) => visible(id) && sections[id] ? <div key={id}>{sections[id]}</div> : null)}</WorkshopMotion><Footer settings={settings} /><MobileBottomBar settings={settings} /></div>;
 }
