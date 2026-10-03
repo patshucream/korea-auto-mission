@@ -14,6 +14,7 @@ export function getPreparedBlogImports() {
 export function getCurrentBlogImports() {
   return getPreparedBlogImports().filter(({ source, work }) =>
     source.blogId === "koreaautolife" &&
+    source.postId !== "224380261625" && // Owner confirmed this is not a real repair case.
     naverPostKey(source.url) === `koreaautolife:${source.postId}` &&
     naverPostKey(work.naver_blog_url) === `koreaautolife:${source.postId}`,
   );

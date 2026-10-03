@@ -5863,5 +5863,680 @@
       "noindex": false,
       "view_count": 0
     }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224222794615",
+      "url": "https://blog.naver.com/koreaautolife/224222794615",
+      "title": "기아 스팅어 오토미션수리 / 3단과 5,6단 변속시 심하게 슬립을 하였음",
+      "publishedAt": "2026-03-19T14:20:00.000Z",
+      "editorNote": "원문과 차량·부품 사진 확인 완료. 기존 홈페이지에 없는 사례이며, 원문에 없는 작업·결과·가격은 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTlfNzQg/MDAxNzczOTI1NzMyNTgz.KLqPR-Hus7JafIorJ2qe9bO_KKAKd3a1ypshGj8--oQg.DrmRoi5Q09MM5weaiqbAOW4nPXQ8nyLHNzzvLiVeALUg.JPEG/SE-dfee2b16-1612-43e1-ad7f-642b7787bf2b.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTlfNzQg/MDAxNzczOTI1NzMyNTgz.KLqPR-Hus7JafIorJ2qe9bO_KKAKd3a1ypshGj8--oQg.DrmRoi5Q09MM5weaiqbAOW4nPXQ8nyLHNzzvLiVeALUg.JPEG/SE-dfee2b16-1612-43e1-ad7f-642b7787bf2b.jpg?type=w966",
+          "localPath": "/blog-imports/224222794615/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTlfMjA1/MDAxNzczOTI1NjMzNjg0.LDnq83zYhERqBm53AUubd55jK_qOkjqYCBxIrVsfheIg.5uTg4lFAGu8ngG2KoV7Rhinr5nY7kJIPq7MkWMm4jfsg.JPEG/1773919515513.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTlfMjA1/MDAxNzczOTI1NjMzNjg0.LDnq83zYhERqBm53AUubd55jK_qOkjqYCBxIrVsfheIg.5uTg4lFAGu8ngG2KoV7Rhinr5nY7kJIPq7MkWMm4jfsg.JPEG/1773919515513.jpg?type=w966",
+          "localPath": "/blog-imports/224222794615/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTlfMjEz/MDAxNzczOTI1NjMxMzg3.4wHoouJg1unYo4R3FOvCibbyC4I9et1E3suga3hN3h8g.LT9Q71eGGsoCg8nTIKc5RVnrWw3ULtWr5UWjwzrTyG4g.JPEG/20260318_144509.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTlfMjEz/MDAxNzczOTI1NjMxMzg3.4wHoouJg1unYo4R3FOvCibbyC4I9et1E3suga3hN3h8g.LT9Q71eGGsoCg8nTIKc5RVnrWw3ULtWr5UWjwzrTyG4g.JPEG/20260318_144509.jpg?type=w966",
+          "localPath": "/blog-imports/224222794615/08.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTlfMjcz/MDAxNzczOTI5NTE5NTc2.DNTXxNIlNnthq1CcDzBCVFifkaY_R3HS6ru_A0kzhBkg.WCMBRq2rYF9zuwz7Spper6baCL4mF1PooqLno3r_yWUg.JPEG/20260319_110711.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTlfMjcz/MDAxNzczOTI5NTE5NTc2.DNTXxNIlNnthq1CcDzBCVFifkaY_R3HS6ru_A0kzhBkg.WCMBRq2rYF9zuwz7Spper6baCL4mF1PooqLno3r_yWUg.JPEG/20260319_110711.jpg?type=w966",
+          "localPath": "/blog-imports/224222794615/12.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTlfNzQg/MDAxNzczOTI1NjMyNDI2.SiHA5gfCEEsCxlcLzusGJXb2GNLqoHeG5C7G-tzkZngg.ODD79tJ-GCdjjHfSSDBQ30O30ZZSo1mo3_hUqifLtjIg.JPEG/20260319_151744.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTlfNzQg/MDAxNzczOTI1NjMyNDI2.SiHA5gfCEEsCxlcLzusGJXb2GNLqoHeG5C7G-tzkZngg.ODD79tJ-GCdjjHfSSDBQ30O30ZZSo1mo3_hUqifLtjIg.JPEG/20260319_151744.jpg?type=w966",
+          "localPath": "/blog-imports/224222794615/13.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTlfMTM2/MDAxNzczOTI1NjM0MDU2.HhXsCUQUlAXThnsfnvdvUqcwbHaSrDDMwbNuGYhmV7Yg.iG76gE3Wey__jyNF7Yb-mqo4XIhepZq76MdmcATLEY0g.JPEG/1773919515581.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTlfMTM2/MDAxNzczOTI1NjM0MDU2.HhXsCUQUlAXThnsfnvdvUqcwbHaSrDDMwbNuGYhmV7Yg.iG76gE3Wey__jyNF7Yb-mqo4XIhepZq76MdmcATLEY0g.JPEG/1773919515581.jpg?type=w966",
+          "localPath": "/blog-imports/224222794615/14.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "025ac541-7ad1-4ac3-bdde-4e7eb575b0a0",
+      "slug": "naver-224222794615",
+      "title": "스팅어 8단 미션수리·3단 가속 시 슬립과 OD클러치 손상",
+      "subtitle": "출발에는 문제가 없지만 3단 변속 구간에서 가속페달을 깊게 밟으면 RPM이 치솟고 심하게 슬립하는 스팅어가 입고됐습니다. 주행거리는 132,000km였습니다.",
+      "excerpt": "출발에는 문제가 없지만 3단 변속 구간에서 가속페달을 깊게 밟으면 RPM이 치솟고 심하게 슬립하는 스팅어가 입고됐습니다. 주행거리는 132,000km였습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "스팅어",
+      "model_year": "",
+      "mileage": "132,000km",
+      "fuel_type": "",
+      "transmission_type": "후륜 8단 자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "출발에는 문제가 없지만 3단 변속 구간에서 가속페달을 깊게 밟으면 RPM이 치솟고 심하게 슬립하는 스팅어가 입고됐습니다. 주행거리는 132,000km였습니다.\n차주는 5단에서도 간헐적으로 같은 현상이 있었다고 설명했습니다. 시운전에서 재현된 증상과 차주가 알려준 증상을 구분해 점검했으며, 진단기에는 엔진과 미션의 별도 고장코드가 남아 있지 않았습니다.",
+      "diagnosis": "차주 설명에 따르면 이전에 솔레노이드와 토크컨버터를 교체한 이력이 있었습니다. 이번에는 미션 내부의 기계적 손상 여부를 확인했습니다.\n미션 탈거 후 오일팬을 열자 자석에 다량의 쇳가루가 붙어 있었습니다. 배출한 오일의 색만으로 판단하기 어려웠던 내부 손상을 분해 점검으로 확인했습니다.",
+      "cause": "",
+      "repair_process": "분해 점검에서 OD클러치 디스크의 심한 열화를 확인했습니다. 손상된 부품을 선별해 신품으로 교체하고, 쇳가루가 묻은 밸브바디도 완전히 분해해 세척했습니다.\n오일팬을 교체했으며, 탈거 과정에서 발견한 운전석 노크센서 단선도 장착 전에 조치했습니다.",
+      "replaced_parts": "OD클러치 및 손상 부품, 오일팬, 운전석 노크센서",
+      "work_summary": "수리한 미션을 차량에 장착하고 전용 오일을 정량 주입한 뒤 마무리 점검을 진행했습니다.",
+      "detailed_content": "3단 가속 때 RPM만 치솟는 증상\n출발에는 문제가 없지만 3단 변속 구간에서 가속페달을 깊게 밟으면 RPM이 치솟고 심하게 슬립하는 스팅어가 입고됐습니다. 주행거리는 132,000km였습니다.\n차주는 5단에서도 간헐적으로 같은 현상이 있었다고 설명했습니다. 시운전에서 재현된 증상과 차주가 알려준 증상을 구분해 점검했으며, 진단기에는 엔진과 미션의 별도 고장코드가 남아 있지 않았습니다.\n\n최근 오일 교환 이력과 내부 상태 확인\n차주 설명에 따르면 이전에 솔레노이드와 토크컨버터를 교체한 이력이 있었습니다. 이번에는 미션 내부의 기계적 손상 여부를 확인했습니다.\n미션 탈거 후 오일팬을 열자 자석에 다량의 쇳가루가 붙어 있었습니다. 배출한 오일의 색만으로 판단하기 어려웠던 내부 손상을 분해 점검으로 확인했습니다.\n\nOD클러치 교체와 밸브바디 세척\n분해 점검에서 OD클러치 디스크의 심한 열화를 확인했습니다. 손상된 부품을 선별해 신품으로 교체하고, 쇳가루가 묻은 밸브바디도 완전히 분해해 세척했습니다.\n오일팬을 교체했으며, 탈거 과정에서 발견한 운전석 노크센서 단선도 장착 전에 조치했습니다.\n\n차량 재장착과 마무리 점검\n수리한 미션을 차량에 장착하고 전용 오일을 정량 주입한 뒤 마무리 점검을 진행했습니다.",
+      "content_html": "<h2>3단 가속 때 RPM만 치솟는 증상</h2><p>출발에는 문제가 없지만 3단 변속 구간에서 가속페달을 깊게 밟으면 RPM이 치솟고 심하게 슬립하는 스팅어가 입고됐습니다. 주행거리는 132,000km였습니다.</p><p>차주는 5단에서도 간헐적으로 같은 현상이 있었다고 설명했습니다. 시운전에서 재현된 증상과 차주가 알려준 증상을 구분해 점검했으며, 진단기에는 엔진과 미션의 별도 고장코드가 남아 있지 않았습니다.</p><h2>최근 오일 교환 이력과 내부 상태 확인</h2><p>차주 설명에 따르면 이전에 솔레노이드와 토크컨버터를 교체한 이력이 있었습니다. 이번에는 미션 내부의 기계적 손상 여부를 확인했습니다.</p><p>미션 탈거 후 오일팬을 열자 자석에 다량의 쇳가루가 붙어 있었습니다. 배출한 오일의 색만으로 판단하기 어려웠던 내부 손상을 분해 점검으로 확인했습니다.</p><figure><img src=\"/blog-imports/224222794615/05.jpg\" alt=\"차량에서 탈거한 스팅어 8단 자동변속기\" loading=\"lazy\" /><figcaption>차량에서 탈거한 스팅어 8단 자동변속기</figcaption></figure><figure><img src=\"/blog-imports/224222794615/08.jpg\" alt=\"오일팬 내부와 자석 주변에 쌓인 쇳가루\" loading=\"lazy\" /><figcaption>오일팬 내부와 자석 주변에 쌓인 쇳가루</figcaption></figure><h2>OD클러치 교체와 밸브바디 세척</h2><p>분해 점검에서 OD클러치 디스크의 심한 열화를 확인했습니다. 손상된 부품을 선별해 신품으로 교체하고, 쇳가루가 묻은 밸브바디도 완전히 분해해 세척했습니다.</p><p>오일팬을 교체했으며, 탈거 과정에서 발견한 운전석 노크센서 단선도 장착 전에 조치했습니다.</p><figure><img src=\"/blog-imports/224222794615/12.jpg\" alt=\"분해해 손상 상태를 확인한 OD클러치 디스크\" loading=\"lazy\" /><figcaption>분해해 손상 상태를 확인한 OD클러치 디스크</figcaption></figure><figure><img src=\"/blog-imports/224222794615/13.jpg\" alt=\"밸브바디 세척과 재조립을 진행하는 작업대\" loading=\"lazy\" /><figcaption>밸브바디 세척과 재조립을 진행하는 작업대</figcaption></figure><h2>차량 재장착과 마무리 점검</h2><p>수리한 미션을 차량에 장착하고 전용 오일을 정량 주입한 뒤 마무리 점검을 진행했습니다.</p><figure><img src=\"/blog-imports/224222794615/14.jpg\" alt=\"수리 후 차량 하부에 재장착한 미션\" loading=\"lazy\" /><figcaption>수리 후 차량 하부에 재장착한 미션</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224222794615\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224222794615/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "스팅어"
+      ],
+      "symptom_tags": [
+        "미션슬립",
+        "3단 변속",
+        "RPM 상승",
+        "OD클러치"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224222794615",
+      "created_at": "2026-03-19T14:20:00.000Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "스팅어 8단 미션수리·3단 가속 시 슬립과 OD클러치 손상",
+      "seo_description": "부산 코리아오토미션의 스팅어 8단 미션수리·3단 가속 시 슬립과 OD클러치 손상 실제 작업 기록. 출발에는 문제가 없지만 3단 변속 구간에서 가속페달을 깊게 밟으면 RPM이 치솟고 심하게 슬립하는 스팅어가 입고됐습니다. 주행거리는 132,000km였습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224230048440",
+      "url": "https://blog.naver.com/koreaautolife/224230048440",
+      "title": "올란도 오토미션수리 / 40키로 이상에서 심한 울컥거림 / 엔진체크등",
+      "publishedAt": "2026-03-26T02:05:00.000Z",
+      "editorNote": "원문과 차량·부품 사진 확인 완료. 기존 홈페이지에 없는 사례이며, 원문에 없는 작업·결과·가격은 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjZfMTU1/MDAxNzc0NDg2NDgwMTMx.xfulIXWsTT0Kl38GYAC7RTJcwXmn9xf_KJOFdVnuEpog.PK8sgNMWyOk2fXl_T1cy76dQN9__NT-AQhaQ4sEley4g.JPEG/SE-0934928f-0575-404d-9346-d0a7140ce80a.jpg",
+          "width": 1440,
+          "height": 1080,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjZfMTU1/MDAxNzc0NDg2NDgwMTMx.xfulIXWsTT0Kl38GYAC7RTJcwXmn9xf_KJOFdVnuEpog.PK8sgNMWyOk2fXl_T1cy76dQN9__NT-AQhaQ4sEley4g.JPEG/SE-0934928f-0575-404d-9346-d0a7140ce80a.jpg?type=w966",
+          "localPath": "/blog-imports/224230048440/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjZfNjQg/MDAxNzc0NDg2MzQ0MDYx.MyNyfp-Q2FXYZhtwwsdS80gVmqtDSBuy8VC1iyT1IbUg.Y6Isl0SGvoDjMhAPzIusK2D0jbZ26Le3OwS6p8UIYzUg.JPEG/1589036742082-13.jpg",
+          "width": 1440,
+          "height": 1080,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjZfNjQg/MDAxNzc0NDg2MzQ0MDYx.MyNyfp-Q2FXYZhtwwsdS80gVmqtDSBuy8VC1iyT1IbUg.Y6Isl0SGvoDjMhAPzIusK2D0jbZ26Le3OwS6p8UIYzUg.JPEG/1589036742082-13.jpg?type=w966",
+          "localPath": "/blog-imports/224230048440/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjZfNzAg/MDAxNzc0NDg2MzQyNDM3.33EI2PttSWLS7JUYzisBB3J3jZmAG4Nzo7GcHMiKUfQg.-dxVJ9r84DYHvSH-VyKviiw6Kqj9NBi1qf-pQOTtfdwg.JPEG/20200508_152742.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjZfNzAg/MDAxNzc0NDg2MzQyNDM3.33EI2PttSWLS7JUYzisBB3J3jZmAG4Nzo7GcHMiKUfQg.-dxVJ9r84DYHvSH-VyKviiw6Kqj9NBi1qf-pQOTtfdwg.JPEG/20200508_152742.jpg?type=w966",
+          "localPath": "/blog-imports/224230048440/08.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjZfMjg0/MDAxNzc0NDg2MzQyNzAz.qbOzJ9HspUIkq7JlCddVQkhq3GSoqq-F34DwTbn66CEg.voFyZY2tlSN76_ezL6MLaKEqiGqkumi-sa8fWrZ_4Mkg.JPEG/20171115_133338.jpg",
+          "width": 2656,
+          "height": 1494,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjZfMjg0/MDAxNzc0NDg2MzQyNzAz.qbOzJ9HspUIkq7JlCddVQkhq3GSoqq-F34DwTbn66CEg.voFyZY2tlSN76_ezL6MLaKEqiGqkumi-sa8fWrZ_4Mkg.JPEG/20171115_133338.jpg?type=w966",
+          "localPath": "/blog-imports/224230048440/09.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjZfMTcx/MDAxNzc0NDg2MzQyOTE1.ZzW_h5Nrgw0zXfC4rCmlUMc5UtGI-6EFGJ4Vh266gU0g.VI_iHXTlTZOp3ACw3Y3LRKxLosJ9spvr77vTDw0PNd0g.JPEG/20180629_091946.jpg",
+          "width": 4032,
+          "height": 1960,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjZfMTcx/MDAxNzc0NDg2MzQyOTE1.ZzW_h5Nrgw0zXfC4rCmlUMc5UtGI-6EFGJ4Vh266gU0g.VI_iHXTlTZOp3ACw3Y3LRKxLosJ9spvr77vTDw0PNd0g.JPEG/20180629_091946.jpg?type=w966",
+          "localPath": "/blog-imports/224230048440/10.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "14f82fe7-8d81-435e-8fb0-c55fcb14ec80",
+      "slug": "naver-224230048440",
+      "title": "올란도 미션수리·40km/h 이상 슬립과 울컥거림",
+      "subtitle": "134,000km를 운행한 올란도 디젤 차량입니다. 40km/h 이상, 4단 이상 구간에서 RPM이 심하게 올라가는 슬립과 울컥거림이 발생했습니다.",
+      "excerpt": "134,000km를 운행한 올란도 디젤 차량입니다. 40km/h 이상, 4단 이상 구간에서 RPM이 심하게 올라가는 슬립과 울컥거림이 발생했습니다.",
+      "vehicle_brand": "쉐보레",
+      "manufacturer": "쉐보레",
+      "vehicle_model": "올란도",
+      "model_year": "",
+      "mileage": "134,000km",
+      "fuel_type": "디젤",
+      "transmission_type": "자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "134,000km를 운행한 올란도 디젤 차량입니다. 40km/h 이상, 4단 이상 구간에서 RPM이 심하게 올라가는 슬립과 울컥거림이 발생했습니다.\n계기판의 엔진 경고등과 함께 미션 및 DPF 관련 고장코드가 확인돼 미션 탈거 과정에서 배기장치 상태도 살펴봤습니다.",
+      "diagnosis": "오일을 배출할 때 검게 변한 오일과 타는 냄새가 확인됐습니다. 미션을 분해하자 필터에 디스크 마찰재 가루가 쌓여 있었고 4·5·6 클러치 디스크의 심한 손상이 확인됐습니다.",
+      "cause": "",
+      "repair_process": "손상된 디스크뿐 아니라 관련 부품을 함께 확인하고 교체했습니다. 오일펌프의 스플라인 부분도 심하게 마모되어 다른 오일펌프로 교체했습니다.\n별도로 DPF 내부 파손을 발견해 차주에게 추가 작업이 필요하다고 설명했습니다.",
+      "replaced_parts": "손상된 클러치 디스크 및 내부 부품, 오일펌프",
+      "work_summary": "미션을 장착하고 전용 오일을 주입·레벨링한 뒤 시운전했습니다. 이전의 40km/h 이상 슬립 현상이 나타나지 않았으며 마무리 점검 후 출고했습니다.",
+      "detailed_content": "40km/h 이상에서 RPM 상승과 울컥거림\n134,000km를 운행한 올란도 디젤 차량입니다. 40km/h 이상, 4단 이상 구간에서 RPM이 심하게 올라가는 슬립과 울컥거림이 발생했습니다.\n계기판의 엔진 경고등과 함께 미션 및 DPF 관련 고장코드가 확인돼 미션 탈거 과정에서 배기장치 상태도 살펴봤습니다.\n\n미션 탈거와 내부 손상 확인\n오일을 배출할 때 검게 변한 오일과 타는 냄새가 확인됐습니다. 미션을 분해하자 필터에 디스크 마찰재 가루가 쌓여 있었고 4·5·6 클러치 디스크의 심한 손상이 확인됐습니다.\n\n클러치 관련 부품과 오일펌프 교체\n손상된 디스크뿐 아니라 관련 부품을 함께 확인하고 교체했습니다. 오일펌프의 스플라인 부분도 심하게 마모되어 다른 오일펌프로 교체했습니다.\n별도로 DPF 내부 파손을 발견해 차주에게 추가 작업이 필요하다고 설명했습니다.\n\n시운전에서 기존 슬립 증상 확인\n미션을 장착하고 전용 오일을 주입·레벨링한 뒤 시운전했습니다. 이전의 40km/h 이상 슬립 현상이 나타나지 않았으며 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>40km/h 이상에서 RPM 상승과 울컥거림</h2><p>134,000km를 운행한 올란도 디젤 차량입니다. 40km/h 이상, 4단 이상 구간에서 RPM이 심하게 올라가는 슬립과 울컥거림이 발생했습니다.</p><p>계기판의 엔진 경고등과 함께 미션 및 DPF 관련 고장코드가 확인돼 미션 탈거 과정에서 배기장치 상태도 살펴봤습니다.</p><h2>미션 탈거와 내부 손상 확인</h2><p>오일을 배출할 때 검게 변한 오일과 타는 냄새가 확인됐습니다. 미션을 분해하자 필터에 디스크 마찰재 가루가 쌓여 있었고 4·5·6 클러치 디스크의 심한 손상이 확인됐습니다.</p><figure><img src=\"/blog-imports/224230048440/05.jpg\" alt=\"차량에서 분리해 작업대로 옮긴 올란도 미션\" loading=\"lazy\" /><figcaption>차량에서 분리해 작업대로 옮긴 올란도 미션</figcaption></figure><figure><img src=\"/blog-imports/224230048440/08.jpg\" alt=\"내부 부품을 분해해 손상 여부를 확인하는 과정\" loading=\"lazy\" /><figcaption>내부 부품을 분해해 손상 여부를 확인하는 과정</figcaption></figure><h2>클러치 관련 부품과 오일펌프 교체</h2><p>손상된 디스크뿐 아니라 관련 부품을 함께 확인하고 교체했습니다. 오일펌프의 스플라인 부분도 심하게 마모되어 다른 오일펌프로 교체했습니다.</p><p>별도로 DPF 내부 파손을 발견해 차주에게 추가 작업이 필요하다고 설명했습니다.</p><figure><img src=\"/blog-imports/224230048440/09.jpg\" alt=\"분해한 클러치와 교체 작업용 부품\" loading=\"lazy\" /><figcaption>분해한 클러치와 교체 작업용 부품</figcaption></figure><figure><img src=\"/blog-imports/224230048440/10.jpg\" alt=\"스플라인 마모를 확인한 오일펌프 작업 사진\" loading=\"lazy\" /><figcaption>스플라인 마모를 확인한 오일펌프 작업 사진</figcaption></figure><h2>시운전에서 기존 슬립 증상 확인</h2><p>미션을 장착하고 전용 오일을 주입·레벨링한 뒤 시운전했습니다. 이전의 40km/h 이상 슬립 현상이 나타나지 않았으며 마무리 점검 후 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224230048440\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224230048440/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "쉐보레",
+        "올란도"
+      ],
+      "symptom_tags": [
+        "미션슬립",
+        "울컥거림",
+        "엔진 경고등",
+        "4·5·6 클러치"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224230048440",
+      "created_at": "2026-03-26T02:05:00.000Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "올란도 미션수리·40km/h 이상 슬립과 울컥거림",
+      "seo_description": "부산 코리아오토미션의 올란도 미션수리·40km/h 이상 슬립과 울컥거림 실제 작업 기록. 134,000km를 운행한 올란도 디젤 차량입니다. 40km/h 이상, 4단 이상 구간에서 RPM이 심하게 올라가는 슬립과 울컥거림이 발생했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224176282621",
+      "url": "https://blog.naver.com/koreaautolife/224176282621",
+      "title": "카니발리무진 전륜8단 오토미션수리 / 엔진체크등 / 40키로 이상에서 심한 떨림",
+      "publishedAt": "2026-02-08T09:10:00.000Z",
+      "editorNote": "원문과 차량·부품 사진 확인 완료. 기존 홈페이지에 없는 사례이며, 원문에 없는 작업·결과·가격은 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTEw/MDAxNzcwNTM2NzU0NjQ0.KNf6ldduMRDDMyPDfTNxV2IFdDdgQNGMmDl_Pyt3Nowg.o3enS7W1wSbrDbgJq5pMglI6gEuydvHnNzEgHrGDGVMg.JPEG/SE-57b60ab9-dd8f-4a50-bac0-f160e4c0e847.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTEw/MDAxNzcwNTM2NzU0NjQ0.KNf6ldduMRDDMyPDfTNxV2IFdDdgQNGMmDl_Pyt3Nowg.o3enS7W1wSbrDbgJq5pMglI6gEuydvHnNzEgHrGDGVMg.JPEG/SE-57b60ab9-dd8f-4a50-bac0-f160e4c0e847.jpg?type=w966",
+          "localPath": "/blog-imports/224176282621/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDhfMjEy/MDAxNzcwNTM2MjY1NDk3.8Asr3qEZXPBGvB2XcU15OLP5hUgCFe5fa_PaDVPJU4Qg.1vc4iKO0uoQ-e9MBHkZfpHAY9b3e1JQ48G_F3Ee83fsg.JPEG/20260204_155104.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDhfMjEy/MDAxNzcwNTM2MjY1NDk3.8Asr3qEZXPBGvB2XcU15OLP5hUgCFe5fa_PaDVPJU4Qg.1vc4iKO0uoQ-e9MBHkZfpHAY9b3e1JQ48G_F3Ee83fsg.JPEG/20260204_155104.jpg?type=w966",
+          "localPath": "/blog-imports/224176282621/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTYz/MDAxNzcwNTM2Mjc0MjIx.2AVhAP4zAZx86KuCz8DpUbukZ0WSWs5fuTe14Z8uBjEg.tRB9VqDYZJgFZjZKOzUpcNMk38kZGOT6HmFekkoXIoAg.JPEG/20260204_164435.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTYz/MDAxNzcwNTM2Mjc0MjIx.2AVhAP4zAZx86KuCz8DpUbukZ0WSWs5fuTe14Z8uBjEg.tRB9VqDYZJgFZjZKOzUpcNMk38kZGOT6HmFekkoXIoAg.JPEG/20260204_164435.jpg?type=w966",
+          "localPath": "/blog-imports/224176282621/04.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDhfNjUg/MDAxNzcwNTM2Mjc5MjE5.RKucJDKtuwbITmCBf8Czv21ZjNnK1l4BSPuu_Puodbkg.4fMblrnI4dG_bXXh1u-PyANxNsHtxhl_wXOY9frumacg.JPEG/1770263274071.jpg",
+          "width": 4729,
+          "height": 3547,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDhfNjUg/MDAxNzcwNTM2Mjc5MjE5.RKucJDKtuwbITmCBf8Czv21ZjNnK1l4BSPuu_Puodbkg.4fMblrnI4dG_bXXh1u-PyANxNsHtxhl_wXOY9frumacg.JPEG/1770263274071.jpg?type=w966",
+          "localPath": "/blog-imports/224176282621/08.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTcw/MDAxNzcwNTM2MjcwNTYz.AMeXBR4qYXV0V-_hvNgJSLTd16SrCB_gKlLraJdcdeQg.mMUNY_bbjNbaFS0X7Ug082nDpaqd9ZpYcvAjAKC50Ikg.JPEG/20260207_095221.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTcw/MDAxNzcwNTM2MjcwNTYz.AMeXBR4qYXV0V-_hvNgJSLTd16SrCB_gKlLraJdcdeQg.mMUNY_bbjNbaFS0X7Ug082nDpaqd9ZpYcvAjAKC50Ikg.JPEG/20260207_095221.jpg?type=w966",
+          "localPath": "/blog-imports/224176282621/09.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTgw/MDAxNzcwNTM2Mjc2NDA5.3Zt5KkadXBV1-RcoS6h4qP8EYKppHrb2kUaDrYsEruYg.FU7hj42_0-LHFdz5CLvlL8BBLYeXvAnM4F3WUySxW3cg.JPEG/20260207_134514.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAyMDhfMTgw/MDAxNzcwNTM2Mjc2NDA5.3Zt5KkadXBV1-RcoS6h4qP8EYKppHrb2kUaDrYsEruYg.FU7hj42_0-LHFdz5CLvlL8BBLYeXvAnM4F3WUySxW3cg.JPEG/20260207_134514.jpg?type=w966",
+          "localPath": "/blog-imports/224176282621/10.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "7c8adf9b-1e50-477e-a484-746afb558c14",
+      "slug": "naver-224176282621",
+      "title": "카니발 리무진 8단 미션수리·고RPM 변속과 댐퍼클러치 슬립",
+      "subtitle": "187,000km를 운행한 카니발 리무진 전륜 8단 차량입니다. 엔진 경고등이 켜졌고 40km/h 이상에서 평소 2,000~2,200RPM 부근이던 변속 시점이 3,000RPM 이상으로 늦어졌습니다.",
+      "excerpt": "187,000km를 운행한 카니발 리무진 전륜 8단 차량입니다. 엔진 경고등이 켜졌고 40km/h 이상에서 평소 2,000~2,200RPM 부근이던 변속 시점이 3,000RPM 이상으로 늦어졌습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "카니발 리무진",
+      "model_year": "",
+      "mileage": "187,000km",
+      "fuel_type": "",
+      "transmission_type": "전륜 8단 자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "187,000km를 운행한 카니발 리무진 전륜 8단 차량입니다. 엔진 경고등이 켜졌고 40km/h 이상에서 평소 2,000~2,200RPM 부근이던 변속 시점이 3,000RPM 이상으로 늦어졌습니다.\n주행 점검과 진단기 확인에서 댐퍼클러치 관련 문제를 확인하고 미션 수리를 진행했습니다.",
+      "diagnosis": "차량에서 미션을 탈거해 작업대에서 완전히 분해했습니다. 오일의 오염 정도만 보지 않고 각 클러치 피스톤과 디스크, 피스톤 씰의 상태를 확인했습니다.",
+      "cause": "",
+      "repair_process": "클러치 디스크와 씰 등 소모성 부품을 교체하고 밸브바디 작업을 진행했습니다. 댐퍼클러치 및 관련 솔레노이드를 신품으로 교체했습니다.\n수리를 마친 미션에는 신품 토크컨버터를 결합해 차량에 장착했습니다.",
+      "replaced_parts": "토크컨버터, 관련 솔레노이드, 클러치 디스크와 피스톤 씰",
+      "work_summary": "전용 오일을 정량 주입하고 진단기 세팅 후 시운전했습니다. 고RPM으로 올라가며 떨리던 현상과 경고등 증상이 나타나지 않았고, 변속과 가속을 확인한 뒤 출고했습니다.",
+      "detailed_content": "엔진 경고등과 달라진 변속 시점\n187,000km를 운행한 카니발 리무진 전륜 8단 차량입니다. 엔진 경고등이 켜졌고 40km/h 이상에서 평소 2,000~2,200RPM 부근이던 변속 시점이 3,000RPM 이상으로 늦어졌습니다.\n주행 점검과 진단기 확인에서 댐퍼클러치 관련 문제를 확인하고 미션 수리를 진행했습니다.\n\n8단 미션 분해와 클러치 점검\n차량에서 미션을 탈거해 작업대에서 완전히 분해했습니다. 오일의 오염 정도만 보지 않고 각 클러치 피스톤과 디스크, 피스톤 씰의 상태를 확인했습니다.\n\n솔레노이드와 토크컨버터 교체\n클러치 디스크와 씰 등 소모성 부품을 교체하고 밸브바디 작업을 진행했습니다. 댐퍼클러치 및 관련 솔레노이드를 신품으로 교체했습니다.\n수리를 마친 미션에는 신품 토크컨버터를 결합해 차량에 장착했습니다.\n\n오일 주입·세팅 후 주행 확인\n전용 오일을 정량 주입하고 진단기 세팅 후 시운전했습니다. 고RPM으로 올라가며 떨리던 현상과 경고등 증상이 나타나지 않았고, 변속과 가속을 확인한 뒤 출고했습니다.",
+      "content_html": "<h2>엔진 경고등과 달라진 변속 시점</h2><p>187,000km를 운행한 카니발 리무진 전륜 8단 차량입니다. 엔진 경고등이 켜졌고 40km/h 이상에서 평소 2,000~2,200RPM 부근이던 변속 시점이 3,000RPM 이상으로 늦어졌습니다.</p><p>주행 점검과 진단기 확인에서 댐퍼클러치 관련 문제를 확인하고 미션 수리를 진행했습니다.</p><h2>8단 미션 분해와 클러치 점검</h2><p>차량에서 미션을 탈거해 작업대에서 완전히 분해했습니다. 오일의 오염 정도만 보지 않고 각 클러치 피스톤과 디스크, 피스톤 씰의 상태를 확인했습니다.</p><figure><img src=\"/blog-imports/224176282621/03.jpg\" alt=\"차량에서 탈거한 카니발 전륜 8단 미션\" loading=\"lazy\" /><figcaption>차량에서 탈거한 카니발 전륜 8단 미션</figcaption></figure><figure><img src=\"/blog-imports/224176282621/04.jpg\" alt=\"분해한 내부 부품과 클러치 점검 과정\" loading=\"lazy\" /><figcaption>분해한 내부 부품과 클러치 점검 과정</figcaption></figure><h2>솔레노이드와 토크컨버터 교체</h2><p>클러치 디스크와 씰 등 소모성 부품을 교체하고 밸브바디 작업을 진행했습니다. 댐퍼클러치 및 관련 솔레노이드를 신품으로 교체했습니다.</p><p>수리를 마친 미션에는 신품 토크컨버터를 결합해 차량에 장착했습니다.</p><figure><img src=\"/blog-imports/224176282621/08.jpg\" alt=\"밸브바디와 솔레노이드 작업\" loading=\"lazy\" /><figcaption>밸브바디와 솔레노이드 작업</figcaption></figure><figure><img src=\"/blog-imports/224176282621/09.jpg\" alt=\"수리한 미션과 장착 준비 중인 토크컨버터\" loading=\"lazy\" /><figcaption>수리한 미션과 장착 준비 중인 토크컨버터</figcaption></figure><h2>오일 주입·세팅 후 주행 확인</h2><p>전용 오일을 정량 주입하고 진단기 세팅 후 시운전했습니다. 고RPM으로 올라가며 떨리던 현상과 경고등 증상이 나타나지 않았고, 변속과 가속을 확인한 뒤 출고했습니다.</p><figure><img src=\"/blog-imports/224176282621/10.jpg\" alt=\"미션 장착 후 차량 하부 마무리 상태\" loading=\"lazy\" /><figcaption>미션 장착 후 차량 하부 마무리 상태</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224176282621\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224176282621/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "카니발 리무진"
+      ],
+      "symptom_tags": [
+        "고RPM 변속",
+        "댐퍼클러치 슬립",
+        "떨림",
+        "엔진 경고등"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224176282621",
+      "created_at": "2026-02-08T09:10:00.000Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "카니발 리무진 8단 미션수리·고RPM 변속과 댐퍼클러치 슬립",
+      "seo_description": "부산 코리아오토미션의 카니발 리무진 8단 미션수리·고RPM 변속과 댐퍼클러치 슬립 실제 작업 기록. 187,000km를 운행한 카니발 리무진 전륜 8단 차량입니다. 엔진 경고등이 켜졌고 40km/h 이상에서 평소 2,000~2,200RPM 부근이던 변속 시점이 3,000RPM 이상으로 ",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224225807261",
+      "url": "https://blog.naver.com/koreaautolife/224225807261",
+      "title": "카니발 DPF클리닝 / 예방정비와 출력저하로...",
+      "publishedAt": "2026-03-22T12:50:00.000Z",
+      "editorNote": "원문과 차량·부품 사진 확인 완료. 기존 홈페이지에 없는 사례이며, 원문에 없는 작업·결과·가격은 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjJfMTQw/MDAxNzc0MTgwMDM2NzA4.Fykj8oV0GHQYgO_CVFyatKfZroDrBR5eR5udfv53h6Ug.3Fj2vQdWnKjCxtr9sZXiWPAYYRJWKZfgHUq2WpgAz1wg.JPEG/SE-8114bd32-35be-4b4e-8033-b31f2878da8c.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjJfMTQw/MDAxNzc0MTgwMDM2NzA4.Fykj8oV0GHQYgO_CVFyatKfZroDrBR5eR5udfv53h6Ug.3Fj2vQdWnKjCxtr9sZXiWPAYYRJWKZfgHUq2WpgAz1wg.JPEG/SE-8114bd32-35be-4b4e-8033-b31f2878da8c.jpg?type=w966",
+          "localPath": "/blog-imports/224225807261/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjJfMjIy/MDAxNzc0MTc5OTM3MTYx.4oLpkyB7_4068vnXzImeHEmhwqHlWYwPzbV5_-gXan0g._0ZBkb5PyO38s84MC_mHKNi6upBigGTTbF7vpiSWOwog.JPEG/20260223_150612.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjJfMjIy/MDAxNzc0MTc5OTM3MTYx.4oLpkyB7_4068vnXzImeHEmhwqHlWYwPzbV5_-gXan0g._0ZBkb5PyO38s84MC_mHKNi6upBigGTTbF7vpiSWOwog.JPEG/20260223_150612.jpg?type=w966",
+          "localPath": "/blog-imports/224225807261/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjJfMTA1/MDAxNzc0MTc5OTM3MTU3.0pwlN2-3QbIuRwOT3YqjPFC13m2A4L5I94bSGIIAkR8g.q2Ny2czR5OVGBBVVnAgAPvce6v7SP4yMxU2_kdEEClog.JPEG/20260224_113557.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjJfMTA1/MDAxNzc0MTc5OTM3MTU3.0pwlN2-3QbIuRwOT3YqjPFC13m2A4L5I94bSGIIAkR8g.q2Ny2czR5OVGBBVVnAgAPvce6v7SP4yMxU2_kdEEClog.JPEG/20260224_113557.jpg?type=w966",
+          "localPath": "/blog-imports/224225807261/06.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjJfNjgg/MDAxNzc0MTc5OTM4MzQ1.7SP_5fX6lDGa6ECwmCPH0uFILArR-PX6yCa6TRJ-OsMg.bClPctDDDvIj7m1HOQ0eUSqgG9mJrRClW_Sm0qkAGGEg.JPEG/20260224_113606.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjJfNjgg/MDAxNzc0MTc5OTM4MzQ1.7SP_5fX6lDGa6ECwmCPH0uFILArR-PX6yCa6TRJ-OsMg.bClPctDDDvIj7m1HOQ0eUSqgG9mJrRClW_Sm0qkAGGEg.JPEG/20260224_113606.jpg?type=w966",
+          "localPath": "/blog-imports/224225807261/07.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMjJfMTQy/MDAxNzc0MTc5OTM3OTgy.qOrEIyVRiTMHM2Ho6uKbyfhvhe30bDZTkkgHXMDbOeEg.AY-Q1IeBk_9R0pWj8-UwWOL8tqce_0cEniiQaKUpDxsg.JPEG/20260224_154057.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMjJfMTQy/MDAxNzc0MTc5OTM3OTgy.qOrEIyVRiTMHM2Ho6uKbyfhvhe30bDZTkkgHXMDbOeEg.AY-Q1IeBk_9R0pWj8-UwWOL8tqce_0cEniiQaKUpDxsg.JPEG/20260224_154057.jpg?type=w966",
+          "localPath": "/blog-imports/224225807261/08.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "e00d51a7-ef39-4941-80ab-a22e06a6079d",
+      "slug": "naver-224225807261",
+      "title": "카니발 DPF 탈거 클리닝·출력 부족과 연결 볼트 정비",
+      "subtitle": "220,000km를 운행한 카니발 디젤 차량입니다. 심한 이상 증상보다는 출력 부족과 예방정비를 목적으로 DPF클리닝을 진행했습니다.",
+      "excerpt": "220,000km를 운행한 카니발 디젤 차량입니다. 심한 이상 증상보다는 출력 부족과 예방정비를 목적으로 DPF클리닝을 진행했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "카니발",
+      "model_year": "",
+      "mileage": "220,000km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "8b322363-aca4-4eea-b4b4-581643ab0884",
+      "service_category": "DPF 클리닝",
+      "symptoms": "220,000km를 운행한 카니발 디젤 차량입니다. 심한 이상 증상보다는 출력 부족과 예방정비를 목적으로 DPF클리닝을 진행했습니다.\nDPF를 탈거해 내부를 세척하고, 탈거 과정에서 확인한 연결 부위도 함께 정비했습니다.",
+      "diagnosis": "DPF를 분리하는 과정에서 터보차저와 연결되는 볼트의 나사산 손상이 확인됐습니다. 세 개 중 두 개가 파손되어 접근 공간을 확보하기 위해 터보차저도 탈거했습니다.\n손상된 볼트를 제거하고 탭으로 나사산을 정리했습니다. 터보차저 자체를 신품으로 교체한 작업은 아닙니다.",
+      "cause": "",
+      "repair_process": "탈거한 DPF를 장비에 연결해 세정액을 순환시키며 내부 카본과 슬러지를 불렸습니다. 이어 고압으로 찌꺼기를 배출하는 순서로 클리닝했습니다.",
+      "replaced_parts": "DPF 연결 볼트 정비",
+      "work_summary": "클리닝을 마친 DPF를 재장착하고 시동을 걸어 충분히 건조한 뒤 출고했습니다.",
+      "detailed_content": "22만km 카니발의 출력 부족으로 입고\n220,000km를 운행한 카니발 디젤 차량입니다. 심한 이상 증상보다는 출력 부족과 예방정비를 목적으로 DPF클리닝을 진행했습니다.\nDPF를 탈거해 내부를 세척하고, 탈거 과정에서 확인한 연결 부위도 함께 정비했습니다.\n\nDPF 탈거 중 연결 볼트 손상 확인\nDPF를 분리하는 과정에서 터보차저와 연결되는 볼트의 나사산 손상이 확인됐습니다. 세 개 중 두 개가 파손되어 접근 공간을 확보하기 위해 터보차저도 탈거했습니다.\n손상된 볼트를 제거하고 탭으로 나사산을 정리했습니다. 터보차저 자체를 신품으로 교체한 작업은 아닙니다.\n\n세정액 순환과 고압 배출 작업\n탈거한 DPF를 장비에 연결해 세정액을 순환시키며 내부 카본과 슬러지를 불렸습니다. 이어 고압으로 찌꺼기를 배출하는 순서로 클리닝했습니다.\n\n재장착과 건조 후 출고\n클리닝을 마친 DPF를 재장착하고 시동을 걸어 충분히 건조한 뒤 출고했습니다.",
+      "content_html": "<h2>22만km 카니발의 출력 부족으로 입고</h2><p>220,000km를 운행한 카니발 디젤 차량입니다. 심한 이상 증상보다는 출력 부족과 예방정비를 목적으로 DPF클리닝을 진행했습니다.</p><p>DPF를 탈거해 내부를 세척하고, 탈거 과정에서 확인한 연결 부위도 함께 정비했습니다.</p><h2>DPF 탈거 중 연결 볼트 손상 확인</h2><p>DPF를 분리하는 과정에서 터보차저와 연결되는 볼트의 나사산 손상이 확인됐습니다. 세 개 중 두 개가 파손되어 접근 공간을 확보하기 위해 터보차저도 탈거했습니다.</p><p>손상된 볼트를 제거하고 탭으로 나사산을 정리했습니다. 터보차저 자체를 신품으로 교체한 작업은 아닙니다.</p><figure><img src=\"/blog-imports/224225807261/03.jpg\" alt=\"차량에서 분리한 카니발 DPF 장치\" loading=\"lazy\" /><figcaption>차량에서 분리한 카니발 DPF 장치</figcaption></figure><figure><img src=\"/blog-imports/224225807261/06.jpg\" alt=\"연결 부위 정비를 위해 터보차저를 탈거한 작업 공간\" loading=\"lazy\" /><figcaption>연결 부위 정비를 위해 터보차저를 탈거한 작업 공간</figcaption></figure><figure><img src=\"/blog-imports/224225807261/07.jpg\" alt=\"DPF와 터보차저가 연결되는 볼트 부위\" loading=\"lazy\" /><figcaption>DPF와 터보차저가 연결되는 볼트 부위</figcaption></figure><h2>세정액 순환과 고압 배출 작업</h2><p>탈거한 DPF를 장비에 연결해 세정액을 순환시키며 내부 카본과 슬러지를 불렸습니다. 이어 고압으로 찌꺼기를 배출하는 순서로 클리닝했습니다.</p><figure><img src=\"/blog-imports/224225807261/08.jpg\" alt=\"장비에 연결해 세정액을 순환시키는 DPF\" loading=\"lazy\" /><figcaption>장비에 연결해 세정액을 순환시키는 DPF</figcaption></figure><h2>재장착과 건조 후 출고</h2><p>클리닝을 마친 DPF를 재장착하고 시동을 걸어 충분히 건조한 뒤 출고했습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224225807261\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224225807261/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "카니발"
+      ],
+      "symptom_tags": [
+        "출력 부족",
+        "DPF 탈거 세척",
+        "연결 볼트 파손"
+      ],
+      "general_tags": [
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224225807261",
+      "created_at": "2026-03-22T12:50:00.000Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "카니발 DPF 탈거 클리닝·출력 부족과 연결 볼트 정비",
+      "seo_description": "부산 코리아오토미션의 카니발 DPF 탈거 클리닝·출력 부족과 연결 볼트 정비 실제 작업 기록. 220,000km를 운행한 카니발 디젤 차량입니다. 심한 이상 증상보다는 출력 부족과 예방정비를 목적으로 DPF클리닝을 진행했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224211861676",
+      "url": "https://blog.naver.com/koreaautolife/224211861676",
+      "title": "스포티지 DPF파손으로 교체와 흡기클리닝과 인젝터클리닝을 정비 하였습니다.",
+      "publishedAt": "2026-03-10T14:01:00.000Z",
+      "editorNote": "원문과 차량·부품 사진 확인 완료. 기존 홈페이지에 없는 사례이며, 원문에 없는 작업·결과·가격은 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfODAg/MDAxNzczMTQ3MDA4NTU5.WlFxIt1UiDINMeWldTeVBkI95nHZ_rxtA6teaxa0yiwg.mfUDibMdRAeXFHE2mETcr-S0I_OcSyk-AjMQnz-BQYgg.JPEG/SE-49f5c0ea-6e7a-4abb-8c10-3e4f410264e1.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfODAg/MDAxNzczMTQ3MDA4NTU5.WlFxIt1UiDINMeWldTeVBkI95nHZ_rxtA6teaxa0yiwg.mfUDibMdRAeXFHE2mETcr-S0I_OcSyk-AjMQnz-BQYgg.JPEG/SE-49f5c0ea-6e7a-4abb-8c10-3e4f410264e1.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfMTY2/MDAxNzczMTQ2NDA5NzIx.tUJbRk-y43NbAusyb0njHWA2QksROjcvrnYjCM1QJKIg.6toHPle9Bi64PxF56odgpJ3cCmvzgVhHdzTqO_ieWJ0g.JPEG/1772756598435.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfMTY2/MDAxNzczMTQ2NDA5NzIx.tUJbRk-y43NbAusyb0njHWA2QksROjcvrnYjCM1QJKIg.6toHPle9Bi64PxF56odgpJ3cCmvzgVhHdzTqO_ieWJ0g.JPEG/1772756598435.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfMjU0/MDAxNzczMTQ2NDA5NzY0.2tG_uLtvfs7YzrB4lRA1dZR6d7HhCaO6N22VSHVnDsEg.y2aBVq3GTO5NGnANnEitOTYI2ip8z0YYoeUxae4LF70g.JPEG/1772756598537.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfMjU0/MDAxNzczMTQ2NDA5NzY0.2tG_uLtvfs7YzrB4lRA1dZR6d7HhCaO6N22VSHVnDsEg.y2aBVq3GTO5NGnANnEitOTYI2ip8z0YYoeUxae4LF70g.JPEG/1772756598537.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/04.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfNCAg/MDAxNzczMTQ2NDA2Nzkw.OueXTOdn03jOiguhQzAr2FXdvPclEqqgk90pd6o48BQg._x5gDwn7sz38ptoHTkSUxkGRB0wnlqdFnShLWaHlpgsg.JPEG/1772756599427.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfNCAg/MDAxNzczMTQ2NDA2Nzkw.OueXTOdn03jOiguhQzAr2FXdvPclEqqgk90pd6o48BQg._x5gDwn7sz38ptoHTkSUxkGRB0wnlqdFnShLWaHlpgsg.JPEG/1772756599427.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/10.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfOTUg/MDAxNzczMTQ2NDA3MDAz.HcWj3aFBWId_C2FibzBP7Yj4-i3qkOe57XaszR6LfBUg.5t4mXpMiNFj8nF2TU8hpk_bWiNsZChPHLaJCyFMN_3Mg.JPEG/1772756599636.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfOTUg/MDAxNzczMTQ2NDA3MDAz.HcWj3aFBWId_C2FibzBP7Yj4-i3qkOe57XaszR6LfBUg.5t4mXpMiNFj8nF2TU8hpk_bWiNsZChPHLaJCyFMN_3Mg.JPEG/1772756599636.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/12.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfMjkg/MDAxNzczMTQ2NDA5MTUy.KtzSPDfda0dQI7ottlVEUN_pPa_csiUAU6GK-Hbpy5Ag.Rceo2nFX8n8ntB1Y-B71beUKOEMXOt7LVZUHQloeQNsg.JPEG/1772756600059.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfMjkg/MDAxNzczMTQ2NDA5MTUy.KtzSPDfda0dQI7ottlVEUN_pPa_csiUAU6GK-Hbpy5Ag.Rceo2nFX8n8ntB1Y-B71beUKOEMXOt7LVZUHQloeQNsg.JPEG/1772756600059.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/16.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMTBfMTUz/MDAxNzczMTQ2NDA5Njc2.dMRzay4KxbMsoikfQjix6OKq1k9ufqtCUW9WrTznOU8g.Dk2Z3SYG4TzttL8xXxeOn3LguLlaq_4vUg-DZGRJ9_kg.JPEG/1772756600146.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMTBfMTUz/MDAxNzczMTQ2NDA5Njc2.dMRzay4KxbMsoikfQjix6OKq1k9ufqtCUW9WrTznOU8g.Dk2Z3SYG4TzttL8xXxeOn3LguLlaq_4vUg-DZGRJ9_kg.JPEG/1772756600146.jpg?type=w966",
+          "localPath": "/blog-imports/224211861676/17.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "b64b0d37-091e-4c56-9361-0777623f0944",
+      "slug": "naver-224211861676",
+      "title": "스포티지 DPF 경고등·DPF 교체와 흡기·인젝터 클리닝",
+      "subtitle": "132,000km를 운행한 올뉴 스포티지 디젤 차량입니다. DPF 경고등이 발생해 클리닝을 위해 입고했으며, 진단기에서 DPF 관련 고장코드를 확인했습니다.",
+      "excerpt": "132,000km를 운행한 올뉴 스포티지 디젤 차량입니다. DPF 경고등이 발생해 클리닝을 위해 입고했으며, 진단기에서 DPF 관련 고장코드를 확인했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "올뉴 스포티지",
+      "model_year": "",
+      "mileage": "132,000km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "132,000km를 운행한 올뉴 스포티지 디젤 차량입니다. DPF 경고등이 발생해 클리닝을 위해 입고했으며, 진단기에서 DPF 관련 고장코드를 확인했습니다.\n탈거 전에는 내부 상태를 단정하지 않고 DPF를 분리해 확인했습니다.",
+      "diagnosis": "배기장치를 분리하자 DPF 내부에서 파손된 조각이 떨어졌습니다. 벌집 형태의 내부 구조가 심하게 손상되어 이 차량은 DPF클리닝으로 마무리하지 않고 신품 DPF로 교체했습니다.\n내부 구조가 파손된 상태라 세척 작업 대신 교체가 필요한 사례였습니다.",
+      "cause": "",
+      "repair_process": "스로틀바디와 EGR 파이프, 흡기매니폴드에 쌓인 카본과 슬러지를 세척했습니다. 인젝터도 클리닝하고 인젝터 홀과 주변 오염을 함께 정리했습니다.",
+      "replaced_parts": "DPF 신품",
+      "work_summary": "신품 DPF와 정비한 부품을 장착하고 시동 후 마무리 점검을 거쳐 출고했습니다. 같은 경고등이라도 내부 파손 여부에 따라 클리닝과 교체의 작업 범위가 달라질 수 있습니다.",
+      "detailed_content": "DPF 경고등으로 입고한 스포티지\n132,000km를 운행한 올뉴 스포티지 디젤 차량입니다. DPF 경고등이 발생해 클리닝을 위해 입고했으며, 진단기에서 DPF 관련 고장코드를 확인했습니다.\n탈거 전에는 내부 상태를 단정하지 않고 DPF를 분리해 확인했습니다.\n\n클리닝 대신 DPF 교체로 진행\n배기장치를 분리하자 DPF 내부에서 파손된 조각이 떨어졌습니다. 벌집 형태의 내부 구조가 심하게 손상되어 이 차량은 DPF클리닝으로 마무리하지 않고 신품 DPF로 교체했습니다.\n내부 구조가 파손된 상태라 세척 작업 대신 교체가 필요한 사례였습니다.\n\n흡기 계통과 인젝터 클리닝\n스로틀바디와 EGR 파이프, 흡기매니폴드에 쌓인 카본과 슬러지를 세척했습니다. 인젝터도 클리닝하고 인젝터 홀과 주변 오염을 함께 정리했습니다.\n\n부품 재장착과 마무리 점검\n신품 DPF와 정비한 부품을 장착하고 시동 후 마무리 점검을 거쳐 출고했습니다. 같은 경고등이라도 내부 파손 여부에 따라 클리닝과 교체의 작업 범위가 달라질 수 있습니다.",
+      "content_html": "<h2>DPF 경고등으로 입고한 스포티지</h2><p>132,000km를 운행한 올뉴 스포티지 디젤 차량입니다. DPF 경고등이 발생해 클리닝을 위해 입고했으며, 진단기에서 DPF 관련 고장코드를 확인했습니다.</p><p>탈거 전에는 내부 상태를 단정하지 않고 DPF를 분리해 확인했습니다.</p><h2>클리닝 대신 DPF 교체로 진행</h2><p>배기장치를 분리하자 DPF 내부에서 파손된 조각이 떨어졌습니다. 벌집 형태의 내부 구조가 심하게 손상되어 이 차량은 DPF클리닝으로 마무리하지 않고 신품 DPF로 교체했습니다.</p><p>내부 구조가 파손된 상태라 세척 작업 대신 교체가 필요한 사례였습니다.</p><figure><img src=\"/blog-imports/224211861676/03.jpg\" alt=\"탈거 과정에서 확인한 DPF 내부 파손\" loading=\"lazy\" /><figcaption>탈거 과정에서 확인한 DPF 내부 파손</figcaption></figure><figure><img src=\"/blog-imports/224211861676/04.jpg\" alt=\"파손 조각을 제거한 뒤 확인한 내부 상태\" loading=\"lazy\" /><figcaption>파손 조각을 제거한 뒤 확인한 내부 상태</figcaption></figure><h2>흡기 계통과 인젝터 클리닝</h2><p>스로틀바디와 EGR 파이프, 흡기매니폴드에 쌓인 카본과 슬러지를 세척했습니다. 인젝터도 클리닝하고 인젝터 홀과 주변 오염을 함께 정리했습니다.</p><figure><img src=\"/blog-imports/224211861676/10.jpg\" alt=\"세척한 스로틀바디\" loading=\"lazy\" /><figcaption>세척한 스로틀바디</figcaption></figure><figure><img src=\"/blog-imports/224211861676/12.jpg\" alt=\"세척을 마친 흡기매니폴드\" loading=\"lazy\" /><figcaption>세척을 마친 흡기매니폴드</figcaption></figure><figure><img src=\"/blog-imports/224211861676/16.jpg\" alt=\"클리닝한 인젝터\" loading=\"lazy\" /><figcaption>클리닝한 인젝터</figcaption></figure><figure><img src=\"/blog-imports/224211861676/17.jpg\" alt=\"정리한 인젝터 홀과 주변부\" loading=\"lazy\" /><figcaption>정리한 인젝터 홀과 주변부</figcaption></figure><h2>부품 재장착과 마무리 점검</h2><p>신품 DPF와 정비한 부품을 장착하고 시동 후 마무리 점검을 거쳐 출고했습니다. 같은 경고등이라도 내부 파손 여부에 따라 클리닝과 교체의 작업 범위가 달라질 수 있습니다.</p><p><a href=\"https://blog.naver.com/koreaautolife/224211861676\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224211861676/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "올뉴 스포티지"
+      ],
+      "symptom_tags": [
+        "DPF 경고등",
+        "DPF 파손",
+        "흡기 카본",
+        "인젝터 클리닝"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224211861676",
+      "created_at": "2026-03-10T14:01:00.000Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "스포티지 DPF 경고등·DPF 교체와 흡기·인젝터 클리닝",
+      "seo_description": "부산 코리아오토미션의 스포티지 DPF 경고등·DPF 교체와 흡기·인젝터 클리닝 실제 작업 기록. 132,000km를 운행한 올뉴 스포티지 디젤 차량입니다. DPF 경고등이 발생해 클리닝을 위해 입고했으며, 진단기에서 DPF 관련 고장코드를 확인했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224209066514",
+      "url": "https://blog.naver.com/koreaautolife/224209066514",
+      "title": "BMW520d 디젤 흡기클리닝 작업과 함께 로커암커버교환을 해보았습니다.",
+      "publishedAt": "2026-03-08T11:11:00.000Z",
+      "editorNote": "원문과 차량·부품 사진 확인 완료. 기존 홈페이지에 없는 사례이며, 원문에 없는 작업·결과·가격은 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMDRfMjkx/MDAxNzcyNjA1MTE3NDYz.9U_qVaUhwUEA6tUgRJrWBgHgZ1kmFY9ejF6f_8uf1VEg.cy9Q6Fw55D8lMg0zYsQLr-Qpeopi3jgwE0tKn44P1m8g.JPEG/SE-23c5b7eb-2eb0-4f57-bb3a-3b21bdb6b199.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMDRfMjkx/MDAxNzcyNjA1MTE3NDYz.9U_qVaUhwUEA6tUgRJrWBgHgZ1kmFY9ejF6f_8uf1VEg.cy9Q6Fw55D8lMg0zYsQLr-Qpeopi3jgwE0tKn44P1m8g.JPEG/SE-23c5b7eb-2eb0-4f57-bb3a-3b21bdb6b199.jpg?type=w966",
+          "localPath": "/blog-imports/224209066514/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTA2/MDAxNzcyNjA1MDIyNDIx.2ePTyE4FKZv4WwsGefLjqqTksxwrwq0mY158lsmA9Q0g.qkTqwvmmPE1pMY2LtmH17PfLXBU0zyHlgy3stPpwmB8g.JPEG/20241203_144221.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTA2/MDAxNzcyNjA1MDIyNDIx.2ePTyE4FKZv4WwsGefLjqqTksxwrwq0mY158lsmA9Q0g.qkTqwvmmPE1pMY2LtmH17PfLXBU0zyHlgy3stPpwmB8g.JPEG/20241203_144221.jpg?type=w966",
+          "localPath": "/blog-imports/224209066514/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTY4/MDAxNzcyNjA1MDIzNDc2.gtD4JQV9pP4sMbh6Bc471R43gnzrgph8NcPQ6tYB3I8g.xdGawbR2QV3B_XUxjEat5p2qNB8RMjT-q5Diy42v9u8g.JPEG/20241203_155439.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTY4/MDAxNzcyNjA1MDIzNDc2.gtD4JQV9pP4sMbh6Bc471R43gnzrgph8NcPQ6tYB3I8g.xdGawbR2QV3B_XUxjEat5p2qNB8RMjT-q5Diy42v9u8g.JPEG/20241203_155439.jpg?type=w966",
+          "localPath": "/blog-imports/224209066514/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTE4/MDAxNzcyNjA1MDIzODMx.BuixeytqLwoazvsCM4v8HRKboKEqRJGuU047wPuq34Ig.9qpFY2hZbdyskF2wTbT4_hxXF3qtodRVMLDZfXONR8cg.JPEG/20241203_155445.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTE4/MDAxNzcyNjA1MDIzODMx.BuixeytqLwoazvsCM4v8HRKboKEqRJGuU047wPuq34Ig.9qpFY2hZbdyskF2wTbT4_hxXF3qtodRVMLDZfXONR8cg.JPEG/20241203_155445.jpg?type=w966",
+          "localPath": "/blog-imports/224209066514/06.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTY0/MDAxNzcyNjA1MTE0NTk5.qIerL1odSaa9JkNSieKPqj4N83EPc4cJu83ehY_BftQg.9Y2b_Kcs4hPERMj_JE1Ub-Ijpy0R7lurVKeFlwE1K8kg.JPEG/SE-ff4cea91-1768-4cb6-a076-38b166461c4a.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjAzMDRfMTY0/MDAxNzcyNjA1MTE0NTk5.qIerL1odSaa9JkNSieKPqj4N83EPc4cJu83ehY_BftQg.9Y2b_Kcs4hPERMj_JE1Ub-Ijpy0R7lurVKeFlwE1K8kg.JPEG/SE-ff4cea91-1768-4cb6-a076-38b166461c4a.jpg?type=w966",
+          "localPath": "/blog-imports/224209066514/09.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "241033f4-ea62-456b-8ad3-01bb9d580355",
+      "slug": "naver-224209066514",
+      "title": "BMW 520d 흡기·인젝터 클리닝과 엔진오일 누유 정비",
+      "subtitle": "20만km 이상을 운행한 BMW 520d 차량입니다. 흡기·인젝터 클리닝과 함께 엔진오일 누유가 있는 로커암커버를 교체했습니다.",
+      "excerpt": "20만km 이상을 운행한 BMW 520d 차량입니다. 흡기·인젝터 클리닝과 함께 엔진오일 누유가 있는 로커암커버를 교체했습니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "520d",
+      "model_year": "",
+      "mileage": "200,000km 이상",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "20만km 이상을 운행한 BMW 520d 차량입니다. 흡기·인젝터 클리닝과 함께 엔진오일 누유가 있는 로커암커버를 교체했습니다.\n이 사례의 DPF 관련 작업은 고정 클램프 교환입니다. 흡기·인젝터 세척과 구분해 DPF 연결 부위의 누설을 조치했습니다.",
+      "diagnosis": "인젝터를 분리하는 과정에서 누유가 있는 로커암커버를 함께 교체했습니다. 커버 테두리 씰링이 경화되고 연결 부위에서 오일이 새는 상태를 정비했습니다.",
+      "cause": "",
+      "repair_process": "흡기매니폴드를 탈거해 전용 세척 장비로 작업했습니다. 세척 중 내부 찌꺼기를 빼내고 건조한 다음 재장착했습니다.\n아래 사진은 세척을 마친 흡기매니폴드와 내부 모습입니다.",
+      "replaced_parts": "로커암커버, DPF 고정 클램프",
+      "work_summary": "누설이 있던 DPF 고정 클램프를 신품으로 교체했습니다. 흡기·인젝터 클리닝과 커버·클램프 교환을 마친 뒤 마무리 점검 후 출고했습니다.",
+      "detailed_content": "흡기 관리와 엔진오일 누유를 함께 점검\n20만km 이상을 운행한 BMW 520d 차량입니다. 흡기·인젝터 클리닝과 함께 엔진오일 누유가 있는 로커암커버를 교체했습니다.\n이 사례의 DPF 관련 작업은 고정 클램프 교환입니다. 흡기·인젝터 세척과 구분해 DPF 연결 부위의 누설을 조치했습니다.\n\n인젝터 분리와 로커암커버 교체\n인젝터를 분리하는 과정에서 누유가 있는 로커암커버를 함께 교체했습니다. 커버 테두리 씰링이 경화되고 연결 부위에서 오일이 새는 상태를 정비했습니다.\n\n흡기매니폴드 세척과 건조\n흡기매니폴드를 탈거해 전용 세척 장비로 작업했습니다. 세척 중 내부 찌꺼기를 빼내고 건조한 다음 재장착했습니다.\n아래 사진은 세척을 마친 흡기매니폴드와 내부 모습입니다.\n\nDPF 고정 클램프 교체와 최종 점검\n누설이 있던 DPF 고정 클램프를 신품으로 교체했습니다. 흡기·인젝터 클리닝과 커버·클램프 교환을 마친 뒤 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>흡기 관리와 엔진오일 누유를 함께 점검</h2><p>20만km 이상을 운행한 BMW 520d 차량입니다. 흡기·인젝터 클리닝과 함께 엔진오일 누유가 있는 로커암커버를 교체했습니다.</p><p>이 사례의 DPF 관련 작업은 고정 클램프 교환입니다. 흡기·인젝터 세척과 구분해 DPF 연결 부위의 누설을 조치했습니다.</p><h2>인젝터 분리와 로커암커버 교체</h2><p>인젝터를 분리하는 과정에서 누유가 있는 로커암커버를 함께 교체했습니다. 커버 테두리 씰링이 경화되고 연결 부위에서 오일이 새는 상태를 정비했습니다.</p><figure><img src=\"/blog-imports/224209066514/03.jpg\" alt=\"로커암커버와 인젝터 작업을 진행하는 엔진 상부\" loading=\"lazy\" /><figcaption>로커암커버와 인젝터 작업을 진행하는 엔진 상부</figcaption></figure><h2>흡기매니폴드 세척과 건조</h2><p>흡기매니폴드를 탈거해 전용 세척 장비로 작업했습니다. 세척 중 내부 찌꺼기를 빼내고 건조한 다음 재장착했습니다.</p><p>아래 사진은 세척을 마친 흡기매니폴드와 내부 모습입니다.</p><figure><img src=\"/blog-imports/224209066514/05.jpg\" alt=\"세척을 완료한 BMW 520d 흡기매니폴드\" loading=\"lazy\" /><figcaption>세척을 완료한 BMW 520d 흡기매니폴드</figcaption></figure><figure><img src=\"/blog-imports/224209066514/06.jpg\" alt=\"세척 후 확인한 흡기매니폴드 내부\" loading=\"lazy\" /><figcaption>세척 후 확인한 흡기매니폴드 내부</figcaption></figure><h2>DPF 고정 클램프 교체와 최종 점검</h2><p>누설이 있던 DPF 고정 클램프를 신품으로 교체했습니다. 흡기·인젝터 클리닝과 커버·클램프 교환을 마친 뒤 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224209066514/09.jpg\" alt=\"교환 작업에 사용한 DPF 고정 클램프 사진\" loading=\"lazy\" /><figcaption>교환 작업에 사용한 DPF 고정 클램프 사진</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224209066514\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224209066514/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "520d"
+      ],
+      "symptom_tags": [
+        "엔진오일 누유",
+        "흡기매니폴드 세척",
+        "로커암커버 교체",
+        "인젝터 클리닝"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "인젝터 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224209066514",
+      "created_at": "2026-03-08T11:11:00.000Z",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "BMW 520d 흡기·인젝터 클리닝과 엔진오일 누유 정비",
+      "seo_description": "부산 코리아오토미션의 BMW 520d 흡기·인젝터 클리닝과 엔진오일 누유 정비 실제 작업 기록. 20만km 이상을 운행한 BMW 520d 차량입니다. 흡기·인젝터 클리닝과 함께 엔진오일 누유가 있는 로커암커버를 교체했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
   }
 ]

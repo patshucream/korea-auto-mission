@@ -19,15 +19,15 @@ vm.runInNewContext(code,{exports:moduleObject.exports,module:moduleObject,proces
 }});
 const api=moduleObject.exports;
 const prepared=JSON.parse(fs.readFileSync(project+'/src/lib/data/blog-drafts.json','utf8'));
-assert.equal(prepared.length,55);
+assert.equal(prepared.length,61);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(prepared.slice(0,35))).digest('hex'),'3aa06b1d22f04e596f6a0e5610070622848bed7e3b2ef879ace4f69642574579','Original 35 prepared objects remain unchanged from d474217');
 const newPostIds=["224426404936","224425270383","224424117180","224275733454","224271694802","224269677971","224267258628","224265782652","224262970174","224246904261","224245707260","224244427674","224242489830","224240560347","224239991802","224237559579","224236226905","224218224258","224215622621","224169220987"];
-const newPrepared=prepared.slice(35);
+const newPrepared=prepared.slice(35,55);
 assert.deepEqual(new Set(newPrepared.map(entry=>entry.source.postId)),new Set(newPostIds));
 assert.equal(newPrepared.reduce((total,entry)=>total+entry.source.photos.length,0),81,'Only visually approved new photos');
 for(const entry of newPrepared){assert.equal(entry.work.title,entry.work.seo_title);assert.ok(entry.work.seo_description.length<=160);assert.equal(entry.work.slug,'naver-'+entry.source.postId);assert.ok(Number.isFinite(Date.parse(entry.source.publishedAt)));}
 const currentBatch=api.getCurrentBlogImports();
-assert.equal(currentBatch.length,45);
+assert.equal(currentBatch.length,50);
 assert.ok(currentBatch.every(({source,work})=>source.blogId==="koreaautolife" && source.url.includes("/koreaautolife/") && work.naver_blog_url.includes("/koreaautolife/")), "Publication cannot include legacy blog records");
 for(const file of ["src/lib/actions/blog-import.ts","src/app/admin/blog-imports/page.tsx"]){const source=fs.readFileSync(project+file,"utf8");assert.ok(source.includes("getCurrentBlogImports()"));assert.ok(!source.includes("getPreparedBlogImports"));}
 assert.equal(api.getBlogPreviewWorks().length,0,'Drafts must be hidden by default');
@@ -35,9 +35,9 @@ env.BLOG_IMPORT_PREVIEW='true';
 assert.equal(api.getBlogPreviewWorks().length,0,'Only explicit 1 enables preview');
 env.BLOG_IMPORT_PREVIEW='1';
 const drafts=api.getBlogPreviewWorks();
-assert.equal(drafts.length,55);
-assert.equal(new Set(drafts.map(w=>w.id)).size,55);
-assert.equal(new Set(drafts.map(w=>w.slug)).size,55);
+assert.equal(drafts.length,61);
+assert.equal(new Set(drafts.map(w=>w.id)).size,61);
+assert.equal(new Set(drafts.map(w=>w.slug)).size,61);
 for(const w of drafts){
   assert.equal(w.status,'draft');assert.equal(w.is_published,false);assert.equal(w.noindex,true);assert.equal(w.published_at,null);
   assert.ok(w.content_html.includes(w.naver_blog_url));
@@ -47,11 +47,11 @@ for(const w of drafts){
 const first=drafts[0];
 const stored={...first,id:'existing',slug:'existing-slug',title:'Edited existing case',is_published:true,status:'published',naver_blog_url:`https://blog.naver.com/PostView.naver?blogId=97ga074&logNo=224348859508&redirect=Dlog`};
 const merged=api.mergeBlogPreviewWorks([stored]);
-assert.equal(merged.length,55,'A different Naver URL form must still deduplicate');
+assert.equal(merged.length,61,'A different Naver URL form must still deduplicate');
 assert.equal(merged.find(w=>w.id==='existing').title,'Edited existing case');
 const originals=drafts.filter(w=>w.naver_blog_url.includes("/97ga074/"));
 const additions=drafts.filter(w=>w.naver_blog_url.includes("/koreaautolife/"));
-assert.equal(originals.length,10);assert.equal(additions.length,45);
+assert.equal(originals.length,10);assert.equal(additions.length,51);
 assert.equal(api.paginateBlogPreview(additions,[],{category:"전기차 수리"}).total,2);
 for(const work of additions){assert.deepEqual(Array.from(work.before_images),[]);assert.deepEqual(Array.from(work.after_images),[]);}
 const bmw=api.paginateBlogPreview(originals,[],{q:'슬립',brand:'BMW'});
@@ -73,9 +73,21 @@ assert.equal(servicesModule.exports.getWorkServiceLabels(maxcruz).join(', '),'�
 assert.equal(api.paginateBlogPreview(originals,cleaningServices,{service:cleaningServices[2].id,q:'맥스크루즈'}).total,1);
 const page1=api.paginateBlogPreview(drafts,[],{page:1,pageSize:3});
 const page2=api.paginateBlogPreview(drafts,[],{page:2,pageSize:3});
-assert.equal(page1.total,55);assert.equal(page1.totalPages,19);assert.equal(page2.items.length,3);
+assert.equal(page1.total,61);assert.equal(page1.totalPages,21);assert.equal(page2.items.length,3);
 assert.ok(!page1.items.some(a=>page2.items.some(b=>a.id===b.id)));
 assert.equal(api.paginateBlogPreview(drafts,[],{q:'no-such-car'}).total,0);
 delete env.BLOG_IMPORT_PREVIEW;
 assert.equal(api.mergeBlogPreviewWorks([stored]).length,1,'Production list cannot receive draft additions');
-console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 55 total drafts / 45 koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
+console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 61 total drafts / 50 eligible koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
+
+const added=prepared.slice(55);
+assert.equal(added.length,6);
+assert.equal(added.reduce((n,e)=>n+e.source.photos.length,0),34);
+assert.ok(!currentBatch.some(e=>e.source.postId==='224380261625'),'Owner-rejected AI case cannot enter publication batch');
+for(const {source,work} of added){
+ assert.equal(work.naver_blog_url,source.url);
+ assert.equal(work.representative_image_path,source.photos[0].localPath);
+ assert.equal((work.content_html.match(/<h2>/g)||[]).length,4);
+ assert.ok(work.seo_description.length<=160);
+}
+console.log('PASS: six new source-verified cases, 34 selected photos, AI case excluded.');

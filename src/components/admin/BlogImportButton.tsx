@@ -30,7 +30,7 @@ export function BlogImportButton({ count }: { count: number }) {
           임시저장만 하기
         </button>
       </div>
-      <p className="text-sm leading-6 text-muted">공개하면 사진과 함께 홈페이지에 바로 표시됩니다. 이미 공개된 글과 삭제된 글은 건드리지 않습니다. 기존 초안은 수정한 본문을 유지하며 공개합니다.</p>
+      <p className="text-sm leading-6 text-muted">공개하면 사진과 함께 홈페이지에 바로 표시됩니다. 이미 등록된 글은 공개·비공개·초안·삭제 상태와 내용을 모두 유지합니다. 기존 초안 공개는 해당 글의 편집 화면에서 진행해 주세요.</p>
       <div aria-live="polite">
         {error ? <p className="text-sm font-bold text-red-700">{error}</p> : null}
         {results.length ? <ul className="space-y-2 rounded-xl border border-border bg-white p-5">

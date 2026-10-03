@@ -30,7 +30,7 @@ async function importPreparedBlogCases(status: "draft" | "published"): Promise<{
       continue;
     }
     const match = existing?.find((row) => row.id === work.id || row.slug === work.slug || naverPostKey(row.naver_blog_url) === naverPostKey(source.url));
-    if (match && (status === "draft" || match.deleted_at || (match.status === "published" && match.is_published))) {
+    if (match) {
       results.push({ ...result, status: "skipped", id: match.id, message: "이미 등록된 글입니다. 기존 내용을 유지했습니다." });
       continue;
     }
@@ -42,29 +42,24 @@ async function importPreparedBlogCases(status: "draft" | "published"): Promise<{
     const publication = {
       status,
       is_published: status === "published",
-      published_at: status === "published" ? (match?.published_at || source.publishedAt) : null,
+      published_at: status === "published" ? source.publishedAt : null,
       deleted_at: null,
       noindex: false,
     };
-    // Re-running preserves edited titles, images and bodies. Only classification/publication changes.
-    const response = match
-      ? await supabase.from("work_cases").update({
-          ...publication,
-          general_tags: [...new Set([...(Array.isArray(match.general_tags) ? match.general_tags : []), ...work.general_tags])],
-        }).eq("id", match.id).select("id").single()
-      : await supabase.from("work_cases").insert({
-          ...work,
-          service_id: service.id,
-          service_category: service.title,
-          created_at: new Date().toISOString(),
-          ...publication,
-        }).select("id").single();
+    // Existing drafts, private and deleted cases must never be republished by a batch import.
+    const response = await supabase.from("work_cases").insert({
+      ...work,
+      service_id: service.id,
+      service_category: service.title,
+      created_at: new Date().toISOString(),
+      ...publication,
+    }).select("id").single();
     if (response.error || !response.data) {
       console.error("[blog-import] save failed", { postId: source.postId, code: response.error?.code });
       results.push({ ...result, status: "error", message: response.error?.code === "23505" ? "같은 글이 이미 저장됐을 수 있습니다. 다시 실행하면 중복 여부를 확인합니다." : "저장에 실패했습니다. 관리자 권한과 작업사례 데이터 구성을 확인해 주세요." });
     } else {
       results.push({ ...result, status: "saved", id: response.data.id, message: status === "published" ? "공개 완료" : "임시저장 완료" });
-      revalidatePath(`/works/${match?.slug || work.slug}`);
+      revalidatePath(`/works/${work.slug}`);
     }
   }
   for (const route of ["/", "/works", "/admin/works", "/admin/blog-imports", "/services/electric-vehicle", "/sitemap.xml", "/rss.xml"]) revalidatePath(route);
