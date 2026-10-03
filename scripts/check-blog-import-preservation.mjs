@@ -13,14 +13,14 @@ for(const state of ['published','draft','private','deleted','missing']){
  insert(){inserts++;return {select(){return {single:async()=>({data:{id:work.id}})}}};},
  update(){updates++;throw Error('Existing records must not change');}
  };}};
- const module={exports:{}};
- vm.runInNewContext(code,{exports:module.exports,module,console,require(id){
+ const moduleObject={exports:{}};
+ vm.runInNewContext(code,{exports:moduleObject.exports,module:moduleObject,console,require(id){
  if(id==='next/cache')return {revalidatePath(){}};
  if(id==='@/lib/auth/require-admin')return {requireAdmin:async()=>({user:{id:'admin'},supabase})};
  if(id==='@/lib/works/blog-imports')return {getCurrentBlogImports:()=>[{source,work}],naverPostKey:url=>url};
  throw Error(id);
  }});
- const result=await module.exports.publishPreparedBlogCases();
+ const result=await moduleObject.exports.publishPreparedBlogCases();
  assert.equal(updates,0);assert.equal(inserts,state==='missing'?1:0);
  assert.equal(result.results[0].status,state==='missing'?'saved':'skipped');
 }
