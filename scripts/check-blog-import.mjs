@@ -27,7 +27,7 @@ assert.deepEqual(new Set(newPrepared.map(entry=>entry.source.postId)),new Set(ne
 assert.equal(newPrepared.reduce((total,entry)=>total+entry.source.photos.length,0),81,'Only visually approved new photos');
 for(const entry of newPrepared){assert.equal(entry.work.title,entry.work.seo_title);assert.ok(entry.work.seo_description.length<=160);assert.equal(entry.work.slug,'naver-'+entry.source.postId);assert.ok(Number.isFinite(Date.parse(entry.source.publishedAt)));}
 const currentBatch=api.getCurrentBlogImports();
-assert.equal(currentBatch.length,50);
+assert.equal(currentBatch.length,6);
 assert.ok(currentBatch.every(({source,work})=>source.blogId==="koreaautolife" && source.url.includes("/koreaautolife/") && work.naver_blog_url.includes("/koreaautolife/")), "Publication cannot include legacy blog records");
 for(const file of ["src/lib/actions/blog-import.ts","src/app/admin/blog-imports/page.tsx"]){const source=fs.readFileSync(project+file,"utf8");assert.ok(source.includes("getCurrentBlogImports()"));assert.ok(!source.includes("getPreparedBlogImports"));}
 assert.equal(api.getBlogPreviewWorks().length,0,'Drafts must be hidden by default');
@@ -78,7 +78,7 @@ assert.ok(!page1.items.some(a=>page2.items.some(b=>a.id===b.id)));
 assert.equal(api.paginateBlogPreview(drafts,[],{q:'no-such-car'}).total,0);
 delete env.BLOG_IMPORT_PREVIEW;
 assert.equal(api.mergeBlogPreviewWorks([stored]).length,1,'Production list cannot receive draft additions');
-console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 61 total drafts / 50 eligible koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
+console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 61 total drafts / 6 eligible new koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
 
 const added=prepared.slice(55);
 assert.equal(added.length,6);

@@ -10,9 +10,14 @@ export function getPreparedBlogImports() {
   }));
 }
 
-/** Publication is limited to the blog the owner explicitly selected. Legacy rows are preview fixtures only. */
+/** Only the six newly reviewed cases are eligible for this publication batch. */
+const currentImportPostIds = new Set([
+  "224222794615", "224230048440", "224176282621",
+  "224225807261", "224211861676", "224209066514",
+]);
 export function getCurrentBlogImports() {
   return getPreparedBlogImports().filter(({ source, work }) =>
+    currentImportPostIds.has(source.postId) &&
     source.blogId === "koreaautolife" &&
     source.postId !== "224380261625" && // Owner confirmed this is not a real repair case.
     naverPostKey(source.url) === `koreaautolife:${source.postId}` &&
