@@ -21,6 +21,7 @@ export function WorkFilters({brands,models,services}:{brands:string[];models:str
     <form onSubmit={e=>{e.preventDefault();apply();}}>
       <label className={s.searchLabel} htmlFor="work-search">내 차와 비슷한 정비 기록 찾기</label>
       <div className={s.searchRow}><input id="work-search" value={q} onChange={e=>setQ(e.target.value)} placeholder="차종이나 증상을 입력하세요"/><button type="submit" disabled={pending}>{pending?"찾는 중…":"검색 ↗"}</button></div>
+      <p className={s.filterHint}>정비 분야 <span>옆으로 넘겨 더 보기 →</span></p>
       <div className={s.serviceFilters} aria-label="정비 분야"><button type="button" aria-pressed={!service} onClick={()=>apply("")}>전체 분야</button>{services.map(item=><button type="button" key={item.id} aria-pressed={service===item.id} onClick={()=>apply(item.id)}>{item.title}</button>)}</div>
       <details className={s.advanced}><summary>제조사·차종·정렬 <span>＋</span></summary><div className={s.advancedGrid}>
         <label>제조사<select value={brand} onChange={e=>{setBrand(e.target.value);setModel("");}}><option value="">전체 제조사</option>{brands.map(b=><option key={b}>{b}</option>)}</select></label>

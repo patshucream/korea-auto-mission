@@ -63,3 +63,6 @@
   .cardMeta { font-size:12px; color:#586b57; }
   .summary { color:#536151; font-size:15px; }
 }
+
+.filterHint { display:none; }
+@media(max-width:700px) { .filterHint { display:flex; justify-content:space-between; margin:16px 0 0; font-size:12px; color:#526457; } .filterHint span { color:#667568; } .serviceFilters { padding-top:9px; } }
