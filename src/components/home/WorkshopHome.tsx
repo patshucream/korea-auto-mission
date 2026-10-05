@@ -131,9 +131,9 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <figure className={s.missionPhoto} data-reveal><SmartImage path="/blog-imports/224409409390/04.jpg" alt="기아 스팅어의 자동변속기를 분해해 정비하는 코리아오토미션 실제 작업 사진" className={s.missionImage} sizes="(max-width: 700px) 100vw, 50vw" /><figcaption>기아 스팅어 · 자동변속기 정비 기록</figcaption></figure>
           <div className={s.missionCopy}><p className={s.eyebrow}>02 / AUTOMATIC TRANSMISSION</p><h3>오토미션 수리</h3><p className={s.serviceSummary}>변속 충격부터 가속할 때의 떨림까지.<br />수입차·국산차 자동변속기를 점검합니다.</p><ul className={s.serviceTopics}><li>변속 충격·슬립</li><li>주행 중 떨림</li><li>누유·경고등</li></ul><p className={s.serviceNote}>증상이 나타나는 상황과 차량 정보를 확인하고, 필요한 수리 범위와 견적을 안내합니다.</p><Link href="/services/transmission" className={s.inlineLink}>미션수리·실제 사례 보기 <Arrow /></Link></div>
         </section>
-        <section id="ev-service" className={s.evFeature} data-reveal>
-          <div><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>EV6·아이오닉5 등 전기차.<br />배터리부터 모터·감속기까지.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 점검·수리 안내 <Arrow /></Link></div>
-          <div className={s.evDetails}><span className={s.evMark} aria-hidden="true">EV</span><ul><li><span>01</span>배터리·인버터</li><li><span>02</span>충전 불량·충전 계통</li><li><span>03</span>모터·감속기 소음·진동</li></ul><p>차종·연식·주행거리와 증상을 알려주세요.<br />점검 후 필요한 작업을 안내합니다.</p></div>
+        <section id="ev-service" className={s.missionFeature}>
+          <figure className={s.missionPhoto} data-reveal><SmartImage path="/blog-imports/224413696535/01.jpg" alt="코리아오토미션에 입고한 실제 기아 쏘울EV 차량" className={s.missionImage} sizes="(max-width: 700px) 100vw, 50vw" /><figcaption>기아 쏘울EV · 실제 입고 차량</figcaption></figure>
+          <div className={s.missionCopy}><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>EV6·아이오닉5 등 전기차.<br />배터리부터 모터·감속기까지.</p><ul className={s.serviceTopics}><li>배터리·인버터</li><li>충전 불량·충전 계통</li><li>모터·감속기 소음·진동</li></ul><p className={s.serviceNote}>차종·연식·주행거리와 증상을 알려주세요. 점검 후 필요한 작업을 안내합니다.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 점검·수리 안내 <Arrow /></Link></div>
         </section>
         <section id="drivetrain-service" className={s.missionFeature}>
           <figure className={s.missionPhoto} data-reveal><SmartImage path="/blog-imports/224377593631/11.jpg" alt="BMW X3 트랜스퍼 케이스를 분해한 실제 작업 사진" className={s.missionImage} sizes="(max-width: 700px) 100vw, 50vw" /><figcaption>BMW X3 · 트랜스퍼 케이스 정비 기록</figcaption></figure>
