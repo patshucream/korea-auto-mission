@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Only final, indexable pages belong here. Omit unknown modification dates;
   // a request time (or a view-count update) is not an editorial change.
   const entries: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/services/drivetrain`, changeFrequency: "monthly", priority: 0.9 },
     {
       url: SITE_URL,
       changeFrequency: "weekly",

@@ -100,7 +100,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
             <Link className={s.inlineLink} href={visible("works") ? "#works" : "/works"}>내 차 작업사례 찾기 <span aria-hidden="true">↓</span></Link>
           </div>
         </div>
-        <div className={s.heroFoot}><p>디젤클리닝 <span>/</span> 미션수리 <span>/</span> 전기차 수리</p><p>{settings.address}<span className={s.heroFootArrow} aria-hidden="true">↓</span></p></div>
+        <div className={s.heroFoot}><p>디젤클리닝 <span>/</span> 미션수리 <span>/</span> 전기차 수리 <span>/</span> 4륜·구동계</p><p>{settings.address}<span className={s.heroFootArrow} aria-hidden="true">↓</span></p></div>
       </section>
     ),
     trust: config.trust_items.length ? (
@@ -113,13 +113,13 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
         <span>지금, 차량의 증상이 궁금하다면</span>
         <Link href="/services/diesel-cleaning">출력 저하·떨림 <Arrow /></Link>
         <Link href="/services/transmission">변속 충격·미션 이상 <Arrow /></Link>
-        <Link href="/services/electric-vehicle">전기차 충전·주행 이상 <Arrow /></Link>
+        <Link href="/services/electric-vehicle">전기차 충전·주행 이상 <Arrow /></Link><Link href="/services/drivetrain">4륜 구동·하부 소음 <Arrow /></Link>
       </nav>
     ),
     services: (
       <section id="services" className={s.section}>
-        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>OUR SERVICES</p><h2>내연기관부터 전기차까지.<br />차에 맞는 정비.</h2></div><p>디젤클리닝 · 자동변속기 · 전기차 수리.<br />차량 상태와 작업량을 확인한 뒤 견적을 안내합니다.</p></div>
-        <nav className={s.serviceJump} aria-label="주요 정비 분야"><a href="#diesel-service"><small>01</small>디젤클리닝 <Arrow /></a><a href="#transmission-service"><small>02</small>미션수리 <Arrow /></a><a href="#ev-service"><small>03</small>전기차 정비 <Arrow /></a></nav>
+        <div className={s.sectionHeading} data-reveal><div><p className={s.eyebrow}>OUR SERVICES</p><h2>내연기관부터 전기차까지.<br />차에 맞는 정비.</h2></div><p>디젤클리닝 · 자동변속기 · 전기차 · 4륜 구동계.<br />차량 상태와 작업량을 확인한 뒤 견적을 안내합니다.</p></div>
+        <nav className={s.serviceJump} aria-label="주요 정비 분야"><a href="#diesel-service"><small>01</small>디젤클리닝 <Arrow /></a><a href="#transmission-service"><small>02</small>미션수리 <Arrow /></a><a href="#ev-service"><small>03</small>전기차 정비 <Arrow /></a><a href="#drivetrain-service"><small>04</small>4륜·구동계 <Arrow /></a></nav>
         {dieselServices.length > 0 && <div id="diesel-service" className={s.serviceTitle}><p className={s.eyebrow}>01 / DIESEL CLEANING</p><h3>디젤클리닝</h3><p>흡기 · 인젝터 · DPF. 차량 상태에 맞는 작업을 안내합니다.</p></div>}
         <DieselServiceShowcase items={dieselServices.map((service) => {
             const photo = cleaningPhotos[service.title];
@@ -134,6 +134,10 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
         <section id="ev-service" className={s.evFeature} data-reveal>
           <div><p className={s.eyebrow}>03 / ELECTRIC VEHICLE</p><h3>전기차 정비</h3><p className={s.serviceSummary}>EV6·아이오닉5 등 전기차.<br />배터리부터 모터·감속기까지.</p><Link href="/services/electric-vehicle" className={s.inlineLink}>전기차 점검·수리 안내 <Arrow /></Link></div>
           <div className={s.evDetails}><span className={s.evMark} aria-hidden="true">EV</span><ul><li><span>01</span>배터리·인버터</li><li><span>02</span>충전 불량·충전 계통</li><li><span>03</span>모터·감속기 소음·진동</li></ul><p>차종·연식·주행거리와 증상을 알려주세요.<br />점검 후 필요한 작업을 안내합니다.</p></div>
+        </section>
+        <section id="drivetrain-service" className={s.missionFeature}>
+          <figure className={s.missionPhoto} data-reveal><SmartImage path="/blog-imports/224377593631/11.jpg" alt="BMW X3 트랜스퍼 케이스를 분해한 실제 작업 사진" className={s.missionImage} sizes="(max-width: 700px) 100vw, 50vw" /><figcaption>BMW X3 · 트랜스퍼 케이스 정비 기록</figcaption></figure>
+          <div className={s.missionCopy}><p className={s.eyebrow}>04 / FOUR-WHEEL DRIVE</p><h3>4륜·구동계 수리</h3><p className={s.serviceSummary}>트랜스퍼케이스 · 디퍼렌셜.<br />주행 중 소음과 충격, 누유를 점검합니다.</p><ul className={s.serviceTopics}><li>트랜스퍼케이스</li><li>앞·뒤 디퍼렌셜</li><li>4륜 구동 이상</li></ul><p className={s.serviceNote}>같은 소음과 진동도 원인은 다를 수 있습니다. 차량 상태를 확인한 뒤 필요한 정비를 안내합니다.</p><Link href="/services/drivetrain" className={s.inlineLink}>4륜 정비·실제 사례 보기 <Arrow /></Link></div>
         </section>
         <aside className={s.estimateNote} aria-labelledby="estimate-heading">
           <div><h3 id="estimate-heading">견적은 차량을 확인한 뒤 안내합니다.</h3><p>차종·연식, 오염·손상 상태, 작업 범위에 따라 비용이 달라집니다.<br />차종·주행거리·증상을 알려주시면 상담을 시작할 수 있습니다.</p></div>

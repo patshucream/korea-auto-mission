@@ -457,7 +457,7 @@
 @media (prefers-reduced-motion: reduce) { .mobileServiceTabs button, .mobileServiceTabs button::after { transition: none !important; } }
 
 /* Three core services have their own space, including transmission and EV. */
-.serviceJump { display: grid; grid-template-columns: repeat(3,1fr); border-block: 1px solid #b1bdb2; margin: 0 0 42px; }
+.serviceJump { display: grid; grid-template-columns: repeat(4,1fr); border-block: 1px solid #b1bdb2; margin: 0 0 42px; }
 .serviceJump a { display: flex; align-items: center; gap: 15px; padding: 22px 25px; border-right: 1px solid var(--line); font-size: 16px; }
 .serviceJump a:first-child { padding-left: 0; }
 .serviceJump a:last-child { border: 0; }
@@ -554,3 +554,5 @@
   .serviceTopics li,.missionPhoto figcaption,.recordLabel { font-size:13px; }
   .processSection,.standards { padding-block:44px; }
 }
+
+@media(max-width:700px) { .serviceJump { grid-template-columns: repeat(2,minmax(0,1fr)); } .serviceJump a:nth-child(2) { border-right: 0; } .serviceJump a:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }

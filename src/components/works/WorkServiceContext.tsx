@@ -4,6 +4,7 @@ import { getWorkServiceLabels } from "@/lib/works/services";
 import s from "./RepairJournal.module.css";
 
 const guides: Record<string, { href: string; label: string }> = {
+  "트랜스퍼 케이스·디퍼런셜": { href: "/services/drivetrain", label: "4륜·구동계 · 트랜스퍼·디퍼렌셜 정비 안내" },
   "오토미션 수리": { href: "/services/transmission", label: "오토미션 수리 · 증상별 미션수리 안내" },
   "흡기 클리닝": { href: "/services/diesel-cleaning/intake", label: "흡기 클리닝 · 점검·작업 안내" },
   "인젝터 클리닝": { href: "/services/diesel-cleaning/injector", label: "인젝터 클리닝 · 점검·작업 안내" },
