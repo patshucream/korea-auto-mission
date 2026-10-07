@@ -76,7 +76,7 @@ export default async function WorksPage({ searchParams }: Props) {
       <main className={s.library}>
         <section className={s.librarySection}>
           <div>
-            <header className={s.libraryHeading}><p>부산 사상구 · 코리아오토미션 정비사례</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
+            <header className={s.libraryHeading}><p>코리아오토미션 정비사례</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
 
             <div>
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>

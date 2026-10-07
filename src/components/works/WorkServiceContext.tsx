@@ -17,7 +17,7 @@ export function WorkServiceContext({ work, settings }: { work: WorkCase; setting
   const links = getWorkServiceLabels(work).flatMap(label => guides[label] ? [guides[label]] : []);
   return <section className={s.serviceContext} aria-labelledby="case-visit-title">
     <div>
-      <p className={s.eyebrow}>부산 사상구 · 코리아오토미션</p>
+      <p className={s.eyebrow}>코리아오토미션</p>
       <h2 id="case-visit-title">비슷한 증상으로 정비소를 찾고 계신가요?</h2>
       <p>코리아오토미션의 실제 정비 기록입니다. 현재 매장은 {settings.address}에 있습니다. 같은 증상도 원인은 다를 수 있어, 차종과 상태를 확인한 뒤 작업 범위와 비용을 안내합니다.</p>
     </div>

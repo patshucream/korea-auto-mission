@@ -91,7 +91,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
         <SmartImage path={settings.shop_image_path || settings.hero_image_path} alt="코리아오토미션에서 차량을 점검하는 실제 정비 현장" className={s.heroPhoto} sizes="100vw" priority objectPosition="68% 48%" />
         <div className={s.heroShade} aria-hidden="true" />
         <div className={s.heroCopy}>
-          <p className={s.eyebrow}><span className={s.blueLine} />KOREA AUTO MISSION <span className={s.heroCity}>BUSAN</span></p>
+          <p className={s.eyebrow}><span className={s.blueLine} />KOREA AUTO MISSION </p>
           <h1 id="workshop-title">{(settings.hero_title || DEFAULT_SETTINGS.hero_title).split("\n").map((line, index) => <span className={index === 1 ? s.accentLine : undefined} key={index}>{line}</span>)}</h1>
           <p className={s.heroLead}>{settings.hero_description}</p>
           <div className={s.heroActions}>
@@ -175,7 +175,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
     ) : null,
     location: (
       <section id="location" className={s.location}>
-        <div className={s.locationCopy}><p className={s.eyebrow}>BUSAN, SASANG</p><h2>코리아오토미션<br />오시는 길.</h2><p className={s.address}>{settings.address}</p><dl className={s.hours}><div><dt>평일</dt><dd>{settings.weekday_hours}</dd></div><div><dt>토요일</dt><dd>{settings.saturday_hours}</dd></div><div><dt>일요일</dt><dd>휴무</dd></div><div><dt>공휴일</dt><dd>{settings.holiday_hours}</dd></div></dl><p className={s.visitNote}>방문 전 전화로 입고 일정을 상담해 주세요.</p><a href={map} className={s.inlineLink} target="_blank" rel="noopener noreferrer">네이버 매장·후기 <Arrow /></a></div>
+        <div className={s.locationCopy}><p className={s.eyebrow}>LOCATION</p><h2>코리아오토미션<br />오시는 길.</h2><p className={s.address}>{settings.address}</p><dl className={s.hours}><div><dt>평일</dt><dd>{settings.weekday_hours}</dd></div><div><dt>토요일</dt><dd>{settings.saturday_hours}</dd></div><div><dt>일요일</dt><dd>휴무</dd></div><div><dt>공휴일</dt><dd>{settings.holiday_hours}</dd></div></dl><p className={s.visitNote}>방문 전 전화로 입고 일정을 상담해 주세요.</p><a href={map} className={s.inlineLink} target="_blank" rel="noopener noreferrer">네이버 매장·후기 <Arrow /></a></div>
         <div className={s.locationMap} data-reveal><NaverLocationMap /></div>
       </section>
     ),

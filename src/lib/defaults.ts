@@ -82,7 +82,7 @@ export const DEFAULT_HOMEPAGE_CONFIG: HomepageConfig = {
       description: "사진으로 남긴 정비 과정",
     },
     {
-      title: "부산 사상구",
+      title: "방문 상담",
       description: "삼덕로 95",
     },
   ],
@@ -138,7 +138,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   naver_blog_url: NAVER_BLOG_URL,
   naver_map_url: NAVER_MAP_URL,
   naver_reservation_url: "",
-  hero_title: "부산 사상구,\n미션·디젤·전기차 정비.",
+  hero_title: "미션·디젤·전기차,\n내 차에 맞는 정비.",
   hero_description:
     "자동변속기 수리 · 흡기·인젝터·DPF 클리닝 · 전기차 수리.\n차종과 증상을 알려주시면 점검 후 작업 범위와 견적을 안내합니다.",
   hero_image_path: null,
@@ -149,7 +149,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   stat_works: "30년간 축적된 작업 경험",
   why_title: "왜 코리아오토미션인가",
   why_content:
-    "무조건 교환보다 원인 진단이 먼저입니다. 정비 전후 상태를 설명하고, 작업 사진과 과정을 기록합니다. 부산 사상구에서 변속기 전문 경험으로 고객 차량을 책임집니다.",
+    "무조건 교환보다 원인 진단이 먼저입니다. 정비 전후 상태를 설명하고, 작업 사진과 과정을 기록합니다. 변속기 전문 경험으로 고객 차량을 책임집니다.",
   process_steps: DEFAULT_PROCESS_STEPS,
   homepage_config: DEFAULT_HOMEPAGE_CONFIG,
   seo_title: "부산 미션수리·디젤클리닝·전기차 수리 | 코리아오토미션",

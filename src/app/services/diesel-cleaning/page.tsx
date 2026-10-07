@@ -47,7 +47,7 @@ export default async function DieselCleaningPage() {
       <section className={s.hero}>
         <div className={s.heroCopy}>
           <nav className={s.breadcrumb} aria-label="현재 위치"><Link href="/">홈</Link><span>/</span><span>디젤 클리닝 안내</span></nav>
-          <p className={s.eyebrow}>부산 사상구 · 흡기·인젝터·DPF</p>
+          <p className={s.eyebrow}>흡기·인젝터·DPF</p>
           <h1>부산 디젤 클리닝,<br />내 차에 필요한<br />작업부터 확인하세요.</h1>
           <p className={s.lead}>출력 저하, 떨림, 경고등이 신경 쓰인다면.<br />차종과 증상을 확인하고 필요한 점검과<br />클리닝 범위를 안내합니다.</p>
           <div className={s.actions}><a className={s.primary} href={phone} data-contact="phone">전화로 클리닝 상담 ↗</a><SmsLink className={s.textLink} phone={settings.phone} body={"[디젤 클리닝 상담]\n차종·연식:\n주행거리:\n증상:\n방문 희망일:"}>문자로 차종·증상 보내기 ↗</SmsLink></div>

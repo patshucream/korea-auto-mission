@@ -45,7 +45,7 @@ export default async function DieselServiceGuide({ params }: Props) {
       <section className={s.hero}>
         <div className={s.heroCopy}>
           <nav className={s.breadcrumb} aria-label="현재 위치"><Link href="/">홈</Link><span>/</span><Link href="/services/diesel-cleaning">디젤 클리닝</Link><span>/</span><span>{guide.category}</span></nav>
-          <p className={s.eyebrow}>부산 사상구 · {settings.business_name}</p>
+          <p className={s.eyebrow}>{settings.business_name}</p>
           <h1 className="whitespace-pre-line">{guide.heading}</h1>
           <p className={s.lead}>{guide.intro}</p>
           <div className={s.actions}>

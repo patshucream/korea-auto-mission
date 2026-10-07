@@ -76,7 +76,7 @@ export default async function TransmissionPage() {
       <section className={s.hero}>
         <div className={s.heroCopy}>
           <nav aria-label="현재 위치" className={s.breadcrumb}><Link href="/">홈</Link><span>/</span><span>미션수리 안내</span></nav>
-          <p className={s.eyebrow}>부산 사상구 · 수입차·국산차 자동변속기</p>
+          <p className={s.eyebrow}>수입차·국산차 자동변속기</p>
           <h1>부산 오토미션 수리,<br />내 차 증상부터<br />상담하세요.</h1>
           <p className={s.lead}>미션수리는 원인 확인부터 시작합니다.<br />변속 충격·슬립·가속 떨림을 점검하고<br />필요한 정비 범위와 견적을 안내합니다.</p>
           <div className={s.actions}>
@@ -127,7 +127,7 @@ export default async function TransmissionPage() {
       </section>
 
       <section id="visit" className={`${s.section} ${s.visit}`}>
-        <div><p className={s.eyebrow}>부산 사상구에서 상담하세요</p><h2>{settings.business_name}</h2><p className={s.sectionLead}>{settings.address}</p>
+        <div><p className={s.eyebrow}>차종과 증상을 상담하세요</p><h2>{settings.business_name}</h2><p className={s.sectionLead}>{settings.address}</p>
           <a className={s.phone} href={phone}>{settings.phone}</a>
           <p>차종 · 연식 · 주행거리 · 증상을 알려주세요.</p>
           <div className={s.actions}>{reservation ? <a className={s.primary} href={reservation} target="_blank" rel="noopener noreferrer">네이버 예약·매장 정보 ↗</a> : null}<a className={s.textLink} href={getMapUrl(settings)} target="_blank" rel="noopener noreferrer">지도에서 위치 확인 ↗</a></div>

@@ -18,7 +18,7 @@ export function Hero({ settings }: Props) {
     "수입차 오토미션과 디젤 정비,\n정확한 진단부터 시작합니다";
   const description =
     settings.hero_description?.trim() ||
-    "부산 사상구 코리아오토미션\n변속기 전문 경험과 정밀 진단을 바탕으로 원인을 먼저 확인합니다.";
+    "코리아오토미션\n변속기 전문 경험과 정밀 진단을 바탕으로 원인을 먼저 확인합니다.";
 
   return (
     <section className="relative -mt-[72px] min-h-[78svh] overflow-hidden bg-navy text-white lg:min-h-[88svh]">
