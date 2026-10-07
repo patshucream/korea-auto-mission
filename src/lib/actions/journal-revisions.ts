@@ -22,7 +22,7 @@ export async function applyJournalRevisions() {
     let update=supabase.from("work_cases").update(revision.after).eq("id",revision.id).eq("naver_blog_url",revision.sourceUrl).eq("status","published").eq("is_published",true).is("deleted_at",null);
     update=row.updated_at?update.eq("updated_at",row.updated_at):update.is("updated_at",null);
     const saved=await update.select("id").maybeSingle();
-    results.push({title:revision.title,message:saved.error||!saved.data?"저장되지 않았습니다. 기존 글을 유지했습니다.":"상세 설명과 사진 캡션 반영 완료"});
+    results.push({title:revision.title,message:saved.error||!saved.data?"저장되지 않았습니다. 기존 글을 유지했습니다.":"검토한 제목·검색 설명·본문 반영 완료"});
     if(saved.data)revalidatePath(`/works/${row.slug}`);
   }
   for(const path of ["/","/works","/admin/works","/admin/journal-revisions","/sitemap.xml","/rss.xml"])revalidatePath(path);

@@ -41,13 +41,16 @@ for(const r of revisions){
  assert.equal(matchesRevisionFields({...r.before,content_html:'관리자가 수정한 글'},r.before),false);
  assert.equal(matchesRevisionFields(r.after,r.after),true);
  assert.ok(journalText(r.after.content_html).length>100);
+ assert.ok(r.after.content_html.endsWith(r.before.content_html), 'Keep the complete original body');
+ assert.ok(r.after.title.includes('오토미션'));
+ assert.equal(r.after.seo_title, r.after.title+' | 코리아오토미션');
  const oldImages=[...r.before.content_html.matchAll(/src="([^"]+)"/g)].map(m=>m[1]);
  const newImages=buildJournalChapters(r.after).flatMap(c=>c.photos.map(p=>p.src));
  for(const src of [...oldImages,...(r.before.gallery_image_paths??[])])assert.ok(newImages.includes(src),'Preserve '+src);
  assert.equal(new Set(newImages).size,newImages.length);
  for(const src of newImages)assert.ok(fs.existsSync(path.join(root,'public',src)));
  if(r.after.representative_image_path)assert.ok(['224425270383','224424117180'].some(id=>r.sourceUrl.endsWith(id)));
- for(const key of ['title','id','slug','status','is_published','naver_blog_url'])assert.ok(!(key in r.after));
+ for(const key of ['id','slug','status','is_published','naver_blog_url'])assert.ok(!(key in r.after));
 }
 // Render the real journal/context components; unrelated layout and photo widgets
 // are inert boundaries so these checks require no browser, network, or database.
