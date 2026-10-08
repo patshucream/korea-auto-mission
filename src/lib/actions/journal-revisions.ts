@@ -4,11 +4,12 @@ import { requireAdmin } from "@/lib/auth/require-admin";
 import { getJournalRevisions, matchesRevisionFields } from "@/lib/works/journal-revisions";
 
 /** Reviewable, fixed revisions only; never overwrites a subsequently edited case. */
-export async function applyJournalRevisions() {
+export async function applyJournalRevisions(offset = 0) {
+  if (!Number.isInteger(offset) || offset < 0 || offset % 5 !== 0) return {error:"잘못된 적용 구간입니다.",results:[]};
   const {user,supabase}=await requireAdmin();
   if(!user||!supabase)return {error:"관리자 로그인이 필요합니다.",results:[]};
   const results:{title:string;message:string}[]=[];
-  for(const revision of getJournalRevisions()) {
+  for(const revision of getJournalRevisions().slice(offset, offset + 5)) {
     const {data:row,error}=await supabase.from("work_cases").select("*").eq("id",revision.id).single();
     if(error||!row||row.naver_blog_url!==revision.sourceUrl||row.deleted_at||row.status!=="published"||!row.is_published) {
       results.push({title:revision.title,message:"공개된 원본을 확인하지 못해 변경하지 않았습니다."}); continue;

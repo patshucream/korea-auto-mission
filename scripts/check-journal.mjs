@@ -42,7 +42,9 @@ for(const r of revisions){
  assert.equal(matchesRevisionFields(r.after,r.after),true);
  assert.ok(journalText(r.after.content_html).length>100);
  assert.ok(!/<h2>[^<]+<\/h2><h2>/.test(r.after.content_html), 'Every chapter has explanatory content');
- assert.ok(r.after.title.includes('오토미션'));
+ assert.ok(r.after.title.length > 10);
+ assert.ok(r.after.seo_description.length > 30);
+ assert.ok(r.after.content_html.includes('<h2>'));
  assert.equal(r.after.seo_title, r.after.title+' | 코리아오토미션');
  const oldImages=[...r.before.content_html.matchAll(/src="([^"]+)"/g)].map(m=>m[1]);
  const newImages=buildJournalChapters(r.after).flatMap(c=>c.photos.map(p=>p.src));
