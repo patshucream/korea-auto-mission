@@ -41,7 +41,7 @@ for(const r of revisions){
  assert.equal(matchesRevisionFields({...r.before,content_html:'관리자가 수정한 글'},r.before),false);
  assert.equal(matchesRevisionFields(r.after,r.after),true);
  assert.ok(journalText(r.after.content_html).length>100);
- assert.ok(r.after.content_html.endsWith(r.before.content_html), 'Keep the complete original body');
+ assert.ok(!/<h2>[^<]+<\/h2><h2>/.test(r.after.content_html), 'Every chapter has explanatory content');
  assert.ok(r.after.title.includes('오토미션'));
  assert.equal(r.after.seo_title, r.after.title+' | 코리아오토미션');
  const oldImages=[...r.before.content_html.matchAll(/src="([^"]+)"/g)].map(m=>m[1]);
