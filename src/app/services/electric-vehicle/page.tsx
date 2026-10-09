@@ -6,7 +6,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBottomBar } from "@/components/layout/MobileBottomBar";
 import { ConsultationHelper } from "@/components/services/ConsultationHelper";
-import { getSiteSettings } from "@/lib/data/content";
+import { WorkCard } from "@/components/works/WorkCard";
+import { getWorkBySlug, getSiteSettings } from "@/lib/data/content";
 import { SITE_URL, telHref } from "@/lib/utils";
 import s from "./page.module.css";
 
@@ -19,7 +20,9 @@ export const metadata: Metadata = {
 };
 
 export default async function ElectricVehiclePage() {
-  const settings = await getSiteSettings();
+  const [settings, chargingCase] = await Promise.all([
+    getSiteSettings(), getWorkBySlug("naver-224413696535"),
+  ]);
   const topics = [
     { title: "배터리·인버터", hint: "계기판 경고 · 출력 저하", ask: "표시된 경고 문구와 증상이 시작된 시점을 알려주세요.", body: "배터리와 인버터 관련 경고, 출력 저하 등 전기차 전장 문제를 점검합니다. 차종과 진단 결과에 따라 수리·교체 범위를 안내합니다." },
     { title: "충전 불량·충전 계통", hint: "충전 시작 불가 · 충전 중단", ask: "완속·급속 여부와 충전기에 표시된 문구를 알려주세요.", body: "완속·급속 중 어느 쪽에서 충전이 안 되는지, 경고 문구가 나타나는지 알려주세요. 충전 계통을 확인하고 필요한 작업을 상담합니다." },
@@ -50,6 +53,11 @@ export default async function ElectricVehiclePage() {
     </section>
     <section className={s.process} aria-labelledby="ev-process"><p className={s.eyebrow}>상담부터 작업 안내까지</p><h2 id="ev-process">내 차에 필요한 작업을 확인합니다.</h2><ol><li><span>01</span><div><h3>차종과 증상 전달</h3><p>EV6·아이오닉5 등 차종, 연식, 주행거리와 불편한 증상을 전화·문자로 알려주세요.</p></div></li><li><span>02</span><div><h3>방문 일정과 점검 상담</h3><p>차량을 확인할 일정을 상담하고, 점검으로 필요한 작업 범위를 확인합니다.</p></div></li><li><span>03</span><div><h3>작업 범위·견적 안내</h3><p>차량 상태와 필요한 부품, 작업량을 바탕으로 비용과 일정을 안내합니다.</p></div></li></ol></section>
     <section className={s.faq} aria-labelledby="ev-questions"><p className={s.eyebrow}>방문 전 궁금한 점</p><h2 id="ev-questions">전기차 수리 상담 안내.</h2><div>{questions.map(item => <details key={item.q}><summary>{item.q}<span aria-hidden="true">＋</span></summary><p>{item.a}</p></details>)}</div></section>
+    {chargingCase && <section className={s.journal} aria-labelledby="ev-case-heading">
+      <p className={s.eyebrow}>전기차 작업 기록</p><h2 id="ev-case-heading">충전 불량을 점검한 과정.</h2>
+      <p className={s.note}>쏘울EV의 완속충전 문제로 OBC를 탈거·점검한 기록입니다. 입고 증상과 점검 과정을 사진으로 살펴보세요.</p>
+      <div className={s.caseGrid}><WorkCard work={chargingCase} /></div>
+    </section>}
     <ConsultationHelper settings={settings} service="전기차 수리" vehiclePlaceholder="예: EV6 / 2022년 / 8만 km" symptoms={["배터리·인버터 경고", "충전 불량", "모터·감속기 소음", "주행 중 진동", "기타 증상"]} />
     <section className={s.visit}><div><p className={s.eyebrow}>VISIT THE WORKSHOP</p><h2>{settings.business_name}</h2><p>{settings.address}</p><p>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours}</p><p>일요일 휴무 · 공휴일 {settings.holiday_hours}</p></div><Link href="/#location">네이버 지도·오시는 길 <span aria-hidden="true">↗</span></Link></section>
   </main><Footer settings={settings} /><MobileBottomBar settings={settings} service="전기차 수리" /></>;

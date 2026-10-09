@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { sanitizeEditorHtml } from "@/lib/editor/sanitize";
 import { DEFAULT_SETTINGS } from "@/lib/defaults";
 import { escapeXml, SITE_URL, isSupabaseConfigured } from "@/lib/utils";
 
@@ -14,6 +15,7 @@ type RssItem = {
   guid: string;
   pubDate: Date;
   description: string;
+  content?: string;
 };
 
 function toRfc822(date: Date): string {
@@ -26,7 +28,7 @@ function renderItem(item: RssItem): string {
       <link>${escapeXml(item.link)}</link>
       <guid isPermaLink="true">${escapeXml(item.guid)}</guid>
       <pubDate>${toRfc822(item.pubDate)}</pubDate>
-      <description>${escapeXml(item.description)}</description>
+      <description>${escapeXml(item.content || item.description)}</description>
     </item>`;
 }
 
@@ -63,7 +65,7 @@ async function getWorkRssItems(): Promise<RssItem[]> {
     const { data, error } = await supabase
       .from("work_cases")
       .select(
-        "slug, title, work_summary, symptoms, seo_description, vehicle_brand, vehicle_model, published_at, created_at",
+        "slug, title, work_summary, symptoms, diagnosis, repair_process, replaced_parts, cause, content_html, seo_description, vehicle_brand, vehicle_model, published_at, created_at, status, deleted_at, noindex",
       )
       .eq("is_published", true)
       .order("published_at", { ascending: false })
@@ -72,7 +74,9 @@ async function getWorkRssItems(): Promise<RssItem[]> {
     if (error || !data?.length) return [];
 
     return data
-      .filter((row) => typeof row.slug === "string" && row.slug.length > 0)
+      .filter((row) => typeof row.slug === "string" && row.slug.length > 0
+        && !row.deleted_at && !row.noindex
+        && !["draft", "private", "trash", "scheduled"].includes(row.status))
       .map((row) => {
         const link = `${SITE_URL}/works/${row.slug}`;
         const description =
@@ -82,7 +86,23 @@ async function getWorkRssItems(): Promise<RssItem[]> {
           `${row.vehicle_brand || ""} ${row.vehicle_model || ""} 작업사례`.trim() ||
           CHANNEL_DESCRIPTION;
 
+        const sections = [
+          ["입고 증상", row.symptoms], ["점검 내용", row.diagnosis],
+          ["진행한 정비", row.repair_process], ["작업 정리", row.work_summary],
+        ];
+        const fallbackBody = sections.filter(([, value]) => typeof value === "string" && value.trim())
+          .map(([heading, value]) => `<h2>${heading}</h2><p>${escapeXml(String(value))}</p>`).join("\n");
+        const body = typeof row.content_html === "string" && row.content_html.trim()
+          ? row.content_html : fallbackBody;
+        const details = [["교체한 부품", row.replaced_parts], ["확인한 원인", row.cause]]
+          .filter(([, value]) => typeof value === "string" && value.trim())
+          .map(([heading, value]) => `<h2>${heading}</h2><p>${escapeXml(String(value))}</p>`).join("\n");
+        // Preserve the published record; never generate additional repair claims.
+        const content = sanitizeEditorHtml(body + details)
+          .replace(/(href|src)="\/(?!\/)/g, `$1="${SITE_URL}/`);
+
         return {
+          content,
           title: (typeof row.title === "string" && row.title.trim()) || "작업사례",
           link,
           guid: link,

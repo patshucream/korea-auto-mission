@@ -60,7 +60,7 @@ export default async function WorkDetailPage({ params }: Props) {
     // updated_at also changes when a page view is recorded; it is not an editorial date.
     datePublished:work.published_at || work.created_at,
     image:articleImage ? new URL(articleImage, SITE_URL).href : undefined,
-    author:{"@type":"Organization",name:settings.business_name},
+    author:{"@type":"Organization",name:settings.business_name,url:SITE_URL},
     publisher:{"@type":"Organization",name:settings.business_name,url:SITE_URL},mainEntityOfPage:canonical,url:canonical,
   };
   const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[
