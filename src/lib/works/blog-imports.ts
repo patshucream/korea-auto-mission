@@ -10,10 +10,9 @@ export function getPreparedBlogImports() {
   }));
 }
 
-/** Only the six newly reviewed cases are eligible for this publication batch. */
+/** Source-verified new cases for the current publication batch. */
 const currentImportPostIds = new Set([
-  "224222794615", "224230048440", "224176282621",
-  "224225807261", "224211861676", "224209066514",
+  "224446353203", "224443035055", "224439449222",
 ]);
 export function getCurrentBlogImports() {
   return getPreparedBlogImports().filter(({ source, work }) =>

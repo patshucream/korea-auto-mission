@@ -6538,5 +6538,349 @@
       "noindex": false,
       "view_count": 0
     }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224446353203",
+      "url": "https://blog.naver.com/koreaautolife/224446353203",
+      "title": "부산 아슬란 오토미션수리, 주행중 변속충격과 후진 불량",
+      "publishedAt": "2026-10-19T11:28:00+09:00",
+      "editorNote": "원문에 연식·주행거리·시운전 결과가 없어 추가하지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfNjEg/MDAxNzkyMTUxMTkwNzQ2.WpmceA-acr1CV6xQJPFgX7NwoOIFZSiYhG9UuK3-zpkg.sfNkHypeF1UqPm_H8qgjeZtMoug-Mqzg5_nviKwHmpQg.JPEG/SE-e5a53579-a0f7-42c1-8c78-856d7f9ff23d.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTZfNjEg/MDAxNzkyMTUxMTkwNzQ2.WpmceA-acr1CV6xQJPFgX7NwoOIFZSiYhG9UuK3-zpkg.sfNkHypeF1UqPm_H8qgjeZtMoug-Mqzg5_nviKwHmpQg.JPEG/SE-e5a53579-a0f7-42c1-8c78-856d7f9ff23d.jpg?type=w966",
+          "localPath": "/blog-imports/224446353203/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfMTU4/MDAxNzkyMTUxMTI2MjY5.4TCuxMDcdR5GKtxeTUpEjgJvykA2C02kq8r1QXRg9zcg.nlRB_MGlKlkZ_TGCyk7n39n4EL70NbnxAwM8FEE_lwMg.JPEG/1789798932061.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTZfMTU4/MDAxNzkyMTUxMTI2MjY5.4TCuxMDcdR5GKtxeTUpEjgJvykA2C02kq8r1QXRg9zcg.nlRB_MGlKlkZ_TGCyk7n39n4EL70NbnxAwM8FEE_lwMg.JPEG/1789798932061.jpg?type=w966",
+          "localPath": "/blog-imports/224446353203/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfMjEg/MDAxNzkyMTUxMTI3MTQx.gorIFB2LmiZHQLjmKqfUNKJ4UpOQJXzFvu4fU30uIWIg.vcyAk9fKgfPyvLq3XqUQ_ApwQ2hf6BgjhGRqQJKTz0Eg.JPEG/1789802153908.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTZfMjEg/MDAxNzkyMTUxMTI3MTQx.gorIFB2LmiZHQLjmKqfUNKJ4UpOQJXzFvu4fU30uIWIg.vcyAk9fKgfPyvLq3XqUQ_ApwQ2hf6BgjhGRqQJKTz0Eg.JPEG/1789802153908.jpg?type=w966",
+          "localPath": "/blog-imports/224446353203/07.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfMjIz/MDAxNzkyMTUxMTI3MTQ2.7EdxPV2P4fTB6iIKrbEMKunMKL5_ObXVeSL0O65J294g.6e2lEyieBvGFe8nOaP3FlajnlIKk4f_DAJf-Km_35W8g.JPEG/1789802154141.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTZfMjIz/MDAxNzkyMTUxMTI3MTQ2.7EdxPV2P4fTB6iIKrbEMKunMKL5_ObXVeSL0O65J294g.6e2lEyieBvGFe8nOaP3FlajnlIKk4f_DAJf-Km_35W8g.JPEG/1789802154141.jpg?type=w966",
+          "localPath": "/blog-imports/224446353203/10.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfMjc3/MDAxNzkyMTUxMTI3OTc1.rmpu5BTsKDy321X1lak0E0SQdpDeHjvgCbRH6jxo1osg.1_UotLa40PbM4UlZSaVqx0_sETVwBPthkEOlHvkE9g0g.JPEG/1789802154376.jpg",
+          "width": 4032,
+          "height": 3025,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTZfMjc3/MDAxNzkyMTUxMTI3OTc1.rmpu5BTsKDy321X1lak0E0SQdpDeHjvgCbRH6jxo1osg.1_UotLa40PbM4UlZSaVqx0_sETVwBPthkEOlHvkE9g0g.JPEG/1789802154376.jpg?type=w966",
+          "localPath": "/blog-imports/224446353203/12.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfMTIz/MDAxNzkyMTUxMTI4MDY4.geKqo_NBDd4r2Xzxqf9A6NfodLC-0QFHp__keQBNYK4g.rYn0GIKtvgncfTwYw0DlHoCs5akNdG1SSEe4KPogezIg.JPEG/1789802154619.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTZfMTIz/MDAxNzkyMTUxMTI4MDY4.geKqo_NBDd4r2Xzxqf9A6NfodLC-0QFHp__keQBNYK4g.rYn0GIKtvgncfTwYw0DlHoCs5akNdG1SSEe4KPogezIg.JPEG/1789802154619.jpg?type=w966",
+          "localPath": "/blog-imports/224446353203/15.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "9a03d156-c531-4fee-bdc4-217001233fbb",
+      "slug": "naver-224446353203",
+      "title": "아슬란 오토미션 수리·주행 중 변속충격과 후진 불량",
+      "subtitle": "현대 아슬란이 주행 중 변속충격과 후진 불량으로 입고됐습니다. R단에 놓고 브레이크에서 발을 떼어도 뒤로 움직이지 않는 증상이 함께 있었습니다. 이번 기록은 현대 6단 자동변속기를 분해해 내부 손상을 확인한 작업입니다.",
+      "excerpt": "현대 아슬란이 주행 중 변속충격과 후진 불량으로 입고됐습니다. R단에 놓고 브레이크에서 발을 떼어도 뒤로 움직이지 않는 증상이 함께 있었습니다. 이번 기록은 현대 6단 자동변속기를 분해해 내부 손상을 확인한 작업입니다.",
+      "vehicle_brand": "현대",
+      "manufacturer": "현대",
+      "vehicle_model": "아슬란",
+      "model_year": "",
+      "mileage": "",
+      "fuel_type": "",
+      "transmission_type": "자동 6단",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "현대 아슬란이 주행 중 변속충격과 후진 불량으로 입고됐습니다. R단에 놓고 브레이크에서 발을 떼어도 뒤로 움직이지 않는 증상이 함께 있었습니다. 이번 기록은 현대 6단 자동변속기를 분해해 내부 손상을 확인한 작업입니다.",
+      "diagnosis": "미션오일을 배출해 살폈을 때 클러치가 탄 냄새나 쇳가루는 확인되지 않았습니다. 탈거한 변속기 케이스에는 눈에 띄는 파손이나 누유가 보이지 않았고, 플라이휠도 확인했습니다. 오일과 외관 상태만으로 후진 불량 원인을 판단하지 않고 내부 점검을 이어갔습니다.",
+      "cause": "",
+      "repair_process": "원문은 현대 6단 변속기에서 챔버 볼트 풀림이 변속충격 원인이 될 수 있다고 설명합니다. 이번 차량은 후진 불량도 있어 다른 부품까지 점검했고, 챔버와 리테이너가 깨져 있는 것을 확인했습니다. 작업 기록에서는 파손 부위로 압력이 새어 클러치에 필요한 압력이 전달되지 못한 것을 후진 불량의 원인으로 설명합니다.",
+      "replaced_parts": "챔버, 리테이너, 클러치 디스크, 플레이트, 오일필터",
+      "work_summary": "변속기 내부 부품을 하나씩 확인하고 세척한 뒤 손상 부품을 교환했습니다. 깨진 챔버와 리테이너를 교환하고 클러치 디스크, 플레이트, 오일필터도 교체했습니다. 같은 아슬란이라도 증상과 내부 상태에 따라 작업 범위가 달라집니다. 상담 시에는 충격이 생기는 시점과 R단에서 차량이 움직이는지 알려주세요.",
+      "detailed_content": "주행 중 변속충격과 R단 후진 불량\n현대 아슬란이 주행 중 변속충격과 후진 불량으로 입고됐습니다. R단에 놓고 브레이크에서 발을 떼어도 뒤로 움직이지 않는 증상이 함께 있었습니다. 이번 기록은 현대 6단 자동변속기를 분해해 내부 손상을 확인한 작업입니다.\n\n오일 상태와 변속기 외관 확인\n미션오일을 배출해 살폈을 때 클러치가 탄 냄새나 쇳가루는 확인되지 않았습니다. 탈거한 변속기 케이스에는 눈에 띄는 파손이나 누유가 보이지 않았고, 플라이휠도 확인했습니다. 오일과 외관 상태만으로 후진 불량 원인을 판단하지 않고 내부 점검을 이어갔습니다.\n\n분해 점검에서 확인한 챔버·리테이너 파손\n원문은 현대 6단 변속기에서 챔버 볼트 풀림이 변속충격 원인이 될 수 있다고 설명합니다. 이번 차량은 후진 불량도 있어 다른 부품까지 점검했고, 챔버와 리테이너가 깨져 있는 것을 확인했습니다. 작업 기록에서는 파손 부위로 압력이 새어 클러치에 필요한 압력이 전달되지 못한 것을 후진 불량의 원인으로 설명합니다.\n\n손상 부품 교환과 내부 세척\n변속기 내부 부품을 하나씩 확인하고 세척한 뒤 손상 부품을 교환했습니다. 깨진 챔버와 리테이너를 교환하고 클러치 디스크, 플레이트, 오일필터도 교체했습니다. 같은 아슬란이라도 증상과 내부 상태에 따라 작업 범위가 달라집니다. 상담 시에는 충격이 생기는 시점과 R단에서 차량이 움직이는지 알려주세요.",
+      "content_html": "<h2>주행 중 변속충격과 R단 후진 불량</h2><p>현대 아슬란이 주행 중 변속충격과 후진 불량으로 입고됐습니다. R단에 놓고 브레이크에서 발을 떼어도 뒤로 움직이지 않는 증상이 함께 있었습니다. 이번 기록은 현대 6단 자동변속기를 분해해 내부 손상을 확인한 작업입니다.</p><h2>오일 상태와 변속기 외관 확인</h2><p>미션오일을 배출해 살폈을 때 클러치가 탄 냄새나 쇳가루는 확인되지 않았습니다. 탈거한 변속기 케이스에는 눈에 띄는 파손이나 누유가 보이지 않았고, 플라이휠도 확인했습니다. 오일과 외관 상태만으로 후진 불량 원인을 판단하지 않고 내부 점검을 이어갔습니다.</p><figure><img src=\"/blog-imports/224446353203/05.jpg\" alt=\"차량에서 탈거한 아슬란 자동변속기\" loading=\"lazy\" /><figcaption>차량에서 탈거한 아슬란 자동변속기</figcaption></figure><h2>분해 점검에서 확인한 챔버·리테이너 파손</h2><p>원문은 현대 6단 변속기에서 챔버 볼트 풀림이 변속충격 원인이 될 수 있다고 설명합니다. 이번 차량은 후진 불량도 있어 다른 부품까지 점검했고, 챔버와 리테이너가 깨져 있는 것을 확인했습니다. 작업 기록에서는 파손 부위로 압력이 새어 클러치에 필요한 압력이 전달되지 못한 것을 후진 불량의 원인으로 설명합니다.</p><figure><img src=\"/blog-imports/224446353203/07.jpg\" alt=\"아슬란 변속기 내부 챔버 부위 점검\" loading=\"lazy\" /><figcaption>아슬란 변속기 내부 챔버 부위 점검</figcaption></figure><figure><img src=\"/blog-imports/224446353203/10.jpg\" alt=\"후진 불량 원인을 확인하기 위한 내부 부품 점검\" loading=\"lazy\" /><figcaption>후진 불량 원인을 확인하기 위한 내부 부품 점검</figcaption></figure><h2>손상 부품 교환과 내부 세척</h2><p>변속기 내부 부품을 하나씩 확인하고 세척한 뒤 손상 부품을 교환했습니다. 깨진 챔버와 리테이너를 교환하고 클러치 디스크, 플레이트, 오일필터도 교체했습니다. 같은 아슬란이라도 증상과 내부 상태에 따라 작업 범위가 달라집니다. 상담 시에는 충격이 생기는 시점과 R단에서 차량이 움직이는지 알려주세요.</p><figure><img src=\"/blog-imports/224446353203/12.jpg\" alt=\"분해한 아슬란 미션 내부 부품과 케이스\" loading=\"lazy\" /><figcaption>분해한 아슬란 미션 내부 부품과 케이스</figcaption></figure><figure><img src=\"/blog-imports/224446353203/15.jpg\" alt=\"아슬란 미션 오일필터 교환 기록\" loading=\"lazy\" /><figcaption>아슬란 미션 오일필터 교환 기록</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224446353203\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224446353203/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "현대",
+        "아슬란"
+      ],
+      "symptom_tags": [
+        "변속충격",
+        "후진 불량",
+        "챔버 파손"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224446353203",
+      "created_at": "2026-10-19T11:28:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "아슬란 오토미션 수리·주행 중 변속충격과 후진 불량",
+      "seo_description": "현대 아슬란이 주행 중 변속충격과 후진 불량으로 입고됐습니다. R단에 놓고 브레이크에서 발을 떼어도 뒤로 움직이지 않는 증상이 함께 있었습니다. 이번 기록은 현대 6단 자동변속기를 분해해 내부 손상을 확인한 작업입니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224443035055",
+      "url": "https://blog.naver.com/koreaautolife/224443035055",
+      "title": "부산 BMWx6 트랜스퍼케이스 수리 / 핸들 돌리고 출발시 턱턱턱~ 심한 진동",
+      "publishedAt": "2026-10-15T21:46:00+09:00",
+      "editorNote": "로커암커버는 누유 확인만 기록되어 있어 교체 완료로 쓰지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTVfMjQ1/MDAxNzkyMDY1Mjc0OTQ0.2t1ihEYtz6U4Ra1mHVrzmXQ9X50IHoxEt55Mgi9ARj4g.b1MIuvbj0BFgiRURTeyx1MRtrZORJGUWIq3s_QQb4CEg.JPEG/SE-772f1b55-07ba-4726-b01f-77a3837ac74d.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTVfMjQ1/MDAxNzkyMDY1Mjc0OTQ0.2t1ihEYtz6U4Ra1mHVrzmXQ9X50IHoxEt55Mgi9ARj4g.b1MIuvbj0BFgiRURTeyx1MRtrZORJGUWIq3s_QQb4CEg.JPEG/SE-772f1b55-07ba-4726-b01f-77a3837ac74d.jpg?type=w966",
+          "localPath": "/blog-imports/224443035055/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTVfMjMg/MDAxNzkyMDY1MTUyNzM0.BSYcytuV7Iy4inK9mc7_QfKhsMbAbuOuxaD3qCd0KqMg.ubSvmi2kpFwfhzRb6L3cbVxtDpxIvWvErO3JzKpQKdUg.JPEG/20260910_114654.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTVfMjMg/MDAxNzkyMDY1MTUyNzM0.BSYcytuV7Iy4inK9mc7_QfKhsMbAbuOuxaD3qCd0KqMg.ubSvmi2kpFwfhzRb6L3cbVxtDpxIvWvErO3JzKpQKdUg.JPEG/20260910_114654.jpg?type=w966",
+          "localPath": "/blog-imports/224443035055/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTVfMTU3/MDAxNzkyMDY1MTUzNTEy.PT1RIek7t8kWayFUPwgHDlXlTJpSTCo6GzbZB0kecPIg.6k2dkowxEgXJ-DCpvZFWWOh8Pi4GamkDRwdeyLcHKJ8g.JPEG/20260910_145429.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTVfMTU3/MDAxNzkyMDY1MTUzNTEy.PT1RIek7t8kWayFUPwgHDlXlTJpSTCo6GzbZB0kecPIg.6k2dkowxEgXJ-DCpvZFWWOh8Pi4GamkDRwdeyLcHKJ8g.JPEG/20260910_145429.jpg?type=w966",
+          "localPath": "/blog-imports/224443035055/07.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTVfMjUz/MDAxNzkyMDY1MTU0NjAw.NLmLUHCgCKSxLEIDIGRk1LVBBpuhgsraHh7Xhf_ZAAcg.ZgDcP21FwvDekAZSO0tAXvyoO0I8z6VU_himEVJzZV0g.JPEG/20260914_115409.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTVfMjUz/MDAxNzkyMDY1MTU0NjAw.NLmLUHCgCKSxLEIDIGRk1LVBBpuhgsraHh7Xhf_ZAAcg.ZgDcP21FwvDekAZSO0tAXvyoO0I8z6VU_himEVJzZV0g.JPEG/20260914_115409.jpg?type=w966",
+          "localPath": "/blog-imports/224443035055/09.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTVfMzkg/MDAxNzkyMDY1MTU0NTc1.XLSD_CZnoxk7ncJDHD6pWhzimr2wCXQoCCT3Wu3abiQg.Dxv0q9UPwPdSnjPIeoVisAQNgP4pZjPMcdYirAIUPWYg.JPEG/20260914_121742.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTVfMzkg/MDAxNzkyMDY1MTU0NTc1.XLSD_CZnoxk7ncJDHD6pWhzimr2wCXQoCCT3Wu3abiQg.Dxv0q9UPwPdSnjPIeoVisAQNgP4pZjPMcdYirAIUPWYg.JPEG/20260914_121742.jpg?type=w966",
+          "localPath": "/blog-imports/224443035055/11.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "8aabc34e-2a07-4b92-b055-6982634292c8",
+      "slug": "naver-224443035055",
+      "title": "BMW X6 트랜스퍼케이스 수리·회전 출발 진동과 떨림",
+      "subtitle": "약 16만 km를 운행한 BMW X6 디젤 차량입니다. 핸들을 약간 돌린 상태에서 가속하면 턱턱거리는 진동과 떨림이 심했고, 유턴하거나 서서히 멈출 때도 툭툭 치는 충격이 있었습니다. 이번 차량은 ZF 8단 변속기 뒤에 연결된 사륜구동 트랜스퍼케이스를 점검했습니다.",
+      "excerpt": "약 16만 km를 운행한 BMW X6 디젤 차량입니다. 핸들을 약간 돌린 상태에서 가속하면 턱턱거리는 진동과 떨림이 심했고, 유턴하거나 서서히 멈출 때도 툭툭 치는 충격이 있었습니다. 이번 차량은 ZF 8단 변속기 뒤에 연결된 사륜구동 트랜스퍼케이스를 점검했습니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "X6 디젤",
+      "model_year": "",
+      "mileage": "약 160,000km",
+      "fuel_type": "디젤",
+      "transmission_type": "ZF 8단",
+      "service_id": "61f7a3ce-2124-4b1a-ad9f-314e28f56239",
+      "service_category": "트랜스퍼 케이스·디퍼런셜",
+      "symptoms": "약 16만 km를 운행한 BMW X6 디젤 차량입니다. 핸들을 약간 돌린 상태에서 가속하면 턱턱거리는 진동과 떨림이 심했고, 유턴하거나 서서히 멈출 때도 툭툭 치는 충격이 있었습니다. 이번 차량은 ZF 8단 변속기 뒤에 연결된 사륜구동 트랜스퍼케이스를 점검했습니다.",
+      "diagnosis": "차량을 들어 올려 트랜스퍼케이스를 변속기에서 분리했습니다. 탈거 과정에서 마운트가 떨어져 분리된 상태를 확인했고, 차주에게 알린 뒤 마운트 교체도 함께 진행했습니다. 회전 시 떨림뿐 아니라 연결 부위 상태도 함께 살핀 사례입니다.",
+      "cause": "",
+      "repair_process": "작업대에서 트랜스퍼케이스를 분해하니 오일이 변질되고 체인이 심하게 늘어난 상태가 확인됐습니다. 케이스와 각 부품을 세척하고 체인과 클러치 디스크를 신품으로 교체했습니다. 트랜스퍼케이스 내부 동력 전달 부품을 정비한 작업으로, 변속기 전체를 교환한 사례는 아닙니다.",
+      "replaced_parts": "트랜스퍼 체인, 클러치 디스크, 미션 마운트",
+      "work_summary": "새 마운트를 장착하고 전용 액상 가스켓을 사용해 재조립했습니다. 차주 요청에 따라 엔진오일 누유도 점검했으며 로커암커버 쪽 누유를 확인했습니다. 원문에는 해당 커버 교체 완료 기록은 없습니다. 전용 진단기로 세팅한 뒤 시운전했고, 기존에 발생하던 증상이 사라진 것을 확인해 마무리 점검 후 출고했습니다.",
+      "detailed_content": "핸들을 돌리고 출발할 때 턱턱거리는 진동\n약 16만 km를 운행한 BMW X6 디젤 차량입니다. 핸들을 약간 돌린 상태에서 가속하면 턱턱거리는 진동과 떨림이 심했고, 유턴하거나 서서히 멈출 때도 툭툭 치는 충격이 있었습니다. 이번 차량은 ZF 8단 변속기 뒤에 연결된 사륜구동 트랜스퍼케이스를 점검했습니다.\n\n트랜스퍼 탈거 중 함께 발견한 마운트 손상\n차량을 들어 올려 트랜스퍼케이스를 변속기에서 분리했습니다. 탈거 과정에서 마운트가 떨어져 분리된 상태를 확인했고, 차주에게 알린 뒤 마운트 교체도 함께 진행했습니다. 회전 시 떨림뿐 아니라 연결 부위 상태도 함께 살핀 사례입니다.\n\n늘어난 체인과 클러치 디스크 정비\n작업대에서 트랜스퍼케이스를 분해하니 오일이 변질되고 체인이 심하게 늘어난 상태가 확인됐습니다. 케이스와 각 부품을 세척하고 체인과 클러치 디스크를 신품으로 교체했습니다. 트랜스퍼케이스 내부 동력 전달 부품을 정비한 작업으로, 변속기 전체를 교환한 사례는 아닙니다.\n\n마운트 교체·재조립 후 세팅과 시운전\n새 마운트를 장착하고 전용 액상 가스켓을 사용해 재조립했습니다. 차주 요청에 따라 엔진오일 누유도 점검했으며 로커암커버 쪽 누유를 확인했습니다. 원문에는 해당 커버 교체 완료 기록은 없습니다. 전용 진단기로 세팅한 뒤 시운전했고, 기존에 발생하던 증상이 사라진 것을 확인해 마무리 점검 후 출고했습니다.",
+      "content_html": "<h2>핸들을 돌리고 출발할 때 턱턱거리는 진동</h2><p>약 16만 km를 운행한 BMW X6 디젤 차량입니다. 핸들을 약간 돌린 상태에서 가속하면 턱턱거리는 진동과 떨림이 심했고, 유턴하거나 서서히 멈출 때도 툭툭 치는 충격이 있었습니다. 이번 차량은 ZF 8단 변속기 뒤에 연결된 사륜구동 트랜스퍼케이스를 점검했습니다.</p><h2>트랜스퍼 탈거 중 함께 발견한 마운트 손상</h2><p>차량을 들어 올려 트랜스퍼케이스를 변속기에서 분리했습니다. 탈거 과정에서 마운트가 떨어져 분리된 상태를 확인했고, 차주에게 알린 뒤 마운트 교체도 함께 진행했습니다. 회전 시 떨림뿐 아니라 연결 부위 상태도 함께 살핀 사례입니다.</p><figure><img src=\"/blog-imports/224443035055/05.jpg\" alt=\"BMW X6 트랜스퍼케이스 탈거 중 확인한 마운트 상태\" loading=\"lazy\" /><figcaption>BMW X6 트랜스퍼케이스 탈거 중 확인한 마운트 상태</figcaption></figure><h2>늘어난 체인과 클러치 디스크 정비</h2><p>작업대에서 트랜스퍼케이스를 분해하니 오일이 변질되고 체인이 심하게 늘어난 상태가 확인됐습니다. 케이스와 각 부품을 세척하고 체인과 클러치 디스크를 신품으로 교체했습니다. 트랜스퍼케이스 내부 동력 전달 부품을 정비한 작업으로, 변속기 전체를 교환한 사례는 아닙니다.</p><figure><img src=\"/blog-imports/224443035055/07.jpg\" alt=\"완전히 분해한 BMW X6 트랜스퍼케이스\" loading=\"lazy\" /><figcaption>완전히 분해한 BMW X6 트랜스퍼케이스</figcaption></figure><figure><img src=\"/blog-imports/224443035055/09.jpg\" alt=\"트랜스퍼케이스 클러치 디스크 교환 작업\" loading=\"lazy\" /><figcaption>트랜스퍼케이스 클러치 디스크 교환 작업</figcaption></figure><h2>마운트 교체·재조립 후 세팅과 시운전</h2><p>새 마운트를 장착하고 전용 액상 가스켓을 사용해 재조립했습니다. 차주 요청에 따라 엔진오일 누유도 점검했으며 로커암커버 쪽 누유를 확인했습니다. 원문에는 해당 커버 교체 완료 기록은 없습니다. 전용 진단기로 세팅한 뒤 시운전했고, 기존에 발생하던 증상이 사라진 것을 확인해 마무리 점검 후 출고했습니다.</p><figure><img src=\"/blog-imports/224443035055/11.jpg\" alt=\"BMW X6 트랜스퍼케이스 재조립 과정\" loading=\"lazy\" /><figcaption>BMW X6 트랜스퍼케이스 재조립 과정</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224443035055\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224443035055/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "X6 디젤"
+      ],
+      "symptom_tags": [
+        "회전 출발 진동",
+        "유턴 떨림",
+        "트랜스퍼케이스"
+      ],
+      "general_tags": [
+        "트랜스퍼 케이스·디퍼런셜",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224443035055",
+      "created_at": "2026-10-15T21:46:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "BMW X6 트랜스퍼케이스 수리·회전 출발 진동과 떨림",
+      "seo_description": "약 16만 km를 운행한 BMW X6 디젤 차량입니다. 핸들을 약간 돌린 상태에서 가속하면 턱턱거리는 진동과 떨림이 심했고, 유턴하거나 서서히 멈출 때도 툭툭 치는 충격이 있었습니다. 이번 차량은 ZF 8단 변속기 뒤에 연결된 사륜구동 트랜스퍼케이스를 점검했습니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224439449222",
+      "url": "https://blog.naver.com/koreaautolife/224439449222",
+      "title": "카니발 17만km 디젤클리닝 (흡기,인젝터,dpf) | 종합정비",
+      "publishedAt": "2026-10-12T21:24:00+09:00",
+      "editorNote": "고장코드 확인과 실제 교환 작업을 구분했습니다. 출력·연비 개선 수치는 원문에 없어 쓰지 않았습니다.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfNzMg/MDAxNzkxNzc0NzIwNTQw.yolscyascIRX8gGz36JWAEI6JmOFx3pYzjxie9Mdq88g.FgS_FAlVylEWf82zemSKE_028UJagsz6H7DzrkwG60Ig.JPEG/SE-9a3fe04f-bfc2-441e-b298-dbce4b72e370.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfNzMg/MDAxNzkxNzc0NzIwNTQw.yolscyascIRX8gGz36JWAEI6JmOFx3pYzjxie9Mdq88g.FgS_FAlVylEWf82zemSKE_028UJagsz6H7DzrkwG60Ig.JPEG/SE-9a3fe04f-bfc2-441e-b298-dbce4b72e370.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfMzYg/MDAxNzkxNzc0NjAwNTA5.mavVacx6XdCHYE8SNwZey5i6aurozAkNLAtN96LjDHsg.hfmUqgaB-yCcVP5vcl5_wfI6Rc0LniP2kQabTNz7-v0g.JPEG/1787558561755.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfMzYg/MDAxNzkxNzc0NjAwNTA5.mavVacx6XdCHYE8SNwZey5i6aurozAkNLAtN96LjDHsg.hfmUqgaB-yCcVP5vcl5_wfI6Rc0LniP2kQabTNz7-v0g.JPEG/1787558561755.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfMjg4/MDAxNzkxNzc0NjAzMjEy.TCzy6Wt44dip7wtomv5B4bplkAzdSB_pEuIGRLh-rVcg.rHsHEHyYrMHxw2BcLWIjhVOwB2b5Rn1eZw0iGMJ1RjUg.JPEG/1787558562427.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfMjg4/MDAxNzkxNzc0NjAzMjEy.TCzy6Wt44dip7wtomv5B4bplkAzdSB_pEuIGRLh-rVcg.rHsHEHyYrMHxw2BcLWIjhVOwB2b5Rn1eZw0iGMJ1RjUg.JPEG/1787558562427.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/18.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfMTg0/MDAxNzkxNzc0NTk4ODc3.9r734lMuq1YqgVTBwEnJIFM1Qa3YILY-JV6-rWDHqrwg.t7Vismn3RVN5S1xb_uSNfJSdDl9g-5qEBmU1PsVqAH4g.JPEG/1787558561561.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfMTg0/MDAxNzkxNzc0NTk4ODc3.9r734lMuq1YqgVTBwEnJIFM1Qa3YILY-JV6-rWDHqrwg.t7Vismn3RVN5S1xb_uSNfJSdDl9g-5qEBmU1PsVqAH4g.JPEG/1787558561561.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/21.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfMjY4/MDAxNzkxNzc0NjAyODA3.ikLt3SSkhL2JZI6Xekg5qRM-cz_ldWroxUiKBrhYehIg.90RBCx6oZNQcWktkt7HNOXc4BIyPiDQh4ArXcWuUdnMg.JPEG/1787558562253.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfMjY4/MDAxNzkxNzc0NjAyODA3.ikLt3SSkhL2JZI6Xekg5qRM-cz_ldWroxUiKBrhYehIg.90RBCx6oZNQcWktkt7HNOXc4BIyPiDQh4ArXcWuUdnMg.JPEG/1787558562253.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/25.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfOTIg/MDAxNzkxNzc0NTk5MjM3.KbkX08xcu04W-XZFKPOyoXkLhyDE0rIjJNVPrnr8qeUg.w_aRq1DkK59rwpgiO6MgcjTDLk6mFwpDPU9YGWONZiQg.JPEG/1787558562509.jpg",
+          "width": 4032,
+          "height": 3025,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfOTIg/MDAxNzkxNzc0NTk5MjM3.KbkX08xcu04W-XZFKPOyoXkLhyDE0rIjJNVPrnr8qeUg.w_aRq1DkK59rwpgiO6MgcjTDLk6mFwpDPU9YGWONZiQg.JPEG/1787558562509.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/28.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTJfNDcg/MDAxNzkxNzc0NTk5MjQ1.7mxGT3LzeiiQrZ9HpqMkFaaiAHYOL5kvx4NjkbQr7yMg.9tdy4pmkg_1vfWMdsPG5MshYs4oGwl-4MJjoHPcm6CUg.JPEG/1787558562803.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTJfNDcg/MDAxNzkxNzc0NTk5MjQ1.7mxGT3LzeiiQrZ9HpqMkFaaiAHYOL5kvx4NjkbQr7yMg.9tdy4pmkg_1vfWMdsPG5MshYs4oGwl-4MJjoHPcm6CUg.JPEG/1787558562803.jpg?type=w966",
+          "localPath": "/blog-imports/224439449222/29.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "9e755428-fe24-42c1-a695-fa5fb2bd5819",
+      "slug": "naver-224439449222",
+      "title": "2016 올뉴 카니발 17만 km 흡기·인젝터·DPF 클리닝",
+      "subtitle": "2016년식 올뉴 카니발 2.2 디젤 차량으로 주행거리는 17만 km입니다. 흡기·인젝터·DPF 클리닝과 연료필터, 하체 정비를 함께 진행했습니다. 진단기에 크랭크각센서와 스마트키 관련 코드가 남아 있었지만, 코드만으로 부품을 교환하지 않고 실제 상태를 확인하며 작업 범위를 정했습니다.",
+      "excerpt": "2016년식 올뉴 카니발 2.2 디젤 차량으로 주행거리는 17만 km입니다. 흡기·인젝터·DPF 클리닝과 연료필터, 하체 정비를 함께 진행했습니다. 진단기에 크랭크각센서와 스마트키 관련 코드가 남아 있었지만, 코드만으로 부품을 교환하지 않고 실제 상태를 확인하며 작업 범위를 정했습니다.",
+      "vehicle_brand": "기아",
+      "manufacturer": "기아",
+      "vehicle_model": "올뉴 카니발 2.2 디젤",
+      "model_year": "2016",
+      "mileage": "170,000km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "2016년식 올뉴 카니발 2.2 디젤 차량으로 주행거리는 17만 km입니다. 흡기·인젝터·DPF 클리닝과 연료필터, 하체 정비를 함께 진행했습니다. 진단기에 크랭크각센서와 스마트키 관련 코드가 남아 있었지만, 코드만으로 부품을 교환하지 않고 실제 상태를 확인하며 작업 범위를 정했습니다.",
+      "diagnosis": "엔진룸 외관에는 심한 누유가 보이지 않았지만 흡기매니폴드 내부에는 카본이 많이 쌓여 있었습니다. EGR 계통 오염도 확인해 흡기 부품을 세척한 뒤 다시 장착했습니다. 이 차량에서 확인한 오염과 작업 내용을 기록한 것으로, 모든 차량에 같은 교환이나 세척 범위를 적용하는 것은 아닙니다.",
+      "cause": "",
+      "repair_process": "인젝터를 탈거해 노즐 오염을 확인하고 전용 장비로 세척했습니다. 세척 후에는 인젝터 동와샤도 교환했습니다. DPF는 차량에서 분리해 1차로 슬러지와 카본을 불리고, 2차 고압 세척으로 배출하는 순서로 클리닝한 뒤 재장착했습니다.",
+      "replaced_parts": "인젝터 동와샤, 연료필터, 하체·로워암 부싱, 엔진 마운트",
+      "work_summary": "차주가 의뢰한 연료필터를 신품으로 교환했습니다. 손상된 하체 부싱과 로워암 부싱도 교체했으며, 엔진 진동과 관련해 마운트 교환 및 위치 조정을 진행했습니다. 디젤클리닝과 하체 정비는 작업 부위가 다르므로 상담 시에는 진동이 정차 중인지, 출발·제동 중인지 함께 알려주시면 점검 범위를 정하는 데 도움이 됩니다.",
+      "detailed_content": "17만 km 카니발의 디젤 계통과 하체 점검\n2016년식 올뉴 카니발 2.2 디젤 차량으로 주행거리는 17만 km입니다. 흡기·인젝터·DPF 클리닝과 연료필터, 하체 정비를 함께 진행했습니다. 진단기에 크랭크각센서와 스마트키 관련 코드가 남아 있었지만, 코드만으로 부품을 교환하지 않고 실제 상태를 확인하며 작업 범위를 정했습니다.\n\n흡기매니폴드와 EGR 계통 카본 세척\n엔진룸 외관에는 심한 누유가 보이지 않았지만 흡기매니폴드 내부에는 카본이 많이 쌓여 있었습니다. EGR 계통 오염도 확인해 흡기 부품을 세척한 뒤 다시 장착했습니다. 이 차량에서 확인한 오염과 작업 내용을 기록한 것으로, 모든 차량에 같은 교환이나 세척 범위를 적용하는 것은 아닙니다.\n\n인젝터 동와샤 교환과 DPF 탈거 클리닝\n인젝터를 탈거해 노즐 오염을 확인하고 전용 장비로 세척했습니다. 세척 후에는 인젝터 동와샤도 교환했습니다. DPF는 차량에서 분리해 1차로 슬러지와 카본을 불리고, 2차 고압 세척으로 배출하는 순서로 클리닝한 뒤 재장착했습니다.\n\n연료필터와 하체·엔진 마운트 정비\n차주가 의뢰한 연료필터를 신품으로 교환했습니다. 손상된 하체 부싱과 로워암 부싱도 교체했으며, 엔진 진동과 관련해 마운트 교환 및 위치 조정을 진행했습니다. 디젤클리닝과 하체 정비는 작업 부위가 다르므로 상담 시에는 진동이 정차 중인지, 출발·제동 중인지 함께 알려주시면 점검 범위를 정하는 데 도움이 됩니다.",
+      "content_html": "<h2>17만 km 카니발의 디젤 계통과 하체 점검</h2><p>2016년식 올뉴 카니발 2.2 디젤 차량으로 주행거리는 17만 km입니다. 흡기·인젝터·DPF 클리닝과 연료필터, 하체 정비를 함께 진행했습니다. 진단기에 크랭크각센서와 스마트키 관련 코드가 남아 있었지만, 코드만으로 부품을 교환하지 않고 실제 상태를 확인하며 작업 범위를 정했습니다.</p><h2>흡기매니폴드와 EGR 계통 카본 세척</h2><p>엔진룸 외관에는 심한 누유가 보이지 않았지만 흡기매니폴드 내부에는 카본이 많이 쌓여 있었습니다. EGR 계통 오염도 확인해 흡기 부품을 세척한 뒤 다시 장착했습니다. 이 차량에서 확인한 오염과 작업 내용을 기록한 것으로, 모든 차량에 같은 교환이나 세척 범위를 적용하는 것은 아닙니다.</p><figure><img src=\"/blog-imports/224439449222/05.jpg\" alt=\"카니발 흡기 계통에서 확인한 카본 퇴적\" loading=\"lazy\" /><figcaption>카니발 흡기 계통에서 확인한 카본 퇴적</figcaption></figure><h2>인젝터 동와샤 교환과 DPF 탈거 클리닝</h2><p>인젝터를 탈거해 노즐 오염을 확인하고 전용 장비로 세척했습니다. 세척 후에는 인젝터 동와샤도 교환했습니다. DPF는 차량에서 분리해 1차로 슬러지와 카본을 불리고, 2차 고압 세척으로 배출하는 순서로 클리닝한 뒤 재장착했습니다.</p><figure><img src=\"/blog-imports/224439449222/18.jpg\" alt=\"탈거한 카니발 인젝터와 동와샤\" loading=\"lazy\" /><figcaption>탈거한 카니발 인젝터와 동와샤</figcaption></figure><figure><img src=\"/blog-imports/224439449222/21.jpg\" alt=\"전용 세척 장비에 연결한 카니발 DPF\" loading=\"lazy\" /><figcaption>전용 세척 장비에 연결한 카니발 DPF</figcaption></figure><h2>연료필터와 하체·엔진 마운트 정비</h2><p>차주가 의뢰한 연료필터를 신품으로 교환했습니다. 손상된 하체 부싱과 로워암 부싱도 교체했으며, 엔진 진동과 관련해 마운트 교환 및 위치 조정을 진행했습니다. 디젤클리닝과 하체 정비는 작업 부위가 다르므로 상담 시에는 진동이 정차 중인지, 출발·제동 중인지 함께 알려주시면 점검 범위를 정하는 데 도움이 됩니다.</p><figure><img src=\"/blog-imports/224439449222/25.jpg\" alt=\"카니발 연료필터 교환 부위\" loading=\"lazy\" /><figcaption>카니발 연료필터 교환 부위</figcaption></figure><figure><img src=\"/blog-imports/224439449222/28.jpg\" alt=\"카니발 로워암 부싱 정비 기록\" loading=\"lazy\" /><figcaption>카니발 로워암 부싱 정비 기록</figcaption></figure><figure><img src=\"/blog-imports/224439449222/29.jpg\" alt=\"카니발 엔진 마운트 교환 작업\" loading=\"lazy\" /><figcaption>카니발 엔진 마운트 교환 작업</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224439449222\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224439449222/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "기아",
+        "올뉴 카니발 2.2 디젤"
+      ],
+      "symptom_tags": [
+        "흡기 카본",
+        "인젝터 세척",
+        "DPF 탈거 클리닝"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "블로그 정비 기록",
+        "인젝터 클리닝",
+        "DPF 클리닝"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224439449222",
+      "created_at": "2026-10-12T21:24:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "2016 올뉴 카니발 17만 km 흡기·인젝터·DPF 클리닝",
+      "seo_description": "2016년식 올뉴 카니발 2.2 디젤 차량으로 주행거리는 17만 km입니다. 흡기·인젝터·DPF 클리닝과 연료필터, 하체 정비를 함께 진행했습니다. 진단기에 크랭크각센서와 스마트키 관련 코드가 남아 있었지만, 코드만으로 부품을 교환하지 않고 실제 상태를 확인하며 작업 범위를 정",
+      "noindex": false,
+      "view_count": 0
+    }
   }
 ]
