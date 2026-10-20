@@ -132,7 +132,15 @@ export default async function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": `${siteUrl}/#website`,
+            url: siteUrl,
+            name: settings.business_name || "코리아오토미션",
+            alternateName: settings.english_brand_name || "KOREA AUTO MISSION",
+            inLanguage: "ko-KR",
+          }]).replace(/</g, "\\u003c") }}
         />
         {isBlogImportPreview() ? (
           <aside className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 bg-amber-50 px-4 py-3 text-center text-xs font-medium leading-5 text-amber-950">

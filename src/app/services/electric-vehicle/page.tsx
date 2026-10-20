@@ -9,13 +9,14 @@ import { SITE_URL, telHref } from "@/lib/utils";
 import s from "./page.module.css";
 
 const path = "/services/electric-vehicle";
-const title = "부산 전기차 수리 · 모터·감속기·배터리·인버터 정비";
-const description = "전기차 주행 소음부터 충전 불량까지. 코리아오토미션의 아이오닉 EV 모터·감속기 실제 수리 기록과 배터리·인버터 점검 안내. 차종과 증상을 전화·문자로 상담하세요.";
+const title = "부산 전기차 수리";
+const description = "주행 소음과 충전 불량, 차량의 작은 변화부터 살핍니다. 모터·감속기 수리 기록과 배터리·인버터 점검 안내를 확인하세요. 코리아오토미션 전기차 정비 · 전화·문자 상담.";
 const source = "https://blog.naver.com/koreaautolife/224436118376";
 const photos = "/ev/ionic-repair/";
 export const metadata: Metadata = {
   title, description, alternates: { canonical: `${SITE_URL}${path}` },
-  openGraph: { title: `${title} | 코리아오토미션`, description, url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR", images: [{ url: `${SITE_URL}${photos}vehicle.jpg`, width: 966, height: 725, alt: "코리아오토미션에 입고된 아이오닉 EV" }] },
+  openGraph: { title: `${title} | 코리아오토미션`, description, siteName: "코리아오토미션", url: `${SITE_URL}${path}`, type: "website", locale: "ko_KR", images: [{ url: `${SITE_URL}${photos}assembly.jpg`, width: 966, height: 725, alt: "코리아오토미션의 실제 전기차 모터·감속기 정비" }] },
+  twitter: { card: "summary_large_image", title: `${title} | 코리아오토미션`, description, images: [`${SITE_URL}${photos}assembly.jpg`] },
 };
 const topics = [
   { name: "모터·감속기", sub: "주행 소음 / 가속·감속 시 진동", text: "언제, 어느 속도에서 소리가 달라지는지부터 듣습니다. 모터와 감속기 등 발생 부위를 구분해 필요한 작업을 확인합니다.", cue: "소리가 나는 속도와 상황을 알려주세요." },
@@ -35,7 +36,7 @@ export default async function ElectricVehiclePage() {
     getPaginatedWorks({ category: "전기차 수리", sort: "newest", page: 1, pageSize: 6 }),
   ]);
   const relatedCases = electricWorks.items.filter(work => work.slug !== "naver-224436118376");
-  const schema = { "@context": "https://schema.org", "@type": "Service", name: title, description, url: `${SITE_URL}${path}`, serviceType: "전기차 점검·수리 상담", provider: { "@type": "AutoRepair", name: settings.business_name, telephone: settings.phone, url: SITE_URL } };
+  const schema = { "@context": "https://schema.org", "@type": "Service", name: title, description, url: `${SITE_URL}${path}`, image: `${SITE_URL}${photos}assembly.jpg`, serviceType: "전기차 점검·수리 상담", provider: { "@type": "AutoRepair", name: settings.business_name, telephone: settings.phone, url: SITE_URL } };
   return <div className={s.site}>
     <header className={s.evHeader}>
       <Link href="/" className={s.wordmark} aria-label="코리아오토미션 홈">KOREA AUTO<span>전기차 정비</span></Link>
