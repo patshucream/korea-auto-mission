@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WorkshopAddress } from "@/components/ui/WorkshopAddress";
 import type { ReactNode } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -94,6 +95,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <p className={s.eyebrow}><span className={s.blueLine} />KOREA AUTO MISSION </p>
           <h1 id="workshop-title">{(settings.hero_title || DEFAULT_SETTINGS.hero_title).split("\n").map((line, index) => <span className={index === 1 ? s.accentLine : undefined} key={index}>{line}</span>)}</h1>
           <p className={s.heroLead}>{settings.hero_description}</p>
+          <WorkshopAddress address={settings.address} mapUrl={map} light compact />
           <div className={s.heroActions}>
             <a className={s.primaryButton} href={phone}>전화 상담 <Arrow /></a>
             <SmsLink phone={settings.phone} className={s.heroSms}>문자 상담 <Arrow /></SmsLink>
@@ -175,12 +177,12 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
     ) : null,
     location: (
       <section id="location" className={s.location}>
-        <div className={s.locationCopy}><p className={s.eyebrow}>LOCATION</p><h2>코리아오토미션<br />오시는 길.</h2><p className={s.address}>{settings.address}</p><dl className={s.hours}><div><dt>평일</dt><dd>{settings.weekday_hours}</dd></div><div><dt>토요일</dt><dd>{settings.saturday_hours}</dd></div><div><dt>일요일</dt><dd>휴무</dd></div><div><dt>공휴일</dt><dd>{settings.holiday_hours}</dd></div></dl><p className={s.visitNote}>방문 전 전화로 입고 일정을 상담해 주세요.</p><a href={map} className={s.inlineLink} target="_blank" rel="noopener noreferrer">네이버 매장·후기 <Arrow /></a></div>
+        <div className={s.locationCopy}><p className={s.eyebrow}>LOCATION</p><h2>코리아오토미션<br />오시는 길.</h2><WorkshopAddress address={settings.address} mapUrl={map} copy /><dl className={s.hours}><div><dt>평일</dt><dd>{settings.weekday_hours}</dd></div><div><dt>토요일</dt><dd>{settings.saturday_hours}</dd></div><div><dt>일요일</dt><dd>휴무</dd></div><div><dt>공휴일</dt><dd>{settings.holiday_hours}</dd></div></dl><p className={s.visitNote}>방문 전 전화로 입고 일정을 상담해 주세요.</p><a href={map} className={s.inlineLink} target="_blank" rel="noopener noreferrer">네이버 매장·후기 <Arrow /></a></div>
         <div className={s.locationMap} data-reveal><NaverLocationMap /></div>
       </section>
     ),
     cta: (
-      <section id="contact" className={s.contact}><div><p className={s.eyebrow}>CONTACT THE WORKSHOP</p><h2>{config.cta_title}</h2><p>{config.cta_description}</p></div><div className={s.contactActions}><a href={phone} className={s.phone}>{settings.phone}<Arrow /></a><div><SmsLink phone={settings.phone} className={s.lightButton}>문자로 상담하기 <Arrow /></SmsLink><a href={getBlogUrl(settings)} className={s.inlineLink} target="_blank" rel="noopener noreferrer">정비 블로그 <Arrow /></a></div><span>차종 · 연식 · 주행거리 · 증상을 함께 알려주세요.</span></div></section>
+      <section id="contact" className={s.contact}><div><p className={s.eyebrow}>CONTACT THE WORKSHOP</p><h2>{config.cta_title}</h2><p>{config.cta_description}</p><WorkshopAddress address={settings.address} mapUrl={map} light /></div><div className={s.contactActions}><a href={phone} className={s.phone}>{settings.phone}<Arrow /></a><div><SmsLink phone={settings.phone} className={s.lightButton}>문자로 상담하기 <Arrow /></SmsLink><a href={getBlogUrl(settings)} className={s.inlineLink} target="_blank" rel="noopener noreferrer">정비 블로그 <Arrow /></a></div><span>차종 · 연식 · 주행거리 · 증상을 함께 알려주세요.</span></div></section>
     ),
   };
 

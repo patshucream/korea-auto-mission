@@ -1,9 +1,10 @@
 "use client";
 
+import { WorkshopAddress } from "@/components/ui/WorkshopAddress";
 import { SmsLink } from "@/components/ui/SmsLink";
 import { useState } from "react";
 import type { SiteSettings } from "@/lib/types";
-import { telHref } from "@/lib/utils";
+import { getMapUrl, telHref } from "@/lib/utils";
 import s from "./ConsultationHelper.module.css";
 
 export function ConsultationHelper({ settings, service, symptoms, vehiclePlaceholder = "예: 스포티지 / 2018년 / 12만 km" }: {
@@ -25,6 +26,7 @@ export function ConsultationHelper({ settings, service, symptoms, vehiclePlaceho
       <p className={s.eyebrow}>내 차에 맞는 정비 상담</p>
       <h2 id="consultation-title">차종과 증상을<br />알려주세요.</h2>
       <p>진단 후 필요한 작업 범위와 견적을 안내합니다.<br />방문 전 정비 가능 여부와 일정을 확인해 주세요.</p>
+      <WorkshopAddress address={settings.address} mapUrl={getMapUrl(settings)} light />
       <a href={telHref(settings.phone)} className={s.phone} data-contact="phone">{settings.phone}</a>
       <p className={s.hours}>평일 {settings.weekday_hours} · 토요일 {settings.saturday_hours}<br />일요일 휴무 · 공휴일 {settings.holiday_hours}</p>
     </div>

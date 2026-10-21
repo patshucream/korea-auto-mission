@@ -1,3 +1,4 @@
+import { WorkshopAddress } from "@/components/ui/WorkshopAddress";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -5,7 +6,7 @@ import { SmsLink } from "@/components/ui/SmsLink";
 import { EvRepairExplorer, EvConsultation } from "@/components/ev/EvExperience";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { getPaginatedWorks, getSiteSettings } from "@/lib/data/content";
-import { SITE_URL, telHref } from "@/lib/utils";
+import { SITE_URL, getMapUrl, telHref } from "@/lib/utils";
 import s from "./page.module.css";
 
 const path = "/services/electric-vehicle";
@@ -84,7 +85,7 @@ export default async function ElectricVehiclePage() {
     </section>
     <section className={s.approach}><p className={s.eyebrow}>복잡한 정비, 편안한 상담.</p><h2>설명은 명확하게.<br /><span>선택은 충분히 이해한 다음.</span></h2><div>{[["차량 이야기부터", "차종과 증상, 소음이 나는 조건을 전화·문자로 확인합니다."],["점검으로 확인", "방문 일정을 상담하고 차량을 점검해 원인과 작업 범위를 확인합니다."],["견적과 일정 안내", "필요한 부품과 작업량을 바탕으로 비용과 일정을 안내합니다."]].map(([h,p],i)=><article key={h}><span>0{i+1}</span><h3>{h}</h3><p>{p}</p></article>)}</div></section>
     <section className={s.faq}><h2>궁금한 점,<br />먼저 살펴보세요.</h2><div>{questions.map(([q,a])=><details key={q}><summary>{q}<span aria-hidden="true">＋</span></summary><p>{a}</p></details>)}</div></section>
-    <section className={s.consultation} id="consultation" aria-labelledby="consult-title"><div className={s.consultIntro}><p className={s.eyebrow}>다음은, 당신의 전기차.</p><h2 id="consult-title">어떤 변화가<br />느껴지시나요?</h2><p>차종과 증상만 알려주세요.<br />필요한 점검부터 함께 확인하겠습니다.</p><p className={s.hours}>평일 {settings.weekday_hours}<br />토요일 {settings.saturday_hours}<br />일요일 휴무 · 공휴일 {settings.holiday_hours}</p></div><EvConsultation phone={settings.phone}/></section>
+    <section className={s.consultation} id="consultation" aria-labelledby="consult-title"><div className={s.consultIntro}><p className={s.eyebrow}>다음은, 당신의 전기차.</p><h2 id="consult-title">어떤 변화가<br />느껴지시나요?</h2><p>차종과 증상만 알려주세요.<br />필요한 점검부터 함께 확인하겠습니다.</p><WorkshopAddress address={settings.address} mapUrl={getMapUrl(settings)} /><p className={s.hours}>평일 {settings.weekday_hours}<br />토요일 {settings.saturday_hours}<br />일요일 휴무 · 공휴일 {settings.holiday_hours}</p></div><EvConsultation phone={settings.phone}/></section>
     </main>
     <footer className={s.evFooter}><div><Link href="/" className={s.wordmark}>KOREA AUTO<span>코리아오토미션</span></Link><p>{settings.address}<br /><a href={telHref(settings.phone)}>{settings.phone}</a></p></div><nav aria-label="매장 안내"><Link href="/#location">오시는 길 ↗</Link><Link href="/">코리아오토미션 홈 ↗</Link><Link href="/privacy">개인정보처리방침</Link></nav><small>© {new Date().getFullYear()} KOREA AUTO MISSION</small></footer>
     <aside className={s.mobileDock} aria-label="전기차 빠른 상담"><a href={telHref(settings.phone)} data-contact="phone">전화 상담 ↗</a><SmsLink phone={settings.phone} body={"[전기차 수리 상담]\n차종·연식:\n주행거리:\n증상:"}>문자 상담 ↗</SmsLink></aside>

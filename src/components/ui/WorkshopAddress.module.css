@@ -1,0 +1,16 @@
+.wrap { margin-top: 22px; color: #26382e; text-align: left; }
+.map { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; width: fit-content; min-height: 44px; text-decoration: none; }
+.map svg { width: 17px; height: 20px; flex: 0 0 17px; }
+.address { font-size: 18px; font-weight: 600; line-height: 1.6; letter-spacing: -.025em; word-break: keep-all; }
+.direction { font-size: 12px; font-weight: 500; white-space: nowrap; text-decoration: underline; text-underline-offset: 5px; }
+.light { color: #eef2eb; }
+.compact { margin-top: 14px; }
+.compact .address { font-size: 14px; }
+.compact .map { gap: 7px; }
+.copy { display: inline-flex; align-items: center; min-height: 44px; padding: 0 15px; margin-top: 8px; border: 1px solid currentColor; border-radius: 3px; font-size: 13px; cursor: pointer; background: transparent; }
+.status { display: block; min-height: 20px; margin-top: 5px; font-size: 12px; }
+.map:focus-visible, .copy:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+@media(max-width: 480px) { .address { font-size: 17px; } .compact .address { font-size: 13px; } .compact .direction { font-size: 11px; } }
+
+.location .address { font-size: 23px; }
+@media(max-width:480px) { .location .address { font-size:20px; } }

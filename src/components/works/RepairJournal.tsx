@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WorkshopAddress } from "@/components/ui/WorkshopAddress";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmsLink } from "@/components/ui/SmsLink";
@@ -43,7 +44,7 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
           {gallery.length>0&&<section className={s.chapter}><div className={s.chapterHeading}><span>＋</span><h2>추가 작업 사진</h2></div><JournalPhotos photos={gallery.map((src,i)=>({src,caption:`${work.vehicle_model} 작업 기록 ${i+1}`}))} title="추가 작업 사진"/></section>}
           {work.naver_blog_url&&<div className={s.source}><span>코리아오토미션의 정비 기록입니다.</span><a href={work.naver_blog_url} target="_blank" rel="noopener noreferrer">네이버 블로그 원문 ↗</a></div>}
           <WorkServiceContext work={work} settings={settings} />
-          <section className={s.consult} id="case-consultation"><p className={s.eyebrow}>ASK THE WORKSHOP</p><h2>내 차의 증상도<br/>편하게 알려주세요.</h2><p>차종·연식·주행거리와 증상을 문자로 남겨주세요.<br/>작업 범위와 비용은 차량 상태를 확인한 뒤 안내합니다.</p><div><SmsLink phone={settings.phone} body={smsBody} className={s.smsButton}>문자로 상담하기 ↗</SmsLink><a href={telHref(settings.phone)} className={s.phoneLink}>전화 {settings.phone}</a></div><a href={getMapUrl(settings)} className={s.mapLink} target="_blank" rel="noopener noreferrer">{settings.address} · 오시는 길 ↗</a></section>
+          <section className={s.consult} id="case-consultation"><p className={s.eyebrow}>ASK THE WORKSHOP</p><h2>내 차의 증상도<br/>편하게 알려주세요.</h2><p>차종·연식·주행거리와 증상을 문자로 남겨주세요.<br/>작업 범위와 비용은 차량 상태를 확인한 뒤 안내합니다.</p><WorkshopAddress address={settings.address} mapUrl={getMapUrl(settings)} light /><div><SmsLink phone={settings.phone} body={smsBody} className={s.smsButton}>문자로 상담하기 ↗</SmsLink><a href={telHref(settings.phone)} className={s.phoneLink}>전화 {settings.phone}</a></div></section>
         </div>
       </div>
     </article>
