@@ -855,7 +855,7 @@ async function getStoredPaginatedWorks(
       pageSize,
       totalPages: Math.max(1, Math.ceil(total / pageSize)),
       brands: [...new Set(DEFAULT_WORKS.map((w) => w.vehicle_brand))],
-      models: [...new Set(DEFAULT_WORKS.map((w) => w.vehicle_model))],
+      models: [...new Set(DEFAULT_WORKS.filter((w) => !params.brand || w.vehicle_brand === params.brand).map((w) => w.vehicle_model))],
       services: serviceOptions,
       categories: serviceOptions.map((s) => s.title),
     };
@@ -937,7 +937,7 @@ async function getStoredPaginatedWorks(
     pageSize,
     totalPages: Math.max(1, Math.ceil(total / pageSize)),
     brands: [...new Set(metaRows.map((r) => r.vehicle_brand).filter(Boolean))].sort(),
-    models: [...new Set(metaRows.map((r) => r.vehicle_model).filter(Boolean))].sort(),
+    models: [...new Set(metaRows.filter((r) => !params.brand || r.vehicle_brand === params.brand).map((r) => r.vehicle_model).filter(Boolean))].sort(),
     services: serviceOptions,
     categories: serviceOptions.map((s) => s.title),
   };

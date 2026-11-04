@@ -76,7 +76,7 @@ export default async function WorksPage({ searchParams }: Props) {
       <main className={s.library}>
         <section className={s.librarySection}>
           <div>
-            <header className={s.libraryHeading}><p>코리아오토미션 정비사례</p><h1>한 대씩, 쌓아온 정비 기록.</h1><span>차량의 증상부터 점검, 작업 과정까지.<br />현장에서 남긴 사진과 함께 살펴보세요.</span></header>
+            <header className={s.libraryHeading}><div><p className={s.eyebrow}>KOREA AUTO MISSION · WORKSHOP JOURNAL</p><h1>정비의 과정까지,<br />한 대의 기록으로.</h1><p className={s.intro}>미션·디젤·전기차·4륜 구동계.<br />실제 입고 차량의 증상과 작업 과정을 사진으로 전합니다.</p></div><div className={s.archiveMark} aria-hidden="true"><span>정비 기록</span><strong>JOURNAL</strong><span>차량을 살피고, 과정을 남깁니다.</span></div></header>
 
             <div>
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>
@@ -88,11 +88,11 @@ export default async function WorksPage({ searchParams }: Props) {
               </Suspense>
             </div>
 
-            <div className={s.resultCount}>
-              <p className="text-sm font-bold text-muted">
+            <div className={s.resultCount} id="work-results" aria-live="polite">
+              <p className={s.resultTitle}>
                 {hasFilter ? "검색 결과" : "최근 작업사례"}{" "}
-                <span className="text-charcoal">{result.total}</span>건
-              </p>
+                <span>{result.total}</span><small>건</small>
+              </p><span className={s.pageNote}>{result.page} / {result.totalPages} 페이지</span>
             </div>
 
             {result.items.length === 0 ? (
@@ -125,24 +125,21 @@ export default async function WorksPage({ searchParams }: Props) {
               <Link href="/services/transmission">미션수리 안내 <span aria-hidden="true">↗</span></Link>
               <Link href="/services/diesel-cleaning">디젤클리닝 안내 <span aria-hidden="true">↗</span></Link>
               <Link href="/services/electric-vehicle">전기차 수리 안내 <span aria-hidden="true">↗</span></Link>
+              <Link href="/services/drivetrain">4륜·구동계 안내 <span aria-hidden="true">↗</span></Link>
             </nav>
             {result.totalPages > 1 ? (
-              <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
+              <nav className={s.pagination} aria-label="작업사례 페이지">
                 {Array.from({ length: result.totalPages }, (_, i) => i + 1).map((p) => (
                   <Link
                     key={p}
                     href={makeHref(p)}
-                    className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded border px-3 text-sm font-bold ${
-                      p === result.page
-                        ? "border-navy bg-navy text-white"
-                        : "border-border text-charcoal"
-                    }`}
+                    className={s.pageLink}
                     aria-current={p === result.page ? "page" : undefined}
                   >
                     {p}
                   </Link>
                 ))}
-              </div>
+              </nav>
             ) : null}
           </div>
         </section>

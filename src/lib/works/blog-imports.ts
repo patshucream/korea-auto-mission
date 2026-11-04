@@ -104,7 +104,7 @@ export function paginateBlogPreview(
     items: items.slice((page - 1) * pageSize, page * pageSize),
     total, page, pageSize, totalPages: Math.max(1, Math.ceil(total / pageSize)),
     brands: [...new Set(all.map((work) => work.vehicle_brand).filter(Boolean))].sort(),
-    models: [...new Set(all.map((work) => work.vehicle_model).filter(Boolean))].sort(),
+    models: [...new Set(all.filter((work) => !params.brand || work.vehicle_brand === params.brand).map((work) => work.vehicle_model).filter(Boolean))].sort(),
     services: [...options.values()],
     categories: [...new Set(all.flatMap(getWorkServiceLabels))].sort(),
   };
