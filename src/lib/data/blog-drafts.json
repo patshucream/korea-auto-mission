@@ -7474,5 +7474,631 @@
       "noindex": false,
       "view_count": 0
     }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224462373676",
+      "url": "https://blog.naver.com/koreaautolife/224462373676",
+      "title": "QM6 디젤클리닝 3종/ 흡기,인젝터,DPF클리닝",
+      "publishedAt": "2026-11-02T16:05:00+09:00",
+      "editorNote": "고장 증상 없는 관리 목적 입고. 출력·연비 개선 수치는 추가하지 않음.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfMTMg/MDAxNzkzNTk3Njk4Njcw.p7z-FLU0_8yPfhN1_KoG4yne4wduD9Fd4dd2GPn1G4cg.ffNnR_3xCFLrTknnIScaBLheXTY7EX0QQRuFV_7wP4wg.JPEG/SE-d916a881-0655-42d2-af4b-21e0087347e5.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfMTMg/MDAxNzkzNTk3Njk4Njcw.p7z-FLU0_8yPfhN1_KoG4yne4wduD9Fd4dd2GPn1G4cg.ffNnR_3xCFLrTknnIScaBLheXTY7EX0QQRuFV_7wP4wg.JPEG/SE-d916a881-0655-42d2-af4b-21e0087347e5.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfNTcg/MDAxNzkzNTk3NTAxMzc4.SRf38KeIvVApTHVmSu4BjMhAwQC7a_NQPPi4cwfQE8Mg.30Rg9RlXfQtkDgIpPflaKIwl95QkQT15KbCrMJvC35Qg.JPEG/1793322879597.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfNTcg/MDAxNzkzNTk3NTAxMzc4.SRf38KeIvVApTHVmSu4BjMhAwQC7a_NQPPi4cwfQE8Mg.30Rg9RlXfQtkDgIpPflaKIwl95QkQT15KbCrMJvC35Qg.JPEG/1793322879597.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/04.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfNjYg/MDAxNzkzNTk3NTAyODk1.KLBJgVIqPAhpBG7eHtq7hAjeu5ZdBi90pZLZYxYc-_Mg.Ey1zAwJ2rlGyLDbk5AcaLPSFxXNiJ2yAg9batIIaFa8g.JPEG/1793322880050.jpg",
+          "width": 3024,
+          "height": 4032,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfNjYg/MDAxNzkzNTk3NTAyODk1.KLBJgVIqPAhpBG7eHtq7hAjeu5ZdBi90pZLZYxYc-_Mg.Ey1zAwJ2rlGyLDbk5AcaLPSFxXNiJ2yAg9batIIaFa8g.JPEG/1793322880050.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/14.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfOTEg/MDAxNzkzNTk3NDk5MjEx.c0eG1_shAF4ac07GcuUQDHr0njNttwZ2XeRUtBXUUaog.WCVK9KQGZUbOecaODu71MC0ZxzVT494I5LpLtl06EEMg.JPEG/1793322878881.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfOTEg/MDAxNzkzNTk3NDk5MjEx.c0eG1_shAF4ac07GcuUQDHr0njNttwZ2XeRUtBXUUaog.WCVK9KQGZUbOecaODu71MC0ZxzVT494I5LpLtl06EEMg.JPEG/1793322878881.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/18.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfMjgg/MDAxNzkzNTk3NDk5NTU5.ag4nCzzZqpm4Zf5iBaBaygChhCUabX9ArkUCaelSWWwg.FQQJmtETxjNbM7cMRA7Z6WtPRaF1e-yH_NFwSc7vMMEg.JPEG/1793322879058.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfMjgg/MDAxNzkzNTk3NDk5NTU5.ag4nCzzZqpm4Zf5iBaBaygChhCUabX9ArkUCaelSWWwg.FQQJmtETxjNbM7cMRA7Z6WtPRaF1e-yH_NFwSc7vMMEg.JPEG/1793322879058.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/21.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfNzkg/MDAxNzkzNTk3Njk1NDM0.yaUQrkmxCVObd8o8SMP-UE6aLdc3P7KSgP8U5vPHfF8g.hfaGtwDCUKGRATMG6eSncvcy8t7CbWoNq9KsiqBq40Eg.JPEG/SE-a1508ce5-74b9-40ce-8b7c-dcfb9a149013.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfNzkg/MDAxNzkzNTk3Njk1NDM0.yaUQrkmxCVObd8o8SMP-UE6aLdc3P7KSgP8U5vPHfF8g.hfaGtwDCUKGRATMG6eSncvcy8t7CbWoNq9KsiqBq40Eg.JPEG/SE-a1508ce5-74b9-40ce-8b7c-dcfb9a149013.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/22.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjExMDJfMjE1/MDAxNzkzNTk3NTAwOTEw.MM7m96SQJA4iUfE7cgMOoQDY8vxO8x4IapX-lMm3Jr8g.O1wPm0_wA18RVI7E40GkQp22kvVu9GqI7UWPaTmEWKIg.JPEG/1793322879442.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjExMDJfMjE1/MDAxNzkzNTk3NTAwOTEw.MM7m96SQJA4iUfE7cgMOoQDY8vxO8x4IapX-lMm3Jr8g.O1wPm0_wA18RVI7E40GkQp22kvVu9GqI7UWPaTmEWKIg.JPEG/1793322879442.jpg?type=w966",
+          "localPath": "/blog-imports/224462373676/25.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "83c28900-da24-4e35-8482-1e91b9d08851",
+      "slug": "naver-224462373676",
+      "title": "QM6 10만 km 흡기·인젝터·DPF 클리닝과 동와샤 교환",
+      "subtitle": "주행거리 109,862km의 QM6 디젤 차량입니다. 평소 운행 중 특별히 불편한 증상은 없었으며, 차주가 관리 시기를 챙겨 흡기·인젝터·DPF를 함께 클리닝하기로 했습니다. 고장 수리가 아닌 관리 목적의 작업으로, 세 부품을 각각 탈거해 상태를 확인했습니다.",
+      "excerpt": "주행거리 109,862km의 QM6 디젤 차량입니다. 평소 운행 중 특별히 불편한 증상은 없었으며, 차주가 관리 시기를 챙겨 흡기·인젝터·DPF를 함께 클리닝하기로 했습니다. 고장 수리가 아닌 관리 목적의 작업으로, 세 부품을 각각 탈거해 상태를 확인했습니다.",
+      "vehicle_brand": "르노코리아",
+      "manufacturer": "르노코리아",
+      "vehicle_model": "QM6",
+      "model_year": "",
+      "mileage": "109,862km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "48e02a71-0e47-43c3-803f-dadf181d7cd1",
+      "service_category": "흡기 클리닝",
+      "symptoms": "주행거리 109,862km의 QM6 디젤 차량입니다. 평소 운행 중 특별히 불편한 증상은 없었으며, 차주가 관리 시기를 챙겨 흡기·인젝터·DPF를 함께 클리닝하기로 했습니다. 고장 수리가 아닌 관리 목적의 작업으로, 세 부품을 각각 탈거해 상태를 확인했습니다.",
+      "diagnosis": "흡기 부품을 분리하니 입구와 안쪽 벽면에 카본이 붙어 있었습니다. 굴곡진 EGR 파이프 내부와 스로틀바디도 함께 세척했습니다. 카본이 검게 보인다는 사실만으로 고장이라고 단정할 수는 없으며, 이번 차량 역시 별도의 운행 불편은 없었습니다.",
+      "cause": "",
+      "repair_process": "4기통 디젤 엔진의 인젝터 4개를 탈거해 노즐에 붙은 오염을 제거했습니다. 인젝터 장착부의 밀봉을 담당하는 동와샤는 신품으로 교환했습니다. 노즐 표면 세척과 분사 성능 판정은 별개이며, 이번 기록에 분사량 측정 결과나 인젝터 전체 교환은 포함되지 않습니다.",
+      "replaced_parts": "인젝터 동와샤",
+      "work_summary": "DPF를 차량에서 내려 전용 장비에 고정하고 호스를 연결해 습식 클리닝을 진행했습니다. 재생 과정으로 없어지지 않는 내부 오염을 대상으로 한 작업입니다. 클리닝은 필터 자체의 파손을 수리하는 작업과 다르므로, 경고등이나 증상이 있다면 먼저 원인을 확인해야 합니다. 상담할 때는 주행거리와 이전 클리닝 이력, 평소 운행 환경을 함께 알려주세요.",
+      "detailed_content": "특별한 불편 없이 관리 시기에 입고한 QM6\n주행거리 109,862km의 QM6 디젤 차량입니다. 평소 운행 중 특별히 불편한 증상은 없었으며, 차주가 관리 시기를 챙겨 흡기·인젝터·DPF를 함께 클리닝하기로 했습니다. 고장 수리가 아닌 관리 목적의 작업으로, 세 부품을 각각 탈거해 상태를 확인했습니다.\n\n흡기 통로와 EGR 파이프의 카본 세척\n흡기 부품을 분리하니 입구와 안쪽 벽면에 카본이 붙어 있었습니다. 굴곡진 EGR 파이프 내부와 스로틀바디도 함께 세척했습니다. 카본이 검게 보인다는 사실만으로 고장이라고 단정할 수는 없으며, 이번 차량 역시 별도의 운행 불편은 없었습니다.\n\n인젝터 4개 클리닝과 신품 동와샤 장착\n4기통 디젤 엔진의 인젝터 4개를 탈거해 노즐에 붙은 오염을 제거했습니다. 인젝터 장착부의 밀봉을 담당하는 동와샤는 신품으로 교환했습니다. 노즐 표면 세척과 분사 성능 판정은 별개이며, 이번 기록에 분사량 측정 결과나 인젝터 전체 교환은 포함되지 않습니다.\n\nDPF 탈거 후 습식 장비 클리닝\nDPF를 차량에서 내려 전용 장비에 고정하고 호스를 연결해 습식 클리닝을 진행했습니다. 재생 과정으로 없어지지 않는 내부 오염을 대상으로 한 작업입니다. 클리닝은 필터 자체의 파손을 수리하는 작업과 다르므로, 경고등이나 증상이 있다면 먼저 원인을 확인해야 합니다. 상담할 때는 주행거리와 이전 클리닝 이력, 평소 운행 환경을 함께 알려주세요.",
+      "content_html": "<h2>특별한 불편 없이 관리 시기에 입고한 QM6</h2><p>주행거리 109,862km의 QM6 디젤 차량입니다. 평소 운행 중 특별히 불편한 증상은 없었으며, 차주가 관리 시기를 챙겨 흡기·인젝터·DPF를 함께 클리닝하기로 했습니다. 고장 수리가 아닌 관리 목적의 작업으로, 세 부품을 각각 탈거해 상태를 확인했습니다.</p><h2>흡기 통로와 EGR 파이프의 카본 세척</h2><p>흡기 부품을 분리하니 입구와 안쪽 벽면에 카본이 붙어 있었습니다. 굴곡진 EGR 파이프 내부와 스로틀바디도 함께 세척했습니다. 카본이 검게 보인다는 사실만으로 고장이라고 단정할 수는 없으며, 이번 차량 역시 별도의 운행 불편은 없었습니다.</p><figure><img src=\"/blog-imports/224462373676/04.jpg\" alt=\"QM6에서 분리한 흡기 부품\" loading=\"lazy\" /><figcaption>QM6에서 분리한 흡기 부품</figcaption></figure><figure><img src=\"/blog-imports/224462373676/14.jpg\" alt=\"세척을 진행한 QM6 EGR 파이프\" loading=\"lazy\" /><figcaption>세척을 진행한 QM6 EGR 파이프</figcaption></figure><h2>인젝터 4개 클리닝과 신품 동와샤 장착</h2><p>4기통 디젤 엔진의 인젝터 4개를 탈거해 노즐에 붙은 오염을 제거했습니다. 인젝터 장착부의 밀봉을 담당하는 동와샤는 신품으로 교환했습니다. 노즐 표면 세척과 분사 성능 판정은 별개이며, 이번 기록에 분사량 측정 결과나 인젝터 전체 교환은 포함되지 않습니다.</p><figure><img src=\"/blog-imports/224462373676/18.jpg\" alt=\"QM6에서 탈거한 인젝터 4개\" loading=\"lazy\" /><figcaption>QM6에서 탈거한 인젝터 4개</figcaption></figure><figure><img src=\"/blog-imports/224462373676/21.jpg\" alt=\"세척한 인젝터와 동와샤\" loading=\"lazy\" /><figcaption>세척한 인젝터와 동와샤</figcaption></figure><h2>DPF 탈거 후 습식 장비 클리닝</h2><p>DPF를 차량에서 내려 전용 장비에 고정하고 호스를 연결해 습식 클리닝을 진행했습니다. 재생 과정으로 없어지지 않는 내부 오염을 대상으로 한 작업입니다. 클리닝은 필터 자체의 파손을 수리하는 작업과 다르므로, 경고등이나 증상이 있다면 먼저 원인을 확인해야 합니다. 상담할 때는 주행거리와 이전 클리닝 이력, 평소 운행 환경을 함께 알려주세요.</p><figure><img src=\"/blog-imports/224462373676/22.jpg\" alt=\"QM6에서 탈거한 DPF\" loading=\"lazy\" /><figcaption>QM6에서 탈거한 DPF</figcaption></figure><figure><img src=\"/blog-imports/224462373676/25.jpg\" alt=\"전용 세척 장비에 연결한 QM6 DPF\" loading=\"lazy\" /><figcaption>전용 세척 장비에 연결한 QM6 DPF</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224462373676\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224462373676/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "르노코리아",
+        "QM6"
+      ],
+      "symptom_tags": [
+        "흡기 카본",
+        "인젝터 클리닝",
+        "DPF 탈거 클리닝"
+      ],
+      "general_tags": [
+        "흡기 클리닝",
+        "블로그 정비 기록",
+        "인젝터 클리닝",
+        "DPF 클리닝"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224462373676",
+      "created_at": "2026-11-02T16:05:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "QM6 10만 km 흡기·인젝터·DPF 클리닝과 동와샤 교환",
+      "seo_description": "QM6 10만 km 흡기·인젝터·DPF 클리닝과 동와샤 교환. 전용 장비를 이용한 탈거 세척과 실제 작업 사진을 확인하세요.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224460518925",
+      "url": "https://blog.naver.com/koreaautolife/224460518925",
+      "title": "제네시스G80 8단 오토미션수리 / 후진안됨",
+      "publishedAt": "2026-10-31T22:46:00+09:00",
+      "editorNote": "파손 확인·분해·재조립은 원문 확인. 구체적 교환 목록 및 시운전 결과 미기재로 추가하지 않음.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfMTYx/MDAxNzkzNDUwOTUxNjY4.yIhbTgHZujeqyh_QoAu2Gjfq07hDroEYI6vVwkfCISsg.fc2dTvzuZHDVlhu7FIOpMWEmYDjNOsjCFfjRzT3Fi_kg.JPEG/SE-28b07f1a-8ca8-4ba0-92c1-23b1a54d1b48.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfMTYx/MDAxNzkzNDUwOTUxNjY4.yIhbTgHZujeqyh_QoAu2Gjfq07hDroEYI6vVwkfCISsg.fc2dTvzuZHDVlhu7FIOpMWEmYDjNOsjCFfjRzT3Fi_kg.JPEG/SE-28b07f1a-8ca8-4ba0-92c1-23b1a54d1b48.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfMTQ3/MDAxNzkzNDUwODI4NDA3.Mxv2gftdnm9AZyrxsPkzYSpcE1U-1jcg4p7pBJMHVtwg.bWlC8hH06rhnwKC6nvmfpU1wQ0ad71cyrS76Tve48VMg.JPEG/1793346295297.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfMTQ3/MDAxNzkzNDUwODI4NDA3.Mxv2gftdnm9AZyrxsPkzYSpcE1U-1jcg4p7pBJMHVtwg.bWlC8hH06rhnwKC6nvmfpU1wQ0ad71cyrS76Tve48VMg.JPEG/1793346295297.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfMjAw/MDAxNzkzNDUwODI2MDY2.jAi9o4uZ7Kcln_zXBqFN0c_JzLH03Qrlg9QvOqrmDskg.fvLTiJnauCN3EiuY-XRtIfk8pD6tkC6MQKzlwg_y3aog.JPEG/20261029_160357.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfMjAw/MDAxNzkzNDUwODI2MDY2.jAi9o4uZ7Kcln_zXBqFN0c_JzLH03Qrlg9QvOqrmDskg.fvLTiJnauCN3EiuY-XRtIfk8pD6tkC6MQKzlwg_y3aog.JPEG/20261029_160357.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/07.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfMTYx/MDAxNzkzNDUwODI2MTIx.oTNG7daDvns0Lb0xmNZVuNot2POIixlN0Rj7GNdfe-og.nW-MxjPEjqvyP4qyFlk0PvK23PVnG_ymIqg9qTO7vXsg.JPEG/20261029_160401.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfMTYx/MDAxNzkzNDUwODI2MTIx.oTNG7daDvns0Lb0xmNZVuNot2POIixlN0Rj7GNdfe-og.nW-MxjPEjqvyP4qyFlk0PvK23PVnG_ymIqg9qTO7vXsg.JPEG/20261029_160401.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/08.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfOSAg/MDAxNzkzNDUwODI2MjU0.O6BBk3bVNZQ4RWlsabsbxt2UIGGZahp4C86VfyUnjKEg.X3LcM5HFFynGpauWG49eVR40ZVuKI5o3FxKe6Wvza9kg.JPEG/20261029_161858.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfOSAg/MDAxNzkzNDUwODI2MjU0.O6BBk3bVNZQ4RWlsabsbxt2UIGGZahp4C86VfyUnjKEg.X3LcM5HFFynGpauWG49eVR40ZVuKI5o3FxKe6Wvza9kg.JPEG/20261029_161858.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/12.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfNDUg/MDAxNzkzNDUwODI3MzE5.QtGYzROGPxcalOpVl1PM5-FFh0JDl3mC6gvWlHS6G4Mg.OxhY_CtS9ApnkGF4XgnM9r7S95dKFOqf-E-Y6L083G0g.JPEG/20261029_165850.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfNDUg/MDAxNzkzNDUwODI3MzE5.QtGYzROGPxcalOpVl1PM5-FFh0JDl3mC6gvWlHS6G4Mg.OxhY_CtS9ApnkGF4XgnM9r7S95dKFOqf-E-Y6L083G0g.JPEG/20261029_165850.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/14.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMzFfMjQ3/MDAxNzkzNDUwODI3NjI3.D5xyKfhYbD0kQCjansQlIwo1UEDzeav1bpDKc819o2Yg.RZrRwXN8AjMx8ZkqqMfZq9TOw1-AQcwmt-VRDyxu-hIg.JPEG/20261030_110136.jpg",
+          "width": 4000,
+          "height": 3000,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMzFfMjQ3/MDAxNzkzNDUwODI3NjI3.D5xyKfhYbD0kQCjansQlIwo1UEDzeav1bpDKc819o2Yg.RZrRwXN8AjMx8ZkqqMfZq9TOw1-AQcwmt-VRDyxu-hIg.JPEG/20261030_110136.jpg?type=w966",
+          "localPath": "/blog-imports/224460518925/16.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "12699f91-3387-4897-bc73-58a55474662a",
+      "slug": "naver-224460518925",
+      "title": "제네시스 G80 8단 오토미션 수리·후진 불량과 클러치 플레이트 파손",
+      "subtitle": "주행거리 102,260km의 제네시스 G80이 후진 불량으로 입고됐습니다. 현대 파워텍 8단 자동변속기가 장착된 차량으로, 외부에서만 확인하기 어려운 내부 상태를 살펴보기 위해 변속기 탈거와 분해를 진행했습니다.",
+      "excerpt": "주행거리 102,260km의 제네시스 G80이 후진 불량으로 입고됐습니다. 현대 파워텍 8단 자동변속기가 장착된 차량으로, 외부에서만 확인하기 어려운 내부 상태를 살펴보기 위해 변속기 탈거와 분해를 진행했습니다.",
+      "vehicle_brand": "제네시스",
+      "manufacturer": "제네시스",
+      "vehicle_model": "G80",
+      "model_year": "",
+      "mileage": "102,260km",
+      "fuel_type": "",
+      "transmission_type": "현대 파워텍 8단 자동변속기",
+      "service_id": "db5f760d-5f1f-46a6-b5af-55de76659cbd",
+      "service_category": "오토미션 수리",
+      "symptoms": "주행거리 102,260km의 제네시스 G80이 후진 불량으로 입고됐습니다. 현대 파워텍 8단 자동변속기가 장착된 차량으로, 외부에서만 확인하기 어려운 내부 상태를 살펴보기 위해 변속기 탈거와 분해를 진행했습니다.",
+      "diagnosis": "차량을 리프트에 올려 미션오일을 배출하고 하부 연결 부품을 분리했습니다. 차체에서 내린 변속기는 작업대에서 분해했습니다. 드럼과 기어, 플레이트 등 내부 부품을 위치와 순서에 따라 구분하면서 상태를 확인했습니다.",
+      "cause": "",
+      "repair_process": "후진 불량으로 입고된 이 차량에서는 클러치 플레이트의 파손이 발견됐습니다. 원형으로 이어지는 부위가 끊어지고 조각이 분리된 상태가 사진에 남아 있습니다. 분리한 플레이트와 드럼 등 함께 맞물리는 주변 부품도 살피며 수리 작업을 진행했습니다. 같은 후진 불량이라도 모든 차량의 원인이 같지는 않습니다.",
+      "replaced_parts": "",
+      "work_summary": "분해한 플레이트와 기어 등 내부 구성품의 위치와 순서를 맞춰 재조립했습니다. 사진에는 미션 케이스와 밸브바디, 오일팬 작업도 담겨 있습니다. 후진이 전혀 되지 않는지, 기어 선택 뒤 반응이 늦는지, 특정 상황에서만 나타나는지 알려주시면 점검 방향을 정하는 데 도움이 됩니다. 작업 범위와 비용은 실제 차량 상태를 확인한 후 안내합니다.",
+      "detailed_content": "후진이 되지 않아 입고한 G80\n주행거리 102,260km의 제네시스 G80이 후진 불량으로 입고됐습니다. 현대 파워텍 8단 자동변속기가 장착된 차량으로, 외부에서만 확인하기 어려운 내부 상태를 살펴보기 위해 변속기 탈거와 분해를 진행했습니다.\n\n미션오일 배출과 8단 자동변속기 탈거\n차량을 리프트에 올려 미션오일을 배출하고 하부 연결 부품을 분리했습니다. 차체에서 내린 변속기는 작업대에서 분해했습니다. 드럼과 기어, 플레이트 등 내부 부품을 위치와 순서에 따라 구분하면서 상태를 확인했습니다.\n\n분해 과정에서 확인한 클러치 플레이트 파손\n후진 불량으로 입고된 이 차량에서는 클러치 플레이트의 파손이 발견됐습니다. 원형으로 이어지는 부위가 끊어지고 조각이 분리된 상태가 사진에 남아 있습니다. 분리한 플레이트와 드럼 등 함께 맞물리는 주변 부품도 살피며 수리 작업을 진행했습니다. 같은 후진 불량이라도 모든 차량의 원인이 같지는 않습니다.\n\n내부 구성품 재조립과 상담 시 확인할 증상\n분해한 플레이트와 기어 등 내부 구성품의 위치와 순서를 맞춰 재조립했습니다. 사진에는 미션 케이스와 밸브바디, 오일팬 작업도 담겨 있습니다. 후진이 전혀 되지 않는지, 기어 선택 뒤 반응이 늦는지, 특정 상황에서만 나타나는지 알려주시면 점검 방향을 정하는 데 도움이 됩니다. 작업 범위와 비용은 실제 차량 상태를 확인한 후 안내합니다.",
+      "content_html": "<h2>후진이 되지 않아 입고한 G80</h2><p>주행거리 102,260km의 제네시스 G80이 후진 불량으로 입고됐습니다. 현대 파워텍 8단 자동변속기가 장착된 차량으로, 외부에서만 확인하기 어려운 내부 상태를 살펴보기 위해 변속기 탈거와 분해를 진행했습니다.</p><h2>미션오일 배출과 8단 자동변속기 탈거</h2><p>차량을 리프트에 올려 미션오일을 배출하고 하부 연결 부품을 분리했습니다. 차체에서 내린 변속기는 작업대에서 분해했습니다. 드럼과 기어, 플레이트 등 내부 부품을 위치와 순서에 따라 구분하면서 상태를 확인했습니다.</p><figure><img src=\"/blog-imports/224460518925/05.jpg\" alt=\"G80에서 탈거한 파워텍 8단 자동변속기\" loading=\"lazy\" /><figcaption>G80에서 탈거한 파워텍 8단 자동변속기</figcaption></figure><figure><img src=\"/blog-imports/224460518925/07.jpg\" alt=\"작업대에 구분해 놓은 G80 미션 내부 부품\" loading=\"lazy\" /><figcaption>작업대에 구분해 놓은 G80 미션 내부 부품</figcaption></figure><h2>분해 과정에서 확인한 클러치 플레이트 파손</h2><p>후진 불량으로 입고된 이 차량에서는 클러치 플레이트의 파손이 발견됐습니다. 원형으로 이어지는 부위가 끊어지고 조각이 분리된 상태가 사진에 남아 있습니다. 분리한 플레이트와 드럼 등 함께 맞물리는 주변 부품도 살피며 수리 작업을 진행했습니다. 같은 후진 불량이라도 모든 차량의 원인이 같지는 않습니다.</p><figure><img src=\"/blog-imports/224460518925/08.jpg\" alt=\"파손되어 분리된 G80 클러치 플레이트\" loading=\"lazy\" /><figcaption>파손되어 분리된 G80 클러치 플레이트</figcaption></figure><figure><img src=\"/blog-imports/224460518925/12.jpg\" alt=\"클러치 구성품과 파손 조각 확인\" loading=\"lazy\" /><figcaption>클러치 구성품과 파손 조각 확인</figcaption></figure><h2>내부 구성품 재조립과 상담 시 확인할 증상</h2><p>분해한 플레이트와 기어 등 내부 구성품의 위치와 순서를 맞춰 재조립했습니다. 사진에는 미션 케이스와 밸브바디, 오일팬 작업도 담겨 있습니다. 후진이 전혀 되지 않는지, 기어 선택 뒤 반응이 늦는지, 특정 상황에서만 나타나는지 알려주시면 점검 방향을 정하는 데 도움이 됩니다. 작업 범위와 비용은 실제 차량 상태를 확인한 후 안내합니다.</p><figure><img src=\"/blog-imports/224460518925/14.jpg\" alt=\"G80 8단 미션 기어와 내부 구성품\" loading=\"lazy\" /><figcaption>G80 8단 미션 기어와 내부 구성품</figcaption></figure><figure><img src=\"/blog-imports/224460518925/16.jpg\" alt=\"G80 미션 케이스·밸브바디·오일팬 작업\" loading=\"lazy\" /><figcaption>G80 미션 케이스·밸브바디·오일팬 작업</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224460518925\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224460518925/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "제네시스",
+        "G80"
+      ],
+      "symptom_tags": [
+        "후진 불량",
+        "후진 안됨",
+        "클러치 플레이트 파손",
+        "8단 오토미션"
+      ],
+      "general_tags": [
+        "오토미션 수리",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224460518925",
+      "created_at": "2026-10-31T22:46:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "제네시스 G80 8단 오토미션 수리·후진 불량과 클러치 플레이트 파손",
+      "seo_description": "제네시스 G80 8단 오토미션 수리·후진 불량과 클러치 플레이트 파손. 입고 증상부터 분해 점검, 교환 작업과 수리 후 확인까지 실제 정비 사진으로 소개합니다.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224458110431",
+      "url": "https://blog.naver.com/koreaautolife/224458110431",
+      "title": "마세라티 콰트로포르테 DPF클리닝",
+      "publishedAt": "2026-10-29T18:51:00+09:00",
+      "editorNote": "기존 172738km 관리 사례와 별개인 233311km 경고등 차량. 엔진 정상 표시와 남은 변속기 제어 항목 구분.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjIg/MDAxNzkzMjU1NTg4Mjc1.hIB1ThDEXxsk8Jbd6aLZRAC1P4rVX68VXKlQsZCO5zEg.2gUjiUsI2PDmxoXiV4Z9Z8mrM2a7jXq_At3Xa0oZlNsg.JPEG/SE-cc9b3d78-88f7-47a4-abef-9e0c60179e69.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjIg/MDAxNzkzMjU1NTg4Mjc1.hIB1ThDEXxsk8Jbd6aLZRAC1P4rVX68VXKlQsZCO5zEg.2gUjiUsI2PDmxoXiV4Z9Z8mrM2a7jXq_At3Xa0oZlNsg.JPEG/SE-cc9b3d78-88f7-47a4-abef-9e0c60179e69.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjAx/MDAxNzkzMjU1NDY5NDkw.pcc-LAovA1oF1TuNjfOxzJLScs9ea88BJqEZUhI6fngg.a-MCHBfRJOcLHaJ0S1bR-YWKFeart-uYU6VtPRe8uaEg.JPEG/1792824863229.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjAx/MDAxNzkzMjU1NDY5NDkw.pcc-LAovA1oF1TuNjfOxzJLScs9ea88BJqEZUhI6fngg.a-MCHBfRJOcLHaJ0S1bR-YWKFeart-uYU6VtPRe8uaEg.JPEG/1792824863229.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/02.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfNzUg/MDAxNzkzMjU1NDY4MjU3.-uSAcYZ0QWoqMnvs1O5f8fFfhynoXvFA-GTxTLYiLqgg.WaA08XVLz044lfMIT3BbWwO0UUxk4VjxcV-dhYTlU_Ug.JPEG/1792824799759.jpg",
+          "width": 4729,
+          "height": 3547,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfNzUg/MDAxNzkzMjU1NDY4MjU3.-uSAcYZ0QWoqMnvs1O5f8fFfhynoXvFA-GTxTLYiLqgg.WaA08XVLz044lfMIT3BbWwO0UUxk4VjxcV-dhYTlU_Ug.JPEG/1792824799759.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjkw/MDAxNzkzMjU1NDY4MzMy.jwk17EYLCm3Z6dBVKALu4fuVo1uTKOraq2xL6dYkPwIg.oE_2oHziYVyMaleLv__38zHHymy41bO-DflTdodNwKwg.JPEG/1792824800280.jpg",
+          "width": 4729,
+          "height": 3547,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjkw/MDAxNzkzMjU1NDY4MzMy.jwk17EYLCm3Z6dBVKALu4fuVo1uTKOraq2xL6dYkPwIg.oE_2oHziYVyMaleLv__38zHHymy41bO-DflTdodNwKwg.JPEG/1792824800280.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/06.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfOTgg/MDAxNzkzMjU1NDY4Mzc0.S6I82UGG5zsviS_L1Jd9eZS7s3ZXB8GbatBCbUB9no4g.g0rfF2_g5vGAEiaU5-LY8wGe4Gn8D517cjCrhPlomfQg.JPEG/1792824799502.jpg",
+          "width": 4729,
+          "height": 3547,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfOTgg/MDAxNzkzMjU1NDY4Mzc0.S6I82UGG5zsviS_L1Jd9eZS7s3ZXB8GbatBCbUB9no4g.g0rfF2_g5vGAEiaU5-LY8wGe4Gn8D517cjCrhPlomfQg.JPEG/1792824799502.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/10.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjg3/MDAxNzkzMjU1NDY5ODg5._ghC_xKq-RRZn5KjHJGHjssFu0tZfsIvRn_VpvuEyCYg.XODkebtf9ebRtv_85PBH85mP8bMzq5yFvy4yTmWHGnYg.JPEG/1792824863341.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfMjg3/MDAxNzkzMjU1NDY5ODg5._ghC_xKq-RRZn5KjHJGHjssFu0tZfsIvRn_VpvuEyCYg.XODkebtf9ebRtv_85PBH85mP8bMzq5yFvy4yTmWHGnYg.JPEG/1792824863341.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/11.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfMTg3/MDAxNzkzMjU1NDcwMzM2.PzaVO-HVlQfuGhYrzpVttJL10kc91xsD2H7PQ0C5Cy8g.eCPk0QiI-jLtoZsniUcZREgl2bSM4mMarvW3jCLqvZUg.JPEG/1792824863371.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfMTg3/MDAxNzkzMjU1NDcwMzM2.PzaVO-HVlQfuGhYrzpVttJL10kc91xsD2H7PQ0C5Cy8g.eCPk0QiI-jLtoZsniUcZREgl2bSM4mMarvW3jCLqvZUg.JPEG/1792824863371.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/12.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMjlfNCAg/MDAxNzkzMjU1NDcwMzY1.COL0Q7zrvT9xH6hqcEIrV_PxDN6e8eDOUMVcEmpvt3Ig.B3zOEjCEd533rlPVpFJY36UQQK2IIc254PmawCkhnVEg.JPEG/1792824863421.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMjlfNCAg/MDAxNzkzMjU1NDcwMzY1.COL0Q7zrvT9xH6hqcEIrV_PxDN6e8eDOUMVcEmpvt3Ig.B3zOEjCEd533rlPVpFJY36UQQK2IIc254PmawCkhnVEg.JPEG/1792824863421.jpg?type=w966",
+          "localPath": "/blog-imports/224458110431/13.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "9d771e93-f174-444b-8387-8641ef3773fb",
+      "slug": "naver-224458110431",
+      "title": "마세라티 콰트로포르테 DPF 경고등·P2463 확인과 탈거 클리닝",
+      "subtitle": "주행거리 233,311km의 마세라티 콰트로포르테 디젤 차량이 경고등 점등으로 입고됐습니다. 계기판에는 배기 필터 점검과 서비스센터 방문을 안내하는 문구가 표시됐습니다. 별도 증상 없이 관리 목적으로 작업했던 17만 km 차량과는 다른 사례입니다.",
+      "excerpt": "주행거리 233,311km의 마세라티 콰트로포르테 디젤 차량이 경고등 점등으로 입고됐습니다. 계기판에는 배기 필터 점검과 서비스센터 방문을 안내하는 문구가 표시됐습니다. 별도 증상 없이 관리 목적으로 작업했던 17만 km 차량과는 다른 사례입니다.",
+      "vehicle_brand": "마세라티",
+      "manufacturer": "마세라티",
+      "vehicle_model": "콰트로포르테",
+      "model_year": "",
+      "mileage": "233,311km",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "8b322363-aca4-4eea-b4b4-581643ab0884",
+      "service_category": "DPF 클리닝",
+      "symptoms": "주행거리 233,311km의 마세라티 콰트로포르테 디젤 차량이 경고등 점등으로 입고됐습니다. 계기판에는 배기 필터 점검과 서비스센터 방문을 안내하는 문구가 표시됐습니다. 별도 증상 없이 관리 목적으로 작업했던 17만 km 차량과는 다른 사례입니다.",
+      "diagnosis": "차량 하부에서 DPF를 분리하고 배기 연결 부위와 센서·배관을 확인했습니다. 탈거한 부품의 연결부 안쪽에는 검은 흔적이 보였지만, 입구 사진만으로 필터 전체 상태를 판단하지 않고 내부 클리닝을 진행했습니다.",
+      "cause": "",
+      "repair_process": "차량에서 내린 DPF를 전용 클리닝 장비에 고정하고 호스를 연결해 세척했습니다. 배기 연결부 표면만 닦는 작업이 아니라 필터 내부에 쌓인 오염을 대상으로 진행한 탈거 클리닝입니다. 필터 교환이나 제거 작업은 아닙니다.",
+      "replaced_parts": "",
+      "work_summary": "작업 전 진단기에는 디젤 미립자 필터의 그을음 축적을 뜻하는 P2463 항목이 확인됐습니다. 클리닝 후 화면에서는 엔진 제어가 정상으로 표시됐고 후속 세팅 완료 안내도 확인했습니다. 다만 변속기 제어 쪽 항목은 남아 있어 차량의 모든 고장코드가 사라졌다는 의미는 아닙니다. DPF 관련 결과와 다른 제어계통의 기록을 구분해 안내합니다.",
+      "detailed_content": "배기 필터 점검 안내가 나타난 23만 km 차량\n주행거리 233,311km의 마세라티 콰트로포르테 디젤 차량이 경고등 점등으로 입고됐습니다. 계기판에는 배기 필터 점검과 서비스센터 방문을 안내하는 문구가 표시됐습니다. 별도 증상 없이 관리 목적으로 작업했던 17만 km 차량과는 다른 사례입니다.\n\nDPF 분리와 배기 연결부 확인\n차량 하부에서 DPF를 분리하고 배기 연결 부위와 센서·배관을 확인했습니다. 탈거한 부품의 연결부 안쪽에는 검은 흔적이 보였지만, 입구 사진만으로 필터 전체 상태를 판단하지 않고 내부 클리닝을 진행했습니다.\n\n전용 장비 연결과 필터 내부 세척\n차량에서 내린 DPF를 전용 클리닝 장비에 고정하고 호스를 연결해 세척했습니다. 배기 연결부 표면만 닦는 작업이 아니라 필터 내부에 쌓인 오염을 대상으로 진행한 탈거 클리닝입니다. 필터 교환이나 제거 작업은 아닙니다.\n\nP2463 기록과 작업 후 진단 화면 확인\n작업 전 진단기에는 디젤 미립자 필터의 그을음 축적을 뜻하는 P2463 항목이 확인됐습니다. 클리닝 후 화면에서는 엔진 제어가 정상으로 표시됐고 후속 세팅 완료 안내도 확인했습니다. 다만 변속기 제어 쪽 항목은 남아 있어 차량의 모든 고장코드가 사라졌다는 의미는 아닙니다. DPF 관련 결과와 다른 제어계통의 기록을 구분해 안내합니다.",
+      "content_html": "<h2>배기 필터 점검 안내가 나타난 23만 km 차량</h2><p>주행거리 233,311km의 마세라티 콰트로포르테 디젤 차량이 경고등 점등으로 입고됐습니다. 계기판에는 배기 필터 점검과 서비스센터 방문을 안내하는 문구가 표시됐습니다. 별도 증상 없이 관리 목적으로 작업했던 17만 km 차량과는 다른 사례입니다.</p><figure><img src=\"/blog-imports/224458110431/02.jpg\" alt=\"배기 필터 점검 안내가 표시된 콰트로포르테 계기판\" loading=\"lazy\" /><figcaption>배기 필터 점검 안내가 표시된 콰트로포르테 계기판</figcaption></figure><h2>DPF 분리와 배기 연결부 확인</h2><p>차량 하부에서 DPF를 분리하고 배기 연결 부위와 센서·배관을 확인했습니다. 탈거한 부품의 연결부 안쪽에는 검은 흔적이 보였지만, 입구 사진만으로 필터 전체 상태를 판단하지 않고 내부 클리닝을 진행했습니다.</p><figure><img src=\"/blog-imports/224458110431/03.jpg\" alt=\"DPF를 분리한 콰트로포르테 하부\" loading=\"lazy\" /><figcaption>DPF를 분리한 콰트로포르테 하부</figcaption></figure><figure><img src=\"/blog-imports/224458110431/06.jpg\" alt=\"센서와 배관이 연결된 탈거 DPF\" loading=\"lazy\" /><figcaption>센서와 배관이 연결된 탈거 DPF</figcaption></figure><h2>전용 장비 연결과 필터 내부 세척</h2><p>차량에서 내린 DPF를 전용 클리닝 장비에 고정하고 호스를 연결해 세척했습니다. 배기 연결부 표면만 닦는 작업이 아니라 필터 내부에 쌓인 오염을 대상으로 진행한 탈거 클리닝입니다. 필터 교환이나 제거 작업은 아닙니다.</p><figure><img src=\"/blog-imports/224458110431/10.jpg\" alt=\"전용 클리닝 장비에 연결한 콰트로포르테 DPF\" loading=\"lazy\" /><figcaption>전용 클리닝 장비에 연결한 콰트로포르테 DPF</figcaption></figure><h2>P2463 기록과 작업 후 진단 화면 확인</h2><p>작업 전 진단기에는 디젤 미립자 필터의 그을음 축적을 뜻하는 P2463 항목이 확인됐습니다. 클리닝 후 화면에서는 엔진 제어가 정상으로 표시됐고 후속 세팅 완료 안내도 확인했습니다. 다만 변속기 제어 쪽 항목은 남아 있어 차량의 모든 고장코드가 사라졌다는 의미는 아닙니다. DPF 관련 결과와 다른 제어계통의 기록을 구분해 안내합니다.</p><figure><img src=\"/blog-imports/224458110431/11.jpg\" alt=\"DPF 그을음 축적 항목을 확인한 진단 화면\" loading=\"lazy\" /><figcaption>DPF 그을음 축적 항목을 확인한 진단 화면</figcaption></figure><figure><img src=\"/blog-imports/224458110431/12.jpg\" alt=\"엔진과 변속기 제어 결과가 구분된 진단 화면\" loading=\"lazy\" /><figcaption>엔진과 변속기 제어 결과가 구분된 진단 화면</figcaption></figure><figure><img src=\"/blog-imports/224458110431/13.jpg\" alt=\"DPF 클리닝 후 세팅 완료 화면\" loading=\"lazy\" /><figcaption>DPF 클리닝 후 세팅 완료 화면</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224458110431\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224458110431/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "마세라티",
+        "콰트로포르테"
+      ],
+      "symptom_tags": [
+        "DPF 경고등",
+        "배기 필터 점검",
+        "P2463",
+        "DPF 탈거 클리닝"
+      ],
+      "general_tags": [
+        "DPF 클리닝",
+        "블로그 정비 기록"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224458110431",
+      "created_at": "2026-10-29T18:51:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "마세라티 콰트로포르테 DPF 경고등·P2463 확인과 탈거 클리닝",
+      "seo_description": "마세라티 콰트로포르테 DPF 경고등·P2463 확인과 탈거 클리닝. 전용 장비를 이용한 탈거 세척과 실제 작업 사진을 확인하세요.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224437422389",
+      "url": "https://blog.naver.com/koreaautolife/224437422389",
+      "title": "아우디A4 디젤 DPF클리닝과 인젝터클리닝으로 엔진체크등 삭제",
+      "publishedAt": "2026-10-10T21:43:00+09:00",
+      "editorNote": "원문에 없는 정확한 고장코드·연식·주행거리 미기재. 일률적 주기·가격 주장 제외.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfNzIg/MDAxNzkxNjMwOTgyNzcx.o45bl4BjMtEykJkdNporfA0TKOUzNtXPqWG6HtJEb-Mg.JI8C8SAlQssKXygO7v4TYnl3mOWor8UL4GyG7u8xJP4g.JPEG/SE-729781bf-72df-4a91-ac39-eeaeacc9f945.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfNzIg/MDAxNzkxNjMwOTgyNzcx.o45bl4BjMtEykJkdNporfA0TKOUzNtXPqWG6HtJEb-Mg.JI8C8SAlQssKXygO7v4TYnl3mOWor8UL4GyG7u8xJP4g.JPEG/SE-729781bf-72df-4a91-ac39-eeaeacc9f945.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfMjI1/MDAxNzkxNjMwODM5MDI1.ma1ZlYCFD4Hk9LI9yAbDL5n8GWGfQ590Rh4JvQpRW9sg.6csJMizP7xYA_r0AxVENyrC3UNkaSNtIoCI2DK-SSJ8g.JPEG/1790766885206.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfMjI1/MDAxNzkxNjMwODM5MDI1.ma1ZlYCFD4Hk9LI9yAbDL5n8GWGfQ590Rh4JvQpRW9sg.6csJMizP7xYA_r0AxVENyrC3UNkaSNtIoCI2DK-SSJ8g.JPEG/1790766885206.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfMTU0/MDAxNzkxNjMwODM4OTg5.RagR8CWVD4S1M44xeqZORjss9Sz_HjQTgcULEXWZEJIg.ONakXaeS7RRiWjafhOB9khWIK6hRrCqrChCm8nN6ECMg.JPEG/1790766885169.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfMTU0/MDAxNzkxNjMwODM4OTg5.RagR8CWVD4S1M44xeqZORjss9Sz_HjQTgcULEXWZEJIg.ONakXaeS7RRiWjafhOB9khWIK6hRrCqrChCm8nN6ECMg.JPEG/1790766885169.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/05.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfMjIg/MDAxNzkxNjMwODM4OTcy.v4xO8ynrPa4Yt-AWCtkp1JN5_oX9sXZjLtbOBFkIaogg.vVJFaZXyqK9QiihPuq_L-85Zewvdc6LMBa5te4CwlqYg.JPEG/1790766885306.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfMjIg/MDAxNzkxNjMwODM4OTcy.v4xO8ynrPa4Yt-AWCtkp1JN5_oX9sXZjLtbOBFkIaogg.vVJFaZXyqK9QiihPuq_L-85Zewvdc6LMBa5te4CwlqYg.JPEG/1790766885306.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/06.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfMTMg/MDAxNzkxNjMwODM5OTAw.bvIqGBNT40Dfu-8BqrhABFOSwLN6MmgxNvORoRjumoUg.t_5Ml1sOksLDR9GMMIcyVvxJ3i5R0ik5fW7sHMam1lsg.JPEG/1790766885350.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfMTMg/MDAxNzkxNjMwODM5OTAw.bvIqGBNT40Dfu-8BqrhABFOSwLN6MmgxNvORoRjumoUg.t_5Ml1sOksLDR9GMMIcyVvxJ3i5R0ik5fW7sHMam1lsg.JPEG/1790766885350.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/07.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfMzUg/MDAxNzkxNjMwODQwMjAz.DmI8SxF2aY1qsfOIimt-ObUvjUV40h8OayLbEmZNbl4g.3Kk8vBuFwg1A1hbMPZvyVxcVqc8StokWAZISWK4eG6gg.JPEG/1790766885453.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfMzUg/MDAxNzkxNjMwODQwMjAz.DmI8SxF2aY1qsfOIimt-ObUvjUV40h8OayLbEmZNbl4g.3Kk8vBuFwg1A1hbMPZvyVxcVqc8StokWAZISWK4eG6gg.JPEG/1790766885453.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/09.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMTBfMTI4/MDAxNzkxNjMwODQwNDMx.kOb6aR46bXkwgiFfBT3TC3lKZJpBehg2QyB60sEBbRYg.8223Ol1agWzWfU5mFF84GEG7wQ1OcDDQPLIvpBuKW2Yg.JPEG/1790766885517.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMTBfMTI4/MDAxNzkxNjMwODQwNDMx.kOb6aR46bXkwgiFfBT3TC3lKZJpBehg2QyB60sEBbRYg.8223Ol1agWzWfU5mFF84GEG7wQ1OcDDQPLIvpBuKW2Yg.JPEG/1790766885517.jpg?type=w966",
+          "localPath": "/blog-imports/224437422389/11.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "89232083-f2e9-4379-9517-dd281877bf9c",
+      "slug": "naver-224437422389",
+      "title": "아우디 A4 엔진 경고등 점검·DPF 탈거 및 인젝터 클리닝",
+      "subtitle": "아우디 A4 디젤 차량이 엔진 경고등 점등으로 입고됐습니다. DPF 관련 고장코드를 확인하고 DPF 탈거 클리닝을 진행했으며 인젝터 클리닝도 함께 작업했습니다. 실제 입고 차량의 분해와 장비 세척 과정을 사진으로 정리한 사례입니다.",
+      "excerpt": "아우디 A4 디젤 차량이 엔진 경고등 점등으로 입고됐습니다. DPF 관련 고장코드를 확인하고 DPF 탈거 클리닝을 진행했으며 인젝터 클리닝도 함께 작업했습니다. 실제 입고 차량의 분해와 장비 세척 과정을 사진으로 정리한 사례입니다.",
+      "vehicle_brand": "아우디",
+      "manufacturer": "아우디",
+      "vehicle_model": "A4",
+      "model_year": "",
+      "mileage": "",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "8b322363-aca4-4eea-b4b4-581643ab0884",
+      "service_category": "DPF 클리닝",
+      "symptoms": "아우디 A4 디젤 차량이 엔진 경고등 점등으로 입고됐습니다. DPF 관련 고장코드를 확인하고 DPF 탈거 클리닝을 진행했으며 인젝터 클리닝도 함께 작업했습니다. 실제 입고 차량의 분해와 장비 세척 과정을 사진으로 정리한 사례입니다.",
+      "diagnosis": "이번 차량에서는 DPF를 탈거하기 위해 앞범퍼와 라디에이터, 에어컨 콘덴서 등 전면 부품을 분리했습니다. 터보차저 아래쪽 EGR 쿨러 주변에서도 오염이 확인됐습니다. 탈거 범위가 큰 차량이어서 세척뿐 아니라 주변 부품의 분리와 복원 과정도 함께 진행했습니다.",
+      "cause": "",
+      "repair_process": "DPF를 전용 장비에 연결해 세정액을 순환시키며 내부 오염을 불린 뒤 고압 세척을 진행했습니다. 원문에서는 순환 단계와 2차 고압 세척을 구분해 설명하고 있습니다. 세척 시간은 오염 상태에 따라 달라지므로 모든 차량에 동일한 소요시간을 적용하지 않습니다.",
+      "replaced_parts": "",
+      "work_summary": "인젝터는 별도의 고장으로 교환한 것이 아니라 기존 부품을 탈거해 클리닝한 작업입니다. 동와샤의 마모 상태도 확인했습니다. 부품을 다시 장착하고 부동액과 에어컨 가스를 주입한 뒤 전용 진단기 세팅과 마무리 점검을 거쳐 출고했습니다. 경고등 상담 시 표시 문구와 발생 상황을 함께 알려주세요.",
+      "detailed_content": "엔진 경고등과 DPF 관련 고장코드로 입고\n아우디 A4 디젤 차량이 엔진 경고등 점등으로 입고됐습니다. DPF 관련 고장코드를 확인하고 DPF 탈거 클리닝을 진행했으며 인젝터 클리닝도 함께 작업했습니다. 실제 입고 차량의 분해와 장비 세척 과정을 사진으로 정리한 사례입니다.\n\n전면 부품을 분리해 DPF 탈거 공간 확보\n이번 차량에서는 DPF를 탈거하기 위해 앞범퍼와 라디에이터, 에어컨 콘덴서 등 전면 부품을 분리했습니다. 터보차저 아래쪽 EGR 쿨러 주변에서도 오염이 확인됐습니다. 탈거 범위가 큰 차량이어서 세척뿐 아니라 주변 부품의 분리와 복원 과정도 함께 진행했습니다.\n\n장비 순환 세척과 고압 클리닝\nDPF를 전용 장비에 연결해 세정액을 순환시키며 내부 오염을 불린 뒤 고압 세척을 진행했습니다. 원문에서는 순환 단계와 2차 고압 세척을 구분해 설명하고 있습니다. 세척 시간은 오염 상태에 따라 달라지므로 모든 차량에 동일한 소요시간을 적용하지 않습니다.\n\n인젝터 클리닝과 재장착 후 마무리\n인젝터는 별도의 고장으로 교환한 것이 아니라 기존 부품을 탈거해 클리닝한 작업입니다. 동와샤의 마모 상태도 확인했습니다. 부품을 다시 장착하고 부동액과 에어컨 가스를 주입한 뒤 전용 진단기 세팅과 마무리 점검을 거쳐 출고했습니다. 경고등 상담 시 표시 문구와 발생 상황을 함께 알려주세요.",
+      "content_html": "<h2>엔진 경고등과 DPF 관련 고장코드로 입고</h2><p>아우디 A4 디젤 차량이 엔진 경고등 점등으로 입고됐습니다. DPF 관련 고장코드를 확인하고 DPF 탈거 클리닝을 진행했으며 인젝터 클리닝도 함께 작업했습니다. 실제 입고 차량의 분해와 장비 세척 과정을 사진으로 정리한 사례입니다.</p><h2>전면 부품을 분리해 DPF 탈거 공간 확보</h2><p>이번 차량에서는 DPF를 탈거하기 위해 앞범퍼와 라디에이터, 에어컨 콘덴서 등 전면 부품을 분리했습니다. 터보차저 아래쪽 EGR 쿨러 주변에서도 오염이 확인됐습니다. 탈거 범위가 큰 차량이어서 세척뿐 아니라 주변 부품의 분리와 복원 과정도 함께 진행했습니다.</p><figure><img src=\"/blog-imports/224437422389/03.jpg\" alt=\"전면 부품을 분리한 아우디 A4\" loading=\"lazy\" /><figcaption>전면 부품을 분리한 아우디 A4</figcaption></figure><figure><img src=\"/blog-imports/224437422389/05.jpg\" alt=\"아우디 A4에서 탈거한 DPF\" loading=\"lazy\" /><figcaption>아우디 A4에서 탈거한 DPF</figcaption></figure><h2>장비 순환 세척과 고압 클리닝</h2><p>DPF를 전용 장비에 연결해 세정액을 순환시키며 내부 오염을 불린 뒤 고압 세척을 진행했습니다. 원문에서는 순환 단계와 2차 고압 세척을 구분해 설명하고 있습니다. 세척 시간은 오염 상태에 따라 달라지므로 모든 차량에 동일한 소요시간을 적용하지 않습니다.</p><figure><img src=\"/blog-imports/224437422389/06.jpg\" alt=\"아우디 A4 DPF 장비 순환 세척\" loading=\"lazy\" /><figcaption>아우디 A4 DPF 장비 순환 세척</figcaption></figure><figure><img src=\"/blog-imports/224437422389/07.jpg\" alt=\"DPF의 2차 세척 작업\" loading=\"lazy\" /><figcaption>DPF의 2차 세척 작업</figcaption></figure><h2>인젝터 클리닝과 재장착 후 마무리</h2><p>인젝터는 별도의 고장으로 교환한 것이 아니라 기존 부품을 탈거해 클리닝한 작업입니다. 동와샤의 마모 상태도 확인했습니다. 부품을 다시 장착하고 부동액과 에어컨 가스를 주입한 뒤 전용 진단기 세팅과 마무리 점검을 거쳐 출고했습니다. 경고등 상담 시 표시 문구와 발생 상황을 함께 알려주세요.</p><figure><img src=\"/blog-imports/224437422389/09.jpg\" alt=\"아우디 A4에서 분리한 인젝터\" loading=\"lazy\" /><figcaption>아우디 A4에서 분리한 인젝터</figcaption></figure><figure><img src=\"/blog-imports/224437422389/11.jpg\" alt=\"인젝터 세척 장비 작업\" loading=\"lazy\" /><figcaption>인젝터 세척 장비 작업</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224437422389\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224437422389/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "아우디",
+        "A4"
+      ],
+      "symptom_tags": [
+        "엔진 경고등",
+        "DPF 고장코드",
+        "DPF 탈거 클리닝",
+        "인젝터 클리닝"
+      ],
+      "general_tags": [
+        "DPF 클리닝",
+        "블로그 정비 기록",
+        "인젝터 클리닝"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224437422389",
+      "created_at": "2026-10-10T21:43:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "아우디 A4 엔진 경고등 점검·DPF 탈거 및 인젝터 클리닝",
+      "seo_description": "아우디 A4 엔진 경고등 점검·DPF 탈거 및 인젝터 클리닝. 전용 장비를 이용한 탈거 세척과 실제 작업 사진을 확인하세요.",
+      "noindex": false,
+      "view_count": 0
+    }
+  },
+  {
+    "source": {
+      "blogId": "koreaautolife",
+      "postId": "224435027538",
+      "url": "https://blog.naver.com/koreaautolife/224435027538",
+      "title": "수입차 BMW 5GT 인젝터, DPF클리닝 / 엔진 소음",
+      "publishedAt": "2026-10-08T11:20:00+09:00",
+      "editorNote": "차주 요청으로 인젝터 수리 아닌 클리닝만 시행. 완전 수리·소음 해결·누유 해결로 표현하지 않음.",
+      "photos": [
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjcg/MDAxNzkxMzczNjE0MzU4.3wX8bKEx7lrjuTG1pYsfffN4ByvHyMXoRzygkwrGSH4g.2LQlASG1nIJNxabGKby8q5D09oSTgJAp2QmJ7Al3ph8g.JPEG/SE-2bf1f83e-df65-4322-b652-bf55bbcffcb8.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjcg/MDAxNzkxMzczNjE0MzU4.3wX8bKEx7lrjuTG1pYsfffN4ByvHyMXoRzygkwrGSH4g.2LQlASG1nIJNxabGKby8q5D09oSTgJAp2QmJ7Al3ph8g.JPEG/SE-2bf1f83e-df65-4322-b652-bf55bbcffcb8.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/01.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMTI5/MDAxNzkxMzczNDYxMjMw.P2BknZWpvm3ExANIrBLLfrMgmV4d5WLKfSwYU4qqpocg.kZ6mF3D5m_UEJJiSUwJb4O6GJyGdLyHkvuBsPyGVtUEg.JPEG/1791267923327.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfMTI5/MDAxNzkxMzczNDYxMjMw.P2BknZWpvm3ExANIrBLLfrMgmV4d5WLKfSwYU4qqpocg.kZ6mF3D5m_UEJJiSUwJb4O6GJyGdLyHkvuBsPyGVtUEg.JPEG/1791267923327.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/03.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjgw/MDAxNzkxMzc0MjE4NTYz.R72d0EQXoWbZhSKHLP4d0hS9IfTP4bPJgHS3aGnuLOwg.w2vg_geUsgjD2e-8qQH3yHk6jsyX0vx5Vd4lJ3JoR3Mg.JPEG/SE-9a95b7ac-6f35-4db5-862d-06d2d6d3a075.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjgw/MDAxNzkxMzc0MjE4NTYz.R72d0EQXoWbZhSKHLP4d0hS9IfTP4bPJgHS3aGnuLOwg.w2vg_geUsgjD2e-8qQH3yHk6jsyX0vx5Vd4lJ3JoR3Mg.JPEG/SE-9a95b7ac-6f35-4db5-862d-06d2d6d3a075.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/04.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfNTUg/MDAxNzkxMzczNTYwNTQ5.qb9_d27KPTEAUqkhG3FuD8XXApKcrtdwT8JByYGAx2cg.zDT1BOqgcJtKRa1ZD9KsJVkSWzojKBpDE0VuD05FaM0g.JPEG/SE-5bf1177f-78c1-4491-b2c6-84ad4e84ce41.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfNTUg/MDAxNzkxMzczNTYwNTQ5.qb9_d27KPTEAUqkhG3FuD8XXApKcrtdwT8JByYGAx2cg.zDT1BOqgcJtKRa1ZD9KsJVkSWzojKBpDE0VuD05FaM0g.JPEG/SE-5bf1177f-78c1-4491-b2c6-84ad4e84ce41.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/06.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjI4/MDAxNzkxMzczNDYxMjc4.pANFIGlaB9JsxrFeMl9TFoLtaDWWZlPmYlrvGShmlXgg._xe-90B1vd9vcxmiQYOfi2_-qwQ4v8enjfOZPMB9PIgg.JPEG/1791267923579.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjI4/MDAxNzkxMzczNDYxMjc4.pANFIGlaB9JsxrFeMl9TFoLtaDWWZlPmYlrvGShmlXgg._xe-90B1vd9vcxmiQYOfi2_-qwQ4v8enjfOZPMB9PIgg.JPEG/1791267923579.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/08.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMTAg/MDAxNzkxMzczNTU4NTIw.wQK48yx8K3lMCcl-F2j7O1X1wJNIOmYQvsmZOoljUy4g.XGH3A2AbeaiMR16Vgq-4ePfYMhMFc0XGf_-6RFa60tMg.JPEG/SE-0600f803-bbf9-484c-a1c0-b9eb219e0849.jpg",
+          "width": 3000,
+          "height": 2250,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfMTAg/MDAxNzkxMzczNTU4NTIw.wQK48yx8K3lMCcl-F2j7O1X1wJNIOmYQvsmZOoljUy4g.XGH3A2AbeaiMR16Vgq-4ePfYMhMFc0XGf_-6RFa60tMg.JPEG/SE-0600f803-bbf9-484c-a1c0-b9eb219e0849.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/09.jpg"
+        },
+        {
+          "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjc4/MDAxNzkxMzczNDYyMjU3.9KMQhdso_ovMa4lKOGeWLvbmUXJxKMnCt22e8tRl86Qg.BYIt5Zeycyi44kYNALv3DhayEt3QrlTZdIqCbHu_pPog.JPEG/1791267923738.jpg",
+          "width": 4032,
+          "height": 3024,
+          "alt": "",
+          "downloadUrl": "https://postfiles.pstatic.net/MjAyNjEwMDdfMjc4/MDAxNzkxMzczNDYyMjU3.9KMQhdso_ovMa4lKOGeWLvbmUXJxKMnCt22e8tRl86Qg.BYIt5Zeycyi44kYNALv3DhayEt3QrlTZdIqCbHu_pPog.JPEG/1791267923738.jpg?type=w966",
+          "localPath": "/blog-imports/224435027538/11.jpg"
+        }
+      ]
+    },
+    "work": {
+      "id": "8f20b880-6109-441e-832e-36dfccea36c2",
+      "slug": "naver-224435027538",
+      "title": "BMW 5GT 엔진 소음 점검·인젝터 밀폐 불량과 DPF 클리닝",
+      "subtitle": "직렬 6기통 디젤 엔진을 장착한 BMW 5GT가 엔진 소음으로 입고됐습니다. 작업 전 점검에서도 엔진 쪽 소음이 크게 들렸고, 인젝터 주변의 오염 상태를 확인했습니다. 이번 사례는 인젝터 밀폐 불량 부위를 살펴본 과정과 차주가 선택한 클리닝 범위를 구분해 소개합니다.",
+      "excerpt": "직렬 6기통 디젤 엔진을 장착한 BMW 5GT가 엔진 소음으로 입고됐습니다. 작업 전 점검에서도 엔진 쪽 소음이 크게 들렸고, 인젝터 주변의 오염 상태를 확인했습니다. 이번 사례는 인젝터 밀폐 불량 부위를 살펴본 과정과 차주가 선택한 클리닝 범위를 구분해 소개합니다.",
+      "vehicle_brand": "BMW",
+      "manufacturer": "BMW",
+      "vehicle_model": "5GT",
+      "model_year": "",
+      "mileage": "",
+      "fuel_type": "디젤",
+      "transmission_type": "",
+      "service_id": "60fd5e9f-4995-4a77-ab0b-7a20f9c4a8c7",
+      "service_category": "인젝터 클리닝",
+      "symptoms": "직렬 6기통 디젤 엔진을 장착한 BMW 5GT가 엔진 소음으로 입고됐습니다. 작업 전 점검에서도 엔진 쪽 소음이 크게 들렸고, 인젝터 주변의 오염 상태를 확인했습니다. 이번 사례는 인젝터 밀폐 불량 부위를 살펴본 과정과 차주가 선택한 클리닝 범위를 구분해 소개합니다.",
+      "diagnosis": "커버와 흡기 부품을 분리한 뒤 고압 파이프와 리턴호스 주변을 확인했습니다. 인젝터 밀폐 불량으로 압축가스가 새면서 인젝터와 홀 주변에 심한 오염이 생긴 상태였습니다. 원문에는 로커암 커버 씰링의 오염·파손과 엔진오일 누유도 함께 기록되어 있습니다.",
+      "cause": "",
+      "repair_process": "원문에서는 인젝터 수리가 필요한 상태로 설명했지만, 차주 요청에 따라 이번에는 클리닝만 진행했습니다. 인젝터와 홀 주변 오염을 제거하고 신품 동와샤를 장착해 재조립했습니다. 이 작업을 인젝터의 완전 수리나 엔진 소음·누유의 해결로 확대해 설명하지 않습니다.",
+      "replaced_parts": "인젝터 동와샤",
+      "work_summary": "DPF 경고등도 나타나 필터를 탈거해 전용 장비로 세척했습니다. 분리 과정에서는 요소수 분사 부위에 굳은 찌꺼기가 있어 탈거에 시간이 걸렸고, 필터에 쌓인 재가 많아 약 3시간 장비 세척을 진행했다고 기록되어 있습니다. DPF 경고등만으로 클리닝을 결정하지 않고 오염·센서·파손 여부를 함께 확인해야 합니다.",
+      "detailed_content": "평소보다 큰 엔진 소음으로 입고한 5GT\n직렬 6기통 디젤 엔진을 장착한 BMW 5GT가 엔진 소음으로 입고됐습니다. 작업 전 점검에서도 엔진 쪽 소음이 크게 들렸고, 인젝터 주변의 오염 상태를 확인했습니다. 이번 사례는 인젝터 밀폐 불량 부위를 살펴본 과정과 차주가 선택한 클리닝 범위를 구분해 소개합니다.\n\n동와샤 손상과 인젝터 주변 오염 확인\n커버와 흡기 부품을 분리한 뒤 고압 파이프와 리턴호스 주변을 확인했습니다. 인젝터 밀폐 불량으로 압축가스가 새면서 인젝터와 홀 주변에 심한 오염이 생긴 상태였습니다. 원문에는 로커암 커버 씰링의 오염·파손과 엔진오일 누유도 함께 기록되어 있습니다.\n\n차주 요청에 따라 진행한 인젝터 클리닝\n원문에서는 인젝터 수리가 필요한 상태로 설명했지만, 차주 요청에 따라 이번에는 클리닝만 진행했습니다. 인젝터와 홀 주변 오염을 제거하고 신품 동와샤를 장착해 재조립했습니다. 이 작업을 인젝터의 완전 수리나 엔진 소음·누유의 해결로 확대해 설명하지 않습니다.\n\nDPF 경고등 확인 후 탈거 클리닝\nDPF 경고등도 나타나 필터를 탈거해 전용 장비로 세척했습니다. 분리 과정에서는 요소수 분사 부위에 굳은 찌꺼기가 있어 탈거에 시간이 걸렸고, 필터에 쌓인 재가 많아 약 3시간 장비 세척을 진행했다고 기록되어 있습니다. DPF 경고등만으로 클리닝을 결정하지 않고 오염·센서·파손 여부를 함께 확인해야 합니다.",
+      "content_html": "<h2>평소보다 큰 엔진 소음으로 입고한 5GT</h2><p>직렬 6기통 디젤 엔진을 장착한 BMW 5GT가 엔진 소음으로 입고됐습니다. 작업 전 점검에서도 엔진 쪽 소음이 크게 들렸고, 인젝터 주변의 오염 상태를 확인했습니다. 이번 사례는 인젝터 밀폐 불량 부위를 살펴본 과정과 차주가 선택한 클리닝 범위를 구분해 소개합니다.</p><h2>동와샤 손상과 인젝터 주변 오염 확인</h2><p>커버와 흡기 부품을 분리한 뒤 고압 파이프와 리턴호스 주변을 확인했습니다. 인젝터 밀폐 불량으로 압축가스가 새면서 인젝터와 홀 주변에 심한 오염이 생긴 상태였습니다. 원문에는 로커암 커버 씰링의 오염·파손과 엔진오일 누유도 함께 기록되어 있습니다.</p><figure><img src=\"/blog-imports/224435027538/03.jpg\" alt=\"인젝터 탈거를 준비한 BMW 5GT 엔진 상부\" loading=\"lazy\" /><figcaption>인젝터 탈거를 준비한 BMW 5GT 엔진 상부</figcaption></figure><figure><img src=\"/blog-imports/224435027538/04.jpg\" alt=\"밀폐 불량으로 오염된 BMW 5GT 인젝터\" loading=\"lazy\" /><figcaption>밀폐 불량으로 오염된 BMW 5GT 인젝터</figcaption></figure><h2>차주 요청에 따라 진행한 인젝터 클리닝</h2><p>원문에서는 인젝터 수리가 필요한 상태로 설명했지만, 차주 요청에 따라 이번에는 클리닝만 진행했습니다. 인젝터와 홀 주변 오염을 제거하고 신품 동와샤를 장착해 재조립했습니다. 이 작업을 인젝터의 완전 수리나 엔진 소음·누유의 해결로 확대해 설명하지 않습니다.</p><figure><img src=\"/blog-imports/224435027538/06.jpg\" alt=\"BMW 5GT 인젝터 홀 주변 오염 확인\" loading=\"lazy\" /><figcaption>BMW 5GT 인젝터 홀 주변 오염 확인</figcaption></figure><figure><img src=\"/blog-imports/224435027538/08.jpg\" alt=\"클리닝과 동와샤 작업을 진행한 인젝터\" loading=\"lazy\" /><figcaption>클리닝과 동와샤 작업을 진행한 인젝터</figcaption></figure><h2>DPF 경고등 확인 후 탈거 클리닝</h2><p>DPF 경고등도 나타나 필터를 탈거해 전용 장비로 세척했습니다. 분리 과정에서는 요소수 분사 부위에 굳은 찌꺼기가 있어 탈거에 시간이 걸렸고, 필터에 쌓인 재가 많아 약 3시간 장비 세척을 진행했다고 기록되어 있습니다. DPF 경고등만으로 클리닝을 결정하지 않고 오염·센서·파손 여부를 함께 확인해야 합니다.</p><figure><img src=\"/blog-imports/224435027538/09.jpg\" alt=\"BMW 5GT에서 탈거한 DPF\" loading=\"lazy\" /><figcaption>BMW 5GT에서 탈거한 DPF</figcaption></figure><figure><img src=\"/blog-imports/224435027538/11.jpg\" alt=\"전용 장비에서 진행한 BMW 5GT DPF 클리닝\" loading=\"lazy\" /><figcaption>전용 장비에서 진행한 BMW 5GT DPF 클리닝</figcaption></figure><p><a href=\"https://blog.naver.com/koreaautolife/224435027538\" target=\"_blank\" rel=\"noopener noreferrer\">코리아오토미션 네이버 블로그 원문 보기</a></p>",
+      "content_json": null,
+      "representative_image_path": "/blog-imports/224435027538/01.jpg",
+      "gallery_image_paths": [],
+      "before_images": [],
+      "after_images": [],
+      "video_urls": [],
+      "vehicle_tags": [
+        "BMW",
+        "5GT"
+      ],
+      "symptom_tags": [
+        "엔진 소음",
+        "인젝터 밀폐 불량",
+        "동와샤",
+        "DPF 경고등"
+      ],
+      "general_tags": [
+        "인젝터 클리닝",
+        "블로그 정비 기록",
+        "DPF 클리닝"
+      ],
+      "naver_blog_url": "https://blog.naver.com/koreaautolife/224435027538",
+      "created_at": "2026-10-08T11:20:00+09:00",
+      "published_at": null,
+      "status": "draft",
+      "is_published": false,
+      "is_featured": false,
+      "display_order": 0,
+      "seo_title": "BMW 5GT 엔진 소음 점검·인젝터 밀폐 불량과 DPF 클리닝",
+      "seo_description": "BMW 5GT 엔진 소음 점검·인젝터 밀폐 불량과 DPF 클리닝. 전용 장비를 이용한 탈거 세척과 실제 작업 사진을 확인하세요.",
+      "noindex": false,
+      "view_count": 0
+    }
   }
 ]

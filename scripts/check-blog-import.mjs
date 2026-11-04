@@ -19,7 +19,7 @@ vm.runInNewContext(code,{exports:moduleObject.exports,module:moduleObject,proces
 }});
 const api=moduleObject.exports;
 const prepared=JSON.parse(fs.readFileSync(project+'/src/lib/data/blog-drafts.json','utf8'));
-assert.equal(prepared.length,69);
+assert.equal(prepared.length,74);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(prepared.slice(0,35))).digest('hex'),'3aa06b1d22f04e596f6a0e5610070622848bed7e3b2ef879ace4f69642574579','Original 35 prepared objects remain unchanged from d474217');
 const newPostIds=["224426404936","224425270383","224424117180","224275733454","224271694802","224269677971","224267258628","224265782652","224262970174","224246904261","224245707260","224244427674","224242489830","224240560347","224239991802","224237559579","224236226905","224218224258","224215622621","224169220987"];
 const newPrepared=prepared.slice(35,55);
@@ -35,9 +35,9 @@ env.BLOG_IMPORT_PREVIEW='true';
 assert.equal(api.getBlogPreviewWorks().length,0,'Only explicit 1 enables preview');
 env.BLOG_IMPORT_PREVIEW='1';
 const drafts=api.getBlogPreviewWorks();
-assert.equal(drafts.length,69);
-assert.equal(new Set(drafts.map(w=>w.id)).size,69);
-assert.equal(new Set(drafts.map(w=>w.slug)).size,69);
+assert.equal(drafts.length,74);
+assert.equal(new Set(drafts.map(w=>w.id)).size,74);
+assert.equal(new Set(drafts.map(w=>w.slug)).size,74);
 for(const w of drafts){
   assert.equal(w.status,'draft');assert.equal(w.is_published,false);assert.equal(w.noindex,true);assert.equal(w.published_at,null);
   assert.ok(w.content_html.includes(w.naver_blog_url));
@@ -47,11 +47,11 @@ for(const w of drafts){
 const first=drafts[0];
 const stored={...first,id:'existing',slug:'existing-slug',title:'Edited existing case',is_published:true,status:'published',naver_blog_url:`https://blog.naver.com/PostView.naver?blogId=97ga074&logNo=224348859508&redirect=Dlog`};
 const merged=api.mergeBlogPreviewWorks([stored]);
-assert.equal(merged.length,69,'A different Naver URL form must still deduplicate');
+assert.equal(merged.length,74,'A different Naver URL form must still deduplicate');
 assert.equal(merged.find(w=>w.id==='existing').title,'Edited existing case');
 const originals=drafts.filter(w=>w.naver_blog_url.includes("/97ga074/"));
 const additions=drafts.filter(w=>w.naver_blog_url.includes("/koreaautolife/"));
-assert.equal(originals.length,10);assert.equal(additions.length,59);
+assert.equal(originals.length,10);assert.equal(additions.length,64);
 assert.equal(api.paginateBlogPreview(additions,[],{category:"전기차 수리"}).total,2);
 for(const work of additions){assert.deepEqual(Array.from(work.before_images),[]);assert.deepEqual(Array.from(work.after_images),[]);}
 const bmw=api.paginateBlogPreview(originals,[],{q:'슬립',brand:'BMW'});
@@ -73,12 +73,12 @@ assert.equal(servicesModule.exports.getWorkServiceLabels(maxcruz).join(', '),'�
 assert.equal(api.paginateBlogPreview(originals,cleaningServices,{service:cleaningServices[2].id,q:'맥스크루즈'}).total,1);
 const page1=api.paginateBlogPreview(drafts,[],{page:1,pageSize:3});
 const page2=api.paginateBlogPreview(drafts,[],{page:2,pageSize:3});
-assert.equal(page1.total,69);assert.equal(page1.totalPages,23);assert.equal(page2.items.length,3);
+assert.equal(page1.total,74);assert.equal(page1.totalPages,25);assert.equal(page2.items.length,3);
 assert.ok(!page1.items.some(a=>page2.items.some(b=>a.id===b.id)));
 assert.equal(api.paginateBlogPreview(drafts,[],{q:'no-such-car'}).total,0);
 delete env.BLOG_IMPORT_PREVIEW;
 assert.equal(api.mergeBlogPreviewWorks([stored]).length,1,'Production list cannot receive draft additions');
-console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 69 total drafts / 5 eligible new koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
+console.log('PASS: original 35 objects unchanged; 20 unique additions and 81 approved photos; 74 total drafts / 5 eligible new koreaautolife import candidates; source links, default-off preview, duplicate protection, services, search and pagination.');
 
 const added=prepared.slice(55,61);
 assert.equal(added.length,6);
@@ -92,7 +92,7 @@ for(const {source,work} of added){
 }
 console.log('PASS: six new source-verified cases, 34 selected photos, AI case excluded.');
 
-assert.deepEqual(new Set(currentBatch.map(e=>e.source.postId)), new Set(["224455877940","224453134193","224451729976","224450149569","224447822278"]));
+assert.deepEqual(new Set(currentBatch.map(e=>e.source.postId)), new Set(["224462373676","224460518925","224458110431","224437422389","224435027538"]));
 for (const {source,work} of currentBatch) {
  assert.equal(work.naver_blog_url,source.url);
  assert.equal(work.representative_image_path,source.photos[0].localPath);
