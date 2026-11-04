@@ -92,7 +92,7 @@ for(const {source,work} of added){
 }
 console.log('PASS: six new source-verified cases, 34 selected photos, AI case excluded.');
 
-assert.deepEqual(new Set(currentBatch.map(e=>e.source.postId)), new Set(["224433427153","224430626911","224249706736","224227080758","224259243504"]));
+assert.deepEqual(new Set(currentBatch.map(e=>e.source.postId)), new Set(["224430626911","224234917271","224195512477","224188060104","224159218298"]));
 for (const {source,work} of currentBatch) {
  assert.equal(work.naver_blog_url,source.url);
  assert.equal(work.representative_image_path,source.photos[0].localPath);

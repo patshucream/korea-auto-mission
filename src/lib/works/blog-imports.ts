@@ -12,11 +12,11 @@ export function getPreparedBlogImports() {
 
 /** Source-verified new cases for the current publication batch. */
 const currentImportPostIds = new Set([
-  "224433427153",
   "224430626911",
-  "224249706736",
-  "224227080758",
-  "224259243504",
+  "224234917271",
+  "224195512477",
+  "224188060104",
+  "224159218298",
 ]);
 export function getCurrentBlogImports() {
   return getPreparedBlogImports().filter(({ source, work }) =>
