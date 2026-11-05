@@ -1,3 +1,4 @@
+import { CaseFinderLink } from "@/components/works/CaseFinderLink";
 import { SmsLink } from "@/components/ui/SmsLink";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -93,6 +94,7 @@ export default async function TransmissionPage() {
         </figure>
       </section>
 
+      <CaseFinderLink category="오토미션 수리" />
       <nav aria-label="미션수리 안내 목차" className={s.sectionNav}>
         <a href="#symptoms">증상 상담</a><a href="#repair-cases">실제 수리 사례</a><a href="#repair-process">진단·수리 과정</a><a href="#repair-faq">비용·입고 안내</a><a href="#visit">방문 상담</a>
       </nav>

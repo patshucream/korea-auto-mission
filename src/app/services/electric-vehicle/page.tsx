@@ -1,3 +1,4 @@
+import { CaseFinderLink } from "@/components/works/CaseFinderLink";
 import { WorkshopAddress } from "@/components/ui/WorkshopAddress";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,6 +56,7 @@ export default async function ElectricVehiclePage() {
         <figcaption><span>실제 수리 현장에서</span><strong>작은 부품 하나까지.</strong><small>아이오닉 EV 모터 · 감속기</small></figcaption>
       </figure>
     </section>
+    <CaseFinderLink category="전기차 수리" />
     <section className={s.statement} aria-label="전기차 정비 소개"><p>익숙했던 조용함이 달라졌다면.<br /><span>소리를 듣고, 원인을 구분하고,<br />내 차에 필요한 수리를 찾습니다.</span></p><a href="#ev-care">정비 범위 알아보기 ↗</a></section>
     <section className={s.caseLibrary} id="ev-cases" aria-labelledby="ev-cases-title">
       <div className={s.sectionHead}><div><p className={s.eyebrow}>전기차 작업사례</p><h2 id="ev-cases-title">사진으로 보는,<br />우리의 정비 기록.</h2></div><p>어떤 차량이, 어떤 증상으로 왔을까요?<br />실제 입고 차량과 작업 과정을 살펴보세요.</p></div>

@@ -1,3 +1,4 @@
+import { CaseFinderLink } from "@/components/works/CaseFinderLink";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
@@ -60,6 +61,7 @@ export default async function DieselServiceGuide({ params }: Props) {
           <figcaption>{featured ? <Link href={`/works/${featured.slug}`}>실제 작업 기록 · {featured.title} ↗</Link> : settings.business_name}</figcaption>
         </figure>
       </section>
+      <CaseFinderLink category={guide.category} />
       <nav className={s.sectionNav} aria-label="작업 안내 목차"><a href="#check-points">상담 전 확인</a><a href="#repair-cases">실제 작업 사진</a><a href="#repair-faq">비용·작업 안내</a><a href="#consultation">문자 상담 작성</a></nav>
       <section id="check-points" className={s.section}>
         <p className={s.eyebrow}>{guide.category} 상담</p><h2>이 내용을 알려주시면<br />상담을 시작할 수 있습니다.</h2>

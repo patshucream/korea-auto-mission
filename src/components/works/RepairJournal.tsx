@@ -1,3 +1,4 @@
+import { CaseFinderLink } from "@/components/works/CaseFinderLink";
 import Link from "next/link";
 import { WorkshopAddress } from "@/components/ui/WorkshopAddress";
 import { Header } from "@/components/layout/Header";
@@ -33,6 +34,7 @@ export function RepairJournal({work,settings,related}:{work:WorkCase;settings:Si
         {work.representative_image_path&&<figure className={s.cover}><SmartImage path={work.representative_image_path} alt={`${brand} ${work.vehicle_model} 정비 작업 사진`} className={s.coverImage} sizes="(max-width:700px) 100vw, 50vw" priority/><figcaption>{[brand,work.vehicle_model].filter(Boolean).join(" ")} · 코리아오토미션 작업 기록</figcaption></figure>}</div>
         <dl className={s.facts}>{facts.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}<div><dt>작업 분야</dt><dd>{labels.join(" · ")}</dd></div></dl>
       </header>
+      <CaseFinderLink brand={work.vehicle_brand} model={work.vehicle_model} />
       <div className={s.layout}>
         <aside className={s.sidebar}><div className={s.sticky}><p className={s.eyebrow}>IN THIS RECORD</p><nav aria-label="작업 과정 목차"><ol>{chapters.map((chapter,i)=><li key={chapter.id}><a href={`#${chapter.id}`}><span>{String(i+1).padStart(2,"0")}</span>{chapter.title}</a></li>)}</ol></nav><p className={s.sideNote}>궁금한 부분을 사진과 함께<br/>문자로 알려주셔도 좋습니다.</p><SmsLink phone={settings.phone} body={smsBody} className={s.sideSms}>문자로 정비 문의 ↗</SmsLink></div></aside>
         <div className={s.story}>

@@ -1,3 +1,4 @@
+import { CaseFinderLink } from "@/components/works/CaseFinderLink";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
@@ -27,7 +28,8 @@ export default async function DrivetrainPage() {
   return <><Header settings={settings} dark /><main className={s.page}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <section className={s.intro}><div className={s.wrap}><nav aria-label="현재 위치"><Link href="/">홈</Link><span>/</span>4륜·구동계</nav><p className={s.eyebrow}>KOREA AUTO MISSION / DRIVETRAIN</p><h1>부산 4륜·구동계 수리.<br />트랜스퍼부터 디퍼렌셜까지.</h1><p className={s.lead}>주행 중 소음과 진동, 가속할 때 충격, 하부 누유.<br />차종과 증상을 확인하고 필요한 정비를 안내합니다.</p><div className={s.contacts}><a className={s.contact} href={telHref(settings.phone)}>전화 상담 ↗</a><SmsLink phone={settings.phone} body={"[4륜·구동계 상담]\n차종·연식:\n주행거리:\n증상과 발생 상황:"} className={s.contact}>문자 상담 ↗</SmsLink></div><p className={s.address}>{settings.address} · {settings.phone}</p></div></section>
-    <nav className={s.sectionNav} aria-label="4륜 정비 안내 목차"><a href="#drivetrain-topics">정비 안내</a>{work && <a href="#drivetrain-case">실제 작업사례</a>}<a href="#consultation">문자 상담</a></nav>
+    <CaseFinderLink category="트랜스퍼 케이스·디퍼런셜" label="4륜·구동계 정비" />
+      <nav className={s.sectionNav} aria-label="4륜 정비 안내 목차"><a href="#drivetrain-topics">정비 안내</a>{work && <a href="#drivetrain-case">실제 작업사례</a>}<a href="#consultation">문자 상담</a></nav>
     <section className={s.topics} aria-labelledby="drivetrain-topics"><p className={s.eyebrow}>TRANSFER CASE · DIFFERENTIAL</p><h2 id="drivetrain-topics">어디서, 언제 불편한가요?</h2><div>{topics.map((topic, i) => <article key={topic.name}><span>0{i+1}</span><h3>{topic.name}</h3><p className={s.symptom}>{topic.symptom}</p><p>{topic.text}</p></article>)}</div><p className={s.note}>차종·연식·주행거리와 증상이 생기는 상황을 알려주세요. 견적은 차량 상태와 작업량을 확인한 뒤 안내합니다.</p></section>
     {work && <section className={s.process} aria-labelledby="drivetrain-case"><p className={s.eyebrow}>실제 작업 기록</p><h2 id="drivetrain-case">{work.title}</h2><Link href={`/works/${work.slug}`}><SmartImage path={work.representative_image_path} alt={work.title} sizes="(max-width: 700px) 100vw, 800px" className="mt-6 aspect-[16/10] w-full overflow-hidden" /></Link><p className="mt-6 leading-8">저속 가속 시 충격으로 입고한 BMW X3의 트랜스퍼 케이스 정비 기록입니다. 분해 점검과 부품 교체 과정, 함께 진행한 미션·앞뒤 디퍼렌셜 오일 교환을 확인할 수 있습니다.</p><Link href={`/works/${work.slug}`} className={s.contact}>사진과 작업 과정 보기 ↗</Link></section>}
     <section className={s.faq}><p className={s.eyebrow}>방문 전 안내</p><h2>4륜 정비 상담에서 자주 묻는 질문.</h2><div><details><summary>소리가 나면 디퍼렌셜 고장인가요?<span>＋</span></summary><p>소리만으로 원인을 결정할 수 없습니다. 가속·감속·회전 중 언제 발생하는지와 차량 상태를 확인한 뒤 점검 범위를 안내합니다.</p></details><details><summary>수리 비용과 기간은 어떻게 정하나요?<span>＋</span></summary><p>차량 사양과 손상 상태, 필요한 부품과 작업량에 따라 달라집니다. 방문 전 전화·문자로 차종과 증상을 알려주시면 상담을 시작할 수 있습니다.</p></details></div></section>

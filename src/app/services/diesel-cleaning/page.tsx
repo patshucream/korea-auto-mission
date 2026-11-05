@@ -1,3 +1,4 @@
+import { CaseFinderLink } from "@/components/works/CaseFinderLink";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { DEFAULT_SOCIAL_IMAGE } from "@/lib/social-image";
@@ -57,6 +58,7 @@ export default async function DieselCleaningPage() {
         </div>
         <figure className={s.heroFigure}><SmartImage path={featured?.representative_image_path || settings.shop_image_path} alt={featured?.title || "코리아오토미션 정비 현장"} className={s.heroImage} sizes="(max-width: 800px) 100vw, 50vw" priority /><figcaption>{featured ? <Link href={`/works/${featured.slug}`}>실제 작업 기록 · {featured.title} ↗</Link> : settings.business_name}</figcaption></figure>
       </section>
+      <CaseFinderLink query="클리닝" label="디젤클리닝" />
       <nav className={s.sectionNav} aria-label="디젤 클리닝 안내 목차"><a href="#cleaning-services">작업별 안내</a><a href="#repair-cases">실제 작업 사례</a><a href="#consultation">차량 상담</a><a href="#repair-faq">비용·입고 안내</a></nav>
       <div className={s.promise}><span>차량 상태에 맞는 작업 안내</span><span>견적 확인 후 정비 진행</span><span>실제 작업 사진 공개</span></div>
       <section id="cleaning-services" className={s.section}><p className={s.eyebrow}>한 가지 작업씩 정확하게</p><h2>흡기, 인젝터, DPF.<br />필요한 작업은 차량마다 다릅니다.</h2><div className={s.symptoms}>{services.map((service, i)=><article key={service.title}><span className={s.number}>0{i+1}</span><h3>{service.title}</h3><p>{service.body}</p><Link className={s.textLink} href={dieselGuidePath(dieselGuides[i].slug)}>{service.title} 비용·작업 안내 ↗</Link></article>)}</div></section>
