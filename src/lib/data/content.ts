@@ -1,3 +1,4 @@
+import { finderBrand, finderModel, finderTerms, finderMatches, finderAlternatives } from "@/lib/works/finder";
 import { deriveSplitHours } from "@/lib/business-hours";
 import { getBlogPreviewWorks, isBlogImportPreview, isBlogPreviewWork, mergeBlogPreviewWorks, paginateBlogPreview } from "@/lib/works/blog-imports";
 import { getWorkServiceLabels, workMatchesService, workServiceFilter } from "@/lib/works/services";
@@ -818,18 +819,9 @@ async function getStoredPaginatedWorks(
 
   if (!isSupabaseConfigured()) {
     let items = [...DEFAULT_WORKS];
-    if (params.q) {
-      const q = params.q.toLowerCase();
-      items = items.filter(
-        (w) =>
-          w.title.toLowerCase().includes(q) ||
-          w.vehicle_brand.toLowerCase().includes(q) ||
-          w.vehicle_model.toLowerCase().includes(q) ||
-          w.symptoms.toLowerCase().includes(q),
-      );
-    }
-    if (params.brand) items = items.filter((w) => w.vehicle_brand === params.brand);
-    if (params.model) items = items.filter((w) => w.vehicle_model === params.model);
+    if (params.q) items = items.filter(w => finderMatches([w.title,w.vehicle_brand,w.vehicle_model,w.symptoms,w.work_summary].join(" "), params.q));
+    if (params.brand) items = items.filter(w => finderBrand(w.vehicle_brand) === finderBrand(params.brand!));
+    if (params.model) items = items.filter(w => finderModel(w.vehicle_model) === finderModel(params.model!));
     if (params.service) {
       const service = DEFAULT_SERVICES.find((item) => item.id === params.service);
       items = items.filter((w) => service ? workMatchesService(w, service) : w.service_id === params.service);
@@ -854,8 +846,8 @@ async function getStoredPaginatedWorks(
       page,
       pageSize,
       totalPages: Math.max(1, Math.ceil(total / pageSize)),
-      brands: [...new Set(DEFAULT_WORKS.map((w) => w.vehicle_brand))],
-      models: [...new Set(DEFAULT_WORKS.filter((w) => !params.brand || w.vehicle_brand === params.brand).map((w) => w.vehicle_model))],
+      brands: [...new Set(DEFAULT_WORKS.map((w) => finderBrand(w.vehicle_brand)))],
+      models: [...new Set(DEFAULT_WORKS.filter((w) => !params.brand || finderBrand(w.vehicle_brand) === finderBrand(params.brand)).map((w) => finderModel(w.vehicle_model)))],
       services: serviceOptions,
       categories: serviceOptions.map((s) => s.title),
     };
@@ -873,13 +865,24 @@ async function getStoredPaginatedWorks(
     };
   }
 
+  const [metaRes, serviceOptions] = await Promise.all([
+    supabase.from("work_cases").select("vehicle_brand, vehicle_model").eq("is_published", true),
+    getPublishedServiceOptions(),
+  ]);
+  const metaRows = (metaRes.data || []) as Array<{ vehicle_brand: string; vehicle_model: string }>;
   let query = supabase
     .from("work_cases")
     .select("*", { count: "exact" })
     .eq("is_published", true);
 
-  if (params.brand) query = query.eq("vehicle_brand", params.brand);
-  if (params.model) query = query.eq("vehicle_model", params.model);
+  if (params.brand) {
+    const aliases = metaRows.filter(r => finderBrand(r.vehicle_brand) === finderBrand(params.brand!)).map(r => r.vehicle_brand);
+    query = query.in("vehicle_brand", [...new Set([params.brand, ...aliases])]);
+  }
+  if (params.model) {
+    const aliases = metaRows.filter(r => finderModel(r.vehicle_model) === finderModel(params.model!)).map(r => r.vehicle_model);
+    query = query.in("vehicle_model", [...new Set([params.model, ...aliases])]);
+  }
   if (params.service) {
     const selected = (await getPublishedServiceOptions()).find((service) => service.id === params.service);
     query = selected ? query.or(workServiceFilter(selected)) : query.eq("service_id", params.service);
@@ -887,11 +890,9 @@ async function getStoredPaginatedWorks(
     const label = quotePostgrestValue(params.category);
     query = query.or(`service_category.eq.${label},general_tags.cs.{${label}}`);
   }
-  if (params.q) {
-    const q = params.q.replace(/[%_]/g, "");
-    query = query.or(
-      `title.ilike.%${q}%,vehicle_brand.ilike.%${q}%,vehicle_model.ilike.%${q}%,symptoms.ilike.%${q}%,work_summary.ilike.%${q}%`,
-    );
+  for (const term of finderTerms(params.q)) {
+    // Recognized symptom phrases are tokenized; separate words are ANDed.
+    query = query.or(finderAlternatives(term).flatMap(word => ["title","vehicle_brand","vehicle_model","symptoms","work_summary"].map(field => `${field}.ilike.%${word}%`)).join(","));
   }
 
   query = query.order("published_at", {
@@ -904,14 +905,6 @@ async function getStoredPaginatedWorks(
 
   const { data, error, count } = await query.range(from, to);
 
-  const [metaRes, serviceOptions] = await Promise.all([
-    supabase
-      .from("work_cases")
-      .select("vehicle_brand, vehicle_model")
-      .eq("is_published", true),
-    getPublishedServiceOptions(),
-  ]);
-
   if (error) {
     return {
       items: [],
@@ -923,11 +916,6 @@ async function getStoredPaginatedWorks(
     };
   }
 
-  const metaRows = (metaRes.data || []) as Array<{
-    vehicle_brand: string;
-    vehicle_model: string;
-  }>;
-
   const total = count ?? 0;
 
   return {
@@ -936,8 +924,8 @@ async function getStoredPaginatedWorks(
     page,
     pageSize,
     totalPages: Math.max(1, Math.ceil(total / pageSize)),
-    brands: [...new Set(metaRows.map((r) => r.vehicle_brand).filter(Boolean))].sort(),
-    models: [...new Set(metaRows.filter((r) => !params.brand || r.vehicle_brand === params.brand).map((r) => r.vehicle_model).filter(Boolean))].sort(),
+    brands: [...new Set(metaRows.map((r) => finderBrand(r.vehicle_brand)).filter(Boolean))].sort(),
+    models: [...new Set(metaRows.filter((r) => !params.brand || finderBrand(r.vehicle_brand) === finderBrand(params.brand)).map((r) => finderModel(r.vehicle_model)).filter(Boolean))].sort(),
     services: serviceOptions,
     categories: serviceOptions.map((s) => s.title),
   };

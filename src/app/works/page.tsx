@@ -76,7 +76,7 @@ export default async function WorksPage({ searchParams }: Props) {
       <main className={s.library}>
         <section className={s.librarySection}>
           <div>
-            <header className={s.libraryHeading}><div><p className={s.eyebrow}>KOREA AUTO MISSION · WORKSHOP JOURNAL</p><h1>정비의 과정까지,<br />한 대의 기록으로.</h1><p className={s.intro}>미션·디젤·전기차·4륜 구동계.<br />실제 입고 차량의 증상과 작업 과정을 사진으로 전합니다.</p></div><div className={s.archiveMark} aria-hidden="true"><span>정비 기록</span><strong>JOURNAL</strong><span>차량을 살피고, 과정을 남깁니다.</span></div></header>
+            <header className={s.libraryHeading}><div><p className={s.eyebrow}>KOREA AUTO MISSION · WORKSHOP JOURNAL</p><h1>내 차와 닮은<br />정비 기록을 찾아보세요.</h1><p className={s.intro}>차종과 증상으로 찾아보는 실제 작업사례.</p></div><div className={s.archiveMark} aria-hidden="true"><span>정비 기록</span><strong>JOURNAL</strong><span>차량을 살피고, 과정을 남깁니다.</span></div></header>
 
             <div>
               <Suspense fallback={<div className="h-40 animate-pulse bg-gray-100" />}>
@@ -100,8 +100,10 @@ export default async function WorksPage({ searchParams }: Props) {
                 <p className="text-lg font-black text-charcoal">
                   조건에 맞는 작업사례가 없습니다
                 </p>
-                <p className="mt-3 text-muted">필터를 초기화하거나 다른 서비스 사례를 확인해 보세요.</p>
+                <p className="mt-3 text-muted">등록된 사례 중 일치하는 기록이 없다는 뜻이며, 정비 가능 여부는 상담으로 확인할 수 있습니다.</p>
                 <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  {q && (brand || model) && <Link className="btn btn-secondary" href={`/works?${new URLSearchParams({...(brand?{brand}:{}),...(model?{model}:{})})}`}>이 차종의 다른 증상 보기</Link>}
+                  {q && (brand || model) && <Link className="btn btn-secondary" href={`/works?${new URLSearchParams({q})}`}>다른 차종의 비슷한 증상 보기</Link>}
                   <Link href="/works" className="btn btn-primary">
                     필터 초기화
                   </Link>

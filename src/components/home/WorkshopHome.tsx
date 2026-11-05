@@ -99,7 +99,7 @@ export function WorkshopHome({ data, reviewStats }: { data: HomepageData; review
           <div className={s.heroActions}>
             <a className={s.primaryButton} href={phone}>전화 상담 <Arrow /></a>
             <SmsLink phone={settings.phone} className={s.heroSms}>문자 상담 <Arrow /></SmsLink>
-            <Link className={s.inlineLink} href={visible("works") ? "#works" : "/works"}>내 차 작업사례 찾기 <span aria-hidden="true">↓</span></Link>
+            <Link className={s.inlineLink} href="/works">내 차 작업사례 찾기 <span aria-hidden="true">↗</span></Link>
           </div>
         </div>
         <div className={s.heroFoot}><p>디젤클리닝 <span>/</span> 미션수리 <span>/</span> 전기차 수리 <span>/</span> 4륜·구동계</p><p>{settings.address}<span className={s.heroFootArrow} aria-hidden="true">↓</span></p></div>
